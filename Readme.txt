@@ -10,9 +10,9 @@ Where to download the file: https://github.com/DoktorKure/Vic-II-Modern-History-
 
 Step 1: Click the green 'Code' button and then click the 'Download ZIP' option
 
-Step 2: Extract out the folder file titled 'Vic-II-Modern-History-Mod-MHM' in the zip file downloaded from Github
+Step 2: Extract out the folder file titled 'Vic-II-Modern-History-Mod-MHM-master' in the zip file downloaded from Github
 
-Step 3: Open the file 'Vic-II-Modern-History-Mod-MHM' and then move the 'MHM' folder and the 'MHM.mod' file to 'Program Files (x86)\Steam\steamapps\common\Victoria 2\mod'
+Step 3: Open the file 'Vic-II-Modern-History-Mod-MHM-master' and then move the 'MHM' folder and the 'MHM.mod' file to 'Program Files (x86)\Steam\steamapps\common\Victoria 2\mod'
 
 Step 4: Check the option for only 'Modern History Mod...' in the Victoria 2 launcher then launch the game.
 
