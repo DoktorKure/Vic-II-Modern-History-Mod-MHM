@@ -1,0 +1,88 @@
+#Kuwait - Kuwait (2131000/532750 POPS)
+935 = {
+	officers = {
+		culture = kuwaiti
+		religion =  sunni 
+		size = 2315
+	 } 
+	soldiers = {
+		culture = kuwaiti
+		religion =  sunni 
+		size = 9260
+	 } 
+	aristocrats = {
+		culture = kuwaiti
+		religion =  sunni 
+		size = 21310
+	 } 
+	bureaucrats = {
+		culture = kuwaiti
+		religion =  sunni 
+		size = 1065
+	 } 
+	capitalists = {
+		culture = kuwaiti
+		religion =  sunni 
+		size = 2663
+	 } 
+	clergymen = {
+		culture = kuwaiti
+		religion =  sunni 
+		size = 5327
+	 } 
+	clerks = {
+		culture = kuwaiti
+		religion =  sunni 
+		size = 19324
+	 } 
+	artisans = {
+		culture = kuwaiti
+		religion =  sunni 
+		size = 18358
+	 } 
+	craftsmen = {
+		culture = kuwaiti
+		religion =  sunni 
+		size = 58940
+	 } 
+	farmers = {
+		culture = kuwaiti
+		religion =  sunni 
+		size = 90520
+	 } 
+	farmers = {
+		culture = indian
+		religion =  hindu 
+		size = 104419
+	 } 
+	farmers = {
+		culture = indian
+		religion = secularism
+		size = 2131
+	 } 
+	farmers = {
+		culture = kuwaiti
+		religion =  shiite 
+		size = 127860
+	 } 
+	farmers = {
+		culture = filipino
+		religion =  catholic 
+		size = 26104
+	 } 
+	farmers = {
+		culture = filipino
+		religion = secularism
+		size = 532
+	 } 
+	farmers = {
+		culture = indian_muslim
+		religion =  sunni 
+		size = 21310
+	 } 
+	farmers = {
+		culture = bengali
+		religion =  sunni 
+		size = 21310
+	 } 
+}

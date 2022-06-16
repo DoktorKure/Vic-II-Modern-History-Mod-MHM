@@ -1,0 +1,164 @@
+political_decisions = {
+
+changecbi = {
+		picture = "changecbi"
+		potential = {
+			flexible_exchange_rates = 1
+NOT = { has_country_flag = join_the_cfa }
+
+
+OR = {
+
+tag = XGC
+tag = XEF
+tag = XEU
+tag = XCC
+tag = XAU
+tag = XEW
+tag = XEC
+tag = XSA
+tag = XSU
+tag = XMS
+tag = XAC
+tag = XAL
+tag = XMU
+tag = XAN
+tag = XCI
+tag = XNA
+tag = XPI
+tag = XEA
+tag = XTC
+tag = XUM
+tag = XIO
+tag = UAR
+tag = XME
+
+AND = { 
+NOT = { any_owned_province = { has_province_modifier = currency_union } }
+NOT = { any_owned_province = { has_province_modifier = currency_union_province } }
+}
+
+	}
+
+NOT = { ruling_party_ideology = communist }
+OR = { 
+has_country_modifier = cbihigh
+has_country_modifier = cbimedium
+has_country_modifier = cbilow 
+	}
+			}
+alert = no
+		allow = {
+			war = no
+election = no
+OR = { ai = no AND = { ai = yes OR = { 
+
+AND = { has_country_modifier = cbihigh NOT = { OR = { economic_policy = state_capitalism economic_policy = planned_economy } } } 
+
+AND = { has_country_modifier = cbimedium NOT = { economic_policy = interventionism } } 
+
+AND = { has_country_modifier = cbilow NOT = { economic_policy = laissez_faire } } 
+
+} } } 
+				}
+	effect = {
+						
+			remove_country_modifier = cbihigh
+			remove_country_modifier = cbimedium
+			remove_country_modifier = cbilow
+			clr_country_flag = cbihigh
+			clr_country_flag = cbimedium
+			clr_country_flag = cbilow
+		}
+		ai_will_do = { 
+			factor = 100 
+			}
+	}
+
+cbihigh = {
+		picture = "cbihigh"
+
+		potential = {
+NOT = { has_country_flag = join_the_cfa }
+NOT = { any_owned_province = { has_province_modifier = currency_union } }
+NOT = { any_owned_province = { has_province_modifier = currency_union_province } }
+			flexible_exchange_rates = 1
+NOT = { ruling_party_ideology = communist }
+		NOT = { OR = { has_country_modifier = cbihigh
+			has_country_modifier = cbimedium
+			has_country_modifier = cbilow } }
+			}
+		allow = {
+			war = no
+		NOT = { AND = { has_country_modifier = cbihigh
+			has_country_modifier = cbimedium
+			has_country_modifier = cbilow } }
+	OR = { ai = no AND = { ai = yes economic_policy = state_capitalism } AND = { ai = yes economic_policy = planned_economy } }
+				}
+		effect = {
+
+add_country_modifier = { name = cbihigh duration = -1 }
+clr_country_flag = superstate_central_bank			
+		}
+		ai_will_do = { 
+			factor = 1 
+			}
+	}
+cbimedium = {
+		picture = "cbimedium"
+
+		potential = {
+NOT = { has_country_flag = join_the_cfa }
+NOT = { any_owned_province = { has_province_modifier = currency_union } }
+NOT = { any_owned_province = { has_province_modifier = currency_union_province } }
+			flexible_exchange_rates = 1
+NOT = { ruling_party_ideology = communist }
+		NOT = { OR = { has_country_modifier = cbihigh
+			has_country_modifier = cbimedium
+			has_country_modifier = cbilow } }
+			}
+		allow = {
+			war = no
+			NOT = { AND = { has_country_modifier = cbihigh
+			has_country_modifier = cbimedium
+			has_country_modifier = cbilow } }
+OR = { ai = no AND = { ai = yes economic_policy = interventionism } }
+				}
+		effect = {
+add_country_modifier = { name = cbimedium duration = -1 }
+clr_country_flag = superstate_central_bank
+		}
+		ai_will_do = { 
+			factor = 1 
+			}
+	}
+cbilow = {
+		picture = "cbilow"
+
+		potential = {
+NOT = { has_country_flag = join_the_cfa }
+NOT = { any_owned_province = { has_province_modifier = currency_union } }
+NOT = { any_owned_province = { has_province_modifier = currency_union_province } }
+			flexible_exchange_rates = 1
+NOT = { ruling_party_ideology = communist }
+		NOT = { OR = { has_country_modifier = cbihigh
+			has_country_modifier = cbimedium
+			has_country_modifier = cbilow } }
+			}
+		allow = {
+			war = no
+		NOT = { AND = { has_country_modifier = cbihigh
+			has_country_modifier = cbimedium
+			has_country_modifier = cbilow } }
+OR = { ai = no AND = { ai = yes economic_policy = laissez_faire } }
+
+				}
+		effect = {
+add_country_modifier = { name = cbilow duration = -1 }
+clr_country_flag = superstate_central_bank
+		}
+		ai_will_do = { 
+			factor = 1 
+			}
+	}
+}

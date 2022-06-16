@@ -1,0 +1,18 @@
+owner = RUS
+controller = RUS
+add_core = RUS
+add_core = NFD
+add_core = KRL
+trade_goods = other_minerals
+life_rating = 35
+terrain = boreal_forest
+railroad = 1
+colonial = 0
+1992.1.1 = {
+owner = RUS
+controller = RUS
+add_core = RUS
+add_core = NFD
+life_rating = 35
+colonial = 0
+}

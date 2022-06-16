@@ -1,0 +1,325 @@
+graphical_culture = MiddleEasternGC
+color = { 208 137 16 }
+party = {
+		name = "UPRONA"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Party of the People"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1992.6.30
+}
+party = {
+		name = "People's Reconciliation Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1992.6.30
+		end_date = 2100.1.1
+}
+party = {
+		name = "Christian Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1992.8.12
+}
+party = {
+		name = "Rally of the People of Burundi"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1992.8.12
+		end_date = 2002.1.1
+}
+party = {
+		name = "MRC – Rurenzangemero"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2002.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Association of the Middle Class"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1993.1.1
+}
+party = {
+		name = "RADDES"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1993.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "UPRONA"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1992.1.1
+}
+party = {
+		name = "UPRONA"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1992.1.1
+		end_date = 2014.11.1
+}
+party = {
+		name = "Independents of Hope"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2014.11.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "FRODEBU"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1992.1.1
+		end_date = 2018.9.12
+}
+party = {
+		name = "National Congress for Liberty"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2018.9.12
+		end_date = 2092.1.1
+}
+party = {
+		name = "Green Party - Intwari"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Hutu Social Movement"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1959.9.25
+}
+party = {
+		name = "MDR-Parmehutu"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1959.9.25
+		end_date = 1980.7.1
+}
+party = {
+		name = "PALIPEHUTU"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1980.7.1
+		end_date = 2008.12.1
+}
+party = {
+		name = "CNDD"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1994.9.24
+		end_date = 2001.10.1
+}
+party = {
+		name = "CNDD-FDD"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2001.10.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Tutsi Chief"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1991.1.1
+}
+party = {
+		name = "Parliamentary Royalist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1991.1.1
+		end_date = 1992.1.1
+}
+party = {
+		name = "People's Reconciliation Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1992.1.1
+		end_date = 2001.8.1
+}
+party = {
+		name = "Parliamentary Monarchist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2001.8.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Abahuza"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2004.9.20
+		end_date = 2092.1.1
+}
+party = {
+		name = "Burundi Workers' Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Burundi Workers' Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1986.1.1
+}
+party = {
+		name = "FRODEBU"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1986.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	transportship = {
+	}
+	modern_frigate = {
+		Alif Amin Anwar Ayham Bahir Dhakwan Falah Faraj Fawzan Ghanim Ghassan Hanbal Haris Hashim Iqbal Jal Junayd Kadar Kazim Khalis Khulus Luay Mashhur Muflih Mulham Munahid Nabhan Nawfal Nazim Numan Ramiz Sharaf Siddiq Tawfiq Yasir Zayn Zubayr
+	}
+	cruiser = {
+		"Abd al-Aziz" "Abd al-Hadi" "Abd al-Haqq" "Abd al-Jalil" "Abd al-Latif" "Abd al-Hafiz" "Abd al-Hakim" "Abd al-Nasir" "Abd al-Quddus" "Abd al-Rahim" "Abd al-Malik" "Abd al-Rashid" "Abd al-Rahman" "Abd al-Sami" "Abd al-Wadud" "Abd al-Wahhab"
+	}
+	modern_cruiser = {
+		"Muhammad Ali" Ibrahim Ismail Said "Salah al-Din" "Baybars Abu al-Futuh" "Qalawun al-Salihi" Barquq Barsbay Qaitbay "Qansuh al-Ghawri" "Al-Nil al-Kabir"
+	}
+	frigate = {
+		Akram Atif Ayman Bahir Fadil Fath Firas Fawwaz Ghalib Hakim Humam Jabbar Jawhar Kamal Khalid Masud Mamun Majid Mufid Mukhtar Muntasir Qudamat Rashad Sa'ad Tahir Thabit Wafiq Yusuf Zahir Zafir
+	}
+	modern_destroyer = {
+		"Ala al-Din" "Husam al-Din" "Izz al-Din" "Jalal al-Din" "Khayr al-Din" "Majid al-Din" "Nasir al-Din" "Nur al-Din" "Safi al-Din" "Siraj al-Din"
+	}
+	destroyer = {
+		"Al-Qahira" "Al-Iskandariyya" Dumyat Mansura Tanta "Al-Uqsur" "Al-Suyut" Aswan "Al-Fayyum" Khartum Qusayr Suways Minya
+	}
+	submarine = {
+		"Badr al-Din" "Diya al-Din" "Baha al-Din" "Imad al-Din" "Jamal al-Din" "Lutf al-Din" "Najm al-Din" "Sayf al-Din"
+	}
+
+}

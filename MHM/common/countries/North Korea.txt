@@ -1,0 +1,161 @@
+graphical_culture = AsianGC
+color = { 255 127 80 }
+party = {
+		name = "Chondoist Chongu Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Democratic Independent Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+
+party = {
+		name = "Dongro People's Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Gonmin People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Korean Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1981.1.1
+}
+party = {
+		name = "Korean Social Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1981.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Laboring People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Chondoist Chongu Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Buddhist Alliance"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Workers' Party of North Korea"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1949.6.30
+}
+party = {
+		name = "Workers' Party of Korea"
+		citizenship_policy = residency
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1949.6.30
+		end_date = 2092.1.1
+}
+party = {
+		name = "Workers' Party of Korea"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	transportship = {
+	}
+	modern_frigate = {
+		Baekdu Baekje Changbai Duman Daedeok Dongmyeongseong Gayasan Geumgang Geumho Goguryeo "Gyeon Hwon" Jirisan Jeongjong Kumgangsan Nakdong Sincheon Silla Sobaek Taebaek Taejo Hanseong Haemosu Habaek Hwaeomsa Worak Yuhwa Yeong "Jeong Do-jeon" "Yi Seong-gye"
+	}
+	cruiser = {
+		Baekdu Baekje Changbai Duman Daedeok Dongmyeongseong Gayasan Geumgang Geumho Goguryeo "Gyeon Hwon" Jirisan Jeongjong Kumgangsan Nakdong Sincheon Silla Sobaek Taebaek Taejo Hanseong Haemosu Habaek Hwaeomsa Worak Yuhwa Yeong "Jeong Do-jeon" "Yi Seong-gye"
+	}
+	modern_cruiser = {
+		Baekdu Baekje Changbai Duman Daedeok Dongmyeongseong Gayasan Geumgang Geumho Goguryeo "Gyeon Hwon" Jirisan Jeongjong Kumgangsan Nakdong Sincheon Silla Sobaek Taebaek Taejo Hanseong Haemosu Habaek Hwaeomsa Worak Yuhwa Yeong "Jeong Do-jeon" "Yi Seong-gye"
+	}
+	frigate = {
+		Baekdu Baekje Changbai Duman Daedeok Dongmyeongseong Gayasan Geumgang Geumho Goguryeo "Gyeon Hwon" Jirisan Jeongjong Kumgangsan Nakdong Sincheon Silla Sobaek Taebaek Taejo Hanseong Haemosu Habaek Hwaeomsa Worak Yuhwa Yeong "Jeong Do-jeon" "Yi Seong-gye"
+	}
+	modern_destroyer = {
+		Baekdu Baekje Changbai Duman Daedeok Dongmyeongseong Gayasan Geumgang Geumho Goguryeo "Gyeon Hwon" Jirisan Jeongjong Kumgangsan Nakdong Sincheon Silla Sobaek Taebaek Taejo Hanseong Haemosu Habaek Hwaeomsa Worak Yuhwa Yeong "Jeong Do-jeon" "Yi Seong-gye"
+	}
+	destroyer = {
+		Baekdu Baekje Changbai Duman Daedeok Dongmyeongseong Gayasan Geumgang Geumho Goguryeo "Gyeon Hwon" Jirisan Jeongjong Kumgangsan Nakdong Sincheon Silla Sobaek Taebaek Taejo Hanseong Haemosu Habaek Hwaeomsa Worak Yuhwa Yeong "Jeong Do-jeon" "Yi Seong-gye"
+	}
+	submarine = {
+		Baekdu Baekje Changbai Duman Daedeok Dongmyeongseong Gayasan Geumgang Geumho Goguryeo "Gyeon Hwon" Jirisan Jeongjong Kumgangsan Nakdong Sincheon Silla Sobaek Taebaek Taejo Hanseong Haemosu Habaek Hwaeomsa Worak Yuhwa Yeong "Jeong Do-jeon" "Yi Seong-gye"
+	}
+
+}

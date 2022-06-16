@@ -1,0 +1,101 @@
+political_decisions = {
+
+	canada_caribbean  = { 
+		picture = "canada_caribbean"
+		potential = {
+			tag = CAN
+			exists = XCC
+			NOT = { has_country_flag = CAN_claims_canada_caribbean }
+		}
+		allow = {
+			OR = { is_greater_power = yes is_secondary_power = yes }
+			is_vassal = no
+			war = no
+			XCC = { war = no }
+			OR = { 
+				XCC = { is_vassal = no in_sphere = THIS }
+				XCC = { vassal_of = THIS }
+			}
+		}
+		effect = {
+			set_country_flag = CAN_claims_canada_caribbean
+			prestige = 100
+			XCC = { country_event = 11101 }
+		}
+	}
+	
+	canada_turks_caicos = {
+		picture = "canada_turks_caicos"
+		potential = {
+			tag = CAN
+			NOT = { has_country_flag = CAN_claims_turks_caicos }
+		}
+		allow = {
+			OR = { is_greater_power = yes is_secondary_power = yes }
+			is_vassal = no
+			election = no
+			OR = {
+				ruling_party_ideology = populist
+				ruling_party_ideology = nationalist
+				TCI = { 
+					exists = yes
+					war = no
+					OR = { in_sphere = THIS part_of_sphere = no }
+					OR = { is_vassal = no vassal_of = THIS }
+				}
+			}
+			seventies_subcultures = 1
+		}
+		effect = {
+		
+			TCI = { all_core = { add_core = CAN } }
+			set_country_flag = CAN_claims_turks_caicos
+			
+			#Immediate annexation if TCI has relations higher than 150
+			random_country = {
+				limit = { 
+					tag = TCI
+					
+					OR = { 
+						government = democracy 
+						government = democracy1 
+						government = hms_government 
+						government = hms_government1 
+						government = socialist_democracy 
+					}
+					
+					is_vassal = no
+					war = no
+					
+					OR = { 
+						in_sphere = THIS
+						AND = { part_of_sphere = no relation = { who = THIS value = 150 } } 
+					}
+					
+					CAN = { 		
+						OR = { 
+							government = democracy 
+							government = democracy1 
+							government = hms_government 
+							government = hms_government1 
+							government = socialist_democracy 
+						}
+					}
+					
+				}
+				country_event = 11101
+			}
+			
+			#Immediate annexation if puppet
+			random_owned = {
+				limit = { 
+					owner = { TCI = { vassal_of = THIS } } 
+				}
+				owner = { inherit = TCI }
+			}
+			
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+}

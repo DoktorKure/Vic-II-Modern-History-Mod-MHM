@@ -1,0 +1,79 @@
+political_decisions = {
+
+	form_yemen = {
+		picture = "form_yemen"
+		potential = {
+			OR = { tag = SYE tag = YEM }
+			SYE = { exists = yes }
+			YEM = { exists = yes }
+		}
+		allow = {
+			war = no
+			is_vassal = no
+
+			OR = { 
+
+				AND = { 
+					YEM = { OR = { government = democracy government = democracy1 } is_vassal = no }
+					SYE = { OR = { government = democracy government = democracy1 } is_vassal = no } 
+				}
+
+				AND = { 
+					YEM = { OR = { government = hms_government government = hms_government1 } is_vassal = no }
+					SYE = { OR = { government = hms_government government = hms_government1 } is_vassal = no } 
+				}
+
+				AND = { 
+					YEM = { government = absolute_monarchy is_vassal = no } 
+					SYE = { government = absolute_monarchy is_vassal = no } 
+				}
+
+				AND = { 
+					YEM = { government = theocracy is_vassal = no } 
+					SYE = { government = theocracy is_vassal = no } 
+				}
+
+				AND = { 
+					YEM = { government = socialist_democracy is_vassal = no } 
+					SYE = { government = socialist_democracy is_vassal = no } 
+				}
+
+				AND = { 
+					YEM = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
+					SYE = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } 
+				}
+
+				AND = { 
+					OR = { is_sphere_leader_of = YEM is_our_vassal = YEM tag = YEM }
+					OR = { is_sphere_leader_of = SYE is_our_vassal = SYE tag = SYE }
+				}
+ 
+			}
+		}
+		
+		effect = {
+			prestige = 100
+
+			random_owned = { 
+				limit = { owner = { tag = YEM } }
+				owner = { inherit = SYE }
+			}
+
+			random_owned = { 
+				limit = { owner = { tag = SYE } }
+				owner = { inherit = YEM change_tag = YEM }
+			}
+
+			#all_core = { remove_core = SYE }
+		
+		}
+		ai_will_do = { 
+			factor = 1 
+			modifier = { 
+				factor = 0 
+				OR = { SYE = { ai = no } YEM = { ai = no } } 
+			}
+		}
+	}
+	
+}

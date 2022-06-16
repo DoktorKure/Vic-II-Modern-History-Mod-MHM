@@ -1,0 +1,473 @@
+graphical_culture = MiddleEasternGC
+color = { 243 214 76 }
+hms_government = { 255  205  155 }
+absolute_monarchy = { 255  205  155 }
+party = {
+		name = "Watani Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1953.2.10
+}
+party = {
+		name = "Liberation Rally"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = nationalist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1953.2.10
+		end_date = 1956.1.1
+}
+party = {
+		name = "National Union"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1956.1.1
+		end_date = 1962.12.1
+}
+party = {
+		name = "Arab Socialist Union"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1962.12.1
+		end_date = 1984.1.1
+}
+party = {
+		name = "Arab Democratic Nasserist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1984.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Liberal Constitutional Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2001.1.1
+}
+party = {
+		name = "el-Ghad Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2001.1.1
+		end_date = 2014.11.1
+}
+party = {
+		name = "Future of the Nation Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2014.11.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Wafd Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1978.2.4
+}
+party = {
+		name = "New Wafd Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1978.2.4
+		end_date = 2092.1.1
+}
+party = {
+		name = "Freedom and Justice Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2011.4.30
+		end_date = 2014.8.9
+}
+party = {
+		name = "Saadist Institutional Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1962.1.1
+}
+party = {
+		name = "ASU - Liberal Socialists"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1962.1.1
+		end_date = 1976.1.1
+}
+party = {
+		name = "Liberal Socialists Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1976.1.1
+		end_date = 2011.4.3
+}
+party = {
+		name = "Free Egyptians Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2011.4.3
+		end_date = 2092.1.1
+}
+party = {
+		name = "Free Officers Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1953.2.10
+}
+party = {
+		name = "Liberation Rally"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1953.2.10
+		end_date = 1956.1.1
+}
+party = {
+		name = "National Union"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1956.1.1
+		end_date = 1962.12.1
+}
+party = {
+		name = "Arab Socialist Union"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1962.12.1
+		end_date = 1978.10.2
+}
+party = {
+		name = "National Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1978.10.2
+		end_date = 2011.3.29
+}
+party = {
+		name = "Social Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2011.3.29
+		end_date = 2092.1.1
+}
+party = {
+		name = "Egyptian Islamic Labour Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1978.9.9
+		end_date = 1983.1.1
+}
+party = {
+		name = "Umma Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1983.1.1
+		end_date = 2011.1.1
+}
+party = {
+		name = "ASU - Tagammu"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1977.1.1
+}
+party = {
+		name = "Tagammu"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1977.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Egyptian Green Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1990.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "ASU - Egyptian Arab Socialists"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1977.1.1
+}
+party = {
+		name = "Egyptian Arab Socialist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1977.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Muslim Brotherhood"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2011.5.12
+}
+party = {
+		name = "Al-Nour Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 2011.5.12
+		end_date = 2092.1.1
+}
+party = {
+		name = "Iskra"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1947.7.1
+}
+party = {
+		name = "HADITU"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1947.7.1
+		end_date = 1955.2.1
+}
+party = {
+		name = "Unified Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1955.2.1
+		end_date = 1957.2.1
+}
+party = {
+		name = "United Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1957.2.1
+		end_date = 1958.1.8
+}
+party = {
+		name = "Egyptian Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1958.1.8
+		end_date = 2092.1.1
+}
+party = {
+		name = "Popular Vanguard for Liberation"
+		citizenship_policy = limited_citizenship
+		economic_policy = planned_economy
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1949.1.1
+}
+party = {
+		name = "Popular Democracy"
+		citizenship_policy = limited_citizenship
+		economic_policy = planned_economy
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1949.1.1
+		end_date = 1950.1.1
+}
+party = {
+		name = "Workers' Vanguard"
+		citizenship_policy = limited_citizenship
+		economic_policy = planned_economy
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1950.1.1
+		end_date = 1957.3.1
+}
+party = {
+		name = "Worker-Peasants Communist Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = planned_economy
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1957.3.1
+		end_date = 1958.1.8
+}
+party = {
+		name = "Egyptian Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1958.1.8
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Muhammad Ali" Ibrahim Ismail Said "Salah al-Din" "Baybars Abu al-Futuh" "Qalawun al-Salihi" Barquq Barsbay Qaitbay "Qansuh al-Ghawri" "Al-Nil al-Kabir"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Alif Amin Anwar Ayham Bahir Dhakwan Falah Faraj Fawzan Ghanim Ghassan Hanbal Haris Hashim Iqbal Jal Junayd Kadar Kazim Khalis Khulus Luay Mashhur Muflih Mulham Munahid Nabhan Nawfal Nazim Numan Ramiz Sharaf Siddiq Tawfiq Yasir Zayn Zubayr
+	}
+	cruiser = {
+		"Abd al-Aziz" "Abd al-Hadi" "Abd al-Haqq" "Abd al-Jalil" "Abd al-Latif" "Abd al-Hafiz" "Abd al-Hakim" "Abd al-Nasir" "Abd al-Quddus" "Abd al-Rahim" "Abd al-Malik" "Abd al-Rashid" "Abd al-Rahman" "Abd al-Sami" "Abd al-Wadud" "Abd al-Wahhab"
+	}
+	modern_cruiser = {
+		"Muhammad Ali" Ibrahim Ismail Said "Salah al-Din" "Baybars Abu al-Futuh" "Qalawun al-Salihi" Barquq Barsbay Qaitbay "Qansuh al-Ghawri" "Al-Nil al-Kabir"
+	}
+	frigate = {
+		Akram Atif Ayman Bahir Fadil Fath Firas Fawwaz Ghalib Hakim Humam Jabbar Jawhar Kamal Khalid Masud Mamun Majid Mufid Mukhtar Muntasir Qudamat Rashad Sa'ad Tahir Thabit Wafiq Yusuf Zahir Zafir
+	}
+	modern_destroyer = {
+		"Ala al-Din" "Husam al-Din" "Izz al-Din" "Jalal al-Din" "Khayr al-Din" "Majid al-Din" "Nasir al-Din" "Nur al-Din" "Safi al-Din" "Siraj al-Din"
+	}
+	destroyer = {
+		"Al-Qahira" "Al-Iskandariyya" Dumyat Mansura Tanta "Al-Uqsur" "Al-Suyut" Aswan "Al-Fayyum" Khartum Qusayr Suways Minya
+	}
+	submarine = {
+		"Badr al-Din" "Diya al-Din" "Baha al-Din" "Imad al-Din" "Jamal al-Din" "Lutf al-Din" "Najm al-Din" "Sayf al-Din"
+	}
+
+}

@@ -1,0 +1,416 @@
+graphical_culture = EuropeanGC
+color = { 255 69 0 }
+party = {
+		name = "PAX Association"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1997.12.14
+}
+party = {
+		name = "National-Catholic Movement"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1997.12.14
+		end_date = 2012.11.11
+}
+party = {
+		name = "National-Catholic Movement"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 2012.11.11
+		end_date = 2092.1.1
+}
+party = {
+		name = "People's Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1949.11.27
+}
+party = {
+		name = "United People's Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1949.11.27
+		end_date = 1990.1.30
+}
+party = {
+		name = "Polish People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1990.1.30
+		end_date = 2092.1.1
+}
+party = {
+		name = "Polish People's Party" 
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism	
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1949.11.27
+}
+party = {
+		name = "United People's Party" 
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism	
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1949.11.27
+		end_date = 1990.1.30
+}
+party = {
+		name = "Centre Agreement"
+		citizenship_policy = limited_citizenship 
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1990.1.30
+		end_date = 2001.6.13
+}
+party = {
+		name = "PiS - Law and Justice" 
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2001.6.13
+		end_date = 2092.1.1
+}
+party = {
+		name = "Alliance of Democrats"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1988.12.18
+}
+party = {
+		name = "Solidarity Citizens' Committee" 
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1988.12.18
+		end_date = 1991.5.1
+}
+party = {
+		name = "Democratic Union" 
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1991.5.1
+		end_date = 1994.4.23
+}
+party = {
+		name = "Freedom Union"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1994.4.23
+		end_date = 2001.1.24
+}
+party = {
+		name = "Civic Platform" 
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2001.1.24
+		end_date = 2016.1.1
+}
+party = {
+		name = "Civic Platform" 
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2016.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Polish Socialist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1990.1.28
+}
+party = {
+		name = "SdRP" 
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1990.1.28
+		end_date = 1999.4.15
+}
+party = {
+		name = "Democratic Left Alliance" 
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1999.4.15
+		end_date = 2092.1.1
+}
+party = {
+        name = "Polish Socialist Party" 
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1992.6.1
+}
+party = {
+		name = "Labour Union" 
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1992.6.1
+		end_date = 2003.9.6
+}
+party = {
+		name = "The Greens" 
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2003.9.6
+		end_date = 2092.1.1
+}
+party = {
+		name = "Razem" 
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2015.5.16
+		end_date = 2092.1.1
+}
+party = {
+		name = "ONR - Falanga"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1981.11.10
+}
+party = {
+		name = "Union of Monarchist Groups" 
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Rebirth of Poland" 
+		citizenship_policy = residency
+		economic_policy = planned_economy
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1981.11.10
+		end_date = 2092.1.1
+}
+party = {
+		name = "KORWiN" 
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 2015.1.22
+		end_date = 2092.1.1
+}
+party = {
+		name = "Polish Workers' Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1948.12.16
+}
+party = {
+		name = "Polish United Workers' Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1948.12.16
+		end_date = 1990.1.30
+}
+party = {
+		name = "Union of Polish Communists"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1990.1.30
+		end_date = 2002.10.9
+}
+party = {
+		name = "Communist Party of Poland"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2002.10.9
+		end_date = 2092.1.1
+}
+party = {
+		name = "Polish Workers' Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1948.12.16
+}
+party = {
+		name = "PZPR -  Pulawianie"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1948.12.16
+		end_date = 1970.1.1
+}
+party = {
+		name = "PZPR - Reformists"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1970.1.1
+		end_date = 2002.10.9
+}
+party = {
+		name = "KPP - Reformists"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2002.10.9
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Arend Dickmann" "Boleslaw I Chrobry" "Jan Kostka" "Michal Figenow" "Mateusz Schapring" "Jakob Mora" "Jan III Sobieski"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		"Krzysztof Arciszewski" "Jedrzej Sniadecki" "Hugo Kollataj" "Jan Dlugosz" "Adam Naruszewicz" "Samuel Linde" "Mikolaj Rej"
+	}
+	cruiser = {
+		"Mikolaj Kopernik" "Jan Heweliusz" "Jan Sniadecki" "Jan Brozek" "Jan Mikolaj Smogulecki" "Albert Brudzewski" "Stanislaw Lubieniecki"
+	}
+	modern_cruiser = {
+		"Arend Dickmann" "Boleslaw I Chrobry" "Jan Kostka" "Michal Figenow" "Mateusz Schapring" "Jakob Mora" "Jan III Sobieski"
+	}
+	frigate = {
+		Anna Maria Katarzyna Barbara Ewa Zofia Monika
+	}
+	modern_destroyer = {
+		Krak�w Warszawa L�dz Poznan Wroclaw Lw�w Gdansk
+	}
+	destroyer = {
+		Wisla Odra Warta Narew San Notec Bug
+	}
+	submarine = {
+		"Jan Sarkander" "Andrzej Bobola" "Jan Kety" " Stanislaus Kostka" "Stanislaw Szczepanowski" "Swieta Kinga"
+	}
+
+}

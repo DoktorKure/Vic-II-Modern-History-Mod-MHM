@@ -1,0 +1,284 @@
+graphical_culture = MoroccoGC
+color = { 224 146 113 }
+party = {
+		name = "Democratic Independence Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Constitutional Democratic Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1983.1.1
+}
+party = {
+		name = "Constitutional Union"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1983.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Istiqlal Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Authenticity & Modernity Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2008.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "FDIC"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1957.1.1
+}
+party = {
+		name = "Popular Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1957.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Rally of Independents"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1978.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Union of Popular Force"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1975.1.1
+}
+party = {
+		name = "Socialist Union - Popular Force"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1975.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Social Progress Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2002.1.1
+}
+party = {
+		name = "Environment & Development Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2002.1.1
+		end_date = 2008.1.1
+}
+party = {
+		name = "Left Green Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2008.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_populist_0_MOR"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Absolutists"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Justice and Development Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1967.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Moroccan Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1968.1.1
+}
+party = {
+		name = "Party of Liberation & Socialism"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1968.1.1
+		end_date = 1974.8.23
+}
+party = {
+		name = "Ila al-Amam"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1974.8.23
+		end_date = 1995.1.1
+}
+party = {
+		name = "Democratic Way"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1995.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Moroccan Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Party of Liberation & Socialism"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1968.1.1
+		end_date = 1974.8.23
+}
+party = {
+		name = "Party of Progress and Socialism"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1974.8.23
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Mulay al-Rashid" "Ismail ibn Sharif" "Muhammad al-Thalith" "Abd al-Rahman" "Muhammad al-Rabi" "Hasan al-Alawiyyin" "Al-Mansur al-Dhahbi" "Abd Allal al-Ghalib" "Muhammad al-Shaikh al-Saghir" "Abu Yusuf Yaqub" "Abu Sa'id Uthman" "Al-Mariniyyun" "Al-Idrisiyyun"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Alif Amin Anwar Ayham Bahir Dhakwan Falah Faraj Fawzan Ghanim Ghassan Hanbal Haris Hashim Iqbal Jal Junayd Kadar Kazim Khalis Khulus Luay Mashhur Muflih Mulham Munahid Nabhan Nawfal Nazim Numan Ramiz Sharaf Siddiq Tawfiq Yasir Zayn Zubayr
+	}
+	cruiser = {
+		"Abd al-Aziz" "Abd al-Hadi" "Abd al-Haqq" "Abd al-Jalil" "Abd al-Latif" "Abd al-Hafiz" "Abd al-Hakim" "Abd al-Nasir" "Abd al-Quddus" "Abd al-Rahim" "Abd al-Malik" "Abd al-Rashid" "Abd al-Rahman" "Abd al-Sami" "Abd al-Wadud" "Abd al-Wahhab"
+	}
+	modern_cruiser = {
+		"Mulay al-Rashid" "Ismail ibn Sharif" "Muhammad al-Thalith" "Abd al-Rahman" "Muhammad al-Rabi" "Hasan al-Alawiyyin" "Al-Mansur al-Dhahbi" "Abd Allal al-Ghalib" "Muhammad al-Shaikh al-Saghir" "Abu Yusuf Yaqub" "Abu Sa'id Uthman" "Al-Mariniyyun" "Al-Idrisiyyun"
+	}
+	frigate = {
+		Akram Atif Ayman Bahir Fadil Fath Firas Fawwaz Ghalib Hakim Humam Jabbar Jawhar Kamal Khalid Masud Mamun Majid Mufid Mukhtar Muntasir Qudamat Rashad Sa'ad Tahir Thabit Wafiq Yusuf Zahir Zafir
+	}
+	modern_destroyer = {
+		"Ala al-Din" "Husam al-Din" "Izz al-Din" "Jalal al-Din" "Khayr al-Din" "Majid al-Din" "Nasir al-Din" "Nur al-Din" "Safi al-Din" "Salah al-Din" "Siraj al-Din"
+	}
+	destroyer = {
+		Fas Murrakush Miknasa Al-Rabat Asfi Tanja Tatawin "Al-Qasr al-Kabir" Shafshawan Al-Araish Al-Sawira Wujda Warzazat Agadir
+	}
+	submarine = {
+		"Badr al-Din" "Diya al-Din" "Baha al-Din" "Imad al-Din" "Jamal al-Din" "Lutf al-Din" "Najm al-Din" "Sayf al-Din"
+	}
+
+}

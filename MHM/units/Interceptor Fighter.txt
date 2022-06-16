@@ -1,0 +1,48 @@
+##cavalry - Interceptor fighter
+cavalry = {
+	icon = 10
+	
+	type = land
+	sprite = Fighter
+	active = no
+	unit_type = cavalry
+	floating_flag = yes
+	
+	primary_culture = yes
+	
+	#Core Abilities
+	priority = 25
+	max_strength = 3
+	default_organisation = 20
+	maximum_speed = 7.00
+	weighted_value = 4.0
+
+	#Building Costs
+	build_time = 120
+	# cost 29M * 20 = 0.5B
+	build_cost = {
+		aeroplanes = 15
+		fuel = 12.5
+		weaponry = 5
+		small_arms = 10
+		optics = 15
+	}
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		ammunition = 0.1
+		canned_food = 0.02
+		fuel = 0.25
+		machine_parts = 0.15
+		electric_gear = 0.1
+	}
+
+	#Land Abilties
+	reconnaissance = 3
+	attack = 8
+	defence = 15
+	discipline = 0.5
+	support = 0.25
+	maneuver = 4
+
+}

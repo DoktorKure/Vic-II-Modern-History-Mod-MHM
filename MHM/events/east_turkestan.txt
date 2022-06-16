@@ -1,0 +1,156 @@
+#Soviet interference in East Turkestan
+country_event = {
+  id = 8013802
+  title = "The East Turkestan Issue"
+  desc = EVTDESC8013802
+  picture = "nwo2_east_turkestan"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1946 
+		NOT = { year = 1992 }
+		
+		is_vassal = no
+		war = no
+		
+		#Cold War
+		has_global_flag = blocsenabled
+		
+		#Sino-Soviet Split
+		has_global_flag = sino_soviet_split
+		
+		#China
+		CHI = {
+			is_greater_power = yes
+			government = proletarian_dictatorship
+			
+			#China owns East Turkestan
+			is_possible_vassal = ETS
+		}
+	}
+
+	option = {
+		name = "Get involved in Chinese affairs"
+		badboy = -5
+		
+		relation = { who = CHI value = -100 }
+		
+		#Uighur separatism
+		ETS = { 
+			all_core = { 
+				add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				any_pop = {
+					limit = { OR = { has_pop_religion = sunni has_pop_religion = ibad has_pop_religion = shiite } }
+					ideology = { factor = 0.25 value = traditionalist } 
+					scaled_militancy = {
+						factor = 10
+						ideology = traditionalist
+					}
+				}
+			} 
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Stay out of China's domestic disputes"
+		
+		relation = { who = CHI value = 100 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#East Turkestan Incorporation - CHI
+country_event = {
+  id = 8013805
+  title = "Incorporation of East Turkestan"
+  desc = EVTDESC8013805
+  picture = "nwo2_east_turkestan"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		year = 1949 
+		NOT = { year = 1990 }
+		
+		government = proletarian_dictatorship
+		is_vassal = no 
+		
+		ETS = { 
+			exists = yes 
+			is_vassal = no 
+			war = no
+			
+			#East Turkestan must border the PRC
+			neighbour = THIS
+		}
+		
+		NOT = { XIJ = { war_with = ETS } } #Ili Rebellion
+
+		#China won the Civil War
+		has_global_flag = CHI_won_civil_war
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Propose to unite China! (War if refuse)"
+		1600 = {
+			change_province_name = "Urumqi"
+		}
+		ETS = { country_event = 8013806 } 
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Leave them be"
+		prestige_factor = -0.05
+		
+		relation = { who = ETS value = 200 }
+		diplomatic_influence = { who = ETS value = 200 }
+		
+		ai_chance = { factor = 0 }
+	}
+	
+}
+
+#East Turkestan Incorporation - ETS
+country_event = {
+  id = 8013806
+  title = "Incorporation of East Turkestan"
+  desc = EVTDESC8013805
+  picture = "nwo2_east_turkestan"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to be annexed"
+		
+		#All ETS cores change controller to PRC
+		all_core = { change_controller = CHI }
+		
+		CHI = { 
+			prestige = 100
+			inherit = ETS 
+		}
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Fight for our independence!"
+		prestige = 50
+		CHI = { 
+			war = { 
+				target = ETS 
+				attacker_goal = { casus_belli = annex_core_country } 
+				defender_goal = { casus_belli = humiliate } 
+			} 
+		}
+		ai_chance = { factor = 0.1 }
+	}
+}

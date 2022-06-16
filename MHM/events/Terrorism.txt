@@ -1,0 +1,1369 @@
+##############################################################
+
+#UN Counter-Terrorism Historical Events
+
+##############################################################
+
+#1963 UN Convention on Terrorism
+country_event = {
+	id = 1511100
+	title = EVT_1511100_NAME # "$YEAR$ UN Convention on Terrorism"
+	desc = 1963_un_terror_convention_desc
+	#picture = "1963_un_terror_convention"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		year = 1962 NOT = { year = 1990 }
+		any_owned_province = { has_province_modifier = un_headquarters }
+		NOT = { has_global_flag = 1963_un_terror_convention }
+	}
+
+	mean_time_to_happen = {
+		months = 19
+	}
+
+	option = {
+		name = EVT_1511100_A # "Terrorists beware!"
+		set_global_flag = 1963_un_terror_convention
+		
+		set_country_flag = 1963_un_terror_convention
+		add_country_modifier = { name = terrorists_definition duration = -1 }
+		any_country = {
+			set_country_flag = 1963_un_terror_convention
+			any_pop = { militancy = -3 consciousness = -3 }
+			add_country_modifier = { name = terrorists_definition duration = -1 }
+		}
+		
+	}
+}
+
+#1970 UN Convention on Terrorism
+country_event = {
+	id = 1511101
+	title = EVT_1511100_NAME
+	desc = 1970_un_terror_convention_desc
+	#picture = "1970_un_terror_convention"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		year = 1969 NOT = { year = 1990 }
+		any_owned_province = { has_province_modifier = un_headquarters }
+		NOT = { has_global_flag = 1970_un_terror_convention }
+	}
+
+	mean_time_to_happen = {
+		months = 21
+	}
+
+	option = {
+		name = EVT_1511101_A
+		set_global_flag = 1970_un_terror_convention
+		
+		set_country_flag = 1970_un_terror_convention
+		any_country = {
+			set_country_flag = 1970_un_terror_convention
+			any_pop = { militancy = -3 consciousness = -3 }
+		}
+		
+	}
+}
+
+#1971 UN Convention on Terrorism
+country_event = {
+	id = 1511102
+	title = EVT_1511100_NAME
+	desc = 1971_un_terror_convention_desc
+	#picture = "1971_un_terror_convention"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		year = 1970 NOT = { year = 1990 }
+		any_owned_province = { has_province_modifier = un_headquarters }
+		NOT = { has_global_flag = 1971_un_terror_convention }
+	}
+
+	mean_time_to_happen = {
+		months = 17
+	}
+
+	option = {
+		name = EVT_1511102_A
+		set_global_flag = 1971_un_terror_convention
+		
+		set_country_flag = 1971_un_terror_convention
+		any_country = {
+			set_country_flag = 1971_un_terror_convention
+			any_pop = { militancy = -3 consciousness = -3 }
+		}
+	}
+}
+
+#1973 UN Convention on Terrorism
+country_event = {
+	id = 1511103
+	title = EVT_1511100_NAME
+	desc = 1973_un_terror_convention_desc
+	#picture = "1973_un_terror_convention"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		year = 1972 NOT = { year = 1990 }
+		any_owned_province = { has_province_modifier = un_headquarters }
+		NOT = { has_global_flag = 1973_un_terror_convention }
+	}
+
+	mean_time_to_happen = {
+		months = 16
+	}
+
+	option = {
+		name = EVT_1511103_A
+		set_global_flag = 1973_un_terror_convention
+		
+		set_country_flag = 1973_un_terror_convention
+		any_country = {
+			set_country_flag = 1973_un_terror_convention
+			any_pop = { militancy = -3 consciousness = -3 }
+		}
+	}
+}
+
+#1979 UN Convention on Terrorism
+country_event = {
+	id = 1511104
+	title = EVT_1511100_NAME
+	desc = 1979_un_terror_convention_desc
+	#picture = "1979_un_terror_convention"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		year = 1978 NOT = { year = 1990 }
+		any_owned_province = { has_province_modifier = un_headquarters }
+		NOT = { has_global_flag = 1979_un_terror_convention }
+	}
+
+	mean_time_to_happen = {
+		months = 19
+	}
+
+	option = {
+		name = EVT_1511104_A # "Hostage takers are pathetic cowards"
+		set_global_flag = 1979_un_terror_convention
+		
+		set_country_flag = 1979_un_terror_convention
+		any_country = {
+			set_country_flag = 1979_un_terror_convention
+			any_pop = { militancy = -3 consciousness = -3 }
+		}
+	}
+}
+
+#1988 UN Convention on Terrorism
+country_event = {
+	id = 1511105
+	title = EVT_1511100_NAME
+	desc = 1988_un_terror_convention_desc
+	#picture = "1988_un_terror_convention"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		year = 1987 NOT = { year = 1990 }
+		any_owned_province = { has_province_modifier = un_headquarters }
+		NOT = { has_global_flag = 1988_un_terror_convention }
+	}
+
+	mean_time_to_happen = {
+		months = 20
+	}
+
+	option = {
+		name = EVT_1511105_A
+		set_global_flag = 1988_un_terror_convention
+		
+		set_country_flag = 1988_un_terror_convention
+		any_country = {
+			set_country_flag = 1988_un_terror_convention
+			any_pop = { militancy = -3 consciousness = -3 }
+		}
+	}
+}
+
+#1991 UN Convention on Terrorism
+country_event = {
+	id = 1511106
+	title = EVT_1511100_NAME
+	desc = 1991_un_terror_convention_desc
+	picture = "1991_un_terror_convention"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		year = 1991
+		any_owned_province = { has_province_modifier = un_headquarters }
+		NOT = { has_global_flag = 1991_un_terror_convention }
+	}
+
+	mean_time_to_happen = {
+		months = 21
+		modifier = { # 1991 start date
+			factor = 0.15
+			NOT = { has_global_flag = 1963_un_terror_convention }
+		}
+	}
+
+	option = { # set all flags in case of 1991 start
+		name = EVT_1511106_A # BOOM
+		set_global_flag = 1963_un_terror_convention
+		set_global_flag = 1970_un_terror_convention
+		set_global_flag = 1971_un_terror_convention
+		set_global_flag = 1973_un_terror_convention
+		set_global_flag = 1979_un_terror_convention
+		set_global_flag = 1988_un_terror_convention
+		set_global_flag = 1991_un_terror_convention
+		
+		set_country_flag = 1991_un_terror_convention
+		any_country = {
+			set_country_flag = 1991_un_terror_convention
+			any_pop = { militancy = -3 consciousness = -3 }
+		}
+	}
+}
+
+#1997 UN Convention on Terrorism
+country_event = {
+	id = 1511107
+	title = EVT_1511100_NAME
+	desc = 1997_un_terror_convention_desc
+	#picture = "1997_un_terror_convention"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		year = 1996
+		any_owned_province = { has_province_modifier = un_headquarters }
+		NOT = { has_global_flag = 1997_un_terror_convention }
+	}
+
+	mean_time_to_happen = {
+		months = 22
+	}
+
+	option = {
+		name = EVT_1511107_A # "Explosive news for the terrorists"
+		set_global_flag = 1997_un_terror_convention
+		
+		set_country_flag = 1997_un_terror_convention
+		any_country = {
+			set_country_flag = 1997_un_terror_convention
+			any_pop = { militancy = -3 consciousness = -3 }
+		}
+	}
+}
+
+#1999 UN Convention on Terrorism
+country_event = {
+	id = 1511108
+	title = EVT_1511100_NAME
+	desc = 1999_un_terror_convention_desc
+	#picture = "1999_un_terror_convention"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		year = 1998
+		any_owned_province = { has_province_modifier = un_headquarters }
+		NOT = { has_global_flag = 1999_un_terror_convention }
+	}
+
+	mean_time_to_happen = {
+		months = 14
+	}
+
+	option = {
+		name = EVT_DESC_1511108
+		set_global_flag = 1999_un_terror_convention
+		
+		set_country_flag = 1999_un_terror_convention
+		any_country = {
+			set_country_flag = 1999_un_terror_convention
+			any_pop = { militancy = -3 consciousness = -3 }
+		}
+	}
+}
+
+#United Nations Security Council Resolution 1373
+country_event = {
+	id = 1511109
+	title = "UN Counter Terrorism Committee"
+	desc = EVTDESC1511109
+	#picture = "un_counter_terrorism_committee"
+	is_triggered_only = yes
+	major = yes
+
+	mean_time_to_happen = {
+		months = 21
+	}
+
+	option = {
+		name = "We must take the fight globally with our global partners"
+		set_global_flag = un_counter_terrorism_committee
+	}
+}
+
+##############################################################
+
+#Terrorist Acts - Frequency dependent on above
+
+##############################################################
+
+#General event
+province_event = {
+	id = 1511119
+	title = EVTNAME1511119
+	desc = EVTDESC1511119
+	#picture = "un_counter_terrorism_committee"
+
+	trigger = {
+		controlled_by_rebels = no
+		is_colonial = no
+		has_national_minority = yes
+		average_militancy = 3
+		
+		NOT = { has_province_modifier = terrorist_chaos }
+		NOT = { has_province_modifier = terror_strike_impending }
+		
+		owner = { NOT = { has_country_modifier = national_tragedy } }
+	}
+
+	mean_time_to_happen = {
+		months = 365
+
+		#Decrease
+		modifier = {
+			factor = 4
+			owner = { has_country_modifier = spy_low }
+		}
+		modifier = {
+			factor = 4
+			owner = { has_country_modifier = refugee_ban }
+		}
+		modifier = {
+			factor = 8
+			owner = { has_country_modifier = recent_terrorist_attack }
+		}
+
+		#Increase - Unemployment
+		modifier = {
+			factor = 0.9
+			unemployment = 0.1
+		}
+		modifier = {
+			factor = 0.8
+			unemployment = 0.2
+		}
+		modifier = {
+			factor = 0.8
+			unemployment = 0.3
+		}
+		modifier = {
+			factor = 0.7
+			unemployment = 0.4
+		}
+		modifier = {
+			factor = 0.7
+			unemployment = 0.5
+		}
+		modifier = {
+			factor = 0.7
+			unemployment = 0.6
+		}
+
+		#Reduce based on reforms
+		modifier = {
+			factor = 1.25
+			owner = { security_reform = security_service }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { security_reform = security_data_cohesion }
+		}
+		modifier = {
+			factor = 2
+			owner = { security_reform = security_clearance_for_gov_services }
+		}
+		modifier = {
+			factor = 4
+			owner = { security_reform = preemptive_security_actions }
+		}
+		
+		modifier = {
+			factor = 2
+			owner = { NOT = { immigration_policy = nobody_gets_out } }
+		}
+
+		#Reduce based on year
+		modifier = {
+			factor = 2
+			NOT = { year = 1950 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { year = 1960 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { year = 1970 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { year = 1980 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { year = 1990 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { year = 2000 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { year = 2010 }
+		}
+		modifier = {
+			factor = 2
+			NOT = { year = 2020 }
+		}
+
+		#Increase - Important target
+		modifier = {
+			factor = 0.8
+			owner = { is_secondary_power = yes }
+		}
+		modifier = {
+			factor = 0.6
+			owner = { is_greater_power = yes }
+		}
+
+		#Increase - War exhaustion
+		modifier = {
+			factor = 0.9
+			owner = { war_exhaustion = 0.40 }
+		}
+		modifier = {
+			factor = 0.8
+			owner = { war_exhaustion = 0.50 }
+		}
+		modifier = {
+			factor = 0.7
+			owner = { war_exhaustion = 0.60 }
+		}
+		modifier = {
+			factor = 0.6
+			owner = { war_exhaustion = 0.70 }
+		}
+
+		#Population Size
+
+		modifier = {
+			factor = 2
+			NOT = { owner = { total_pops = 5000000 } }
+		}
+
+		modifier = {
+			factor = 2
+			NOT = { owner = { total_pops = 7500000 } }
+		}
+
+		modifier = {
+			factor = 2
+			NOT = { owner = { total_pops = 10000000 } }
+		}
+
+		modifier = {
+			factor = 2
+			NOT = { owner = { total_pops = 15000000 } }
+		}
+
+		#World tension
+		modifier = {
+			factor = 2
+			NOT = { owner = { has_country_modifier = war_on_terror } }
+		}
+
+		modifier = {
+			factor = 0.5
+			owner = { has_country_modifier = world_high }
+		}
+		modifier = {
+			factor = 0.75
+			owner = { has_country_modifier = world_medium }
+		}
+		modifier = {
+			factor = 0.5
+			owner = { government = nationalist_dictatorship }
+		}
+
+		modifier = {
+			factor = 1.1
+			has_province_modifier = peace_region
+		}
+		modifier = {
+			factor = 0.9
+			has_province_modifier = unstable_region
+		}
+
+		#Increase - Province factors
+		modifier = {
+			factor = 0.8
+			OR = { is_primary_culture = no is_accepted_culture = no }
+		}
+
+		modifier = {
+			factor = 0.9
+			average_militancy = 5
+		}
+		modifier = {
+			factor = 0.8
+			average_militancy = 6
+		}
+		modifier = {
+			factor = 0.7
+			average_militancy = 7
+		}
+		modifier = {
+			factor = 0.6
+			average_militancy = 8
+		}
+		modifier = {
+			factor = 0.5
+			average_militancy = 9
+		}
+		modifier = {
+			factor = 0.4
+			average_militancy = 10
+		}
+		modifier = {
+			factor = 0.8
+			has_crime = terrorist_cells #requires militancy 6
+		}
+
+		#Reduce, province police
+		modifier = {
+			factor = 1.1
+			crime_fighting = 0.5
+		}
+		modifier = {
+			factor = 1.1
+			crime_fighting = 0.6
+		}
+		modifier = {
+			factor = 1.1
+			crime_fighting = 0.7
+		}
+		modifier = {
+			factor = 1.05
+			crime_fighting = 0.8
+		}
+		modifier = {
+			factor = 1.05
+			crime_fighting = 0.9
+		}
+
+		#Increase - UN Resolutions
+		modifier = {
+			factor = 0.9
+			has_global_flag = 1963_un_terror_convention
+		}
+		modifier = {
+			factor = 0.9
+			has_global_flag = 1970_un_terror_convention
+		}
+		modifier = {
+			factor = 0.8
+			has_global_flag = 1971_un_terror_convention
+		}
+		modifier = {
+			factor = 0.8
+			has_global_flag = 1973_un_terror_convention
+		}
+		modifier = {
+			factor = 0.7
+			has_global_flag = 1979_un_terror_convention
+		}
+		modifier = {
+			factor = 0.7
+			has_global_flag = 1988_un_terror_convention
+		}
+		modifier = {
+			factor = 0.6
+			has_global_flag = 1991_un_terror_convention
+		}
+		modifier = {
+			factor = 0.6
+			has_global_flag = 1997_un_terror_convention
+		}
+		modifier = {
+			factor = 0.5
+			has_global_flag = 1999_un_terror_convention
+		}
+
+		#Reduce, government efforts to fight
+		modifier = {
+			factor = 1.5
+			owner = { has_country_flag = 1963_un_terror_convention }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { has_country_flag = 1970_un_terror_convention }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { has_country_flag = 1971_un_terror_convention }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { has_country_flag = 1973_un_terror_convention }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { has_country_flag = 1979_un_terror_convention }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { has_country_flag = 1988_un_terror_convention }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { has_country_flag = 1991_un_terror_convention }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { has_country_flag = 1997_un_terror_convention }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { has_country_flag = 1999_un_terror_convention }
+		}
+		modifier = {
+			factor = 1.5
+			owner = { has_country_flag = un_counter_terrorism_committee }
+		}
+		modifier = {
+			factor = 2
+			owner = { has_country_modifier = interpol }
+		}
+		modifier = {
+			factor = 2
+			owner = { government = theocracy }
+		}
+		modifier = {
+			factor = 2
+			owner = { has_country_modifier = freedom_fighters_definition }
+		}
+		modifier = {
+			factor = 1.1
+			owner = { nationalvalue = nv_order }
+		}
+		
+		#Increase, country specific conditions
+		modifier = {
+			factor = 0.2
+			owner = { has_country_modifier = years_of_lead }
+		}
+	}
+
+	option = {
+		name = EVT_1511119_A
+		owner = { prestige = -5 }
+		owner = { add_country_modifier = { name = recent_terrorist_attack duration = 183 } }
+		add_province_modifier = { name = terror_strike_impending duration = -1 }
+	}
+}
+
+#Bombings
+province_event = {
+	id = 1511110
+	title = EVTNAME1511110
+	desc = EVTDESC1511110
+	#picture = "un_counter_terrorism_committee"
+
+	#major = yes
+	trigger = { has_province_modifier = terror_strike_impending }
+	mean_time_to_happen = { days = 6 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "Hunt down the terrorists"
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+		state_scope = { any_pop = { dominant_issue = { value = nobody_gets_out factor = 0.5 } } } #not limited by any_owned so countries will do something about terror attacks even if just on the border
+	}
+}
+
+#Shootings
+province_event = {
+	id = 1511111
+	title = EVTNAME1511111
+	desc = EVTDESC1511111
+	#picture = "un_counter_terrorism_committee"
+
+	#major = yes
+	trigger = { has_province_modifier = terror_strike_impending }
+	mean_time_to_happen = { days = 6 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "They'd better not take my guns..."
+		state_scope = {
+			poor_strata = {
+				dominant_issue = { value = pro_military factor = 0.45 }
+			}
+			middle_strata = {
+				dominant_issue = { value = pro_military factor = 0.35 }
+			}
+		}
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+				ai_chance = {
+					factor = 0.5
+					modifier = {
+						factor = 1.5
+						ruling_party_ideology = conservative
+						}
+					modifier = {
+						factor = 1.5
+						ruling_party_ideology = nationalist
+						}
+					modifier = {
+						factor = 1.5
+						ruling_party_ideology = traditionalist
+					}
+				}
+	}
+
+	option = {
+		name = "Guns kill people"
+		state_scope = { any_pop = {
+				dominant_issue = { value = pro_military factor = 0.05 }
+				militancy = 2
+				consciousness = -2
+			} }
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+				ai_chance = {
+					factor = 0.5
+					modifier = {
+						factor = 1.5
+						ruling_party_ideology = socialist
+						}
+					modifier = {
+						factor = 1.5
+						ruling_party_ideology = communist
+						}
+					modifier = {
+						factor = 1.5
+						ruling_party_ideology = communist_social
+					}
+				}
+	}
+}
+
+#Hostage Crisis
+province_event = {
+	id = 1511112
+	title = EVTNAME1511112
+	desc = EVTDESC1511112
+	#picture = "un_counter_terrorism_committee"
+
+	#major = yes
+	trigger = { has_province_modifier = terror_strike_impending }
+	mean_time_to_happen = { days = 6 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+	}
+
+	option = {
+		name = "Pay the ransom"
+		owner = { money = -100000 }
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+		owner = { country_event = { id = 1511120 days = 2 } }
+		ai_chance = {
+			factor = 0.2
+				modifier = {
+					factor = 0
+					NOT = { money = 100000 }
+				}
+		}
+	}
+
+	option = {
+		name = "Attempt a hostage rescue operation"
+		random_list = {
+			1 =	{ owner = { prestige = 10 } state_scope = { any_pop = { consciousness = -1 } } add_province_modifier = { name = terrorist_chaos duration = 274 } }
+			1 =	{ owner = { prestige = -20 } state_scope = { any_pop = { militancy = -1 } } add_province_modifier = { name = terrorist_chaos duration = 456 } owner = { country_event = { id = 1511120 days = 2 } } }
+		}
+		ai_chance = { factor = 0.8 }
+	}
+}
+
+#Hijacking of Aircraft
+province_event = {
+	id = 1511113
+	title = EVTNAME1511113
+	desc = EVTDESC1511113
+	#picture = "un_counter_terrorism_committee"
+
+	trigger = {
+		has_province_modifier = terror_strike_impending
+		is_state_capital = yes
+	}
+	mean_time_to_happen = { days = 10 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "Oh, no"
+		owner = { prestige = -15 }
+		add_province_modifier = { name = terrorist_chaos duration = 547 }
+		owner = { add_country_modifier = { name = shipping_insecurity duration = 90 } }
+		state_scope = { any_pop = { dominant_issue = { value = jingoism factor = 0.5 } } }
+	}
+
+}
+
+#Sinking of Ship
+province_event = {
+	id = 1511114
+	title = EVTNAME1511114
+	desc = EVTDESC1511114
+	#picture = "un_counter_terrorism_committee"
+
+	trigger = {
+		has_province_modifier = terror_strike_impending
+		port = yes
+	}
+	mean_time_to_happen = { days = 10 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "Oh, no"
+		owner = { prestige = -15 }
+		add_province_modifier = { name = terrorist_chaos duration = 547 }
+		owner = { add_country_modifier = { name = shipping_insecurity duration = 90 } }
+	}
+
+}
+
+#Armed Attack on Religous sites
+province_event = {
+	id = 1511115
+	title = EVTNAME1511115
+	desc = EVTDESC1511115
+	#picture = "un_counter_terrorism_committee"
+
+	#major = yes
+	trigger = { has_province_modifier = terror_strike_impending }
+	mean_time_to_happen = { days = 6 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "We pray for the victims"
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+		state_scope = { any_pop = { dominant_issue = { value = moralism factor = 0.5 } militancy = -1.5 } }
+		ai_chance = {
+			factor = 0.5
+				modifier = {
+					factor = 1.5
+					war_policy = pacifism
+				}
+		}
+	}
+
+	option = {
+		name = "The community must come together"
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+		state_scope = { any_pop = { dominant_issue = { value = moralism factor = 0.25 } } }
+		ai_chance = { factor = 0.5 }
+	}
+}
+
+#Assassination of Local Leader
+province_event = {
+	id = 1511116
+	title = EVTNAME1511116
+	desc = EVTDESC1511116
+	#picture = "un_counter_terrorism_committee"
+
+	#major = yes
+	trigger = { has_province_modifier = terror_strike_impending }
+	mean_time_to_happen = { days = 10 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "We pray for the deceased"
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+		state_scope = { any_pop = { dominant_issue = { value = moralism factor = 0.25 } } }
+		ai_chance = { factor = 0.5 }
+	}
+
+	option = {
+		name = "Let us celebrate his legacy"
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+		add_province_modifier = { name = were_all_republicans duration = 180 }
+		state_scope = { any_pop = { consciousness = -1 } }
+		ai_chance = { factor = 0.5 }
+	}
+}
+
+#Knifing
+province_event = {
+	id = 1511117
+	title = EVTNAME1511117
+	desc = EVTDESC1511117
+	#picture = "un_counter_terrorism_committee"
+
+	#major = yes
+	trigger = { has_province_modifier = terror_strike_impending }
+	mean_time_to_happen = { days = 10 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "Condemn the act"
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+		state_scope = { any_pop = { dominant_issue = { value = residency factor = 0.5 } } }
+	}
+}
+
+#Hit and Run
+province_event = {
+	id = 1511118
+	title = EVTNAME1511118
+	desc = EVTDESC1511118
+	#picture = "un_counter_terrorism_committee"
+
+	#major = yes
+	trigger = { has_province_modifier = terror_strike_impending }
+	mean_time_to_happen = { days = 10 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "A national tragedy"
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+	}
+}
+
+#Jailbreak
+province_event = {
+	id = 1511124
+	title = EVTNAME1511124
+	desc = EVTDESC1511124
+	#picture = "un_counter_terrorism_committee"
+
+	#major = yes
+	trigger = { has_province_modifier = terror_strike_impending }
+	mean_time_to_happen = { days = 10 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "EVTOPTA22050"
+		state_scope = {
+			rich_strata = {
+				militancy = 2
+			}
+		}
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+		ai_chance = { factor = 0.5 }
+	}
+
+	option = {
+		name = "EVTOPTB22050"
+		state_scope = {
+			poor_strata = {
+				militancy = 1
+			}
+		}
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+		ai_chance = { factor = 0.5 }
+	}
+}
+
+#Chemical attack
+province_event = {
+	id = 1511125
+	title = EVTNAME1511125
+	desc = EVTDESC1511125
+	#picture = "un_counter_terrorism_committee"
+
+	#major = yes
+	trigger = { has_province_modifier = terror_strike_impending
+				is_state_capital = yes
+	}
+	mean_time_to_happen = { days = 12 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "This is horrible!"
+		add_province_modifier = { name = chemical_low duration = 30 }
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+	}
+}
+
+#Separatist attack
+province_event = {
+	id = 1511126
+	title = EVTNAME1511126
+	desc = EVTDESC1511126
+	#picture = "un_counter_terrorism_committee"
+
+	#major = yes
+	trigger = { has_province_modifier = terror_strike_impending
+				minorities = yes
+				is_capital = no
+	}
+	mean_time_to_happen = { days = 10 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "We need to step up police presence in the area"
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = no
+					is_accepted_culture = no
+				}
+			}
+			militancy = 2
+			consciousness = 2
+		}
+		flashpoint_tension = 30
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+	}
+	option = {
+		name = "We need to find a diplomatic solution to the conflict"
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = no
+					is_accepted_culture = no
+				}
+			}
+			consciousness = 5
+		}
+		flashpoint_tension = 10
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+	}
+}
+
+#####
+# Capital province attacks
+#####
+
+#Bombing of National Landmark
+province_event = {
+	id = 1511122
+	title = EVTNAME1511122
+	desc = EVTDESC1511122
+	#picture = "un_counter_terrorism_committee"
+
+	#major = yes
+	trigger = {
+		has_province_modifier = terror_strike_impending
+		is_capital = yes
+	}
+	mean_time_to_happen = { days = 10 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "This is an attack on our culture"
+		owner = { prestige = -15 }
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+		state_scope = { any_pop = { dominant_issue = { value = minorities_oppression factor = 0.15 } } } #effects lessened because capitals are generally liberal
+	}
+
+}
+
+#Bombing of Parliament
+province_event = {
+	id = 1511123
+	title = EVTNAME1511123
+	desc = EVTDESC1511123
+	#picture = "un_counter_terrorism_committee"
+
+	#major = yes
+	trigger = {
+		has_province_modifier = terror_strike_impending
+		is_capital = yes
+		owner = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } }
+	}
+	mean_time_to_happen = { days = 10 }
+
+	immediate = {
+		remove_province_modifier = terror_strike_impending
+		owner = { country_event = { id = 1511120 days = 2 } }
+	}
+
+	option = {
+		name = "This is an attack on democracy!"
+		owner = { prestige = -30 }
+		add_province_modifier = { name = terrorist_chaos duration = 365 }
+		state_scope = { any_pop = { dominant_issue = { value = ruling_party_opinion factor = 0.15 } } }
+	}
+}
+
+##############################################################
+
+#Far-right reacts to terror
+
+##############################################################
+
+#Media reaction
+country_event = { #possibly disable this if missing free press?
+	id = 1511120
+	title = EVTNAME1511120
+	desc = EVTDESC1511120
+	picture = "media_reaction_terror"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVT_1511120_A
+		prestige = -15
+		any_pop = {
+			ideology = {
+				value = conservative
+				factor = 0.025
+			}
+			dominant_issue = {
+				value = residency
+				factor = 0.01
+			}
+			dominant_issue = {
+				value = nobody_gets_out
+				factor = 0.01
+			}
+			consciousness = -1
+		}
+		upper_house = {
+			ideology = conservative
+			value = 0.1
+		}
+		random = {
+			chance = 75
+			random_country = {
+				limit = {
+					THIS = { OR = { is_secondary_power = yes is_greater_power = yes } }
+					NOT = { tag = THIS }
+					NOT = { immigration_policy = nobody_gets_out }
+					NOT = {
+						publishing_rights = censored_publishing
+						civil_service = politicised_service
+					}
+				}
+				country_event = 1511121
+			}
+		}
+		random = {
+			chance = 50
+			random_country = {
+				limit = {
+					THIS = { OR = { is_secondary_power = yes is_greater_power = yes } }
+					NOT = { tag = THIS }
+					NOT = { immigration_policy = nobody_gets_out }
+					NOT = {
+						publishing_rights = censored_publishing
+						civil_service = politicised_service
+					}
+				}
+				country_event = 1511121
+			}
+		}
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				ruling_party_ideology = populist #we can do no wrong, and encourage more populists
+			}
+		}
+	}
+
+	option = {
+		name = EVT_1511120_B
+		poor_strata = {
+			ideology = {
+				value = populist
+				factor = 0.02
+			}
+			consciousness = -2
+		}
+		middle_strata = {
+			ideology = {
+				value = populist
+				factor = 0.01
+			}
+			consciousness = -1
+		}
+		random = {
+			chance = 50
+			random_country = {
+				limit = {
+					THIS = { OR = { is_secondary_power = yes is_greater_power = yes } }
+					NOT = { tag = THIS }
+					NOT = { immigration_policy = nobody_gets_out }
+					NOT = {
+						publishing_rights = censored_publishing
+						civil_service = politicised_service
+					}
+				}
+				country_event = 1511121
+			}
+		}
+		random = {
+			chance = 25
+			random_country = {
+				limit = {
+					THIS = { OR = { is_secondary_power = yes is_greater_power = yes } }
+					NOT = { tag = THIS }
+					NOT = { immigration_policy = nobody_gets_out }
+					NOT = {
+						publishing_rights = censored_publishing
+						civil_service = politicised_service
+					}
+				}
+				country_event = 1511121
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+}
+
+country_event = {
+	id = 1511121
+	title = EVTNAME1511121
+	desc = EVTDESC1511121
+	picture = "media_reaction_terror"
+
+	is_triggered_only = yes
+
+	immediate = {
+		poor_strata = {
+			ideology = {
+				value = populist
+				factor = 0.02
+			}
+		}
+		middle_strata = {
+			ideology = {
+				value = populist
+				factor = 0.01
+			}
+		}
+	}
+
+	option = {
+		name = EVT_1511121_A
+		any_pop = {
+			dominant_issue = {
+				value = residency
+				factor = 0.02
+			}
+			dominant_issue = {
+				value = nobody_gets_out
+				factor = 0.02
+			}
+			consciousness = -1
+		}
+	}
+
+	option = {
+		name = EVT_1511121_B
+		prestige = -10
+		upper_house = {
+			ideology = conservative
+			value = 0.1
+		}
+		any_pop = {
+			militancy = -0.5
+		}
+	}
+}
+
+##############################################################
+
+#Regional Cooperation in Counter-Terrorism
+
+##############################################################
+
+#Cooperation Breaks Down
+country_event = {
+	id = 1521110
+	title = "Cooperation with Regional Partners breaks down"
+	desc = "Due to poor relations with our Counter-Terrorism regional partners, our cooperation has broken down with them severing their joint services with us."
+	picture = "terror_cooperation_breaks_down"
+
+	trigger = {
+		has_country_modifier = regional_anti_terror
+		NOT = { any_neighbor_country = { relation = { who = THIS value = 0 } } }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Terrorists will rejoice!"
+		prestige = -50
+		remove_country_modifier = regional_anti_terror
+	}
+}

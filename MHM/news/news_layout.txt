@@ -1,0 +1,2656 @@
+#How much printing tension gives every type of news.
+#(if not specified on the list, default value is 1)
+article_tensions =
+{
+	PEACE_OFFER_ACCEPT = 100
+	GAME_EVENT = 30
+	PROVINCE_CHANGE_CONTROLLER = 5
+	PROVINCE_CHANGE_OWNER = 10
+	CONSTRUCTION_COMPLETE = 5
+	RESEARCH_COMPLETE = 2
+	BATTLE_OVER = 5
+	INVENTION = 2
+	REBEL_BREAK_COUNTRY = 100
+	NEW_PARTY = 10
+	WAR_DECLARED = 100
+	CRISIS_STARTED = 50
+	CRISIS_BACKER = 10
+	CRISIS_SIDE_JOINED = 10
+	CRISIS_RESOLVED = 50
+	DECISION = 30
+
+	# The following are ignORed, as those are built on pre-printing stage.
+	#GOODS_PRICE_CHANGE = 0
+	#AI_AFRAID_OF = 0
+	#AI_LIKES_VERY_MUCH = 0
+}
+
+# News paper styles...
+style =
+{
+	name = "default_style"
+
+	# trigger that determines which newspaper style should use
+	trigger =
+	{
+		# player country scope trigger - called in moment of generating the newspaper
+	}
+
+	# Base window name
+	gui_window = "news_window_default"
+
+	# Big articles
+	article =
+	{
+		size = large
+		gui_window = "article_main"
+	}
+
+	# Medium articles
+	article =
+	{
+		size = medium
+		gui_window = "article_medium_1"
+	}
+	article =
+	{
+		size = medium
+		gui_window = "article_medium_2"
+	}
+
+	# Small articles
+	article =
+	{
+		size = small
+		gui_window = "article_small_1"
+	}
+	article =
+	{
+		size = small
+		gui_window = "article_small_2"
+	}
+	article =
+	{
+		size = small
+		gui_window = "article_small_3"
+	}
+	article =
+	{
+		size = small
+		gui_window = "article_small_4"
+	}
+	article =
+	{
+		size = small
+		gui_window = "article_small_5"
+	}
+
+	article_limits =
+	{
+		PEACE_OFFER_ACCEPT = 1
+		GAME_EVENT = 6
+		PROVINCE_CHANGE_CONTROLLER = 1
+		PROVINCE_CHANGE_OWNER = 1
+		CONSTRUCTION_COMPLETE = 1
+		RESEARCH_COMPLETE = 2
+		BATTLE_OVER = 3
+		INVENTION = 2
+		REBEL_BREAK_COUNTRY = 2
+		NEW_PARTY = 1
+		WAR_DECLARED = 2
+		CRISIS_STARTED = 1
+		CRISIS_BACKER = 2
+		CRISIS_SIDE_JOINED = 2
+		CRISIS_RESOLVED = 1
+		GOODS_PRICE_CHANGE = 1
+		AI_AFRAID_OF = 1
+		AI_LIKES_VERY_MUCH = 1
+		DECISION = 2
+		#FAKE = ? <- unused
+	}
+
+	# Title image - NOTE: higher titles take precedence
+	title_image =
+	{
+
+		#########################
+		# OWN NEWSPAPER
+		#########################
+
+		# Quebec AND Miquelon ###
+		# TODO: add nationalist
+		case = {
+			trigger = {
+				AND = {
+					capital_scope = { continent = north_america }
+					is_culture_group = european_french
+					not = { ruling_party_ideology = nationalist }
+				}
+			}
+			picture = "news/QUE_procanada_newspaper_title.dds"
+		}
+		
+		# ROM ########################
+		case = {
+			trigger = { 
+			AND = { 
+			tag = ROM 
+			OR = {
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+			}
+			}
+			}
+			picture = "news/ROM_communist_newspaper_title.dds"
+		}
+		
+		# ALB ########################
+		case = {
+			trigger = { 
+			AND = { 
+			tag = ALB 
+			OR = {
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+			}
+			}
+			}
+			picture = "news/ALB_communist_newspaper_title.dds"
+		}
+		
+		# CZH ########################
+		case = {
+			trigger = { 
+			AND = { 
+			tag = CZH 
+			OR = {
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+			}
+			}
+			}
+			picture = "news/CZE_communist_newspaper_title.dds"
+		}
+		
+			# HUN ########################
+		case = {
+			trigger = { 
+			AND = { 
+			tag = HUN 
+			OR = {
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+			}
+			}
+			}
+			picture = "news/HUN_communist_newspaper_title.dds"
+		}
+		# FRA ###################
+		case =	{
+			trigger = {
+				AND = {
+					is_culture_group = european_french
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/FRA_communist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				AND = {
+					is_culture_group = european_french
+					ruling_party_ideology = populist
+				}
+			}
+			picture = "news/FRA_facist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				AND = {
+					is_culture_group = european_french
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/FRA_reactionary_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				is_culture_group = european_french
+			}
+			picture = "news/FRA_default_newspaper_title.dds"
+		}
+
+		# ENG ###################
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = british_cultures
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/GBR_communist_newspaper_title.dds"
+			# Missing TODO add
+		}
+
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = british_cultures
+					ruling_party_ideology = populist
+				}
+			}
+			picture = "news/GBR_facist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = british_cultures
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/GBR_reactionary_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = british_cultures
+					ruling_party_ideology = liberal
+				}
+			}
+			picture = "news/GBR_anarchoLiberal_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				is_culture_group = british_cultures
+			}
+			picture = "news/GBR_default_newspaper_title.dds"
+		}
+
+
+		# ITA ###################
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = european_italian
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/ITA_communist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = european_italian
+					ruling_party_ideology = populist
+				}
+			}
+			picture = "news/ITA_facist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = european_italian
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/ITA_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				is_culture_group = european_italian
+			}
+			picture = "news/ITA_default_newspaper_title.dds"
+		}
+		# Greeks ########################
+		case =	{
+			trigger = { primary_culture = greek }
+			picture = "news/greek_newspaper_title.dds"
+		}
+
+		# Cyrillic Yugoslav #############
+		case = {
+			trigger = {
+				OR = {
+					primary_culture = yugoslav
+					primary_culture = serb
+					primary_culture = bulgarian
+				}
+			}
+			picture = "news/SER_default_newspaper_title.dds"
+		}
+
+		# TUR ###########################
+		case =	{
+			trigger = {
+				AND = {
+					tag = TUR
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/TUR_reactionary_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				AND = {
+					tag = TUR
+					OR = {
+						government = democracy
+						government = democracy1
+						government = socialist_democracy
+					}
+				}
+			}
+			picture = "news/TUR_default_newspaper_title.dds"
+		}
+		case =	{
+			trigger = { tag = TUR }
+			picture = "news/ottoman_newspaper_title.dds"
+		}
+
+
+		# RUS ########################
+		case = {
+			trigger = { 
+			AND = { 
+			tag = RUS 
+			OR = {
+			ruling_party_ideology = communist
+			ruling_party_ideology = communist_social
+			}
+			}
+			}
+			picture = "news/RUS_communist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+					AND = {
+						is_culture_group = european_east_slavic
+						ruling_party_ideology = populist
+					}
+			}
+			picture = "news/RUS_fascist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+					AND = {
+						is_culture_group = european_east_slavic
+						ruling_party_ideology = traditionalist
+					}
+			}
+			picture = "news/RUS_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				is_culture_group = european_east_slavic
+			}
+			picture = "news/RUS_default_newspaper_title.dds"
+		}
+
+		# POR ###################
+
+		case =	{
+			trigger = {
+				AND = {
+					tag = POR
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/POR_communist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				tag = POR
+			}
+			picture = "news/POR_default_newspaper_title.dds"
+		}
+
+		# SPA ###################
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = european_spanish
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/SPA_communist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = european_spanish
+					ruling_party_ideology = populist
+				}
+			}
+			picture = "news/SPA_facist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = european_spanish
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/SPA_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				is_culture_group = european_spanish
+			}
+			picture = "news/SPA_default_newspaper_title.dds"
+		}
+
+		# POL ###################
+		case =	{
+			trigger = {
+				AND = {
+					primary_culture = polish
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/POL_communist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				AND = {
+					primary_culture = polish
+					ruling_party_ideology = populist
+				}
+			}
+			picture = "news/POL_fascist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				AND = {
+					primary_culture = polish
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/POL_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				primary_culture = polish
+			}
+			picture = "news/POL_default_newspaper_title.dds"
+		}
+
+		# USA ###################
+		case = {
+			trigger = {
+					AND = {
+						OR = {
+							tag = USA
+							tag = CSA
+							tag = TEX
+							tag = CAL
+							tag = HAW
+						}
+						ruling_party_ideology = populist
+					}
+				}
+			picture = "news/USA_facist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				AND = {
+					OR = {
+						tag = USA
+						tag = CSA
+						tag = TEX
+						tag = CAL
+						tag = HAW
+					}
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/USA_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					tag = USA
+					tag = CSA
+					tag = TEX
+					tag = CAL
+					tag = HAW
+				}
+			}
+			picture = "news/USA_default_newspaper_title.dds"
+		}
+
+		# BRZ ###################
+
+		case =	{
+			trigger = {
+				AND = {
+					tag = BRZ
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/BRZ_communist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				AND = {
+					tag = BRZ
+					ruling_party_ideology = populist
+				}
+			}
+			picture = "news/BRZ_fascist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				AND = {
+					tag = BRZ
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/BRZ_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				tag = BRZ
+			}
+			picture = "news/BRZ_default_newspaper_title.dds"
+		}
+
+		# Spanish Latin America Nations ###########
+
+		# TODO: Use capital province id, to keep newspaper after fORming union AND not become generic
+		case =	{
+			trigger = { tag = ARG }
+			picture = "news/ARG_default_newspaper_title.dds"
+		}
+
+		# Spanish Latin America Generic ###########
+
+		case =	{
+			trigger = {
+				AND = {
+					is_culture_group = latin_american_cultures
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/latinamerica_communist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				AND = {
+					is_culture_group = latin_american_cultures
+					ruling_party_ideology = populist
+				}
+			}
+			picture = "news/latinamerica_fascist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				AND = {
+					is_culture_group = latin_american_cultures
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/latinamerica_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				is_culture_group = latin_american_cultures
+			}
+			picture = "news/latinamerica_default_newspaper_title.dds"
+		}
+
+		# KORea #########################
+		# TODO: add DPRK paper
+		case =	{
+			trigger = { AND = {
+				primary_culture = korean
+				not = { ruling_party_ideology = communist }
+				not = { ruling_party_ideology = communist_social }
+			} }
+			picture = "news/KOR_default_newspaper_title.dds"
+		}
+
+
+		# JAP ###########################
+
+		case =	{
+			trigger = {
+				AND = {
+					is_culture_group = far_east_asian not = { primary_culture = korean }
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/JAP_communist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				AND = {
+					is_culture_group = far_east_asian not = { primary_culture = korean }
+					ruling_party_ideology = populist
+				}
+			}
+			picture = "news/JAP_fascist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				AND = {
+					is_culture_group = far_east_asian not = { primary_culture = korean }
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/JAP_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				AND = {
+					is_culture_group = far_east_asian not = { primary_culture = korean }
+				}
+			}
+			picture = "news/JAP_default_newspaper_title.dds"
+		}
+
+		# Chinese #######################
+		# Pro-China AND anti-China don't really translate into ideologies
+		# Note this would also include SingapORe
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = east_asian
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/CHI_communist_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = east_asian
+					OR = {
+						ruling_party_ideology = liberal
+						ruling_party_ideology = progressive
+					}
+				}
+			}
+			picture = "news/TAI_antichina_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = east_asian
+					ruling_party_ideology = socialist
+				}
+			}
+			picture = "news/TAI_prochina_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				is_culture_group = east_asian
+			}
+			picture = "news/TAI_default_newspaper_title.dds"
+		}
+
+		# Atjeh #########################
+		# Note: fOR now applying to all Latin alphabet SEA
+		case = {
+			trigger = {
+				OR = {
+					primary_culture = ache
+					primary_culture = indonesian
+					primary_culture = malay
+				}
+			}
+			picture = "news/ATJ_default_newspaper_title.dds"
+		}
+
+		# India #########################
+		case = {
+			trigger = {
+				AND = {
+					OR = {
+						is_culture_group = south_asian_indian
+						is_culture_group = south_asian
+					}
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/IND_communist_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				AND = {
+					OR = {
+						is_culture_group = south_asian_indian
+						is_culture_group = south_asian
+					}
+					OR = {
+						ruling_party_ideology = conservative
+						ruling_party_ideology = big_tent
+					}
+				}
+			}
+			picture = "news/IND_conservative_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				AND = {
+					OR = {
+						is_culture_group = south_asian_indian
+						is_culture_group = south_asian
+					}
+					ruling_party_ideology = populist
+				}
+			}
+			picture = "news/IND_fascist_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				OR = {
+					is_culture_group = south_asian_indian
+					is_culture_group = south_asian
+				}
+			}
+			picture = "news/IND_default_newspaper_title.dds"
+		}
+
+		# Israel ########################
+		case = {
+			trigger = {
+				is_culture_group = jewish_cultures
+			}
+			picture = "news/ISR_default_newspaper_title.dds"
+		}
+
+		# Egypt #########################
+		case =	{
+			trigger = {
+				capital = 1745 # Cairo
+				ruling_party_ideology = traditionalist
+			}
+			picture = "news/EGY_reactionary_newspaper_title.dds"
+		}
+
+		# Arab ##########################
+		case =	{
+			trigger = {
+				OR = {
+					is_culture_group = arabic
+					is_culture_group = maghreb_cultures
+				}
+			}
+			picture = "news/arabic_newspaper_title.dds"
+		}
+		# Persia ########################
+		# TODO: Consider using fOR Pakistan?
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = iranian_turanian
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/PER_reactionary_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				is_culture_group = iranian_turanian
+			}
+			picture = "news/PER_default_newspaper_title.dds"
+		}
+
+		# SAF & Bantustans ##############
+		case = {
+			trigger = {
+				OR = {
+					tag = SAF
+					primary_culture = afrikaaner
+					primary_culture = coloured
+				}
+			}
+			picture = "news/SAF_default_newspaper_title.dds"
+		}
+
+		# AUS AND KUK ###################
+		case =	{
+			trigger = {
+				AND = {
+					tag = AUS
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/AUS_communist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				AND = {
+					tag = AUS
+					ruling_party_ideology = populist
+				}
+			}
+			picture = "news/AUS_fascist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				AND = {
+					tag = AUS
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/AUS_reactionary_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				tag = AUS
+			}
+			picture = "news/AUS_default_newspaper_title.dds"
+		}
+
+		# SWI ########################
+		case = {
+			trigger = { tag = SWI }
+			picture = "news/SWI_default_newspaper_title.dds"
+		}
+
+		# Germanic ###################
+		# Germany, GDR, Lux, minORs
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = european_germanic_cultures
+					ruling_party_ideology = traditionalist
+				}
+			}
+			picture = "news/GER_reactionary_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = european_germanic_cultures
+					OR = {
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+			}
+			picture = "news/GER_communist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				AND = {
+					is_culture_group = european_germanic_cultures
+					ruling_party_ideology = populist
+				}
+			}
+			picture = "news/GER_facist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						is_culture_group = european_germanic_cultures
+					}
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_germanic_cultures
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_germanic_cultures
+						}
+					}
+				}
+			}
+			picture = "news/GER_default_newspaper_title.dds"
+		}
+
+
+		#########################
+		# overlord NEWSPAPER
+		# There are 3 sphere newspapers currently,
+		# otherwise will use same paper as overlord
+		#########################
+
+		# RUS ###################
+
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_east_slavic
+							not = { OR = {
+							ruling_party_ideology = communist
+							ruling_party_ideology = communist_social
+						} }
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_east_slavic
+							not = { OR = {
+							ruling_party_ideology = communist
+							ruling_party_ideology = communist_social
+						} }
+						}
+					}
+				}
+			}
+			picture = "news/RUS_sphere_newspaper_title.dds"
+		}
+		
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_east_slavic
+						     OR = {
+							ruling_party_ideology = communist
+							ruling_party_ideology = communist_social
+						} 
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_east_slavic
+						    OR = {
+							ruling_party_ideology = communist
+							ruling_party_ideology = communist_social
+						} 
+						}
+					}
+				}
+			}
+			picture = "news/RUS_communist_newspaper_title.dds"
+		}
+
+		# USA ###################
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							OR = {
+								tag = USA
+								tag = CSA
+								tag = TEX
+								tag = CAL
+								tag = HAW
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							OR = {
+								tag = USA
+								tag = CSA
+								tag = TEX
+								tag = CAL
+								tag = HAW
+							}
+						}
+					}
+				}
+			}
+			picture = "news/USA_sphere_newspaper_title.dds"
+		}
+
+		# Persia ########################
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = iranian_turanian
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = iranian_turanian
+						}
+					}
+				}
+			}
+			picture = "news/PER_sphere_newspaper_title.dds"
+		}
+
+		# FRA ###################
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_french
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_french
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+				}
+			}
+			picture = "news/FRA_communist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_french
+							ruling_party_ideology = populist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_french
+							ruling_party_ideology = populist
+						}
+					}
+				}
+			}
+			picture = "news/FRA_facist_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_french
+							ruling_party_ideology = traditionalist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_french
+							ruling_party_ideology = traditionalist
+						}
+					}
+				}
+			}
+			picture = "news/FRA_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_french
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_french
+						}
+					}
+				}
+			}
+			picture = "news/FRA_default_newspaper_title.dds"
+		}
+
+		# ENG ###################
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = british_cultures
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = british_cultures
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+				}
+			}
+			picture = "news/GBR_communist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = british_cultures
+							ruling_party_ideology = populist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = british_cultures
+							ruling_party_ideology = populist
+						}
+					}
+				}
+			}
+			picture = "news/GBR_facist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = british_cultures
+							ruling_party_ideology = traditionalist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = british_cultures
+							ruling_party_ideology = traditionalist
+						}
+					}
+				}
+			}
+			picture = "news/GBR_reactionary_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = british_cultures
+							ruling_party_ideology = liberal
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = british_cultures
+							ruling_party_ideology = liberal
+						}
+					}
+				}
+			}
+			picture = "news/GBR_anarchoLiberal_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = british_cultures
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = british_cultures
+						}
+					}
+				}
+			}
+			picture = "news/GBR_default_newspaper_title.dds"
+		}
+
+		# ITA ###################
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_italian
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_italian
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+				}
+			}
+			picture = "news/ITA_communist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_italian
+							ruling_party_ideology = populist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_italian
+							ruling_party_ideology = populist
+						}
+					}
+				}
+			}
+			picture = "news/ITA_facist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_italian
+							ruling_party_ideology = traditionalist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_italian
+							ruling_party_ideology = traditionalist
+						}
+					}
+				}
+			}
+			picture = "news/ITA_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_italian
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_italian
+						}
+					}
+				}
+			}
+			picture = "news/ITA_default_newspaper_title.dds"
+		}
+
+		# Greeks ########################
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = { primary_culture = greek }
+					}
+					AND = {
+						is_vassal = yes
+						overlord = { primary_culture = greek }
+					}
+				}
+			}
+			picture = "news/greek_newspaper_title.dds"
+		}
+		
+
+		# Cyrillic Yugoslav #############
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							OR = {
+								primary_culture = yugoslav
+								primary_culture = serb
+								primary_culture = bulgarian
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							OR = {
+								primary_culture = yugoslav
+								primary_culture = serb
+								primary_culture = bulgarian
+							}
+						}
+					}
+				}
+			}
+			picture = "news/SER_default_newspaper_title.dds"
+		}
+
+		# TUR ###########################
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = { AND = {
+							tag = TUR
+							ruling_party_ideology = traditionalist
+						} }
+					}
+					AND = {
+						is_vassal = yes
+						overlord = { AND = {
+							tag = TUR
+							ruling_party_ideology = traditionalist
+						} }
+					}
+				}
+			}
+			picture = "news/TUR_reactionary_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = { AND = {
+							tag = TUR
+							OR = {
+								government = democracy
+								government = democracy1
+								government = socialist_democracy
+							}
+						} }
+					}
+					AND = {
+						is_vassal = yes
+						overlord = { AND = {
+							tag = TUR
+							OR = {
+								government = democracy
+								government = democracy1
+								government = socialist_democracy
+							}
+						} }
+					}
+				}
+			}
+			picture = "news/TUR_default_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = { tag = TUR }
+					}
+					AND = {
+						is_vassal = yes
+						overlord = { tag = TUR }
+					}
+				}
+			}
+			picture = "news/ottoman_newspaper_title.dds"
+		}
+
+		# POR ###################
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							tag = POR
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							tag = POR
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+				}
+			}
+			picture = "news/POR_communist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							tag = POR
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							tag = POR
+						}
+					}
+				}
+			}
+			picture = "news/POR_default_newspaper_title.dds"
+		}
+
+		# SPA ###################
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_spanish
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_spanish
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+				}
+			}
+			picture = "news/SPA_communist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_spanish
+							ruling_party_ideology = populist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_spanish
+							ruling_party_ideology = populist
+						}
+					}
+				}
+			}
+			picture = "news/SPA_facist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_spanish
+							ruling_party_ideology = traditionalist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_spanish
+							ruling_party_ideology = traditionalist
+						}
+					}
+				}
+			}
+			picture = "news/SPA_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_spanish
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_spanish
+						}
+					}
+				}
+			}
+			picture = "news/SPA_default_newspaper_title.dds"
+		}
+
+		# POL ###################
+		case =	{
+			trigger = {
+			primary_culture = polish
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+				}
+			}
+			picture = "news/POL_communist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							primary_culture = polish
+							ruling_party_ideology = populist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							primary_culture = polish
+							ruling_party_ideology = populist
+						}
+					}
+				}
+			}
+			picture = "news/POL_fascist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							primary_culture = polish
+							ruling_party_ideology = traditionalist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							primary_culture = polish
+							ruling_party_ideology = traditionalist
+						}
+					}
+				}
+			}
+			picture = "news/POL_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							primary_culture = polish
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							primary_culture = polish
+						}
+					}
+				}
+			}
+			picture = "news/POL_default_newspaper_title.dds"
+		}
+
+		# BRZ ###################
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							tag = BRZ
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							tag = BRZ
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+				}
+			}
+			picture = "news/BRZ_communist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							tag = BRZ
+							ruling_party_ideology = populist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							tag = BRZ
+							ruling_party_ideology = populist
+						}
+					}
+				}
+			}
+			picture = "news/BRZ_fascist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							tag = BRZ
+							ruling_party_ideology = traditionalist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							tag = BRZ
+							ruling_party_ideology = traditionalist
+						}
+					}
+				}
+			}
+			picture = "news/BRZ_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							tag = BRZ
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							tag = BRZ
+						}
+					}
+				}
+			}
+			picture = "news/BRZ_default_newspaper_title.dds"
+		}
+
+		# Spanish Latin America Nations ###########
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							tag = ARG
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							tag = ARG
+						}
+					}
+				}
+			}
+			picture = "news/ARG_default_newspaper_title.dds"
+		}
+
+		# Spanish Latin America Generic ###########
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = latin_american_cultures
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = latin_american_cultures
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+				}
+			}
+			picture = "news/latinamerica_communist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = latin_american_cultures
+							ruling_party_ideology = populist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = latin_american_cultures
+							ruling_party_ideology = populist
+						}
+					}
+				}
+			}
+			picture = "news/latinamerica_fascist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = latin_american_cultures
+							ruling_party_ideology = traditionalist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = latin_american_cultures
+							ruling_party_ideology = traditionalist
+						}
+					}
+				}
+			}
+			picture = "news/latinamerica_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = latin_american_cultures
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = latin_american_cultures
+						}
+					}
+				}
+			}
+			picture = "news/latinamerica_default_newspaper_title.dds"
+		}
+
+		# KORea #########################
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							AND = {
+								primary_culture = korean
+								not = { ruling_party_ideology = communist }
+								not = { ruling_party_ideology = communist_social }
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							AND = {
+								primary_culture = korean
+								not = { ruling_party_ideology = communist }
+								not = { ruling_party_ideology = communist_social }
+							}
+						}
+					}
+				}
+			}
+			picture = "news/KOR_default_newspaper_title.dds"
+		}
+
+		# JAP ###########################
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = far_east_asian not = { primary_culture = korean }
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = far_east_asian not = { primary_culture = korean }
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+				}
+			}
+			picture = "news/JAP_communist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = far_east_asian not = { primary_culture = korean }
+							ruling_party_ideology = populist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = far_east_asian not = { primary_culture = korean }
+							ruling_party_ideology = populist
+						}
+					}
+				}
+			}
+			picture = "news/JAP_fascist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = far_east_asian not = { primary_culture = korean }
+							ruling_party_ideology = traditionalist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = far_east_asian not = { primary_culture = korean }
+							ruling_party_ideology = traditionalist
+						}
+					}
+				}
+			}
+			picture = "news/JAP_reactionary_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = far_east_asian not = { primary_culture = korean }
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = far_east_asian not = { primary_culture = korean }
+						}
+					}
+				}
+			}
+			picture = "news/JAP_default_newspaper_title.dds"
+		}
+
+		# Chinese #######################
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = { AND = {
+							is_culture_group = east_asian
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						} }
+					}
+					AND = {
+						is_vassal = yes
+						overlord = { AND = {
+							is_culture_group = east_asian
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						} }
+					}
+				}
+			}
+			picture = "news/CHI_communist_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							AND = {
+								is_culture_group = east_asian
+								OR = {
+									ruling_party_ideology = liberal
+									ruling_party_ideology = progressive
+								}
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							AND = {
+								is_culture_group = east_asian
+								OR = {
+									ruling_party_ideology = liberal
+									ruling_party_ideology = progressive
+								}
+							}
+						}
+					}
+				}
+			}
+			picture = "news/TAI_antichina_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							AND = {
+								is_culture_group = east_asian
+								ruling_party_ideology = socialist
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							AND = {
+								is_culture_group = east_asian
+								ruling_party_ideology = socialist
+							}
+						}
+					}
+				}
+			}
+
+			picture = "news/TAI_prochina_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = { is_culture_group = east_asian }
+					}
+					AND = {
+						is_vassal = yes
+						overlord = { is_culture_group = east_asian }
+					}
+				}
+			}
+			picture = "news/TAI_default_newspaper_title.dds"
+		}
+
+		# Atjeh #########################
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							OR = {
+								primary_culture = ache
+								primary_culture = indonesian
+								primary_culture = malay
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							OR = {
+								primary_culture = ache
+								primary_culture = indonesian
+								primary_culture = malay
+							}
+						}
+					}
+
+				}
+			}
+			picture = "news/ATJ_default_newspaper_title.dds"
+		}
+
+		# India #########################
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = { AND = {
+							OR = {
+								is_culture_group = south_asian_indian
+								is_culture_group = south_asian
+							}
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						} }
+					}
+					AND = {
+						is_vassal = yes
+						overlord = { AND = {
+							OR = {
+								is_culture_group = south_asian_indian
+								is_culture_group = south_asian
+							}
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						} }
+					}
+				}
+			}
+			picture = "news/IND_communist_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = { AND = {
+							OR = {
+								is_culture_group = south_asian_indian
+								is_culture_group = south_asian
+							}
+							OR = {
+								ruling_party_ideology = conservative
+								ruling_party_ideology = big_tent
+							}
+						} }
+					}
+					AND = {
+						is_vassal = yes
+						overlord = { AND = {
+							OR = {
+								is_culture_group = south_asian_indian
+								is_culture_group = south_asian
+							}
+							OR = {
+								ruling_party_ideology = conservative
+								ruling_party_ideology = big_tent
+							}
+						} }
+					}
+				}
+			}
+			picture = "news/IND_conservative_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							AND = {
+								OR = {
+									is_culture_group = south_asian_indian
+									is_culture_group = south_asian
+								}
+								ruling_party_ideology = populist
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							AND = {
+								OR = {
+									is_culture_group = south_asian_indian
+									is_culture_group = south_asian
+								}
+								ruling_party_ideology = populist
+							}
+						}
+					}
+				}
+			}
+			picture = "news/IND_fascist_newspaper_title.dds"
+		}
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							OR = {
+								is_culture_group = south_asian_indian
+								is_culture_group = south_asian
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							OR = {
+								is_culture_group = south_asian_indian
+								is_culture_group = south_asian
+							}
+						}
+					}
+				}
+			}
+			picture = "news/IND_default_newspaper_title.dds"
+		}
+
+		# Israel ########################
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = { is_culture_group = jewish_cultures }
+					}
+					AND = {
+						is_vassal = yes
+						overlord = { is_culture_group = jewish_cultures }
+					}
+				}
+			}
+			picture = "news/ISR_default_newspaper_title.dds"
+		}
+
+		# Egypt #########################
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							AND = {
+								capital = 1745 # Cairo
+								ruling_party_ideology = traditionalist
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							AND = {
+								capital = 1745 # Cairo
+								ruling_party_ideology = traditionalist
+							}
+						}
+					}
+				}
+			}
+			picture = "news/EGY_reactionary_newspaper_title.dds"
+		}
+		# Arab ##########################
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							OR = {
+								is_culture_group = arabic
+								is_culture_group = maghreb_cultures
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							OR = {
+								is_culture_group = arabic
+								is_culture_group = maghreb_cultures
+							}
+						}
+					}
+				}
+			}
+			picture = "news/arabic_newspaper_title.dds"
+		}
+
+		# SAF & Bantustans ##############
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							OR = {
+								tag = SAF
+								primary_culture = afrikaaner
+								primary_culture = coloured
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							OR = {
+								tag = SAF
+								primary_culture = afrikaaner
+								primary_culture = coloured
+							}
+						}
+					}
+				}
+			}
+			picture = "news/SAF_default_newspaper_title.dds"
+		}
+
+		# AUS AND KUK ###################
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							tag = AUS
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							tag = AUS
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+				}
+			}
+			picture = "news/AUS_communist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							tag = AUS
+							ruling_party_ideology = populist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							tag = AUS
+							ruling_party_ideology = populist
+						}
+					}
+				}
+			}
+			picture = "news/AUS_fascist_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							tag = AUS
+							ruling_party_ideology = traditionalist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							tag = AUS
+							ruling_party_ideology = traditionalist
+						}
+					}
+				}
+			}
+			picture = "news/AUS_reactionary_newspaper_title.dds"
+		}
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							tag = AUS
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							tag = AUS
+						}
+					}
+				}
+			}
+			picture = "news/AUS_default_newspaper_title.dds"
+		}
+
+		# SWI ########################
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							tag = SWI
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							tag = SWI
+						}
+					}
+				}
+			}
+			picture = "news/SWI_default_newspaper_title.dds"
+		}
+
+		# Germanic ###################
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_germanic_cultures
+							ruling_party_ideology = traditionalist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_germanic_cultures
+							ruling_party_ideology = traditionalist
+						}
+					}
+				}
+			}
+			picture = "news/GER_reactionary_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_germanic_cultures
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_germanic_cultures
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+				}
+			}
+			picture = "news/GER_communist_newspaper_title.dds"
+		}
+
+		case = {
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_germanic_cultures
+							ruling_party_ideology = populist
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_germanic_cultures
+							ruling_party_ideology = populist
+						}
+					}
+				}
+			}
+			picture = "news/GER_facist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					AND = {
+						part_of_sphere = yes
+						sphere_owner = {
+							is_culture_group = european_germanic_cultures
+						}
+					}
+					AND = {
+						is_vassal = yes
+						overlord = {
+							is_culture_group = european_germanic_cultures
+						}
+					}
+				}
+			}
+			picture = "news/GER_default_newspaper_title.dds"
+		}
+
+
+		# Ruling ideology generics ######
+		case =	{
+			trigger = { ruling_party_ideology = liberal }
+			picture = "news/anarchoLiberal_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = {
+				OR = {
+					ruling_party_ideology = communist
+					ruling_party_ideology = communist_social
+				}
+			}
+			picture = "news/communist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = { ruling_party_ideology = populist }
+			picture = "news/facist_newspaper_title.dds"
+		}
+
+		case =	{
+			trigger = { ruling_party_ideology = traditionalist }
+			picture = "news/reactionary_newspaper_title.dds"
+		}
+
+		# Fallback picture
+		case = {
+			picture = "news/generic_newspaper_title.dds"
+		}
+	}
+}

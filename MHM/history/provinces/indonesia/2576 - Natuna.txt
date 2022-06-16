@@ -1,0 +1,36 @@
+add_core = KMT
+add_core =  CHI
+add_core =  MSY
+add_core =  PHI
+add_core =  DAI
+add_core =  IDO
+add_core =  BRU
+trade_goods = petroleum
+life_rating = 35
+terrain = coral_island
+colonial = 0
+1992.1.1 = {
+owner = CHI
+controller = CHI
+railroad = 1
+state_building = {
+	level = 1
+	building = glass_factory
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = fish_canned_food_factory
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = optics_factory
+	upgrade = yes
+}
+state_building = {
+	level = 1
+	building = communication_factory
+	upgrade = yes
+}
+}

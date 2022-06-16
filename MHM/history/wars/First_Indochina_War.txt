@@ -1,0 +1,24 @@
+#First_Indochina_War.txt
+name = "First Indochina War"
+1948.12.1 = {
+	add_attacker = FRA
+	add_attacker = CAM
+	add_attacker = LUA
+	add_defender = DAI
+	war_goal = {
+		casus_belli = annex_core_country
+		actor = FRA
+		receiver = DAI
+	}
+	war_goal = {
+		casus_belli = annex_core_country
+		actor = DAI
+		receiver = FRA
+	}	
+}
+1949.1.1 = {
+	rem_attacker = FRA
+	rem_attacker = CAM
+	rem_attacker = LUA
+	rem_defender = DAI
+}

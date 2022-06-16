@@ -1,0 +1,199 @@
+graphical_culture = SouthAmericanGC
+color = { 205 133 63 }
+party = {
+		name = "Bolivian Socialist Falange"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1979.3.23
+}
+party = {
+		name = "Nationalist Democratic Action"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1979.3.23
+		end_date = 2100.1.1
+}
+party = {
+		name = "MNR - Centrists"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "PURS"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1978.1.1
+}
+party = {
+		name = "Solidarity Civic Unity"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1978.1.1
+		end_date = 2001.1.1
+}
+party = {
+		name = "New Republican Force"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2001.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "MNR - Liberals"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "MNR - Leftists"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1995.3.29
+}
+party = {
+		name = "MAS-IPSP" #MAS-IPSP
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1995.3.29
+		end_date = 2092.1.1
+}
+party = {
+		name = "Revolutionary Left Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Nationalist Union of the People" #technically founded much later, but allied/founding orgs were already around and in vague alliance
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1988.9.21
+}
+party = {
+		name = "Conscience of Fatherland"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1988.9.21
+		end_date = 2092.1.1
+}
+party = {
+		name = "Bolivian Socialist Falange"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Bolivia"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Bolivia (R)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+
+unit_names = {
+	carrier = {
+		"Alto Perú" Bolivia Charcas "Cristo de la Concordia" "General Sucre" Iscanahuaya Samapaita "Seis de Agosto" "Simón Bolivar" Tricolor
+	}
+	transportship = {
+        "Águila Roja" Ana Aymara Beatriz Carmen "Cóndor Negro" María Marta Raquel Salomé
+        "San Antonio" "San Judas" "San Pablo" Sirena Tahuamanu Tetis Tritón Vencedora Victoria Voladora
+	}
+	modern_frigate = {
+		Audaz "Castro Rojas" Destructora Fortaleza "Madre de Dios" Manoa Manu Pando Sorata Temor
+	}
+	cruiser = {
+        Confederación Congreso "La Fállete" Libertad "María Luisa" Morro "San Bartolomé" "San Francisco" "Santo Tomás" Yanacocha
+	}
+	modern_cruiser = {
+        Cobija Desaguadero Illampu Illimani Madera Mamore "Nevado Sajada" Poopó Titicaca Trinidad
+	}
+	frigate = {
+        Antofagasta Beni Chuquisaca Cochabamba "La Paz" Oruro Pando Potosí "Santa Cruz" Tarija
+	}
+	modern_destroyer = {
+        Constitución "Gran Chaco" Inca Libertador Mercurio Saturno Tihauano Urano Vulcano Yungas
+	}
+	destroyer = {
+        Altiplano Andes Independencia Júpiter Neptuno Occidental Oriental Plutón Real Republiquetas
+	}
+	submarine = {
+        Audaz "Castro Rojas" Destructora Fortaleza "Madre de Dios" Manoa Manu Pando Sorata Temor
+	}
+
+}

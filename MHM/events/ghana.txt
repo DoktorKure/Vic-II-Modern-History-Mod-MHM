@@ -1,0 +1,77 @@
+country_event = { # Independence of Ghana
+  id = 8010700
+  title = EVT_8010700_NAME
+  desc = EVT_8010700_DESC
+  picture = "independence_ghana"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1957 NOT = { year = 1990 }
+	owns = 1907 # Accra
+	NOT = { exists = GHA }
+  }
+
+  mean_time_to_happen = { months = 5 }
+
+  option = {
+    name = EVT_8010700_A
+	prestige = 10
+	release = GHA
+GHA = { government = hms_government1 country_event = 800054 }
+	ENG = { diplomatic_influence = { who = GHA value = 200 } }
+	create_alliance = GHA
+	ai_chance = { factor = 0.9 }
+  }
+  
+  option = {
+    name = EVT_8010700_B
+	release_vassal = GHA
+GHA = { government = colonial_government country_event = 800054 }
+	ENG = { diplomatic_influence = { who = GHA value = 200 } }
+	any_pop = { limit = { OR = { culture = ewe culture = african_minor } } militancy = 2 consciousness = 2 }
+	create_alliance = GHA
+	ai_chance = { factor = 0.1 }
+  }  
+
+  option = {
+    name = "Keep Ghana as our territory!"
+	prestige = -10
+	any_pop = { limit = { OR = { culture = ewe culture = african_minor } } militancy = 7 consciousness = 5 }
+	# TODO GHA UDI
+	ai_chance = { factor = 0 }
+  }
+  
+}
+
+country_event = { # Independence of Ghana
+  id = 8010701
+  title = EVT_8010701_NAME
+  desc = EVT_8010701_DESC
+  picture = "independence_ghana"
+  fire_only_once = yes
+
+  trigger = {
+    tag = GHA
+	government = hms_government1
+    year = 1960 NOT = { year = 1990 }
+	is_vassal = no
+  }
+
+  mean_time_to_happen = { months = 10 }
+
+  option = {
+    name = EVT_8010701_A
+	government = presidential_dictatorship country_event = 800050
+ENG = { diplomatic_influence = { who = GHA value = -10 } }
+	ai_chance = { factor = 0.9 }
+  }
+
+  option = {
+    name = EVT_8010701_B
+	prestige = -10
+	any_pop = { limit = { culture = ewe } militancy = 5 consciousness = 4 }
+	ai_chance = { factor = 0.1 }
+  }
+  
+}

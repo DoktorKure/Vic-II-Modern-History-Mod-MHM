@@ -1,0 +1,61 @@
+political_decisions = {
+
+	united_nations = {
+		picture = "united_nations"
+		potential = {
+			NOT = { has_country_modifier = united_nations }
+			NOT = { OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 } }
+		}
+
+		allow = {
+			war = no
+			OR = { 
+				is_vassal = no 
+				is_secondary_power = yes 
+				wars_of_national_liberation = 1 
+				overlord = { tag = RUS has_global_flag = blocsenabled } 
+			}
+			
+			#Issue of China's representation in the UN
+			OR = { 
+				NOT = { has_country_flag = not_participating_UNSC }
+				AND = { tag = CHI CHI = { exists = yes } KMT = { exists = no } }
+				AND = { tag = KMT CHI = { exists = no } KMT = { exists = yes } }
+			}
+		}
+
+		effect = {
+			prestige = 100
+			remove_country_modifier = not_member_of_united_nations
+			add_country_modifier = { name = united_nations duration = -1 }
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+
+	united_nations_security_council = {
+		picture = "united_nations_security_council"
+		potential = {
+			is_greater_power = yes
+			has_country_modifier = unsc_permanent_member
+			crisis_exist = yes
+			involved_in_crisis = no
+		}
+
+		allow = {
+			any_greater_power = {
+				involved_in_crisis = yes
+				crisis_exist = yes 
+				relation = { who = THIS value = 100 }
+			}
+			war = no
+		}
+
+		effect = {
+			add_crisis_interest = yes
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
+}

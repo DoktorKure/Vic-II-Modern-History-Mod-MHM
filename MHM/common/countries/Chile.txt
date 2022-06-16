@@ -1,0 +1,318 @@
+graphical_culture = SouthAmericanGC
+color = { 147 112 219 }
+party = {
+		name = "Military Junta"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "National Falange"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1957.7.28
+}
+party = {
+		name = "Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1957.7.28
+		end_date = 1960.9.18
+}
+party = {
+		name = "National Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1960.9.18
+		end_date = 1983.9.24
+}
+party = {
+		name = "Christian Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1983.9.24
+		end_date = 2093.1.1
+}
+party = {
+		name = "Conservative Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1948.1.1
+}
+party = {
+		name = "Social Christian PCon"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1948.1.1
+		end_date = 1949.1.1
+}
+party = {
+		name = "Christian Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1949.1.1
+		end_date = 1983.9.24
+}
+party = {
+		name = "Independent Democratic Union"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1983.9.24
+		end_date = 2092.1.1
+}
+party = {
+		name = "Liberal Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1966.5.11
+}
+party = {
+		name = "National Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1966.5.11
+		end_date = 1987.4.29
+}
+party = {
+		name = "National Renewal"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1987.4.29
+		end_date = 2092.1.1
+}
+party = {
+		name = "Socialist Party of Chile"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1989.1.1
+}
+party = {
+		name = "Socialist Party of Chile"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1989.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Radical Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1987.12.15
+}
+party = {
+		name = "Party for Democracy"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1987.12.15
+		end_date = 2092.1.1
+}
+party = {
+		name = "Agrarian Labor Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1958.1.1
+}
+party = {
+		name = "National Popular Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1958.1.1
+		end_date = 1963.1.1
+}
+party = {
+		name = "National Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1963.1.1
+		end_date = 1990.7.19
+}
+party = {
+		name = "Union of the Centrist Center"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1990.7.19
+		end_date = 2092.1.1
+}
+party = {
+		name = "Agrarian Labor Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1948.1.1
+}
+party = {
+		name = "Traditionalist PCon"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1948.1.1
+		end_date = 1953.12.15
+}
+party = {
+		name = "United Conservative Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1953.12.15
+		end_date = 1966.5.11
+}
+party = {
+		name = "New Conservative Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1966.5.11
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Chile"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Chile"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Almirante Montt" Antofagasta Atacama Iquique Latorre O'Higgins Rep�blica "San Mart�n" "Santiago de Chile" Valpara�so
+	}
+	transportship = {
+		Coihaique Concepci�n Copiapo "Del Toro" Iquique "La Serena" "Laguna Blanca" "Puerto Montt" "Punta Arenas" Rancagua "San Jos�" "San Pedro" "San Rafael" "Santa In�s" "Santa Mar�a" Santiago Sarmiento Talca Temuco Yulton
+	}
+	modern_frigate = {
+		"Almirante Condell" "Almirante Lynch" Angamos Aquiles Casma Chacabuco Chipana Covadonga Magallanes Orompello
+	}
+	cruiser = {
+		Aguamarina Diamante "Director Eyzaguirre" "Director Freire" Esmeralda Llullaillaco Parinacota "Presidente Err�zuriz" "Presidente Pinto" Tupungato
+	}
+	modern_cruiser = {
+		"Almirante Montt" Antofagasta Atacama Iquique Latorre O'Higgins Rep�blica "San Mart�n" "Santiago de Chile" Valpara�so
+	}
+	frigate = {
+		Ais�n Araucania Arica Biob�o Coquimbo "Los Lagos" "Los R�os" Maule Tarapac� Valdivia
+	}
+	modern_destroyer = {
+		"Almirante Williams" Austral Blanco "Blanco Encalada" "Capit�n Prat" Cochrane "Isla de Pascua" "Norte Chico" "Norte Grande" "Ojos del Salado"
+	}
+	destroyer = {
+		Abtao �guila Araucano Chacabuco Fortunata Galvarino Lautaro O'Higgins Potrillo "San Mart�n"
+	}
+	submarine = {
+		Anganemon Butapich�n Colo-Colo Curi�ancu Guaiquimilla Hu�scar Lientur "Pedro de Valdivia" Pelantaru Vilumilla
+	}
+
+}

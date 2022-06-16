@@ -1,0 +1,296 @@
+graphical_culture = MiddleEasternGC
+color = { 193 205 193 }
+nationalist_dictatorship = { 0  75  0 }
+party = {
+		name = "Revolutionary Command Council"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1971.6.11
+}
+party = {
+		name = "Libyan Arab Socialist Union"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1971.6.11
+		end_date = 1981.10.7
+}
+party = {
+		name = "National Front for Salvation"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1981.10.7
+		end_date = 2014.1.1
+}
+party = {
+		name = "Libyan National Army - Haftar"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2014.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Congress Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "National Front Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2012.5.9
+		end_date = 2100.1.1
+}
+party = {
+		name = "Muslim Brotherhood"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2012.3.3
+}
+party = {
+		name = "Justice and Construction Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2012.3.3
+		end_date = 2100.1.1
+}
+party = {
+		name = "Congress Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1981.10.7
+}
+party = {
+		name = "National Front for Salvation"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1981.10.7
+		end_date = 2012.2.1
+}
+party = {
+		name = "National Forces Alliance"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2012.2.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Revolutionary Command Council"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1971.6.11
+}
+party = {
+		name = "Libyan Arab Socialist Union"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1971.6.11
+		end_date = 1977.3.3
+}
+party = {
+		name = "General People's Congress"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = socialist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1974.1.1
+		end_date = 1988.1.1
+}
+party = {
+		name = "party_socialist_0_TRI"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1988.1.1
+		end_date = 2012.2.15
+}
+party = {
+		name = "Libyan People National Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = socialist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2012.2.15
+		end_date = 2100.1.1
+}
+party = {
+		name = "Congress Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2017.1.1
+}
+party = {
+		name = "Libu Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2017.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "party_populist_1_TRI"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Senussi Order"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1994.1.1
+}
+party = {
+		name = "Libyan Islamic Fighting Group"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1994.1.1
+		end_date = 2011.1.1
+}
+party = {
+		name = "Libyan Islamic Movement"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 2011.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Libyan Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Libyan Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Uqba ibn Nafi" Qaramanliyyun "Ahmad al-Qaramanli" Fuzzan Barqa
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Alif Amin Anwar Ayham Bahir Dhakwan Falah Faraj Fawzan Ghanim Ghassan Hanbal Haris Hashim Iqbal Jal Junayd Kadar Kazim Khalis Khulus Luay Mashhur Muflih Mulham Munahid Nabhan Nawfal Nazim Numan Ramiz Sharaf Siddiq Tawfiq Yasir Zayn Zubayr
+	}
+	cruiser = {
+		"Abd al-Aziz" "Abd al-Hadi" "Abd al-Haqq" "Abd al-Jalil" "Abd al-Latif" "Abd al-Hafiz" "Abd al-Hakim" "Abd al-Nasir" "Abd al-Quddus" "Abd al-Rahim" "Abd al-Malik" "Abd al-Rashid" "Abd al-Rahman" "Abd al-Sami" "Abd al-Wadud" "Abd al-Wahhab"
+	}
+	modern_cruiser = {
+		"Uqba ibn Nafi" Qaramanliyyun "Ahmad al-Qaramanli" Fuzzan Barqa
+	}
+	frigate = {
+		Akram Atif Ayman Bahir Fadil Fath Firas Fawwaz Ghalib Hakim Humam Jabbar Jawhar Kamal Khalid Masud Mamun Majid Mufid Mukhtar Muntasir Qudamat Rashad Sa'ad Tahir Thabit Wafiq Yusuf Zahir Zafir
+	}
+	modern_destroyer = {
+		"Ala al-Din" "Husam al-Din" "Izz al-Din" "Jalal al-Din" "Khayr al-Din" "Majid al-Din" "Nasir al-Din" "Nur al-Din" "Safi al-Din" "Salah al-Din" "Siraj al-Din"
+	}
+	destroyer = {
+		Tarabulus Bingazi Surt Murzuq Misrata Ghadamis Tubruq Darna
+	}
+	submarine = {
+		"Badr al-Din" "Diya al-Din" "Baha al-Din" "Imad al-Din" "Jamal al-Din" "Lutf al-Din" "Najm al-Din" "Sayf al-Din"
+	}
+
+}

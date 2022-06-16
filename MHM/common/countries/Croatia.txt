@@ -1,0 +1,209 @@
+graphical_culture = EuropeanGC
+color = { 135 206 250 }
+proletarian_dictatorship = { 255 69 0 }
+party = {
+		name = "Ustasha"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1990.2.25
+}
+party = {
+		name = "Croatian Party of Rights"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1990.2.25
+		end_date = 2100.1.1
+}
+party = {
+		name = "Croatian Peasant Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+
+party = {
+		name = "Croatian Democratic Union"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Croatian Social Liberal Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Social Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Union of Reform Forces"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1990.10.13
+}
+party = {
+		name = "Croatian People Party – LibDems"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1990.10.13
+		end_date = 2092.1.1
+}
+party = {
+		name = "Ustasha"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1990.2.25
+}
+party = {
+		name = "Croatian Party of Rights"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1990.2.25
+		end_date = 2100.1.1
+}
+party = {
+		name = "Christian Democratic Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "League of Communists of Croatia"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1990.11.3
+}
+party = {
+		name = "Communist Party of Croatia"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1990.11.3
+		end_date = 2092.1.1
+}
+party = {
+		name = "League of Communists of Croatia"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1990.11.3
+}
+party = {
+		name = "Social Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1990.11.3
+		end_date = 1997.10.25
+}
+party = {
+		name = "Socialist Labour Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1997.10.25
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		Hrvatska "Maksimilijan Vrhovac" "Ilirski pokret" Slavonija Zagreb
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Krk Brijuni Lo�inj Cres Ilovik
+	}
+	cruiser = {
+		"Ivan Lupis" "Janko Vukovic" "Matija Politeo" "Ante Tresic Pavicic" Branimir
+	}
+	modern_cruiser = {
+		Hrvatska "Maksimilijan Vrhovac" "Ilirski pokret" Slavonija Zagreb
+	}
+	frigate = {
+		Dinara Kame�nica Biokovo Velebit Plje�evica
+	}
+	modern_destroyer = {
+		Osijek "Janko Dra�kovic" "Antun Mihanovic" "Ljudevit Gaj" Rijeka
+	}
+	destroyer = {
+		Sava Drava Kupa Korana Cesma
+	}
+	submarine = {
+		Dubrovnik Ragusa Split Pula Gospic
+	}
+
+}

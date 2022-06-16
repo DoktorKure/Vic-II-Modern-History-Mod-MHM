@@ -1,0 +1,416 @@
+graphical_culture = SwedishGC
+color = { 25 88 217 }
+party = {
+		name = "New Swedish Movement"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1973.1.1
+}
+party = {
+		name = "Nordic Reich Party"
+		citizenship_policy = residency
+		economic_policy = planned_economy1
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1973.1.1
+		end_date = 1997.12.1
+}
+party = {
+		name = "Swedish Resistance Movement"
+		citizenship_policy = residency
+		economic_policy = planned_economy1
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1997.12.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Democrats"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2001.8.14
+		end_date = 2014.4.23
+}
+party = {
+		name = "Farmers' League"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1957.1.1
+}
+party = {
+		name = "Centre Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1957.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Hogern"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1952.1.1
+}
+party = {
+		name = "Hogern Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1952.1.1
+		end_date = 1969.1.1
+}
+party = {
+		name = "Moderate Coalition Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1969.1.1
+		end_date = 2003.1.1
+}
+party = {
+		name = "Moderate Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2003.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1990.1.1
+}
+party = {
+		name = "Liberal People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1990.1.1
+		end_date = 2015.11.20
+}
+party = {
+		name = "The Liberals"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2015.11.20
+		end_date = 2092.1.1
+}
+party = {
+		name = "Pirate Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2006.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Swedish Social Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1986.1.1
+}
+party = {
+		name = "Swedish Social Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1986.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Left Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1990.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Left Socialist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1986.1.1
+}
+party = {
+		name = "Revolutionary Workers' League"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1983.1.1
+		end_date = 2005.4.4
+}
+party = {
+		name = "Environmental Party the Greens"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1981.9.20
+		end_date = 2092.1.1
+}
+party = {
+		name = "New Swedish Movement"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1968.1.1
+}
+party = {
+		name = "Progress Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1968.1.1
+		end_date = 1986.1.1
+}
+party = {
+		name = "Bevara Sverige Svenskt"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1979.1.1
+		end_date = 1986.1.1
+}
+party = {
+		name = "Sweden Party"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1986.1.1
+		end_date = 1988.2.6
+}
+party = {
+		name = "Sweden Democrats"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1988.2.6
+		end_date = 2092.1.1
+}
+party = {
+		name = "New Democracy"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1991.2.4
+		end_date = 2000.2.25
+}
+party = {
+		name = "Absolutists"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Sweden"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1967.5.16
+}
+party = {
+		name = "KFML"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1967.5.16
+		end_date = 1970.1.1
+}
+party = {
+		name = "KFML(r)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1970.1.1
+		end_date = 1977.1.1
+}
+party = {
+		name = "KPML(r)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1977.1.1
+		end_date = 2005.1.1
+}
+party = {
+		name = "Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2005.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Sweden"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1967.5.16
+}
+party = {
+		name = "Left Party - the Communists"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1967.5.16
+		end_date = 1990.1.1
+}
+party = {
+		name = "Left Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1990.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Clas Eriksson Fleming" "Axel Nilsson Ryning" "Carl Carlsson Gyllenhielm" "Gustaf Otto Stenbock" "Lorentz Creutz" "Hans Wachtmeister af Johannishus" "Henrik af Trolle" "Carl August Ehrensv�rd" Fredrik Johan "Manligheten" "Dristigheten" "Sverige"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		"Bj�rn J�rnsida" "Erik Segers�ll" "Gardarr Svavarsson" Birka Asg�rd Kraken B�ckah�st Storsj�n V�nern V�ttern
+	}
+	cruiser = {
+		"Claes Uggla" Psilander "Claes Horn" "Jacob Bakke" Ornen Fylgia "Tre Kronor" "G�ta Lejon" �stersund Borgholm
+	}
+	modern_cruiser = {
+		"Clas Eriksson Fleming" "Axel Nilsson Ryning" "Carl Carlsson Gyllenhielm" "Gustaf Otto Stenbock" "Lorentz Creutz" "Hans Wachtmeister af Johannishus" "Henrik af Trolle" "Carl August Ehrensv�rd" Fredrik Johan "Manligheten" "Dristigheten" "Sverige"
+	}
+	frigate = {
+		Packa "Svarta �rn" Jarramas Vainqueur Delphin Illerim "Lilla Phoenix" V�xj� G�vle "Baron Gustaf Bonde"
+	}
+	modern_destroyer = {
+		G�teborg Malm� Uppsala V�ster�s �rebro Link�ping Helsingborg Nyn�shamn Karlshamn Halmstad Blenda Astrid
+	}
+	destroyer = {
+		"Carl XIII" "Karl XIV Johan" "Prins Oscar" "Gustav den Store" Stockholm F�rsiktigheten Tapperheten "Kung Adolph Fredric" Henrik Tomas
+	}
+	submarine = {
+		"John Ericsson" Loke Sk�ld Tirfing Tord�n Berserk Bj�rn Folke S�lve Ulf Fenris Garmer Gerda Hildur
+	}
+
+}

@@ -1,0 +1,328 @@
+graphical_culture = MiddleEasternGC
+color = { 189 183 107 }
+party = {
+		name = "Military Junta"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Reformists"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1987.6.1
+}
+party = {
+		name = "Islamic Coalition Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1987.6.1
+		end_date = 2018.9.16
+}
+party = {
+		name = "Iran Revival"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2018.9.16
+		end_date = 2100.1.1
+}
+party = {
+		name = "People's Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1946.6.29
+}
+party = {
+		name = "Democrat Party of Iran"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1946.6.29
+		end_date = 1948.1.1
+}
+party = {
+		name = "Independents"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1948.1.1
+		end_date = 1957.1.1
+}
+party = {
+		name = "Party of Nationalists"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1957.1.1
+		end_date = 1963.12.15
+}
+party = {
+		name = "New Iran Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1963.12.15
+		end_date = 1975.3.2
+}
+party = {
+		name = "Rastakhiz Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1975.3.2
+		end_date = 2013.4.14
+}
+party = {
+		name = "National Council of Iran"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2013.4.14
+		end_date = 2100.1.1
+}
+party = {
+		name = "National Caucus"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1957.5.16
+}
+party = {
+		name = "People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1957.5.16
+		end_date = 1975.3.2
+}
+party = {
+		name = "Rastakhiz Party"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1975.3.2
+		end_date = 1979.1.1
+}
+party = {
+		name = "Freedom Movement of Iran"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1961.5.17
+		end_date = 2092.1.1
+}
+party = {
+		name = "Iran Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Green Party of Iran"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1999.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Rastakhiz Party"
+		citizenship_policy = residency
+		economic_policy = planned_economy1
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1975.3.2
+		end_date = 2092.1.1
+}
+party = {
+		name = "Pan-Iranist Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Fada'iyan-e Islam"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1948.12.1
+}
+party = {
+		name = "Society of Muslim Mojaheds"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1948.12.1
+		end_date = 1961.1.1
+}
+party = {
+		name = "Society of Seminary Teachers"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1961.1.1
+		end_date = 1977.2.17
+}
+party = {
+		name = "Islamic Republican Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1977.2.17
+		end_date = 1987.6.1
+}
+party = {
+		name = "Principlists"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1987.6.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Tudeh Party of Iran"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Tudeh Party of Iran"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1981.7.20
+}
+party = {
+		name = "People's Mujahedin of Iran"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1965.9.5
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		Iran "Esmail Yekom" "Mohammad Khan Qajar" "Abbas Bozorg" "Safieddin Ardabili" "Tahmasp Yekom" "Abbas Duvam" "Fathali Shah" "Abbas Mirza" "Nasireddin" "Mozaffareddin" "Mohammad Ali" "Shah Ahmad"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Arzu Fatima Nilofer Omid Laleh "Koh-i Nor" Jaleh Firuz Darya Roshan Shahrazad Shirin Yasmin Ziba Zuleika Behruz Farid Humayun Kambiz Kamyar Ruzbeh
+	}
+	cruiser = {
+		Tehran Esfahan Hormuz Mashhad Tabriz Yazd Shiraz Hamedan Qom Bushehr Ahvaz Kermanshah Qazvin Zanjan Rasht Yasuj Semnan Abtin Ardavan Armin Bahram Darab Faramarz Ghobad Goudarz Jamshid Kavus Manuchehr Mehran Parviz Piruz Rustam Sohrab
+	}
+	modern_cruiser = {
+		Iran "Esmail Yekom" "Mohammad Khan Qajar" "Abbas Bozorg" "Safieddin Ardabili" "Tahmasp Yekom" "Abbas Duvam" "Fathali Shah" "Abbas Mirza" "Nasireddin" "Mozaffareddin" "Mohammad Ali" "Shah Ahmad"
+	}
+	frigate = {
+		Karun Zab Aras Helmand Diyala "Zab-e Kuchek" Zayande Atrek Alamut
+	}
+	modern_destroyer = {
+		Azarbayjan Fars Khorasan Kerman Ajami Sistan Gorgan Manzadaran Sanjan Gilan Ardelan Balochistan Lorestan
+	}
+	destroyer = {
+		Ferhumand Jelaleddin Nureddin Danesh Zureddin Nirumand Khosthaneshdani "Sahib-i Azam" Dalir
+	}
+	submarine = {
+		Alborz Damavand Kholeno "Azad Koh" Tochal Sarakchal Kharsang Zagros "Zard Koh"
+	}
+
+}

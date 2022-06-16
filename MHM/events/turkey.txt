@@ -1,0 +1,291 @@
+#1960 Turkish coup d'Ètat
+country_event = {
+  id = 8015505
+  title = EVT_8015505_NAME
+  desc = EVT_8015505_DESC
+  picture = "nwo2_cemal_guersel"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = TUR
+    	year = 1960 
+		NOT = { year = 1990 }
+		
+		government = democracy
+		is_vassal = no
+		war = no
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = EVT_8015505_A
+		government = presidential_dictatorship 
+		country_event = 800050 
+		ruling_party_ideology = conservative
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Stick to the status quo"
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#1980 Turkish coup d'Ètat
+country_event = {
+  id = 8015517
+  title = EVT_8015517_NAME
+  desc = EVT_8015517_DESC
+  picture = "nwo2_kenan_evren"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = TUR
+    	year = 1980 
+		NOT = { year = 1990 }
+		
+    	government = presidential_dictatorship
+		is_vassal = no
+		war = no
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = EVT_8015517_A
+		prestige = 50
+		ruling_party_ideology = conservative
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Continue the National Movement!"
+		government = populist_dictatorship
+		ruling_party_ideology = nationalist
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#1983 Turkish General Election
+country_event = { 
+  id = 8015518
+  title = EVT_8015518_NAME
+  desc = EVT_8015518_DESC
+  picture = "nwo2_kenan_evren"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = TUR
+    	year = 1983 
+		NOT = { year = 1990 }
+    	government = presidential_dictatorship
+		is_vassal = no
+		war = no
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = EVT_8015518_A
+		government = democracy 
+		country_event = 800054
+		ruling_party_ideology = liberal
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Stick to the status quo"
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#1997 Turkish military memorandum
+country_event = {
+  id = 8015519
+  title = "$YEAR$ Turkish Military Memorandum"
+  desc = EVT_8015519_DESC
+  picture = "welfare_party"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = TUR
+    	year = 1997 
+		NOT = { year = 2010 }
+		
+    	government = democracy
+		is_vassal = no
+		war = no
+		
+		OR = { ai = yes ruling_party_ideology = traditionalist }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = EVT_8015519_A
+
+		ruling_party_ideology = big_tent
+	
+		any_pop = { ideology = { factor = 0.10 value = conservative } }
+		
+		ai_chance = { factor = 0.9 }
+	}
+  
+	option = {
+		name = "Stick to the status quo"
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.1 }
+	}
+  
+}
+
+#15th of July Coup
+country_event = {
+	id = 8015520
+	title = EVT_8015520_NAME
+	desc = EVTDESC8015520
+	picture = "turkey_coup_2016"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TUR
+		is_greater_power = no
+		has_global_flag = arab_spring
+		government = democracy
+		average_militancy = 4
+		OR = { ruling_party_ideology = conservative ruling_party_ideology = traditionalist ruling_party_ideology = populist }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = EVT_8015520_A # "Remove these plotters from our ranks!"
+		any_pop = { limit = { type = officers } reduce_pop = 0.25 }
+
+		random_list = { 
+			25 = { country_event = 8015521 } #Success
+			75 = { country_event = 8015522 } #Failure
+		}
+		ai_chance = { factor = 0.6 }
+	}
+	option = {
+		name = EVT_8015520_B # "Allah and our loyal citizens will protect us!"
+		prestige_factor = -0.2
+		random_list = { 
+			75 = { country_event = 8015521 } #Success
+			25 = { country_event = 8015522 } #Failure
+		}
+		ai_chance = { factor = 0.4 }
+	}
+}
+
+#15th of July Coup - Success
+country_event = {
+	id = 8015521
+	title = EVT_8015521_NAME
+	desc = EVTDESC8015521
+	picture = "turkey_coup_2016_win"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVT_8015521_A # We are Atat√ºrk's country once more!
+		add_country_modifier = { name = stock_market_crash duration = 900 }
+		ruling_party_ideology = liberal
+		political_reform = ruling_party_opinion
+		any_pop = {
+			limit = {
+				NOT = { religion = secularism }
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = traditionalist
+			}
+			scaled_consciousness = {
+				factor = 8
+				ideology = traditionalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = populist
+			}
+			scaled_consciousness = {
+				factor = 8
+				ideology = populist
+			}
+			scaled_militancy = {
+				factor = 8
+				ideology = conservative
+			}
+			scaled_consciousness = {
+				factor = 5
+				ideology = conservative
+			}
+		}
+	}
+}
+
+#15th of July Coup - Fails
+country_event = {
+	id = 8015522
+	title = EVT_8015522_NAME
+	desc = EVTDESC8015522
+	picture = "turkey_coup_2016_lose"
+
+	is_triggered_only = yes
+
+	option = {
+		name = EVT_8015522_A # Declare a state of emergency
+		#prestige = 25
+		government = presidential_dictatorship
+		country_event = 800050
+		add_country_modifier = { name = stock_market_crash duration = 365 }
+		any_pop = { militancy = -2 }
+		any_pop = {
+			limit = {
+				OR = {
+					type = clergymen
+					type = bureaucrats
+					type = soldiers
+				}
+				OR = {
+					pop_majority_ideology = liberal
+					pop_majority_ideology = progressive
+				}
+			}
+			reduce_pop =  0.98
+			militancy = 5
+			consciousness = 3
+		}
+		any_pop = {
+			scaled_militancy = {
+				factor = 10
+				ideology = progressive
+			}
+			scaled_consciousness = {
+				factor = 8
+				ideology = progressive
+			}
+			scaled_militancy = {
+				factor = 8
+				ideology = liberal
+			}
+			scaled_consciousness = {
+				factor = 5
+				ideology = liberal
+			}
+		}
+	}
+}

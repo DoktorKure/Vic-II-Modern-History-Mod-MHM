@@ -1,0 +1,616 @@
+# Linggadjati Agreement, NET
+country_event = {
+  id = 8206005
+  title = "Linggadjati Agreement"
+  desc = EVTDESC8206005
+  picture = "linggadjati_agreement"
+  fire_only_once = yes
+
+	trigger = {
+		tag = NET
+		year = 1946 
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war_with = IDO
+		
+		NOT = { has_global_flag = federated_indonesia }
+	}
+
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = "Propose the ceasefire (80% chance of success)"
+		prestige = -20
+		relation = { who = USA value = 25 }
+		relation = { who = ENG value = 25 } 
+		IDO = { country_event = 8206006 }
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Continue the war!"
+		badboy = 5
+		relation = { who = USA value = -50 }
+		relation = { who = ENG value = -50 } 
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+# Linggadjati Agreement, IDO
+country_event = {
+  id = 8206006
+  title = "Linggadjati Agreement"
+  desc = EVTDESC8206005
+  picture = "linggadjati_agreement"
+  is_triggered_only = yes # as IDO
+
+	option = {
+		name = "Accept the ceasefire"
+		prestige = 25
+		
+		#End war as a stalemate
+		end_war = NET
+		country_event = 1512280
+		NET = { country_event = 1512280 }
+
+		set_global_flag = linggadjati_agreement
+		
+		NET = { 
+			any_owned = { 
+				limit = { is_core = IDO NOT = { is_core = DYA is_core = EID is_core = WPA } } 
+				secede_province = IDO
+			} 
+		}
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Continue the War!"
+		prestige = 50
+		any_pop = { militancy = 1 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+# Denpasar Conference, NET
+country_event = {
+  id = 8206007
+  title = "Denpasar Conference"
+  desc = EVTDESC8206007
+  picture = "denpasar_conference"
+  fire_only_once = yes
+
+	trigger = {
+		tag = NET
+		year = 1946 
+		has_global_flag = linggadjati_agreement
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		NOT = { war_with = IDO }
+		
+		NOT = { has_global_flag = federated_indonesia }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Form the State of East Indonesia"
+		relation = { who = IDO value = -50 }
+		
+		set_global_flag = denpasar_conference_historical_flag
+		
+		#Form East Indonesia
+		release_vassal = EID
+		EID = { government = democracy country_event = 800054 ruling_party_ideology = nationalist }
+		diplomatic_influence = { who = EID value = 200 }
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Let Indonesia have Western New Guinea as well"
+		prestige = -100
+		badboy = -5
+		
+		relation = { who = IDO value = 50 }
+		
+		#Create the enlarged East Indonesia
+		release_vassal = EID
+		EID = { government = democracy country_event = 800054 ruling_party_ideology = nationalist }
+		release = WPA
+		EID = { inherit = WPA }
+		
+		diplomatic_influence = { who = EID value = 200 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Operation Product - NET
+country_event = { 
+  id = 8206011
+  title = "Operation Product"
+  desc = EVTDESC8206011
+  picture = "operation_product"
+  fire_only_once = yes
+
+	trigger = {
+		tag = NET
+		has_global_flag = linggadjati_agreement
+		year = 1947 
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		NOT = { war_with = IDO }
+		
+		has_global_flag = denpasar_conference_historical_flag
+		
+		NOT = { has_global_flag = federated_indonesia }
+	}
+
+	mean_time_to_happen = { months = 7 }
+
+	option = {
+		name = "Launch the offensive"
+		
+		set_global_flag = operation_product_historical_flag
+		
+		badboy = 5
+		war = {
+			target = IDO
+			defender_goal = { casus_belli = become_independent }
+			attacker_goal = { casus_belli = colonial_war } 
+		}
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Uphold the Linggadjati Agreement"
+		prestige = -50
+		country_event = 8206008 #Formation of the RUSI
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+# Renville Agreement, NET
+country_event = {
+  id = 8206012
+  title = "Renville Agreement"
+  desc = EVTDESC8206012
+  picture = "renville_agreement"
+  fire_only_once = yes
+
+	trigger = {
+		tag = NET
+		year = 1948 
+		has_global_flag = linggadjati_agreement
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		
+		IDO = { exists = yes is_vassal = no }
+		
+		has_global_flag = operation_product_historical_flag
+		
+		NOT = { has_global_flag = federated_indonesia }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Accept the Renville Agreement (80% chance of success)"
+		relation = { who = IDO value = 25 } 
+		IDO = { country_event = 8206013 }
+		badboy = -2.5
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "We will end this rebellion once and for all"
+		any_pop = { limit = { culture = indonesian } militancy = 5 } 
+		badboy = 5
+		prestige = -25
+		relation = { who = USA value = -50 }
+		
+		war = {
+			target = IDO
+			defender_goal = { casus_belli = become_independent }
+			attacker_goal = { casus_belli = colonial_war } 
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+# Renville Agreement, IDO
+country_event = {
+  id = 8206013
+  title = "Renville Agreement"
+  desc = EVTDESC8206012
+  picture = "renville_agreement"
+
+	is_triggered_only = yes # IDO
+	
+	option = {
+		name = "Accept the armistice"
+
+		set_global_flag = renville_agreement
+
+		1406 = { secede_province = NET }
+
+		NET = { release_vassal = ESM }
+		ESM = { government = democracy country_event = 800054 }
+		NET = { diplomatic_influence = { who = ESM value = 200 } }
+
+		#Transfer occupied lands to NET
+
+		IDO = { any_owned = { limit = { is_capital = no controlled_by = NET } secede_province = NET change_controller = IDO } }
+
+		any_owned = { limit = { is_capital = no controlled_by = IDO } change_controller = NET }
+
+		#Transfer occupied lands to IDO
+
+		any_owned = { limit = { is_capital = no controlled_by = IDO } secede_province = IDO change_controller = NET }
+
+		IDO = { any_owned = { limit = { is_capital = no controlled_by = NET } change_controller = IDO } }
+
+		#End war as a stalemate
+		end_war = NET
+		country_event = 1512280
+		NET = { country_event = 1512280 }
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "We will prevail!"
+		any_pop = { limit = { culture = indonesian } militancy = 1.5 }
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#Operation Kraai - NET
+country_event = {
+  id = 8206015
+  title = "Operation Kraai"
+  desc = EVTDESC8206015
+  picture = "police_actions_ido_2"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = NET
+		has_global_flag = renville_agreement
+		year = 1948 
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		NOT = { war_with = IDO }
+		
+		IDO = { exists = yes is_vassal = no }
+		
+		NOT = { has_global_flag = federated_indonesia }
+	}
+
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = "Begin the new police actions"
+		
+		set_global_flag = operation_kraai_historical_flag
+		
+		badboy = 5
+		
+		war = {
+			target = IDO
+			defender_goal = { casus_belli = become_independent }
+			attacker_goal = { casus_belli = colonial_war } 
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Surrender to the Republic"
+		badboy = -10
+		prestige = -100
+		
+		#End colonisation of indonesia
+		any_owned = { limit = { is_core = IDO } secede_province = IDO }
+		
+		any_country = {
+			limit = { OR = { tag = ESM tag = EID tag = WPA } vassal_of = THIS }
+			annex_to = IDO
+		}
+		
+		IDO = { prestige = 50 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Dutch–Indonesian Round Table Conference, NET
+country_event = {
+  id = 8206016
+  title = "Dutch–Indonesian Round Table Conference"
+  desc = EVTDESC8206016
+  picture = "NET_IDO_round_table"
+  fire_only_once = yes
+
+	trigger = {
+		tag = NET
+		has_global_flag = renville_agreement
+		year = 1949 
+		NOT = { year = 1990 }
+		NOT = { has_global_flag = 1950_start_date_flag }
+		
+		is_vassal = no
+		
+		IDO = { exists = yes is_vassal = no } 
+		
+		has_global_flag = operation_kraai_historical_flag
+		
+		NOT = { has_global_flag = federated_indonesia }
+	}
+
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = "Propose the agreement (90% chance of success)"
+		prestige = 50
+		badboy = -10
+		
+		end_war = IDO
+		
+		#Form the RUSI
+		IDO = { country_event = 8206017 }
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "I'm sure we'll win this time"
+		badboy = 5
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Dutch–Indonesian Round Table Conference, IDO
+country_event = {
+  id = 8206017
+  title = "Dutch–Indonesian Round Table Conference"
+  desc = EVTDESC8206016
+  picture = "NET_IDO_round_table"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sign the final agreement"
+		prestige = 25
+		badboy = -5
+		
+		set_global_flag = rusi_agreement
+		
+		#Form the RUSI
+		country_event = 8206032
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "I'm sure we'll win this time"
+		badboy = 5
+		
+		#Resume war against the Dutch
+		random_owned = {
+			limit = { owner = { NOT = { war_with = NET } } }
+			owner = {
+				THIS = {
+					war = {
+						target = NET
+						attacker_goal = { casus_belli = annex_all_colonial_cores }
+						defender_goal = { casus_belli = colonial_war }
+						call_ally = no
+					}
+				}
+			}
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+# Formation of the RUSI
+country_event = {
+  id = 8206032
+  title = EVT_8206072_NAME
+  desc = EVT_8206072_DESC
+  picture = "rusi_independece"
+  is_triggered_only = yes # IDO
+
+	option = {
+		name = EVT_8206072_A
+		
+		#Clean up war
+		end_war = NET
+		#Stalemate
+		country_event = 1512280
+		IDO = { country_event = 1512280 }
+		
+		#Return all IDO cores except those in WPA
+		NET = { any_owned = { limit = { is_core = IDO NOT = { is_core = WPA } } secede_province = IDO } }
+		#Annex autonomous IDO dutch puppets
+		any_country = {
+			limit = { OR = { tag = ESM tag = EID tag = WPA } vassal_of = NET }
+			annex_to = IDO
+		}
+		
+		#Form the federation
+		set_global_flag = federated_indonesia
+		
+		add_country_modifier = { name = independence_timer duration = 365 }
+		
+		release_vassal = EID # East Indonesia
+		release_vassal = DYA # Dyak
+		#release_vassal = WJA # West Java
+		release_vassal = ESM # Sumatra
+
+		EID = { 
+			ruling_party_ideology = traditionalist 
+			government = sar_government 
+		}
+		DYA = { 
+			ruling_party_ideology = traditionalist 
+			government = sar_government 
+		}
+		ESM = { 
+			ruling_party_ideology = traditionalist 
+			government = sar_government 
+		}
+
+		government = democracy1
+
+		NET = { 
+			diplomatic_influence = { who = IDO value = 200  }
+			diplomatic_influence = { who = EID value = 200  }
+			diplomatic_influence = { who = DYA value = 200  }
+			diplomatic_influence = { who = ESM value = 200  }
+			prestige = 200
+		}
+	}
+	
+}
+
+#### USA intervention ####
+
+# US intervention in the IDO national rev
+country_event = {
+  id = 8206033
+  title = "US Intervention in the Indonesian Revolution"
+  desc = EVT_8206070_DESC
+  picture = "nwo2_end_of_indonesian_national_revolution"
+  fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1947 
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1990 }
+		
+		NET =  {
+			owns = 1413 # Jakarta
+			war_with = IDO
+		}
+		
+		NOT = { has_global_flag = federated_indonesia }
+	}
+  
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = EVT_8206033_A
+		
+		diplomatic_influence = { who = IDO value = 100 }
+		relation = { who = IDO value = 100 }
+		
+		relation = { who = NET value = -50 }
+		
+		set_global_flag = USA_pressure_the_dutch_on_indonesia
+		
+		#Choice for NET
+		NET = { country_event = 8206034 }
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = EVT_8206033_B
+		
+		diplomatic_influence = { who = IDO value = -100 }
+		relation = { who = IDO value = -100 }
+		
+		relation = { who = NET value = 50 }
+		
+		NET = { badboy = -5 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+# US intervention, NET
+country_event = {
+  id = 8206034
+  title = "US Intervention in the Indonesian Revolution"
+  desc = EVT_8206070_DESC
+  picture = "nwo2_end_of_indonesian_national_revolution"
+
+	is_triggered_only = yes # NET
+
+	option = {
+		name = "Indonesia is Dutch!"
+		badboy = 5
+		
+		any_pop = { limit = { culture = indonesian } consciousness = 2 militancy = 3 }
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Relinquish control over the Dutch East Indies"
+		prestige = 50
+		
+		any_pop = { limit = { culture = indonesian } consciousness = -2 militancy = -10 }
+		
+		#Transfer of Sovereignty to Indonesia
+		set_country_flag = NET_IDO_give_up_flag
+		
+		ai_chance = { factor = 0.3 }
+	}
+}
+
+# US intervention leading to RUSI
+country_event = {
+  id = 8206030
+  title = "Transfer of Sovereignty to Indonesia"
+  desc = EVT_8206070_DESC
+  picture = "nwo2_end_of_indonesian_national_revolution"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = NET
+		year = 1946
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		
+		IDO = { exists = yes is_vassal = no }
+		
+		has_country_flag = NET_IDO_give_up_flag
+		
+		NOT = { has_global_flag = federated_indonesia }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Set Indonesia free!"
+		badboy = -5
+		
+		any_pop = { limit = { culture = indonesian } consciousness = -2 militancy = -3 }
+	
+		#Form RUSI
+		IDO = { country_event = 8206032 }
+	}
+	
+}

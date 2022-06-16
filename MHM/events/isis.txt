@@ -1,0 +1,105 @@
+country_event = {
+	id = 1014800
+	title = EVT_1014800_NAME
+	desc = EVT_1014800_DESC
+	picture = "isis"
+	is_triggered_only = yes # county with ISI cores
+
+	option = {
+		name = EVT_1014800_A
+		random_owned = { 
+			limit = { is_core = ISI } 
+			state_scope = {
+				any_owned = {
+					add_core = ISI
+					secede_province = ISI
+				remove_province_modifier = salafi_movement
+				}
+			}
+		}
+		any_owned = {
+			limit = { is_core = ISI } 
+			remove_core = ISI
+		}
+		casus_belli = {
+			target = ISI
+			type = acquire_core_state
+			months = 60
+		}
+		war = ISI
+	}
+}
+
+#Rise of Jihadism in the Middle East
+country_event = {
+	id = 1014840
+	title = "Rise of Jihadism"
+	desc = EVT_1014840_DESC
+	picture = "salafi_jihadism"
+	
+	trigger = {
+		#Arab state
+		OR = { pop_majority_culture = arab capital_scope = { continent = mena } }
+	
+		#Factors that led to this
+		has_global_flag = war_on_terror #2001
+		has_global_flag = arab_spring #2011
+	
+		#A core province in the middle east does not have ISIS cores
+		any_core = { pop_majority_religion = sunni NOT = { is_core = ISI } }
+	
+		#Sunni state
+		pop_majority_religion = sunni
+		
+		#Has substantial traditionalist support
+		traditionalist = 15
+		
+		#Country is not already a traditionalist or theocratic state
+		NOT = { 
+			OR = { 
+				ruling_party_ideology = traditionalist 
+				government = theocracy 
+			} 
+		}
+		
+		#Must have some internal unrest
+		average_militancy = 2
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "This is a worrying situation"
+		
+		#Pops in our country become more traditionalist
+		any_pop = { 
+			limit = { religion = sunni }
+			dominant_issue = { factor = 0.15 value = moralism }
+			ideology = { factor = 0.10 value = traditionalist }
+			scaled_militancy = { factor = 10 ideology = traditionalist }
+		}
+		
+		#Affect the rest of the world
+		any_country = {
+			limit = { exists = yes }
+			
+			#Pops  become more traditionalist
+			any_pop = { 
+				limit = { religion = sunni }
+				dominant_issue = { factor = 0.02 value = moralism }
+				ideology = { factor = 0.02 value = traditionalist }
+				scaled_militancy = { factor = 1 ideology = traditionalist }
+			}
+		}
+		
+		#Add ISIS cores in Sunni majority states
+		all_core = {
+			limit = { pop_majority_religion = sunni }
+			add_core = ISI
+			add_province_modifier = { name = salafi_movement duration = 3650 }
+		}
+	}
+
+}

@@ -1,0 +1,559 @@
+#The post war constitution
+country_event = {
+  id = 8007825
+  title = "The Post War Constitution"
+  desc = EVT_8007825_DESC
+  picture = "nwo2_japanese_constitution_1947"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAP
+		year = 1947
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		OR = { 
+			government = hms_government 
+			government = hms_government1 
+			government = democracy 
+			government = democracy1 
+		}
+		
+		vassal_of = USA
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = "SCAP will draft the new constitution"
+		prestige = 10
+		USA = { country_event = 1512199 }
+	}
+
+}
+
+#The San Francisco Treaty - USA
+country_event = {
+  id = 8007826
+  title = "The Treaty of San Francisco"
+  desc = EVTDESC8007826
+  picture = "nwo2_sanfrancisco"
+  
+	major = yes
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1952
+		NOT = { year = 1990 }
+		
+		JAP = {
+			OR = {
+				government = hms_government 
+				government = hms_government1 
+				government = democracy 
+				government = democracy1 
+			}
+			war = no
+		}
+		
+		is_our_vassal = JAP
+		
+		#Cold War
+		has_global_flag = blocsenabled
+		government = democracy
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = "Japan shall be a sovereign but under the American sphere"
+		prestige = 100
+		release_vassal = JAP
+		
+		relation = { who = JAP value = 100 }
+		diplomatic_influence = { who = JAP value = 200 }
+		
+		#Notify Japan
+		JAP = { country_event = 80078261 }
+		
+		#Make way for the Mutual Cooperation Treaty
+		set_global_flag = sanfrancisco_treaty_flag
+		
+		#Enemies of Japan are pissed
+		relation = { who = RUS value = -100 }
+		relation = { who = CHI value = -100 }
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Japan shall be an independent sovereign state"
+		prestige = 50
+		release_vassal = JAP
+		
+		badboy = -5
+		
+		relation = { who = JAP value = 50 }
+		diplomatic_influence = { who = JAP value = -100 }
+		
+		#Notify Japan
+		JAP = { country_event = 80078261 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Continue the administration of Japan"
+		badboy = 5
+		
+		JAP = {
+			government = mandate_government 
+			
+			#Nationalism increases
+			any_pop = {
+				limit = { culture = japanese }
+				ideology = {
+					factor = 0.125
+					value = nationalist
+				}
+				scaled_militancy = {
+					factor = 10
+					ideology = nationalist
+				}
+				scaled_militancy = {
+					factor = 10
+					ideology = traditionalist
+				}
+			}
+			
+		}
+		
+		#Enemies of Japan are happy
+		relation = { who = RUS value = 100 }
+		relation = { who = CHI value = 100 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#The San Francisco Treaty - JAP
+country_event = {
+  id = 80078261
+  title = "The Treaty of San Francisco"
+  desc = EVTDESC8007826
+  picture = "nwo2_sanfrancisco"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "Japan is a sovereign state once more"
+		prestige = 100
+		
+		#Boost conservatism
+		any_pop = {
+			limit = { culture = japanese location = { is_core = JAP } }
+			ideology = {
+				factor = 0.05
+				value = conservative
+			}
+		}
+	}
+
+}
+
+#US Japan Treaty of Mutual Cooperation
+country_event = {
+  id = 8007827
+  title = EVT_8007827_NAME
+  desc = EVT_8007827_DESC
+  picture = "nwo2_american_japanese_treaty"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = JAP
+		year = 1960
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war = no
+		
+		OR = {
+			government = hms_government 
+			government = hms_government1 
+			government = democracy 
+			government = democracy1 
+		}
+		
+		relation = { who = USA value = 0 }
+		
+		#San Francisco Treaty
+		has_global_flag = sanfrancisco_treaty_flag
+		
+		#Cold War
+		has_global_flag = blocsenabled
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "We shall enjoy the free ride!"
+		relation = { who = USA value = 100 }
+		create_alliance = USA
+		set_global_flag = american_japanese_treaty_flag
+		
+		#Pacifist surge
+		any_pop = {
+			dominant_issue = {
+				value = pacifism
+				factor = 0.20
+			}
+			scaled_militancy = {
+				factor = 4
+				issue = pacifism
+			}
+		}
+		
+		#Boost conservatism
+		any_pop = {
+			limit = { culture = japanese location = { is_core = JAP } }
+			ideology = {
+				factor = 0.05
+				value = conservative
+			}
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "We don't need the Yankee protection"
+		leave_alliance = USA
+		USA = { end_military_access = THIS } 
+		relation = { who = USA value = -50 } 
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Return of Okinawa
+country_event = {
+  id = 8007828
+  title = "Okinawa Reversion Agreement"
+  desc = EVT_8007828_DESC
+  picture = "nwo2_okinawa"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1971
+		NOT = { year = 1990 }
+		
+		#Okinawa
+		owns = 1678
+		
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		JAP = {
+			OR = {
+				government = hms_government 
+				government = hms_government1 
+				government = democracy 
+				government = democracy1 
+			}
+			is_vassal = no
+			exists = yes
+		}
+	}
+
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = "Return Okinawa to Japan"
+		
+		1678 = { secede_province = JAP add_core = JAP }
+
+		badboy = -5
+		
+		relation = { who = JAP value = 100 }
+		
+		#Notify Japan
+		JAP = { country_event = 8007833 }
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "We shall continue to hold on to the island"
+		relation = { who = JAP value = -50 }
+		
+		#Japan gains cores over the Okinawan islands
+	    1679 = { add_core = JAP }
+		1678 = { add_core = JAP }
+		
+		#Nationalism increases
+		any_pop = {
+			limit = { culture = japanese location = { is_core = JAP } }
+			ideology = {
+				factor = 0.25
+				value = nationalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = nationalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = traditionalist
+			}
+		}
+	
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Return of the Bonin and Marcus Islands
+country_event = {
+  id = 8007831
+  title = "Return of the Bonin and Marcus Islands"
+  desc = EVT_8007831_DESC
+  picture = "nwo2_bonin_marcus"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1968 
+		NOT = { year = 1990 }
+		
+		#Marcus and Bonin Islands
+		owns = 2525
+		owns = 1654
+		
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		JAP = {
+			OR = {
+				government = hms_government 
+				government = hms_government1 
+				government = democracy 
+				government = democracy1 
+			}
+			is_vassal = no
+			exists = yes
+		}
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Return those islands"
+		
+		2525 = { secede_province = JAP add_core = JAP }
+		1654 = { secede_province = JAP add_core = JAP }
+		
+		badboy = -5
+		
+		relation = { who = JAP value = 100 }
+		
+		#Notify Japan
+		JAP = { country_event = 8007834 }
+	
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "We are not returning those islands!"
+		
+		relation = { who = JAP value = -50 }
+	
+		#Japan gains cores over the Bonin and Marcus Islands
+		2525 = { add_core = JAP }
+		1654 = { add_core = JAP }
+		
+		#Nationalism increases
+		any_pop = {
+			limit = { culture = japanese location = { is_core = JAP } }
+			ideology = {
+				factor = 0.25
+				value = nationalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = nationalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = traditionalist
+			}
+		}
+	
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Return of the Amami Islands
+country_event = {
+	id = 8007832
+	title = "Return of the Amami Islands to Japan"
+	desc = EVTDESC1512150
+	picture = "amami_islands_return"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1953
+		NOT = { year = 1990 }
+		
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		#Amani Islands
+		owns = 1679
+		
+		JAP = { 
+			OR = {
+				government = hms_government 
+				government = hms_government1 
+				government = democracy 
+				government = democracy1 
+			}
+			is_vassal = no
+			exists = yes
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 12
+	}
+
+	option = {
+		name = "Give Japan a Christmas present"
+		
+		1679 = { secede_province = JAP add_core = JAP }
+		
+		badboy = -5
+		
+		relation = { who = JAP value = 100 }
+		
+		#Notify Japan
+		JAP = { country_event = 8007835 }
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Keep it for strategic reasons"
+		relation = { who = JAP value = -50 }
+	
+		#Japan gains cores over the Amami Islands
+		1679 = { add_core = JAP }
+		
+		#Nationalism increases
+		any_pop = {
+			limit = { culture = japanese location = { is_core = JAP } }
+			ideology = {
+				factor = 0.25
+				value = nationalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = nationalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = traditionalist
+			}
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Return of Okinawa - JAP
+country_event = {
+  id = 8007833
+  title = "Okinawa Reversion Agreement"
+  desc = EVT_8007828_DESC
+  picture = "nwo2_okinawa"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "We are restoring our country to its former glory"
+		prestige = 50
+		
+		#Boost conservatism
+		any_pop = {
+			limit = { culture = japanese location = { is_core = JAP } }
+			ideology = {
+				factor = 0.05
+				value = conservative
+			}
+		}
+	}
+
+}
+
+#Return of Bonin and Marcus Islands - JAP
+country_event = {
+  id = 8007834
+  title = "Return of the Bonin and Marcus Islands"
+  desc = EVT_8007831_DESC
+  picture = "nwo2_bonin_marcus"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "We are restoring our country to its former glory"
+		prestige = 50
+		
+		#Boost conservatism
+		any_pop = {
+			limit = { culture = japanese location = { is_core = JAP } }
+			ideology = {
+				factor = 0.05
+				value = conservative
+			}
+		}
+	}
+
+}
+
+#Return of the Amami Islands - JAP
+country_event = {
+  id = 8007835
+	title = "Return of the Amami Islands to Japan"
+	desc = EVTDESC1512150
+	picture = "amami_islands_return"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "We are restoring our country to its former glory"
+		prestige = 50
+		
+		#Boost conservatism
+		any_pop = {
+			limit = { culture = japanese location = { is_core = JAP } }
+			ideology = {
+				factor = 0.05
+				value = conservative
+			}
+		}
+	}
+
+}

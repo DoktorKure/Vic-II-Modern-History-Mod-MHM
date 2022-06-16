@@ -1,0 +1,438 @@
+#USSR releases NKO to allow the Korean War to start
+country_event = {
+  id = 8500824
+  title = EVT_8500824_NAME
+  desc = EVT_8500824_DESC
+  picture = "nwo2_kim_il_sung_speaking"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1949 
+		NOT = { year = 1960 }
+		
+		war = no
+		has_global_flag = blocsenabled
+		
+		#North Korea
+		exists = NKO
+		is_our_vassal = NKO
+		
+		#South Korea
+		exists = SKO
+		SKO = { is_vassal = no }
+		
+		#Communist China
+		exists = CHI
+		CHI = { government = proletarian_dictatorship is_vassal = no }
+	}
+
+	mean_time_to_happen = { 
+		months = 6 
+		modifier = { factor = 0.1 has_global_flag = 1950_start_date_flag }
+	}
+
+	option = {
+		name = "May the best Korea win!"
+		release_vassal = NKO
+		
+		NKO = { 
+			set_country_flag = NKO_korean_war_permisssion 
+			
+			#Add soldiers to North Korea - RUS assistance
+			any_pop = { 
+				limit = { type = soldiers } 
+				reduce_pop = 1.25 
+			}
+			
+			#Add military goods
+			small_arms = 500
+			weaponry = 500
+			aeroplanes = 500
+			ammunition = 500
+			automobiles = 500
+			
+			#Bolster defences
+			any_owned = {
+				fort = 1
+			}
+			
+		}
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Korea shall remain divided"
+		prestige = -50
+		badboy = 5
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Fire the Korean War
+country_event = {
+  id = 8500800
+  title = EVT_8500800_NAME
+  desc = EVT_8500800_DESC
+  picture = "korean_war_start"
+
+	fire_only_once = yes
+
+	trigger = {
+    	tag = NKO
+		OR = { 
+			has_country_flag = NKO_korean_war_permisssion 
+			has_global_flag = 1950_start_date_flag 
+		}
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war = no
+		
+		#PRC civil war
+		exists = CHI
+		CHI = { owns = 2221 government = proletarian_dictatorship is_vassal = no }
+		
+		#SKO is not a vassal
+     	exists = SKO
+		SKO = { is_vassal = no }
+	}
+
+	mean_time_to_happen = { 
+		months = 6 
+		modifier = { factor = 0.1 has_global_flag = 1950_start_date_flag }
+	}
+
+	option = {
+		name = "There will be one Korea"
+		
+		#USSR does not intervene
+		leave_alliance = RUS
+		
+		#South Korea gains relations with US
+		SKO = { relation = { who = USA value = 100 } } 
+		USA = { diplomatic_influence = { who = SKO value = 200 } }
+		
+		#Start the Korean War
+		war = { 
+			target = SKO 
+			attacker_goal = { casus_belli = civil_war } 
+			defender_goal = { casus_belli = civil_war } 
+			call_ally = no
+		}
+		
+		set_global_flag = korea_war
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "The peninsula will remain divided"
+		prestige = -50
+		any_pop = { militancy = 3.0 }
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#United Nations intervention
+country_event = {
+  id = 8500840
+  title = "UN Security Council Resolution 82"
+  desc = EVTDESC8500840
+  picture = "nwo2_united_nations_intervention"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1949 
+		NOT = { year = 1960 }
+		
+		is_vassal = no
+		
+		#Not already at war with NKO
+		NOT = { war_with = NKO }
+		
+		#Soviet boycott
+		has_global_flag = blocsenabled
+		CHI = { government = proletarian_dictatorship NOT = { has_country_modifier = unsc_permanent_member } }
+		
+		#Korean War
+		has_global_flag = korea_war
+		SKO = { war_with = NKO }
+		
+		#SKO is losing
+		SKO = { 
+			OR = { in_sphere = USA alliance_with = SKO } 
+			national_provinces_occupied = 0.10 
+		}
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "We shall save Korea!"
+		prestige = 50
+		money = -250000
+		
+		relation = { who = RUS value = -100 }
+		relation = { who = CHI value = -100 }
+		
+		relation = { who = SKO value = 100 }
+
+		#Create NATO coalition
+		any_country = { 
+			limit = { has_country_modifier = alliance_nato is_vassal = no } 
+			create_alliance = SKO 
+			relation = { who = SKO value = 200 }
+		}
+
+		#Give aid to SKO
+		SKO = {
+			#Add soldiers to South Korea - USA assistance
+			any_pop = { 
+				limit = { type = soldiers } 
+				reduce_pop = 1.25
+			}
+			
+			#Add military goods
+			small_arms = 500
+			weaponry = 500
+			aeroplanes = 500
+			ammunition = 500
+			automobiles = 500
+		}
+		
+		#Knock out NKO military so SKO can just annex NKO by themselves
+		NKO = {
+			war = { 
+				target = USA
+				attacker_goal = { casus_belli = humiliate } 
+				defender_goal = { casus_belli = cut_down_to_size } 
+				call_ally = no
+			}
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Only South Korea can save themselves"
+		prestige_factor = -0.05
+		
+		relation = { who = RUS value = 100 }
+		relation = { who = CHI value = 100 }
+		
+		relation = { who = SKO value = -100 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Chinese intervention in North Korea - CHI
+country_event = {
+  id = 8500810
+  title = "The Korean War"
+  desc = EVTDESC8500810
+  picture = "nwo2_chinese_intervention_in_korea"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = CHI
+		year = 1949 
+		NOT = { year = 1970 }
+	
+		government = proletarian_dictatorship
+		is_vassal = no
+		
+		#Cold War
+		has_global_flag = blocsenabled
+		
+		#Korean War
+		NKO = { war_with = SKO }
+		has_global_flag = korea_war
+		
+		#NKO is losing
+		NKO = { national_provinces_occupied = 0.10 }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "We must help North Korea!"
+		prestige = 100
+		
+		money = -250000
+		
+		relation = { who = USA value = -100 }
+		relation = { who = RUS value = 100 }
+		relation = { who = NKO value = 200 }
+		
+		#Send aid to North Korea
+		NKO = { 
+		
+			#Form alliance with China
+			country_event = 8500811
+			
+			#Add soldiers to North Korea - CHI assistance
+			any_pop = { 
+				limit = { type = soldiers } 
+				reduce_pop = 1.25 
+			}
+			
+			#Add military goods
+			small_arms = 500
+			weaponry = 500
+			aeroplanes = 500
+			ammunition = 500
+			automobiles = 500
+			
+		}
+		
+		#Knock out SKO military so NKO can just annex SKO by themselves
+		war = { 
+			target = SKO
+			attacker_goal = { casus_belli = cut_down_to_size } 
+			defender_goal = { casus_belli = humiliate } 
+			call_ally = no
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Korea is not that important to China"
+		prestige_factor = -0.05
+		
+		relation = { who = USA value = 50 }
+		relation = { who = SKO value = 50 }
+		
+		relation = { who = RUS value = -100 }
+		relation = { who = NKO value = -100 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#Chinese intervention in North Korea - NKO
+country_event = {
+  id = 8500811
+  title = "Chinese Intervention in Korea"
+  desc = EVTDESC8500810
+  picture = "nwo2_chinese_intervention_in_korea"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "Excellent!"
+		
+		#Prevent China from exceeding the infamy limit
+		CHI = { badboy = -20 }
+		
+		#Do not involve the USSR
+		leave_alliance = RUS
+	
+		#Involve China
+		create_alliance = CHI
+		CHI = { diplomatic_influence = { who = NKO value = 200 } }
+	}
+
+}
+
+#The Korean War Armistice - Start
+country_event = {
+  id = 8500822
+  title = "Korean Armistice Agreement?"
+  desc = EVT_8500823_DESC
+  picture = "nwo2_end_of_korean_war"
+  
+	trigger = {
+		OR = { tag = SKO tag = NKO }
+		NOT = { year = 1990 }
+		
+		OR = { war_with = SKO war_with = NKO }
+		
+		has_global_flag = korea_war
+		
+		OR = { year = 1953 national_provinces_occupied = 0.70 }
+		
+		NOT = { has_country_flag = korean_war_armistice }
+	}
+
+	mean_time_to_happen = { 
+		months = 7 
+		modifier = { factor = 0 national_provinces_occupied = 0.75 } 
+	}
+
+	option = {
+		name = "Propose an Armistice"
+		set_country_flag = korean_war_armistice
+		
+		badboy = -5	
+		
+		#Send peace offer to the other Korea
+		random_country = { 
+			limit = { 
+				war_with = THIS 
+				OR = { tag = SKO tag = NKO } 
+			}
+			country_event = 8500823 
+		}
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Continue the war"
+		set_country_flag = korean_war_armistice
+		
+		badboy = 5
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#The Korean War Armistice - End
+country_event = {
+  id = 8500823
+  title = "The $FROMCOUNTRY$ Armistice?"
+  desc = EVT_8500823_DESC
+  picture = "nwo2_end_of_korean_war"
+  
+	major = yes
+  
+	is_triggered_only = yes # NKO or SKO
+
+	option = {
+		name = "Accept the Armistice"
+		prestige = -25
+		badboy = -5	
+		
+		FROM = { set_country_flag = korean_war_armistice }
+		
+		#End the Korean War
+		end_war = FROM
+		
+		#End UN intervention
+		USA = { end_war = NKO }
+		
+		#End China's intervention in Korea
+		CHI = { end_war = SKO }
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Continue the war!"
+		badboy = 5
+		ai_chance = { factor = 0.1 }
+	}
+
+}

@@ -1,0 +1,285 @@
+graphical_culture = EuropeanGC
+color = { 72 61 139 }
+proletarian_dictatorship = { 255 0 0 }
+party = {
+		name = "Montenegrin Federalist Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "People's Concord of Montenegro"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2015.3.16
+}
+party = {
+		name = "DEMOS"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2015.3.16
+		end_date = 2100.1.1
+}
+party = {
+		name = "People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1998.1.1
+}
+party = {
+		name = "Serb People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1998.1.1
+		end_date = 2009.1.24
+}
+party = {
+		name = "New Serb Democracy"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2009.1.24
+		end_date = 2092.1.1
+}
+party = {
+		name = "Liberal Alliance of Montenegro"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2004.1.1
+}
+party = {
+		name = "Liberal Party of Montenegro"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2004.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Democratic Party of Socialists"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1998.2.18
+}
+party = {
+		name = "Democratic Party of Socialists"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1998.2.18
+		end_date = 2092.1.1
+}
+party = {
+		name = "DPS - Momir Bulatovic"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1998.2.18
+		end_date = 2000.1.1
+}
+party = {
+		name = "Socialist People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2000.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Union of Reform Forces"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1993.6.12
+}
+party = {
+		name = "Social Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1993.6.12
+		end_date = 2092.1.1
+}
+party = {
+		name = "Party of Serb Radicals"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2002.1.1
+}
+party = {
+		name = "Movement for Changes"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 2002.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Royalists"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "League of Communists of CG"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1993.1.1
+}
+party = {
+		name = "Yugoslav Communists"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1993.1.1
+		end_date = 2009.9.25
+}
+party = {
+		name = "Yugoslav Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2009.9.25
+		end_date = 2092.1.1
+}
+party = {
+		name = "League of Communists of CG"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1993.1.1
+}
+party = {
+		name = "SKJ - Communists of Montenegro"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1993.1.1
+		end_date = 2009.9.25
+}
+party = {
+		name = "Yugoslav Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2009.9.25
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Crna Gora" Podgorica Nik�ic Pljevlja Bijelo Polje
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Mamula Prevlaka "Sveti Marko" "Gospa od �krpjela" "Sveti �orde"
+	}
+	cruiser = {
+		"Boka Kotorska" Zeta Bjelopavlici "Bobotov Kuk" Durmitor
+	}
+	modern_cruiser = {
+		"Crna Gora" Podgorica Nik�ic Pljevlja Bijelo Polje
+	}
+	frigate = {
+		Mirko Marko Vitomir Borislav Jovan
+	}
+	modern_destroyer = {
+		Mihailo "Konstantin Bodin" "Petar II" Nikola
+	}
+	destroyer = {
+		"Marko Ivanovic" "Ivo Vizin" "Petar Zambelic" "Matija Zmajevic"
+	}
+	submarine = {
+		Olga Nina Milla Dubravka Milena
+	}
+
+}

@@ -1,0 +1,54 @@
+owner = USA
+controller = USA
+add_core = USA
+add_core = CSA
+add_core = RNA
+trade_goods = fruit
+life_rating = 25
+terrain = swamp_jungle
+railroad = 1
+colonial = 0
+state_building = {
+	level = 2
+	building = glass_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = grain_canned_food_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = optics_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = footwear_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = cigarettes_factory
+	upgrade = yes
+}
+1992.1.1 = {
+owner = USA
+controller = USA
+add_core = USA
+add_core = CSA
+life_rating = 25
+railroad = 2
+colonial = 0
+state_building = {
+	level = 2
+	building = health_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = beverage_tobacco_factory
+	upgrade = yes
+}
+}

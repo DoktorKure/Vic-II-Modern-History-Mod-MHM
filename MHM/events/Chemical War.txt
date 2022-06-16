@@ -1,0 +1,289 @@
+### Chemical Strike (LOW CAPABILITY) ###
+country_event = {
+	id = 1234429 
+	title = "$FROMCOUNTRY$ has been struck with Chemical Weapons"
+	desc = "Capital and Cities have been affected."
+	picture = "chemical_strike"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We have to prepare for a counter strike"
+
+		add_country_modifier = { name = recently_attacked_chemical duration = 31 }
+
+		set_country_flag = has_chemical_clouds
+
+		any_owned = { 
+			limit = { is_capital = yes }
+			
+			any_pop = { reduce_pop = 0.98 }
+			
+			add_province_modifier = { name = chemical_low duration = 30 }
+			set_province_flag = disease1
+			set_province_flag = chemical_before
+		}
+
+		any_owned = { 
+			limit = { is_capital = no total_pops = 2000000 }
+			
+			any_pop = { reduce_pop = 0.98 }
+			
+			add_province_modifier = { name = chemical_low duration = 30 }
+			set_province_flag = disease1
+			set_province_flag = chemical_before
+		}
+
+	}
+
+}
+
+### Chemical Strike (MEDIUM CAPABILITY) ###
+country_event = {
+	id = 1234430 
+	title = "$FROMCOUNTRY$ has been struck with Chemical Weapons"
+	desc = "Capital, cities and major towns have been affected."
+	picture = "chemical_strike"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We have to prepare for a counter strike"
+
+		add_country_modifier = { name = recently_attacked_chemical duration = 31 }
+
+		set_country_flag = has_chemical_clouds
+
+		any_owned = { 
+			limit = { is_capital = yes }
+			
+			any_pop = { reduce_pop = 0.96 }
+			
+			add_province_modifier = { name = chemical_medium duration = 60 }
+			set_province_flag = disease1
+			set_province_flag = chemical_before
+		}
+
+		any_owned = { 
+			limit = { is_capital = no AND = { total_pops = 1000000 NOT = { total_pops = 2000000 } } }
+			
+			any_pop = { reduce_pop = 0.96 }
+			
+			add_province_modifier = { name = chemical_low duration = 60 }
+			set_province_flag = disease1
+			set_province_flag = chemical_before
+		}
+		
+		any_owned = { 
+			limit = { is_capital = no total_pops = 2000000 }
+			
+			any_pop = { reduce_pop = 0.96 }
+			
+			add_province_modifier = { name = chemical_medium duration = 60 }
+			set_province_flag = disease1
+			set_province_flag = chemical_before
+		}
+
+	}
+
+}
+
+### Chemical Strike (MAX CAPABILITY) ###
+country_event = {
+	id = 1234431 
+	title = "$FROMCOUNTRY$ has been struck with Chemical Weapons"
+	desc = "Capital, cities, major towns and smaller towns have been affected."
+	picture = "chemical_strike"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "We have to prepare for a counter strike"
+
+		add_country_modifier = { name = recently_attacked_chemical duration = 31 }
+
+		set_country_flag = has_chemical_clouds
+
+		any_owned = { 
+			limit = { is_capital = yes }
+			
+			any_pop = { reduce_pop = 0.94 }
+			
+			add_province_modifier = { name = chemical_high duration = 90 }
+			set_province_flag = disease1
+			set_province_flag = chemical_before
+		}
+
+		any_owned = { 
+			limit = { is_capital = no AND = { total_pops = 500000 NOT = { total_pops = 1000000 } } }
+			
+			any_pop = { reduce_pop = 0.94 }
+			
+			add_province_modifier = { name = chemical_low duration = 90 }
+			set_province_flag = disease1
+			set_province_flag = chemical_before
+		}
+		
+		any_owned = { 
+			limit = { is_capital = no AND = { total_pops = 1000000 NOT = { total_pops = 2000000 } } }
+			
+			any_pop = { reduce_pop = 0.94 }
+			
+			add_province_modifier = { name = chemical_medium duration = 90 }
+			set_province_flag = disease1
+			set_province_flag = chemical_before
+		}
+		
+		any_owned = { 
+			limit = { is_capital = no total_pops = 2000000 }
+			
+			any_pop = { reduce_pop = 0.94 }
+			
+			add_province_modifier = { name = chemical_high duration = 90 }
+			set_province_flag = disease1
+			set_province_flag = chemical_before
+		}
+
+	}
+
+}
+
+### Chemical Ultimatum Received (Target Nations) ###
+country_event = {
+	id = 1234432 
+	title = "Threat of $FROMCOUNTRY_ADJ$ Chemical Attacks"
+	desc = "If we do not agree to end the war $FROMCOUNTRY$ will launch a chemical attack!"
+	picture = "chemical_ultimatum"
+	
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Capitulate to $FROMCOUNTRY$"
+
+		prestige_factor = -0.025
+
+		any_owned = { change_controller = FROM }
+
+		FROM = { country_event = 12344334 }
+
+		ai_chance = { 
+			factor = 0.25
+			modifier = { war_policy = pro_military factor = 0.50 } 
+			modifier = { war_policy = jingoism factor = 0 } 
+		}
+
+	}
+
+	option = {
+		name = "Propose a ceasefire with $FROMCOUNTRY$"
+
+		prestige_factor = -0.02
+
+		FROM = { country_event = 1234433 }
+
+		ai_chance = { 
+			factor = 0.25
+			modifier = { war_policy = pro_military factor = 0.50 } 
+			modifier = { war_policy = jingoism factor = 0 } 
+		}
+
+	}
+
+	option = {
+		name = "Continue the war (Face Chemical Attacks)"
+
+		#FROM has High Chemical Skill
+		random_owned = {
+			limit = { owner = { FROM = { has_country_modifier = chemical_cap_high } } }
+			owner = { country_event = 1234431 war_exhaustion = 30 }
+		}
+
+		#FROM has Medium Chemical Skill
+		random_owned = {
+			limit = { owner = { FROM = { has_country_modifier = chemical_cap_medium } } }
+			owner = { country_event = 1234430 war_exhaustion = 20 }
+		}
+
+		#FROM has Low Chemical Skill
+		random_owned = {
+			limit = { owner = { FROM = { has_country_modifier = chemical_cap_low } } }
+			owner = { country_event = 1234429 war_exhaustion = 10 }
+		}
+
+		ai_chance = { factor = 0.50 }
+	}
+
+}
+
+### Target proposes a ceasefire ###
+country_event = {
+	id = 1234433 
+	title = "$FROMCOUNTRY$ Proposes a Ceasefire"
+	desc = EVTDESC1234433
+	picture = "chemical_strike"
+
+	allow_multiple_instances = yes
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "Accept!"
+		FROM = { end_war = THIS }
+		relation = { who = FROM value = 50 }
+		ai_chance = { 
+			factor = 0.50
+			modifier = { war_policy = pro_military factor = 0.50 } 
+			modifier = { war_policy = jingoism factor = 0 } 
+		}
+	}
+
+	option = {
+		name = "Refuse!"
+		war_exhaustion = 5
+		ai_chance = { factor = 0.50 }
+	}
+
+}
+
+### Target Surrenders ###
+country_event = {
+	id = 12344334 
+	title = "$FROMCOUNTRY$ Surrenders!"
+	desc = EVTDESC12344334
+	picture = "chemical_strike"
+
+	allow_multiple_instances = yes
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "Peace is near!"
+		prestige_factor = 0.05
+		war_exhaustion = -25
+		relation = { who = FROM value = 50 }
+	}
+
+}
+
+### Chemical Second Strike Launch by Target Nation ###
+country_event = {
+	id = 1234434
+	title = "$FROMCOUNTRY_ADJ$ Chemical Retaliation"
+	desc = "We have had our population centres damaged by our enemies' chemical bombs."
+	picture = "chemical_strike"
+
+	allow_multiple_instances = yes
+
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "Terrible!"
+		prestige = -50
+		any_pop = { militancy = 2.5 }
+	}
+
+}

@@ -1,0 +1,296 @@
+graphical_culture = RussianGC
+color = { 30 144 255 }
+proletarian_dictatorship1 = { 255 0 0 }
+party = {
+		name = "CUN"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2014.3.31
+}
+party = {
+		name = "People's Front"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 2014.3.31
+		end_date = 2100.1.1
+}
+party = {
+		name = "Kuchma Bloc" #Fictional, nominally an 'independent'
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1997.10.26
+}
+party = {
+		name = "Party of Regions" 
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1997.10.26
+		end_date = 2014.1.1
+}
+party = {
+		name = "Opposition Bloc" 
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2014.1.1
+		end_date = 2019.6.7
+}
+party = {
+		name = "Opposition Platform — For Life"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2019.6.7
+		end_date = 2100.1.1
+}
+party = {
+		name = "Ukrainian Republican Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2001.1.1
+}
+party = {
+		name = "Our Ukraine Bloc (Conservative)"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2001.1.1
+		end_date = 2012.1.1
+}
+party = {
+		name = "Self Reliance"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2012.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "People's Movement of Ukraine"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2001.1.1
+}
+party = {
+		name = "Our Ukraine Bloc (Liberal)"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2001.1.1
+		end_date = 2012.1.1
+}
+party = {
+		name = "UDAR"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2012.1.1
+		end_date = 2014.1.1
+}
+party = {
+		name = "European Solidarity"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2014.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "SDPU(o)"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Democratic Revival of Ukraine"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1990.1.1
+		end_date = 1996.1.1
+}
+party = {
+		name = "People's Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1996.1.1
+		end_date = 2017.1.1
+}
+party = {
+		name = "Servant of the People"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2017.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Hromada"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1999.7.9
+}
+party = {
+		name = "Batkivshchyna"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1999.7.9
+		end_date = 2092.1.1
+}
+party = {
+		name = "UNA-UNSO"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2014.5.22
+}
+party = {
+		name = "Right Sector"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2014.5.22
+		end_date = 2092.1.1
+}
+party = {
+		name = "KPU"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1 
+}
+party = {
+		name = "Socialist Party of Ukraine"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1997.11.1
+}
+party = {
+		name = "SPU–SelPU"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1997.11.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Ostap Dashkevych" Kozaky "Stenka Razin" "Kondraty Bulavin" "Yemelyan Pugachev"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Oksana Oleksandra Yulia Nadiya Mariya
+	}
+	cruiser = {
+		Kyi Schek Khoryv Bravlin Oleg
+	}
+	modern_cruiser = {
+		"Ostap Dashkevych" Kozaky "Stenka Razin" "Kondraty Bulavin" "Yemelyan Pugachev"
+	}
+	frigate = {
+		Dniester Dnipro Desna Prypiat Prut
+	}
+	modern_destroyer = {
+		Donets Sevastopol Kyiv Odessa Kharkiv
+	}
+	destroyer = {
+		Krym Zaporiz'ka Khersonshchyna Mykolaiv Dnipropetrovsk
+	}
+	submarine = {
+		Sofyivsky "Pechers�ka lavra" "Kam�ianets�-Podil�s�kyi" Khotyn Khortyts'a
+	}
+
+}

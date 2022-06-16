@@ -1,0 +1,16 @@
+owner = FRA
+controller = FRA
+add_core = LBY
+add_core = FEZ
+trade_goods = petroleum
+life_rating = 25
+terrain = desert_hills
+colonial = 2
+1992.1.1 = {
+owner = LBY
+controller = LBY
+add_core = LBY
+add_core = FEZ
+life_rating = 25
+colonial = 0
+}

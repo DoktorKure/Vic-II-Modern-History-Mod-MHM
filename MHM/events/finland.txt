@@ -1,0 +1,175 @@
+#Presidency of Juho Kusti Paasikivi
+country_event = {
+  id = 8005503
+  title = "Presidency of Juho Kusti Paasikivi"
+  desc = "EVTDESC8005503"
+  picture = "nwo2_FIN_paasikivi"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = FIN
+		year = 1946 
+		NOT = { year = 1950 }
+		
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		election = no
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Congratulations to our new President!"
+		prestige = 25
+		
+		ruling_party_ideology = conservative
+		
+		any_pop = { 
+			militancy = -3
+			consciousness = -3
+			dominant_issue = { value = pacifism factor = 0.25 } 
+		}
+		
+		any_country = {
+			limit = { is_greater_power = yes OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal ruling_party_ideology = communist } }
+			relation = { who = THIS value = 50 }
+		}
+	}
+}
+
+#Presidency of Urho Kaleva Kekkonen
+country_event = {
+  id = 8005507
+  title = "Presidency of Urho Kaleva Kekkonen"
+  desc = "EVTDESC8005507"
+  picture = "nwo2_FIN_kekkonen"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = FIN
+		year = 1956
+		NOT = { year = 1950 }
+		
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		election = no
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Congratulations to our new President!"
+		prestige = 25
+		
+		ruling_party_ideology = big_tent
+		
+		#Weaken Finnish democracy
+		political_reform = regulated_opinion
+		political_reform = registered_voting
+		political_reform = parties_restrict_non_democratic
+		political_reform = politicised_service
+		
+		any_pop = { 
+			militancy = -3
+			consciousness = -3
+			dominant_issue = { value = pacifism factor = 0.25 } 
+			ideology = { factor = 0.25 value = big_tent }
+		}
+		
+		any_country = {
+			limit = { is_greater_power = yes OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal ruling_party_ideology = communist } }
+			relation = { who = THIS value = 50 }
+		}
+		ai_chance = { factor = 0.9 } 
+	}
+	option = {
+		name = "I want someone else"
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Death of Carl Gustaf Mannerheim
+country_event = {
+  id = 8005523
+  title = "Death of Carl Gustaf Mannerheim"
+  desc = EVTDESC8005523
+  picture = "nwo2_mannerheim"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = FIN
+		year = 1951
+		NOT = { year = 1990 }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Rest in Peace"
+		any_pop = { 
+			militancy = -3
+			consciousness = -3
+		}
+	}
+}
+
+#The Finno Soviet Treaty of 1948
+country_event = {
+  id = 8005524
+  title = "The Finno Soviet Treaty of $YEAR$"
+  desc = EVTDESC8005524
+  picture = "nwo2_yya_treaty"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = FIN
+		year = 1948
+		NOT = { year = 1950 }
+		
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = "Sign the treaty!"
+		
+		relation = { who = USA value = -100 } 
+		USA = { diplomatic_influence = { who = THIS value = -100 } }
+		
+		relation = { who = RUS value = 200 } 
+		RUS = { diplomatic_influence = { who = THIS value = 100 } }
+		
+		set_country_flag = finlandization
+		
+		ai_chance = { factor = 0.9 } 
+	}
+
+	option = {
+		name = "No way!"
+		prestige = 100
+		
+		#Get money from western powers
+		money = 500000
+		
+		relation = { who = USA value = 200 } 
+		USA = { diplomatic_influence = { who = THIS value = 200 } }
+		
+		relation = { who = RUS value = -200 } 
+		RUS = { diplomatic_influence = { who = THIS value = -200 } }
+		ai_chance = { factor = 0.1 } 
+	}
+}

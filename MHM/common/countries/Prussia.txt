@@ -1,0 +1,261 @@
+graphical_culture = PrussianGC
+color = { 0  49  83 }
+proletarian_dictatorship = { 255 99 71 }
+party = {
+		name = "Prussian Democratic Party" #Fictionalized
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Centre Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "United Prussia" #Fictionalized
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1945.6.26
+		end_date = 2092.1.1
+}
+party = {
+		name = "Baltic Republican Party (C)"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2005.2.21
+}
+party = {
+		name = "Respublika (Centrists)"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2005.2.21
+		end_date = 2092.1.1
+}
+party = {
+		name = "KCPSU(o)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1994.1.1
+}
+party = {
+		name = "Social Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1994.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Baltic Republican Party (L)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2005.2.21
+}
+party = {
+		name = "Respublika (Left-Wing)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2005.2.21
+		end_date = 2092.1.1
+}
+party = {
+		name = "Baltic Republican Party (R)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2005.2.21
+}
+party = {
+		name = "Respublika (Right-Wing)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 2005.2.21
+		end_date = 2092.1.1
+}
+party = {
+		name = "Prussian People's Party" #Fictionalized
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "KCP(b)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1952.10.5
+}
+party = {
+		name = "CPK"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1952.10.5
+		end_date = 2092.1.1
+}
+party = {
+		name = "CPK (Reformist)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {	#Name of German Chancellors
+		"Deutschland"
+		"Graf von Zeppelin"
+		"Bismarck"
+		"Tirpitz"
+		
+		"Konrad Adenauer"
+		"Ludwig Erhard"
+		"Kurt Georg Kiesinger"
+		"Willy Brandt"
+		"Helmut Schmidt"
+		"Helmut Kohl"
+		"Gerhard Schroder"
+		"Angela Merkel"
+		"Walter Scheel"
+	}
+	transportship = {	#Sea Animals
+		"Butt" "Brasse" "Barbe"	"Delfin" "Flunder"
+		"Karpfen" "Lachs" "Ploetze" "Rochen" "Dorsch"
+		"Felchen" "Forelle" "Schlei" "Stoer" "Tuemmler"
+		"Wels" "Zander" "Inger" "Makele" "Muraene"
+		"Renke" "Salm"
+		
+		"Hai" "Walhai"  "Riesenhai" "Riesenmaulhai" "Weisser Hai"
+		"Grauer Riffhai" "Gronlandwal" "Atlantischer Nordkaper"
+		"Pazifischer Nordkaper" "Suedkaper" "Zwergglattwal"
+		"Noerdlicher Zwergwal" "Suedlicher Zwergwal" "Seiwal"
+		"Blauwal" "Finnwal" "Buckelwal" "Belugawal" "Narwal"
+		"Gewoehnlicher Schweinswal" "Kalifornischer Schweinswal"
+		"Rauzahndelfin" "Chinesischer Delfin" "Weissschnauzendelfin"
+		"Schwarzdelfin" "Weissstreifendelfin" "Stundenglasdelfin"
+		"Rundkopfdelfin" "Grosser Tuemmler" "Ostpazifischer Delfin"
+		"Blau-Weisser Delfin" "Gemeiner Delfin" "Weissbauchdelfin"
+		"Zwerggrindwal" "Kleiner Schwertwal" "Schwertwal" "Gewoehnlicher Grindwal"
+		"Pottwal" "Zwergpottwal" "Kleinstpottwal" "Weisser Wal"
+	}
+	modern_frigate = {	#German Cities
+		"Koln" "Emden" "Augsburg" "Karlsruhe" "Luebeck"
+		"Braunschweig" "Bremen" "Niedersachsen" "Rheinland-Pfalz"
+		
+		"Berlin" "Hamburg" "Munchen" "Frankfurt am Main" "Dortmund"
+		"Gelsenkirchen" "Essen" "Duisburg" "Duesseldorf" "Stuttgart"
+		"Hannover" "Schwerin" "Rostock" "Cottbus" "Frankfurt an der Oder"
+		"Fuerth" "Nuernberg" "Wolfsburg" "Flensburg" "Kiel" "Buxtehude"
+		"Erfurt" "Jena" "Gera" "Kassel" "Wiesbaden" "Bonn" "Trier" "Koblenz"
+		"Saarbruecken" "Saarlouis" "Freiburg" "Heidelberg" "Kempten" "Erlangen"
+		"Magdeburg"
+	}
+	cruiser = {	#German terms
+		"Schleswig-Holstein" "Niedersachsen" "Bremen" "Hamburg" "Mecklenburg-Vorpommern"
+		"Brandenburg" "Berlin" "Sachsen" "Sachsen-Anhalt" "Nordrhein-Westfalen" 
+		"Rheinland-Pfalz" "Hessen" "Saarland" "Baden-Wurttemberg" "Bayern"
+		"Thueringen" "Schlesien" "Pommern" "Ostpreussen" "Die Republik"
+	}
+	modern_cruiser = {
+		"Deutschland"
+	}
+	frigate = {
+		"Silbermoewe" "Sturmmoewe" "Eismoewe" "Raubmoewe" "Wildschwan"
+		"Seeschwalbe" "Jaguar" "Iltis" "Wolf" "Luchs" "Leopard" "Loewe"
+		"Fuchs" "Marder" "Weihe" "Kranich" "Storch" "Haeher" "Elster"
+		"Reiher" "Dommel" "Pinguin" "Tiger" "Panther" "Alk" "Pelikan"
+		"Albatros" "Kondor" "Habicht" "Sperber" "Kormoran"
+		
+		"Adler" "Falke" "Schwalbe"
+	}
+	modern_destroyer = {
+		"Hamburg" "Schleswig-Holstein" "Bayern" "Hessen" "Lutjens" "Molders"
+		"Rommel" "Niedersachsen" "Sachsen" "Sachsen-Anhalt" "Brandenburg"
+		"Berlin" "Baden-Wurttemberg"
+		
+		"Rhein" "Weser" "Elbe" "Donau" "Main" "Havel" "Saale" "Neckar"
+		"Spree" "Ems" "Aller" "Werra" "Mulde" "Leine" "Lippe" "Isar"
+		"Lahn" "Weisse Elster" "Mosel" "Ruhr" "Altmuehl" "Fulda"
+		"Inn" "Elde" "Kocher" "Oder" "Lech"
+	}
+	destroyer = {
+		"Hiddensee" "Braunschweig" "Magdeburg" "Erfurt" "Oldenburg"
+		"Ludwigshafen am Rhein"
+		
+		"Alpen" "Eifel" "Harz" "Schwarzwald" "Erzgebirge" "Seenplatte"
+		"Teutoburger Wald" "Zugspitze"
+	}
+	submarine = {
+		"Thetis" "Hermes" "Najade" "Triton" "Theseus" "Grevesmuehlen"
+		"Gadebusch" "Teterow" "Lubz" "Wismar"
+		
+		"Erwin Rommel" "Paul von Hindenburg" "Ludwig Beck" "Carl Friedrich Goerdeler"
+		"Wilhelm Leuschner" "Claus Schenk Graf von Stauffenberg"
+	}
+
+}

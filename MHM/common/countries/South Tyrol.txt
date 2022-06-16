@@ -1,0 +1,235 @@
+graphical_culture = ItalianGC
+color = { 140 183 154 }
+sar_government = { 125 171 84 }
+
+party = {
+		name = "Befreiungsausschuss Sudtirol"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1974.1.1
+}
+
+party = {
+		name = "Sudtiroler Heimatbund"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1974.1.1
+		end_date = 1989.1.1
+}
+
+party = {
+		name = "Union for South Tyrol"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1989.1.1
+		end_date = 2012.1.1
+}
+
+party = {
+		name = "Citizen Union for South Tyrol"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2012.1.1
+		end_date = 2100.1.1
+}
+
+party = {
+		name = "South Tyrolean People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "South Tyrolean People's Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Tyrolean Homeland Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Social Democratic Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Verdi–Grune–Verc"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1978.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Anti-Autonomist National League"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Anti-Autonomist National League"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1960.12.26
+}
+party = {
+		name = "Italian Social Movement"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1960.12.26
+		end_date = 1972.2.1
+}
+party = {
+		name = "MSI - National Right"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1972.2.1
+		end_date = 1995.1.8
+}
+party = {
+		name = "National Alliance - MSI"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1994.1.22
+		end_date = 1995.2.27
+}
+party = {
+		name = "National Alliance"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1995.2.27
+		end_date = 2100.3.29
+}
+party = {
+		name = "ST Homeland Federation"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "South Tyrolean Communists"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Tyrolean Communists - Reformist"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Caio Duilio" "Enrico Dandolo" Italia Lepanto "Ruggiero di Lauria" "Francesco Morosini" "Andrea Doria" "Re Umberto" Sicilia Sardegna "Ammiraglio di Saint Bon" "Emanuele Filiberto" "Regina Margherita" "Benedetto Brin" "Regina Elena" "Vittorio Emanuele" Napoli Roma
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		"Rosolino Pilo" "Giuseppe Cesare Abba" "Pilade Bronzetti" "Giuseppe Missori" "Antonio Mosto" "Ippolito Nievo" "Francesco Nullo" "Simone Schiaffino" "Giuseppe Sirtori" "Giovanni Acerbi" "Vincenzo Giordano Orsini" "Francesco Stucco"
+	}
+	cruiser = {
+		"Marco Polo" "Carlo Alberto" "Vettor Pisani" "General Garibaldi" "General San Martin" "General Belgrano" "General Pueyrredon" Amalfi Pisa "San Giorgio" "San Marco" "Nino Bixio" Marsala Taranto Brindisi Bari Trieste Fiume Gorizia Pola Zara Bolzano
+	}
+	modern_cruiser = {
+		"Dante Alighieri" "Conti di Cavour" "Giulio Cesare" "Leonarda da Vince" "Andrea Doria" Duilio "Francesco Caracciolo" Littorio Roma Terribile Formidabile "Principe di Carignano" Messina "Conte Verde" "Re d'Italia" "Re di Portogallo" "Regina Maria Pia" "San Martino" Castelfidardo Ancona Affondatore "Principe Amedeo" Italia Lepanto "Ruggiero di Lauria" "Francesco Morosini" "Emanuele Filiberto"
+	}
+	frigate = {
+		Fulmine Lampo Freccia Dardo Strale Euro Ostro Nembo Turbine Aquilone Borea Zeffiro Espero Artigliere Bersagliere Corazziere Garibaldino Granatiere Lanciere Alpino Fuciliere Pontiere Ascaro Indomito Impavido Impetuoso Insidioso Intrepido Irrequieto Ardito Ardente Audace Animoso
+	}
+	modern_destroyer = {
+		"Dante Alighieri" "Conti di Cavour" "Giulio Cesare" "Leonarda da Vince" "Andrea Doria" Duilio "Francesco Caracciolo" Littorio Roma Terribile Formidabile "Principe di Carignano" Messina "Conte Verde" "Re d'Italia" "Re di Portogallo" "Regina Maria Pia" "San Martino" Castelfidardo Ancona Affondatore "Principe Amedeo" Italia Lepanto "Ruggiero di Lauria" "Francesco Morosini" "Emanuele Filiberto"
+	}
+	destroyer = {
+		Sicilia Sardegna Puglia Libia Campania Basilicata Quarto Venezia Trento "Valle d'Aosta" Piemonte Liguria Lombardia Veneto Trentino Friuli "Emilia-Romagna" Toscana Marche Umbria Lazio Abruzzo Molise Calabria
+	}
+	submarine = {
+		"Dante Alighieri" "Conti di Cavour" "Giulio Cesare" "Leonarda da Vince" "Andrea Doria" Duilio "Francesco Caracciolo" Littorio Roma Terribile Formidabile "Principe di Carignano" Messina "Conte Verde" "Re d'Italia" "Re di Portogallo" "Regina Maria Pia" "San Martino" Castelfidardo Ancona Affondatore "Principe Amedeo" Italia Lepanto "Ruggiero di Lauria" "Francesco Morosini" "Emanuele Filiberto"
+	}
+
+}

@@ -1,0 +1,152 @@
+graphical_culture = IndianGC
+color = { 255 99 49 }
+party = {
+		name = "Bhutan National Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Bhutan People's Unity Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "All People's Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2007.7.25
+}
+party = {
+		name = "Druk Phuensum Tshogpa"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2007.7.25
+		end_date = 2092.1.1
+}
+party = {
+		name = "People's Democratic Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Druk Nyamrup Tshogpa"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "People's Democratic Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Bhutan National Congress"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Druk Gyalpo"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Bhutan"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Bhutan Peoples' Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Bhutan" "Raj Sendrava" "Arunachal" "Pradesh" "Bomdila" "Itanagar" "Druk" "Thimphu"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		"Bhutan" "Raj Sendrava" "Arunachal" "Pradesh" "Bomdila" "Itanagar" "Druk" "Thimphu"
+	}
+	cruiser = {
+		"Bhutan" "Raj Sendrava" "Arunachal" "Pradesh" "Bomdila" "Itanagar" "Druk" "Thimphu"
+	}
+	modern_cruiser = {
+		"Bhutan" "Raj Sendrava" "Arunachal" "Pradesh" "Bomdila" "Itanagar" "Druk" "Thimphu"
+	}
+	frigate = {
+		"Bhutan" "Raj Sendrava" "Arunachal" "Pradesh" "Bomdila" "Itanagar" "Druk" "Thimphu"
+	}
+	modern_destroyer = {
+		"Bhutan" "Raj Sendrava" "Arunachal" "Pradesh" "Bomdila" "Itanagar" "Druk" "Thimphu"
+	}
+	destroyer = {
+		"Bhutan" "Raj Sendrava" "Arunachal" "Pradesh" "Bomdila" "Itanagar" "Druk" "Thimphu"
+	}
+	submarine = {
+		"Bhutan" "Raj Sendrava" "Arunachal" "Pradesh" "Bomdila" "Itanagar" "Druk" "Thimphu"
+	}
+
+}

@@ -1,0 +1,13 @@
+owner = USA
+controller = USA
+add_core = USA
+add_core = MAR
+trade_goods = fish
+life_rating = 10
+terrain = coral_island
+railroad = 1
+colonial = 2
+1992.1.1 = {
+railroad = 2
+colonial = 0
+}

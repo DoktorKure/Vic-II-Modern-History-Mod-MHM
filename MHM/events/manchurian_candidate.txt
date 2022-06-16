@@ -1,0 +1,264 @@
+#Manchurian Candidate Program Result
+country_event = {
+	id = 112900
+	title = MANCAN_RESULT_NAME
+	desc = MANCAN_RESULT_DESC
+	picture = "manchurian_candidate"
+
+	is_triggered_only = yes
+
+	option = {
+		name = MANCAN_RESULT_A
+		random_list = {
+			25 = { country_event = 112901 } #Succeed
+			75 = { country_event = 112902 } #Fail
+		}
+	}
+}
+
+#Manchurian Candidate Program Success
+country_event = {
+	id = 112901
+	title = MANCAN_WIN_NAME
+	desc = MANCAN_WIN_DESC
+	picture = "manchurian_candidate_win"
+
+	is_triggered_only = yes
+
+	option = {
+		name = MANCAN_WIN_A
+		prestige = 1000
+		random_country = { 
+			limit = { OR = { government = democracy government = democracy1 government = socialist_democracy } rank = 1 } 
+			relation = { who = THIS value = -50 } 
+			country_event = 112903 #Effects
+		}
+	}
+}
+
+#Manchurian Candidate Program Fails
+country_event = {
+	id = 112902
+	title = MANCAN_LOSE_NAME
+	desc = MANCAN_LOSE_DESC
+	picture = "manchurian_candidate_lose"
+
+	is_triggered_only = yes
+
+	option = {
+		name = MANCAN_LOSE_A
+		prestige_factor = -0.40
+		random_country = { 
+			limit = { OR = { government = democracy government = democracy1 government = socialist_democracy } rank = 1 } 
+			relation = { who = THIS value = -200 } 
+			country_event = 112908 #Inform of failure
+		}
+	}
+}
+
+#Manchurian Candidate Program Target Step 1
+country_event = {
+	id = 112903
+	title = MANCAN_1_NAME
+	desc = MANCAN_1_DESC
+	picture = "manchurian_candidate_1"
+
+	is_triggered_only = yes
+
+	option = {
+		name = MANCAN_LOSE_A
+		any_pop = { militancy = 5 }
+		add_country_modifier = { name = revolution_chaos duration = 1460 }
+		country_event = { id = 112904 days = 30 }
+	}
+}
+
+#Manchurian Candidate Program Target Step 2
+country_event = {
+	id = 112904
+	title = MANCAN_2_NAME
+	desc = MANCAN_2_DESC
+	picture = "manchurian_candidate_2"
+
+	is_triggered_only = yes
+
+	option = {
+		name = MANCAN_2_A
+		any_pop = { militancy = 2 }
+		country_event = { id = 112905 days = 10 }
+	}
+}
+
+#Manchurian Candidate Program Target Step 3
+country_event = {
+	id = 112905
+	title = MANCAN_3_NAME
+	desc = MANCAN_3_DESC
+	picture = "manchurian_candidate_3"
+
+	is_triggered_only = yes
+
+	option = {
+		name = MANCAN_3_A
+		government = presidential_dictatorship 
+		country_event = 800050
+		prestige_factor = -0.40
+		country_event = { id = 112906 days = 15 }
+	}
+}
+
+#Manchurian Candidate Program Target Step 4
+country_event = {
+	id = 112906
+	title = MANCAN_4_NAME
+	desc = MANCAN_4_DESC
+	picture = "manchurian_candidate_4"
+
+	is_triggered_only = yes
+
+	option = {
+		name = MANCAN_4_A
+		capital_scope = { add_province_modifier = { name = capital_flag duration = 2 } }
+		any_country = {
+			limit = {
+				exists = no
+				any_core = { owned_by = THIS }
+				NOT = { any_core = { has_province_modifier = capital_flag } }
+			}
+			country_event = 112907
+		}
+
+		any_country = { limit = { in_sphere = THIS } diplomatic_influence = { who = THIS value = -100 } }
+
+		random_country = {
+			limit = {
+				THIS = { any_owned_province = { has_province_modifier = un_headquarters } }
+				OR = {
+					owns	= 607 # Geneva
+					capital	= 300 # London
+					capital	= 425 # Paris
+					capital	= 387 # Brussels
+					capital	= 375 # Amesterdam
+					capital	= 397 # Luxembourg
+					capital	= 2468 # Sydney
+					owns	= 1657 # Kyoto
+				}
+				OR = {
+					government = democracy
+					government = hms_government
+					government = hms_government1
+				}
+				NOT = { ruling_party_ideology = populist }
+				has_country_modifier = united_nations_ga_member
+			}
+			country_event = 112910
+		}
+
+		prestige_factor = -0.50
+	}
+}
+
+#Manchurian Candidate Program Target Step 5
+country_event = {
+	id = 112907
+	title = MANCAN_5_NAME
+	desc = MANCAN_5_DESC
+	picture = "manchurian_candidate_4"
+
+	is_triggered_only = yes
+
+	option = {
+		name = MANCAN_5_A
+		FROM = { release = THIS }
+		add_country_modifier = { name = revolution_chaos duration = 1460 }
+		FROM = { war = {
+				target = THIS
+				attacker_goal = { casus_belli = annex_core_country }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = no } }
+	}
+}
+
+#Manchurian Candidate Program Target Step 5
+country_event = {
+	id = 112908
+	title = MANCAN_FOIL_NAME
+	desc = MANCAN_FOIL_DESC
+	picture = "manchurian_candidate_lose"
+
+	is_triggered_only = yes
+
+	option = {
+		name = MANCAN_FOIL_A
+		prestige = 100
+		any_pop = { militancy = -5 }
+		relation = { who = FROM value = -400 }
+	}
+}
+
+#CSA Territorial Expansion
+country_event = {
+	id = 112909
+	title = MANCAN_CSA_NAME
+	desc = MANCAN_CSA_DESC
+	picture = "manchurian_candidate_4"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CSA
+		war_with = USA
+	}
+
+	option = {
+		name = MANCAN_CSA_A
+		USA = {
+			any_owned = {
+				limit = {
+					#port = yes
+					is_capital = no
+					is_core = USA
+					NOT = { any_pop = { has_pop_culture = mesoamerican_white_spanish } }
+					any_pop = { has_pop_culture = black_anglo }
+				}
+				add_core = CSA
+			}
+		}
+		USA = {
+			any_owned = {
+				limit = {
+					is_core = CSA
+					any_neighbor_province = {
+						OR = {
+							owner = { tag = CSA }
+								#Secede all neighboring eligible provinces
+							AND = { any_neighbor_province = { owner = { tag = CSA } } is_core = CSA }
+								#Secede all eligible provinces one province away
+								#In playtesting, more than two layers would begin to secede northern provinces
+						}
+					}
+				}
+				secede_province = CSA
+			}
+		}
+		USA = { any_owned = { limit = { is_core = USA } add_core = CSA } }
+	}
+}
+
+# UN Flees
+country_event = {
+	id = 112910
+	title = MANCAN_UN_NAME
+	desc = MANCAN_UN_DESC
+	picture = "united_nations"
+
+	is_triggered_only = yes
+
+	option = {
+		name = MANCAN_UN_A
+		prestige = 25
+		FROM = { clr_country_flag = un_hq_host_country any_owned = { limit = { has_province_modifier = un_headquarters } remove_province_modifier = un_headquarters } }
+		capital_scope = { add_province_modifier = { name = un_headquarters duration = -1 } }
+		set_country_flag = un_hq_host_country
+	}
+}

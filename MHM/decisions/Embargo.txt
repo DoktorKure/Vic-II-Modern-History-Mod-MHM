@@ -1,0 +1,89 @@
+political_decisions = {
+
+	embargo_nation = {
+		picture = "embargonow"
+		potential = {
+			is_vassal = no
+			
+			#Must have a decent industry
+			industrial_score = 500
+			
+			any_neighbor_country = {
+			
+				#At peace with THIS
+				NOT = { war_with = THIS }
+				
+				#Some reason to embargo
+				OR = { 
+					badboy = 0.6 
+					war = yes 
+				}
+				
+				#Bad relation with THIS
+				NOT = { relation = { who = THIS value = -190 } }
+				
+				#Not already embargoed
+				NOT = { 
+					OR = { 
+						has_country_modifier = embargoed_by_GP
+						has_country_modifier = embargoed_by_SP
+						has_country_modifier = embargoed_by_minor_nation
+					}
+				}
+				
+				#Not in our sphere
+				in_sphere = THIS
+				
+			}
+		}
+		
+		alert = yes
+		
+		allow = {
+			election = no
+		}
+		effect = {
+			
+			set_country_flag = embargo_nation_flag
+			
+			badboy = 4
+			random_country = {
+				limit = {
+				
+					neighbour = THIS
+				
+					#At peace with THIS
+					NOT = { war_with = THIS }
+				
+					#Some reason to embargo
+					OR = { 
+						badboy = 0.6 
+						war = yes 
+					}
+				
+					#Bad relation with THIS
+					NOT = { relation = { who = THIS value = -190 } }
+				
+					#Not already embargoed
+					NOT = { 
+						OR = { 
+							has_country_modifier = embargoed_by_GP
+							has_country_modifier = embargoed_by_SP
+							has_country_modifier = embargoed_by_minor_nation
+						}
+					}
+				
+					#Not in our sphere
+					in_sphere = THIS
+				}
+				country_event = 1412150
+			}	
+			
+		}
+		ai_will_do = { 
+			factor = 1
+			modifier = { badboy = 0.8 factor = 0 }
+		}
+	}
+
+}

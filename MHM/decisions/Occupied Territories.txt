@@ -1,0 +1,80 @@
+political_decisions = {
+
+	end_occupied_territories_status = {
+			picture = "end_occupied_territories_status"
+			potential = {
+any_owned_province = { is_core = THIS has_province_modifier = occupied_province }				
+			}
+
+			allow = {
+				election = no
+				is_vassal = no
+				war = no
+				is_disarmed = no
+			has_recently_lost_war = no
+			NOT = { has_country_modifier = un_armistice }
+			NOT = { badboy = 0.40 }
+OR = { ai = no any_neighbor_country = { NOT = { relation = { who = THIS value = 0 } } any_core = { owned_by = THIS has_province_modifier = occupied_province } } }
+
+
+NOT = { any_greater_power = { has_country_modifier = unsc_permanent_member NOT = { relation = { who = THIS value = 150 } } } }
+			}
+
+			effect = {
+				prestige = 50
+				badboy = -5
+any_owned = { limit = { is_core = THIS has_province_modifier = occupied_province } remove_province_modifier = occupied_province }			
+						}
+			ai_will_do = { factor = 1 }
+	}
+
+	delay_occupied_territories_status = {
+			picture = "delay_occupied_territories_status"
+			potential = {
+any_owned_province = { has_province_modifier = occupied_province }
+NOT = { has_country_modifier = delay_occupied_territories }	
+			}
+
+			allow = {
+				election = no
+				is_vassal = no
+				war = no
+				is_disarmed = no
+			has_recently_lost_war = no
+			NOT = { war_policy = pacifism }
+			NOT = { has_country_modifier = un_armistice }
+			NOT = { badboy = 0.5 }
+any_greater_power = { has_country_modifier = unsc_permanent_member relation = { who = THIS value = 190 } }
+			}
+
+			effect = {
+add_country_modifier = { name = delay_occupied_territories duration = 1825 }
+				prestige = -25
+				badboy = 2.5			
+						}
+			ai_will_do = { factor = 1 }
+	}
+
+	release_occupied_territories = {
+			picture = "release_occupied_territories_status"
+			potential = {
+any_owned_province = { has_province_modifier = occupied_province }
+any_neighbor_country = { any_core = { owned_by = THIS has_province_modifier = occupied_province } }	
+			}
+
+			allow = {
+				election = no
+				is_vassal = no
+				war = no
+OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive war_policy = pacifism ai = no }
+						}
+
+			effect = {
+any_country = { limit = { exists = yes NOT = { has_country_modifier = delay_occupied_territories } any_core = { owned_by = THIS has_province_modifier = occupied_province } } country_event = 1512258 }
+				prestige = -50
+				badboy = -20			
+						}
+			ai_will_do = { factor = 1 }
+	}
+
+}

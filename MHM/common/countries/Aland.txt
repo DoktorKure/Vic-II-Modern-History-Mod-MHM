@@ -1,0 +1,350 @@
+graphical_culture = EuropeanGC
+color = { 205 212 228 }
+party = {
+		name = "Free Aland"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Rural-Skagarden Electoral Union"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1976.1.1
+}
+party = {
+		name = "Aland Centre"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1976.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Alander's Electoral Union"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1954.1.1
+}
+party = {
+		name = "General Electoral Union"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1954.1.1
+		end_date = 1957.1.1
+}
+party = {
+		name = "AU - Bourgeoise & Apoliticals"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1957.1.1
+		end_date = 1960.1.1
+}
+party = {
+		name = "AU 1 - Bourgeoise & Apoliticals"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1960.1.1
+		end_date = 1967.1.1
+}
+party = {
+		name = "Freeminded Co-operation"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1967.1.1
+		end_date = 2011.1.1
+}
+party = {
+		name = "Moderates of Aland"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2011.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Future of Aland"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2001.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "People's Democrats"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1967.1.1
+}
+party = {
+		name = "Center-Liberals"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1967.1.1
+		end_date = 1971.1.1
+}
+party = {
+		name = "Electoral Union Liberal Union"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1971.1.1
+		end_date = 1978.1.1
+}
+party = {
+		name = "Liberals for Aland"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1978.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Union of Workers & Wage Earners"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1957.1.1
+}
+party = {
+		name = "AU - The Left Group"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1957.1.1
+		end_date = 1960.1.1
+}
+party = {
+		name = "AU 2 - Social Democrats"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1960.1.1
+		end_date = 1967.1.1
+}
+party = {
+		name = "Alandic Union"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1967.1.1
+		end_date = 1971.1.1
+}
+party = {
+		name = "Aland Social Democrats"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1971.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Alandic Left"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1987.1.1
+}
+party = {
+		name = "Greens on Aland"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1987.1.1
+		end_date = 2014.1.1
+}
+party = {
+		name = "Sustainable Initiative"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2014.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Non-aligned Coalition"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Alandic Democracy"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Hardcore Unionists"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "SKDL/DFFF - Aland"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1990.1.1
+}
+party = {
+		name = "SKP/FKP - Aland"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1990.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "SKDL/DFFF - Aland"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1990.1.1
+}
+party = {
+		name = "SKP/FKP - Aland"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1990.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Uusimaa" "V�in�m�inen" "Ilmarinen" "Joukahainen" "Birger Jarl" "Per Brahe" "Tapio" "Lemmink�inen" "Helsinki" "Rauma" "Turku" "Kemi" "Maarianhamina" "Vaasa" "Viipuri" "Kotka" "Oulu" "Rauma" "Karelen" "�bo"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		"Uusimaa" "V�in�m�inen" "Ilmarinen" "Joukahainen" "Birger Jarl" "Per Brahe" "Tapio" "Lemmink�inen" "Helsinki" "Rauma" "Turku" "Kemi" "Maarianhamina" "Vaasa" "Viipuri" "Kotka" "Oulu" "Rauma" "Karelen" "�bo"
+	}
+	cruiser = {
+		"Uusimaa" "V�in�m�inen" "Ilmarinen" "Joukahainen" "Birger Jarl" "Per Brahe" "Tapio" "Lemmink�inen" "Helsinki" "Rauma" "Turku" "Kemi" "Maarianhamina" "Vaasa" "Viipuri" "Kotka" "Oulu" "Rauma" "Karelen" "�bo"
+	}
+	modern_cruiser = {
+		"Uusimaa" "V�in�m�inen" "Ilmarinen" "Joukahainen" "Birger Jarl" "Per Brahe" "Tapio" "Lemmink�inen" "Helsinki" "Rauma" "Turku" "Kemi" "Maarianhamina" "Vaasa" "Viipuri" "Kotka" "Oulu" "Rauma" "Karelen" "�bo"
+	}
+	frigate = {
+		"Uusimaa" "V�in�m�inen" "Ilmarinen" "Joukahainen" "Birger Jarl" "Per Brahe" "Tapio" "Lemmink�inen" "Helsinki" "Rauma" "Turku" "Kemi" "Maarianhamina" "Vaasa" "Viipuri" "Kotka" "Oulu" "Rauma" "Karelen" "�bo"
+	}
+	modern_destroyer = {
+		"Uusimaa" "V�in�m�inen" "Ilmarinen" "Joukahainen" "Birger Jarl" "Per Brahe" "Tapio" "Lemmink�inen" "Helsinki" "Rauma" "Turku" "Kemi" "Maarianhamina" "Vaasa" "Viipuri" "Kotka" "Oulu" "Rauma" "Karelen" "�bo"
+	}
+	destroyer = {
+		"Uusimaa" "V�in�m�inen" "Ilmarinen" "Joukahainen" "Birger Jarl" "Per Brahe" "Tapio" "Lemmink�inen" "Helsinki" "Rauma" "Turku" "Kemi" "Maarianhamina" "Vaasa" "Viipuri" "Kotka" "Oulu" "Rauma" "Karelen" "�bo"
+	}
+	submarine = {
+		"Uusimaa" "V�in�m�inen" "Ilmarinen" "Joukahainen" "Birger Jarl" "Per Brahe" "Tapio" "Lemmink�inen" "Helsinki" "Rauma" "Turku" "Kemi" "Maarianhamina" "Vaasa" "Viipuri" "Kotka" "Oulu" "Rauma" "Karelen" "�bo"
+	}
+
+}

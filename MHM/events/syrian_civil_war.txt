@@ -1,0 +1,784 @@
+#The Syrian Civil War - Only Syrian Rebels
+country_event = {
+	id = 8014730
+	title = EVT_8014730_NAME
+	# EVT_8014730_NAME;Syrian Civil War
+	desc = EVT_8014730_DESC
+	picture = "syria_civil_war"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = SYR
+		year = 2011
+		has_global_flag = arab_spring
+		NOT = { year = 2023 }
+		
+		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+		is_vassal = no
+		war = no
+		
+		#Assad in Power
+		ruling_party_ideology = socialist
+		
+		owns = 901 # Al-Hasakah
+		
+		#Rebellion began in these provinces
+		OR = { owns = 897 owns = 903 }
+	}
+
+	mean_time_to_happen = {
+		months = 5
+	}
+	
+	option = {
+		name = EVT_8014730_A #Stay in Power!
+		
+		set_global_flag = syrian_civil_war
+		
+		badboy = 5
+		
+		#Domestic reaction
+		any_pop = { 
+			limit = { strata = rich } 
+			militancy = -5
+			consciousness = -5
+			ideology = { factor = 0.2 value = conservative }
+		}
+		any_pop = { 
+			limit = { strata = middle } 
+			militancy = 10
+			consciousness = 10
+			ideology = { factor = 0.2 value = liberal }
+		}
+		any_pop = { 
+			limit = { strata = poor } 
+			militancy = 10
+			consciousness = 10
+			ideology = { factor = 0.2 value = traditionalist }
+		}
+
+		#Initialise Syrian democratic rebels
+		random_owned = {
+			limit = { province_id = 897 }
+			secede_province = USY
+		}
+		random_owned = {
+			limit = { province_id = 903 }
+			secede_province = USY
+		}
+		USY = {
+			government = democracy
+			country_event = 800054
+			ruling_party_ideology = liberal
+			
+			money = 100000
+			small_arms = 1000
+			weaponry = 1000 
+			aeroplanes = 1000
+			ammunition = 1000
+			automobiles = 1000
+			
+			add_country_modifier = { name = dirigisme duration = 3650 }
+			add_country_modifier = { name = post_war_austerity duration = 3650 }
+		}
+		war = {
+			target = USY
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = civil_war }
+		}
+		
+		#Initiate ROJ
+		random_owned = {
+			limit = { owner = { is_possible_vassal = ROJ } }
+			owner = { 
+			
+				#SYR releases ROJ
+				release = ROJ 
+				ROJ = {
+					government = democracy
+					country_event = 800054
+					ruling_party_ideology = liberal
+					
+					money = 100000
+					small_arms = 1000
+					weaponry = 1000 
+					aeroplanes = 1000
+					ammunition = 1000
+					automobiles = 1000
+					
+					add_country_modifier = { name = dirigisme duration = 3650 }
+					add_country_modifier = { name = post_war_austerity duration = 3650 }
+				}
+				
+				#Commence war with SYR
+				ROJ = { 
+					war = {
+						target = SYR
+						attacker_goal = { casus_belli = become_independent }
+						defender_goal = { }
+					}
+				}
+				
+				#Commence war with USY
+				ROJ = { 
+					war = {
+						target = USY
+						attacker_goal = { casus_belli = become_independent }
+						defender_goal = { }
+					}
+				}
+				
+			}
+		}
+		
+		#Foreign intervention for the Rebels
+		any_country = {
+			limit = { 
+				OR = { tag = USA tag = ENG tag = FRA tag = TUR tag = TUR tag = UAE tag = BHR tag = LBY } 
+				OR = { government = absolute_monarchy government = democracy government = democracy1 government = hms_government government = hms_government1 }
+				is_vassal = no
+			}
+			country_event = 8007575
+		}
+		
+		#Foreign intervention for the Government
+		any_country = {
+			limit = { 
+				OR = { tag = VNZ tag = NKO tag = ALG tag = IRQ tag = BYE } 
+				NOT = { OR = { government = absolute_monarchy government = democracy government = democracy1 government = hms_government government = hms_government1 } }
+				is_vassal = no
+			}
+			country_event = 8007576
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = EVT_8014730_B #Give in to the demands of the protesters
+		
+		prestige_factor = -0.1
+		
+		#Become a democracy
+		government = democracy 
+		country_event = 800054
+		ruling_party_ideology = big_tent
+		
+		#Domestic reaction
+		any_pop = { 
+			limit = { strata = rich } 
+			militancy = 10
+			consciousness = 10
+			ideology = { factor = 0.4 value = conservative }
+		}
+		any_pop = { 
+			limit = { strata = middle } 
+			militancy = 7.5
+			consciousness = 7.5
+			ideology = { factor = 0.25 value = liberal }
+		}
+		any_pop = { 
+			limit = { strata = poor } 
+			militancy = 5
+			consciousness = 5
+			ideology = { factor = 0.25 value = traditionalist }
+		}
+		
+		#ISIS gains cores
+		all_core = { add_core = ISI }
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#The Syrian Civil War - Rise of ISIS
+country_event = {
+	id = 8007566
+	title = "Rise of ISIS in Syria"
+	desc = EVTDESC8007566
+	picture = "isis"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = SYR
+		year = 2014
+		has_global_flag = arab_spring
+		NOT = { year = 2024 }
+		
+		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+		is_vassal = no
+		
+		#Civil War ongoing
+		OR = { 
+			war_with = ROJ
+			war_with = USY
+			ai = yes #Backstop
+		}
+		
+		#Assad in Power
+		ruling_party_ideology = socialist
+		
+		owns = 907 # Palmyra
+		
+		#Syrian Civil War
+		has_global_flag = syrian_civil_war
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+	
+	option = {
+		name = "We shall crush the Caliphate!"
+		
+		#Initialise ISIS
+		907 = { add_core = ISI }
+		
+		release = ISI
+		ISI = {
+			government = theocracy
+			country_event = 800050
+			ruling_party_ideology = traditionalist
+			
+			money = 100000
+			small_arms = 1000
+			weaponry = 1000 
+			aeroplanes = 1000
+			ammunition = 1000
+			automobiles = 1000
+			
+			add_country_modifier = { name = post_war_austerity duration = 3650 }
+			
+			#ISIS goes to war with everyone
+			war = {
+				target = SYR
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = annex_all_cores }
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { USY = { exists = yes is_vassal = no } } }
+			owner = {
+				ISI = {
+					war = {
+						target = USY
+						attacker_goal = { casus_belli = conquest }
+						defender_goal = { casus_belli = annex_all_cores }
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { ROJ = { exists = yes is_vassal = no } } }
+			owner = {
+				ISI = {
+					war = {
+						target = ROJ
+						attacker_goal = { casus_belli = conquest }
+						defender_goal = { casus_belli = annex_all_cores }
+					}
+				}
+			}
+		}
+		
+		#Russian intervention
+		random_country = {
+			limit = { tag = RUS is_greater_power = yes ruling_party_ideology = conservative }
+			country_event = 8007574
+		}
+		
+		#Increase sunni islamic fundamentalism world wide
+		any_country = {
+			limit = { 
+				exists = yes 
+				NOT = { OR = { publishing_rights = censored_publishing publishing_rights = firewall_publishing } } 
+			}
+			any_pop = { 
+				limit = { strata = poor has_pop_religion = sunni } 
+				ideology = { factor = 0.05 value = traditionalist }
+				scaled_militancy = {
+					factor = 10
+					ideology = traditionalist
+				}
+			}
+		}
+		
+	}
+
+}
+
+#Syrian Government Victory in Syrian Civil War
+country_event = {
+	id = 8007567
+	title = EVT_8007567_NAME
+	desc = EVT_8007567_DESC
+	picture = "saa_victory"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = SYR
+		has_global_flag = syrian_civil_war
+		
+		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+		is_vassal = no
+		war = no
+		
+		ruling_party_ideology = socialist
+		
+		USY = { exists = no }
+		
+		owns = 907 # Al-Raqqah
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+    	name = EVT_8007567_A
+		prestige = 20
+		
+		any_pop = { militancy = -5 consciousness = -5 }
+		
+		random_country = { limit = { tag = PER government = theocracy is_vassal = no has_country_flag = intervention_in_2011_SYR_civil_war_flag } country_event = 8011444 }
+		random_country = { limit = { tag = SAA government = absolute_monarchy is_vassal = no has_country_flag = intervention_in_2011_SYR_civil_war_flag } country_event = 8011445 }
+		
+		clr_global_flag = syrian_civil_war
+	}
+	
+}
+
+#Syrian Opposition Victory in Syrian Civil War
+country_event = {
+	id = 8007568
+	title = EVT_8007568_NAME
+	desc = EVT_8007568_DESC
+	picture = "sig_victory"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = USY
+		has_global_flag = syrian_civil_war
+		
+		#is_vassal = no
+		war = no
+		
+		SYR = { exists = no }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+    	name = EVT_8007568_A
+		prestige = 20
+		any_pop = { militancy = -5 consciousness = -5 }
+		
+		906 = { add_core = DRZ }
+		905 = { add_core = ALW }
+		
+		clr_global_flag = syrian_civil_war
+		
+		change_tag = SYR
+	}
+	
+}
+
+#Islamic State Victory in Syrian Civil War
+country_event = {
+	id = 8007569
+	title = EVT_8007569_NAME
+	desc = EVT_8007569_DESC
+	picture = "isis_victory"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = ISI
+		has_global_flag = syrian_civil_war
+		
+		war = no
+		
+		owns = 902 # Damascus
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = EVT_8007569_A
+		prestige = 200
+		
+		any_pop = { militancy = 5 consciousness = 5 }
+		
+		900 = { add_core = ISI }
+		901 = { add_core = ISI }
+		902 = { add_core = ISI }
+		903 = { add_core = ISI }
+		904 = { add_core = ISI }
+		905 = { add_core = ISI }
+		906 = { add_core = ISI }
+		907 = { add_core = ISI }
+		897 = { add_core = ISI }
+		
+		906 = { add_core = DRZ }
+		905 = { add_core = ALW }
+		
+		capital = 902
+		
+		clr_country_flag = syrian_civil_war
+	}
+	
+}
+
+#Fate of the Syrian Kurds
+country_event = {
+	id = 8007570
+	title = EVT_8007570_NAME
+	desc = EVT_8007570_DESC
+	picture = "fate_of_rojava"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = SYR
+		has_global_flag = arab_spring
+		
+		is_vassal = no
+		war = no
+		
+		#Syrian Rebels have been defeated
+		NOT = { exists = USY }
+		
+		#Rojava still exists
+		ROJ = {
+			exists = yes
+			is_vassal = no
+		}
+		
+		owns = 902
+		owns = 897
+		owns = 907
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Restore order to the renegade province!"
+		
+		#War to annex
+		war = {
+			target = ROJ
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = humiliate }
+		}
+		
+		ai_chance = { 
+			factor = 0.9 
+			modifier = { factor = 0 OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } }
+		}
+		
+	}
+
+	option = {
+    	name = "Leave them be"
+		prestige_factor = -0.1
+		badboy = -5
+		
+		relation = { who = ROJ value = 100 }
+
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#Fall of Damascus
+country_event = {
+	id = 8007572
+	title = EVT_8007572_NAME
+	desc = EVT_8007572_DESC
+	picture = "fall_of_damascus"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = SYR
+		has_global_flag = syrian_civil_war 
+		
+		is_vassal = no
+		OR = {
+			war_with = ISI
+			war_with = USY
+		}
+
+		NOT = { controls = 902 }
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+    	name = "We shall surrender"
+		
+		906 = { add_core = DRZ }
+		905 = { add_core = ALW }
+		
+		#Enforce an unconditional surrender
+		country_event = 1610129
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+    	name = "We shall fight to the death!"
+		
+		any_pop = { 
+			militancy = 10 
+			consciousness = 10 
+		}
+		
+		war_exhaustion = 50
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#Russian intervention in the Syrian Civil War
+country_event = {
+	id = 8007574
+	title = EVT_8007574_NAME
+	desc = EVT_8007574_DESC
+	picture = "russian_intervention_in_syria"
+	
+	is_triggered_only = yes
+
+	option = {
+    	name = "Support the Syrian Government!"
+		prestige = 100
+		badboy = 5
+		
+		money = -200000
+		
+		#Domestic effect
+		any_pop = { 
+			limit = { culture = russian } 
+			consciousness = -5
+			militancy = -5
+			
+			ideology = { factor = 0.1 value = conservative }
+		}
+		
+		#Aid to Syria
+		SYR = {
+			money = 100000
+			small_arms = 1000
+			weaponry = 1000 
+			aeroplanes = 1000
+			ammunition = 1000
+			automobiles = 1000
+			
+			add_country_modifier = { name = post_war_austerity duration = 3650 }
+		}
+		
+		#Gain relations
+		relation = { who = SYR value = 200 }
+		diplomatic_influence = { who = SYR value = 200 }
+		create_alliance = SYR
+		
+		#Gain relations with Iran
+		random_country = {
+			limit = { tag = PER government = theocracy is_vassal = no }
+			relation = { who = THIS value = 100 }
+			THIS = { diplomatic_influence = { who = PER value = 50 } }
+		}
+		
+		#Lose relations with Western Powers
+		any_country = {
+			limit = { 
+				is_greater_power = yes
+				OR = { tag = USA tag = ENG tag = FRA tag = GER }
+				OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+			}
+			relation = { who = THIS value = -50 }
+		}
+		
+		#Lose relations with Turkey
+		random_country = {
+			limit = { tag = TUR is_vassal = no }
+			relation = { who = THIS value = -100 }
+			THIS = { diplomatic_influence = { who = TUR value = -100 } }
+		}
+		
+		#Lose relations with Saudi Arabia
+		random_country = {
+			limit = { tag = SAA is_vassal = no }
+			relation = { who = THIS value = -100 }
+			THIS = { diplomatic_influence = { who = SAA value = -100 } }
+		}
+		
+		relation = { who = ISI value = -200 }
+		
+		ai_chance = { factor = 0.95 }
+	}
+	
+	option = {
+    	name = "There is no need to interfere"
+		relation = { who = SYR value = -50 }
+		diplomatic_influence = { who = SYR value = -50 }
+		ai_chance = { factor = 0.05 }
+	}
+
+}
+
+#Foreign involvement in the Syrian Civil War
+country_event = {
+	id = 8007575
+	title = EVT_8007575_NAME
+	desc = EVT_8007575_DESC
+	picture = "foreign_involvement_in_the_syrian_civil_war"
+	
+	is_triggered_only = yes
+
+	option = {
+    	name = "Support the Syrian Opposition!"
+		prestige = 50
+		
+		money = -100000
+		
+		random_country = { 
+			limit = { tag = USY } 
+			prestige = 10
+			
+			money = 10000
+			
+			small_arms = 100
+			weaponry = 100
+			aeroplanes = 100
+			ammunition = 100
+			automobiles = 100
+			
+			relation = { who = THIS value = 200 }
+		}
+		
+		random_country = { 
+			limit = { tag = ROJ war_with = SYR } 
+			prestige = 10
+			
+			money = 10000
+			
+			small_arms = 100
+			weaponry = 100
+			aeroplanes = 100
+			ammunition = 100
+			automobiles = 100
+			
+			relation = { who = THIS value = 200 }
+		}
+		
+		ai_chance = { 
+			factor = 0.9 
+			modifier = { factor = 0 war_policy = pacifism }
+		}
+	}
+	
+	option = {
+    	name = "There is no need to interfere in a local squabble"
+		prestige_factor = -0.01
+
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#Foreign involvement in the Syrian Civil War
+country_event = {
+	id = 8007576
+	title = EVT_8007575_NAME
+	desc = EVT_8007575_DESC
+	picture = "foreign_involvement_in_the_syrian_civil_war"
+	
+	is_triggered_only = yes
+
+	option = {
+    	name = "Support the Syrian Government!"
+		prestige = 50
+		badboy = 2.5
+		
+		money = -50000
+		
+		#Domestic effect
+		any_pop = { 
+			limit = { is_primary_culture = yes } 
+			consciousness = -5
+			militancy = -5
+		}
+		
+		#Aid to Syria
+		SYR = {
+			money = 10000
+			small_arms = 50
+			weaponry = 50
+			aeroplanes = 50
+			ammunition = 50
+			automobiles = 50
+		}
+		
+		#Gain relations
+		relation = { who = SYR value = 100 }
+		diplomatic_influence = { who = SYR value = 100 }
+		
+		#Gain relations with Iran
+		random_country = {
+			limit = { tag = PER government = theocracy is_vassal = no }
+			relation = { who = THIS value = 50 }
+			THIS = { diplomatic_influence = { who = PER value = 25 } }
+		}
+		
+		#Lose relations with Western Powers
+		any_country = {
+			limit = { 
+				is_greater_power = yes
+				OR = { tag = USA tag = ENG tag = FRA tag = GER }
+				OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+			}
+			relation = { who = THIS value = -50 }
+		}
+		
+		#Lose relations with Turkey
+		random_country = {
+			limit = { tag = TUR is_vassal = no }
+			relation = { who = THIS value = -100 }
+			THIS = { diplomatic_influence = { who = TUR value = -100 } }
+		}
+		
+		#Lose relations with Saudi Arabia
+		random_country = {
+			limit = { tag = SAA is_vassal = no }
+			relation = { who = THIS value = -100 }
+			THIS = { diplomatic_influence = { who = SAA value = -100 } }
+		}
+		
+		ai_chance = { factor = 0.95 }
+	}
+	
+	option = {
+    	name = "There is no need to interfere"
+		relation = { who = SYR value = -50 }
+		diplomatic_influence = { who = SYR value = -50 }
+		ai_chance = { factor = 0.05 }
+	}
+	
+}

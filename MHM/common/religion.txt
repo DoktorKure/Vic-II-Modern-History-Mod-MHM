@@ -1,0 +1,111 @@
+# If you add religions, and use those tags, do not change them without changing everywhere they are used.
+# Make sure to add it to event 4431 in political_events.txt
+# Colors: RGB - https://tug.org/pracjourn/2007-4/walden/color.pdf
+# Uses all 'modifiers' possible thats exported as a Modifier.
+
+christian = {
+
+	catholic = {
+		icon = 1
+		color = { 0.8 0.8 0 }
+	}
+
+	protestant = {
+		icon = 2
+		color = { 0 0 0.7 }
+	}
+
+	orthodox = {
+		icon = 3
+		color = { 0.7 0.5 0 }
+	}
+
+	mennonite = {
+		icon = 4
+		color = { 0.82 0.82 0.82 }
+	}
+	
+	coptic = {
+		icon = 5
+		color = { 0 0.5 0.7 }
+	}
+
+	# mormon icon 21
+}
+
+muslim = {
+	sunni = {
+		icon = 6
+		color = { 0 0.6 0 }
+	}
+
+	ibad = {
+		icon = 7
+		color = { 0.1 0.4 0.6 }
+	}
+
+	shiite = {
+		icon = 8
+		color = { 0.5 0.5 0 }
+		
+	}
+
+	druze = {
+		icon = 20
+		color = { 0 0.2 0.6 }
+	}
+	
+	# yazidi icon 22
+}
+
+jewish_group = {
+	jewish = {
+		icon = 9 # menorah
+		#icon = 10 # magen david
+		color = { 0.3 0.5 0.3 }
+	}
+}
+
+eastern = {
+	buddhist = { # mahayana
+		color = { 1.0 0.55 0 }
+		#icon = 11 # shrivatsa
+		#icon = 12 # buddha
+		icon = 13 # dharmachakra
+	}
+
+	hindu = {
+		color = { 0 0.8 0.8 }
+		icon = 14
+	}
+
+	taoism = { # gelugpa
+		color = { 0 0.3 0.8 }
+		icon = 15
+	}
+
+	shinto = {
+		color = { 0.8 0 0 }
+		icon = 16
+	}
+
+	sikh = {
+		color = { 0.3 0.8 0 }
+		icon = 17
+	}
+
+	# jain icon 23
+}
+
+pagan = {
+	animist = {
+		icon = 18
+		color = { 0.5 0.0 0.0 }
+		pagan = yes
+	}
+	secularism = {
+		icon = 19 # parthenon
+		color = { 1 1 1 }
+	}
+
+}

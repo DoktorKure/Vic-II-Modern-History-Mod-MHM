@@ -1,0 +1,262 @@
+#Publishing Rights
+country_event = {
+	id = 90100 
+	title = "EVTNAME90100"
+	desc = "EVTDESC90100"
+	picture = "Demonstration"
+
+	trigger = {
+			ai = no
+			OR = {
+				publishing_rights = censored_publishing
+				publishing_rights = firewall_publishing
+				}
+			consciousness = 5
+			literacy = 0.20
+			unregulated_publishing = 10
+			any_neighbor_country = {
+				publishing_rights = unregulated_publishing
+			}
+			NOT = {
+				OR = {
+				has_country_flag = unregulated_publishing_noway
+				has_country_flag = unregulated_publishing_promised
+				}
+			}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	option = {
+		name = "EVTOPTA90100" 
+		any_pop = {
+			dominant_issue = {
+				factor = 0.1
+				value = unregulated_publishing
+			}
+		}
+		set_country_flag = unregulated_publishing_promised
+		add_country_modifier = {
+			name = "unregulated_publishing_promised"
+			duration = 1825
+		}
+	}
+	option = {
+		name = "EVTOPTB90100"
+		scaled_militancy = {
+				issue = unregulated_publishing
+				factor = 2
+			}
+		set_country_flag = unregulated_publishing_noway
+	}
+}
+
+country_event = {
+	id = 90101 
+	title = "EVTNAME90101"
+	desc = "EVTDESC90101"
+	picture = "Demonstration"
+
+	trigger = {
+			OR = {
+				publishing_rights = censored_publishing
+				publishing_rights = firewall_publishing
+			}
+			consciousness = 5
+			literacy = 0.20
+			has_country_flag = unregulated_publishing_promised
+			NOT = { has_country_modifier = unregulated_publishing_promised }
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	option = {
+		name = "EVTOPTA90101" 
+		scaled_militancy = {
+			issue = unregulated_publishing
+			factor = 4
+		}
+	}
+}
+
+#Public Meeting rights
+country_event = {
+	id = 90102 
+	title = "EVTNAME90102"
+	desc = "EVTDESC90102"
+	picture = "Demonstration"
+
+	trigger = {
+			ai = no
+			public_meetings = no_meetings
+			consciousness = 5
+			literacy = 0.20
+			limited_meetings = 10
+			any_neighbor_country = {
+				public_meetings = limited_meetings
+			}
+			NOT = {
+				OR = {
+				has_country_flag = elitist_service_noway
+				has_country_flag = elitist_service_promised
+				}
+			}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	option = {
+		name = "EVTOPTA90100" 
+		any_pop = {
+			dominant_issue = {
+				factor = 0.1
+				value = limited_meetings
+			}
+		}
+		set_country_flag = unregulated_publishing_promised
+		add_country_modifier = {
+			name = "elitist_service_promised"
+			duration = 1825
+		}
+	}
+	option = {
+		name = "EVTOPTB90100"
+		scaled_militancy = {
+				issue = limited_meetings
+				factor = 2
+		}
+		set_country_flag = elitist_service_noway
+	}
+}
+
+country_event = {
+	id = 90103
+	title = "EVTNAME90101"
+	desc = "EVTDESC90103"
+	picture = "Demonstration"
+
+	trigger = {
+		public_meetings = no_meetings
+		consciousness = 5
+		literacy = 0.20
+		has_country_flag = elitist_service_promised
+		NOT = { has_country_modifier = elitist_service_promised }
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	option = {
+		name = "EVTOPTA90103" 
+		scaled_militancy = {
+			issue = limited_meetings
+			factor = 4
+		}
+	}
+}
+
+#Trade Union Reforms
+country_event = {
+	id = 90104
+	title = "EVTNAME90104"
+	desc = "EVTDESC90104"
+	picture = "Demonstration"
+
+	trigger = {
+			ai = no
+			union_rights = no_trade_unions
+			consciousness = 5
+			literacy = 0.20
+			OR = {
+				state_controlled_unions = 10
+				restricted_unions = 10
+				free_trade_unions = 10
+			}
+			any_neighbor_country = {
+				OR = {
+					union_rights = state_controlled_unions
+					union_rights = restricted_unions
+					union_rights = free_trade_unions
+				}
+			}
+			NOT = {
+				OR = {
+				has_country_flag = union_rights_noway
+				has_country_flag = union_rights_promised
+				}
+			}
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	option = {
+		name = "EVTOPTA90100" 
+		any_pop = {
+			dominant_issue = {
+				factor = 0.1
+				value = state_controlled_unions
+			}
+		}
+		any_pop = {
+			dominant_issue = {
+				factor = 0.15
+				value = restricted_unions
+			}
+		}
+		any_pop = {
+			dominant_issue = {
+				factor = 0.2
+				value = free_trade_unions
+			}
+		}
+		set_country_flag = union_rights_promised
+		add_country_modifier = {
+			name = "union_rights_promised"
+			duration = 1825
+		}
+	}
+	option = {
+		name = "EVTOPTB90100"
+		scaled_militancy = {
+				issue = free_trade_unions
+				factor = 2
+		}
+		set_country_flag = union_rights_noway
+	}
+}
+
+country_event = {
+	id = 90105
+	title = "EVTNAME90101"
+	desc = "EVTDESC90105"
+	picture = "Demonstration"
+
+	trigger = {
+			union_rights = no_trade_unions
+			consciousness = 5
+			literacy = 0.20
+			has_country_flag = union_rights_promised
+			NOT = { has_country_modifier = union_rights_promised }
+	}
+ 
+	mean_time_to_happen =  {
+		months = 12
+	}
+
+	option = {
+		name = "EVTOPTA90105" 
+		scaled_militancy = {
+				issue = free_trade_unions
+				factor = 4
+			}
+	}
+}

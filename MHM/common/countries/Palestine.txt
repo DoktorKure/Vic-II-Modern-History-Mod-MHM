@@ -1,0 +1,317 @@
+graphical_culture = MiddleEasternGC
+color = { 66 140 101 }
+party = {
+		name = "Palestine Arab Party (N)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1959.1.1 #Technically 48
+}
+party = {
+		name = "Fatah (Nationalists)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1959.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Palestine Arab Party (C)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1959.1.1 #Technically 48
+}
+party = {
+		name = "Fatah (Moderates)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1959.1.1
+		end_date = 2005.1.1
+}
+party = {
+		name = "Third Way"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2005.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Palestine Arab Party (R)"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1959.1.1 #Technically 48
+}
+party = {
+		name = "Muslim Brotherhood (Moderates)"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1949.1.1
+		end_date = 1987.1.1
+}
+party = {
+		name = "Hamas (Moderates)"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1987.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Liberal Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1959.1.1
+}
+party = {
+		name = "Fatah (Reformist)"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1959.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Socialist League (Left)"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1959.1.1
+}
+party = {
+		name = "Fatah (Left)"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1959.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Socialist League (Right)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1959.1.1
+}
+party = {
+		name = "Fatah (Right)"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1959.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Muslim Brotherhood (Pan-Arab)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1966.1.1
+}
+party = {
+		name = "As-Sa'iqa"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1966.1.1
+		end_date = 1983.1.1
+}
+party = {
+		name = "Fatah (Abu Musa)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1983.1.1
+		end_date = 1993.1.1
+}
+party = {
+		name = "Arab Liberation Front"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1969.1.1
+		end_date = 1993.1.1
+}
+party = {
+		name = "Palestinian Arab Front"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1993.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Army of the Holy War"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1949.1.1
+}
+party = {
+		name = "Muslim Brotherhood"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1949.1.1
+		end_date = 1987.1.1
+}
+party = {
+		name = "Hamas"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1987.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "PCP"
+		citizenship_policy = residency
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1967.1.1
+}
+party = {
+		name = "PFLP"
+		citizenship_policy = residency
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1967.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "PCP (Reformist)"
+		citizenship_policy = limited_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1982.2.1
+}
+party = {
+		name = "Palestinian People's Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1982.2.1
+		end_date = 2100.1.1
+}
+unit_names = {
+	carrier = {
+		Beirut "Mount Olive" Sidon Triploitana Bakaa Phoenicia "Baghdad" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah" "Al Amarah" "Al K�t" "Sulaimanya" "Al Najaf" "Al Basrah"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Beirut "Mount Olive" Sidon Triploitana Bakaa "Baghdad" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah" "Al Amarah" "Al K�t" "Sulaimanya" "Al Najaf" "Al Basrah"
+	}
+	cruiser = {
+		Beirut "Mount Olive" Sidon Triploitana Bakaa "Baghdad" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah" "Al Amarah" "Al K�t" "Sulaimanya" "Al Najaf" "Al Basrah"
+	}
+	modern_cruiser = {
+		Beirut "Mount Olive" Sidon Triploitana Bakaa Phoenicia "Baghdad" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah" "Al Amarah" "Al K�t" "Sulaimanya" "Al Najaf" "Al Basrah"
+	}
+	frigate = {
+		Beirut "Mount Olive" Sidon Triploitana Bakaa "Baghdad" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah" "Al Amarah" "Al K�t" "Sulaimanya" "Al Najaf" "Al Basrah"
+	}
+	modern_destroyer = {
+		Beirut "Mount Olive" Sidon Triploitana Bakaa "Baghdad" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah" "Al Amarah" "Al K�t" "Sulaimanya" "Al Najaf" "Al Basrah"
+	}
+	destroyer = {
+		Beirut "Mount Olive" Sidon Triploitana Bakaa "Baghdad" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah" "Al Amarah" "Al K�t" "Sulaimanya" "Al Najaf" "Al Basrah"
+	}
+	submarine = {
+		Beirut "Mount Olive" Sidon Triploitana Bakaa "Baghdad" "Al Mawsil" "Salah al-Din" "Huth" "Sa'dah" "Ma'rib" "Salalah" "Raysut" "Mirbah" "Sawqirah" "Karbala" "Baqubah" "Al Amarah" "Al K�t" "Sulaimanya" "Al Najaf" "Al Basrah"
+	}
+
+}

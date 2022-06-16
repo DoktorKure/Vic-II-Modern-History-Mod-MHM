@@ -1,0 +1,274 @@
+graphical_culture = EuropeanGC
+color = { 245 222 179 }
+proletarian_dictatorship1 = { 255 0 0 }
+party = {
+		name = "party_nationalist"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Democratic Agrarian Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2007.10.8
+}
+party = {
+		name = "PLDM"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2007.10.8
+		end_date = 2100.1.1
+}
+party = {
+		name = "Democratic Movement of Moldova"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1989.1.30
+}
+party = {
+		name = "Popular Front of Moldova"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1989.1.30
+		end_date = 1993.1.1
+}
+party = {
+		name = "FPCD"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1993.1.1
+		end_date = 1999.1.1
+}
+party = {
+		name = "PPCD"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1999.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Party of Reform"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2005.4.24
+}
+party = {
+		name = "Liberal Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2005.4.24
+		end_date = 2015.5.15
+}
+party = {
+		name = "Party of Action and Solidarity"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2015.5.15
+		end_date = 2092.1.1
+}
+party = {
+		name = "Socialist Party of Moldova"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2000.1.1
+}
+party = {
+		name = "PSRM"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2011.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "MDPM"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1997.2.6
+		end_date = 2000.1.1
+}
+party = {
+		name = "Democratic Party of Moldova"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2000.1.1
+		end_date = 2021.1.1
+}
+party = {
+		name = "Ecologist Green Party"
+                citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Equality"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2016.10.3
+}
+party = {
+		name = "Shor Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2016.10.3
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_traditionalist_0_MOL"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Moldavia"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1993.10.23
+}
+party = {
+		name = "PCRM"
+		citizenship_policy = limited_citizenship
+		economic_policy = planned_economy1
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1993.10.23
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Moldavia"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1993.10.23
+}
+party = {
+		name = "PCRM"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1993.10.23
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		Moldova "Stefan cel Mare" "Mihail Sturdza" "Athleta Christi" Baia "Bogdan I" Iuga "R�ul Prut" Suceava "T�rgul Moldovei" Vaslui
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Moldova "Stefan cel Mare" "Mihail Sturdza" "Athleta Christi" Baia "Bogdan I" Iuga "R�ul Prut" Suceava "T�rgul Moldovei" Vaslui
+	}
+	cruiser = {
+		Moldova "Stefan cel Mare" "Mihail Sturdza" "Athleta Christi" Baia "Bogdan I" Iuga "R�ul Prut" Suceava "T�rgul Moldovei" Vaslui
+	}
+	modern_cruiser = {
+		Moldova "Stefan cel Mare" "Mihail Sturdza" "Athleta Christi" Baia "Bogdan I" Iuga "R�ul Prut" Suceava "T�rgul Moldovei" Vaslui
+	}
+	frigate = {
+		Moldova "Stefan cel Mare" "Mihail Sturdza" "Athleta Christi" Baia "Bogdan I" Iuga "R�ul Prut" Suceava "T�rgul Moldovei" Vaslui
+	}
+	modern_destroyer = {
+		Moldova "Stefan cel Mare" "Mihail Sturdza" "Athleta Christi" Baia "Bogdan I" Iuga "R�ul Prut" Suceava "T�rgul Moldovei" Vaslui
+	}
+	destroyer = {
+		Moldova "Stefan cel Mare" "Mihail Sturdza" "Athleta Christi" Baia "Bogdan I" Iuga "R�ul Prut" Suceava "T�rgul Moldovei" Vaslui
+	}
+	submarine = {
+		Moldova "Stefan cel Mare" "Mihail Sturdza" "Athleta Christi" Baia "Bogdan I" Iuga "R�ul Prut" Suceava "T�rgul Moldovei" Vaslui
+	}
+
+}

@@ -1,0 +1,230 @@
+graphical_culture = AsianGC
+color = { 222 184 135 }
+proletarian_dictatorship = { 255 105 180 }
+party = {
+		name = "National Progressive Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1958.6.17
+}
+party = {
+		name = "CDIN"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1958.6.17
+		end_date = 1960.8.10
+}
+party = {
+		name = "Forces Armees Neutralistes"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1960.8.10
+		end_date = 2092.1.1
+}
+party = {
+		name = "Democratic Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2096.1.1
+}
+party = {
+		name = "National Progressive Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1958.6.1
+}
+party = {
+		name = "Lao People's Rally"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1958.6.1
+		end_date = 1960.4.24
+}
+party = {
+		name = "CDIN"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1960.4.24
+		end_date = 2096.1.1
+}
+party = {
+		name = "Independent Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1958.6.1
+}
+party = {
+		name = "Lao People's Rally"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1958.6.1
+		end_date = 2096.1.1
+}
+party = {
+		name = "Lao National Union Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Progressive Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1956.1.1
+}
+party = {
+		name = "Peace and Neutrality Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1956.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "CDIN"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Lao Royalists"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Indochinese Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1951.2.1
+}
+party = {
+		name = "Lao People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1951.2.1
+		end_date = 1972.2.1
+}
+party = {
+		name = "Lao People's Revolutionary Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1972.2.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Lao People's Revolutionary Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		Ayutthaya Mengrai "Muang Sua" "Muang Then" Hamsavati "Khun Lo" "Khun Borom" "Khun Sung" Shan "Siang Khwang" "Sipsong Pan Na"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Ayutthaya Mengrai "Muang Sua" "Muang Then" Hamsavati "Khun Lo" "Khun Borom" "Khun Sung" Shan "Siang Khwang" "Sipsong Pan Na"
+	}
+	cruiser = {
+		Ayutthaya Mengrai "Muang Sua" "Muang Then" Hamsavati "Khun Lo" "Khun Borom" "Khun Sung" Shan "Siang Khwang" "Sipsong Pan Na"
+	}
+	modern_cruiser = {
+		Ayutthaya Mengrai "Muang Sua" "Muang Then" Hamsavati "Khun Lo" "Khun Borom" "Khun Sung" Shan "Siang Khwang" "Sipsong Pan Na"
+	}
+	frigate = {
+		Ayutthaya Mengrai "Muang Sua" "Muang Then" Hamsavati "Khun Lo" "Khun Borom" "Khun Sung" Shan "Siang Khwang" "Sipsong Pan Na"
+	}
+	modern_destroyer = {
+		Ayutthaya Mengrai "Muang Sua" "Muang Then" Hamsavati "Khun Lo" "Khun Borom" "Khun Sung" Shan "Siang Khwang" "Sipsong Pan Na"
+	}
+	destroyer = {
+		Ayutthaya Mengrai "Muang Sua" "Muang Then" Hamsavati "Khun Lo" "Khun Borom" "Khun Sung" Shan "Siang Khwang" "Sipsong Pan Na"
+	}
+	submarine = {
+		Ayutthaya Mengrai "Muang Sua" "Muang Then" Hamsavati "Khun Lo" "Khun Borom" "Khun Sung" Shan "Siang Khwang" "Sipsong Pan Na"
+	}
+
+}

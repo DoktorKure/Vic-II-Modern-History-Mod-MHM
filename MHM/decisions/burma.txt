@@ -1,0 +1,47 @@
+political_decisions = {
+
+	naypyidaw = {
+		picture = "naypyidaw"
+		# naypyidaw_title;Build a new Capital - Naypyidaw
+		# naypyidaw_desc;Naypyidaw is the capital city of Myanmar, also known as Burma. It is administered as the Naypyidaw Union Territory, as per the Constitution. On 6 November 2005, the administrative capital of the country was officially moved here from the previous capital Yangon.
+		potential = {
+			tag = BUR
+			year = 2005
+			
+			#Military Junta
+			OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship }
+			
+			#Current capital is Yangon
+			capital = 1330
+			
+			#Owns Naypyidaw
+			owns = 1335
+			is_core = 1335 
+			
+			NOT = { has_country_flag = naypyidaw }
+		}
+		allow = {
+			is_vassal = no
+			war = no
+			
+			#Military Junta
+			ruling_party_ideology = nationalist
+			
+			#Must have some money
+			money = 250000
+		}
+		effect = {
+			set_country_flag = naypyidaw
+			
+			prestige = 50
+			
+			money = -200000
+			
+			#Move capital to Naypyidaw
+			1335 = { change_province_name  = "Naypyidaw" }
+			capital = 1335
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+}

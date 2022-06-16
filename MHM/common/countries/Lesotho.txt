@@ -1,0 +1,216 @@
+graphical_culture = Generic
+color = { 147 82 173 }
+party = {
+		name = "Basutoland National Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Marematlou Freedom Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1997.1.1
+}
+party = {
+		name = "National Independent Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1993.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Basotho National Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2007.1.1
+}
+party = {
+		name = "All Basotho Convention"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2006.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Marema-Tlou Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1993.1.1
+}
+party = {
+		name = "Popular Front for Democracy"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1993.1.1
+		end_date = 2016.1.1
+}
+party = {
+		name = "Alliance of Democrats"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2016.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Basutoland African Congress"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1957.1.1
+}
+party = {
+		name = "Basutoland Congress Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1957.1.1
+		end_date = 2002.1.1
+}
+party = {
+		name = "Lesotho Congress for Democracy"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1997.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Democratic Congress"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2011.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_progressive_0_LES"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Basutoland National Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Crown Council"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Lesotho"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Lesotho"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	transportship = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	modern_frigate = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	cruiser = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	modern_cruiser = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	frigate = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	modern_destroyer = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	destroyer = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	submarine = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+
+}

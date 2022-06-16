@@ -1,0 +1,264 @@
+graphical_culture = EuropeanGC
+color = { 238 221 130 }
+proletarian_dictatorship = { 250 128 114 }
+proletarian_dictatorship1 = { 250 128 114 }
+socialist_democracy = { 250 128 114 }
+
+party = {
+		name = "African Democratic Rally"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1958.1.1
+}
+party = {
+		name = "UPDP"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1958.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "UNDP"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1990.10.29
+}
+party = {
+		name = "RDPS"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1990.10.29
+		end_date = 2100.1.1
+}
+party = {
+		name = "UDDIA"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1989.8.3
+}
+party = {
+		name = "MCDDI (Right-Wing)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1989.8.3
+		end_date = 2092.1.1
+}
+party = {
+		name = "UNDP (Liberal)"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1989.8.3
+}
+party = {
+		name = "MCDDI (Liberal)"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1989.8.3
+		end_date = 2092.1.1
+}
+party = {
+		name = "PPC (Centre-Wing)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1957.1.1
+}
+party = {
+		name = "MSA - PCC"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1957.1.1
+		end_date = 1990.1.1
+}
+party = {
+		name = "PCT (Socialists)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1990.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "PPC (Right-Wing)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1991.1.1
+}
+party = {
+		name = "UPADS"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1991.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Ninja Militia"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "UDDIA (Reactionaries)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "PPC (Radicals)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1964.6.29
+}
+party = {
+		name = "Revolutionary National Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1964.6.29
+		end_date = 1969.12.29
+}
+party = {
+		name = "PCT (Left-Wing)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1969.12.29
+		end_date = 2092.1.1
+}
+party = {
+		name = "PPC (Left-Wing)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1964.6.29
+}
+party = {
+		name = "Revolutionary National Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1964.6.29
+		end_date = 1969.12.29
+}
+party = {
+		name = "PCT (Reformists)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1969.12.29
+		end_date = 2092.1.1
+}
+unit_names = {
+	transportship = {
+		Antwerpen Arlon Brugge Brussel Charleroi Gent Hasselt Leuven Liege Mechelen Namur Nieuwpoort Oostende Sluis Zeebrugge
+	}
+	modern_frigate = {
+		"Jan Baert" "Michiel Jacobsen" "Jacob van Brugge" "Willem van der Haegen" "Jacob le Maire" "Pierre van Alstein" "Sebald de Weert" "Cornelis Weus"
+	}
+	cruiser = {
+		"Fran�ois Pelsaert" "Louis Boisot" "Olivier Brunel" "Simon de Cordes" "Albert Dorville" "Jess� de Forest" "Louis Hennepin" "Melchior van den Kerckhove" "Jacob Mahu"
+	}
+	modern_cruiser = {
+		"Leopold I" "La Belgique" "De Vlaamse Leeuw" Ambiorix "Godfried van Boullion" "Guldensporenslag" "Gwijde van Dampierre" "Jacob van Artevelde"
+	}
+	frigate = {
+		Wielingen Mercator "Willem van Rubroeck" "Simon van Salingen" "Joris van Spilbergen" "Willem Usselincx"
+	}
+	modern_destroyer = {
+		"Graaf van Vlaanderen" "Hertog van Brabant" "Comte de Hainaut" "Comte de Namur" "Prince de Liege" "Duc d'Ursel"
+	}
+	destroyer = {
+		"St. Marie" "St. Joris" "St. Franciscus" "St. Jacobus" "St. Petrus" "St. Bonifatius"
+	}
+	submarine = {
+		Belgica Brabantia Flandriae Henogovia Limburgia Luxemburgum Vallonia
+	}
+
+}

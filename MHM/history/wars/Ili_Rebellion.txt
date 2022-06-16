@@ -1,0 +1,20 @@
+#Ili_Rebellion.txt
+name = "Ili Rebellion"
+1945.12.1 = {
+	add_attacker = ETS
+	add_defender = XIJ
+	war_goal = {
+		casus_belli = civil_war
+		actor = ETS
+		receiver = XIJ
+	}
+	war_goal = {
+		casus_belli = civil_war
+		actor = XIJ
+		receiver = ETS
+	}	
+}
+1946.10.13 = {
+	rem_attacker = XIJ
+	rem_defender = ETS
+}

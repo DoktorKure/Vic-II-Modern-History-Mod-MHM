@@ -1,0 +1,26 @@
+political_decisions = {
+
+	winter_olympics_bid = {
+		picture = "winter_olympics_bid"
+		alert = no
+		potential = {
+			NOT = { has_country_flag = arranged_winter_olympics_games }
+			NOT = { has_country_flag = winter_olympics_bid }
+			ai = no
+			OR = { tag = CAN tag = USA tag = JAP tag = CHI tag = KAZ tag = SKO tag = KOR tag = NKO tag = MGL capital_scope = { continent = europe } }
+			NOT = { tag = GRE tag = POR tag = SPA tag = IBU }
+			OR = { is_greater_power = yes is_secondary_power = yes }
+			is_vassal = no
+		}
+		allow = {
+			money = 180000
+			war = no
+		}
+		effect = {
+			set_country_flag = winter_olympics_bid
+			treasury = -1000
+			country_event = 16001
+		}
+	}
+
+}

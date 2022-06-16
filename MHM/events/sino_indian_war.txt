@@ -1,0 +1,59 @@
+#The Sino-Indian War
+country_event = {
+  id = 8229000
+  title = "The Sino-Indian War"
+  desc = EVTDESC8229000
+  picture = "nwo2_himalayan_border"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		year = 1962
+		NOT = { year = 1990 }
+		
+		is_greater_power = yes
+		ruling_party_ideology = communist
+		
+		#Annexed Tibet
+		is_possible_vassal = TIB
+		
+		#India
+		neighbour = HND
+		HND = { 
+			is_vassal = no
+			owns = 3281 
+		}
+	}
+
+	mean_time_to_happen = { months = 10 }
+
+	option = {
+		name = "Aksai Chin is ours!"
+		
+		#INC support surges in India
+		HND = { 
+			any_pop = { 
+				limit = { location = { is_core = HND } }
+				ideology = { factor = 0.25 value = socialist } 
+			}
+		}
+		
+		#Start the War
+		war = { 
+			target = HND
+			attacker_goal = { casus_belli = acquire_any_state state_province_id = 3281 }
+			defender_goal = { casus_belli = territorial_dispute_internal }
+			defender_goal = { casus_belli = war_reparations }
+			call_ally = no
+		}
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Don't disturb the Indians"
+		prestige_factor = -0.05
+		relation = { who = HND value = 50 }
+		ai_chance = { factor = 0.1 }
+	}
+}

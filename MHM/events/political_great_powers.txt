@@ -1,0 +1,1499 @@
+# Great Power Contention
+country_event = {
+	id = 19000
+	title = "EVTNAME19000"
+	desc = "EVTDESC19000"
+	picture = "greatpowers"
+
+	trigger = {
+		any_greater_power = {
+			diplomatic_influence = {
+				who = THIS
+				value = 30
+			}
+		}
+		any_greater_power = {
+			diplomatic_influence = {
+				who = THIS
+				value = 5
+			}
+			NOT = {
+				diplomatic_influence = {
+					who = THIS
+					value = 30
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.9
+			prestige = 10
+		}
+		modifier = {
+			factor = 0.9
+			prestige = 15
+		}
+		modifier = {
+			factor = 1.1
+			military_score = 5
+		}
+		modifier = {
+			factor = 1.2
+			military_score = 10
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19000"
+		any_greater_power = {
+			limit = {
+				diplomatic_influence = {
+					who = THIS
+					value = 5
+					}
+				NOT = {
+					diplomatic_influence = {
+					who = THIS
+ 					value = 75
+ 					}
+ 				}
+			}
+			country_event = { id=19005 days=0 }
+		}
+	}
+}
+country_event = { # Country is sphered change government
+	id = 19001
+	title = EVT_19001_NAME
+	desc = EVT_19001_DESC
+	picture = "super_powers"
+
+	trigger = {
+		part_of_sphere = yes
+		is_vassal = no
+		NOT = { has_country_flag = accept_differances_in_gov_by_democracy }
+		sphere_owner = { OR = { government = democracy1 government = democracy government = hms_government government = hms_government1 } } 
+		NOT = { OR = { government = absolute_monarchy government = democracy government = democracy1 government = sar_government government = mandate_government government = colonial_government government = hms_government government = hms_government1 government = presidential_dictatorship } }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	immediate = { clr_country_flag = accept_differances_in_gov_by_communist }
+
+	option = {
+		name = EVT_19001_A
+		sphere_owner = { country_event = 19004 }
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = EVT_19001_B
+		sphere_owner = { 
+			diplomatic_influence = { who = THIS value = -100 } 
+			relation = { who = THIS value = -200 } 
+			add_casus_belli = { target = THIS type = install_democracy months = 12  }
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { 
+	id = 19002
+	title = EVT_19002_NAME
+	desc = EVT_19002_DESC
+	picture = "super_powers"
+
+	trigger = {
+		part_of_sphere = yes
+		is_vassal = no
+		has_global_flag = blocsenabled
+		year = 1955
+		NOT = { has_country_flag = accept_differances_in_gov_by_communist }
+		sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
+		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 ruling_party_ideology = communist ruling_party_ideology = socialist } }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	immediate = { clr_country_flag = accept_differances_in_gov_by_democracy }
+
+	option = {
+		name = EVT_19002_A
+		sphere_owner = { country_event = 19003 }
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = EVT_19002_B
+		sphere_owner = { 
+			diplomatic_influence = { who = THIS value = -100 } 
+			relation = { who = THIS value = -200 } 
+			add_casus_belli = { target = THIS type = install_communist_gov_cb months = 12  }
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+#Democracy in the SOI of a Presidential Dictatorship
+country_event = { 
+	id = 19102
+	title = EVT_19002_NAME
+	desc = EVT_19002_DESC
+	picture = "super_powers"
+
+	trigger = {
+		part_of_sphere = yes
+		is_vassal = no
+		NOT = { has_country_flag = accept_differances_in_gov_by_authoritarian_regime }
+		sphere_owner = { government = presidential_dictatorship } 
+		OR = { government = democracy government = hms_government government = democracy1 government = hms_government1 }
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	immediate = { clr_country_flag = accept_differances_in_gov_by_democracy }
+
+	option = {
+		name = EVT_19002_A
+		sphere_owner = { country_event = 19103 }
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = EVT_19002_B
+		sphere_owner = { 
+			diplomatic_influence = { who = THIS value = -100 } 
+			relation = { who = THIS value = -200 } 
+			add_casus_belli = { target = THIS type = install_authoritarian_regime months = 12  }
+		}
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { # Demand install communist in-power
+	id = 19003
+	title = EVT_19003_NAME
+	desc = EVT_19003_DESC
+	picture = "remain_independent_from_communist"
+	is_triggered_only = yes # sphere_leader
+
+	option = {
+		name = EVT_19003_A
+		FROM = { set_country_flag = accept_differances_in_gov_by_communist }
+		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { NOT = { tag = FIN } OR = { government = democracy government = hms_government government = absolute_monarchy } } } }
+	}
+	
+	option = {
+		name = EVT_19003_B
+		FROM = { country_event = 19006 }
+		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { tag = FIN } } }
+	}
+}
+
+country_event = { # Demand adopt presidential dictatorship
+	id = 19103
+	title = EVT_19003_NAME
+	desc = EVT_19003_DESC
+	picture = "remain_independent_from_authoritarian"
+	is_triggered_only = yes # sphere_leader
+
+	option = {
+		name = EVT_19003_A
+		FROM = { set_country_flag = accept_differances_in_gov_by_authoritarian_regime }
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = EVT_19003_B
+		FROM = { country_event = 19106 }
+		ai_chance = { factor = 0 }
+	}
+}
+
+country_event = { # Demand install democracy
+	id = 19004
+	title = EVT_19004_NAME
+	desc = EVT_19004_DESC
+	picture = "remain_independent_from_democracy"
+	is_triggered_only = yes # sphere_leader
+
+	option = {
+		name = EVT_19004_A
+		FROM = { set_country_flag = accept_differances_in_gov_by_democracy }
+		ai_chance = { factor = 0.9 modifier = { factor = 100 FROM = { tag = YUG } } }
+	}
+	
+	option = {
+		name = EVT_19004_B
+		FROM = { country_event = 19007 }
+		ai_chance = { factor = 0.1 modifier = { factor = 0 FROM = { tag = YUG } } }
+	}
+}
+country_event = {
+	id = 19005
+	title = "EVTNAME19005"
+	desc = "EVTDESC19005"
+	picture = "greatpowers"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19005"
+		diplomatic_influence = {
+			who = FROM
+			value = 5
+		}
+		badboy = 1
+	}
+
+	option = {
+		name = "EVTOPTB19005"
+		diplomatic_influence = {
+			who = FROM
+			value = -5
+		}
+		prestige = -5
+	}
+}
+country_event = { # Demand install communist in-power
+	id = 19006
+	title = EVT_19006_NAME
+	desc = EVT_19006_DESC
+	picture = "install_communist_gov"
+	is_triggered_only = yes # sphere_leader
+
+	option = {
+		name = EVT_19006_A
+		sphere_owner = { 
+		diplomatic_influence = { who = THIS value = -100 } 
+			relation = { who = THIS value = -200 } 
+			casus_belli = { target = THIS type = install_communist_gov_cb months = 12  }
+		}
+		ai_chance = { factor = 0.5  }
+	}
+	
+	option = {
+		name = EVT_19006_B
+		set_country_flag = soi_demand_install
+	government = proletarian_dictatorship country_event = 800042
+		ai_chance = { factor = 0.5 }
+	}
+}
+
+country_event = { # Demand install presidential dictatorship
+	id = 19106
+	title = EVT_19006_NAME
+	desc = EVT_19006_DESC
+	picture = "install_authoritarian"
+	is_triggered_only = yes # sphere_leader
+
+	option = {
+		name = EVT_19006_A
+		sphere_owner = { 
+		diplomatic_influence = { who = THIS value = -100 } 
+			relation = { who = THIS value = -200 } 
+			casus_belli = { target = THIS type = install_authoritarian_regime months = 12  }
+		}
+		ai_chance = { factor = 0.5  }
+	}
+	
+	option = {
+		name = EVT_19006_B
+		set_country_flag = soi_demand_install
+government = presidential_dictatorship country_event = 800040
+		ai_chance = { factor = 0.5 }
+	}
+}
+
+country_event = { # Demand install democracy
+	id = 19007
+	title = EVT_19007_NAME
+	desc = EVT_19007_DESC
+	picture = "install_democracy"
+	is_triggered_only = yes # in soi
+
+	option = {
+		name = EVT_19007_A
+		sphere_owner = { 
+		diplomatic_influence = { who = THIS value = -100 } 
+			relation = { who = THIS value = -200 } 
+			casus_belli = { target = THIS type = install_democracy months = 12  }
+		}		
+		ai_chance = { factor = 0.5 }
+	}
+	
+	option = {
+		name = EVT_19004_B
+		set_country_flag = soi_demand_install
+		government = democracy country_event = 800044
+		ai_chance = { factor = 0.5 }
+	}
+}
+# Parade
+country_event = {
+	id = 19010
+	news = yes
+	news_desc_long = "EVTDESC19010_NEWS_LONG"
+	news_desc_medium = "EVTDESC19010_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19010_NEWS_SHORT"
+	title = "EVTNAME19010"
+	desc = "EVTDESC19010"
+	picture = "parade"
+
+	trigger = {
+		is_greater_power = yes
+		colonial_nation = yes
+		prestige = 100
+	}
+
+	mean_time_to_happen = {
+		months = 250
+
+		modifier = {
+			factor = 0.9
+			prestige = 150
+		}
+		modifier = {
+			factor = 0.9
+			prestige = 200
+		}
+		modifier = {
+			factor = 1.2
+			badboy = 0.4
+		}
+		modifier = {
+			factor = 10
+			badboy = 0.8
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19010"
+		prestige = 5
+		capital_scope = {
+			any_pop = {
+				militancy = -1
+				consciousness = -1
+			}
+		}
+	}
+
+	option = {
+		name = "EVTOPTB19010"
+		any_greater_power = {
+			prestige = -1
+		}
+		capital_scope = {
+			any_pop = {
+				militancy = -1
+				consciousness = -1
+			}
+		}
+	}
+}
+
+#Provincename Botanical Expedition
+province_event = {
+	id = 19020
+	title = "EVTNAME19020"
+	desc = "EVTDESC19020"
+
+	trigger = {
+		owner = {
+			is_greater_power = yes
+		}
+		is_colonial = yes
+		NOT = {
+			life_rating = 25
+			has_global_flag = botanical_expedition_in_progress
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 500
+		modifier = {
+			factor = 0.8
+			NOT = {
+				life_rating = 20
+			}
+		}
+		modifier = {
+			factor = 0.9
+			NOT = {
+				life_rating = 25
+			}
+		}
+		modifier = {
+			factor = 1.5
+			average_consciousness = 4
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19020"
+		set_global_flag = botanical_expedition_in_progress
+
+		owner = {
+			prestige = 5
+			treasury = -100
+		}
+		random_country = {
+			limit = {
+				civilized = yes
+				prestige = 25
+				NOT = {
+					tag = THIS
+				}
+				exists = yes
+			}
+			country_event = { id=19022 days=0 }
+		}
+	}
+
+	option = {
+		name = "EVTOPTB19020"
+		owner = {
+			prestige = -5
+		}
+	}
+}
+
+country_event = {
+	id = 19022
+	title = "EVTNAME19022"
+	desc = "EVTDESC19022"
+	picture = "Botanic_expedition"
+
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19022"
+		set_country_flag = participates_in_botanical_expedition
+		prestige = 5
+	}
+
+	option = {
+		name = "EVTOPTB19022"
+		prestige = -5
+	}
+}
+
+country_event = {
+	id = 19023
+	title = "EVTNAME19023"
+	desc = "EVTDESC19023"
+	picture = "Botanic_expedition"
+
+	trigger = {
+		has_country_flag = participates_in_botanical_expedition
+	}
+
+	mean_time_to_happen = {
+		months = 200
+	}
+
+	option = {
+		name = "EVTOPTA19023"
+		clr_country_flag = participates_in_botanical_expedition
+		prestige = -5
+	}
+
+	option = {
+		name = "EVTOPTB19023"
+		treasury = -100
+	}
+}
+
+country_event = {
+	id = 19024
+	title = "EVTNAME19024"
+	desc = "EVTDESC19024"
+	picture = "Botanic_expedition"
+
+	trigger = {
+		has_country_flag = participates_in_botanical_expedition
+		upper_house = {
+			ideology = liberal
+			value = 0.3
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 200
+	}
+
+	option = {
+		name = "EVTOPTA19024"
+		clr_country_flag = participates_in_botanical_expedition
+		prestige = -2
+	}
+
+	option = {
+		name = "EVTOPTB19024"
+		any_pop = {
+			scaled_militancy = {
+				ideology = liberal
+				factor = 3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 19025
+	title = "EVTNAME19025"
+	desc = "EVTDESC19025"
+	picture = "Botanic_expedition"
+
+	trigger = {
+		has_country_flag = participates_in_botanical_expedition
+	}
+
+	mean_time_to_happen = {
+		months = 200
+	}
+
+	option = {
+		name = "EVTOPTA19025"
+		prestige = 5
+		any_pop = {
+			consciousness = 0.1
+		}
+	}
+
+	option = {
+		name = "EVTOPTB19025"
+		set_country_flag = botanical_expedition_threatened
+		prestige = 2
+	}
+}
+
+country_event = {
+	id = 19026
+	title = "EVTNAME19026"
+	desc = "EVTDESC19026"
+	picture = "Botanic_expedition"
+
+	trigger = {
+		has_country_flag = participates_in_botanical_expedition
+	}
+
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			has_country_flag = botanical_expedition_threatened
+			factor = 0.4
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19026"
+		clr_country_flag = participates_in_botanical_expedition
+		clr_country_flag = botanical_expedition_threatened
+		prestige = -10
+	}
+}
+
+country_event = {
+	id = 19027
+	title = "EVTNAME19027"
+	desc = "EVTDESC19027"
+	picture = "Botanic_expedition"
+
+	trigger = {
+		has_country_flag = participates_in_botanical_expedition
+		NOT = {
+			has_global_flag = victoria_regina_found
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 400
+		modifier = {
+			has_country_flag = botanical_expedition_threatened
+			factor = 1.2
+		}
+	}
+
+	option = {
+		name = "EVTOPTA19027"
+		set_country_flag = victoria_regina
+		set_global_flag = victoria_regina_found
+		prestige = 30
+		years_of_research = 0.2
+		any_country = {
+			limit = {
+				OR = {
+					has_country_flag = botanical_expedition_threatened
+					has_country_flag = participates_in_botanical_expedition
+				}
+			}
+			country_event = { id=19028 days=0 }
+			clr_global_flag = botanical_expedition_in_progress
+		}
+	}
+}
+
+country_event = {
+	id = 19028
+	title = "EVTNAME19028"
+	desc = "EVTDESC19028"
+	picture = "Botanic_expedition"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19028"
+		clr_country_flag = botanical_expedition_threatened
+		clr_country_flag = participates_in_botanical_expedition
+		prestige = -5
+	}
+}
+
+country_event = {
+	id = 19029
+	title = "EVTNAME19029"
+	desc = "EVTDESC19029"
+	picture = "Botanic_expedition"
+
+	trigger = {
+		has_country_flag = botanical_expedition_in_progress
+	}
+
+	mean_time_to_happen = {
+		months = 200
+		modifier = {
+			factor = 1.1
+			has_country_flag = botanical_expedition_threatened
+		}
+	}
+
+	option = {
+		name = "EVTNAME19029"
+		clr_country_flag = botanical_expedition_in_progress
+		clr_country_flag = botanical_expedition_threatened
+		prestige = 20
+		years_of_research = 0.1
+	}
+}
+
+# The Mandate of Heaven
+country_event = {
+	id = 19310
+	news = yes
+	news_desc_long = "EVTDESC19310_NEWS_LONG"
+	news_desc_medium = "EVTDESC19310_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19310_NEWS_SHORT"
+	title = "EVTNAME19310"
+	desc = "EVTDESC19310"
+	picture = "asian_ruler"
+
+	trigger = {
+		tag = CHI
+		rank = 1
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19310"
+		prestige = 5
+		any_pop = {
+			militancy = -3
+		}
+	}
+}
+
+# The Empire of the Sun
+country_event = {
+	id = 19320
+	news = yes
+	news_desc_long = "EVTDESC19320_NEWS_LONG"
+	news_desc_medium = "EVTDESC19320_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19320_NEWS_SHORT"
+	title = "EVTNAME19320"
+	desc = "EVTDESC19320"
+	picture = "japanese_power"
+
+	trigger = {
+		tag = JAP
+		rank = 1
+	}
+
+	is_triggered_only = yes
+
+	option = {
+		name = "EVTOPTA19320"
+		prestige = 5
+		any_pop = {
+			militancy = -3
+		}
+	}
+}
+
+# The Cold War Great wars
+country_event = {
+	id = 19355
+	news = yes
+	news_desc_long = "EVTDESC19355_NEWS_LONG"
+	news_desc_medium = "EVTDESC19355_NEWS_MEDIUM"
+	news_desc_short = "EVTDESC19355_NEWS_SHORT"
+	title = "EVTNAME19355"
+	desc = "EVTDESC19355"
+	#major = yes
+	picture = "cold_war"
+
+	fire_only_once = yes
+
+	trigger = {
+		# great_wars_enabled = no why is this enable?
+		NOT = { has_global_flag = great_wars_enabled }
+		ai = yes
+		containment = 1
+	}
+
+	immediate = { 
+		great_wars_enabled = yes
+		set_global_flag = great_wars_enabled
+		set_global_flag = NWO_v1_06 # TODO change with a new version
+	}
+	
+	option = {
+		name = "EVTOPTA19355"
+		any_country = { 
+			limit = { 
+				exists = yes
+			}
+			set_country_flag = recognized_government
+			
+		}
+		USA = { remove_accepted_culture = german } # due to literacy Vic2 mod limitations
+		FRA = { remove_accepted_culture = german }
+		SPA = { remove_accepted_culture = catalan remove_accepted_culture = basque }
+		RUS = { remove_accepted_culture = german remove_accepted_culture= estonian remove_accepted_culture = latvian remove_accepted_culture = lithuanian }
+		ENG = { remove_accepted_culture = german }
+	}
+}
+
+#Event fires upon completion of the make_puppet CB for the defeated nation
+country_event = {
+	id = 19370
+	title = "EVTNAME19370" #The $FROMCOUNTRY$ Overlords
+	desc = "EVTDESC19370"
+	picture = "treaty"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "a_sad_day"
+		
+		#Create vassal
+		FROM = { create_vassal = THIS }
+		overlord = { diplomatic_influence = { who = THIS value = 200 } }
+
+		###### Modifiers Blocked for Vassals ######
+		
+		remove_country_modifier = doctrinehigh
+		remove_country_modifier = doctrinemedium
+		remove_country_modifier = doctrinelow
+		clr_country_flag = doctrineschool
+		remove_country_modifier = currency_manipulation
+		remove_country_modifier = embargoing_nation
+		remove_country_modifier = united_nations_ga_member
+		remove_country_modifier = isa_member
+		remove_country_modifier = claim_12
+		remove_country_modifier = claim_24
+		remove_country_modifier = claim_200
+		clr_country_flag = unclos_1
+		clr_country_flag = unclos_3
+		clr_country_flag = claim_12
+		clr_country_flag = claim_24
+		clr_country_flag = claim_200
+		any_owned = { remove_province_modifier = imf_sdr }
+		clr_country_flag = special_imf_dr
+		remove_country_modifier = joint_military_exercise
+		remove_country_modifier = bilateral_trade_pact_sp
+		remove_country_modifier = wahhabism
+		remove_country_modifier = interpol
+		remove_country_modifier = opecmember
+		any_owned = { remove_province_modifier = oil_high }
+		any_owned = { remove_province_modifier = oil_medium }
+		any_owned = { remove_province_modifier = oil_low }
+		remove_country_modifier = nordic_council_member
+		remove_country_modifier = antarticclaims
+		clr_country_flag = gatt_member
+		
+		#Recently lost war
+		country_event = 1512206
+		
+		###### Change Government Type ######
+		
+		random_owned = {
+			limit = { owner = { FROM = { government = theocracy } } }
+			owner = { 
+				government = theocracy
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = censored_publishing
+				political_reform = no_trade_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+		random_owned = {
+			limit = { owner = { FROM = { government = absolute_monarchy } } }
+			owner = { 
+				government = absolute_monarchy
+				political_reform = none_voting
+				political_reform = regulated_opinion 
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = censored_publishing
+				political_reform = no_trade_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+		random_owned = {
+			limit = { owner = { overlord = { OR = { government = hms_government government = hms_government1 } } } }
+			owner = { 
+				government = hms_government1
+				political_reform = registered_voting
+				political_reform = open_opinion
+				political_reform = limited_meetings
+				political_reform = capital_punishment
+				political_reform = elitist_service
+				political_reform = responsible_publishing
+				political_reform = restricted_unions
+				political_reform = parties_restrict_non_democratic
+				political_reform = quota_immigration
+				political_reform = no_draft
+				political_reform = minorities_oppression
+				political_reform = first_past_the_post
+			}
+		}
+		random_owned = {
+			limit = { owner = { overlord = { OR = { government = democracy government = democracy1 } } } }
+			owner = { 
+				government = democracy
+				political_reform = registered_voting
+				political_reform = open_opinion
+				political_reform = limited_meetings
+				political_reform = capital_punishment
+				political_reform = elitist_service
+				political_reform = responsible_publishing
+				political_reform = restricted_unions
+				political_reform = parties_restrict_non_democratic
+				political_reform = quota_immigration
+				political_reform = no_draft
+				political_reform = minorities_oppression
+				political_reform = proportional_representation
+			}
+		}
+		random_owned = {
+			limit = { owner = { overlord = { government = socialist_democracy } } }
+			owner = { 
+				government = socialist_democracy
+				political_reform = registered_voting
+				political_reform = open_opinion
+				political_reform = limited_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = censored_publishing
+				political_reform = state_controlled_unions
+				political_reform = parties_only_nominated
+				political_reform = quota_immigration
+				political_reform = one_year_draft
+				political_reform = minorities_equal_rights
+				political_reform = jefferson_method
+			}
+		}
+		random_owned = {
+			limit = { owner = { overlord = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } }
+			owner = { 
+				government = proletarian_dictatorship
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = censored_publishing
+				political_reform = state_controlled_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+		random_owned = {
+			limit = { owner = { overlord = { government = presidential_dictatorship } } }
+			owner = { 
+				government = presidential_dictatorship
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = censored_publishing
+				political_reform = no_trade_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+		random_owned = {
+			limit = { owner = { overlord = { government = populist_dictatorship } } }
+			owner = { 
+				government = populist_dictatorship
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = censored_publishing
+				political_reform = no_trade_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+		random_owned = {
+			limit = { owner = { overlord = { government = nationalist_dictatorship } } }
+			owner = { 
+				government = nationalist_dictatorship
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = censored_publishing
+				political_reform = no_trade_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+
+		###### Change Ruling Party ######
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = traditionalist } } } owner = { ruling_party_ideology = traditionalist } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = conservative } } } owner = { ruling_party_ideology = conservative } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = liberal } } } owner = { ruling_party_ideology = liberal } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = big_tent } } } owner = { ruling_party_ideology = big_tent } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = progressive } } } owner = { ruling_party_ideology = progressive } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = socialist } } } owner = { ruling_party_ideology = socialist } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = communist } } } owner = { ruling_party_ideology = communist } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = communist_social } } } owner = { ruling_party_ideology = communist_social } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = populist } } } owner = { ruling_party_ideology = populist } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = nationalist } } } owner = { ruling_party_ideology = nationalist } }
+
+		#Lose relations
+		any_country = {
+			limit = {
+				exists = yes
+				NOT = { is_our_vassal = THIS }
+			}
+			relation = { who = THIS value = -100 }
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		any_country = {
+			limit = {
+				alliance_with = THIS
+				NOT = { is_our_vassal = THIS }
+			}
+			leave_alliance = THIS
+		}
+		
+		#Domestic reaction
+		any_pop = {
+			limit = {
+				OR = {
+					is_primary_culture = yes
+					is_accepted_culture = yes
+				}
+			}
+			militancy = 10
+			consciousness = 10
+		}
+		any_owned = {
+			limit = { is_core = THIS }
+			add_province_modifier = { name = nationalist_agitation duration = 1825 }
+		}
+		
+	}
+	
+}
+
+country_event = {
+	id = 19380
+	title = "EVTNAME19380"
+	desc = "EVTDESC19380"
+	picture = "nuclear_peace"
+
+	major = yes
+	
+	is_triggered_only = yes # victorious attacker of nuclear/nuclear umbrella country
+	# FROM attacked country
+
+	immediate = {
+		end_war = FROM
+	}
+	
+	option = {
+		name = "EVTOPTA19380"
+	}
+
+}
+
+country_event = {
+	id = 19381
+	title = "EVTNAME19381"
+	desc = "EVTDESC19381"
+	picture = "nuclear_peace"
+
+	is_triggered_only = yes # nuclear super power
+	# FROM attacked country
+	
+	option = {
+		name = "EVTOPTA19381"
+		any_country = {
+			limit = { war_with = FROM }
+			country_event = 19382
+		}
+	}
+
+	option = {
+		name = "EVTOPTB19381"
+	}
+	
+}
+
+country_event = {
+	id = 19382
+	title = "EVTNAME19382"
+	# EVTNAME19382;Nuclear Peace
+	desc = "EVTDESC19382"
+	# EVTDESC19382;$FROMCOUNTRY$ requests us to agree to a status quo peace under threat of MAD. In military strategy, assured destruction is where behaviors or choices are deterred because they will lead to overwhelming punitive consequences. It was most often discussed as mutually assured destruction (MAD), assuming there are exactly two parties in the conflict.
+	picture = "nuclear_peace"
+
+	is_triggered_only = yes # victorious attacker of nuclear/nuclear umbrella country
+	# FROM nuclear super power
+	
+	option = {
+		name = "EVTOPTA19382"
+		# EVTOPTA19382;Ok, accept status quo peace, to avoid MAD
+		any_country = {
+			limit = { war_with = THIS has_country_modifier = nuclear_peace }
+			end_war = THIS
+		}
+	}
+
+	option = {
+		name = "EVTOPTB19382"
+		# EVTOPTB19382;Buy time to negotiate peace - before nuclear_peace is enforced by $FROMCOUNTRY$
+		add_country_modifier = { name = stall_nuclear_peace duration = 30 }		
+		set_country_flag = stall_nuclear_peace
+	}
+	
+}
+
+country_event = {
+	id = 19383
+	title = "EVTNAME19383"
+	# EVTNAME19382;Nuclear Peace Enforced
+	desc = "EVTDESC19383"
+	# EVTDESC19383;$FROMCOUNTRY$ requested us to agree to a status quo peace under threat of MAD. In military strategy, assured destruction is where behaviors or choices are deterred because they will lead to overwhelming punitive consequences. It was most often discussed as mutually assured destruction (MAD), assuming there are exactly two parties in the conflict. The matter will now be settled peacefully.
+	picture = "nuclear_peace"
+
+	trigger = {
+		has_country_flag = stall_nuclear_peace
+		NOT = { has_country_modifier = stall_nuclear_peace }
+	}
+	
+	immediate = { clr_country_flag = stall_nuclear_peace }
+	
+	option = {
+		name = "EVTOPTA19383"
+		# EVTOPTA19383;Ok, we have to accept peace to avoid MAD
+		any_country = {
+			limit = { has_country_modifier = nuclear_peace war_with = THIS }
+			country_event = 19380
+		}
+	}
+
+}
+
+#################################################################################
+#																				#
+#          These events deal with new governments after a gov change war		#
+#																				#
+#################################################################################
+
+country_event = {
+	id = 96085
+	title = "EVTNAME96085" #Democracy
+	desc = "EVTDESC96085"
+	picture = "coup"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA96085" #We welcome the new regime.
+		country_event = 1512206
+		government = democracy
+		ruling_party_ideology = liberal
+		political_reform = universal_weighted_voting
+		clr_country_flag = tory_election_win
+		clr_country_flag = socialist_election_win
+		set_country_flag = liberal_election_win
+		clr_country_flag = communist_election_win
+		clr_country_flag = fascist_election_win
+		clr_country_flag = reactionary_election_win
+		clr_country_flag = anarcho_liberal_election_win
+		clr_country_flag = social_liberal_election_win
+
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = { has_country_flag = friendly_democracy }
+			}
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = friendly_democracy
+				truce_with = THIS
+			}
+			relation = { who = THIS value = 400 }
+			diplomatic_influence = { who = THIS value = 100 }
+			create_alliance = THIS
+			clr_country_flag = friendly_democracy
+		}
+		capital_scope = {
+			any_pop = {
+				limit = { literacy = 0.2 }
+				ideology = { factor = 0.1 value = liberal }
+			}
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = traditionalist
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = communist
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = populist
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = -4
+			}
+		}
+	}
+}
+
+country_event = {
+	id = 96086
+	title = "EVT_sanctions_NAME" 
+	desc = "EVT_sanctions_DESC"
+	picture = "sanctions"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_sanctions_OPTA" #Darn!
+		
+		add_country_modifier = { name = stock_market_crash duration = 365 }
+
+		prestige = -25
+
+		random_country = { limit = { is_sphere_leader_of = THIS } diplomatic_influence = { who = THIS value = -100 } }
+
+		any_greater_power = { limit = { NOT = { ruling_party_ideology = communist } } relation = { who = THIS value = -100 } diplomatic_influence = { who = THIS value = -100 } }
+	}
+}
+
+country_event = {
+	id = 96088
+	title = "EVT_96088_NAME" #The New $COUNTRY_ADJ$ Authoritarian Regime
+	desc = "EVT_96088_DESC"
+	picture = "coup"
+	is_triggered_only = yes
+	
+	option = {
+		name = EVT_96088_A
+		country_event = 1512206
+		government = nationalist_dictatorship country_event = 800050
+		ruling_party_ideology = nationalist
+		clr_country_flag = tory_election_win
+		clr_country_flag = socialist_election_win
+		clr_country_flag = liberal_election_win
+		clr_country_flag = communist_election_win
+		clr_country_flag = traditionalist_election_win
+		set_country_flag = populist_election_win
+		clr_country_flag = nationalist_election_win
+		clr_country_flag = progressive_election_win
+
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = { has_country_flag = friendly_authoritarian_regime }
+			}
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = friendly_authoritarian_regime
+				truce_with = THIS
+			}
+			relation = { who = THIS value = 400 }
+			diplomatic_influence = { who = THIS value = 200 }
+			create_alliance = THIS
+			clr_country_flag = friendly_authoritarian_regime
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = socialist
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = nationalist
+				factor = -4
+			}
+		}
+		ai_chance = { factor = 0.2 }
+	}
+
+	option = {
+		name = EVT_96088_B
+		country_event = 1512206
+		government = populist_dictatorship country_event = 800050
+		ruling_party_ideology = populist
+		clr_country_flag = tory_election_win
+		clr_country_flag = socialist_election_win
+		clr_country_flag = liberal_election_win
+		clr_country_flag = communist_election_win
+		clr_country_flag = traditionalist_election_win
+		set_country_flag = populist_election_win
+		clr_country_flag = progressive_election_win
+
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = { has_country_flag = friendly_authoritarian_regime }
+			}
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = friendly_authoritarian_regime
+				truce_with = THIS
+			}
+			relation = { who = THIS value = 400 }
+			diplomatic_influence = { who = THIS value = 200 }
+			create_alliance = THIS
+			clr_country_flag = friendly_authoritarian_regime
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = socialist
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = populist
+				factor = -4
+			}
+		}
+		ai_chance = { 
+			factor = 0.05 
+			modifier = { 
+				factor = 100  
+				is_culture_group = FROM
+			}
+		}
+	}
+
+	option = {
+		name = EVT_96088_C
+		country_event = 1512206
+		government = presidential_dictatorship country_event = 800050
+		random_country = { limit = { tag = THIS THIS = { tag = USA } } ruling_party_ideology = conservative }
+		random_country = { limit = { tag = THIS NOT = { THIS = { tag = USA } } } ruling_party_ideology = big_tent } # big_tent_politics
+		set_country_flag = tory_election_win
+		clr_country_flag = socialist_election_win
+		clr_country_flag = liberal_election_win
+		clr_country_flag = communist_election_win
+		clr_country_flag = traditionalist_election_win
+		clr_country_flag = populist_election_win
+		clr_country_flag = progressive_election_win
+
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = { has_country_flag = friendly_authoritarian_regime }
+			}
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = friendly_authoritarian_regime
+				truce_with = THIS
+			}
+			relation = { who = THIS value = 400 }
+			diplomatic_influence = { who = THIS value = 200 }
+			create_alliance = THIS
+			clr_country_flag = friendly_authoritarian_regime
+		}
+		random_country = { limit = { tag = THIS THIS = { tag = USA } }
+			any_pop = {
+				scaled_militancy = {
+					ideology = conservative
+					factor = -4
+				}
+			}
+		}
+		random_country = { limit = { tag = THIS NOT = { THIS = { tag = USA } } }
+			any_pop = {
+				scaled_militancy = {
+					ideology = big_tent
+					factor = -4
+				}
+			}
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = socialist
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 2
+			}
+		}
+		ai_chance = { factor = 0.75 }
+	}
+	
+}
+
+country_event = {
+	id = 96089
+	title = "EVT_96089_NAME" #The New $COUNTRY_ADJ$ Theocratic Regime
+	desc = "EVT_96089_DESC"
+	picture = "mullahs"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVT_96089_OPTA"
+		country_event = 1512206
+		government = theocracy country_event = 800051
+		ruling_party_ideology = traditionalist
+		clr_country_flag = tory_election_win
+		clr_country_flag = socialist_election_win
+		clr_country_flag = liberal_election_win
+		clr_country_flag = communist_election_win
+		set_country_flag = traditionalist_election_win
+		clr_country_flag = populist_election_win
+		clr_country_flag = nationalist_election_win
+		clr_country_flag = progressive_election_win
+
+		random_country = {
+			limit = {
+				is_sphere_leader_of = THIS
+				NOT = { has_country_flag = friendly_theocratic_regime }
+			}
+			diplomatic_influence = { who = THIS value = -100 }
+		}
+		random_country = {
+			limit = {
+				has_country_flag = friendly_theocratic_regime
+				truce_with = THIS
+			}
+			relation = { who = THIS value = 400 }
+			diplomatic_influence = { who = THIS value = 100 }
+			create_alliance = THIS
+			clr_country_flag = friendly_theocratic_regime
+		}
+		any_pop = {
+			scaled_militancy = {
+				ideology = socialist
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = liberal
+				factor = 2
+			}
+			scaled_militancy = {
+				ideology = traditionalist
+				factor = -4
+			}
+		}
+	}
+}
+
+country_event = {
+	title = "EVTNAME90950"
+	desc = "EVTDESC90950"
+	picture = "Prosper"
+
+	id = 90950
+
+	is_triggered_only = yes
+
+	option = {				
+		name = "EVTOPTA90950"
+		casus_belli = {
+			target = FROM
+			type = make_puppet
+			months = 12
+		}
+		
+		relation = {
+			who = FROM
+			value = -100
+		}
+		
+	}
+	
+	option = {				
+		name = "EVTOPTB90950"
+
+		relation = {
+			who = FROM
+			value = 100
+		}
+		
+	}
+
+}

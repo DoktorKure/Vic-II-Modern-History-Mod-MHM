@@ -1,0 +1,259 @@
+#Hungarian Revolution 1956 - HUN start
+country_event = {
+  id = 8501101
+  title = EVT_8501101_NAME
+  desc = EVT_8501101_DESC
+  picture = "nwo2_hungarian_revolution_1956"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HUN
+		year = 1956 
+		NOT = { year = 1960 }
+		government = proletarian_dictatorship
+		is_vassal = yes
+		vassal_of = RUS
+    	war = no
+		has_global_flag = blocsenabled
+	}
+
+	mean_time_to_happen = { months = 10 }
+
+	option = {
+		name = EVT_8501101_A #War with RUS
+
+		government = socialist_democracy 
+		country_event = 800054
+
+		#Soviet choice to restore order
+		RUS = { country_event = 8501104 }
+
+		set_global_flag = hungarian_revolution_1956
+
+		any_pop = { consciousness = 5 }
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = EVT_8501101_B #No war
+		any_pop = { 
+			militancy = 7.0 
+			ideology = { factor = 0.05 value = liberal }
+		}
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Hungarian Revolution succeeds
+country_event = {
+  id = 8501102
+  title = EVT_8501115_NAME
+  desc = EVT_8501115_DESC
+  picture = "nwo2_hungarian_revolution_1956_victory"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "The Hungarian people are now free!"
+		prestige = 250
+		any_pop = { 
+			militancy = -5.0 
+			consciousness = 10 
+			ideology = { factor = 0.10 value = nationalist }
+		}
+	}
+
+}
+
+#Hungarian Revolution fails
+country_event = {
+  id = 8501103
+  title = EVT_8501105_NAME
+  desc = EVT_8501105_DESC
+  picture = "nwo2_hungarian_revolution_1956_victory"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall submit to Soviet domination!"
+		government = proletarian_dictatorship1
+		ruling_party_ideology = communist
+		country_event = 800052
+		
+		#Domestic pops get angry
+		any_pop = { 
+			militancy = 10
+			consciousness = 10
+			ideology = { factor = 0.15 value = liberal }
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "We shall fight to be free!"
+		any_pop = { militancy = -2.0 consciousness = -3 }
+		
+		set_global_flag = 1956_HUN_war_for_indy
+		
+		#Domestic pops become nationalist
+		any_pop = { 
+			militancy = -10
+			consciousness = -10
+			ideology = { factor = 0.15 value = nationalist }
+		}
+		
+		#War of independence
+		war = { 
+			target = RUS 
+			attacker_goal = { casus_belli = become_independent }
+			defender_goal = { } 
+		}
+
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Soviet decision to invade Hungary
+country_event = {
+	id = 8501104
+	title = EVT_8501103_NAME
+	desc = EVT_8501103_DESC
+	picture = "nwo2_hungarian_revolution_1956"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Restore order in Hungary!"
+		
+		badboy = 5
+		
+		#Domestic pops are happy
+		any_pop = { 
+			militancy = -2.0 
+			consciousness = -3 
+		}
+
+		#US intervention?
+		USA = { country_event = 8501105 }
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Let them be free"
+		prestige_factor = -0.1
+		diplomatic_influence = { who = HUN value = -100 }
+		release_vassal = HUN
+		
+		#Domestic pops get angry
+		any_pop = { 
+			militancy = 2.0 
+			consciousness = 3 
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+		#US is happy
+		relation = { who = USA value = 100 }
+		
+		#Hungarian Revolution succeeds
+		HUN = { country_event = 8501102 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Soviet decision to invade Hungary - USA reaction
+country_event = {
+	id = 8501105
+	title = EVT_8501103_NAME
+	desc = EVT_8501103_DESC
+	picture = "nwo2_hungarian_revolution_1956"
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Issue only protests"
+
+		prestige_factor = -0.05
+		
+		RUS = { prestige_factor = -0.025 badboy = 2.5 }
+		relation = { who = RUS value = -100 }
+		
+		#Hungarian Revolution fails!
+		HUN = { country_event = 8501103 }
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Fight alongside Hungary (WW3)"
+
+		diplomatic_influence = { who = HUN value = 200 }
+		relation = { who = HUN value = 200 }
+		create_alliance = HUN
+
+		#USSR goes to war against Hungary!
+		RUS = {
+			release_vassal = HUN
+			diplomatic_influence = { who = HUN value = -200 }
+			war = {
+				target = HUN
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo } 
+			}
+		}
+
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Hungarian Revolution defeated
+country_event = {
+  id = 8501108
+  title = "Restoration of Soviet Rule"
+  desc = EVTDESC8501108
+  picture = "hungarian_communist_gov_change"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HUN
+		has_global_flag = 1956_HUN_war_for_indy
+		NOT = { year = 1960 }
+		
+		government = proletarian_dictatorship
+		vassal_of = RUS
+    	war = no
+		
+		#Cold War
+		has_global_flag = blocsenabled
+	}
+
+
+	option = {
+		name = "Long live the new Chairman Kadar!"
+		prestige_factor = -0.10
+		government = proletarian_dictatorship1
+		ruling_party_ideology = communist
+		country_event = 800052
+
+		#Domestic pops get angry
+		any_pop = {
+			consciousness = 5
+			ideology = { 
+				factor = 0.15 
+				value = communist 
+			}
+		}
+
+	}
+	
+}

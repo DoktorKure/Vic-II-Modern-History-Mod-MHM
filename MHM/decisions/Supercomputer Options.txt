@@ -1,0 +1,122 @@
+political_decisions = {
+
+	changehcp = {
+		picture = "changehcp"
+		potential = {
+			has_country_flag = quantum_pc
+			OR = {
+				has_country_modifier = hcphigh
+				has_country_modifier = hcpmedium
+				has_country_modifier = hcplow
+			}
+		}
+		alert = no
+		allow = {
+			war = no
+			election = no
+		}
+		effect = {
+			remove_country_modifier = hcphigh
+			remove_country_modifier = hcpmedium
+			remove_country_modifier = hcplow
+			clr_country_flag = hcphigh
+			clr_country_flag = hcpmedium
+			clr_country_flag = hcplow
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_country_modifier = hcphigh
+				OR = {
+					economic_policy = state_capitalism
+					economic_policy = planned_economy
+					economic_policy = planned_economy1
+				}
+			}
+			modifier = {
+				factor = 0
+				has_country_modifier = hcpmedium
+				economic_policy = interventionism
+			}
+			modifier = {
+				factor = 0
+				has_country_modifier = hcplow
+				economic_policy = laissez_faire
+			}
+		}
+	}
+
+	hcphigh = {
+		picture = "hcphigh"
+		potential = {
+			has_country_flag = quantum_pc
+			NOT = { OR = {
+				has_country_modifier = hcphigh
+				has_country_modifier = hcpmedium
+				has_country_modifier = hcplow
+			} }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			add_country_modifier = { name = hcphigh duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { OR = { economic_policy = state_capitalism economic_policy = planned_economy economic_policy = planned_economy1 } }
+			}
+		}
+	}
+	hcpmedium = {
+		picture = "hcpmedium"
+		potential = {
+			has_country_flag = quantum_pc
+			NOT = { OR = {
+				has_country_modifier = hcphigh
+				has_country_modifier = hcpmedium
+				has_country_modifier = hcplow
+			} }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			add_country_modifier = { name = hcpmedium duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { economic_policy = interventionism }
+			}
+		}
+	}
+	hcplow = {
+		picture = "hcplow"
+		potential = {
+			has_country_flag = quantum_pc
+			NOT = { OR = {
+				has_country_modifier = hcphigh
+				has_country_modifier = hcpmedium
+				has_country_modifier = hcplow
+			} }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			add_country_modifier = { name = hcplow duration = -1 }
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				NOT = { economic_policy = laissez_faire }
+			}
+		}
+	}
+}

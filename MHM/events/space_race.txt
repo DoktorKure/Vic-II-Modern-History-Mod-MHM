@@ -1,0 +1,306 @@
+#RUS builds satellite first - Sputnik
+country_event = {
+	id = 8211008
+	title = EVT_8211008_NAME
+	desc = EVT_8211008_DESC
+	picture = "nwo2_sputnik"
+	
+	fire_only_once = yes
+
+	major = yes 
+
+	trigger = {
+    	tag = RUS
+		has_country_flag = space_satellite
+		NOT = { year = 1990 }
+		
+		#Other Superpower was ahead
+		NOT = { has_global_flag = USA_satellite_first }
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+	}
+
+	option = {
+		name = "A glorious day for $COUNTRY_ADJ$ Science!"
+		set_global_flag = RUS_satellite_first
+		
+		years_of_research = 1
+		
+		prestige = 250
+		any_pop = { militancy = -2 consciousness = -5 }
+		
+		USA = { 
+			prestige = -250 
+			any_pop = { militancy = 2 consciousness = 5 dominant_issue = { value = jingoism factor = 0.05 } } 
+		}
+		
+	}
+	
+}
+
+#USA builds satellite first - Explorer 1
+country_event = {
+	id = 8211010
+	title = EVT_8211010_NAME
+	desc = EVT_8211010_DESC
+	picture = "nwo2_explorer_1"
+	
+	fire_only_once = yes
+
+	major = yes
+
+	trigger = {
+    	tag = USA
+		has_country_flag = space_satellite
+		NOT = { year = 1990 }
+		
+		#Other Superpower was ahead
+		NOT = { has_global_flag = RUS_satellite_first }
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+	}
+
+	option = {
+		name = "A glorious day for $COUNTRY_ADJ$ Science!"
+		set_global_flag = USA_satellite_first
+		
+		years_of_research = 1
+		
+		prestige = 250
+		any_pop = { militancy = -2 consciousness = -5 }
+		
+		RUS = { 
+			prestige = -250 
+			any_pop = { militancy = 2 consciousness = 5 dominant_issue = { value = jingoism factor = 0.05 } } 
+		}
+		
+	}
+	
+}
+
+#RUS first Man in Space
+country_event = {
+	id = 8211015
+	title = EVT_8211015_NAME
+	desc = EVT_8211015_DESC
+	picture = "nwo2_gagarin"
+	
+	fire_only_once = yes
+
+	major = yes
+
+	trigger = {
+    	tag = RUS
+		has_country_flag = space_man
+		NOT = { year = 1990 }
+		
+		#Other Superpower was ahead
+		NOT = { has_global_flag = USA_space_man_first }
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+	}
+
+	option = {
+		name = "Another glorious day for $COUNTRY_ADJ$ Science!"
+		set_global_flag = RUS_space_man_first
+		
+		years_of_research = 1
+		
+		prestige = 250
+		any_pop = { militancy = -2 consciousness = -5 }
+		
+		USA = { 
+			prestige = -250 
+			any_pop = { militancy = 2 consciousness = 5 dominant_issue = { value = jingoism factor = 0.05 } } 
+		}
+		
+	}
+	
+}
+
+#USA first Man in Space
+country_event = {
+	id = 8211017
+	title = EVT_8211017_NAME
+	desc = EVT_8211017_DESC
+	picture = "nwo2_alan_shepard"
+	
+	fire_only_once = yes
+
+	major = yes
+
+	trigger = {
+    	tag = USA
+		has_country_flag = space_man
+		NOT = { year = 1990 }
+		
+		#Other Superpower was ahead
+		NOT = { has_global_flag = RUS_space_man_first }
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+	}
+
+	option = {
+		name = "Another glorious day for $COUNTRY_ADJ$ Science!"
+		set_global_flag = USA_space_man_first
+		
+		years_of_research = 1
+		
+		prestige = 250
+		any_pop = { militancy = -2 consciousness = -5 }
+		
+		RUS = { 
+			prestige = -250 
+			any_pop = { militancy = 2 consciousness = 5 dominant_issue = { value = jingoism factor = 0.05 } } 
+		}
+		
+	}
+	
+}
+
+#RUS first Man on the moon
+country_event = {
+	id = 8211022
+	title = EVT_8211022_NAME
+	desc = EVT_8211022_DESC
+	picture = "nwo2_in_the_ocean_of_storms"
+  
+	fire_only_once = yes
+
+	major = yes
+
+	trigger = {
+    	tag = RUS
+		has_country_flag = space_moon
+		NOT = { year = 1990 }
+		
+		#Other Superpower was ahead
+		NOT = { has_global_flag = USA_space_moon_first }
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+	}
+
+	option = {
+		name = "One small step for man, one giant leap for Communism!"
+		set_global_flag = RUS_space_moon_first
+		
+		years_of_research = 1
+		
+		prestige = 250
+		any_pop = { militancy = -2 consciousness = -5 }
+		
+		USA = { 
+			prestige = -250 
+			any_pop = { militancy = 2 consciousness = 5 dominant_issue = { value = jingoism factor = 0.05 } } 
+		}
+		
+	}
+	
+}
+
+#USA first Man on the moon
+country_event = {
+	id = 8211024
+	title = EVT_8211024_NAME
+	desc = EVT_8211024_DESC
+	picture = "nwo2_apollo_11"
+	
+	fire_only_once = yes
+
+	major = yes
+
+	trigger = {
+    	tag = USA
+		has_country_flag = space_moon
+		NOT = { year = 1990 }
+		
+		#Other Superpower was ahead
+		NOT = { has_global_flag = RUS_space_moon_first }
+		
+		#Cold War ongoing
+		has_global_flag = blocsenabled
+	}
+
+	option = {
+		name = "One small step for man, one giant leap for mankind!"
+		set_global_flag = USA_space_moon_first
+		
+		years_of_research = 1
+		
+		prestige = 250
+		any_pop = { militancy = -2 consciousness = -5 }
+		
+		RUS = { 
+			prestige = -250 
+			any_pop = { militancy = 2 consciousness = 5 dominant_issue = { value = jingoism factor = 0.05 } } 
+		}
+		
+	}
+	
+}
+
+#Mikhail Tikhonravov invents multi-stage rockets
+country_event = {
+	id = 8211025
+	title = "A Multi-Stage Rocket"
+	desc = EVTDESC8211025
+	picture = "sov_rocket_man"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1956
+		NOT = { year = 1990 }
+		
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+		
+		has_country_modifier = space_agency
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "An accomplishment of Soviet science!"
+		prestige = 20
+		research_points = 250
+	}
+
+}
+
+#Kupriyanovich invents one of the first mobile phones
+country_event = {
+	id = 8211026
+	title = "Leonid Kupriyanovich"
+	desc = EVTDESC8211026
+	picture = "sov_kupriyanovich"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1961
+		NOT = { year = 1990 }
+		
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+		
+		NOT = { has_country_flag = kupriyanovich }
+		
+		semiconductor = 1
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "An accomplishment of Soviet science!"
+		set_country_flag = kupriyanovich
+		prestige = 50
+		research_points = 500
+	}
+
+}

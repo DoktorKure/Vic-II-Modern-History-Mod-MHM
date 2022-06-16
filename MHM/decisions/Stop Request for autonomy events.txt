@@ -1,0 +1,76 @@
+political_decisions = {
+
+decolonise_yes = {
+	picture = "decolonise_yes"
+	potential = {
+
+			OR = { 
+				tag = BEL
+				tag = NET
+				tag = POR
+				tag = SPA
+				tag = USA
+				tag = FRA
+				tag = NZL
+				tag = AST
+				tag = ENG
+				tag = FBU
+				}
+
+			OR = { 
+				ai = no
+			minorities_reform = minorities_oppression
+			}
+
+NOT = { has_country_flag = decolonise_yes }
+
+
+		}
+
+	allow = {
+		election = no
+OR = { ai = no tag = FBU ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist AND = { tag = FRA OR = { war_with = ALG ALG = { exists = no } } } }
+	}
+
+	effect = {
+	set_country_flag = decolonise_yes
+	}
+	ai_will_do = {
+		factor = 1
+	}
+}
+
+decolonise_no = {
+	picture = "decolonise_no"
+	potential = {
+has_country_flag = decolonise_yes
+any_owned_province = { is_colonial = yes has_province_modifier = decolonise_yes }
+
+		}
+
+	allow = {
+		election = no
+
+			OR = { 
+				ai = no
+	NOT = { minorities_reform = minorities_oppression }
+			}
+
+OR = { ai = no ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = communist ruling_party_ideology = communist_social }
+
+	}
+
+alert = no
+
+	effect = {
+	clr_country_flag = decolonise_yes
+any_owned = { remove_province_modifier = decolonise_yes }
+	}
+	ai_will_do = {
+		factor = 1
+modifier = { factor = 0 tag = FBU }
+modifier = { factor = 0 AND = { tag = FRA OR = { war_with = ALG ALG = { exists = no } } } }
+	}
+}
+
+}

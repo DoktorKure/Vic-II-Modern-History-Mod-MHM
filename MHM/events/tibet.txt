@@ -1,0 +1,176 @@
+#PRC demands the incorporation of Tibet
+country_event = {
+  id = 8015100
+  title = "The Incorporation of Tibet?"
+  desc = EVTDESC8015100
+  picture = "nwo2_annexation_of_tibet"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		year = 1950
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1992 }
+		
+		government = proletarian_dictatorship
+		is_vassal = no
+		
+		TIB = { exists = yes is_vassal = no }
+
+		#PRC won the Civil War
+		has_global_flag = CHI_won_civil_war
+	}
+
+	mean_time_to_happen = { months = 10 }
+
+	option = {
+		name = "Affirm our sovereignty, allow autonomy"
+		prestige = 100
+		create_vassal = TIB
+		THIS = { diplomatic_influence = { who = TIB value = 200 } }
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "We shall annex Tibet!"
+		prestige = 50
+		badboy = 5 
+		
+		#War to annex Tibet
+		war = { 
+			target = TIB
+			attacker_goal = { casus_belli = annex_core_country } 
+			defender_goal = { casus_belli = humiliate } 
+		}
+		
+		1591 = { change_controller = CHI }
+		1588 = { change_controller = CHI }
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+	option = {
+		name = "Recognize their independence"
+		prestige = -200
+		badboy = -5
+		any_owned = { limit = { is_core = TIB } secede_province = TIB }
+		TIB = { any_owned = { limit = { is_core = CHI } remove_core = CHI } }
+		
+		relation = { who = HND value = 100 } # India is happy with this
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Tibet explusion of the KMT and PRC
+country_event = {
+  id = 8015101
+  title = "The Situation in China"
+  desc = EVTDESC8015101
+  picture = "nwo2_tibet_indy"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = TIB
+		year = 1949
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1992 }
+		
+		government = absolute_monarchy
+		is_vassal = no
+		war = no
+		
+		#Chinese Civil War
+		CHI = { war_with = KMT }
+		
+		#PRC is about to win
+		CHI = { controls = 2221 }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Try to maintain independence from China"
+		prestige = 50
+		
+		KMT = { diplomatic_influence = { who = TIB value = -200 } }
+		CHI = { diplomatic_influence = { who = TIB value = -200 } }
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Let the Chinese gain influence"
+		
+		KMT = { diplomatic_influence = { who = TIB value = 50 } }
+		CHI = { diplomatic_influence = { who = TIB value = 50 } }
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#1959 Tibetan uprising
+country_event = {
+	id = 1512023
+	title = "$YEAR$ Tibetan uprising"
+	desc = EVTDESC1512023
+	picture = "tib_sar_chance"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = CHI
+		year = 1959
+		NOT = { year = 1990 }
+		government = proletarian_dictatorship
+		is_vassal = no
+		is_our_vassal = TIB # Vassalized from the 17-point agreement
+	}
+
+	mean_time_to_happen = { 
+		months = 3
+	}
+
+	option = {
+		name = "Crush the rebellion and annex Tibet!"
+		prestige = -50
+		badboy = 5
+		
+		release_vassal = TIB
+		CHI = {
+			war = {
+				target = TIB
+				attacker_goal = { casus_belli = annex_core_country }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = no
+			}
+		}
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Give in to the demands for self-autonomy in Tibet."
+		prestige = -100
+		badboy = -5
+		any_owned = {
+			limit = { is_core = TIB }
+			secede_province = TIB
+		}
+		relation = { who = HND value = 100 } # India is happy with this
+		ai_chance = { factor = 0.1 }
+	}
+
+	option = {
+		name = "Recognize their independence."
+		prestige = -200
+		badboy = -10
+		any_owned = { limit = { is_core = TIB } secede_province = TIB }
+		TIB = { any_owned = { limit = { is_core = CHI } remove_core = CHI } }
+		
+		relation = { who = HND value = 200 } # India is very happy with this
+		ai_chance = { factor = 0.1 }
+	}
+
+}

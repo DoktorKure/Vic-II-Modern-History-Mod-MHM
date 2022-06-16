@@ -1,0 +1,369 @@
+#Angolan War of Independence
+country_event = {
+  id = 8011700
+  title = EVT_8011700_NAME # Insurgency in Portuguese Angola
+  desc = EVT_8011700_DESC
+  picture = "angola_colonial_war"
+  fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		year = 1961
+		NOT = { year = 1990 }
+		owns = 1999 # Luanda
+		controls = 1999
+		is_vassal = no
+		ANG = { exists = no }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = EVT_8011700_A
+		release = ANG
+
+		war = {
+			target = ANG
+			attacker_goal = { casus_belli = colonial_war }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = EVT_8011700_B
+		prestige_factor = -0.05
+		release = ANG
+		relation = { who = ANG value = 200 }
+		diplomatic_influence = { who = ANG value = 200 }
+		sphere_owner = { diplomatic_influence = { who = ANG value = 200 } }
+		any_pop = { militancy = 3.0 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Mozambique War of Independence
+country_event = {
+  id = 8011701
+  title = EVT_8011701_NAME # Insurgency in Portuguese Mozambique
+  desc = EVT_8011701_DESC
+  picture = "mozambique_colonial_war"
+  fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		year = 1964
+		owns = 2049 # Maputo
+		controls = 2049
+		is_vassal = no
+		MOZ = { exists = no }
+	}
+
+	mean_time_to_happen = { months = 9 }
+
+	option = {
+		name = EVT_8011701_A
+		release = MOZ
+
+		war = {
+			target = MOZ
+			attacker_goal = { casus_belli = colonial_war }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = EVT_8011701_B
+		prestige_factor = -0.05
+		release = MOZ
+		relation = { who = MOZ value = 200 }
+		diplomatic_influence = { who = MOZ value = 200 }
+		sphere_owner = { diplomatic_influence = { who = MOZ value = 200 } }
+		any_pop = { militancy = 3.0 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Insurgency in Portuguese Guinea
+country_event = {
+  id = 8011702
+  title = EVT_8011702_NAME # Insurgency in Portuguese Guinea
+  desc = EVT_8011702_DESC
+  picture = "guinea_bissau_colonial_war"
+  fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		year = 1961
+		owns = 1877 # Bissau
+		controls = 1877
+		war = no
+		is_vassal = no
+		GUB = { exists = no }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = EVT_8011702_A
+		release = GUB
+		
+		GUB = { ruling_party_ideology = communist }
+
+		war = {
+			target = GUB
+			attacker_goal = { casus_belli = colonial_war }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = EVT_8011702_B
+		prestige_factor = -0.05
+		release = GUB
+		relation = { who = GUB value = 200 }
+		diplomatic_influence = { who = GUB value = 200 }
+		sphere_owner = { diplomatic_influence = { who = GUB value = 200 } }
+		any_pop = { militancy = 3.0 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Overseas Military Defeat - Trigger the Carnation Revolution
+country_event = {
+  id = 8011703
+  title = EVT_8011703_NAME # Overseas Military Defeat
+  desc = EVT_8011703_DESC
+  picture = "nwo2_carnation_revolution"
+  fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		year = 1963
+		NOT = { year = 1990 }
+		
+		#Main colonies are independent
+		OR = {
+			ANG = { exists = yes NOT = { vassal_of = POR } }
+			MOZ = { exists = yes NOT = { vassal_of = POR } }
+		}
+
+		war = no
+		
+		is_vassal = no
+
+	}
+
+	mean_time_to_happen = { months = 120 }
+
+	option = {
+		name = EVT_8011703_A
+		prestige_factor = -0.05
+		set_country_flag = carnation_revolution 
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = EVT_8011703_B
+		any_pop = { militancy = 8.0 consciousness = 3.0 }
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		any_owned = { limit = { NOT = { is_core = POR } } add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+		badboy = 10
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Processo Revolucionário em Curso
+country_event = {
+  id = 8011704
+  title = EVT_8011704_NAME # Processo Revolucionário em Curso
+  desc = EVT_8011704_DESC
+  picture = "nwo2_carnation_revolution"
+  fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		government = democracy
+		has_global_flag = blocsenabled
+		war = no
+		is_vassal = no
+	}
+
+	mean_time_to_happen = { months = 12 }
+
+	option = {
+		name = EVT_8011703_A
+		government = proletarian_dictatorship 
+		country_event = 800052
+		any_pop = { militancy = 4.0 consciousness = 3.0 }
+		ai_chance = { factor = 0.2 }
+	}
+
+	option = {
+		name = EVT_8011703_B
+		country_event = 800054
+		any_pop = { limit = { pop_majority_ideology = communist } militancy = 6.0 consciousness = 6.0 }
+		ai_chance = { factor = 0.8 }
+	}
+
+}
+
+#The Carnation Revolution
+country_event = {
+  id = 8011705
+  title = EVT_8011705_NAME
+  desc = EVT_8011705_DESC
+  picture = "nwo2_carnation_revolution"
+
+	trigger = {
+		tag = POR
+		OR = { 
+			government = presidential_dictatorship
+			government = populist_dictatorship
+			government = nationalist_dictatorship
+		}
+		has_country_flag = carnation_revolution
+		is_vassal = no
+		war = no
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = EVT_8011705_A
+		prestige = 100
+		badboy = -5
+		government = democracy
+		country_event = 800054
+		any_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
+		sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
+		
+		# African colonies release unconditionally
+		
+		release = ANG
+		release = MOZ
+		release = GUB
+		release = STP
+		release = CPV
+		
+		# Timor -> indonesia.txt events
+
+	
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = EVT_8011705_B
+		any_pop = { militancy = 2.0 consciousness = 2 }
+		any_pop = { limit = { NOT = { culture = portuguese } } militancy = 5.0 consciousness = 4 }
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		any_owned = { 
+			limit = { NOT = { is_core = POR } } 
+			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+		}
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+# if Portugal become democratic earlier than the Canation Revolution they still should release there empire.
+country_event = {
+  id = 8011706
+  title = EVT_8011705_NAME
+  desc = EVT_8011705_DESC
+  picture = "nwo2_carnation_revolution"
+  fire_only_once = yes
+  
+	trigger = {
+		tag = POR
+		OR = { government = democracy government = democracy1 }
+		NOT = { has_country_flag = carnation_revolution }
+		OR = { 
+			owns = 1877 # Bissau
+			owns = 2049 # Maputo
+			owns = 1999 # Luanda
+		}
+		has_global_flag = blocsenabled
+		is_vassal = no
+		war = no
+	}
+  
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Decolonise the empire!"
+		sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
+		
+		set_country_flag = carnation_revolution_version_2
+		
+		# African colonies release unconditionally
+		
+		release = ANG
+		release = MOZ
+		release = GUB
+		release = STP
+		release = CPV
+		
+		# Timor -> indonesia.txt events
+
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "We shall become a democratic empire"
+		any_pop = { militancy = 2.0 consciousness = 2 }
+		any_pop = { limit = { NOT = { culture = portuguese } } militancy = 5.0 consciousness = 4 }
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		any_owned = { limit = { NOT = { is_core = POR } } add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#Begin the return of Macau to China
+country_event = {
+  id = 8011707
+  title = "Return Macau to China?"
+  desc = EVTDESC8011707
+  picture = "POR_MCA_1987"
+  fire_only_once = yes
+  
+	trigger = {
+		tag = POR
+		OR = { government = democracy government = democracy1 }
+		OR = { has_country_flag = carnation_revolution has_country_flag = carnation_revolution_version_2 }
+		CHI = { greater_power = yes is_vassal = no }
+		is_vassal = no
+		war = no
+	}
+  
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Relinquish all claims over Macau"
+		prestige = 50
+		1498 = { remove_core = POR }
+		set_country_flag = POR_to_return_Macau
+		relation = { who = CHI value = 100 }
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Macau shall remain Portuguese!"
+		badboy = 5
+		relation = { who = CHI value = -100 }
+		1498 = { add_core = POR }
+		ai_chance = { factor = 0.1 }
+	}
+
+}

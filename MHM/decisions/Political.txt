@@ -1,0 +1,189 @@
+# replace_path vic2 bug force "P"olitical.txt as name
+political_decisions = {
+
+	five_year_plan = {
+		picture = "five_year_plan"
+		potential = {
+			OR = {
+				economic_policy = planned_economy
+				economic_policy = planned_economy1
+			}
+			NOT = { has_country_modifier = five_year_plan }
+		}
+
+		allow = {
+			#Must have some industry to begin with
+			industrial_score = 100
+		}
+
+		effect = {
+		
+			#Remove specialisation modifiers
+			remove_country_modifier = spchigh
+			remove_country_modifier = spcmedium
+			remove_country_modifier = spclow
+			remove_country_modifier = spcno
+			clr_country_flag = spchigh
+			clr_country_flag = spcmedium
+			clr_country_flag = spclow
+			clr_country_flag = spcno
+		
+			#Choose where to specialise
+			country_event = 1610134
+		
+			add_country_modifier = { name = five_year_plan duration = 1825 }
+			
+			#Add money to Executives if THIS is rich
+			random_owned = { limit = { owner = { money = 10000 } } owner = { aristocrats = { money = 100 } } }
+			random_owned = { limit = { owner = { money = 100000 } } owner = { aristocrats = { money = 200 } } }
+			random_owned = { limit = { owner = { money = 1000000 } } owner = { aristocrats = { money = 400 } } }
+			random_owned = { limit = { owner = { money = 10000000 } } owner = { aristocrats = { money = 800 } } }
+			random_owned = { limit = { owner = { money = 100000000 } } owner = { aristocrats = { money = 1000 } } }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	leave_soi = {
+		alert = no
+		picture = "leave_soi"
+		potential = {
+			part_of_sphere = yes
+			
+			NOT = { has_country_flag = leave_soi_attempted }
+		}
+		allow = {
+		
+			#Pacifists will not seek war
+			NOT = { war_policy = pacifism }
+		
+			#Appropriate war condition
+			war = no
+			has_recently_lost_war = no
+			NOT = { is_disarmed = yes }
+			
+			#Not a subject nation
+			is_vassal = no
+
+		}
+		effect = { 
+			set_country_flag = leave_soi_attempted
+			sphere_owner = { country_event = 13201 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			#Sphered nations don't try if the sphere owner is way more powerful
+			modifier = { 
+				factor = 0 
+				sphere_owner = { brigades_compare = 1.5 }
+			}
+			
+			#Sphered nations only want to leave if relation is abysmal
+			modifier = { 
+				factor = 0 
+				sphere_owner = { relation = { who = THIS value = -175 } } 
+			}
+		}
+	}
+	
+	nationalize = {
+		alert = no
+		picture = "nationalize"	
+		potential = {
+			is_greater_power = no
+			
+			#Can nationalise
+			can_nationalize = yes 
+			NOT = { has_country_modifier = nationalisation_in_progress }
+			
+			NOT = { government = sar_government }
+			NOT = { government = colonial_government }
+			NOT = { government = mandate_government }
+		}
+		allow = {
+
+			war = no
+			is_vassal = no
+			election = no
+			
+			#Don't risk a war
+			NOT = { has_recently_lost_war = yes }
+			NOT = { is_disarmed = yes }
+			NOT = { war_policy = pacifism }
+			OR = { ai = no military_score = 100 }
+			
+			#Country is stable
+			NOT = { num_of_revolts = 1 }
+			NOT = { any_owned_province = { country_units_in_province = REB } }
+			NOT = { average_militancy = 7 }
+			total_amount_of_divisions = 10
+
+			#Appropriate economic policy
+			OR = { 
+				ai = no
+				economic_policy = state_capitalism
+				economic_policy = planned_economy
+				economic_policy = planned_economy1
+			}
+			
+			#Sphere and no sphere behaviour
+			OR = {
+			
+				#Player can always do it if they liked
+				ai = no
+			
+				#Un-sphere allows AI to do anything
+				part_of_sphere = no
+				
+				#Sphered AI won't do it unless they have bad relations with their sphere owner
+				AND = { 
+					part_of_sphere = yes
+					sphere_owner = { 
+						NOT = { relation = { who = THIS value = -150 } } 
+					} 
+				}
+			}
+	
+		}
+		effect = {
+			prestige = 50
+
+			badboy = 5
+			
+			nationalize = yes
+
+			add_country_modifier = { name = nationalisation_in_progress duration = 3650 }
+
+			#Sanctions on THIS
+			country_event = 96086 
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = { 
+				factor = 0 
+				
+				#In a sphere
+				part_of_sphere = yes
+				
+				#Sphere owner has x2 the number of brigades as THIS
+				sphere_owner = { brigades_compare = 2 } 
+			}
+			
+			modifier = { 
+				factor = 0 
+				
+				#In a sphere
+				part_of_sphere = yes
+				
+				#Sphere owner is also a communist dictatorship
+				sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+			}
+			
+		}
+
+	}
+
+}

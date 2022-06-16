@@ -1,0 +1,17 @@
+owner = RUS
+controller = RUS
+add_core = UZB
+trade_goods = wool
+life_rating = 35
+terrain = dry_grassland
+colonial = 0
+1992.1.1 = {
+owner = UZB
+controller = UZB
+colonial = 0
+state_building = {
+	level = 5
+	building = fabric_factory
+	upgrade = yes
+}
+}

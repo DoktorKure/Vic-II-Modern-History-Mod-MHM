@@ -1,0 +1,38 @@
+political_decisions = {
+
+	return_of_austrian_lands = {
+		picture = "austrian_lands"
+		potential = {
+			tag = AUS
+			
+			#Any AUS core is owned by another country
+			any_core = { NOT = { owned_by = AUS } }
+			
+			#West Austria does not exist
+			ROA = { exists = no }
+			
+			NOT = { has_global_flag = lands_returned }
+		}
+		allow = {
+			is_vassal = no
+			war = no
+			election = no
+			
+			any_core = { owner = { is_vassal = no } NOT = { owned_by = AUS } }
+		}
+		effect = {
+			prestige = 25
+			any_country = {
+				limit = { 
+					exists = yes
+					is_vassal = no 
+					any_owned_province = { is_core = AUS } 
+				}
+				country_event = 1400050
+			}
+			set_global_flag = lands_returned
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+}

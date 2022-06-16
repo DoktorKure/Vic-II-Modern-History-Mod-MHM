@@ -1,0 +1,306 @@
+graphical_culture = EuropeanGC
+color = { 181 72 106 }
+party = {
+		name = "Balli Kombetar"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1949.7.7
+}
+party = {
+		name = "Free Albania Committee"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1949.7.7
+		end_date = 1989.12.23
+}
+party = {
+		name = "Albanian National Front Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1989.12.23
+		end_date = 2092.1.1
+}
+party = {
+		name = "PDIUM"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 2011.3.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Popular Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1992.12.12
+}
+party = {
+		name = "Unity for Human Rights Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1992.12.12
+		end_date = 2092.1.1
+}
+party = {
+		name = "Popular Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1990.12.12
+}
+party = {
+		name = "Democratic Party of Albania"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1990.12.12
+		end_date = 2092.1.1
+}
+party = {
+		name = "Liberal Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1990.12.12
+}
+party = {
+		name = "Democratic Party of Albania"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1990.12.12
+		end_date = 2092.1.1
+}
+party = {
+		name = "Socialist Party of Albania"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "LSI"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2004.9.6
+		end_date = 2092.1.1
+}
+party = {
+		name = "Progressive Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1991.3.1
+}
+party = {
+		name = "Social Democratic Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1991.3.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_populist_0_greek_ALB"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1990.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Balli Kombetar"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1949.7.7
+}
+party = {
+		name = "Free Albania Committee"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1949.7.7
+		end_date = 1991.7.7
+}
+party = {
+		name = "National Unity Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1991.7.7
+		end_date = 2091.1.1
+}
+party = {
+		name = "Legaliteti"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Albania"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1948.1.1
+}
+party = {
+		name = "Party of Labour of Albania"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1948.1.1
+		end_date = 1991.6.12
+}
+party = {
+		name = "Communist Party of Albania"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1991.6.12
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Albania"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1948.1.1
+}
+party = {
+		name = "Party of Labour of Albania"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1948.1.1
+		end_date = 1991.6.12
+}
+party = {
+		name = "Communist Party of Albania"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1991.6.12
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	cruiser = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	modern_cruiser = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	frigate = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	modern_destroyer = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	destroyer = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	submarine = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+
+}

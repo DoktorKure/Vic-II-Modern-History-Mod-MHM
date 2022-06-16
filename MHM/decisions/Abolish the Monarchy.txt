@@ -1,0 +1,46 @@
+political_decisions = {
+
+	abolish_the_monarchy = {
+		picture = "abolish_the_monarchy"
+		potential = {
+			OR = { government = hms_government government = hms_government1 }
+			NOT = { has_country_flag = former_colonial_nation }
+		}
+
+		allow = {
+			is_vassal = no
+			war = no
+			election = no
+			OR = { ruling_party_ideology = nationalist ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = communist ruling_party_ideology = communist_social }
+		}
+
+		alert = no
+
+		effect = {
+			prestige = 50
+			
+			government = democracy
+			country_event = 800054
+			
+			#Monarchists are angry!
+			any_pop = {
+				scaled_militancy = {
+					factor = 10
+					ideology = traditionalist
+				}
+				scaled_militancy = {
+					factor = 5
+					ideology = conservative
+				}
+				scaled_militancy = {
+					factor = 2.5
+					ideology = big_tent
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 0
+		}
+	}
+}

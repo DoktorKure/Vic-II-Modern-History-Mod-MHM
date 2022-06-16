@@ -1,0 +1,217 @@
+graphical_culture = Generic
+color = { 128 128 128 }
+hms_government =  { 255 117 25 }
+party = {
+		name = "Malawi Congress Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Nyasaland Progressive Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1993.1.1
+}
+party = {
+		name = "Malawi Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1993.1.1
+		end_date = 2011.1.1
+}
+party = {
+		name = "People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2011.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Nyasaland African Congress"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1959.1.1
+}
+party = {
+		name = "Malawi Congress Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1959.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "United Federal Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1963.1.1
+}
+party = {
+		name = "Nyasaland Constitutional Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1963.1.1
+		end_date = 1992.1.1
+}
+party = {
+		name = "United Democratic Front"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1992.1.1
+		end_date = 2005.1.1
+}
+party = {
+		name = "Democratic Progressive Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2005.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "LESOMA"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1993.1.1
+}
+party = {
+		name = "Alliance for Democracy"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1993.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_progressive_0_MLW"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Malawi Congress Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_traditionalist_0_MLW"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Socialist League of Malawi"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Socialist League of Malawi"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	transportship = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	modern_frigate = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	cruiser = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	modern_cruiser = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	frigate = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	modern_destroyer = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	destroyer = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	submarine = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+
+}

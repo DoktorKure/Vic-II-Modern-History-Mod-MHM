@@ -1,0 +1,195 @@
+graphical_culture = EuropeanGC
+color = { 222 163 97 }
+party = {
+		name = "National Union"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = moralism 
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1970.1.1
+}
+party = {
+		name = "People's National Action"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = moralism 
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1970.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Democratic Union of Cape Verde"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+
+party = {
+		name = "Movement for Democracy"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Movement for Democracy"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "PAIGC"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1981.1.1
+}
+party = {
+		name = "PAICV"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1981.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Labour and Solidarity Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Union"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1970.1.1
+}
+party = {
+		name = "People's National Action"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = moralism 
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1970.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Portuguese Loyalists"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "PAIGC"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1981.1.1
+}
+party = {
+		name = "PAICV"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1981.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "PAIGC"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1981.1.1
+}
+party = {
+		name = "PAICV"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1981.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	transportship = {
+		Antwerpen Arlon Brugge Brussel Charleroi Gent Hasselt Leuven Liege Mechelen Namur Nieuwpoort Oostende Sluis Zeebrugge
+	}
+	modern_frigate = {
+		"Jan Baert" "Michiel Jacobsen" "Jacob van Brugge" "Willem van der Haegen" "Jacob le Maire" "Pierre van Alstein" "Sebald de Weert" "Cornelis Weus"
+	}
+	cruiser = {
+		"Fran�ois Pelsaert" "Louis Boisot" "Olivier Brunel" "Simon de Cordes" "Albert Dorville" "Jess� de Forest" "Louis Hennepin" "Melchior van den Kerckhove" "Jacob Mahu"
+	}
+	modern_cruiser = {
+		"Leopold I" "La Belgique" "De Vlaamse Leeuw" Ambiorix "Godfried van Boullion" "Guldensporenslag" "Gwijde van Dampierre" "Jacob van Artevelde"
+	}
+	frigate = {
+		Wielingen Mercator "Willem van Rubroeck" "Simon van Salingen" "Joris van Spilbergen" "Willem Usselincx"
+	}
+	modern_destroyer = {
+		"Graaf van Vlaanderen" "Hertog van Brabant" "Comte de Hainaut" "Comte de Namur" "Prince de Liege" "Duc d'Ursel"
+	}
+	destroyer = {
+		"St. Marie" "St. Joris" "St. Franciscus" "St. Jacobus" "St. Petrus" "St. Bonifatius"
+	}
+	submarine = {
+		Belgica Brabantia Flandriae Henogovia Limburgia Luxemburgum Vallonia
+	}
+
+}

@@ -1,0 +1,55 @@
+political_decisions = {
+
+	becomearepubliccolonial = {
+		picture = "colonialrepublic"
+		potential = {
+			OR = {
+				government = hms_government
+				government = hms_government1
+			}
+			has_country_flag = former_colonial_nation
+		}
+		allow = {
+			war = no
+			is_vassal = no
+			election = no
+
+has_country_modifier = united_nations_ga_member
+NOT = { has_country_modifier = independence_timer }
+NOT = { has_country_modifier = newly_independent_country }
+
+OR = { NOT = { OR = { ruling_party_ideology = conservative ruling_party_ideology = traditionalist } } average_militancy = 6 }
+
+OR = { average_militancy = 6 pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = communist pop_majority_ideology = communist_social ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = communist ruling_party_ideology = socialist ruling_party_ideology = communist_social }
+
+		}
+		effect = {
+			prestige = 25
+			clr_country_flag = former_colonial_nation
+			country_event = 1512015
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 tag = BRU }
+			modifier = { factor = 0 tag = PPN }
+
+modifier = { 
+factor = 0 
+OR = { 
+tag = AAB
+tag = BAR
+tag = GRD
+tag = STL
+tag = SVG
+tag = SKN
+tag = DMC
+tag = BLZ
+}
+	}
+
+modifier = { factor = 0 capital_scope = { continent = mena } }
+
+		}
+	}
+
+}

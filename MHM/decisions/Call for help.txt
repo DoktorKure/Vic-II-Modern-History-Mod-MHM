@@ -1,0 +1,48 @@
+political_decisions = {
+
+call_for_allies_to_help = {
+		picture = "callally"
+		potential = {
+			war = yes
+			ai = yes
+		NOT = { tag = KAY }
+		NOT = { tag = SHA }
+		NOT = { AND = { tag = DAI war_with = SVI } }
+		NOT = { AND = { tag = SVI war_with = DAI } }
+		NOT = { AND = { tag = FRA war_with = DAI } }
+		NOT = { AND = { tag = DAI war_with = FRA } }
+		NOT = { AND = { tag = PAK war_with = HND } }
+		NOT = { AND = { tag = HND war_with = PAK } }
+
+AND = { NOT = { year = 1955 } NOT = { AND = { tag = HND war_with = PAK } } }
+
+AND = { NOT = { year = 1955 } NOT = { AND = { tag = PAK war_with = HND } } }
+
+	AND = { NOT = { year = 1955 } NOT = { AND = { tag = CHI war_with = KMT } } }
+
+		AND = { NOT = { year = 1955 } NOT = { AND = { tag = KMT war_with = CHI } } }
+
+		NOT = { AND = { tag = KMT war_with = ETS } }
+		NOT = { AND = { tag = KMT war_with = TIB } }
+		NOT = { AND = { tag = CHI war_with = ETS } }
+		NOT = { AND = { tag = CHI war_with = TIB } }
+		NOT = { has_country_modifier = called_allies }
+		NOT = { has_country_modifier = called_allies_un }
+				}
+			alert = yes
+		allow = {
+			war = yes
+	national_provinces_occupied = 0.25 
+				}
+	effect = {
+prestige = -10
+add_country_modifier = { name = called_allies duration = 183 }
+war = REB
+call_ally = yes
+		}
+		ai_will_do = { 
+			factor = 100 
+			}
+	}
+
+}

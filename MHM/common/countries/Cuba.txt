@@ -1,0 +1,297 @@
+graphical_culture = Generic
+color = { 0 0 255 }
+proletarian_dictatorship = { 255 0 0 }
+socialist_democracy = { 255 0 0 }
+party = {
+		name = "Progressive Action Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1962.1.1
+}
+party = {
+		name = "Democratic Revolutionary Front"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1962.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Popular Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1959.1.1
+}
+party = {
+		name = "Christian Democratic Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1959.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism_faire
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1949.1.1
+}
+party = {
+		name = "Progressive Action Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1949.1.1
+		end_date = 1992.1.1
+}
+party = {
+		name = "Democratic Solidarity Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1992.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Liberal Party of Cuba"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1992.1.1
+}
+party = {
+		name = "Cuban Liberal Union"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = pro_militarism
+		war_policy = pacifism
+		start_date = 1992.1.1
+		end_date = 2092.1.1
+party = {
+		name = "Popular Socialist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1947.5.14
+}
+party = {
+		name = "Orthodox Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1947.5.14
+		end_date = 1992.5.14
+}
+party = {
+		name = "Social-Revolutionary Party (D)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1992.5.14
+		end_date = 2092.1.1
+}
+party = {
+		name = "Revolutionary Directory"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1992.1.1
+}
+party = {
+		name = "Democratic Socialist Current"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1992.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Authentic Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1961.1.1
+}
+party = {
+		name = "Alpha 66"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1961.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Authentic Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1988.1.1
+}
+party = {
+		name = "Christian Liberation Movement"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1988.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Popular Socialist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1955.1.1
+}
+party = {
+		name = "26th of July Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1955.1.1
+		end_date = 1961.7.26
+}
+party = {
+		name = "Integrated Revolutionary Orgs"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1961.7.26
+		end_date = 1962.3.26
+}
+party = {
+		name = "PURSC"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1962.3.26
+		end_date = 1965.10.3
+}
+party = {
+		name = "Communist Party of Cuba"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1965.10.3
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Cuba"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Antonio Maceo" "Bartolom� Mas�" "Carlos M. de C�spedes" "Carlos Roloff" "H�roes de Cuba" "Jos� Mart�" "M�ximo G�mez" "Salvador Cisneros" "Seraf�n S�nchez" "Tom�s Estrada"
+	}
+	transportship = {
+		Ambici�n Baltasar Caoba Cocodrilo Coral Defensora Deseada Estrella Ferminia Garza Gaspar Grande Mambi Manzanillo Melchor Perla "San Jos�" "Santa Mar�a" Teca Tocororo
+	}
+	modern_frigate = {
+		Agramonte Ara�a "Diez de Octubre" Guaimaro Habana Matanzas "Pilar del R�o" Tar�ntula "Veinticuatro de Febrero" Yara
+	}
+	cruiser = {
+		Caribe Cuba Florida Guajiro "Isla Fernandina" "Isla Juana" "Jos� Antonio Aponte" "Joya del Caribe" "Nicol�s Morales" Patria
+	}
+	modern_cruiser = {
+		"Antonio Maceo" "Bartolom� Mas�" "Carlos M. de C�spedes" "Carlos Roloff" "H�roes de Cuba" "Jos� Mart�" "M�ximo G�mez" "Salvador Cisneros" "Seraf�n S�nchez" "Tom�s Estrada"
+	}
+	frigate = {
+		"Calixto Garc�a" Constituci�n "F�lix Varela" "Grito de Yara" Independencia "Joaqu�n Infante" "Jos� F. Lemus" "Jos� M� Heredia" Libertad Rep�blica
+	}
+	modern_destroyer = {
+		Baconao Buenavista Cauto "Diego Vel�zquez" "Isla de Pinos" M�ximo "Sierra Cristal" "Sierra del Rosario" Toa Turquino
+	}
+	destroyer = {
+		Al�sio "Estrella de los Mares" Guerrera "San Carlos" "San Fernando" "San Juan" Santiago Valent�a Ventura Victoria
+	}
+	submarine = {
+		Camag�ey Cienfuegos Guant�namo J�piter Marte Neptuno Plut�n "Santa Clara" "Santiago de Cuba" Vulcano
+	}
+
+}

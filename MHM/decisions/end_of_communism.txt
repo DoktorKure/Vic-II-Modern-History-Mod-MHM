@@ -1,0 +1,43 @@
+political_decisions = {
+
+	transition_to_presidential_dictatorship = {
+		picture = "transition_to_presidential_dictatorship"
+		potential = {
+			ai = no
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+		}
+		
+		alert = no
+
+		allow = {
+			seventies_subcultures = 1
+			is_vassal = no
+			war = no
+			OR = {
+				NOT = { part_of_sphere = yes }
+				has_global_flag = autumn_of_nations
+				NOT = { has_global_flag = blocsenabled }
+			}
+		}
+
+		effect = {
+			government = presidential_dictatorship
+			ruling_party_ideology = socialist
+			add_country_modifier = { name = revolution_chaos duration = 3650 }
+			any_pop = { 
+				scaled_militancy = {
+					factor = 10
+					ideology = communist
+				}
+				scaled_militancy = {
+					factor = 10
+					ideology = communist_social
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+}

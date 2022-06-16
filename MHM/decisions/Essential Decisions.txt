@@ -1,0 +1,474 @@
+political_decisions = {
+
+	becomearepublic = {
+		picture = "indiarepublicday"
+		potential = {
+			tag = HND
+			government = hms_government
+			NOT = { has_country_flag = hnd_republic_flag }
+		}
+		allow = {
+			war = no
+			decolonization = 1
+			is_vassal = no
+			has_country_modifier = united_nations_ga_member
+			NOT = { has_country_modifier = independence_timer }
+		}
+		effect = {
+			prestige = 500
+			random_country = {
+				limit = { owns = 300 } # London
+				relation = { who = THIS value = -50 }
+			}
+			government = democracy
+			set_country_flag = hnd_republic_flag
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+	exportfocus = {
+		picture = "exportfocus"
+		potential = {
+			war = no
+			NOT = { has_country_flag = exportfocus }
+			NOT = { has_country_flag = importfocus }
+		}
+
+		allow = {
+			OR = { ai = no is_greater_power = yes is_secondary_power = yes }
+		}
+
+		effect = {
+			
+			set_country_flag = exportfocus
+		any_owned = { limit = { is_colonial = no } add_province_modifier = { name = exportfocus duration = -1 } }
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+	importfocus = {
+		picture = "importfocus"
+		potential = {
+			war = no
+			NOT = { has_country_flag = importfocus }
+			NOT = { has_country_flag = exportfocus }
+		}
+		allow = {
+			OR = { ai = no AND = { is_greater_power = no is_secondary_power = no } }
+		}
+		effect = {
+			set_country_flag = importfocus
+			any_owned = { 
+				limit = { is_colonial = no } 
+				add_province_modifier = { name = importsubstitutionfocus duration = -1 } 
+			}
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+	changefocus = {
+		picture = "changefocus"
+		potential = {
+			war = no
+			OR = { has_country_flag = importfocus has_country_flag = exportfocus } 
+		}
+		alert = no
+		
+		allow = {
+			NOT = { has_country_flag = south_american_isi }
+			OR = { has_country_flag = importfocus has_country_flag = exportfocus } 
+			OR = { ai = no AND = { is_secondary_power = yes NOT = { has_country_flag = exportfocus } } AND = { is_greater_power = yes NOT = { has_country_flag = exportfocus } } } 
+		}
+		effect = {
+			clr_country_flag = importfocus
+			clr_country_flag = exportfocus
+
+			remove_country_modifier = spchigh
+			remove_country_modifier = spcmedium
+			remove_country_modifier = spclow
+			remove_country_modifier = spcno
+			clr_country_flag = spchigh
+			clr_country_flag = spcmedium
+			clr_country_flag = spclow
+			clr_country_flag = spcno
+
+			any_owned = { remove_province_modifier = importsubstitutionfocus }
+			any_owned = { remove_province_modifier = exportfocus }
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	becomearepublicpak = {
+		picture = "pakrepublicday"
+		potential = {
+			tag = PAK
+			government = hms_government
+			NOT = { has_country_flag = pak_republic_flag }
+		}
+		allow = {
+			war = no
+			is_vassal = no
+			government = hms_government
+			OR = { wars_of_national_liberation = 1 ruling_party_ideology = nationalist }
+			has_country_modifier = united_nations_ga_member
+			NOT = { has_country_modifier = independence_timer }
+		}
+		effect = {
+			prestige = 25
+			random_country = {
+				limit = { owns = 300 } # London
+				relation = { who = THIS value = -50 }
+			}
+			government = democracy
+			set_country_flag = pak_republic_flag
+			
+			
+			#Parliamentary republic
+			clr_country_flag = presidential_system_republic
+			clr_country_flag = semi_presidential_system_republic
+			clr_country_flag = parliamentary_system_republic
+		
+			set_country_flag = parliamentary_system_republic
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+	liberalisemarket = {
+		picture = "liberalisemarket"
+		potential = {
+			has_country_modifier = protectionism
+		}
+		allow = {
+			war = no
+			NOT = { government = proletarian_dictatorship }
+			NOT = { government = theocracy }
+			austrian_school = 1
+		}
+		effect = {
+			prestige = 20
+			remove_country_modifier = protectionism
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+	japaneseeconomy = {
+		picture = "japaneseeconomy"
+		potential = {
+			tag = JAP
+			NOT = { year = 1990 }
+			NOT = { has_country_flag = japeconomy }
+			NOT = { has_country_modifier = japaneseeconomy }
+			NOT = { any_owned_province = { has_province_modifier = keiretsu } }
+		}
+		allow = {
+			war = no
+			NOT = { 
+				OR = { 
+					ruling_party_ideology = communist
+					ruling_party_ideology = communist_social 
+				} 
+			}
+			OR = { 
+				government = democracy
+				government = hms_government 
+			}
+			is_vassal = no
+			new_growth_theory = 1
+			NOT = { has_country_flag = japeconomy }
+		}
+		effect = {
+			prestige = 20
+			set_country_flag = japeconomy
+
+			clr_country_flag = economic_malaise
+
+			add_country_modifier = { name = japaneseeconomy duration = 9125 }
+			remove_country_modifier = zaibatsu
+			any_owned = { 
+				limit = { is_colonial = no } 
+				add_province_modifier = { name = keiretsu duration = -1 } 
+				any_pop = {
+					limit = { type = artisans }
+					pop_type = craftsmen
+				}
+			}
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+	germaneconomy = {
+		picture = "germaneconomy"
+		potential = {
+			tag = GER
+			NOT = { year = 1990 }
+			NOT = { has_country_modifier = germaneconomy }
+			NOT = { has_country_flag = germaneconomy }
+		}
+		allow = {
+			war = no
+			NOT = { 
+				OR = { 
+					ruling_party_ideology = communist
+					ruling_party_ideology = traditionalist 
+				} 
+			}
+			OR = { 
+				government = democracy
+				government = hms_government 
+			}
+			is_vassal = no
+			new_growth_theory = 1
+			NOT = { has_country_flag = germaneconomy }
+		}
+		effect = {
+			prestige = 20
+			set_country_flag = germaneconomy
+
+			clr_country_flag = economic_malaise
+
+			add_country_modifier = { name = germaneconomy duration = 9125 }
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+commonwealth_align = {
+		picture = "commonwealthofnations"
+		potential = {
+		NOT = { tag = ENG }
+OR = { government = hms_government government = hms_government1 }
+ENG = { is_greater_power = yes }
+ENG = { government = hms_government }
+		has_country_modifier = commonwealthmember
+NOT = { has_country_modifier = commonwealth_timer }
+ENG = { is_sphere_leader_of = THIS }
+is_greater_power = no
+				}
+		allow = {
+		war = no
+election = no
+NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = nationalist ruling_party_ideology = populist } }
+			}
+		effect = {
+			
+ENG = { diplomatic_influence = { who = THIS value = 20 } }
+add_country_modifier = { name = commonwealth_timer duration = 730 }
+					}
+		ai_will_do = { 
+			factor = 1 
+			}
+	}
+
+	becomearepublicire = {
+		picture = "irerepublicday"
+		potential = {
+			tag = IRE
+			government = hms_government1
+			
+			#Decision has not already been fired
+			NOT = { has_country_flag = IRE_republic_day_flag }
+		}
+		allow = {
+			war = no
+			is_vassal = no
+			
+			year = 1949
+		}
+		effect = {
+			prestige = 20
+			
+			#So the decision cannot be fired again
+			set_country_flag = IRE_republic_day_flag
+			
+			#Become a republic
+			government = democracy
+			
+			#Remove Commonwealth Realm tech school
+			tech_school = commerce_tech_school
+			
+			#UK will not be pleased
+			random_country = {
+				limit = { tag = ENG is_vassal = no government = hms_government }
+				relation = { who = IRE value = -100 }
+				diplomatic_influence = { who = IRE value = -200 }
+			}
+			
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+	unitary_ido_form = {
+		picture = "unitary_ido_form"
+		potential = {
+			tag = IDO
+			OR = { 
+				is_our_vassal = DYA
+				is_our_vassal = EID
+				is_our_vassal = ESM
+			}
+			government = democracy1
+			NOT = { has_country_flag = ido_united }
+		}
+		allow = {
+			war = no
+			is_vassal = no
+			election = no
+			NOT = { has_country_modifier = independence_timer }
+			decolonization = 1
+			NOT = { OR = { ruling_party_ideology = big_tent ruling_party_ideology = liberal ruling_party_ideology = progressive } }
+		}
+		effect = {
+			prestige = 50
+			government = democracy
+			set_country_flag = ido_united
+			any_country = { limit = { vassal_of = IDO OR = { tag = DYA tag = EID tag = ESM } } country_event = 11106 }
+		}
+
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+formtheoecd = {
+		picture = "jointheoecd"
+		potential = {
+			tag = USA
+			is_greater_power = yes
+			government = democracy
+		NOT = { has_global_flag = oecdformed }
+		}
+		allow = {
+			war = no
+			is_vassal = no
+			government = democracy
+			vanguard_method = 1
+		}
+		effect = {
+			prestige = 40
+add_country_modifier = { name = oecd_member duration = -1 }
+			set_global_flag = oecdformed
+			}
+		ai_will_do = { 
+			factor = 1 
+			}
+	}
+jointheoecd = {
+		picture = "jointheoecd"
+		potential = {
+		NOT = { has_country_modifier = oecd_member }
+		has_global_flag = oecdformed
+		}
+		allow = {
+			war = no
+is_vassal = no
+		OR = { government = democracy 
+government = democracy1 government = hms_government government = hms_government1 }
+		}
+		effect = {
+			prestige = 10
+add_country_modifier = { name = oecd_member duration = -1 }
+	USA = { relation = { who = THIS value = 25 } }
+USA = { diplomatic_influence = { who = THIS value = 25 } }
+		}
+		ai_will_do = { 
+			factor = 1 
+			}
+	}
+leavetheoecd = {
+		picture = "jointheoecd"
+		potential = {
+		has_country_modifier = oecd_member
+		has_global_flag = oecdformed
+		}
+		allow = {
+			war = no
+			NOT = { government = democracy }
+			NOT = { government = democracy1 }
+			NOT = { government = hms_government1 }
+			NOT = { government = hms_government }
+		}
+		effect = {
+			prestige = -10
+remove_country_modifier = oecd_member 
+	USA = { relation = { who = THIS value = -100 } }
+USA = { diplomatic_influence = { who = THIS value = -50 } }
+		}
+		ai_will_do = { 
+			factor = 1 
+			}
+	}
+
+end_of_bretton_system = {
+		picture = "bwsend"
+	potential = {
+		tag = USA
+		rank = 2
+		government = democracy
+		has_country_modifier = bretton_system
+	NOT = { has_global_flag = end_of_bretton_system }
+		}
+		allow = {
+			war = no
+		flexible_exchange_rates = 1
+					}
+		effect = {
+prestige = 50
+remove_country_modifier = bretton_system
+any_country = { remove_country_modifier = bretton_system }
+any_country = { any_owned = { remove_province_modifier = bretton_woods_effect } }
+set_global_flag = end_of_bretton_system
+	}
+		ai_will_do = { 
+			factor = 1 
+			}
+	}
+
+reform_the_unsc = {
+		picture = "reform_the_unsc"
+	potential = {
+	is_greater_power = yes
+	NOT = { has_global_flag = blocsenabled }
+	has_country_modifier = united_nations_ga_member
+	NOT = { has_country_modifier = unsc_permanent_member }
+	NOT = { has_country_flag = not_participating_UNSC }
+			}
+		allow = {
+			war = no
+			election = no
+			cultural_imperialism = 1
+		NOT = { badboy = 0.2 }
+NOT = { 
+any_greater_power = { 
+AND = { 
+has_country_modifier = unsc_permanent_member 
+NOT = { relation = { who = THIS value = 150 } }
+	} 
+			} 
+	}
+					}
+		effect = {
+prestige = 1000
+add_country_modifier = { name = unsc_permanent_member duration = -1 }
+
+	}
+		ai_will_do = { 
+			factor = 1 
+			}
+	}
+	
+}

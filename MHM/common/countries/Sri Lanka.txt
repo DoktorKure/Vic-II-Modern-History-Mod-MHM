@@ -1,0 +1,218 @@
+graphical_culture = IndianGC
+color = { 255 140 0 }
+party = {
+		name = "Ceylon National Congress"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "party_big_tent"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "United National Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Council for Liberal Democracy"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1981.1.1
+		end_date = 1987.1.19
+}
+party = {
+		name = "Liberal Party of Sri Lanka"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1987.1.19
+		end_date = 2092.1.1
+}
+party = {
+		name = "Democratic Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2013.4.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Ceylon Workers' Congress"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1951.9.2
+}
+party = {
+		name = "Sri Lanka Freedom Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1951.9.2
+		end_date = 2092.1.1
+}
+party = {
+		name = "Mahajana Eksath Peramuna"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Buddhist Republican Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2004.2.1
+}
+party = {
+		name = "National Heritage Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2004.2.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Council of Monks"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Ceylon"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1972.1.1
+}
+party = {
+		name = "Communist Party of Sri Lanka"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1972.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Ceylon Communist Party (Peking)"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1964.1.1
+		end_date = 1965.5.14
+}
+party = {
+		name = "Janatha Vimukthi Peramuna"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1965.5.14
+		end_date = 2092.1.1
+}
+party = {
+		name = "Lanka Sama Samaja Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Rama Varma" "Aditya Varma" "Ravi Varma" "Balarama Varma" "Swathi Thirunal" "Uthram Thirunal" "Visakham Thirunal"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Anupam Arihant Bhanu Dhananjay Hemendra Jawahar Kaushal Makarand Manindra Narhari Nidhish Ratnakar Shashwat SRLkant
+	}
+	cruiser = {
+		Amar Anil Asim Bhavesh Chandrahas Dhirendra Gopan Jagajit Jishnu Mahabala Pinak Ranjit Satyajit Urjit Varun Vishvajit
+	}
+	modern_cruiser = {
+		"Rama Varma" "Aditya Varma" "Ravi Varma" "Balarama Varma" "Swathi Thirunal" "Uthram Thirunal" "Visakham Thirunal"
+	}
+	frigate = {
+		Abhay Akhilesh Baldev Chandresh Duranjaya Gaurav Jayant Parindra Prabir Shatrunjay Vipan Viraj Yudhisthir
+	}
+	modern_destroyer = {
+		Akshat Avanindra Dipendra Debashish Durjaya Ilesh Jagannath Meghnad Paramjit Samarjit Sudhir Vijay Vikrant
+	}
+	destroyer = {
+		Padmanabhapuram Thiruvananthapuram Kilimanoor Kollam Kochi Mavelikkara Thrissur
+	}
+	submarine = {
+		Atul Chapal Kartikeya Mahavir Nachiketa Prajit Rutujit Shreyas Veer Yuyutsu
+	}
+
+}

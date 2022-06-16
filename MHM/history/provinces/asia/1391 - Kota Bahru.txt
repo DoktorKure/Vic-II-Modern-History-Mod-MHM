@@ -1,0 +1,33 @@
+owner = TER
+controller = TER
+add_core = MSY
+add_core = TER
+add_core = FMS
+add_core = THI
+trade_goods = rubber
+life_rating = 30
+terrain = jungle_hills
+colonial = 0
+
+1950.1.1 = {
+owner = FMS
+controller = FMS
+}
+
+1992.1.1 = {
+owner = MSY
+controller = MSY
+add_core = MSY
+life_rating = 30
+colonial = 0
+state_building = {
+	level = 3
+	building = optics_factory
+	upgrade = yes
+}
+state_building = {
+	level = 3
+	building = rubber_plastics_factory
+	upgrade = yes
+}
+}

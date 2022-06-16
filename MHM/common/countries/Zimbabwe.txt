@@ -1,0 +1,271 @@
+graphical_culture = Generic
+color = { 233 103 38 }
+party = {
+		name = "ZANU - Nationalists"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "National Democratic Union"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1994.1.1
+}
+party = {
+		name = "United Parties"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1994.1.1
+		end_date = 2008.1.1
+}
+party = {
+		name = "Mavambo/Kusile/Dawn"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2008.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Republican Front"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1984.1.1
+}
+party = {
+		name = "Conservative Alliance"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1984.1.1
+		end_date = 1992.1.1
+}
+party = {
+		name = "Forum Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1992.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Forum Party for Democracy"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1995.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "United African National Council"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1985.1.1
+}
+party = {
+		name = "Zimbabwe Unity Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1985.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "ZANU – Patriotic Front"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2017.11.24
+}
+party = {
+		name = "ZANU – Patriotic Front"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2017.11.24
+		end_date = 2092.1.1
+}
+party = {
+		name = "Movement for Democratic Change"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2000.9.11
+		end_date = 2005.1.1
+}
+party = {
+		name = "MDC – Tsvangirai"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2005.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "United African National Council"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1994.1.1
+}
+party = {
+		name = "United Parties"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1994.1.1
+		end_date = 2000.9.11
+}
+party = {
+		name = "Movement for Democratic Change"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2000.9.11
+		end_date = 2005.10.1
+}
+party = {
+		name = "MDC - Ncube"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2005.10.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_populist_0_ZIM"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_traditionalist_0_ZIM"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Zimbabwe African People's Union"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "ZANU - Ndonga"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	transportship = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	modern_frigate = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	cruiser = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	modern_cruiser = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	frigate = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	modern_destroyer = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	destroyer = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	submarine = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+
+}

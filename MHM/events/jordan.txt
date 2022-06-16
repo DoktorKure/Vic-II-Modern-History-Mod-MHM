@@ -1,0 +1,234 @@
+#Independence of Jordan
+country_event = {
+	id = 1007901
+	title = "The Independence of Jordan"
+	desc = EVT_1007901_DESC
+	picture = "nwo2_king_abdullah"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		year = 1946
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1990 }
+		
+		government = hms_government
+		war = no
+		is_vassal = no
+		
+		is_our_vassal = JOR
+	}
+
+	mean_time_to_happen = {
+		months = 5
+	}
+
+	option = {
+		name = "Free Jordan from the British Empire"
+		prestige = 50
+		release_vassal = JOR 
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Keep them as a vassal"
+		badboy = 5
+		JOR = {
+			any_pop = {
+				consciousness = 10
+				militancy = 10
+				ideology = { factor = 0.25 value = nationalist }
+			}
+		}
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Rule of King Abdullah I
+country_event = {
+  id = 8007905
+  title = "The Rule of King Abdullah I"
+  desc = EVT_8007905_DESC
+  picture = "nwo2_king_abdullah_rule"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = JOR
+		year = 1946 
+		NOT = { year = 1990 }
+		
+		OR = { government = absolute_monarchy government = hms_government }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Long Live the King!"
+		prestige = 50
+		any_pop = {
+			consciousness = -3
+			militancy = -3
+			ideology = { factor = 0.10 value = conservative }
+		}
+	}
+}
+
+#The Assassination of King Abdullah I
+country_event = {
+  id = 8007909
+  title = "The Assassination of King Abdullah I"
+  desc = EVT_8007909_DESC
+  picture = "nwo2_assassination_of_abdullah"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = JOR
+		year = 1951 
+		NOT = { year = 1990 }
+		
+		OR = { government = absolute_monarchy government = hms_government }
+		is_vassal = no
+		war = no
+		
+		ISR = { exists = yes is_vassal = no }
+	}
+
+	mean_time_to_happen = { months = 7 }
+	
+	option = {
+		name = "Hussein bin Talal becomes King eventually"
+		
+		set_country_flag = JOR_reformist_path
+		
+		any_pop = {
+			consciousness = -3
+			militancy = -3
+			ideology = { factor = 0.05 value = conservative }
+		}
+		
+		relation = { who = ISR value = 100 }
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Talal bin Abdullah remains as King"
+		
+		
+		any_pop = {
+			consciousness = 3
+			militancy = 3
+			ideology = { factor = 0.10 value = liberal }
+			ideology = { factor = 0.10 value = socialist }
+		}
+		
+		#British influence grows
+		random_country = {
+			limit = { tag = ENG is_greater_power = yes government = hms_government }
+			relation = { who = THIS value = 200 }
+			diplomatic_influence = { who = THIS value = 200 }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#1952 Jordanian Constitution
+country_event = {
+	id = 1412099
+	title = "The $YEAR$ Constitution"
+	desc = EVTDESC1412099
+	picture = "jor_hms_govt_con"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = JOR
+		year = 1952
+		NOT = { year = 1990 }
+		
+		government = absolute_monarchy
+		is_vassal = no
+		war = no
+		
+		has_country_flag = JOR_reformist_path
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Begin the Liberal Experiment!"
+		prestige = 25
+		government = hms_government
+		country_event = 800054
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "The King must be King!"
+		
+		any_pop = {
+			consciousness = 5
+			militancy = 5
+			ideology = { factor = 0.15 value = liberal }
+		}
+		
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Jordanian Civil War
+country_event = {
+  id = 8007911
+  title = EVT_8007911_NAME 
+  # EVT_8007911_NAME;Black September
+  desc = EVT_8007911_DESC 
+  # EVT_8007911_DESC;The term Black September refers to the Jordanian Civil War that began in September 1970 and ended in July of 1971. The conflict was fought between the Palestine Liberation Organisation (PLO) under the leadership of Yasser Arafat, and the Jordanian Armed Forces under the leadership of King Hussein. At its core the civil war sought to determine if Jordan would be ruled by the Palestine Liberation Organisation or the Hashemite Monarchy.
+  picture = "nwo2_black_september"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = JOR
+		year = 1970 
+		NOT = { year = 1990 }
+		OR = { government = absolute_monarchy government = hms_government }
+		
+		is_vassal = no
+		war = no
+		
+		#Israel exists
+		ISR = { exists = yes is_vassal = no }
+		PAL = { exists = no }
+	}
+
+	mean_time_to_happen = { months = 8 }
+
+	option = {
+		name = EVT_8007911_A
+		add_accepted_culture = circassians
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		any_owned = { add_province_modifier = { name = instigating_rebels duration = 3650 } }
+		any_pop = { 
+			consciousness = 3
+			militancy = 3
+		}
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = EVT_8007911_B 
+		prestige_factor = -0.10
+		government = presidential_dictatorship
+		country_event = 800050
+		ruling_party_ideology = traditionalist
+		primary_culture = palestinian
+		ai_chance = { factor = 0.1 }
+	}
+
+}

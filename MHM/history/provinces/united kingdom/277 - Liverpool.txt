@@ -1,0 +1,47 @@
+owner = ENG
+controller = ENG
+add_core = ENG
+add_core = ENL
+trade_goods = fish
+life_rating = 40
+terrain = marginal_farmland
+railroad = 1
+colonial = 0
+naval_base = 3
+state_building = {
+	level = 2
+	building = petroleum_plastics_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = cement_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = ships_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = steel_factory
+	upgrade = yes
+}
+
+#Consumer Goods
+state_building = {
+	level = 3
+	building = automobiles_factory
+	upgrade = yes
+}
+
+1992.1.1 = {
+owner = ENG
+controller = ENG
+add_core = ENG
+life_rating = 40
+railroad = 2
+colonial = 0
+naval_base = 4
+}

@@ -1,0 +1,14 @@
+owner = NAU
+controller = NAU
+add_core = NAU
+trade_goods = other_minerals
+life_rating = 15
+terrain = urban_nauru
+colonial = 0
+1992.1.1 = {
+state_building = {
+	level = 1
+	building = fish_canned_food_factory
+	upgrade = yes
+}
+}

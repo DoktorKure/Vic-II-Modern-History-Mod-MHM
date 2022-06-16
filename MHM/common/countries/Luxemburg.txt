@@ -1,0 +1,317 @@
+graphical_culture = EuropeanGC
+color = { 139 136 120 }
+party = {
+		name = "National Movement"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Middle Class Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1959.1.1
+}
+party = {
+		name = "Popular Independent Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1959.1.1
+		end_date = 1999.1.1
+}
+party = {
+		name = "The Taxpayer"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1999.1.1
+		end_date = 2003.1.1
+}
+party = {
+		name = "Free Party of Luxembourg"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2003.1.1
+		end_date = 2009.1.1
+}
+party = {
+		name = "Citizen's List"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2009.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Christian Social Peoples Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Patriotic and Democratic Group"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = pro_atheism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1954.1.1
+}
+party = {
+		name = "Democratic Group"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = pro_atheism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1954.1.1
+		end_date = 1959.1.1
+}
+party = {
+		name = "Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = pro_atheism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1959.1.1
+		end_date = 1991.1.1
+}
+party = {
+		name = "Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1991.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Pirate Party Luxembourg"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = pro_atheism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2009.10.4
+		end_date = 2092.1.1
+}
+party = {
+		name = "Socialist Workers' Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1991.1.1
+}
+party = {
+		name = "Socialist Workers' Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1991.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Social Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1971.1.1
+		end_date = 1984.1.1
+}
+party = {
+		name = "The Left"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1999.1.30
+		end_date = 2092.1.1
+}
+party = {
+		name = "Green Alternative Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1983.6.23
+		end_date = 1993.1.1
+}
+party = {
+		name = "The Greens"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1993.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Solidarity Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1987.5.12
+}
+party = {
+		name = "Action Committee 5/6th Pensions"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1987.5.12
+		end_date = 1989.9.12
+}
+party = {
+		name = "Action Committee 5/6th"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1989.9.12
+		end_date = 2092.1.1
+}
+party = {
+		name = "Action Committee for Democracy"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1992.11.22
+		end_date = 2006.4.2
+}
+party = {
+		name = "ADR"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2006.4.2
+		end_date = 2092.1.1
+}
+party = {
+		name = "House of Nassau-Weilburg"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Luxembourg"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Communist Party of Luxembourg"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		L�tzebuerg "Groussherzog W�llem" Siegfried "Heng de Blannen" Dikrech Gr�iwemaacher Dideleng �lwen M�ertert "Sankt Maximin"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		L�tzebuerg "Groussherzog W�llem" Siegfried "Heng de Blannen" Dikrech Gr�iwemaacher Dideleng �lwen M�ertert "Sankt Maximin"
+	}
+	cruiser = {
+		L�tzebuerg "Groussherzog W�llem" Siegfried "Heng de Blannen" Dikrech Gr�iwemaacher Dideleng �lwen M�ertert "Sankt Maximin"
+	}
+	modern_cruiser = {
+		L�tzebuerg "Groussherzog W�llem" Siegfried "Heng de Blannen" Dikrech Gr�iwemaacher Dideleng �lwen M�ertert "Sankt Maximin"
+	}
+	frigate = {
+		L�tzebuerg "Groussherzog W�llem" Siegfried "Heng de Blannen" Dikrech Gr�iwemaacher Dideleng �lwen M�ertert "Sankt Maximin"
+	}
+	modern_destroyer = {
+		L�tzebuerg "Groussherzog W�llem" Siegfried "Heng de Blannen" Dikrech Gr�iwemaacher Dideleng �lwen M�ertert "Sankt Maximin"
+	}
+	destroyer = {
+		L�tzebuerg "Groussherzog W�llem" Siegfried "Heng de Blannen" Dikrech Gr�iwemaacher Dideleng �lwen M�ertert "Sankt Maximin"
+	}
+	submarine = {
+		L�tzebuerg "Groussherzog W�llem" Siegfried "Heng de Blannen" Dikrech Gr�iwemaacher Dideleng �lwen M�ertert "Sankt Maximin"
+	}
+
+}

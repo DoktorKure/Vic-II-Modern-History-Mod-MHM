@@ -1,0 +1,377 @@
+#############################################################
+#															#
+#                  	Birth Rate Events						#
+#															#
+#############################################################
+
+# Demographic Steps
+# 1. Massive population boom - Literacy between 5% to 10%
+# 2. Stabilisation - Literacy between 10% to 25%
+# 3. Ageing population - Reduce factory productivity
+
+# Special - haredim_jewish, roma and mennonites and not prim/accept
+
+# The Demographic Transition - Population Boom - Reviews every 5 years
+country_event = {
+	id = 22600
+	title = "Demographic Transition - Population Boom"
+	desc = EVT_22602_DESC
+	picture = "demographic_transition"
+
+	trigger = {
+	
+		#Does not have One Child Policy
+		NOT = { has_country_modifier = one_child_policy_mod }
+		
+		OR = {
+			any_owned_province = { 
+				NOT = { literacy = 0.03 }
+				NOT = { has_province_modifier = iliterate_nation3_modifier }
+				
+				#Not for cored colonial and overseas provinces
+				NOT = { 
+					AND = { 
+						OR = { is_colonial = yes is_overseas = yes }
+						is_core = THIS
+					} 
+				}
+				
+				#Not Guantanamo Bay
+				NOT = { province_id = 3339 }
+			}
+			any_owned_province = { 
+				literacy = 0.03
+				NOT = { literacy = 0.05 }
+				NOT = { has_province_modifier = iliterate_nation2_modifier }
+				
+				#Not for cored colonial and overseas provinces
+				NOT = { 
+					AND = { 
+						OR = { is_colonial = yes is_overseas = yes }
+						is_core = THIS
+					} 
+				}
+				
+				#Not Guantanamo Bay
+				NOT = { province_id = 3339 }
+			}
+			any_owned_province = { 
+				literacy = 0.05
+				NOT = { literacy = 0.10 }
+				NOT = { has_province_modifier = iliterate_nation3_modifier }
+				
+				#Not for cored colonial and overseas provinces
+				NOT = { 
+					AND = { 
+						OR = { is_colonial = yes is_overseas = yes }
+						is_core = THIS
+					} 
+				}
+				
+				#Not Guantanamo Bay
+				NOT = { province_id = 3339 }
+			}
+		}
+		
+		NOT = { has_country_modifier = fertility_timer }
+		
+	}
+	
+	#Review every year so there is no event spam
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "We welcome these new $COUNTRY_ADJ$ Citizens"
+		
+		add_country_modifier = { name = fertility_timer duration = 365 }
+		
+		any_owned = {
+			limit = {
+				NOT = { literacy = 0.03 }
+				NOT = { has_province_modifier = iliterate_nation3_modifier }
+				
+				#Not for cored colonial and overseas provinces
+				NOT = { 
+					AND = { 
+						OR = { is_colonial = yes is_overseas = yes }
+						is_core = THIS
+					} 
+				}
+				
+				#Not Guantanamo Bay
+				NOT = { province_id = 3339 }
+			}
+			remove_province_modifier = iliterate_nation1_modifier
+			remove_province_modifier = iliterate_nation2_modifier
+			add_province_modifier = { name = iliterate_nation3_modifier duration = 3650 }
+		}
+		
+		any_owned = {
+			limit = {
+				literacy = 0.03
+				NOT = { literacy = 0.05 }
+				NOT = { has_province_modifier = iliterate_nation2_modifier }
+				
+				#Not for cored colonial and overseas provinces
+				NOT = { 
+					AND = { 
+						OR = { is_colonial = yes is_overseas = yes }
+						is_core = THIS
+					} 
+				}
+				
+				#Not Guantanamo Bay
+				NOT = { province_id = 3339 }
+			}
+			remove_province_modifier = iliterate_nation1_modifier
+			add_province_modifier = { name = iliterate_nation2_modifier duration = 3650 }
+			remove_province_modifier = iliterate_nation3_modifier
+		}
+		
+		any_owned = {
+			limit = {
+				literacy = 0.05
+				NOT = { literacy = 0.10 }
+				NOT = { has_province_modifier = iliterate_nation1_modifier }
+				
+				#Not for cored colonial and overseas provinces
+				NOT = { 
+					AND = { 
+						OR = { is_colonial = yes is_overseas = yes }
+						is_core = THIS
+					} 
+				}
+				
+				#Not Guantanamo Bay
+				NOT = { province_id = 3339 }
+			}
+			add_province_modifier = { name = iliterate_nation1_modifier duration = 3650 }
+			remove_province_modifier = iliterate_nation2_modifier
+			remove_province_modifier = iliterate_nation3_modifier
+		}
+
+	}
+	
+}
+
+# The Demographic Transition - Longer Lifespans
+country_event = {
+	id = 22601
+	title = "Demographic Transition - Longer Lifespans"
+	desc = EVT_22602_DESC
+	picture = "demographic_transition"
+
+	trigger = {
+		NOT = { has_country_flag = demographic_transition_stage_1_flag }
+		
+		#Low development
+		literacy = 0.10
+		NOT = { literacy = 0.15 }
+		
+		war = no
+		
+		NOT = { has_country_modifier = fertility_timer }
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "Great, our people can be more productive!"
+		
+		add_country_modifier = { name = industrial_pop_boom duration = 7300 }
+		
+		set_country_flag = demographic_transition_stage_1_flag
+	}
+	
+}
+
+# The Demographic Transition - Stable Growth
+country_event = {
+	id = 22602
+	title = "Demographic Transition - Stable Growth"
+	desc = EVT_22602_DESC
+	picture = "demographic_transition"
+
+	trigger = {
+		NOT = { has_country_flag = demographic_transition_stage_2_flag }
+		
+		has_country_modifier = industrial_pop_boom
+		
+		#Medium development
+		literacy = 0.15
+		NOT = { literacy = 0.25 }
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "What's next, an ageing population?"
+		
+		remove_country_modifier = industrial_pop_boom
+		
+		set_country_flag = demographic_transition_stage_2_flag
+	}
+}
+
+# The Demographic Transition - Ageing Population
+country_event = {
+	id = 22603
+	title = "The Demographic Transition - Ageing Population"
+	desc = EVTDESC22602
+	picture = "demographic_transition"
+
+	trigger = {
+		NOT = { has_country_flag = demographic_transition_stage_3_flag }
+		
+		NOT = { has_country_modifier = industrial_pop_boom }
+		
+		#21st Century problem
+		year = 2000
+		
+		#Good Healthcare
+		OR = { health_care = acceptable_health_care health_care = good_health_care }
+		
+		#High development
+		literacy = 0.25
+	}
+	
+	mean_time_to_happen = { months = 60 }
+	
+	option = {
+		name = "We must care for our seniors"
+		
+		add_country_modifier = { name = ageing_population duration = -1 }
+		
+		set_country_flag = demographic_transition_stage_3_flag
+	}
+}
+
+### From NWO ###
+
+# haredim_jewish
+country_event = {
+	id = 22612
+	title = EVT_22612_NAME 
+	desc = EVT_22612_DESC
+	picture = "haredim_jewish"
+	
+	trigger = {
+		NOT = { has_country_modifier = demographic_haredim_jewish } 
+		accepted_culture = haredim_jewish
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = EVT_22612_OPTA
+		any_pop = { 
+			limit = { has_pop_culture = haredim_jewish }
+			ideology = { factor = 0.9 value = traditionalist }
+			reduce_pop = 1.35
+        }
+		add_country_modifier = { 
+			name = demographic_haredim_jewish 
+			duration = 3665 
+		}
+	}
+	
+	option = {
+		name = EVT_22612_OPTB
+		any_pop = { 
+			limit = { has_pop_culture = haredim_jewish }
+			ideology = { factor = 0.9 value = traditionalist }
+		}
+		add_country_modifier = { 
+			name = demographic_haredim_jewish 
+			duration = 3665 
+		}
+	}
+	
+}
+
+# mennonites
+#country_event = { # mennonites
+#	id = 22613
+#	title = EVT_22613_NAME 
+#	desc = EVT_22613_DESC
+#	picture = "family_values"
+#	
+#	trigger = {
+#		NOT = { has_country_modifier = demographic_mennonites }
+#		any_pop = { 
+#			culture = mennonites
+#		}
+#	}
+#	
+#	mean_time_to_happen = { months = 1 }
+#	
+#	option = {
+#		name = EVT_22613_OPTA
+#		any_pop = { 
+#			limit = { culture = mennonites }
+#			reduce_pop = 1.35
+#		}
+#		add_country_modifier = { 
+#			name = demographic_mennonites 
+#			duration = 3665 
+#	    }
+#		ai_chance = { factor = 1 }
+# 	}
+#	
+#	option = {
+#		name = EVT_22613_OPTB
+#		any_pop = { 
+#			limit = { culture = mennonites }
+#			reduce_pop = 1.15
+#		}
+#		add_country_modifier = { 
+#			name = demographic_mennonites 
+#			duration = 3665 
+#	    }
+#		ai_chance = { factor = 0 }
+# 	}
+#	
+#}
+
+# romani
+country_event = {
+	id = 22614
+	title = EVT_22614_NAME 
+	desc = EVT_22614_DESC
+	picture = "romani"
+	
+	trigger = {
+		NOT = { has_country_modifier = demographic_romani }
+		any_pop = { 
+			culture = roma
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = EVT_22614_OPTA
+		any_pop = { 
+			limit = { culture = roma }
+			reduce_pop = 1.25
+		}
+		add_country_modifier = { 
+			name = demographic_romani 
+			duration = 3665 
+	    }
+		ai_chance = { factor = 1 }
+ 	}
+	option = {
+		name = EVT_22614_OPTB
+		any_pop = { 
+			limit = { culture = roma }
+			reduce_pop = 1.16
+		}
+		add_country_modifier = { 
+			name = demographic_romani 
+			duration = 3665 
+	    }
+		ai_chance = { factor = 0 }
+ 	}
+
+}

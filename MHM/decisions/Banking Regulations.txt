@@ -1,0 +1,171 @@
+political_decisions = {
+
+	changebkr = {
+		picture = "changebkr"
+		potential = {
+			modern_stock_exchange = 1
+			
+			#Not a complete Communist Gov
+			NOT = {
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+				economic_policy = planned_economy
+			}
+
+			OR = { 
+				has_country_modifier = bkrhigh
+				has_country_modifier = bkrmedium
+				has_country_modifier = bkrlow 
+			}
+		}
+		alert = no
+		allow = {
+			war = no
+			election = no
+			OR = { 
+				AND = { has_country_modifier = bkrhigh NOT = { OR = { economic_policy = state_capitalism economic_policy = planned_economy1 economic_policy = planned_economy } } } 
+				AND = { has_country_modifier = bkrmedium NOT = { economic_policy = interventionism } } 
+				AND = { has_country_modifier = bkrlow NOT = { economic_policy = laissez_faire } } 
+			} 
+		}
+		effect = {
+			any_owned = { 
+				remove_province_modifier = bkrhigh_province 
+				remove_province_modifier = bkrmedium_province 
+				remove_province_modifier = bkrlow_province 
+			}
+			remove_country_modifier = bkrhigh
+			remove_country_modifier = bkrmedium
+			remove_country_modifier = bkrlow
+			clr_country_flag = bkrhigh
+			clr_country_flag = bkrmedium
+			clr_country_flag = bkrlow
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	bkrhigh = {
+		picture = "bkrhigh"
+		potential = {
+			modern_stock_exchange = 1
+			
+			#Not a complete Communist Gov
+			NOT = {
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+				economic_policy = planned_economy
+			}
+			
+			NOT = { 
+				OR = { 
+					has_country_modifier = bkrhigh
+					has_country_modifier = bkrmedium
+					has_country_modifier = bkrlow 
+				} 
+			}
+		}
+		allow = {
+			war = no
+			OR = { economic_policy = state_capitalism economic_policy = planned_economy1 economic_policy = planned_economy }
+		}
+		effect = {
+			add_country_modifier = { name = bkrhigh duration = -1 }
+			
+			any_owned = { 
+				remove_province_modifier = bkrhigh_province 
+				remove_province_modifier = bkrmedium_province 
+				remove_province_modifier = bkrlow_province 
+			}
+
+			any_owned = { 
+				limit = { trade_goods = credit }
+				add_province_modifier = { name = bkrhigh_province duration = -1 } 
+			}		
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+	bkrmedium = {
+		picture = "bkrmedium"
+		potential = {
+			modern_stock_exchange = 1
+			
+			#Not a complete Communist Gov
+			NOT = {
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+				economic_policy = planned_economy
+			}
+			
+			NOT = { 
+				OR = { 
+					has_country_modifier = bkrhigh
+					has_country_modifier = bkrmedium
+					has_country_modifier = bkrlow 
+				} 
+			}
+		}
+		allow = {
+			war = no
+			economic_policy = interventionism
+		}
+		effect = {
+			add_country_modifier = { name = bkrmedium duration = -1 }
+
+			any_owned = { 
+				remove_province_modifier = bkrhigh_province 
+				remove_province_modifier = bkrmedium_province 
+				remove_province_modifier = bkrlow_province 
+			}
+
+			any_owned = { 
+				limit = { trade_goods = credit }
+				add_province_modifier = { name = bkrmedium_province duration = -1 } 
+			}
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+	bkrlow = {
+		picture = "bkrlow"
+		potential = {
+			modern_stock_exchange = 1
+			
+			#Not a complete Communist Gov
+			NOT = {
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+				economic_policy = planned_economy
+			}
+			
+			NOT = { 
+				OR = { 
+					has_country_modifier = bkrhigh
+					has_country_modifier = bkrmedium
+					has_country_modifier = bkrlow 
+				} 
+			}
+		}
+		allow = {
+			war = no
+			economic_policy = laissez_faire
+		}
+		effect = {
+			add_country_modifier = { name = bkrlow duration = -1 }
+
+			any_owned = { 
+				remove_province_modifier = bkrhigh_province 
+				remove_province_modifier = bkrmedium_province 
+				remove_province_modifier = bkrlow_province 
+			}
+
+			any_owned = { 
+				limit = { trade_goods = credit }
+				add_province_modifier = { name = bkrlow_province duration = -1 } 
+			}
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+	
+}

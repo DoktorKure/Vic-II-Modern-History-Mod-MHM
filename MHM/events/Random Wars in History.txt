@@ -1,0 +1,1022 @@
+###################################
+
+	#List of Random Wars in CWE
+
+###
+
+#Football War of 1969
+#Uganda–Tanzania War
+#Toyota War
+#Cenepa War of 1995
+#Eritrean–Ethiopian War of 1998
+#Kargil War of 1999
+#War over Angola of 1987
+#Ogaden War of 1977
+#Libyan–Egyptian War of 1977
+#Cambodian–Thai border dispute 2008
+#Heglig Crisis
+#Djiboutian–Eritrean border conflict
+#The Sand War
+#Mexico–Guatemala conflict, 1958
+#Shifta War, 1963
+#Invasion of The Gambia, 2017
+#Paquisha War of 1981
+#Beagle Conflict of 1978
+
+###################################
+
+#Football War of 1969
+country_event = {
+	id = 198000
+title = "Football War of $YEAR$"
+	desc = EVTDESC198000
+	picture = "els_hon"
+
+fire_only_once = yes
+
+trigger = {
+year = 1969
+NOT = { year = 1990 }
+
+tag = ELS #Attacker
+
+is_vassal = no
+
+HON = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = HON }
+
+}
+
+mean_time_to_happen = { 
+months = 7
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = HON #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Seek peaceful dialogue"
+prestige = -100
+
+relation = { who = HON value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Uganda–Tanzania War
+country_event = {
+	id = 198001
+title = "Uganda–Tanzania War of $YEAR$"
+	desc = EVTDESC198001
+	picture = "uga_tan"
+
+fire_only_once = yes
+
+trigger = {
+year = 1978
+NOT = { year = 1990 }
+
+is_vassal = no
+
+OR = { government = populist_dictatorship government = nationalist_dictatorship }
+
+tag = UGA #Attacker
+
+TAN = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = TAN }
+
+}
+
+mean_time_to_happen = { 
+months = 7
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = TAN #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Seek peaceful dialogue"
+prestige = -100
+
+relation = { who = TAN value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Toyota War of 1987
+country_event = {
+	id = 198002
+title = "Toyota War of $YEAR$"
+	desc = EVTDESC198002
+	picture = "TRI_CHD"
+
+fire_only_once = yes
+
+trigger = {
+year = 1987
+NOT = { year = 1990 }
+
+tag = CHA #Attacker
+
+is_vassal = no
+
+LBY = { war = no exists = yes is_vassal = no owns = 3282 } #Defender
+
+NOT = { war_with = LBY }
+
+}
+
+mean_time_to_happen = { 
+months = 5
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = LBY #defender
+
+	attacker_goal = { casus_belli = acquire_core_state  state_province_id = 3282 }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Seek peaceful dialogue"
+prestige = -100
+
+relation = { who = LBY value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Cenepa War of 1995
+country_event = {
+	id = 198003
+title = "Cenepa War of $YEAR$"
+	desc = EVTDESC198003
+	picture = "ECU_PEU"
+
+fire_only_once = yes
+
+trigger = {
+year = 1995
+NOT = { year = 2000 }
+
+tag = ECU #Attacker
+
+is_vassal = no
+
+PEU = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = PEU } #Defender
+
+PEU = { owns = 2287 owns = 2288 owns = 2289 }
+
+}
+
+mean_time_to_happen = { 
+months = 1
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = PEU #defender
+
+	attacker_goal = { casus_belli = acquire_core_state state_province_id = 2287 }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+	}
+
+option = {
+name = "Seek peaceful dialogue"
+prestige = -100
+
+relation = { who = PEU value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Eritrean–Ethiopian War of 1998
+country_event = {
+	id = 198004
+title = "Eritrean–Ethiopian War of $YEAR$"
+	desc = EVTDESC198004
+	picture = "ETH_ERI"
+
+fire_only_once = yes
+
+trigger = {
+year = 1998
+NOT = { year = 2004 }
+
+tag = ETH #Attacker
+
+is_vassal = no
+
+ERI = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = ERI } #Defender
+
+}
+
+mean_time_to_happen = { 
+months = 5
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = ERI #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Seek peaceful dialogue"
+prestige = -100
+
+relation = { who = ERI value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Kargil War of 1999
+country_event = {
+	id = 198005
+title = "Kargil War of $YEAR$"
+	desc = EVTDESC198005
+	picture = "PAK_HND"
+
+fire_only_once = yes
+
+trigger = {
+
+HND = { any_owned_province = { is_core = JAK } }
+
+year = 1999
+NOT = { year = 2010 }
+
+tag = PAK #Attacker
+
+is_vassal = no
+
+HND = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = HND } #Defender
+
+}
+
+mean_time_to_happen = { 
+months = 5
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = HND #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Seek peaceful dialogue"
+prestige = -100
+
+relation = { who = HND value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#War over Angola of 1987
+country_event = {
+	id = 198006
+title = "War over Angola of $YEAR$"
+	desc = EVTDESC198006
+	picture = "SAF_ANG"
+
+fire_only_once = yes
+
+trigger = {
+
+ANG = { government = proletarian_dictatorship }
+
+SAF = { ruling_party_ideology = nationalist }
+
+NAM = { exists = no }
+
+year = 1987
+NOT = { year = 1990 }
+
+tag = SAF #Attacker
+
+is_vassal = no
+
+ANG = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = ANG } #Defender
+
+}
+
+mean_time_to_happen = { 
+months = 8
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = ANG #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Seek peaceful dialogue"
+prestige = -100
+
+relation = { who = ANG value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Ogaden War of 1977
+country_event = {
+	id = 198007
+title = "Ogaden War of $YEAR$"
+	desc = EVTDESC198007
+	picture = "SOM_ETH"
+
+fire_only_once = yes
+
+trigger = {
+
+ETH = { government = proletarian_dictatorship }
+
+year = 1977
+NOT = { year = 1990 }
+
+tag = SOM #Attacker
+
+is_vassal = no
+
+ETH = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = ETH } #Defender
+
+}
+
+mean_time_to_happen = { 
+months = 7
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = ETH #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Seek peaceful dialogue"
+prestige = -100
+
+relation = { who = ETH value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Libyan–Egyptian War of 1977
+country_event = {
+	id = 198008
+title = "Libyan–Egyptian War of $YEAR$"
+	desc = EVTDESC198008
+	picture = "TRI_EGY"
+
+fire_only_once = yes
+
+trigger = {
+
+LBY = { government = nationalist_dictatorship }
+
+year = 1977
+NOT = { year = 1990 }
+
+tag = LBY #Attacker
+
+is_vassal = no
+
+EGY = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = LBY } #Defender
+
+}
+
+mean_time_to_happen = { 
+months = 7
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = EGY #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Seek peaceful dialogue"
+prestige = -100
+
+relation = { who = EGY value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Cambodian–Thai border dispute 2008
+country_event = {
+	id = 198009
+title = "Cambodian–Thai Border Dispute, $YEAR$"
+	desc = EVTDESC198009
+	picture = "CAM_THI"
+
+fire_only_once = yes
+
+trigger = {
+
+year = 2008
+
+tag = THI #Attacker
+
+is_vassal = no
+
+CAM = { war = no exists = yes is_vassal = no owns = 1366 } #Defender
+
+NOT = { war_with = CAM } #Defender
+
+}
+
+mean_time_to_happen = { 
+months = 6
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = CAM #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Cede the Preah Vihear Temple to Cambodia"
+prestige = -100
+
+relation = { who = CAM value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Heglig Crisis 2012
+country_event = {
+	id = 198010
+title = "Heglig Crisis of $YEAR$"
+	desc = EVTDESC198010
+	picture = "SUD_SSU"
+
+fire_only_once = yes
+
+trigger = {
+
+year = 2012
+
+tag = SUD #Attacker
+
+is_vassal = no
+
+SSU = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = SSU } #Defender
+
+}
+
+mean_time_to_happen = { 
+months = 3
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = SSU #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Cede Heglig to South Sudan"
+prestige = -100
+
+relation = { who = SSU value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Djiboutian–Eritrean Border Conflict 2008
+country_event = {
+	id = 198011
+title = "Djiboutian–Eritrean Border Conflict"
+	desc = EVTDESC198011
+	picture = "DJI_ERI"
+
+fire_only_once = yes
+
+trigger = {
+
+year = 2008
+
+tag = ERI #Attacker
+
+is_vassal = no
+
+DJI = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = DJI } #Defender
+
+}
+
+mean_time_to_happen = { 
+months = 3
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = DJI #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Back down"
+prestige = -100
+
+relation = { who = DJI value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#The Sand War
+country_event = {
+	id = 198012
+title = "The Sand War"
+	desc = EVTDESC198012
+	picture = "MOR_ALG"
+
+fire_only_once = yes
+
+trigger = {
+
+year = 1963
+
+NOT = { year = 1990 }
+
+tag = MOR #Attacker
+
+is_vassal = no
+
+ALG = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = ALG } #Defender
+
+}
+
+mean_time_to_happen = { 
+months = 9
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = ALG #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Back down"
+prestige = -100
+
+relation = { who = ALG value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Mexico–Guatemala Conflict
+country_event = {
+	id = 198013
+title = "The Mexico–Guatemala Conflict"
+	desc = EVTDESC198013
+	picture = "MEX_GUA"
+
+fire_only_once = yes
+
+trigger = {
+
+year = 1958
+
+NOT = { year = 1990 }
+
+tag = MEX #Attacker
+
+is_vassal = no
+
+GUA = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = GUA } #Defender
+
+}
+
+mean_time_to_happen = { 
+months = 3
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = GUA #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.4 }
+		}
+
+option = {
+name = "Back down"
+prestige = -100
+
+relation = { who = GUA value = 100 } #defender
+
+ai_chance = { factor = 0.6 }
+		}
+
+}
+
+#Shifta War
+country_event = {
+	id = 198014
+title = "The Shifta War"
+	desc = EVTDESC198014
+	picture = "KEN_SOM"
+
+fire_only_once = yes
+
+trigger = {
+
+owns = 2032
+
+owns = 2031
+
+year = 1963
+
+NOT = { year = 1990 }
+
+tag = KEN #Attacker
+
+is_vassal = no
+
+SOM = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = KEN } #Defender
+
+}
+
+mean_time_to_happen = { 
+months = 3
+	}
+
+option = {
+name = "It's War!"
+
+2031 = { add_core = SOM }
+2032 = { add_core = SOM }
+
+war = {
+
+	target = SOM #defender
+
+	attacker_goal = { casus_belli = territorial_dispute_internal }
+	defender_goal = { casus_belli = acquire_core_state state_province_id = 2031 }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Back down"
+prestige = -100
+
+2031 = { secede_province = SOM }
+2032 = { secede_province = SOM }
+
+relation = { who = SOM value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Invasion of The Gambia
+country_event = {
+	id = 198015
+title = "ECOWAS Intervention in The Gambia"
+	desc = EVTDESC198015
+	picture = "GAM_ECOWAS"
+
+fire_only_once = yes
+
+trigger = {
+
+year = 2017
+
+NOT = { year = 2024 }
+
+tag = SEN #Attacker
+
+tech_school = XEW_tech_school #SEN is an ECOWAS country
+
+is_vassal = no
+
+GAM = { war = no exists = yes is_vassal = no government = presidential_dictatorship } #Defender
+
+NOT = { war_with = GAM } #Defender
+
+}
+
+mean_time_to_happen = { 
+months = 1
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = GAM #defender
+
+	attacker_goal = { casus_belli = install_democracy }
+	defender_goal = { casus_belli = humiliate }
+	
+}
+
+ai_chance = { factor = 0.9 }
+		}
+
+option = {
+name = "Back down"
+prestige = -100
+
+relation = { who = GAM value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+		}
+
+}
+
+#Paquisha War of 1981
+country_event = {
+	id = 198016
+title = "Paquisha War of $YEAR$"
+	desc = EVTDESC198016
+	picture = "ECU_PEU_paquisha"
+
+fire_only_once = yes
+
+trigger = {
+year = 1981
+NOT = { year = 1992 }
+
+tag = ECU #Attacker
+
+is_vassal = no
+
+PEU = { war = no exists = yes is_vassal = no } #Defender
+
+NOT = { war_with = PEU } #Defender
+
+PEU = { owns = 2287 owns = 2288 owns = 2289 }
+
+}
+
+mean_time_to_happen = { 
+months = 1
+	}
+
+option = {
+name = "It's War!"
+
+war = {
+
+	target = PEU #defender
+
+	attacker_goal = { casus_belli = acquire_core_state state_province_id = 2287 }
+	defender_goal = { casus_belli = territorial_dispute_internal }
+	
+}
+
+ai_chance = { factor = 0.9 }
+	}
+
+option = {
+name = "Seek peaceful dialogue"
+prestige = -100
+
+relation = { who = PEU value = 100 } #defender
+
+ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Beagle Conflict of 1978
+country_event = {
+	id = 198017
+	title = "Operation Soberanía"
+	desc = EVTDESC198017
+	picture = "ARG_CHL_beagle"
+
+	fire_only_once = yes
+
+	trigger = {
+		year = 1978
+		NOT = { year = 1992 }
+
+		tag = ARG #Attacker
+
+		is_vassal = no
+
+		CHL = { war = no exists = yes is_vassal = no } #Defender
+
+		NOT = { war_with = CHL } #Defender
+
+		CHL = { owns = 2335 }
+		
+		ARG = { owns = 2400 }
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = {
+		name = "It's War!"
+
+		war = {
+			target = CHL #defender
+			attacker_goal = { casus_belli = territorial_dispute_internal }
+			defender_goal = { casus_belli = territorial_dispute_internal }
+		}
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Seek peaceful dialogue"
+		prestige = -100
+
+		relation = { who = CHL value = 100 } #defender
+
+		ai_chance = { factor = 0.1 }
+	}
+
+}

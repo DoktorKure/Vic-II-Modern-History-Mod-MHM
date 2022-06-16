@@ -1,0 +1,108 @@
+political_decisions = {
+
+	instigate_rebels_superpower = {
+		picture = "change_rebels"
+		
+		potential = {
+		
+			#Starting from the 1950s
+			wars_of_national_liberation = 1
+			
+			#Has a spy agency
+			has_country_modifier = spy_agency
+			
+			#Is a superpower
+			OR = { 
+				has_country_modifier = un_king1 
+				has_country_modifier = un_king2 
+			}
+			
+			#Not a unipolar world
+			AND = { has_country_modifier = un_king1 any_greater_power = { has_country_modifier = un_king2 } }
+			AND = { has_country_modifier = un_king2 any_greater_power = { has_country_modifier = un_king1 } }
+		}
+
+		alert = yes
+		
+		allow = {
+		
+			NOT = { has_country_modifier = superpower_rebels_timer }
+
+			NOT = { is_disarmed = yes }
+			
+			money = 125000
+
+			OR = { 
+				war_policy = jingoism 
+				war_policy = pro_military 
+			}
+			
+			#Relation with rival superpower
+			OR = {
+				ai = no
+				any_greater_power = { 
+					has_country_modifier = un_king1 
+					NOT = { relation = { who = THIS value = -100 } } 
+				}
+				any_greater_power = { 
+					has_country_modifier = un_king2 
+					NOT = { relation = { who = THIS value = -100 } } 
+				}
+			}
+			
+		}
+
+		effect = {
+		
+			money = -100000
+		
+			badboy = 5
+
+			#Jingoism is more effective
+			random_owned = { 
+				limit = { owner = { war_policy = jingoism } }
+				owner = { 
+				
+					add_country_modifier = { name = superpower_rebels_timer duration = 730 }
+					
+					random_country = {
+						limit = { 
+							NOT = { tag = THIS }
+							OR = { 
+								has_country_modifier = un_king1 
+								has_country_modifier = un_king2 
+							} 
+						}
+						country_event = 1410112
+					}
+				}
+			}
+
+			#Pro military is less effective
+			random_owned = { 
+				limit = { owner = { war_policy = pro_military } }
+				owner = { 
+				
+					add_country_modifier = { name = superpower_rebels_timer duration = 1095 }
+					
+					random_country = {
+						limit = { 
+							NOT = { tag = THIS }
+							OR = { 
+								has_country_modifier = un_king1 
+								has_country_modifier = un_king2 
+							} 
+						}
+						country_event = 1410112
+					}
+				}
+			}
+
+		}
+		ai_will_do = { 
+			factor = 1
+			modifier = { factor = 0 badboy = 0.5 }
+		}
+	}
+
+}

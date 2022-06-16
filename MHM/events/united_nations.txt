@@ -1,0 +1,1921 @@
+#############################
+# UN Security Council Mechanism 
+# The UN Security Council in NWO works as a precursor to a Crisis. I.e an effort toe peaceful resolve a crisis 
+# before it grows into a full blown conflict.
+# If "flash-point" tension rices above 50 and no crisis is ongoing the UN Security Council is summoned 
+# (all permanent members get event "UN Security Council on conflict in $STATENAME$" event), 
+# except if the province has un_resolution_xxx modifier.
+#############################
+
+
+###################
+country_event = { 
+  id = 9000
+  title = EVT_9000_NAME # UN Security Council on conflict in $FROMPROVINCE$
+  desc = EVT_9000_DESC
+  is_triggered_only = yes
+  
+  option = {
+    name = EVT_9000_A
+	FROM = { add_country_modifier = { name = un_resolution_veto duration = 1200  } }
+	FROM = { change_variable = { which = UNSC_vote value = 1 } }
+	ai_chance = { 
+		factor = 0.01 
+		modifier = { 
+			factor = 100 
+			OR = { tag = FROM is_sphere_leader_of = FROM is_our_vassal = FROM } 
+		} 
+	}
+  }
+
+  option = {
+    name = EVT_9000_B
+	FROM = { change_variable = { which = UNSC_vote value = 1 } }
+	random_country = { 
+		limit = { 
+			check_variable  = { which = UNSC_vote value = 5 } 
+			tag = FROM 
+			NOT = { has_country_modifier = un_resolution_veto } 
+		}
+		country_event = 9001 
+	}
+	random_country = { 
+		limit = { 
+			check_variable  = { which = UNSC_vote value = 5 } 
+			tag = FROM 
+			has_country_modifier = un_resolution_veto
+		}
+		country_event = 9002
+	}
+	ai_chance = { 
+		factor = 0.01 
+		modifier = { 
+			factor = 100 
+			OR = {
+				AND = { has_country_modifier = democratic_bloc FROM = { has_country_modifier = democratic_bloc } }
+				AND = { has_country_modifier = communist_bloc FROM = { has_country_modifier = communist_bloc } }
+				AND = { has_country_flag = joinnam FROM = { has_country_flag = joinnam } }
+				AND = { has_country_modifier = democratic_bloc relation = { who = FROM value = 100 } FROM = { has_country_flag = joinnam } }
+				AND = { has_country_modifier = communist_bloc  relation = { who = THIS value = 100 } FROM = { has_country_flag = joinnam } }
+			}
+		}
+	}
+  }
+
+  option = {
+    name = EVT_9000_C
+	FROM = { change_variable = { which = UNSC_vote value = 1 } }
+	random_country = { 
+		limit = { 
+			check_variable  = { which = UNSC_vote value = 5 } 
+			tag = FROM
+			NOT = { has_country_modifier = un_resolution_veto } 
+		}
+		country_event = 9001 
+	}
+	random_country = { 
+		limit = { 
+			check_variable  = { which = UNSC_vote value = 5 } 
+			tag = FROM 
+			has_country_modifier = un_resolution_veto
+		}
+		country_event = 9002 
+	}
+	ai_chance = { 
+		factor = 0.01 
+		modifier = { 
+			factor = 100 
+			war = yes
+			NOT = { 
+				OR = {
+					AND = { has_country_modifier = democratic_bloc FROM = { has_country_modifier = democratic_bloc } }
+					AND = { has_country_modifier = communist_bloc FROM = { has_country_modifier = communist_bloc } }
+					AND = { has_country_flag = joinnam FROM = { has_country_flag = joinnam } }
+					AND = { has_country_flag = joinnam relation = { who = FROM value = 100 } FROM = { has_country_flag = joinnam } }
+					AND = { has_country_modifier = communist_bloc  relation = { who = THIS value = 100 } FROM = { has_country_flag = joinnam } }
+					tag = FROM 
+					is_sphere_leader_of = FROM 
+					is_our_vassal = FROM
+				}
+			}
+		}
+	}
+  }
+
+  option = {
+    name = EVT_9000_D
+	ai_chance = { 
+		factor = 0.01 
+		modifier = { 
+			factor = 100 
+			OR = {
+				AND = { has_country_modifier = democratic_bloc FROM = { has_country_modifier = democratic_bloc } }
+				AND = { has_country_modifier = communist_bloc FROM = { has_country_modifier = communist_bloc } }
+				AND = { has_country_flag = joinnam FROM = { has_country_flag = joinnam } }
+				AND = { has_country_modifier = democratic_bloc relation = { who = FROM value = 100 } FROM = { has_country_flag = joinnam } }
+				AND = { has_country_modifier = communist_bloc  relation = { who = THIS value = 100 } FROM = { has_country_flag = joinnam } }
+				tag = FROM 
+				is_sphere_leader_of = FROM 
+				is_our_vassal = FROM
+			}
+		}
+	}
+  }
+}
+country_event = {
+  id = 9001
+  title = EVT_9001_NAME # UN Security Council vote supporting your position in $FROMPROVINCE$
+  desc = EVT_9001_DESC
+  picture = "nwo2_united_nations_intervention"
+  is_triggered_only = yes # for crisis country
+  
+  option = {
+    name = EVT_9001_A
+	prestige = 5
+	set_variable = { which = UNSC_vote value = 0 }
+	clr_country_flag = UNSC_vote_on_decolonialization
+	any_country = { 
+		limit = { 
+			has_country_modifier = unsc_permanent_member
+			NOT = { has_country_flag = not_participating_UNSC }
+		}
+		country_event = 9003
+	}
+  }
+}
+country_event = {
+  id = 9002
+  title = EVT_9002_NAME # UN Resolution Vetoed
+  desc = EVT_9002_DESC
+  picture = "nwo2_united_nations"
+  is_triggered_only = yes # for crisis country
+
+  option = {
+    name = EVT_9002_A
+	prestige = -5
+	set_variable = { which = UNSC_vote value = 0 }
+	clr_country_flag = UNSC_vote_on_decolonialization
+	any_country = { 
+		limit = { 
+			has_country_modifier = unsc_permanent_member
+			NOT = { has_country_flag = not_participating_UNSC }
+		}
+		country_event = 9004
+	}
+  }
+}
+country_event = {
+  id = 9003
+  title = EVT_9003_NAME
+  desc = EVT_9003_DESC
+  picture = "united_nations_security_council"
+  is_triggered_only = yes # for UNSC country
+  
+  option = {
+    name = EVT_9003_A
+  }
+}
+country_event = {
+  id = 9004
+  title = EVT_9004_NAME
+  desc = EVT_9004_DESC
+  picture = "united_nations_security_council"
+  is_triggered_only = yes # for UNSC country
+
+  option = {
+    name = EVT_9004_A
+  }
+}
+########################################################
+# UN Membership and UN Peackeeping in internal conflicts
+########################################################
+
+country_event = {
+	id = 1215009
+	title = EVT_1215009_NAME # Permanent Member of the UN Security Council
+	desc = EVT_1215009_DESC
+	picture = "united_nations_security_council"
+
+	trigger = {
+		OR = { 
+			tag = CHI
+			tag = KMT
+			tag = ENG
+			tag = USA
+			tag = FRA
+			tag = RUS
+			tag = RUS
+			tag = XNA
+			tag = XEA
+		}	
+		has_country_flag = disabled_for_now	
+		NOT = { has_country_modifier = unsc_permanent_member }
+		NOT = { has_country_flag = not_participating_UNSC }
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = EVT_1215009_A 
+		random_country = { limit = { NOT = { year = 1990 } tag = CHI } set_country_flag = not_participating_UNSC } 
+		random_country = { limit = { year = 1990 tag = KMT } set_country_flag = not_participating_UNSC } 
+		set_country_flag = permanent_member_of_UNSC
+		ai_chance = { factor = 1 }
+		prestige = 10 
+	}
+}
+
+country_event = {
+	id = 1215010
+	title = EVT_1215010_NAME
+	desc = EVT_1215010_DESC
+	picture = "united_nations"
+
+	trigger = {
+		has_country_flag = is_disabled_for_now
+		NOT = { has_country_modifier = not_member_of_united_nations }
+		NOT = { has_country_modifier = united_nations }
+		war = no
+		OR = { is_vassal = no government = proletarian_dictatorship }
+		year = 1946
+		NOT = { 
+			OR = { 
+				AND = { tag = CHI has_global_flag = CHI_in_UNSC }
+				AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
+				tag = ENG
+				tag = USA
+				tag = FRA
+				tag = RUS
+			}		
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+
+	option = {
+		name = EVT_1215010_A 
+		ai_chance = { factor = 0 }
+		prestige = -2 
+		add_country_modifier = { name = not_member_of_united_nations duration = -1 }
+	}
+
+	option = {
+		name = EVT_1215010_B
+		ai_chance = { factor = 1 }
+		prestige = -2 
+		add_country_modifier = { name = not_member_of_united_nations duration = -1 }
+		any_country = { 
+			limit = { 
+				THIS = { 
+					OR = { 
+						AND = { tag = CHI year = 1971 }
+						AND = { tag = KMT NOT = { year = 1971 } }
+						tag = ENG
+						tag = USA
+						tag = FRA
+						tag = RUS
+						tag = RUS
+					}
+				}
+				neighbour = THIS
+				is_greater_power = yes 
+				# same list as in  united_nations.txt decition
+				OR = { 
+					AND = { tag = CHI year = 1971 }
+					AND = { tag = KMT NOT = { year = 1971 } }
+					tag = KMT
+					tag = ENG
+					tag = USA
+					tag = FRA
+					tag = RUS
+					tag = RUS
+				}
+			}
+			diplomatic_influence = { who = THIS value = 25 }
+		}
+	}
+}
+
+country_event = {
+	id = 1215011
+	title = EVT_1215011_NAME
+	desc = EVT_1215011_DESC
+	picture = "united_nations_peacekeeping_mission"
+
+	trigger = {
+has_country_flag = not_enabled_forever
+		has_country_modifier = united_nations
+		NOT = { has_country_modifier = call_for_un_peacekeeping_mission }
+		is_greater_power = no
+		OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } 
+		ai = yes
+		OR = { 
+			AND = { num_of_revolts = 1 NOT = { num_of_cities = 3 } }
+			AND = { num_of_revolts = 2 num_of_cities = 3  }
+			AND = { num_of_revolts = 3 num_of_cities = 9  }
+			AND = { num_of_revolts = 4 num_of_cities = 18 }
+		}
+		war = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = EVT_1215011_A 
+		ai_chance = { factor = 1 }
+		prestige = -2 
+		add_country_modifier = { name = call_for_un_peacekeeping_mission duration = 700 }
+		any_country = { limit = { ai = no has_country_modifier = united_nations } country_event = 1215012 }
+	}
+	
+	# no need for second factor ai will always do
+}
+
+country_event = {
+	id = 1215012
+	title = EVT_1215012_NAME
+	desc = EVT_1215012_DESC
+	picture = "united_nations_peacekeeping_mission"
+
+	is_triggered_only = yes 
+
+	option = {
+		name = EVT_1215012_A 
+		prestige = 10
+		add_country_modifier = { name = un_peacekeeping_mission duration = 700 }
+		FROM = { add_country_modifier = { name = un_peacekeeping_mission duration = 700 } } 
+		military_access = FROM
+	}
+	
+	option = {
+		name = EVT_1215012_B # never mind 
+	}
+}
+
+country_event = {
+	id = 1215013
+
+	title = EVT_1215013_NAME
+	desc = EVT_1215013_DESC
+	picture = "united_nations_peacekeeping_mission"
+
+	trigger = {
+		has_country_modifier = call_for_un_peacekeeping_mission
+		NOT = { government = hms_government government = democracy }
+		ai = yes
+		war = no
+	}
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = EVT_1215013_A 
+		ai_chance = { factor = 1 }
+		prestige = 2
+		remove_country_modifier = call_for_un_peacekeeping_mission
+		any_country = { limit = { ai = no has_country_modifier = un_peacekeeping_mission } country_event = 1215014 }
+	}
+	
+	# no need for second factor ai will always do
+}
+
+country_event = {
+	id = 1215014
+
+	title = EVT_1215014_NAME
+	desc = EVT_1215014_DESC
+	picture = "united_nations_peacekeeping_mission"
+
+	is_triggered_only = yes 
+
+	option = {
+		name = EVT_1215014_A 
+		prestige = -20
+		relation = { who = FROM value = -100 }
+		remove_country_modifier = un_peacekeeping_mission
+		add_country_modifier = { name = ruling_party_scandal duration = 350 }
+	}
+	
+}
+country_event = {
+	id = 1215015
+	title = EVT_1215015_NAME
+	desc = EVT_1215015_DESC
+	picture = "united_nations"
+
+	trigger = {
+
+NOT = { has_country_flag = founding_member_of_un }
+NOT = { has_country_modifier = not_member_of_united_nations }
+		NOT = { has_country_modifier = united_nations }
+		war = no
+		year = 1946
+		OR = {
+tag = ARG tag = AST tag = BEL tag = BOL tag = BRZ tag = CAN tag = CHL tag = CLM tag = COS tag = CUB tag = CZH tag = DEN
+tag = DOM tag = ECU tag = EGY tag = ELS tag = ETH tag = FRA tag = GRE tag = GUA tag = HAI tag = HON tag = RAJ tag = PER 
+tag = IRQ tag = LEB tag = LIB tag = LUX tag = MEX tag = NET tag = NZL tag = NIC tag = NOR tag = PNM tag = PRG tag = PEU 
+tag = PHI tag = SAA tag = SAF tag = SYR tag = TUR tag = RUS tag = ENG tag = USA tag = URU tag = VNZ tag = YUG tag = KMT
+			}
+	}
+
+	mean_time_to_happen = {
+		months = 4
+	}
+
+	option = {
+		name = EVT_1215015_A
+		set_country_flag = founding_member_of_un
+		prestige = 50
+add_country_modifier = { name = united_nations duration = -1 }
+	}
+
+}
+
+##################################################
+# Specific UN security council cases
+##################################################
+
+# CHINESE CIVIL WAR
+
+country_event = { # TODO trigger by chinese civil war
+	id = 8510101
+	title = EVT_85101XX_NAME
+	desc = EVT_85101XX_DESC
+	picture = "nwo2_un_security_council"
+
+	trigger = {
+		NOT = { tag = KMT }
+		has_country_modifier = unsc_permanent_member
+		year = 1946
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		is_greater_power = yes
+		
+		OR = { 
+			AND = { tag = CHI has_global_flag = CHI_in_UNSC }
+			AND = { tag = RUS NOT = { has_global_flag = un_soviet_boycott } }
+			AND = { tag = KMT NOT = { has_global_flag = CHI_in_UNSC } }
+		}
+		
+		KMT = { NOT = { has_country_modifier = requested_un_peacemaking } } #No Double Dipping Chiang.
+		CHI = { war_with = KMT }
+		
+		NOT = { has_country_flag = un_ccw }
+	}
+
+	mean_time_to_happen = { months = 0.1 }
+
+	immediate = { set_country_flag = un_ccw }
+  
+	option = {
+		name = EVT_85101XX_A
+		
+		money = -200000
+		
+		random_country = {
+			limit = { tag = KMT NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 100
+			weaponry = 100
+			aeroplanes = 100
+			ammunition = 100
+			automobiles = 100
+			
+			relation = { who = THIS value = 100 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.75
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.25
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.75
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 300000 }
+			} 
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_B
+		
+		money = -100000
+		
+		random_country = {
+			limit = { tag = KMT NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 50
+			weaponry = 50
+			aeroplanes = 50
+			ammunition = 50
+			automobiles = 50
+			
+			relation = { who = THIS value = 50 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.50
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.50
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.50
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 200000 }
+			}
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_C
+		
+		random_country = {
+			limit = { tag = KMT NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			relation = { who = THIS value = -50 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal }
+			}
+			
+			modifier = { 
+				factor = 0.25
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.75
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.25
+				war_policy = pro_military
+			}
+		}
+		
+	}
+	
+}
+
+# SUEZ WAR
+
+country_event = { # TODO trigger by suez war
+	id = 8510201
+	title = EVT_85102XX_NAME
+	desc = EVT_85102XX_DESC
+	picture = "nwo2_un_security_council"
+
+	trigger = {
+		has_country_modifier = unsc_permanent_member
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		is_greater_power = yes
+		
+		#Suez Crisis ongoing
+		has_global_flag = suez_crisis_triggered
+		ENG = { is_vassal = no war_with = EGY has_country_modifier = united_nations_ga_member }
+		EGY = { is_vassal = no ruling_party_ideology = socialist }
+		
+		EGY = { NOT = { has_country_modifier = requested_un_peacemaking } } #No Double Dipping.
+		
+		NOT = { has_country_flag = un_suez }
+	}
+
+	mean_time_to_happen = { months = 0.1 }
+
+	immediate = { set_country_flag = un_suez }
+  
+	option = {
+		name = EVT_85101XX_A
+		
+		money = -200000
+		
+		random_country = {
+			limit = { tag = EGY NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 100
+			weaponry = 100
+			aeroplanes = 100
+			ammunition = 100
+			automobiles = 100
+			
+			relation = { who = THIS value = 100 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				war_with = EGY
+			}
+			
+			modifier = { 
+				factor = 0.75
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.25
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.75
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0.75
+				AND = { relation = { who = RUS value = 100 } has_global_flag = blocsenabled }
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 300000 }
+			} 
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_B
+		
+		money = -100000
+		
+		random_country = {
+			limit = { tag = EGY NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 50
+			weaponry = 50
+			aeroplanes = 50
+			ammunition = 50
+			automobiles = 50
+			
+			relation = { who = THIS value = 50 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				war_with = EGY
+			}
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.50
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.50
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.50
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0.50
+				AND = { relation = { who = RUS value = 100 } has_global_flag = blocsenabled }
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 200000 }
+			}
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_C
+		
+		random_country = {
+			limit = { tag = EGY NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			relation = { who = THIS value = -50 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.25
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.75
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.25
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0.25
+				AND = { relation = { who = RUS value = 100 } has_global_flag = blocsenabled }
+			}
+		}
+		
+	}
+
+}
+
+# TAIWAN WAR 
+
+country_event = { # TODO trigger by taiwan war
+	id = 8510301
+	title = EVT_85103XX_NAME
+	desc = EVT_85103XX_DESC
+	picture = "nwo2_un_security_council"
+  
+	trigger = {
+		NOT = { tag = KMT }
+		has_global_flag = CHI_won_civil_war
+		has_country_modifier = unsc_permanent_member
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		is_greater_power = yes
+		
+		#Taiwan War ongoing
+		year = 1954
+		KMT = { is_vassal = no war_with = CHI }
+		CHI = { is_vassal = no government = proletarian_dictatorship }
+		
+		KMT = { NOT = { has_country_modifier = requested_un_peacemaking } } #No Double Dipping.
+		
+		NOT = { has_country_flag = un_taiwan }
+	}
+
+	mean_time_to_happen = { months = 0.1 }
+
+	immediate = { set_country_flag = un_taiwan }
+  
+	option = {
+		name = EVT_85101XX_A
+		
+		money = -200000
+		
+		random_country = {
+			limit = { tag = KMT NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 100
+			weaponry = 100
+			aeroplanes = 100
+			ammunition = 100
+			automobiles = 100
+			
+			relation = { who = THIS value = 100 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.75
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.25
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.75
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 300000 }
+			} 
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_B
+		
+		money = -100000
+		
+		random_country = {
+			limit = { tag = KMT NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 50
+			weaponry = 50
+			aeroplanes = 50
+			ammunition = 50
+			automobiles = 50
+			
+			relation = { who = THIS value = 50 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.50
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.50
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.50
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 200000 }
+			}
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_C
+		
+		random_country = {
+			limit = { tag = KMT NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			relation = { who = THIS value = -50 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal }
+			}
+			
+			modifier = { 
+				factor = 0.25
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.75
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.25
+				war_policy = pro_military
+			}
+		}
+		
+	}
+	
+}
+
+# GREEK CIVIL WAR
+
+country_event = { # TODO Greek Civil war trigger
+	id = 8510401
+	title = EVT_85104XX_NAME
+	desc = EVT_85104XX_DESC
+	picture = "nwo2_un_security_council"
+
+	trigger = {
+		has_country_modifier = unsc_permanent_member
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		is_greater_power = yes
+		
+		#GCW ongoing
+		GRE = { is_vassal = no war_with = UGR }
+		UGR = { is_vassal = no }
+		
+		GRE = { NOT = { has_country_modifier = requested_un_peacemaking } } #No Double Dipping.
+		
+		NOT = { has_country_flag = un_gcw }
+	}
+
+	mean_time_to_happen = { months = 0.1 }
+
+	immediate = { set_country_flag = un_gcw }
+  
+	option = {
+		name = EVT_85101XX_A
+		
+		money = -200000
+		
+		random_country = {
+			limit = { tag = GRE NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 100
+			weaponry = 100
+			aeroplanes = 100
+			ammunition = 100
+			automobiles = 100
+			
+			relation = { who = THIS value = 100 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.75
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.25
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.75
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 300000 }
+			} 
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_B
+		
+		money = -100000
+		
+		random_country = {
+			limit = { tag = GRE NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 50
+			weaponry = 50
+			aeroplanes = 50
+			ammunition = 50
+			automobiles = 50
+			
+			relation = { who = THIS value = 50 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.50
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.50
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.50
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 200000 }
+			}
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_C
+		
+		random_country = {
+			limit = { tag = GRE NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			relation = { who = THIS value = -50 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal }
+			}
+			
+			modifier = { 
+				factor = 0.25
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.75
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.25
+				war_policy = pro_military
+			}
+		}
+		
+	}
+	
+}
+
+# FUTRURE OF ERITREA 
+
+country_event = { # TODO Eritrea trigger
+	id = 8510501
+	title = EVT_85105XX_NAME
+	desc = EVT_85105XX_DESC
+	picture = "nwo2_un_security_council"
+
+	trigger = {
+		has_country_modifier = unsc_permanent_member
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		is_greater_power = yes
+		
+		#Ethiopia
+		ETH = { is_vassal = no is_possible_vassal = ERI }
+		
+		NOT = { has_country_flag = un_eritrea }
+	}
+
+	mean_time_to_happen = { months = 0.1 }
+
+	immediate = { set_country_flag = un_eritrea }
+  
+	option = {
+		name = EVT_85105XX_A
+		ETH = { 
+			any_pop = { 
+				limit = { location = { is_core = ETH } }
+				militancy = 2
+				consciousness = 2
+			}
+		}
+		ai_chance = { 
+			factor = 0.25
+			modifier = { 
+				factor = 0
+				relation = { who = ETH value = 100 }
+			}
+		}
+	}
+
+	option = {
+		name = EVT_85105XX_B
+		ETH = { 
+			prestige = 25
+			any_pop = { 
+				limit = { location = { is_core = ETH } }
+				militancy = 1
+				consciousness = 1
+			}
+		}
+		ai_chance = { 
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = EVT_85105XX_C
+		ETH = { 
+			prestige = 50
+			any_pop = { 
+				limit = { is_core = ETH } 
+				militancy = 1
+				consciousness = 1
+			}
+		}
+		ai_chance = { 
+			factor = 0.25
+			modifier = { 
+				factor = 0
+				NOT = { relation = { who = ETH value = 0 } }
+			}
+		}
+	}
+	
+}
+
+# INDONESIAN NATIONAL REVOLUTION
+
+country_event = { # TODO Indonesian National Revolution
+	id = 8510601
+	title = EVT_85106XX_NAME
+	desc = EVT_85106XX_DESC
+	picture = "nwo2_un_security_council"
+  
+  	trigger = {
+		has_country_modifier = unsc_permanent_member
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		is_greater_power = yes
+		
+		#INR ongoing
+		IDO = { is_vassal = no war_with = NET }
+		NET = { is_vassal = no has_country_modifier = united_nations_ga_member }
+		
+		IDO = { NOT = { has_country_modifier = requested_un_peacemaking } } #No Double Dipping.
+		
+		NOT = { has_country_flag = un_indonesia }
+	}
+
+	mean_time_to_happen = { months = 0.1 }
+
+	immediate = { set_country_flag = un_indonesia }
+  
+	option = {
+		name = EVT_85101XX_A
+		
+		money = -200000
+		
+		random_country = {
+			limit = { tag = IDO NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 100
+			weaponry = 100
+			aeroplanes = 100
+			ammunition = 100
+			automobiles = 100
+			
+			relation = { who = THIS value = 100 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				AND = { capital_scope = { continent = europe } OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal } }
+			}
+			modifier = { 
+				factor = 0.75
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.25
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.75
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 300000 }
+			} 
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_B
+		
+		money = -100000
+		
+		random_country = {
+			limit = { tag = IDO NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 50
+			weaponry = 50
+			aeroplanes = 50
+			ammunition = 50
+			automobiles = 50
+			
+			relation = { who = THIS value = 50 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				AND = { capital_scope = { continent = europe } OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal } }
+			}
+			modifier = { 
+				factor = 0.50
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.50
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.50
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.50
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 200000 }
+			}
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_C
+		
+		random_country = {
+			limit = { tag = IDO NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			relation = { who = THIS value = -50 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.25
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.75
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.25
+				war_policy = pro_military
+			}
+		}
+		
+	}
+	
+}
+
+# KOREA WAR
+
+country_event = { # TODO Korean War
+	id = 8510701
+	title = EVT_85107XX_NAME
+	desc = EVT_85107XX_DESC
+	picture = "nwo2_un_security_council"
+  
+	trigger = {
+		has_country_modifier = unsc_permanent_member
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		is_greater_power = yes
+		
+		SKO = { NOT = { has_country_modifier = requested_un_peacemaking } } #No Double Dipping.
+		SKO = { is_vassal = no war_with = NKO }
+		NKO = { is_vassal = no }
+		
+		NOT = { has_country_flag = un_korea }
+	}
+
+	mean_time_to_happen = { months = 0.1 }
+
+	immediate = { set_country_flag = un_korea }
+  
+	option = {
+		name = EVT_85101XX_A
+		
+		money = -200000
+		
+		random_country = {
+			limit = { tag = SKO NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 100
+			weaponry = 100
+			aeroplanes = 100
+			ammunition = 100
+			automobiles = 100
+			
+			relation = { who = THIS value = 100 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.25
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.25
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.75
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 300000 }
+			} 
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_B
+		
+		money = -100000
+		
+		random_country = {
+			limit = { tag = SKO NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 50
+			weaponry = 50
+			aeroplanes = 50
+			ammunition = 50
+			automobiles = 50
+			
+			relation = { who = THIS value = 50 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			}
+			modifier = { 
+				factor = 0.50
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.50
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.50
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 200000 }
+			}
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_C
+		
+		random_country = {
+			limit = { tag = SKO NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			relation = { who = THIS value = -50 }
+		}
+		
+		ai_chance = { 
+			factor = 1
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal }
+			}
+			
+			modifier = { 
+				factor = 0.75
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.75
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.25
+				war_policy = pro_military
+			}
+		}
+		
+	}
+	
+}
+
+# HUNGARIAN REVOLUSION 
+
+country_event = { # TODO Hungarian Revolution
+	id = 8510801
+	title = EVT_85108XX_NAME
+	desc = EVT_85108XX_DESC
+	picture = "nwo2_un_security_council"
+  
+	trigger = {
+		NOT = { tag = RUS }
+		has_global_flag = hungarian_revolution_1956
+		has_country_modifier = unsc_permanent_member
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		is_greater_power = yes
+		
+		#Hungary
+		HUN = { exists = yes }
+		has_global_flag = blocsenabled
+		
+		NOT = { has_country_flag = un_hungary }
+	}
+
+	mean_time_to_happen = { months = 0.1 }
+
+	immediate = { set_country_flag = un_hungary }
+  
+	option = {
+		name = EVT_85105XX_A
+		HUN = { 
+			any_pop = { 
+				militancy = 2
+				consciousness = 2
+				ideology = { factor = 0.03 value = liberal }
+			}
+		}
+		
+		relation = { who = RUS value = -100 }
+		
+		ai_chance = { 
+			factor = 0.25
+			modifier = { 
+				factor = 0
+				relation = { who = RUS value = 100 }
+			}
+		}
+	}
+
+	option = {
+		name = EVT_85105XX_B
+		HUN = { 
+			any_pop = { 
+				militancy = 1
+				consciousness = 1
+				ideology = { factor = 0.02 value = liberal }
+			}
+		}
+		
+		relation = { who = RUS value = -50 }
+		
+		ai_chance = { 
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = EVT_85105XX_C
+		
+		ai_chance = { 
+			factor = 0.25
+			modifier = { 
+				factor = 0
+				NOT = { relation = { who = RUS value = 0 } }
+			}
+		}
+	}
+	
+}
+
+# FALKLAND WAR
+
+country_event = { # called in falkland wars
+	id = 8510901 
+	title = EVT_85109XX_NAME
+	desc = EVT_85109XX_DESC
+	picture = "nwo2_un_security_council"
+
+	trigger = {
+		NOT = { tag = ENG }
+		has_global_flag = falklands_war_FLK
+		has_country_modifier = unsc_permanent_member
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		is_greater_power = yes
+		
+		ENG = { NOT = { has_country_modifier = requested_un_peacemaking } } #No Double Dipping.
+		ENG = { is_vassal = no war_with = ARG }
+		ARG = { is_vassal = no }
+		
+		NOT = { has_country_flag = un_falklands }
+	}
+
+	mean_time_to_happen = { months = 0.1 }
+
+	immediate = { set_country_flag = un_falklands }
+  
+	option = {
+		name = EVT_85101XX_A
+		
+		money = -200000
+		
+		random_country = {
+			limit = { tag = ENG NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 100
+			weaponry = 100
+			aeroplanes = 100
+			ammunition = 100
+			automobiles = 100
+			
+			relation = { who = THIS value = 100 }
+		}
+		
+		ai_chance = { 
+			factor = 0.25
+			
+			modifier = { 
+				factor = 0
+				relation = { who = ARG value = 100 }
+			}
+			
+			modifier = { 
+				factor = 0.25
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.75
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 300000 }
+			} 
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_B
+		
+		money = -100000
+		
+		random_country = {
+			limit = { tag = ENG NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 50
+			weaponry = 50
+			aeroplanes = 50
+			ammunition = 50
+			automobiles = 50
+			
+			relation = { who = THIS value = 50 }
+		}
+		
+		ai_chance = { 
+			factor = 0.50
+			
+			modifier = { 
+				factor = 0.50
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.50
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 200000 }
+			}
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_C
+		
+		random_country = {
+			limit = { tag = ENG NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			relation = { who = THIS value = -50 }
+		}
+		
+		ai_chance = { 
+			factor = 0.25
+			
+			modifier = { 
+				factor = 0
+				NOT = { relation = { who = ARG value = 0 } }
+			}
+			
+			modifier = { 
+				factor = 0.75
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.25
+				war_policy = pro_military
+			}
+		}
+		
+	}
+	
+}
+
+# KUWAIT WAR
+
+country_event = {
+	id = 8511001
+	title = EVT_85110XX_NAME
+	desc = EVT_85110XX_DESC
+	picture = "nwo2_un_security_council"
+
+	trigger = {
+		has_global_flag = 1990_gulf_war_fired_flag
+		has_country_modifier = unsc_permanent_member
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		is_greater_power = yes
+		
+		KUW = { NOT = { has_country_modifier = requested_un_peacemaking } } #No Double Dipping.
+		KUW = { is_vassal = no war_with = IRQ has_country_modifier = united_nations_ga_member }
+		IRQ = { is_vassal = no }
+		
+		NOT = { has_country_flag = un_gulf_war }
+	}
+
+	mean_time_to_happen = { months = 0.1 }
+
+	immediate = { set_country_flag = un_gulf_war }
+  
+	option = {
+		name = EVT_85101XX_A
+		
+		money = -200000
+		
+		random_country = {
+			limit = { tag = KUW NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 100
+			weaponry = 100
+			aeroplanes = 100
+			ammunition = 100
+			automobiles = 100
+			
+			relation = { who = THIS value = 100 }
+		}
+		
+		ai_chance = { 
+			factor = 0.25
+			
+			modifier = { 
+				factor = 0
+				relation = { who = IRQ value = 100 }
+			}
+			
+			modifier = { 
+				factor = 0.25
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.75
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 300000 }
+			} 
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_B
+		
+		money = -100000
+		
+		random_country = {
+			limit = { tag = KUW NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			small_arms = 50
+			weaponry = 50
+			aeroplanes = 50
+			ammunition = 50
+			automobiles = 50
+			
+			relation = { who = THIS value = 50 }
+		}
+		
+		ai_chance = { 
+			factor = 0.50
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal }
+			}
+			
+			modifier = { 
+				factor = 0.50
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0.50
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.50
+				war_policy = pro_military
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { money = 200000 }
+			}
+		}
+		
+	}
+
+	option = {
+		name = EVT_85101XX_C
+		
+		random_country = {
+			limit = { tag = KUW NOT = { has_country_modifier = requested_un_peacemaking } }
+			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
+			add_country_modifier = { name = peace_making_veoted duration = 730 }
+			set_country_flag = un_peace_making_marker
+			
+			relation = { who = THIS value = -50 }
+		}
+		
+		ai_chance = { 
+			factor = 0.25
+			
+			modifier = { 
+				factor = 0
+				OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal }
+			}
+			modifier = { 
+				factor = 0.25
+				ruling_party_ideology = socialist
+			}
+			
+			modifier = { 
+				factor = 0
+				NOT = { relation = { who = IRQ value = 0 } }
+			}
+			
+			modifier = { 
+				factor = 0.75
+				war_policy = pacifism
+			}
+			modifier = { 
+				factor = 0.25
+				war_policy = pro_military
+			}
+		}
+		
+	}
+	
+}

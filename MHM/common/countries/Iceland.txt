@@ -1,0 +1,273 @@
+graphical_culture = EuropeanGC
+color = { 62 129 155 }
+party = {
+		name = "Nationalist Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2016.1.18
+}
+party = {
+		name = "Icelandic National Front"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 2016.1.18
+		end_date = 2100.1.1
+}
+party = {
+		name = "Centre Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Independence Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Progressive Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Liberal Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1998.11.28
+		end_date = 2012.3.18
+}
+party = {
+		name = "Liberal Reform Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2016.5.24
+		end_date = 2092.1.1
+}
+party = {
+		name = "Social Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2000.5.5
+}
+party = {
+		name = "Social Democratic Alliance"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2000.5.5
+		end_date = 2092.1.1
+}
+party = {
+		name = "Left-Green Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1999.2.6
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Preservation Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1970.1.1
+}
+party = {
+		name = "Union of Liberals and Leftists"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1970.1.1
+		end_date = 1983.1.1
+}
+party = {
+		name = "Women's List"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1983.1.1
+		end_date = 2016.1.27
+}
+party = {
+		name = "People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2016.1.27
+		end_date = 2092.1.1
+}
+party = {
+		name = "Citizens' Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_traditionalist_0_ICL"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "People's Unity Party – SF"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1968.1.1
+}
+party = {
+		name = "People's Alliance"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1968.1.1
+		end_date = 2013.1.13
+}
+party = {
+		name = "People's Front of Iceland"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2013.1.13
+		end_date = 2092.1.1
+}
+party = {
+		name = "People's Unity Party – SF"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1968.1.1
+}
+party = {
+		name = "People's Alliance"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1968.1.1
+		end_date = 2017.5.1
+}
+party = {
+		name = "Icelandic Socialist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2017.5.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		�ss Vanr �lfr J�tunn
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Heimdal "Fridtjof Nansen" Nordkapp
+	}
+	cruiser = {
+		Thor Odin Njord Freyr Tyr Bragl Heimdall Hoder Vidar Ale Ullr Forseti
+	}
+	modern_cruiser = {
+		�ss Vanr �lfr J�tunn
+	}
+	frigate = {
+		Freia Desideira "St Olaf" "Kong Sverre" Ellida Nordssthernen Nornen Nidaros �rnen
+	}
+	modern_destroyer = {
+		Ellida Sleipner Viking Frithjof Rjukan Sarpen Lougen Glommen
+	}
+	destroyer = {
+		Freia Desideira "St Olaf" "Kong Sverre" Ellida Nordssthernen Nornen Nidaros �rnen
+	}
+	submarine = {
+		Skorpionen Mj�lner Thrudvang
+	}
+
+}

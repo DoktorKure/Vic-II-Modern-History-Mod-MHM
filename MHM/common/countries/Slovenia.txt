@@ -1,0 +1,263 @@
+graphical_culture = EuropeanGC
+color = { 255 235 205 }
+proletarian_dictatorship = { 255 99 71 }
+party = {
+		name = "Slovenian National Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Slovene People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1988.5.12
+}
+party = {
+		name = "Slovenian People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1988.5.12
+		end_date = 2100.1.1
+}
+party = {
+		name = "Slovene Christian Democrats"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2000.1.1
+}
+party = {
+		name = "Social Democratic Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2000.1.1
+		end_date = 2003.1.1
+}
+party = {
+		name = "Slovenian Democratic Party"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 2000.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1994.1.1
+}
+party = {
+		name = "Liberal Democracy of Slovenia"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1994.1.1
+		end_date = 2011.10.22
+}
+party = {
+		name = "Positive Slovenia"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2011.10.22
+		end_date = 2092.1.1
+}
+party = {
+		name = "Modern Centre Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2015.3.7
+		end_date = 2092.1.1
+}
+party = {
+		name = "Party of Democratic Renewal"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1992.1.1
+}
+party = {
+		name = "Social Democratic Renewal"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1992.1.1
+		end_date = 1993.5.23
+}
+party = {
+		name = "United List - Social Democrats"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1993.5.23
+		end_date = 2005.1.1
+}
+party = {
+		name = "Social Democrats"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2005.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Greens of Slovenia"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy =secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Slovenian National Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_traditionalist_0_SLO"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "League of Communists of Slovenia"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1990.2.14
+}
+party = {
+		name = "Communist Party of Slovenia"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1990.2.14
+		end_date = 2092.1.1
+}
+party = {
+		name = "League of Communists of Slovenia"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1990.2.14
+}
+party = {
+		name = "Socialist Party of Slovenia"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1990.2.14
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Anton Haus" "Rudolf Maister" Stane "Karel Destovnik Kajuh" "Viktor Avbelj"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		"Blejsko Jezero" "Blejski Grad" "Tr�a�ki Zaliv" Karavanke Kras
+	}
+	cruiser = {
+		"Mali Srpan" "Veliki Srpan" Prosinec "Mali Traven" "Veliki Traven"
+	}
+	modern_cruiser = {
+		"Anton Haus" "Rudolf Maister" Stane "Karel Destovnik Kajuh" "Viktor Avbelj"
+	}
+	frigate = {
+		"Miroslav Stumberger" "Ivan Grohar" "Jo�ef Tominc" "Matija Cop" "Anton Toma� Linhart"
+	}
+	modern_destroyer = {
+		Slovenija Ljubljana Maribor Celje Kranj
+	}
+	destroyer = {
+		Drava Kolpa Mura Sava Savinja
+	}
+	submarine = {
+		Ivana Metka �tefka Du�a Nata�a
+	}
+
+}

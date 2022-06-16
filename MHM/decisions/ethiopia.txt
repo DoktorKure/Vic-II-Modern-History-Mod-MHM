@@ -1,0 +1,76 @@
+political_decisions = {
+
+	claim_greater_ethiopia = {
+		picture = "claim_greater_ethiopia"
+		potential = {
+			tag = ETH
+			NOT = { has_country_flag = claim_greater_ethiopia }
+		}
+
+		allow = {
+ 		    tag = ETH
+			part_of_sphere = no
+			has_unclaimed_cores = no
+			is_vassal = no
+			NOT = {
+				has_country_flag = claim_greater_ethiopia
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = liberal 
+			}
+			OR = {
+					ruling_party_ideology = populist
+					jingoism = 24
+					government = absolute_monarchy
+			}
+			year = 1949
+		}
+
+		effect = {
+			badboy = 2
+			set_country_flag = claim_greater_ethiopia
+			1848 = { add_core = ETH }
+			1849 = { add_core = ETH }
+			1850 = { add_core = ETH }
+			1851 = { add_core = ETH }
+		}
+	}
+
+	eth_economic_reforms = {
+		picture = "eth_economic_reforms"
+		potential = {
+			tag = ETH
+			has_country_flag = sea_economy_slow
+		}
+
+		allow = {
+			war = no
+			election = no
+			
+			money = 500000
+			
+			#Minimum economic tech
+			austrian_school = 1
+			
+			#Free trade or Free Market party
+			OR = {
+				trade_policy = free_trade
+				economic_policy = laissez_faire
+			}
+		}
+
+		effect = {
+			prestige = 50
+			money = -250000
+			add_country_modifier = { name = economic_boom duration = 1825 }
+			
+			clr_country_flag = sea_economy_slow
+			clr_country_flag = economic_malaise
+		}
+
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+}

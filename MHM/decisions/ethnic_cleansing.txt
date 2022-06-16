@@ -1,0 +1,120 @@
+political_decisions = {
+
+	ethnic_cleansing = {
+		picture = "ethnic_cleansing"
+		alert = no
+		potential = {
+			OR = {
+				government = presidential_dictatorship
+				government = populist_dictatorship
+				government = nationalist_dictatorship
+				government = theocracy
+				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
+				minorities_reform = minorities_oppression
+			}
+			NOT = { has_country_flag = ethnic_cleansed }
+			NOT = { has_country_modifier = ethnic_cleansing }
+		}
+
+		allow = {
+			is_vassal = no
+			is_disarmed = no
+			election = no
+
+			OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			
+			NOT = { citizenship_policy = full_citizenship }
+		
+			OR = {
+				ai = no
+
+				AND = { ai = yes tag = RWA revolt_percentage = 0.80 citizenship_policy = residency } 
+				AND = { ai = yes tag = RSR war = yes citizenship_policy = residency }
+				AND = { ai = yes tag = SRK war = yes citizenship_policy = residency }
+				AND = { ai = yes tag = SER war = yes national_provinces_occupied = 0.5 citizenship_policy = residency }
+				AND = { ai = yes tag = CRO war = yes national_provinces_occupied = 0.5 citizenship_policy = residency }
+				AND = { ai = yes tag = BOS war = yes national_provinces_occupied = 0.5 citizenship_policy = residency }
+
+				AND = { 
+					average_militancy = 7 
+					citizenship_policy = residency
+					has_recently_lost_war = yes
+				}
+				AND = { 
+					average_militancy = 9 
+					citizenship_policy = residency
+					revolt_percentage = 0.80 
+				}
+				AND = { 
+					jingoism = 24
+					citizenship_policy = residency
+					war = yes
+				}
+			}
+			
+			NOT = { has_country_modifier = geno_cooldown }
+		}
+
+		effect = {
+			set_country_flag = ethnic_cleansed
+
+			country_event = 1512037
+
+			#set_country_flag = genocide_101
+
+			clr_country_flag = discovered_genocide 
+			clr_country_flag = discovered_genocide1
+			add_country_modifier = { name = ethnic_cleansing duration = -1 }
+			
+			#Stop exploit
+			add_country_modifier = { name = geno_cooldown duration = 365 }
+		}
+		ai_will_do = { 
+			factor = 1
+			modifier = { badboy = 1 war = no factor = 0 }
+			modifier = { tag = SAF factor = 0 }
+			modifier = { OR = { tag = RWA tag = RSR tag = SRK tag = SER tag = CRO tag = BOS } factor = 1 } 
+		}
+	}
+	
+	end_ethnic_cleansing = {
+		picture = "ethnic_cleansing"
+		
+		potential = {
+			OR = { 
+				has_country_flag = ethnic_cleansed
+				has_country_modifier = ethnic_cleansing 
+				has_country_flag = genocide_101
+			}
+		}
+
+		allow = {
+			OR = { is_vassal = yes is_disarmed = yes NOT = { average_militancy = 5 } ai = no }
+			OR = { 
+				ai = no
+				NOT = { 
+					OR = { 
+						ruling_party_ideology = nationalist 
+						ruling_party_ideology = traditionalist 
+						ruling_party_ideology = communist 
+						ruling_party_ideology = communist_social 
+					}
+				}
+				minorities_reform = minorities_equal_rights 
+				minorities_reform = minorities_affirmative_action 
+			}
+			
+			NOT = { has_country_modifier = geno_cooldown }
+		}
+
+		effect = {
+			clr_country_flag = ethnic_cleansed
+			clr_country_flag = genocide_101
+			remove_country_modifier = ethnic_cleansing
+			clr_country_flag = discovered_genocide 
+			clr_country_flag = discovered_genocide1
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

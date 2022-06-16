@@ -1,0 +1,110 @@
+#1996 Manchester Bombing
+country_event = {
+	id = 2
+	title = "EVTNAME2"
+	desc= "EVTDESC2"
+	picture = "1996manchester"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		any_owned_province = { is_core = IRE }
+		exists = IRE
+		year = 1996
+		month = 5
+		has_global_flag = ira_founded
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	option = {
+		name = "EVTOPTA2"
+		prestige = -5
+		any_pop = {
+		consciousness = 1
+		}
+	}
+}
+#2005 London bombings
+country_event = {
+	id = 5
+	title = "EVTNAME5"
+	desc= "EVTDESC5"
+	picture = "2005london"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		any_owned_province = { is_core = IRE }
+		exists = IRE
+		year = 2005
+		month = 6
+		has_global_flag = ira_founded
+	}
+	
+	mean_time_to_happen = {
+		days = 7
+	}
+	
+	option = {
+		name = "EVTOPTA2"
+		prestige = -2
+		any_pop = {
+		consciousness = 2
+		}
+	}
+}
+#1996 Docklands Bombing
+country_event = {
+	id = 8
+	title = "EVTNAME8"
+	desc= "EVTDESC8"
+	picture = "docklandsbombing"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		any_owned_province = { is_core = IRE }
+		exists = IRE
+		year = 1996
+		month = 1
+		has_global_flag = ira_founded
+	}
+	
+	mean_time_to_happen = {
+		days = 9
+	}
+	
+	option = {
+		name = "EVTOPTA8"
+		prestige = -5
+		any_pop = {
+		consciousness = 1
+		}
+	}
+}
+#Good Friday Agreement - IRE
+country_event = {
+	id = 9
+	title = "EVTNAME9"
+	desc= "EVTDESC9"
+	picture = "goodfriday"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTA9"
+		prestige = 50
+		any_pop = {
+		militancy = -3
+		consciousness = -2
+		}
+		relation = { who = FROM value = 100 }
+	}
+
+}

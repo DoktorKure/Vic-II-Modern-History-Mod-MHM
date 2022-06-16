@@ -1,0 +1,322 @@
+graphical_culture = EuropeanGC
+color = { 139 119 101 }
+proletarian_dictatorship = { 240 128 128 }
+proletarian_dictatorship1 = { 240 128 128 }
+socialist_democracy = { 240 128 128 }
+
+party = {
+		name = "Congolese National Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1959.7.1
+}
+party = {
+		name = "MNC - Kalonji"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1959.7.1
+		end_date = 1960.1.1
+}
+party = {
+		name = "Armee Nationale Congolaise"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1960.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "ABAKO"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2003.1.1
+}
+party = {
+		name = "Rally for Congolese Democracy"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2003.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Force Publique"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1955.1.1
+}
+party = {
+		name = "ABAKO"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1955.1.1
+		end_date = 1965.1.1
+}
+party = {
+		name = "CONACAT"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1965.1.1
+		end_date = 2003.4.5
+}
+party = {
+		name = "MLC"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2003.4.5
+		end_date = 2092.1.1
+}
+party = {
+		name = "Nationa Party of Progress"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2003.1.1
+}
+party = {
+		name = "Forces for Renewal"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2003.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Parti Solidaire Africain"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1996.1.1
+}
+party = {
+		name = "AFDL"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1996.1.1
+		end_date = 2002.3.31
+}
+party = {
+		name = "PPRD"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2002.3.31
+		end_date = 2018.1.1
+}
+party = {
+		name = "Common Front for Congo"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2018.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "UDPS"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "MPR"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2007.1.8
+}
+party = {
+		name = "Union of Mobutuist Democrats"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 2007.1.8
+		end_date = 2092.1.1
+}
+party = {
+		name = "Traditional Chiefs"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1971.1.1
+}
+party = {
+		name = "MPR"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1971.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Congolese National Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1959.7.1
+}
+party = {
+		name = "MNC - Lumumba"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1959.7.1
+		end_date = 1964.8.22
+}
+party = {
+		name = "Unified Lumumbist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1964.8.22
+		end_date = 2092.1.1
+}
+party = {
+		name = "Congolese National Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1959.7.1
+}
+party = {
+		name = "MNC - Lumumba"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1959.7.1
+		end_date = 1964.8.22
+}
+party = {
+		name = "Unified Lumumbist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1964.8.22
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Leopold I" "La Belgique" "De Vlaamse Leeuw" Ambiorix "Godfried van Boullion" "Guldensporenslag" "Gwijde van Dampierre" "Jacob van Artevelde"
+	}
+	transportship = {
+		Antwerpen Arlon Brugge Brussel Charleroi Gent Hasselt Leuven Liege Mechelen Namur Nieuwpoort Oostende Sluis Zeebrugge
+	}
+	modern_frigate = {
+		"Jan Baert" "Michiel Jacobsen" "Jacob van Brugge" "Willem van der Haegen" "Jacob le Maire" "Pierre van Alstein" "Sebald de Weert" "Cornelis Weus"
+	}
+	cruiser = {
+		"Fran�ois Pelsaert" "Louis Boisot" "Olivier Brunel" "Simon de Cordes" "Albert Dorville" "Jess� de Forest" "Louis Hennepin" "Melchior van den Kerckhove" "Jacob Mahu"
+	}
+	modern_cruiser = {
+		"Leopold I" "La Belgique" "De Vlaamse Leeuw" Ambiorix "Godfried van Boullion" "Guldensporenslag" "Gwijde van Dampierre" "Jacob van Artevelde"
+	}
+	frigate = {
+		Wielingen Mercator "Willem van Rubroeck" "Simon van Salingen" "Joris van Spilbergen" "Willem Usselincx"
+	}
+	modern_destroyer = {
+		"Graaf van Vlaanderen" "Hertog van Brabant" "Comte de Hainaut" "Comte de Namur" "Prince de Liege" "Duc d'Ursel"
+	}
+	destroyer = {
+		"St. Marie" "St. Joris" "St. Franciscus" "St. Jacobus" "St. Petrus" "St. Bonifatius"
+	}
+	submarine = {
+		Belgica Brabantia Flandriae Henogovia Limburgia Luxemburgum Vallonia
+	}
+
+}

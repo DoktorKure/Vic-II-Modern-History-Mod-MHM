@@ -1,0 +1,1313 @@
+#Assassination of Mahatma Gandhi
+country_event = {
+	id = 8007220
+	title = "Assassination of Mahatma Gandhi"
+	desc = EVTDESC1512220
+	picture = "death_of_gandhi"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = HND
+
+		year = 1948
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1990 }
+	}
+
+	mean_time_to_happen = { 
+		months = 6
+	}
+
+	option = {
+		name = "We have lost a great statesman"
+		add_country_modifier = { name = revolution_chaos duration = 183 }
+		
+		#INC support surges
+		any_pop = { 
+			limit = { OR = { has_pop_religion = sunni has_pop_religion = ibad has_pop_religion = shiite has_pop_religion = druze } }
+			ideology = { factor = 0.25 value = socialist } 
+		}
+	}
+
+}
+
+#Nehru Administration
+country_event = {
+  id = 8007221
+  title = "The Nehru Administration"
+  desc = EVTDESC8007221
+  picture = "nwo2_nehru_economic_policies"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+    	year = 1957
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war = no
+		
+		OR = { government = democracy government = democracy1 }
+		
+		#INC is government
+		ruling_party_ideology = socialist
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Embrace socialist economic policies"
+		
+		set_country_flag = nehru_economic_policies_flag
+		
+		add_country_modifier = { name = five_year_plan duration = 1825 }
+		
+		#Enact socialist reforms
+		social_reform = public_education
+		social_reform = trinket_health_care
+		social_reform = eight_work_hours
+		social_reform = balanced_regulations
+		social_reform = minimal_subsidies
+		social_reform = trinket_pensions
+		social_reform = social_services
+		
+		#Boost Socialist support
+		any_pop = {
+			ideology = {
+				factor = 0.10
+				value = socialist
+			}
+		}
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Take a moderate approach"
+		ruling_party_ideology = big_tent
+		add_country_modifier = { name = economic_malaise duration = 1825 }
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#Death of Nehru
+country_event = {
+  id = 8007222
+  title = "Death of Jawaharlal Nehru"
+  desc = EVTDESC8007222
+  picture = "nwo2_nehru_death"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+    	year = 1964
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war = no
+		
+		OR = { government = democracy government = democracy1 }
+		
+		#INC is government
+		ruling_party_ideology = socialist
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "We have lost a great man"
+		
+		#Change leader
+		country_event = 111222
+		
+		#Boost Socialist support
+		any_pop = {
+			militancy = -5
+			ideology = {
+				factor = 0.05
+				value = socialist
+			}
+		}
+		
+	}
+	
+}
+
+#Indira Gandhi - The Emergency
+country_event = {
+  id = 8007223
+  title = "The Emergency"
+  desc = EVTDESC8007223
+  picture = "nwo2_indira_gandhi_emergency"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+    	year = 1975
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war = no
+		
+		OR = { government = democracy government = democracy1 }
+		
+		#INC is government
+		ruling_party_ideology = socialist
+		
+		#Had a war with Pakistan
+		PAK = { exists = yes is_vassal = no }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "The Prime Minister shall rule by decree"
+		government = presidential_dictatorship
+		country_event = 800050
+		
+		set_country_flag = HND_emergency_flag
+		
+		#Boost Socialist support
+		any_pop = {
+			ideology = {
+				factor = 0.10
+				value = socialist
+			}
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "An Iron Lady does not need autocratic powers"
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.2 }
+	}
+	
+}
+
+#Indira Gandhi - End The Emergency
+country_event = {
+  id = 8007224
+  title = "The Return of Democracy"
+  desc = EVTDESC8007224
+  picture = "nwo2_indira_gandhi_emergency_end"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+    	year = 1977
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war = no
+		
+		government = presidential_dictatorship
+		
+		#Did the thing
+		has_country_flag = HND_emergency_flag
+		
+		#INC is government
+		ruling_party_ideology = socialist
+		
+		#Had a war with Pakistan
+		PAK = { exists = yes is_vassal = no }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Lift the emergency and call for elections"
+		government = democracy
+		country_event = 800054
+		
+		#Boost Conservative support
+		any_pop = {
+			ideology = {
+				factor = 0.25
+				value = conservative
+			}
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "I am still the senate"
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		
+		#Boost liberal support
+		any_pop = {
+			ideology = {
+				factor = 0.15
+				value = liberal
+			}
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+	
+}
+
+#Indira Gandhi - Second premiership
+country_event = {
+  id = 8007225
+  title = "The Return of Indira Gandhi"
+  desc = EVTDESC8007225
+  picture = "nwo2_indira_gandhi_second_time"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+    	year = 1980
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war = no
+		
+		OR = { government = democracy government = democracy1 }
+		
+		#Did the thing
+		has_country_flag = HND_emergency_flag
+		
+		#INC is not in government
+		NOT = { ruling_party_ideology = socialist }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "The Iron Lady of India returns!"
+
+		ruling_party_ideology = socialist
+		
+		#Boost Socialist support
+		any_pop = {
+			ideology = {
+				factor = 0.25
+				value = socialist
+			}
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "We don't want her to return"
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#Indira Gandhi - Operation Blue Star
+country_event = {
+  id = 8007226
+  title = "Operation Blue Star"
+  desc = EVTDESC1512100
+  picture = "blue_star"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+    	year = 1984
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war = no
+		
+		OR = { government = democracy government = democracy1 }
+		
+		#INC is government
+		ruling_party_ideology = socialist
+		
+		#Sikh presence
+		is_possible_vassal = PNJ
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Carry out the operation!"
+		prestige = -50
+		badboy = 5
+		
+		set_country_flag = operation_blue_star_flag
+		
+		#Boost traditionalist support
+		any_pop = {
+			limit = { has_pop_religion = sikh }
+			
+			militancy = 5
+			
+			ideology = {
+				factor = 0.10
+				value = traditionalist
+			}
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "I'll give this a pass"
+		
+		#Khalistan insurgency
+		any_owned = {
+			limit = { is_core = PNJ }
+			add_province_modifier = { name = nationalist_agitation duration = 3650 }
+		}
+		
+		#Boost nationalist support
+		any_pop = {
+			limit = { has_pop_religion = sikh }
+			
+			militancy = 10
+			
+			ideology = {
+				factor = 0.50
+				value = nationalist
+			}
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+	
+}
+
+#Indira Gandhi - Assassination
+country_event = {
+  id = 8007227
+  title = "The Assassination of Indira Gandhi"
+  desc = EVTDESC8007227
+  picture = "indira_gandhi_assassination"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+    	year = 1984
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war = no
+		
+		OR = { government = democracy government = democracy1 }
+		
+		has_country_flag = operation_blue_star_flag
+		
+		#INC is government
+		ruling_party_ideology = socialist
+		
+		#Sikh presence
+		is_possible_vassal = PNJ
+	}
+
+	mean_time_to_happen = { months = 10 }
+
+	option = {
+		name = "We have lost a great leader"
+		prestige = -50
+		
+		set_country_flag = indira_gandhi_assassination_flag
+		
+		#New leader
+		country_event = 111222
+		
+		country_event = { id = 8007272 days = 5 }
+	}
+	
+}
+
+#The Rajiv Gandhi Administration
+country_event = {
+  id = 80072271
+  title = "The Rajiv Gandhi Administration"
+  desc = EVTDESC80072271
+  picture = "rajiv_gandhi"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+    	year = 1984
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war = no
+		
+		OR = { government = democracy government = democracy1 }
+		
+		has_country_flag = indira_gandhi_assassination_flag
+		
+		#INC is government
+		ruling_party_ideology = socialist
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "I think he is fine"
+		
+		set_country_flag = rajiv_gandhi_flag
+		
+		#Relation with the USA
+		random_country = {
+			limit = { tag = USA has_global_flag = blocsenabled }
+			relation = { who = THIS value = 100 }
+		}
+		
+		#Add corruption - Bofors scandal
+		remove_country_modifier = massive_government_corruption 
+		remove_country_modifier = large_government_corruption 
+		remove_country_modifier = medium_government_corruption 
+		remove_country_modifier = low_government_corruption
+		remove_country_modifier = minimal_government_corruption
+		
+		add_country_modifier = { name = massive_government_corruption duration = -1 }
+		
+		#Loosen the licence raj
+		remove_country_modifier = license_raj
+		
+		#Boost Socialist support
+		any_pop = {
+			ideology = {
+				factor = 0.05
+				value = socialist
+			}
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "We need a more experienced leader"
+		prestige = 100
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#Assassination of Rajiv Gandhi
+country_event = {
+  id = 80072272
+  title = "The Assassination of Rajiv Gandhi"
+  desc = EVTDESC80072272
+  picture = "rajiv_gandhi_death"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+    	year = 1991
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		is_vassal = no
+		war = no
+		
+		OR = { government = democracy government = democracy1 }
+		
+		has_country_flag = rajiv_gandhi_flag
+		
+		#INC is government
+		ruling_party_ideology = socialist
+		
+		#Sri Lankan problem exists
+		SRL = { 
+			exists = yes 
+			is_vassal = no
+			is_possible_vassal = TAE
+		}
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = "We have lost another great leader"
+		prestige = -50
+		
+		#Boost Conservative support
+		any_pop = {
+			ideology = {
+				factor = 0.05
+				value = conservative
+			}
+		}
+		
+		#New leader
+		country_event = 111222
+	}
+	
+}
+
+#Anti-Sikh Riots
+country_event = {
+  id = 8007272
+  title = "The Anti-Sikh Riots"
+  desc = EVTDESC8007272
+  picture = "nwo2_anti_sikh_riots"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "It is a bloodbath on the streets"
+		prestige = -50
+		
+		#Khalistan insurgency
+		any_owned = {
+			limit = { is_core = PNJ }
+			add_province_modifier = { name = nationalist_agitation duration = 365 }
+		}
+		
+		#Boost nationalist support
+		any_pop = {
+			limit = { has_pop_religion = sikh }
+			
+			militancy = 10
+			
+			ideology = {
+				factor = 0.50
+				value = nationalist
+			}
+		}
+	}
+}
+
+#The Royal Indian Navy Mutiny
+country_event = {
+  id = 8007228
+  title = "The Royal Indian Navy Mutiny"
+  desc = EVTDESC8007228
+  picture = "nwo2_army_of_india"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = RAJ
+		year = 1946
+		NOT = { year = 1950 }
+		
+		vassal_of = ENG
+		war = no
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "It is what it is"
+		any_pop = { 
+			limit = { OR = { type = soldiers type = officers } } 
+			militancy = 10 
+			consciousness = 5 
+		}
+	}
+}
+
+#Annexation of Hyderabad
+country_event = {
+  id = 8007229
+  title = EVT_8007229_NAME
+  desc = EVT_8007229_DESC
+  picture = "hyd_police_action"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+		is_vassal = no
+		war = no
+		PAK = { war = no }
+		exists = HYD
+		HYD = { is_vassal = no }
+		year = 1948
+		NOT = { year = 1990 }
+		OR = { HND = { owns = 1224 } PAK = { owns = 1224 } }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = EVT_8007229_A
+		any_pop = { militancy = -3 }
+		badboy = 5 
+		
+		#INC support surges in India
+		any_pop = { 
+			limit = { location = { is_core = HND } }
+			ideology = { factor = 0.05 value = socialist } 
+		}
+		
+		#Start the War
+		war = { 
+			target = HYD 
+			attacker_goal = { casus_belli = annex_core_country } 
+			defender_goal = { casus_belli = territorial_dispute_internal } 
+		}
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = EVT_8007229_B
+		any_pop = { militancy = 1.0 consciousness = 2 }
+		set_country_flag = princely_states 
+		ai_chance = { factor = 0 }
+	}
+}
+
+### The First Kashmir War ###
+
+#Annexation of Kashmir - JAK
+country_event = {
+  id = 8007230
+  title = "The Future of Kashmir"
+  desc = EVTDESC8007230
+  picture = "nwo2_kashmir"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = JAK
+		year = 1946
+		NOT = { year = 1990 }
+		
+		war = no
+		is_vassal = no
+		
+		#India and Pakistan exists
+		HND = { exists = yes is_vassal = no }
+		PAK = { exists = yes is_vassal = no }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Opt to remain independent"
+		prestige = 50
+		
+		#Operation Gulmarg
+		PAK = { country_event = 8007231 }
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Opt to join India"
+		HND = { 
+			prestige = 50
+			
+			#INC support surges in India
+			any_pop = { 
+				limit = { location = { is_core = HND } }
+				ideology = { factor = 0.05 value = socialist } 
+			}
+			
+			inherit = JAK 
+		}
+		ai_chance = { factor = 0.1 }
+	}
+
+	option = {
+		name = "Opt to join Pakistan"
+		PAK = { 
+			prestige = 50
+			inherit = JAK 
+		}
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Annexation of Kashmir - PAK
+country_event = {
+  id = 8007231
+  title = "Operation Gulmarg"
+  desc = EVTDESC8007231
+  picture = "nwo2_kashmir_war_PAK"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall annex Kashmir!"
+		prestige = 50
+		
+		relation = { who = HND value = -50 }
+		
+		#Add PAK cores on JAK
+		JAK = { all_core = { add_core = PAK } }
+		
+		#Start the initial war
+		war = { 
+			target = JAK
+			attacker_goal = { casus_belli = annex_core_country } 
+			defender_goal = { casus_belli = war_reparations } 
+		}
+		
+		set_global_flag = PAK_opt_annex_JAK
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Leave them be"
+		prestige = -50
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Annexation of Kashmir - JAK join HND
+country_event = {
+  id = 8007232
+  title = "Accession to India?"
+  desc = EVTDESC8007232
+  picture = "nwo2_kashmir_war_JAK"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = JAK
+		year = 1946
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		
+		#India and Pakistan exists
+		HND = { exists = yes is_vassal = no }
+		PAK = { exists = yes is_vassal = no war_with = JAK }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Join the Great Indian Union! (Get annexed)"
+		
+		#The First Indo-Pakistan War
+		HND = { country_event = 8007233 }
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "I'm confident that we can defeat Pakistan"
+		prestige = 50
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Annexation of Kashmir - HND
+country_event = {
+  id = 8007233
+  title = "The First Indo Pakistan War"
+  desc = EVTDESC8007233
+  picture = "nwo2_kashmir_war_HND"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall annex Kashmir!"
+		prestige = 50
+		
+		#Block British involvement
+		ENG = {
+			diplomatic_influence = { who = PAK value = -100 }
+			diplomatic_influence = { who = HND value = -100 }
+		}
+		PAK = { leave_alliance = ENG relation = { who = ENG value = -100 } }
+		HND = { leave_alliance = ENG relation = { who = ENG value = -100 } }
+		
+		#Add HND cores on JAK
+		JAK = { all_core = { add_core = HND } }
+		
+		#Clean up JAK
+		JAK = { end_war = PAK }
+		HND = { inherit = JAK }
+		
+		#Transfer to Pakistan
+		1225 = { secede_province = PAK }
+		
+		#Start the war with PAK
+		war = { 
+			target = PAK
+			attacker_goal = { casus_belli = acquire_any_state state_province_id = 1225 } 
+			attacker_goal = { casus_belli = humiliate }
+			
+			defender_goal = { casus_belli = acquire_any_state state_province_id = 3281 } 
+			defender_goal = { casus_belli = acquire_any_state state_province_id = 1224 }
+			defender_goal = { casus_belli = humiliate }
+		}
+		
+		#INC support surges in India
+		any_pop = { 
+			limit = { location = { is_core = HND } }
+			ideology = { factor = 0.05 value = socialist } 
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Leave them be"
+		prestige = -50
+		relation = { who = PAK value = 50 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Annexation of Kashmir - White peace - HND
+country_event = {
+  id = 80072331
+  title = "United Nations Ceasefire in Kashmir?"
+  desc = EVTDESC80072331
+  picture = "nwo2_kashmir_war_UNO"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+		year = 1948
+		NOT = { year = 1965 }
+		
+		is_vassal = no
+		
+		#Cold War
+		has_global_flag = blocsenabled
+		
+		#War with Pakistan over Kashmir
+		PAK = { exists = yes is_vassal = no }
+		war_with = PAK
+		
+		#Owns Kashmir
+		JAK = { exists = no }
+		any_owned_province = { is_core = JAK }
+		PAK = { any_owned_province = { is_core = JAK } }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Propose a ceasefire to Pakistan (white peace)"
+		
+		#Offer a white peace
+		PAK = { country_event = 80072332 }
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "I'm confident that we can defeat Pakistan"
+		prestige = 50
+		badboy = 5
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Annexation of Kashmir - White peace - PAK
+country_event = {
+  id = 80072332
+  title = "United Nations Ceasefire in Kashmir?"
+  desc = EVTDESC80072331
+  picture = "nwo2_kashmir_war_UNO"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to a ceasefire"
+		end_war = HND
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "I'm confident that we can defeat Pakistan"
+		prestige = 50
+		badboy = 5
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+### The Second Kashmir War ###
+country_event = {
+  id = 8007234
+  title = "The Second Indo Pakistan War"
+  desc = EVTDESC8007234
+  picture = "nwo2_second_kashmir_war_PAK"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = PAK
+		year = 1965
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war = no
+		
+		has_global_flag = PAK_opt_annex_JAK
+		
+		#Owns JAK
+		is_possible_vassal = JAK
+		
+		#HND owns JAK
+		HND = { exists = yes is_vassal = no is_possible_vassal = JAK }
+	}
+
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = "We shall annex Kashmir, again!"
+		prestige = 50
+		
+		#No AI wants to help the parties
+		any_country = {
+			limit = { ai = yes alliance_with = HND }
+			leave_alliance = HND
+		}
+		any_country = {
+			limit = { ai = yes alliance_with = PAK }
+			leave_alliance = PAK
+		}
+		
+		#Start the war with HND
+		war = { 
+			target = HND
+			attacker_goal = { casus_belli = acquire_any_state state_province_id = 3281 } 
+			attacker_goal = { casus_belli = acquire_any_state state_province_id = 1224 }
+			defender_goal = { casus_belli = acquire_any_state state_province_id = 1225 } 
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Leave them be"
+		prestige = -50
+		relation = { who = PAK value = 50 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Second Kashmir War - White peace - HND
+country_event = {
+  id = 8007235
+  title = "United Nations Ceasefire in Kashmir?"
+  desc = EVTDESC8007235
+  picture = "nwo2_kashmir_war_UNO_2"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+		year = 1965
+		NOT = { year = 1971 }
+		
+		is_vassal = no
+		
+		#Cold War
+		has_global_flag = blocsenabled
+		
+		#War with Pakistan over Kashmir
+		PAK = { exists = yes is_vassal = no }
+		war_with = PAK
+		
+		#Owns Kashmir
+		JAK = { exists = no }
+		any_owned_province = { is_core = JAK }
+		PAK = { any_owned_province = { is_core = JAK } }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Propose a ceasefire to Pakistan (white peace)"
+		
+		#Offer a white peace
+		PAK = { country_event = 8007236 }
+		
+		#INC support surges in India
+		any_pop = { 
+			limit = { location = { is_core = HND } }
+			ideology = { factor = 0.05 value = socialist } 
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "I'm confident that we can defeat Pakistan"
+		prestige = 50
+		badboy = 5
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Second Kashmir War - White peace - PAK
+country_event = {
+  id = 8007236
+  title = "United Nations Ceasefire in Kashmir?"
+  desc = EVTDESC8007235
+  picture = "nwo2_kashmir_war_UNO_2"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "Agree to a ceasefire"
+		end_war = HND
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "I'm confident that we can defeat Pakistan"
+		prestige = 50
+		badboy = 5
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+### Decolonisation of Portuguese and French India ###
+
+#Invasion of Goa - HND start
+country_event = {
+  id = 8007250
+  title = "The Invasion of Goa"
+  desc = EVT_8007250_DESC
+  picture = "nwo2_invasion_of_goa"
+  fire_only_once = yes
+
+	trigger = {
+		tag = HND
+		year = 1963
+		NOT = { year = 1990 }
+		is_vassal = no
+		war = no
+    	NOT = { HND = { alliance_with = POR } }
+		POR = { is_vassal = no }
+		POR = { owns = 1303 }
+	}
+  
+	mean_time_to_happen = { months = 12 }
+
+	option = {
+		name = "Begin the invasion! (Risk of war with Portugal)"
+		badboy = 5
+		POR = { country_event = 8007251 }
+		relation = { who = POR value = -200 }
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Back off"
+		prestige_factor = -0.10
+		relation = { who = POR value = 100 } 
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Invasion of Goa - POR response
+country_event = {
+  id = 8007251
+  title = EVT_8007251_NAME
+  desc = EVT_8007251_DESC
+  picture = "nwo2_invasion_of_goa"
+  is_triggered_only = yes # POR
+
+	option = {
+		name = "This is war!"
+		HND = { country_event = 8007253 }
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Give in to the Indians"
+		prestige_factor = -0.1
+		any_pop = { militancy = 3 consciousness = 1 }
+		1303 = {
+			secede_province = HND
+			remove_province_modifier = colonial_exploitation
+		}
+		HND = { country_event = 8007252 }
+		1292 = { remove_province_modifier = daman }
+		1296 = { remove_province_modifier = diu }
+		remove_country_modifier = portugese_indian_colonies
+		set_global_flag = por_hnd_colonies
+		ai_chance = { factor = 0.9 }
+	}
+	
+}
+
+#Invasion of Goa - Portugal backs down
+country_event = {
+  id = 8007252
+  title = EVT_8007252_NAME
+  desc = EVT_8007252_DESC
+  picture = "nwo2_invasion_of_goa"
+  is_triggered_only = yes # HND
+
+	option = {
+		name = EVT_8007252_A
+		any_pop = { consciousness = 2 }
+		prestige = 100
+		
+		#INC support surges in India
+		any_pop = { 
+			limit = { location = { is_core = HND } }
+			ideology = { factor = 0.05 value = socialist } 
+		}
+	}
+
+}
+
+#Invasion of Goa - Portugal goes to war
+country_event = {
+  id = 8007253
+  title = EVT_8007253_NAME
+  desc = EVT_8007253_DESC
+  picture = "nwo2_invasion_of_goa"
+  is_triggered_only = yes # HND
+
+	option = {
+		name = "Let slip the dogs of war!"
+		war = {
+			target = POR
+			attacker_goal = { casus_belli = acquire_core_state state_province_id = 1303 }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = no
+		}
+		ai_chance = { factor = 0.75 }
+	}
+	
+	option = {
+		name = "Back down"
+		prestige_factor = -0.25
+		any_pop = { militancy = 3 consciousness = 3 }
+		relation = { who = POR value = 50 }
+		ai_chance = { factor = 0.25 }
+	}
+	
+}
+
+# Naxlite - Start
+country_event = {
+  id = 8007280
+  title = EVT_8007280_NAME
+  # EVT_8007280_NAME;Naxalite Insurgency
+  desc = EVT_8007280_DESC
+  # EVT_8007280_DESC;The term Naxalites comes from Naxalbari, a small village in West Bengal, where a section of the Communist Party of India (Marxist) (CPI-M) led by Charu Majumdar, Kanu Sanyal, and Jangal Santhal initiated a violent uprising in 1967. On 18 May 1967, the Siliguri Kishan Sabha, of which Jangal was the president, declared their support for the movement initiated by Kanu Sanyal, and their readiness to adopt armed struggle to redistribute land to the landless.[14] The following week, a sharecropper near Naxalbari village was attacked by the landlord's men over a land dispute. On 24 May, when a police team arrived to arrest the peasant leaders, it was ambushed by a group of tribals led by Jangal Santhal, and a police inspector was killed in a hail of arrows. This event encouraged many Santhal tribals and other poor people to join the movement and to start attacking local landlords.
+  picture = "naxalite"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = HND
+    	year = 1967
+		NOT = { year = 1990 }
+		
+		government = democracy
+		is_vassal = no
+		
+		owns = 2654 # Munger
+		owns = 1287 # Warangal
+	}
+	
+	mean_time_to_happen = { months = 1  }
+
+	option = {
+		name = EVT_8007280_A
+		# EVT_8007280_A;This is not good
+		2654 = { add_core = NAX }
+		1287 = { add_core = NAX }
+		set_country_flag = naxalite_insurgency
+	}
+}
+
+#Growing the Naxalite Insurgency
+province_event = {
+  id = 8007281
+  title = EVT_8007281_NAME
+  # EVT_8007281_NAME;Naxalites Spreads
+  desc = EVT_8007281_DESC
+  # EVT_8007281_DESC;A Naxal or Naxalite is a member of any of the Communist guerrilla groups in India, mostly associated with the Communist Party of India (Maoist). The term Naxal derives from the name of the village Naxalbari in West Bengal, where the movement had its origin. Naxalites are considered far-left radical communists, supportive of Maoist political sentiment and ideology. Their origin can be traced to the split in 1967 of the Communist Party of India (Marxist), leading to the formation of the Communist Party of India (Marxist–Leninist). Initially the movement had its centre in West Bengal. In later years, it spread into less developed areas of rural southern and eastern India, such as Chhattisgarh, Odisha and Andhra Pradesh through the activities of underground groups like the Communist Party of India (Maoist).
+  picture = "naxalite"
+
+	trigger = {
+    	year = 1970
+    	owned_by = HND
+		owner = { has_country_flag = naxalite_insurgency }
+		any_neighbor_province = { is_core = NAX }
+		is_capital = no 
+		is_core = HND
+		OR = { state_id = 1283 state_id = 1305 state_id = 1279 state_id = 1262 state_id = 1249 state_id = 1247 state_id = 1245 state_id = 1253 state_id = 1252 }
+	}
+
+	mean_time_to_happen = { months = 1200 } # TODO timer based on millitancy
+
+	option = {
+		name = EVT_8007281_A
+		# EVT_8007281_A;More trouble is ahead
+		add_core = NAX
+		
+		#Boost communist support
+		any_pop = {
+			ideology = {
+				factor = 0.05
+				value = communist
+			}
+		}
+		
+	}
+
+}
+
+#Naxalite Civil War - Start
+country_event = {
+  id = 8007282
+  title = EVT_8007282_NAME
+  # EVT_8007282_NAME;Naxalite Civil War
+  desc = EVT_8007280_DESC
+  # EVT_8007282_DESC;The April 2010 Dantewada Maoist attack, was an ambush by Naxalite-Maoist insurgents from the Communist Party of India (Maoist) near Chintalnar village in Dantewada district, Chhattisgarh, India, leading to the killing of 76 CRPF policemen and 8 Maoists — the deadliest attack by the Maoists on Indian security forces. The attack occurred when over 80 officers from the central paramilitary force Central Reserve Police Force (CRPF) and a local police group were conducting an area domination exercise in the Bastar tribal region of the Indian state of Chhattisgarh. This is nolonger a mere insurgency, it is a civil war!
+  picture = "naxalite_civil_war"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = HND
+		year = 2010
+		
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		is_possible_vassal = NAX
+	}
+	
+	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = EVT_8007282_A
+		# EVT_8007282_A;This is a full scale war!
+		release = NAX
+		NAX = { 
+			government = proletarian_dictatorship 
+			country_event = 800052 
+			ruling_party_ideology = communist 
+		}
+		
+		war = { 
+			target = NAX 
+			attacker_goal = { casus_belli = civil_war } 
+			defender_goal = { casus_belli = civil_war } 
+		}
+		clr_country_flag = naxalite_insurgency
+	}
+}

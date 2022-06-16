@@ -1,0 +1,728 @@
+#The Independence of Burma
+country_event = {
+	id = 1214002
+	title = "The Independence of Burma"
+	desc = EVTDESC1214002
+	picture = "independence_of_burma2"
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ENG
+		year = 1948
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1990 }
+		
+		government = hms_government
+		war = no
+		is_vassal = no
+		
+		#owns BUR
+		is_possible_vassal = BUR
+		
+		#India is independent
+		OR = {
+			RAJ = { exists = yes is_vassal = no }
+			HND = { exists = yes is_vassal = no }
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 1
+	}
+
+	option = {
+		name = "Release Burma as a republic!"
+		release = BUR
+		
+		BUR = { 
+			government = democracy1
+			country_event = 800054
+			ruling_party_ideology = socialist
+			
+			#Add socialist support
+			any_pop = {
+				limit = {
+					culture = burmese
+				}
+				ideology = { factor = 0.25 value = socialist }
+				militancy = -5
+				consciousness = -5
+			}
+			
+		}
+		
+		ai_chance = { factor = 0.7 }
+	}
+	
+	option = {
+		name = "Burma's future is that of a British Dominion"
+		
+		prestige = -50
+		badboy = 2.5
+		
+		release_vassal = BUR
+		BUR = { 
+			government = colonial_government
+			country_event = 800054
+			ruling_party_ideology = conservative 
+			
+			#Add nationalism
+			any_pop = {
+				limit = {
+					culture = burmese
+				}
+				ideology = { factor = 0.125 value = nationalist }
+				militancy = 5
+				consciousness = 5
+			}
+			
+		}
+		
+		diplomatic_influence = { who = BUR value = 200 }
+		
+		ai_chance = { factor = 0.2 }
+	}
+	
+	option = {
+		name = "Burma shall remain a crown colony"
+
+		prestige = -100
+		badboy = 5
+
+		#Add nationalism
+		any_owned = { 
+			limit = { is_core = BUR } 
+			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+		}
+
+		any_pop = {
+			limit = {
+				culture = burmese
+			}
+			ideology = { factor = 0.25 value = nationalist }
+			militancy = 10
+			consciousness = 10
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Ne Win's coup
+country_event = {
+  id = 8002304
+  title = "Ne Win's $YEAR$ Coup"
+  desc = EVTDESC8002304
+  picture = "nwo2_ne_win"
+  fire_only_once = yes
+
+	trigger = {
+		tag = BUR
+		year = 1962
+		NOT = { year = 1990 }
+		
+		is_vassal = no
+		war = no
+		OR = { government = democracy1 government = democracy }
+		
+		#AFFL
+		OR = { ruling_party_ideology = socialist ai = yes }  
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "We begin on the road to socialism!"
+		government = populist_dictatorship
+		country_event = 800050
+		ruling_party_ideology = socialist
+		any_owned = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
+		any_owned = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Stick to the status quo"
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		
+		ruling_party_ideology = conservative
+		
+		#Create a federal Burma
+		random_owned = {
+			limit = { owner = { is_possible_vassal = KAY } }
+			owner = {
+				release_vassal = KAY
+				KAY = { government = sar_government country_event = 800054 ruling_party_ideology = conservative set_country_flag = former_devolved_nation }
+				sphere_owner = { diplomatic_influence = { who = KAY value = 200 } }
+			}
+		}
+		random_owned = {
+			limit = { owner = { is_possible_vassal = SHA } }
+			owner = {
+				release_vassal = SHA
+				SHA = { government = sar_government country_event = 800054 ruling_party_ideology = conservative set_country_flag = former_devolved_nation }
+				sphere_owner = { diplomatic_influence = { who = SHA value = 200 } }
+			}
+		}
+		random_owned = {
+			limit = { owner = { is_possible_vassal = RAK } }
+			owner = {
+				release_vassal = RAK
+				RAK = { government = sar_government country_event = 800054 ruling_party_ideology = conservative set_country_flag = former_devolved_nation }
+				sphere_owner = { diplomatic_influence = { who = RAK value = 200 } }
+			}
+		}
+		random_owned = {
+			limit = { owner = { is_possible_vassal = MOS } }
+			owner = {
+				release_vassal = MOS
+				MOS = { government = sar_government country_event = 800054 ruling_party_ideology = conservative set_country_flag = former_devolved_nation }
+				sphere_owner = { diplomatic_influence = { who = MOS value = 200 } }
+			}
+		}
+		random_owned = {
+			limit = { owner = { is_possible_vassal = KAC } }
+			owner = {
+				release_vassal = KAC
+				KAC = { government = sar_government country_event = 800054 ruling_party_ideology = conservative set_country_flag = former_devolved_nation }
+				sphere_owner = { diplomatic_influence = { who = KAC value = 200 } }
+			}
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+
+}
+
+#Communist Dictatorship
+country_event = {
+  id = 8002309
+  title = "The Burmese Way to Socialism"
+  desc = EVTDESC8002309
+  picture = "nwo2_burmese_road_to_socialism"
+  fire_only_once = yes
+
+	trigger = {
+		tag = BUR
+		year = 1974
+		NOT = { year = 1990 }
+		
+		government = populist_dictatorship
+		is_vassal = no
+		war = no
+		
+		#Ne Win
+		ruling_party_ideology = socialist
+	}
+	
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Welcome the socialist revolution!"
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist_social  
+		country_event = 800052
+		
+		#Remove non-communist influence
+		any_country = {
+			limit = { 
+				is_greater_power = yes
+				NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+				is_sphere_leader_of = THIS
+			}
+			diplomatic_influence = { who = THIS value = -200 }
+		}
+		
+		any_pop = { consciousness = -5.0 }
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Stick to the status quo"
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.2 }
+	}
+
+}
+
+#Karen insurgency
+country_event = {
+  id = 8002310
+  title = "EVT_8002310_NAME"
+  desc = "EVT_8002310_DESC"
+  picture = "nwo2_burmese_insurgency"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = BUR
+		year = 1948
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1992 }
+		
+		war = no
+		is_vassal = no
+		
+		is_possible_vassal = KAY
+	}
+
+	mean_time_to_happen = { months = 24 }
+
+	option = {
+		name = "EVT_8002310_A"
+		release = KAY
+		war = {
+			target = KAY
+			attacker_goal = {
+                casus_belli = annex_core_country
+			}
+			defender_goal = {
+				casus_belli = status_quo
+			}
+		}
+	}
+
+}
+
+#Shan state insurgency
+country_event = {
+  id = 8002311
+  title = "EVT_8002310_NAME"
+  desc = "EVT_8002310_DESC"
+  picture = "nwo2_burmese_insurgency"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = BUR
+		year = 1948
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1992 }
+		
+		war = no
+		is_vassal = no
+		
+		is_possible_vassal = SHA
+	}
+
+	mean_time_to_happen = { months = 24 }
+
+	option = {
+		name = "EVT_8002310_A"
+		release = SHA
+		war = {
+			target = SHA
+			attacker_goal = {
+                casus_belli = annex_core_country
+			}
+			defender_goal = {
+                casus_belli = status_quo
+			}
+		}	
+	}
+}
+
+#8888 Uprising
+country_event = {
+	id = 8002312
+	title = "The 8888 Uprising"
+	desc = EVTDESC1512111
+	picture = "8888_revolt"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BUR
+		year = 1988
+		NOT = { has_global_flag = 1992_start_date_flag }
+		
+		war = no
+		is_vassal = no
+		government = proletarian_dictatorship
+	}
+
+	mean_time_to_happen = { 
+		months = 8
+	}
+
+	option = {
+		name = "The military junta takes over (road to democracy)"
+		government = populist_dictatorship
+		ruling_party_ideology = nationalist
+		
+		set_country_flag = 8888_revolt_flag
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Stick to the status quo"
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#1990 Coup
+country_event = {
+	id = 8002313
+	title = "The $YEAR$ Myanmar General Election"
+	desc = EVTDESC8002313
+	picture = "1990_BUR_elections"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BUR
+		year = 1990
+		
+		has_country_flag = 8888_revolt_flag
+		
+		war = no
+		is_vassal = no
+
+		government = populist_dictatorship
+		ruling_party_ideology = nationalist
+	}
+
+	mean_time_to_happen = { 
+		months = 5
+	}
+
+	option = {
+		name = "Annul the election results!"
+		
+		set_country_flag = 1990_BUR_elections_flag
+		
+		government = nationalist_dictatorship
+		
+		any_pop = { 
+			scaled_militancy = {
+				factor = 10
+				ideology = liberal
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = progressive
+			}
+			ideology = { factor = 0.05 value = liberal }
+		}
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Hand power to Aung San Suu Kyi"
+		government = democracy
+		country_event = 800054
+		ruling_party_ideology = liberal
+		
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		
+		any_pop = { 
+			limit = { type = officers }
+			militancy = 10 
+			ideology = { factor = 0.25 value = nationalist }
+		}
+		
+		any_pop = { 
+			scaled_militancy = {
+				factor = 10
+				ideology = traditionalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = conservative
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = nationalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = communist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = communist_social
+			}
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#2007 Saffron Revolution
+country_event = {
+	id = 80023131
+	title = "The Saffron Revolution"
+	desc = EVTDESC80023131
+	picture = "BUR_saffron_revolution"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BUR
+		year = 2007
+		
+		has_country_flag = 1990_BUR_elections_flag
+		
+		war = no
+		is_vassal = no
+
+		OR = { government = populist_dictatorship government = nationalist_dictatorship }
+		ruling_party_ideology = nationalist
+	}
+
+	mean_time_to_happen = { 
+		months = 9
+	}
+
+	option = {
+		name = "How long can we cling on to power?"
+		
+		prestige_factor = -0.025
+		badboy = 5
+		
+		any_pop = {
+			scaled_militancy = {
+				factor = 10
+				ideology = liberal
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = progressive
+			}
+			ideology = { factor = 0.05 value = liberal }
+		}
+		
+	}
+
+}
+
+#2010 USDP
+country_event = {
+	id = 8002314
+	title = "The Roadmap to Democracy"
+	desc = EVTDESC8002314
+	picture = "2010_BUR_elections"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BUR
+		year = 2010
+		
+		has_country_flag = 1990_BUR_elections_flag
+		
+		war = no
+		is_vassal = no
+
+		OR = { government = populist_dictatorship government = nationalist_dictatorship }
+		ruling_party_ideology = nationalist
+	}
+
+	mean_time_to_happen = { 
+		months = 11
+	}
+
+	option = {
+		name = "Embark on a gradual democratisation of Myanmar"
+		
+		set_country_flag = BUR_road_map_to_democracy
+		
+		government = presidential_dictatorship
+		ruling_party_ideology = conservative
+		
+		any_pop = {
+			scaled_militancy = {
+				factor = -5
+				ideology = liberal
+			}
+			scaled_militancy = {
+				factor = -5
+				ideology = progressive
+			}
+			scaled_militancy = {
+				factor = -5
+				ideology = big_tent
+			}
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "We will never become democratic!"
+		
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		
+		any_pop = { 
+			scaled_militancy = {
+				factor = 10
+				ideology = liberal
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = progressive
+			}
+			ideology = { factor = 0.10 value = liberal }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#2015 Return to Democracy
+country_event = {
+	id = 8002315
+	title = "The Return of Democracy in Myanmar"
+	desc = EVTDESC8002315
+	picture = "2015_BUR_elections"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BUR
+		year = 2015
+		
+		has_country_flag = BUR_road_map_to_democracy
+		
+		war = no
+		is_vassal = no
+
+		government = presidential_dictatorship
+		ruling_party_ideology = conservative
+	}
+
+	mean_time_to_happen = { 
+		months = 11
+	}
+
+	option = {
+		name = "Hand power to Aung San Suu Kyi"
+		government = democracy
+		ruling_party_ideology = liberal
+		
+		#Special political set up
+		political_reform = registered_voting
+		political_reform = regulated_opinion
+		political_reform = limited_meetings
+		political_reform = politicised_service
+		political_reform = parties_restrict_non_democratic #Restricted campaigning
+		political_reform = first_past_the_post
+		
+		set_country_flag = ASSK_BUR_flag
+		
+		any_pop = { 
+			limit = { type = officers }
+			scaled_militancy = {
+				factor = 10
+				ideology = nationalist
+			}
+			ideology = { factor = 0.25 value = nationalist }
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Annul the election results, again!"
+		
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		
+		any_pop = { 
+			scaled_militancy = {
+				factor = 10
+				ideology = liberal
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = progressive
+			}
+			ideology = { factor = 0.15 value = liberal }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#2021 Return to Dictatorship
+country_event = {
+	id = 8002316
+	title = "The $YEAR$ Military Coup"
+	desc = EVTDESC8002316
+	picture = "2021_BUR_coup"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BUR
+		year = 2021
+		NOT = { year = 2026 }
+		
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		#Aung San Suu Kyi won power in 2015
+		has_country_flag = ASSK_BUR_flag
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = {
+		name = "Launch the coup!"
+		government = presidential_dictatorship
+		country_event = 800050
+		ruling_party_ideology = nationalist
+		
+		#Public will be very angry!
+		any_pop = { 
+			limit = { NOT = { OR = { type = officers type = soldiers } } }
+			militancy = 10
+			consciousness = 10
+			ideology = { factor = 0.25 value = liberal }
+		}
+		
+		#Military will side with the coup plotters
+		any_pop = { 
+			limit = { OR = { type = officers type = soldiers } }
+			militancy = -10
+			ideology = { factor = 0.30 value = nationalist }
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Let democracy flourish!"
+		
+		#Rich strata will become more nationalist
+		any_pop = { 
+			limit = { strata = rich }
+			ideology = { factor = 0.25 value = nationalist }
+		}
+		
+		#Military will be angry
+		any_pop = { 
+			limit = { OR = { type = officers type = soldiers } }
+			scaled_militancy = {
+				factor = 10
+				ideology = nationalist
+			}
+			ideology = { factor = 0.25 value = nationalist }
+		}
+		
+		add_country_modifier = { name = military_strife duration = 3650 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+}

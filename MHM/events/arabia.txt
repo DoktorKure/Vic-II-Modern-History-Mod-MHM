@@ -1,0 +1,156 @@
+#Salafism
+country_event = {
+	id = 101935
+	title = "The Salafi Movement"
+	desc = EVT_101935_DESC
+	picture = "salafi_movement"
+	
+	trigger = {
+		pop_majority_religion = sunni #Sunni state
+		year = 1972
+		NOT = { literacy = 0.15 } #High education shifts focus elsewhere
+		
+		NOT = { government = theocracy }
+		war = no
+		election = no
+		
+		NOT = { ruling_party_ideology = traditionalist }
+		
+		any_core = { pop_majority_religion = sunni NOT = { has_province_modifier = salafi_movement } }
+		
+		#Has substantial traditionalist support
+		traditionalist = 10
+	}
+
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = "We must watch this"
+		
+		#Pops in our country become more traditionalist
+		any_pop = { 
+			limit = { religion = sunni }
+			dominant_issue = { factor = 0.05 value = moralism }
+			ideology = { factor = 0.05 value = traditionalist }
+			scaled_militancy = { factor = 5 ideology = traditionalist }
+		}
+		
+		#Affect the rest of the world
+		any_country = {
+			limit = { exists = yes }
+			
+			#Pops  become more traditionalist
+			any_pop = { 
+				limit = { religion = sunni }
+				dominant_issue = { factor = 0.01 value = moralism }
+				ideology = { factor = 0.01 value = traditionalist }
+				scaled_militancy = { factor = 1 ideology = traditionalist }
+			}
+		}
+		
+		#Add salafi_movement
+		all_core = {
+			limit = { pop_majority_religion = sunni }
+			add_province_modifier = { name = salafi_movement duration = 3650 }
+		}
+	}
+
+}
+
+#The Arab Spring
+country_event = {
+	id = 101937
+	title = "The Arab Spring"
+	desc = "EVT_101937_DESC"
+	picture = "egyptian_crisis"
+
+	trigger = {
+		capital_scope = { continent = mena } #Arab nations
+		year = 2011
+		NOT = { year = 2020 }
+		NOT = { has_country_flag = arab_spring_country_flag }
+
+		OR = { 
+			government = presidential_dictatorship 
+			government = absolute_monarchy 
+			government = proletarian_dictatorship 
+			government = populist_dictatorship 
+			government = nationalist_dictatorship 
+		}
+		is_vassal = no
+		war = no
+		
+		OR = { average_militancy = 3 has_global_flag = arab_spring ai = yes }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+    	name = "There is no need for reform"
+		
+		#Demonstrations against the government - start civil war chain
+		country_event = 1412002
+		
+		#Domestic reaction
+		any_pop = { 
+			limit = { strata = rich }
+			militancy = -10
+			consciousness = -10
+			ideology = { factor = 0.30 value = conservative }
+		}
+		any_pop = { 
+			limit = { strata = middle }
+			militancy = 10
+			consciousness = 10
+			ideology = { factor = 0.30 value = liberal }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			militancy = 5
+			consciousness = 5
+			ideology = { factor = 0.1 value = liberal }
+			ideology = { factor = 0.1 value = traditionalist }
+		}
+		
+		
+		
+		set_global_flag = arab_spring
+		set_country_flag = arab_spring_country_flag
+		ai_chance = { factor = 0.9 }
+	}
+  
+	option = {
+    	name = "Accept the people's request for reforms"
+		prestige_factor = -0.25
+		
+		#Liberalisation
+		country_event = 800054
+		
+		#Domestic reaction
+		any_pop = { 
+			limit = { strata = rich }
+			militancy = 10
+			consciousness = 10
+			ideology = { factor = 0.25 value = nationalist }
+		}
+		any_pop = { 
+			limit = { strata = middle }
+			militancy = -10
+			consciousness = -10
+			ideology = { factor = 0.1 value = liberal }
+		}
+		any_pop = { 
+			limit = { strata = poor }
+			militancy = -5
+			consciousness = -5
+			ideology = { factor = 0.2 value = traditionalist }
+		}
+		
+		set_global_flag = arab_spring
+		set_country_flag = arab_spring_country_flag
+		ai_chance = { factor = 0.1 }
+	}
+  
+}

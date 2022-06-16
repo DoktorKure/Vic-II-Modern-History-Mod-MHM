@@ -1,0 +1,145 @@
+graphical_culture = Generic
+color = { 0 100 0 }
+party = {
+		name = "Nationalist Front of Mexico"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "PRI"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+
+party = {
+		name = "National Action Party (C)"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Action Party (L)" #PAN
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "PRI"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "PRD"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Civil Will - Green Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Synarchist Union"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Worker's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Workers' Revolutionary Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"ARM Libertad" "ARM Mexico" "ARM Veracruz" "ARM Tampico" "ARM Guadalupe" "ARM Anahuac" "ARM Progreso" "ARM Chetumal" "ARM Independencia" "ARM Yucatan"
+	}
+	transportship = {
+		"ARM Tenochtitlan" "ARM Teotihuacan" "ARM Palenque" "ARM Mitla" "ARM Uxmal" "ARM Tajin" "ARM Tulum" "ARM Monte Alban" "ARM Bonampak" "ARM Chichen Itza"
+	}
+	modern_frigate = {
+		"ARM Juan de la Barrera" "ARM Mariano Escobedo" "ARM Manuel Doblado" "ARM Santo Degollado" "ARM Manuel Gutierrez Zamora" "ARM Valentin Gomez Farias" "ARM Francisco Zarco" "ARM Mariano Matamoros"
+	}
+	cruiser = {
+		"ARM Holzinger" "ARM Godinez" "ARM De la Vega" "ARM Berriozabal" "ARM Azueta" "ARM Baranda" "ARM Breton" "ARM Blanco" "ARM Monasterio" "ARM Valle"
+	}
+	modern_cruiser = {
+		"ARM Independencia" "ARM Aguascalientes" "ARM Colima" "ARM Chiapas" "ARM Chihuahua" "ARM Durango" "ARM Guerrero" "ARM Hidalgo" "ARM Oaxaca" "ARM Sonora" "ARM Tabasco" "ARM Tlaxcala" "ARM Zacatecas"
+	}
+	frigate = {
+		"ARM Bravo" "ARM Galeana" "ARM Allende" "ARM Abasolo" "ARM Victoria" "ARM Mina" "ARM Reformador" "ARM Huracan" "ARM Tormenta"
+	}
+	modern_destroyer = {
+		"ARM Libertad" "ARM Mexico" "ARM Veracruz" "ARM Tampico" "ARM Guadalupe" "ARM Anahuac" "ARM Progreso" "ARM Chetumal" "ARM Independencia" "ARM Yucatan"
+	}
+	destroyer = {
+		"ARM Netzahualcoyotl" "ARM Quetzalcoatl" "ARM Cuauhtemoc" "ARM Tlaloc" "ARM Moctezuma" "ARM Cuitlahuac" "ARM Acamapichtli" "ARM Itzcoatl"
+	}
+	submarine = {
+		"ARM Navajo" "ARM La Paz" "ARM Colima" "ARM Madero" "ARM Coatzacoalt" "ARM Juarez" "ARM Campeche" "ARM Navolato" "ARM Santa Rosalia" "ARM Constitucion"
+	}
+	patrolboat = {
+		"ARM Oaxaca" "ARM Baja California" "ARM Revolucion" "ARM Jalisco" "ARM Sonora" "ARM Guanajato" "ARM Hidalgo" "ARM Sierra" "ARM Prieto" "ARM Romero"
+	}
+}

@@ -1,0 +1,48 @@
+#Multi-Role Fighter
+modern_fighter = {
+	icon = 17
+
+	type = land
+	sprite = Fighter
+	active = no
+	unit_type = cavalry
+	floating_flag = no
+	
+	primary_culture = yes
+	
+	#Core Abilities
+	priority = 45
+	max_strength = 3
+	default_organisation = 20
+	maximum_speed = 7.00
+	weighted_value = 10.0
+
+	#Building Costs
+	build_time = 150
+	# cost 29M * 20 = 0.5B
+	build_cost = {
+		aeroplanes = 50
+		weaponry = 30
+		fuel = 25
+		optics = 40
+	}
+	
+	supply_consumption = 1.0
+	supply_cost = {
+		ammunition = 0.25
+		canned_food = 0.02
+		fuel = 0.4
+		machine_parts = 0.1
+		electric_gear = 0.1
+		aeroplanes = 0.1
+	}
+
+	#Land Abilties
+	reconnaissance = 4
+	attack = 21
+	defence = 21
+	discipline = 0.25
+	support = 0.20
+	maneuver = 4
+	siege = 3
+}

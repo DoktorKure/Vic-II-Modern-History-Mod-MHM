@@ -1,0 +1,154 @@
+country_event = {
+	id = 99977
+	title = EVT_99977_NAME
+	desc = EVT_99977_DESC
+	picture = "lon_syria"
+	is_triggered_only = yes
+
+  	option = {
+    	name = EVT_99977_A
+		ai_chance = { factor = 0.8 }
+		SYR = { inherit = THIS }
+  	}
+ 	option = {
+    	name = EVT_99977_B
+		ai_chance = { factor = 0.2 }
+		prestige = 10
+		militancy = 5
+		consciousness = 2
+  	}
+}
+country_event = {
+	id = 99978
+	title = EVT_99978_NAME
+	desc = EVT_99978_DESC
+	picture = "lon_syria"
+	is_triggered_only = yes
+
+  	option = {
+    	name = EVT_99978_A
+		ai_chance = { factor = 0.18 }
+		SYR = { 
+			inherit = THIS
+			add_accepted_culture = lebanese
+		}
+  	}
+ 	option = {
+    	name = EVT_99978_B
+		ai_chance = { factor = 0.82 }
+		badboy = 1
+		prestige = 4
+		any_pop = {
+			limit = {
+				culture = syrian
+				culture = arab
+			}
+			militancy = 3
+			consciousness = 2
+		}
+		any_pop = {
+			limit = {
+				culture = lebanese
+			}
+			militancy = -1
+			consciousness = -1
+		}
+  	}
+}
+country_event = {
+  id = 8014719
+  title = "$YEAR$ Syrian coup d'état"
+  desc = EVTDESC8014719
+  picture = "1949_syr_coup"
+  fire_only_once = yes
+
+  trigger = {
+    	tag = SYR
+    	year = 1949 NOT = { year = 1990 }
+	is_vassal = no
+	war = no
+	government = democracy
+  }
+
+  mean_time_to_happen = { months = 3 }
+
+  option = {
+    name = EVT_8014720_A
+	government = presidential_dictatorship 
+	country_event = 800050
+	ruling_party_ideology = conservative
+	ai_chance = { factor = 0.9 }
+  }
+
+option = {
+    name = "Stick to the status quo"
+add_country_modifier = { name = revolution_chaos duration = 3650 }
+	ai_chance = { factor = 0.1 }
+  }
+
+}
+country_event = {
+  id = 8014720
+  title = EVT_8014720_NAME
+  desc = EVT_8014720_DESC
+  picture = "nwo2_baath_party_coup"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SYR
+    year = 1963 NOT = { year = 1990 }
+	is_vassal = no
+	war = no
+OR = { government = democracy government = presidential_dictatorship }
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = EVT_8014720_A
+	government = populist_dictatorship 
+	country_event = 800050
+	ruling_party_ideology = socialist
+	ai_chance = { factor = 0.9 }
+  }
+
+option = {
+    name = "Stick to the status quo"
+add_country_modifier = { name = revolution_chaos duration = 3650 }
+	ai_chance = { factor = 0.1 }
+  }
+
+}
+country_event = {
+  id = 8014725
+  title = EVT_8014725_NAME
+  desc = EVT_8014725_DESC
+  picture = "nwo2_hafez_al_assad"
+  fire_only_once = yes
+
+  trigger = {
+    tag = SYR
+    year = 1970 NOT = { year = 1990 }
+	is_vassal = no
+	war = no
+	government = populist_dictatorship
+  }
+
+  mean_time_to_happen = { months = 6 }
+
+  option = {
+    name = EVT_8014725_A
+	government = nationalist_dictatorship 
+	country_event = 800050
+	ruling_party_ideology = socialist
+	ai_chance = { factor = 0.9 }
+  }
+
+option = {
+    name = "Stick to the status quo"
+add_country_modifier = { name = revolution_chaos duration = 3650 }
+	ai_chance = { factor = 0.1 }
+  }
+
+}
+

@@ -1,0 +1,1047 @@
+#						#
+# Kuril Islands Dispute #
+#						#
+
+#Kuril Islands Dispute
+country_event = {
+	id = 32501
+	title = "kuril_islands_dispute_title"
+	desc = "kuril_islands_dispute_desc"
+	picture = "kuril_islands_dispute"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "kuril_islands_dispute_opta" # refuse
+		relation = { who = FROM value = -300 }
+		1089 = {
+			state_scope = {
+				flashpoint_tension = 30
+			}
+		}
+		FROM = { country_event = 32502 }
+		ai_chance = { factor = 0.95 }
+	}
+	
+	option = {
+		name = "kuril_islands_dispute_optb"
+		1089 = { secede_province = JAP remove_core = RUS }
+		FROM = { country_event = 32503 }
+		money = 1900000
+		ai_chance = { 
+			factor = 0.05
+			modifier = { NOT = { money = 100000 } factor = 10 } 
+			modifier = { is_greater_power = no factor = 15 }
+			modifier = { has_recently_lost_war  = yes factor = 5 } 
+		}
+	}
+}
+
+country_event = {
+	id = 32502
+	title = "kuril_islands_dispute_title"
+	desc = "kuril_islands_dispute_desc"
+	picture = "kuril_islands_dispute"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "kuril_islands_dispute_reject_opta" # reject
+		clr_country_flag = kuril_islands_dispute 
+	}
+}
+
+country_event = {
+	id = 32503
+	title = "kuril_islands_dispute_title"
+	desc = "kuril_islands_dispute_desc"
+	picture = "kuril_islands_dispute"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "kuril_islands_dispute_accept_opta" # accept
+		clr_country_flag = kuril_islands_dispute 
+		money = -1900000 
+	}
+}
+
+#									 #
+# Belovezha Accords Crimean question #
+#									 #
+
+#Belovezha Accords - Crimean question
+country_event = {
+    id = 32520
+    title = "The Crimean Question"      
+    desc = EVT_32520_DESC
+    picture = "belovezha"
+
+	fire_only_once = yes
+
+	trigger = {
+    	tag = RUS
+		
+		is_vassal = no
+		
+		has_country_flag = UKR_CRI_1991_claim_flag
+		
+		UKR = { exists = yes is_possible_vassal = CRI is_vassal = no }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+    option = {            
+        name = "Let Ukraine have Crimea!"
+		prestige = 50
+		
+		badboy = -5
+		
+		relation = { who = UKR value = 200 }
+		diplomatic_influence = { who = UKR value = 200 }
+		
+		ai_chance = { factor = 0.9 }
+    }
+    
+    option = {            
+        name = "Demand Crimea! (War if Ukraine refuses)"
+		UKR = { country_event = 32521 }
+		ai_chance = { factor = 0.1 }
+    }
+
+}
+
+#Belovezha Accords - Crimean question
+country_event = {
+    id = 32521
+    title = "The Crimean Question"      
+    desc = EVT_32520_DESC
+    picture = "belovezha"
+
+	is_triggered_only = yes
+
+    option = {            
+        name = "Give in to Russia's demand"
+		prestige = -50
+		
+		relation = { who = RUS value = 200 }
+		RUS = { diplomatic_influence = { who = UKR value = 200 } }
+		
+		#Cede Crimea
+		any_owned = { limit = { is_core = CRI } secede_province = RUS }
+		
+		ai_chance = { factor = 0.6 }
+    }
+    
+    option = {            
+        name = "Refuse their demands"
+		RUS = {
+			war = { 
+				target = UKR
+				attacker_goal = { casus_belli = acquire_any_state state_province_id = 967 }
+				defender_goal = { casus_belli = territorial_dispute }
+				call_ally = no
+			}
+		}
+		ai_chance = { factor = 0.4 }
+    }
+
+}
+
+#			  #
+# Chechen War #
+#			  #
+
+#Rise of Chechen Separatism
+country_event = {
+	id = 32509
+	title = "Rise of Chechen Separatism"
+	desc = EVT_32509_DESC
+	picture = "start_of_the_chechen_war"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1991
+	
+		#Russian Federation
+		OR = { government = democracy government = democracy1 government = presidential_dictatorship }
+		war = no
+		is_vassal = no
+
+		#RUS owns CHC
+		is_possible_vassal = CHC
+	}
+	
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Ignore their calls for independence"
+		
+		#CHC separatism
+		any_owned = {
+			limit = { is_core = CHC }
+			add_province_modifier = { name = nationalist_agitation duration = 1825 }
+			any_pop = { 
+				militancy = 5
+				consciousness = 5
+				ideology = { factor = 0.15 value = nationalist }
+				ideology = { factor = 0.15 value = traditionalist }
+			}
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Accept their demands for independence!"
+		prestige_factor = -0.02
+		badboy = -3
+		
+		#Release Chechnya
+		release = CHC
+		CHC = { 
+			government = theocracy
+			ruling_party_ideology = traditionalist
+			country_event = 800050
+		}
+		
+		set_global_flag = chechen_war_no 
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#First Chechen War
+country_event = {
+	id = 32505
+	title = "The First Chechen War"
+	desc = EVT_32505_DESC
+	picture = "first_chechen_war"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1994
+	
+		#Russian Federation
+		OR = { government = democracy government = democracy1 government = presidential_dictatorship }
+		war = no
+		is_vassal = no
+
+		#RUS owns CHC
+		is_possible_vassal = CHC
+		
+		NOT = { has_global_flag = chechen_war_no }
+	}
+	
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = "Leave them be... for now"
+		prestige_factor = -0.02
+		
+		#Release Chechnya
+		release = CHC
+		CHC = { 
+			government = theocracy
+			ruling_party_ideology = traditionalist
+			country_event = 800050
+		}
+		
+		#Conservative support grows
+		any_pop = { 
+			militancy = -5 
+			consciousness = -5 
+			ideology = { factor = 0.05 value = conservative } 
+			dominant_issue = { value = pacifism factor = 0.25 }
+		}
+		
+		#Dagestan separatism
+		any_owned = {
+			limit = { is_core = DAG }
+			add_province_modifier = { name = nationalist_agitation duration = 3650 }
+			any_pop = { 
+				militancy = 10
+				consciousness = 10
+				ideology = { factor = 0.30 value = traditionalist }
+			}
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Restore order in Chechnya!"
+		badboy = 5
+		
+		#Release Chechnya
+		release_vassal = CHC
+		CHC = { 
+			government = theocracy
+			ruling_party_ideology = traditionalist
+			country_event = 800050
+		}
+		
+		war = { 
+			target = CHC 
+			attacker_goal = { casus_belli = annex_core_country } 
+			defender_goal = { casus_belli = status_quo } 
+			call_ally = no
+		}
+		
+		#Pacifism grows
+		any_pop = {
+			ideology = { factor = 0.05 value = liberal }
+			dominant_issue = { value = pacifism factor = 0.25 }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#The Second Chechen War
+country_event = {
+	id = 32504
+	title = "The Second Chechen War"
+	desc = EVT_32504_DESC
+	picture = "second_chechen_war"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1999
+	
+		#Russian Federation
+		OR = { government = democracy government = democracy1 government = presidential_dictatorship }
+		war = no
+		is_vassal = no
+		
+		#CHC conditions
+		CHC = {
+			government = theocracy
+			exists = yes
+			is_vassal = no
+			NOT = { truce_with = RUS }
+		}
+		
+		#Owns Dagestan
+		is_possible_vassal = DAG
+		
+		NOT = { has_global_flag = chechen_war_no }
+	}
+	
+	mean_time_to_happen = { months = 8 }
+
+	option = {
+		name = "Restore order in Chechnya!"
+		badboy = 3
+		
+		war = { 
+			target = CHC 
+			attacker_goal = { casus_belli = annex_core_country } 
+			defender_goal = { casus_belli = status_quo } 
+			call_ally = no
+		}
+		
+		#Pacifism grows
+		any_pop = {
+			ideology = { factor = 0.05 value = liberal }
+			dominant_issue = { value = pacifism factor = 0.25 }
+		}
+		
+		#Dagestan separatism
+		any_owned = {
+			limit = { is_core = DAG }
+			add_province_modifier = { name = nationalist_agitation duration = 1825 }
+			any_pop = { 
+				militancy = 5
+				consciousness = 5
+				ideology = { factor = 0.15 value = traditionalist }
+			}
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	option = {
+		name = "Recognise their independence"
+		prestige_factor = -0.03
+		badboy = -5
+		
+		#Right wing anger
+		any_pop = {
+			scaled_militancy = { factor = 10 ideology = nationalist }
+			scaled_militancy = { factor = 10 ideology = populist }
+			scaled_militancy = { factor = 5 ideology = conservative }
+			scaled_militancy = { factor = 10 ideology = traditionalist }
+		}
+		
+		#Dagestan separatism
+		any_owned = {
+			limit = { is_core = DAG }
+			add_province_modifier = { name = nationalist_agitation duration = 3650 }
+			any_pop = { 
+				militancy = 10
+				consciousness = 10
+				ideology = { factor = 0.30 value = traditionalist }
+			}
+		}
+		
+		#Dagestan War
+		set_country_flag = DAG_war_flag
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+### Dagestan War ###
+
+#The War of Dagestan, 1999
+country_event = {
+	id = 32526
+	title = "The War of Dagestan"
+	desc = EVT_32526_DESC
+	picture = "war_of_dagestan"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 1999
+	
+		#Russian Federation
+		OR = { government = democracy government = democracy1 government = presidential_dictatorship }
+		is_vassal = no
+
+		#Owns Dagestan
+		is_possible_vassal = DAG
+		
+		#War flag
+		has_country_flag = DAG_war_flag
+	}
+	
+	mean_time_to_happen = { 
+		months = 6 
+		modifier = { factor = 0.2 war_with = CHC }
+	}
+	
+	option = {
+		name = "Drive out the separatists!"
+		badboy = 2
+		
+		release = DAG
+		DAG = { 
+			government = theocracy
+			ruling_party_ideology = traditionalist
+			country_event = 800050
+		}
+		war = { 
+			target = DAG 
+			attacker_goal = { casus_belli = annex_core_country } 
+			defender_goal = { casus_belli = status_quo } 
+			call_ally = no 
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	option = {
+		name = "Let them be free, we have enough wars already!"
+		prestige_factor = -0.02
+		release = DAG
+		DAG = { 
+			government = theocracy
+			ruling_party_ideology = traditionalist
+			country_event = 800050
+		}
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+### North Caucasus Insurgency ###
+country_event = {
+	id = 32527
+	title = "Insurgency in the North Caucasus"
+	desc = EVT_32527_DESC
+	picture = "north_caucasian_insurgency"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 2009
+		NOT = { year = 2020 }
+		
+		#Russian Federation
+		OR = { government = democracy government = democracy1 government = presidential_dictatorship }
+		is_vassal = no
+		war = no
+		
+		is_possible_vassal = NCS
+	}
+	
+	mean_time_to_happen = { months = 4 }
+	
+	option = {
+		name = "Crush this insurgency now!"
+		
+		#Add cores
+		1048 = { add_core = NCS }
+		1049 = { add_core = NCS }
+		1050 = { add_core = NCS }
+		1051 = { add_core = NCS }
+		1052 = { add_core = NCS }
+		1053 = { add_core = NCS }
+		1053 = { add_core = NCS }
+		1054 = { add_core = NCS }
+		1055 = { add_core = NCS }
+		1056 = { add_core = NCS }
+		1057 = { add_core = NCS }
+		
+		#Create insurgency
+		NCS = { 
+			all_core = {  
+				add_province_modifier = { name = nationalist_agitation duration = 3650 }
+				any_pop = { 
+					limit = { OR = { culture = avar culture = chechen culture = circassians culture = chechen culture = dargwa culture = ingush culture = kabarday culture = karachay culture = balkar culture = ossetian } }
+					militancy = 10
+					consciousness = 10
+					ideology = { factor = 0.15 value = nationalist }
+					ideology = { factor = 0.15 value = traditionalist }
+				}
+			} 
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+	option = {
+		name = "Give in to the demands of these rebels."
+		
+		#Add cores
+		1048 = { add_core = NCS }
+		1049 = { add_core = NCS }
+		1050 = { add_core = NCS }
+		1051 = { add_core = NCS }
+		1052 = { add_core = NCS }
+		1053 = { add_core = NCS }
+		1053 = { add_core = NCS }
+		1054 = { add_core = NCS }
+		1055 = { add_core = NCS }
+		1056 = { add_core = NCS }
+		1057 = { add_core = NCS }
+		
+		#Release NCS
+		release = NCS
+		NCS = { 
+			government = theocracy
+			ruling_party_ideology = traditionalist
+			country_event = 800050
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+### Events for the Russian Federation ###
+
+#1993 Russian Constitutional Crisis for 1992 start date.
+country_event = {
+  id = 1614
+  title = "$YEAR$ Russian Constitutional Crisis"
+  desc = EVTDESC1614
+  picture = "1601"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		#year = 1993
+		
+		#Early Russian Federation
+		government = democracy1
+		war = no
+		is_vassal = no
+		
+		ruling_party_ideology = socialist
+	}
+
+	mean_time_to_happen = { 
+		months = 21
+		modifier = { factor = 0.5 AND = { has_global_flag = 1992_start_date_flag year = 1993 } }
+	}
+	
+	option = {
+		name = "Resolve the crisis, with tanks!"
+		prestige = -0.02
+		badboy = 5
+		
+		#Yeltsin
+		ruling_party_ideology = conservative
+		
+		#Change flag and government
+		government = democracy
+		clr_country_flag = presidential_system_republic
+		clr_country_flag = semi_presidential_system_republic
+		clr_country_flag = parliamentary_system_republic
+		set_country_flag = semi_presidential_system_republic
+		add_country_modifier = { name = changecentral duration = 1825 }
+	
+		#Historic, the coup fails
+		political_reform = regulated_opinion
+		political_reform = politicised_service #politicized, representative of consolidation of power
+		political_reform = state_controlled_unions 
+		political_reform = limited_meetings
+		
+		#Boris Yeltsin's party becomes more popular
+		any_pop = { 
+			limit = { is_primary_culture = yes }
+			ideology = { factor = 0.25 value = conservative }
+		}
+		
+		#Left wing anger
+		any_pop = {
+			scaled_militancy = { factor = 10 ideology = communist_social }
+			scaled_militancy = { factor = 10 ideology = communist }
+			scaled_militancy = { factor = 5 ideology = socialist }
+			scaled_militancy = { factor = 10 ideology = progressive }
+		}
+		
+		ai_chance = {
+			factor = 0.8
+		}
+	}
+	
+	option = {
+		name = "Let the situation stew"
+		
+		#Yeltsin moderate
+		ruling_party_ideology = big_tent
+	
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+		
+		#Everyone gets angry
+		any_pop = { 
+			militancy = 5 
+			consciousness = 5 
+			
+			ideology = { factor = 0.10 value = conservative }
+			ideology = { factor = 0.05 value = liberal }
+			ideology = { factor = 0.05 value = traditionalist }
+			
+			ideology = { factor = 0.10 value = socialist }
+			ideology = { factor = 0.05 value = communist }
+			ideology = { factor = 0.05 value = communist_social }
+		}
+		
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+
+	option = {
+		name = "Give in to the Socialists"
+		
+		#The coup establishes a Russian socialist state
+		government = socialist_democracy
+		ruling_party_ideology = communist_social
+		
+		political_reform = universal_voting
+		political_reform = open_opinion
+		political_reform = free_meetings
+		political_reform = professional_service
+		political_reform = unregulated_publishing
+		political_reform = free_trade_unions #all unions
+		political_reform = parties_promote_democratic
+		political_reform = open_immigration
+		political_reform = no_draft #no_draft
+		political_reform = minorities_equal_rights
+		political_reform = proportional_representation
+		
+		#Right wing anger
+		any_pop = {
+			scaled_militancy = { factor = 10 ideology = nationalist }
+			scaled_militancy = { factor = 10 ideology = populist }
+			scaled_militancy = { factor = 10 ideology = liberal }
+			scaled_militancy = { factor = 10 ideology = conservative }
+			scaled_militancy = { factor = 10 ideology = traditionalist }
+		}
+
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+
+}
+
+#Successor to Boris Yeltsin
+country_event = {
+  id = 8014274
+  title = "Boris Yeltsin's Successor"
+  desc = EVT_8014274_DESC
+  picture = "putin"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1999
+		
+		#Russian Federation
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		#Yeltsin
+		ruling_party_ideology = conservative
+	}
+
+	mean_time_to_happen = { months = 11 }
+
+	option = {
+		name = "Select Putin the action guy!"
+		ruling_party_ideology = conservative
+		
+		#United Russia becomes popular
+		any_pop = {
+			limit = { is_primary_culture = yes } 
+			militancy = -5
+			ideology = {
+				factor = 0.15
+				value = conservative
+			}
+		}
+		
+		set_country_flag = putin_path
+		
+		ai_chance = { factor = 0.9 }
+	}
+	option = {
+		name = "Go for a more moderate fellow"
+		
+		ruling_party_ideology = big_tent
+
+		any_pop = {
+			limit = { is_primary_culture = yes } 
+			ideology = {
+				factor = 0.1
+				value = big_tent
+			}
+			ideology = {
+				factor = 0.1
+				value = socialist
+			}
+			ideology = {
+				factor = 0.1
+				value = communist
+			}
+		}
+
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#The Khodorkovsky Case
+country_event = {
+  id = 8000700
+  title = "The Khodorkovsky Case"
+  desc = EVT_8000700_DESC
+  picture = "nwo2_khodorkovsky"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = RUS
+    	year = 2003
+		
+		#Russian Federation
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		#Putin
+		ruling_party_ideology = conservative
+		has_country_flag = putin_path
+	}
+
+	mean_time_to_happen = { months = 10 }
+
+	option = {
+		name = "Remove the dissident!"
+		badboy = 1
+		money = 100000
+		
+		#Undermine democracy
+		political_reform = registered_voting
+		political_reform = regulated_opinion
+		political_reform = politicised_service
+		political_reform = state_controlled_unions
+		political_reform = parties_only_nominated
+		
+		#Rich men are happy
+		any_pop = {
+			limit = { strata = rich } 
+			militancy = -10
+			consciousness = -10
+			ideology = {
+				factor = 0.20
+				value = conservative
+			}
+		}
+		
+		#Middle men are angry
+		any_pop = {
+			limit = { strata = middle } 
+			militancy = 5
+			ideology = {
+				factor = 0.1
+				value = liberal
+			}
+		}
+		
+		#The poor get duped
+		any_pop = {
+			limit = { strata = poor }
+			ideology = {
+				factor = 0.05
+				value = conservative
+			}
+		}
+	
+		ai_chance = { factor = 0.9 }
+	}
+  
+	option = {
+		name = "Let him go"
+		
+		#Rich men are angry
+		any_pop = {
+			limit = { strata = rich } 
+			militancy = 10
+			ideology = {
+				factor = 0.25
+				value = nationalist
+			}
+		}
+		
+		#Progessivism and Liberalism grows
+		any_pop = {
+			limit = { strata = middle } 
+			ideology = {
+				factor = 0.1
+				value = liberal
+			}
+			ideology = {
+				factor = 0.1
+				value = progressive
+			}
+		}
+		
+		ai_chance = { factor = 0.1 }
+  	}
+}
+
+#Killing of Anna Politkovskaya - Set the stage for Putin to roll back all reforms and create a presidential dictatorship
+country_event = {
+  id = 8000701
+  title = "Killing of Anna Politkovskaya"
+  desc = EVTDESC8000701
+  picture = "nwo2_politkovskaya"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = RUS
+    	year = 2006
+		
+		#Russian Federation
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		#Putin
+		ruling_party_ideology = conservative
+		has_country_flag = putin_path
+	}
+
+	mean_time_to_happen = { months = 10 }
+
+	option = {
+		name = "Remove the dissident!"
+		badboy = 1
+		money = 100000
+		
+		#Undermine democracy
+		political_reform = censored_publishing
+		political_reform = ruling_party_opinion
+		
+		#Rich men are happy
+		any_pop = {
+			limit = { strata = rich } 
+			militancy = -10
+			consciousness = -10
+			ideology = {
+				factor = 0.20
+				value = conservative
+			}
+		}
+		
+		#Middle men are angry
+		any_pop = {
+			limit = { strata = middle } 
+			militancy = 5
+			ideology = {
+				factor = 0.1
+				value = liberal
+			}
+		}
+		
+		#The poor get duped
+		any_pop = {
+			limit = { strata = poor }
+			ideology = {
+				factor = 0.05
+				value = conservative
+			}
+		}
+	
+		ai_chance = { factor = 0.9 }
+	}
+  
+	option = {
+		name = "Let her live"
+		
+		#Rich men are angry
+		any_pop = {
+			limit = { strata = rich } 
+			militancy = 10
+			ideology = {
+				factor = 0.25
+				value = nationalist
+			}
+		}
+		
+		#Progessivism and Liberalism grows
+		any_pop = {
+			limit = { strata = middle } 
+			ideology = {
+				factor = 0.1
+				value = liberal
+			}
+			ideology = {
+				factor = 0.1
+				value = progressive
+			}
+		}
+		
+		ai_chance = { factor = 0.1 }
+  	}
+}
+
+#The Putin Regime
+country_event = {
+  id = 8000702
+  title = "The Putin Regime"
+  desc = EVTDESC8000702
+  picture = "nwo2_putin_dictatorship"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = RUS
+    	year = 2012
+		
+		#Russian Federation
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		#Putin
+		ruling_party_ideology = conservative
+		has_country_flag = putin_path
+	}
+
+	mean_time_to_happen = { months = 10 }
+
+	option = {
+		name = "We love Putin!"
+		badboy = 5
+		
+		government = presidential_dictatorship
+		political_reform = none_voting
+		political_reform = regulated_opinion
+		political_reform = censored_publishing
+		political_reform = no_trade_unions
+		political_reform = parties_not_allowed
+		political_reform = nobody_gets_out
+		political_reform = no_meetings
+		political_reform = politicised_service
+		
+		#Rich men are happy
+		any_pop = {
+			limit = { strata = rich } 
+			militancy = -10
+			consciousness = -10
+			ideology = {
+				factor = 0.20
+				value = conservative
+			}
+		}
+		
+		#Middle men are angry
+		any_pop = {
+			limit = { strata = middle } 
+			militancy = 5
+			ideology = {
+				factor = 0.10
+				value = liberal
+			}
+		}
+		
+		#The poor get duped
+		any_pop = {
+			limit = { strata = poor }
+			ideology = {
+				factor = 0.10
+				value = conservative
+			}
+		}
+	
+		ai_chance = { factor = 0.9 }
+	}
+  
+	option = {
+		name = "Putin retires to wrestle bears in Siberia"
+		
+		#Rich men are angry
+		any_pop = {
+			limit = { strata = rich } 
+			militancy = 10
+			ideology = {
+				factor = 0.25
+				value = nationalist
+			}
+		}
+		
+		#Progessivism and Liberalism grows
+		any_pop = {
+			limit = { strata = middle } 
+			ideology = {
+				factor = 0.1
+				value = liberal
+			}
+			ideology = {
+				factor = 0.1
+				value = progressive
+			}
+		}
+		
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		
+		ai_chance = { factor = 0.1 }
+  	}
+}

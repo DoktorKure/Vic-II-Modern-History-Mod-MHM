@@ -1,0 +1,327 @@
+graphical_culture = Generic
+color = { 46 139 87 }
+hms_government =  { 233 103 38 }
+party = {
+		name = "Rhodesian Front"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "United Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1956.1.1
+}
+party = {
+		name = "Dominion Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1956.1.1
+		end_date = 1962.3.1
+}
+party = {
+		name = "Rhodesian Front"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1962.3.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Rhodesian Action Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1977.3.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Southern Rhodesia Liberal Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1957.1.1
+}
+party = {
+		name = "United Federal Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1957.1.1
+		end_date = 1962.3.1
+}
+party = {
+		name = "Rhodesian Front"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1962.3.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "United Party"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1948.1.1
+}
+party = {
+		name = "Dominion Party"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1948.1.1
+		end_date = 1953.1.1
+}
+party = {
+		name = "Confederate Party"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1953.1.1
+		end_date = 1957.1.1
+}
+party = {
+		name = "United Rhodesia Party"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1957.1.1
+		end_date = 1962.1.1
+}
+party = {
+		name = "United Federal Party"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1962.1.1
+		end_date = 1965.1.1
+}
+party = {
+		name = "Rhodesia Party"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1965.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Centre Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1968.8.28
+		end_date = 2092.1.1
+}
+party = {
+		name = "Rhodesia Labour Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "United African National Council"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1977.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Southern Rhodesia Labour Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1968.8.28
+}
+party = {
+		name = "Centre Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1968.8.28
+		end_date = 2092.1.1
+}
+party = {
+		name = "Rhodesia Front"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Queen's Loyalists"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Rhodesia Communist Party"
+		citizenship_policy = residency
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1961.12.17
+}
+party = {
+		name = "Zimbabwe African People's Union"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1961.12.17
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1961.12.17
+}
+party = {
+		name = "Zimbabwe African People's Union"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1961.12.17
+		end_date = 1963.8.13
+}
+party = {
+		name = "Zimbabwe African National Union"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1963.8.13
+		end_date = 2092.1.1
+}
+unit_names = {
+	transportship = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	modern_frigate = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	cruiser = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	modern_cruiser = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	frigate = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	modern_destroyer = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	destroyer = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+	submarine = {
+		"South Africa" "Good Hope" "Cape Town" "Cecil Rhodes" "Leander Jameson" Lion Cheetah Leopard Vildebeest Jackal Mongoose Hyena Caracal Serval Genet
+	}
+
+}

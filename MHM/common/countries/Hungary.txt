@@ -1,0 +1,297 @@
+graphical_culture = AustriaHungaryGC
+color = { 0 100 0 }
+proletarian_dictatorship = { 255 160 122 }
+proletarian_dictatorship1 = { 255 160 122 }
+socialist_democracy = { 255 160 122 }
+party = {
+		name = "Hungarian Independence Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1993.5.2
+}
+party = {
+		name = "Magyar Justice and Life Party"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1993.5.2
+		end_date = 2003.10.23
+}
+party = {
+		name = "Jobbik"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 2003.10.23
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Peasant Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1998.6.15
+}
+party = {
+		name = "KDNP"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1988.3.30
+}
+party = {
+		name = "Hungarian Democratic Forum"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1987.9.27
+		end_date = 2011.4.8
+}
+party = {
+		name = "Fidesz"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1988.3.30
+		end_date = 2092.1.1
+}
+party = {
+		name = "Independent Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1988.11.13
+}
+party = {
+		name = "SZDSZ"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1988.11.13
+		end_date = 2013.10.30
+}
+party = {
+		name = "Democratic Coalition"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2011.10.22
+		end_date = 2092.1.1
+}
+party = {
+		name = "Social Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1989.10.7
+}
+party = {
+		name = "Socialist Party of Hungary"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1989.10.7
+		end_date = 2092.1.1
+}
+party = {
+		name = "Independent Smallholders' Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Hungarian Radical Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1998.10.21
+}
+party = {
+		name = "Humanist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1998.10.21
+		end_date = 2008.2.26
+}
+party = {
+		name = "Hungary's Green Party (LMP)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 2008.2.26
+		end_date = 2092.1.1
+}
+party = {
+		name = "Iron Cross Party"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1988.3.30
+}
+party = {
+		name = "Fidesz"
+		citizenship_policy = residency
+		economic_policy = interventionism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1988.3.30
+		end_date = 2092.1.1
+}
+party = {
+		name = "Holy Crown Society"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Hungarian Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1948.7.22
+}party = {
+		name = "Hungarian Working People Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1948.6.12
+		end_date = 1956.10.31
+}
+party = {
+		name = "Magyar Socialist Workers' Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1956.10.31
+		end_date = 1989.10.7
+}
+party = {
+		name = "Hungarian Worker's Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1989.10.7
+		end_date = 2092.1.1
+}
+party = {
+		name = "Magyar Socialist Workers' Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Szent Istvan" Zrinyi �rp�d Szigetv�r Sava Temes Bodrog Szamos K�r�s Maros Leitha Balaton Csepel Lika Orjen T�tra Triglav Dinara Csik�s Pand�r R�ka Turul Husz�r Ulan
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Zrinyi �rp�d Szigetv�r Sava Temes Bodrog Szamos K�r�s Maros Leitha Balaton Csepel Lika Orjen T�tra Triglav Dinara Csik�s Pand�r R�ka Turul Husz�r Ulan
+	}
+	cruiser = {
+		Zrinyi �rp�d Szigetv�r Sava Temes Bodrog Szamos K�r�s Maros Leitha Balaton Csepel Lika Orjen T�tra Triglav Dinara Csik�s Pand�r R�ka Turul Husz�r Ulan
+	}
+	modern_cruiser = {
+		"Szent Istvan" Zrinyi �rp�d Szigetv�r Sava Temes Bodrog Szamos K�r�s Maros Leitha Balaton Csepel Lika Orjen T�tra Triglav Dinara Csik�s Pand�r R�ka Turul Husz�r Ulan
+	}
+	frigate = {
+		Zrinyi �rp�d Szigetv�r Sava Temes Bodrog Szamos K�r�s Maros Leitha Balaton Csepel Lika Orjen T�tra Triglav Dinara Csik�s Pand�r R�ka Turul Husz�r Ulan
+	}
+	modern_destroyer = {
+		Zrinyi �rp�d Szigetv�r Sava Temes Bodrog Szamos K�r�s Maros Leitha Balaton Csepel Lika Orjen T�tra Triglav Dinara Csik�s Pand�r R�ka Turul Husz�r Ulan
+	}
+	destroyer = {
+		Zrinyi �rp�d Szigetv�r Sava Temes Bodrog Szamos K�r�s Maros Leitha Balaton Csepel Lika Orjen T�tra Triglav Dinara Csik�s Pand�r R�ka Turul Husz�r Ulan
+	}
+	submarine = {
+		Zrinyi �rp�d Szigetv�r Sava Temes Bodrog Szamos K�r�s Maros Leitha Balaton Csepel Lika Orjen T�tra Triglav Dinara Csik�s Pand�r R�ka Turul Husz�r Ulan
+	}
+
+}

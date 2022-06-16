@@ -1,0 +1,62 @@
+country_event = { # Independence of Mauritius
+  id = 8009400
+  title = EVT_8009400_NAME
+  desc = EVT_8009400_DESC
+  picture = "independence_mauritius"
+  fire_only_once = yes
+
+  trigger = {
+    tag = ENG
+    year = 1968 NOT = { year = 1990 }
+	owns = 2125 # Mauritius
+	NOT = { exists = MRT }
+	exists = MAD
+	MAD = { is_vassal = no }
+  }
+
+  mean_time_to_happen = { months = 2 }
+
+  option = {
+    name = EVT_8009400_A
+	prestige = 10
+	release = MRT
+	MRT = { government = hms_government1 }
+	ENG = { diplomatic_influence = { who = MRT value = 200 } }
+	create_alliance = MRT
+	2128 = { add_core = MRT }
+
+MRT = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
+
+	ai_chance = { factor = 0.7 }
+  }
+
+  option = {
+    name = "Release Mauritius as an autonomous dependency"
+	prestige = -25
+	badboy = 1
+
+	release_vassal = MRT
+
+diplomatic_influence = { who = MRT value = 200 }
+
+MRT = { government = colonial_government country_event = 800054 }
+
+	MRT = { any_pop = { militancy = 4 consciousness = 8.0 } }
+
+MRT = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+
+	2128 = { add_core = MRT }
+	ai_chance = { factor = 0.2 }
+  }
+  
+  option = {
+    name = EVT_8009400_B
+	2128 = { add_core = MRT }
+	prestige = -50
+	badboy = 2
+	any_pop = { limit = { location = { is_core = MRT }  } militancy = 8 consciousness = 2 }
+	# TODO MRT UDI
+	ai_chance = { factor = 0.1 }
+  }
+  
+}

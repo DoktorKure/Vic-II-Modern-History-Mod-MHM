@@ -1,0 +1,31 @@
+political_decisions = {
+
+# on_actions on_quarterly_pulse a country may if at war call for support 
+# by setting the call_for_support_xxx modifier in own and prospective potential countries
+# If we are a military big_producer we may support them. 
+# call_for_support_xxx shall live 90 days till the next quartely pulse.
+
+	war_support_against_democracy = {
+		picture = "war_support_against_democracy"
+		potential = {
+			is_vassal = no
+			any_neighbor_country = { war = yes NOT = { war_with = THIS } }
+			NOT = { has_country_modifier = call_for_support_against_democracy }
+		}
+
+		allow = {
+			NOT = { war_policy = pacifism }
+			money = 500000
+			election = no
+			any_neighbor_country = { war = yes relation = { who = THIS value = 100 } NOT = { war_with = THIS } is_vassal = no }
+		}
+
+		effect = {
+			add_country_modifier = { name = call_for_support_against_democracy duration = 365 }
+			money = -100000
+			random_country = { limit = { war = yes relation = { who = THIS value = 100 } NOT = { war_with = THIS } is_vassal = no neighbour = THIS } small_arms = 250 money = 25000 }
+		}
+		ai_will_do = { factor = 1 }
+	}
+	
+}

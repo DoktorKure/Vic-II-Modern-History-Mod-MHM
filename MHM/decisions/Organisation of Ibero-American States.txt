@@ -1,0 +1,56 @@
+political_decisions = {
+
+	joinoia = {
+		picture = "oia"
+		potential = {
+			OR = {
+				is_vassal = no
+				overlord = { has_country_modifier = oia_member }
+			}
+			trust_busting = 1
+			NOT = { has_country_modifier = oia_member }
+			OR = { is_culture_group = portuguese_cultures is_culture_group = lusophone_cultures is_culture_group = european_spanish is_culture_group = latin_american_cultures is_culture_group = meso_american_cultures }
+		}
+		allow = {
+			war = no
+			election = no
+			NOT = { OR = { government = theocracy government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+		}
+		effect = {
+			add_country_modifier = { name = oia_member duration = -1 }
+			any_country = { limit = { has_country_modifier = oia_member } relation = { who = THIS value = 25 } }
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	leaveoia = {
+		picture = "oia"
+		potential = {
+			has_country_modifier = oia_member
+			OR = {
+				government = theocracy 
+				government = proletarian_dictatorship 
+				government = proletarian_dictatorship1
+				AND = {
+					is_vassal = yes
+					overlord = { NOT = { has_country_modifier = oia_member } }
+				}
+				NOT = { OR = { is_culture_group = portuguese_cultures is_culture_group = lusophone_cultures is_culture_group = european_spanish is_culture_group = latin_american_cultures is_culture_group = meso_american_cultures } }
+			}
+		}
+		allow = {
+			war = no
+			election = no
+		}
+		alert = no
+		effect = {
+			remove_country_modifier = oia_member
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+}

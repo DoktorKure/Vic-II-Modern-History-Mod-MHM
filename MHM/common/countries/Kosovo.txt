@@ -1,0 +1,172 @@
+graphical_culture = EuropeanGC
+color = { 139 134 130 }
+party = {
+		name = "Kosovo Liberation Army"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Alliance for Future of Kosovo"
+		citizenship_policy = limited_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+
+party = {
+		name = "Democratic League of Kosovo"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Justice Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2006.5.3
+}
+party = {
+		name = "New Kosovo Alliance"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 2006.5.3
+		end_date = 2092.1.1
+}
+party = {
+		name = "Democratic Party of Kosovo"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 2013.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Democratic Party of Kosovo"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2013.1.1
+}
+party = {
+		name = "Vetevendosje"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 2005.6.12
+		end_date = 2092.1.1
+}
+party = {
+		name = "Green Party of Kosovo"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Kosovan Populists"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "party_traditionalist_0_KOS"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "League of Communists of Kosovo"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "League of Communists of Kosovo"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy1
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	transportship = {
+	}
+	modern_frigate = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	cruiser = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	modern_cruiser = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	frigate = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	modern_destroyer = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	destroyer = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+	submarine = {
+		Shqip�ria Sk�nderbeu "Bishti i Palles" "Gjiri i Drinit" "Gjiri i Rondonit" Jube "Kalaja e Turres" "Kepi i Rodonit" Kyrekuq Shengjin Shetaj Velipoje
+	}
+
+}

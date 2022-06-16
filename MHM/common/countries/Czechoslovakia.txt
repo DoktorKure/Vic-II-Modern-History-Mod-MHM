@@ -1,0 +1,286 @@
+graphical_culture = Generic
+color = { 65 105 225 }
+proletarian_dictatorship = { 250 128 114 }
+socialist_democracy = { 250 128 114 }
+party = {
+		name = "Party of National Unity"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1989.12.30
+}
+party = {
+		name = "Republikani"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1989.12.30
+		end_date = 2092.1.1
+}
+party = {
+		name = "Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2100.1.1
+}
+party = {
+		name = "Civic Forum"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1989.11.19
+		end_date = 1992.5.11
+}
+party = {
+		name = "Civic Movement"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1992.4.127
+		end_date = 2092.1.1
+}
+party = {
+		name = "Czechoslovak People's Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1992.1.1
+}
+party = {
+		name = "KDU-CSL"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1992.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Christian Democratic Movement"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1990.2.23
+		end_date = 2092.1.1
+}
+party = {
+		name = "Freedom Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1989.11.19
+}
+party = {
+		name = "Civic Forum"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1989.11.19
+		end_date = 1992.5.11
+}
+party = {
+		name = "Civic Democratic Party"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1992.4.21
+		end_date = 2092.1.1
+}
+party = {
+		name = "Czechoslovak Social Democracy"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1989.12.28
+}
+party = {
+		name = "Czechoslovak Social Democracy"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = socialist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1989.12.28
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Social Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1948.2.25
+}
+party = {
+		name = "Czechoslovak Socialist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1948.2.25
+		end_date = 1989.12.25
+}
+party = {
+		name = "Liberal National Social Party"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1989.12.25
+		end_date = 2092.1.1
+}
+party = {
+		name = "Party of National Unity"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 1989.12.30
+}
+party = {
+		name = "Republikani"
+		citizenship_policy = residency
+		economic_policy = laissez_faire
+		ideology = populist
+		religious_policy = moralism
+		trade_policy = free_trade
+		war_policy = jingoism
+		start_date = 1989.12.30
+		end_date = 2092.1.1
+}
+party = {
+		name = "Koruna Ceska"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "KSC"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 1991.6.1
+}
+party = {
+		name = "Federation of KSCM and SDL"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1991.6.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "KSC - Reformists"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 1991.6.1
+}
+party = {
+		name = "Federation of KSCM and SDL"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1991.6.1
+		end_date = 2092.1.1
+}
+unit_names = {
+	carrier = {
+		"Jan Hus" "Karel IV" "Prokop Velik�" "Anton Bernol�k" "Ludov�t �t�r"
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		"Pra�sk� hrad" Vy�ehrad Zbraslav "Bojnick� z�mok" "Bratislavsky hrad"
+	}
+	cruiser = {
+		Jizera Metuje Morava Hron Bodrog
+	}
+	modern_cruiser = {
+		"Jan Hus" "Karel IV" "Prokop Velik�" "Anton Bernol�k" "Ludov�t �t�r"
+	}
+	frigate = {
+		"Jan Dismas Zelenka" "�imon Brixi" "Franti�ek Tuma" "J�n �imbrack�" "Zachari� Zarewutius"
+	}
+	modern_destroyer = {
+		Praha Brno Ostrava Bratislava Ko�ice
+	}
+	destroyer = {
+		Mile�ovka Lovos Hazmburk Beskydok "Gerlachovsk� �t�t"
+	}
+	submarine = {
+		"Petr Brandl" "V�clav Hollar" "Jan Jahn" "Majster ko�ick�ho olt�ra" "Josef Czauczik"
+	}
+
+}

@@ -1,0 +1,19 @@
+owner = RUS
+controller = RUS
+add_core = RUS
+add_core = SBD
+add_core = KHA
+trade_goods = copper
+life_rating = 15
+terrain = tundra_hills
+railroad = 1
+colonial = 0
+1992.1.1 = {
+owner = RUS
+controller = RUS
+add_core = RUS
+add_core = KHA
+add_core = SBD
+life_rating = 15
+colonial = 0
+}

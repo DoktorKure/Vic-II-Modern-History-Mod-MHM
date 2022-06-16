@@ -1,0 +1,155 @@
+graphical_culture = AsianGC
+color = { 72 61 139 }
+sar_government = { 255 140 0 }
+
+party = {
+		name = "Tibetan National Congress"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "People's Party of Tibet (Center)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = big_tent
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "National Democratic Party of Tibet"
+		citizenship_policy = limited_citizenship
+		economic_policy = interventionism
+		ideology = conservative
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "People's Party of Tibet"
+		citizenship_policy = full_citizenship
+		economic_policy = laissez_faire
+		ideology = liberal
+		religious_policy = secularized
+		trade_policy = free_trade
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Social Democratic Party of Tibet" #Fictional
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = socialist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Tibet Improvement Party (Left)"
+		citizenship_policy = full_citizenship
+		economic_policy = interventionism
+		ideology = progressive
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Tibetan National Congress (P)"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Tibet Improvement Party"
+		citizenship_policy = limited_citizenship
+		economic_policy = state_capitalism
+		ideology = populist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Kashag"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = traditionalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Tibetan Communist Party"
+		citizenship_policy = full_citizenship
+		economic_policy = planned_economy
+		ideology = communist
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pacifism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+party = {
+		name = "Tibetan Communist Party (R)"
+		citizenship_policy = full_citizenship
+		economic_policy = state_capitalism
+		ideology = communist_social
+		religious_policy = pro_atheism
+		trade_policy = protectionism
+		war_policy = pro_military
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
+
+unit_names = {
+	carrier = {
+		Barkam Dartsendo Gyantse Gartse Lhasa Lhotse Makalu Nagqu Nyingchi Nedong Pelbar Qamdo Shigatse Sakya Tinggri
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Barkam Dartsendo Gyantse Gartse Lhasa Lhotse Makalu Nagqu Nyingchi Nedong Pelbar Qamdo Shigatse Sakya Tinggri
+	}
+	cruiser = {
+		Barkam Dartsendo Gyantse Gartse Lhasa Lhotse Makalu Nagqu Nyingchi Nedong Pelbar Qamdo Shigatse Sakya Tinggri
+	}
+	modern_cruiser = {
+		Barkam Dartsendo Gyantse Gartse Lhasa Lhotse Makalu Nagqu Nyingchi Nedong Pelbar Qamdo Shigatse Sakya Tinggri
+	}
+	frigate = {
+		Barkam Dartsendo Gyantse Gartse Lhasa Lhotse Makalu Nagqu Nyingchi Nedong Pelbar Qamdo Shigatse Sakya Tinggri
+	}
+	modern_destroyer = {
+		Barkam Dartsendo Gyantse Gartse Lhasa Lhotse Makalu Nagqu Nyingchi Nedong Pelbar Qamdo Shigatse Sakya Tinggri
+	}
+	destroyer = {
+		Barkam Dartsendo Gyantse Gartse Lhasa Lhotse Makalu Nagqu Nyingchi Nedong Pelbar Qamdo Shigatse Sakya Tinggri
+	}
+	submarine = {
+		Barkam Dartsendo Gyantse Gartse Lhasa Lhotse Makalu Nagqu Nyingchi Nedong Pelbar Qamdo Shigatse Sakya Tinggri
+	}
+
+}

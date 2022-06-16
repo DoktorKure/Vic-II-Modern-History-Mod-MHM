@@ -1,0 +1,24 @@
+owner = ETS
+controller = ETS
+add_core = ETS
+add_core = XIJ
+add_core =  CHI
+add_core =  KMT
+trade_goods = petroleum
+life_rating = 35
+terrain = desert_hills
+colonial = 0
+
+1950.1.1 = {
+owner = CHI
+controller = CHI
+}
+
+1992.1.1 = {
+owner = CHI
+controller = CHI
+add_core = ETS
+add_core =  CHI
+life_rating = 35
+colonial = 0
+}

@@ -1,0 +1,488 @@
+#Tunis - Tunis (2153000/538250 POPS)
+1725 = {
+	soldiers = {
+		culture = tunisian
+		religion =  sunni 
+		size = 3579
+	 }
+	soldiers = {
+		culture = arab
+		religion =  sunni 
+		size = 188
+	 }	 
+	aristocrats = {
+		culture = tunisian
+		religion =  sunni 
+		size = 20454
+	 }
+	aristocrats = {
+		culture = arab
+		religion =  sunni 
+		size = 1076
+	 }	 
+	bureaucrats = {
+		culture = tunisian
+		religion =  sunni 
+		size = 1022
+	 }
+	bureaucrats = {
+		culture = arab
+		religion =  sunni 
+		size = 54
+	 }	 
+	capitalists = {
+		culture = tunisian
+		religion =  sunni 
+		size = 2556
+	 }
+	capitalists = {
+		culture = arab
+		religion =  sunni 
+		size = 135
+	 }	 
+	clergymen = {
+		culture = tunisian
+		religion =  sunni 
+		size = 5113
+	 }
+	clergymen = {
+		culture = arab
+		religion =  sunni 
+		size = 239
+	 }	 
+	clerks = {
+		culture = tunisian
+		religion =  sunni 
+		size = 12675
+	 }
+	clerks = {
+		culture = arab
+		religion =  sunni 
+		size = 668
+	 }	 
+	artisans = {
+		culture = tunisian
+		religion =  sunni 
+		size = 12041
+	 }
+	artisans = {
+		culture = arab
+		religion =  sunni 
+		size = 634
+	 }	 
+	craftsmen = {
+		culture = tunisian
+		religion =  sunni 
+		size = 38661
+	 }
+	craftsmen = {
+		culture = arab
+		religion =  sunni 
+		size = 2035
+	 }	 
+	farmers = {
+		culture = tunisian
+		religion =  sunni 
+		size = 393888
+	 }
+	farmers = {
+		culture = arab
+		religion =  sunni 
+		size = 20371
+	 }	 
+	farmers = {
+		culture = french
+		religion =  catholic 
+		size = 20022
+	 } 
+	farmers = {
+		culture = french
+		religion = secularism
+		size = 1507
+	 } 
+}
+#Bizerte - Bizerte (1323000/330750 POPS)
+1726 = {
+	soldiers = {
+		culture = tunisian
+		religion =  sunni 
+		size = 2198
+	 }
+	soldiers = {
+		culture = arab
+		religion =  sunni 
+		size = 116
+	 }	 
+	aristocrats = {
+		culture = tunisian
+		religion =  sunni 
+		size = 12569
+	 }
+	aristocrats = {
+		culture = arab
+		religion =  sunni 
+		size = 661
+	 }	 
+	capitalists = {
+		culture = tunisian
+		religion =  sunni 
+		size = 1570
+	 }
+	capitalists = {
+		culture = arab
+		religion =  sunni 
+		size = 83
+	 }	 
+	clergymen = {
+		culture = tunisian
+		religion =  sunni 
+		size = 3142
+	 }
+	clergymen = {
+		culture = arab
+		religion =  sunni 
+		size = 165
+	 }	 
+	clerks = {
+		culture = tunisian
+		religion =  sunni 
+		size = 7789
+	 }
+	clerks = {
+		culture = arab
+		religion =  sunni 
+		size = 410
+	 }	 
+	artisans = {
+		culture = tunisian
+		religion =  sunni 
+		size = 7340
+	 }
+	artisans = {
+		culture = arab
+		religion =  sunni 
+		size = 389
+	 }	 
+	craftsmen = {
+		culture = tunisian
+		religion =  sunni 
+		size = 23756
+	 }
+	craftsmen = {
+		culture = arab
+		religion =  sunni 
+		size = 1250
+	 }	 
+	farmers = {
+		culture = tunisian
+		religion =  sunni 
+		size = 242044
+	 }
+	farmers = {
+		culture = arab
+		religion =  sunni 
+		size = 12379
+	 }	 
+	farmers = {
+		culture = berber
+		religion =  sunni 
+		size = 13230
+	 } 
+}
+#Gafsa - Gafsa (1925000/481250 POPS)
+1727 = {
+	soldiers = {
+		culture = tunisian
+		religion =  sunni 
+		size = 3200
+	 }
+	soldiers = {
+		culture = arab
+		religion =  sunni 
+		size = 168
+	 }	 
+	aristocrats = {
+		culture = tunisian
+		religion =  sunni 
+		size = 18288
+	 }
+	aristocrats = {
+		culture = arab
+		religion =  sunni 
+		size = 962
+	 }	 
+	capitalists = {
+		culture = tunisian
+		religion =  sunni 
+		size = 2286
+	 }
+	capitalists = {
+		culture = arab
+		religion =  sunni 
+		size = 120
+	 }	 
+	clergymen = {
+		culture = tunisian
+		religion =  sunni 
+		size = 4571
+	 }
+	clergymen = {
+		culture = arab
+		religion =  sunni 
+		size = 241
+	 }	 
+	clerks = {
+		culture = tunisian
+		religion =  sunni 
+		size = 11334
+	 }
+	clerks = {
+		culture = arab
+		religion =  sunni 
+		size = 596
+	 }	 
+	artisans = {
+		culture = tunisian
+		religion =  sunni 
+		size = 10766
+	 }
+	artisans = {
+		culture = arab
+		religion =  sunni 
+		size = 567
+	 }	 
+	craftsmen = {
+		culture = tunisian
+		religion =  sunni 
+		size = 34567
+	 }
+	craftsmen = {
+		culture = arab
+		religion =  sunni 
+		size = 1819
+	 }	 
+	farmers = {
+		culture = tunisian
+		religion =  sunni 
+		size = 370463
+	 }
+	farmers = {
+		culture = arab
+		religion =  sunni 
+		size = 19498
+	 }	 
+}
+#Kairouan - Kairouan (1846000/461500 POPS)
+1728 = {
+	soldiers = {
+		culture = tunisian
+		religion =  sunni 
+		size = 3068
+	 }
+	soldiers = {
+		culture = arab
+		religion =  sunni 
+		size = 161
+	 }	 
+	aristocrats = {
+		culture = tunisian
+		religion =  sunni 
+		size = 17537
+	 }
+	aristocrats = {
+		culture = arab
+		religion =  sunni 
+		size = 923
+	 }	 
+	capitalists = {
+		culture = tunisian
+		religion =  sunni 
+		size = 2192
+	 }
+	capitalists = {
+		culture = arab
+		religion =  sunni 
+		size = 115
+	 }	 
+	clergymen = {
+		culture = tunisian
+		religion =  sunni 
+		size = 4384
+	 }
+	clergymen = {
+		culture = arab
+		religion =  sunni 
+		size = 231
+	 }	 
+	clerks = {
+		culture = tunisian
+		religion =  sunni 
+		size = 10868
+	 }
+	clerks = {
+		culture = arab
+		religion =  sunni 
+		size = 572
+	 }	 
+	artisans = {
+		culture = tunisian
+		religion =  sunni 
+		size = 10325
+	 }
+	artisans = {
+		culture = arab
+		religion =  sunni 
+		size = 543
+	 }	 
+	craftsmen = {
+		culture = tunisian
+		religion =  sunni 
+		size = 33148
+	 }
+	craftsmen = {
+		culture = arab
+		religion =  sunni 
+		size = 1745
+	 }	 
+	farmers = {
+		culture = tunisian
+		religion =  sunni 
+		size = 355260
+	 }
+	farmers = {
+		culture = arab
+		religion =  sunni 
+		size = 18698
+	 }	 
+}
+#Tozeur - Tozeur (316000/79000 POPS)
+1729 = {
+	aristocrats = {
+		culture = tunisian
+		religion =  sunni 
+		size = 3002
+	 }
+	aristocrats = {
+		culture = arab
+		religion =  sunni 
+		size = 158
+	 }	 
+	clerks = {
+		culture = tunisian
+		religion =  sunni 
+		size = 1860
+	 }
+	clerks = {
+		culture = arab
+		religion =  sunni 
+		size = 98
+	 }	 
+	artisans = {
+		culture = tunisian
+		religion =  sunni 
+		size = 1767
+	 }
+	artisans = {
+		culture = arab
+		religion =  sunni 
+		size = 93
+	 }	 
+	craftsmen = {
+		culture = tunisian
+		religion =  sunni 
+		size = 5674
+	 }
+	craftsmen = {
+		culture = arab
+		religion =  sunni 
+		size = 299
+	 }	 
+	farmers = {
+		culture = tunisian
+		religion =  sunni 
+		size = 60815
+	 }
+	farmers = {
+		culture = arab
+		religion =  sunni 
+		size = 3201
+	 }	 
+}
+#Gabes - Gabes (640000/160000 POPS)
+1730 = {
+	soldiers = {
+		culture = tunisian
+		religion =  sunni 
+		size = 1063
+	 }
+	soldiers = {
+		culture = arab
+		religion =  sunni 
+		size = 56
+	 }	 
+	aristocrats = {
+		culture = tunisian
+		religion =  sunni 
+		size = 6080
+	 }
+	aristocrats = {
+		culture = arab
+		religion =  sunni 
+		size = 320
+	 }	 
+	clergymen = {
+		culture = tunisian
+		religion =  sunni 
+		size = 1520
+	 }
+	clergymen = {
+		culture = arab
+		religion =  sunni 
+		size = 80
+	 }	 
+	clerks = {
+		culture = tunisian
+		religion =  sunni 
+		size = 3768
+	 }
+	clerks = {
+		culture = arab
+		religion =  sunni 
+		size = 198
+	 }	 
+	artisans = {
+		culture = tunisian
+		religion =  sunni 
+		size = 3580
+	 }
+	artisans = {
+		culture = arab
+		religion =  sunni 
+		size = 188
+	 }	 
+	craftsmen = {
+		culture = tunisian
+		religion =  sunni 
+		size = 11492
+	 }
+	craftsmen = {
+		culture = arab
+		religion =  sunni 
+		size = 605
+	 }	 
+	farmers = {
+		culture = tunisian
+		religion =  sunni 
+		size = 117088
+	 }
+	farmers = {
+		culture = arab
+		religion =  sunni 
+		size = 6163
+	 }	 
+	farmers = {
+		culture = berber
+		religion =  sunni 
+		size = 6400
+	 } 
+}

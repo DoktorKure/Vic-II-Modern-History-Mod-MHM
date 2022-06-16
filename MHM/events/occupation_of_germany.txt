@@ -1,0 +1,1382 @@
+#Founding of the FRG
+country_event = {
+  id = 8204004
+  title = "Foundation of the Federal Republic"
+  desc = EVT_8204100_DESC
+  picture = "founding_treaty"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = GER
+		year = 1947 
+		NOT = { year = 1963 }
+		
+		government = democracy
+	}
+
+	option = {
+		name = "This is a new dawn for Germany!"
+		prestige = 100
+		relation = { who = USA value = 100 }
+		relation = { who = ENG value = 100 }
+		relation = { who = NET value = 100 }
+		relation = { who = BEL value = 100 }
+		any_pop = { 
+			ideology = { factor = 0.25 value = conservative }
+			militancy = -5 
+			consciousness = 2 
+		}
+	}
+}
+
+#Foundation of the GDR
+country_event = {
+  id = 8204005
+  title = "The German Democratic Republic"
+  desc = "EVT_8204005_DESC"
+  picture = "gdr_foundation"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = DDR
+		year = 1947 
+		NOT = { year = 1963 }
+		
+		OR = { government = proletarian_dictatorship government = socialist_democracy }
+	}
+
+	option = {
+		name = "This is a new dawn for Germany!"
+		prestige = 100
+		relation = { who = RUS value = 100 }
+		any_pop = { militancy = -5 consciousness = 1 }
+	}
+}
+
+#Decide the Future of Germany - USA (Revise Potsdam)
+country_event = {
+  id = 82040100
+  title = "$COUNTRY_ADJ$ Policy on the Occupation of Germany"
+  desc = EVT_8204010_DESC
+  picture = "nwo2_allied_occupation_of_germany2"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 1947 
+		NOT = { year = 1990 }
+		
+		any_owned_province = { is_core = GER }
+		NOT = { exists = GER }
+		
+		has_country_flag = occupation_zones_in_germany
+	}
+
+	mean_time_to_happen = { 
+		months = 8 
+		modifier = { factor = 0.1 year = 1948 } 
+	}
+
+	immediate = { set_country_flag = policy_on_germany }
+
+	# UK - seeks to keep Soviet influence out of Germany
+	# FRA - seeks to detach the Saarland and the Rhineland from Germany as well as establish an international zone in the Ruhr to prevent further humiliation
+	# SOV - seeks a neutral united Germany although is firmly opposed to a continued US presence in Germany
+	# POL - seeks to preserve its current borders around the Oder Neisse line and perhaps expand them
+
+	option = {
+		name = EVT_8204185_A
+		set_country_flag = no_partition_of_west_germany
+		relation = { who = POL value = -25 }
+		relation = { who = RUS value = -20 } 
+		relation = { who = ENG value = 25 } 
+		relation = { who = FRA value = -25 } # The US stays committed to a fully united Germany, displeasing France, the USSR and Poland.
+		any_pop = { limit = { culture = german } consciousness = -3 militancy = -3 }
+		ai_chance = { factor = 0.9 }
+	}
+	option = {
+		name = EVT_8204185_D
+		prestige = -100
+		set_country_flag = partition_of_west_germany
+		relation = { who = POL value = 15 }
+		relation = { who = RUS value = 10 }
+		relation = { who = ENG value = 25 } 
+		relation = { who = FRA value = 50 } # The US supports a complete partition of Germany, pleasing the USSR, France, the UK and Poland while angering German nationalists
+		any_pop = { limit = { culture = german } consciousness = 3 militancy = 3 }
+		any_pop = { limit = { culture = german } ideology = { factor = 0.25 value = communist } }
+
+		564 = { secede_province = ENG } 
+		565 = { secede_province = ENG } 
+		566 = { secede_province = ENG } 
+		567 = { secede_province = ENG } 
+		568 = { secede_province = ENG } 
+		2560 = { secede_province = ENG } 
+
+		#International City of Berlin
+		release_vassal = ICB
+
+		ICB = { 
+			government = sar_government 
+			country_event = 800054 
+			ruling_party_ideology = conservative 
+		}
+		
+		diplomatic_influence = { who = ICB value = 200 }
+
+		#Form SGF
+		539 = { secede_province = ENG }
+
+		any_owned = { 
+			limit = { is_core = GER } 
+			add_core = SGF 
+			secede_province = SGF 
+		}
+		SGF = { 
+			civilized = yes 
+			government = democracy 
+			country_event = 800054 
+			ruling_party_ideology = conservative 
+		}
+		
+		diplomatic_influence = { who = SGF value = 200 }
+
+		SGF = { capital = 595 }
+
+		586 = { add_core = SGF }
+		587 = { add_core = SGF }
+		588 = { add_core = SGF }
+		591 = { add_core = SGF }
+		594 = { add_core = SGF }
+		593 = { add_core = SGF }
+
+		ai_chance = { factor = 0.1 }
+	}	
+}
+
+#Decide the Future of Germany - ENG
+country_event = {
+  id = 82040101
+  title = "$COUNTRY_ADJ$ Policy on the Occupation of Germany"
+  desc = EVT_8204010_DESC
+  picture = "nwo2_allied_occupation_of_germany2"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = ENG
+		year = 1946 
+		NOT = { year = 1990 }
+		
+		any_owned_province = { is_core = GER }
+		NOT = { exists = GER }
+		has_country_flag = occupation_zones_in_germany
+		USA = { has_country_flag = policy_on_germany }
+	}
+
+	immediate = { set_country_flag = policy_on_germany }
+
+	mean_time_to_happen = { months = 1 }
+
+	# UK - seeks to keep Soviet influence out of Germany
+	# FRA - seeks to detach the Saarland and the Rhineland from Germany as well as establish an international zone in the Ruhr to prevent further humiliation
+	# SOV - seeks a neutral united Germany although is firmly opposed to a continued US presence in Germany
+	# POL - seeks to preserve its current borders around the Oder Neisse line and perhaps expand them
+
+	option = {
+		name = EVT_8204185_A
+		set_country_flag = no_partition_of_west_germany
+		relation = { who = POL value = -25 }
+		relation = { who = RUS value = -20 } 
+		relation = { who = USA value = 50 } 
+		relation = { who = FRA value = -50 } 
+		any_pop = { limit = { culture = german } consciousness = -3 militancy = -3 }
+		ai_chance = { factor = 0.8 }
+	}
+	option = {
+		name = EVT_8204185_D
+		set_country_flag = partition_of_west_germany
+		relation = { who = POL value = 15 }
+		relation = { who = RUS value = 10 }
+		relation = { who = USA value = -50 } 
+		relation = { who = FRA value = 50 } 
+		any_pop = { limit = { culture = german } consciousness = 3 militancy = 3 }
+		any_pop = { limit = { culture = german } ideology = { factor = 0.25 value = communist } }
+
+		#Form the NGF
+		any_owned = { 
+			limit = { 
+				is_core = GER 
+				NOT = { is_core = AUS } 
+				NOT = { is_core = ROA } 
+			} 
+			add_core = NGF 
+			secede_province = NGF 
+		}
+		NGF = { 
+			civilized = yes 
+			government = democracy 
+			country_event = 800054
+			ruling_party_ideology = conservative
+		}
+		
+		diplomatic_influence = { who = NGF value = 200 }
+
+		570 = { add_core = NGF }
+		573 = { add_core = NGF }
+		574 = { add_core = NGF }
+		571 = { add_core = NGF }
+		575 = { add_core = NGF }
+		576 = { add_core = NGF }
+		577 = { add_core = NGF }
+		572 = { add_core = NGF }
+
+		ai_chance = { 
+			factor = 0.1 
+			
+			#UK follows the US
+			modifier = { 
+				factor = 0 
+				USA = { has_country_flag = no_partition_of_west_germany } 
+			} 
+		}
+	}	
+	option = {
+		name = "Release a North German state with a restored Hanover"
+		set_country_flag = partition_of_west_germany
+		prestige = -100
+		relation = { who = POL value = 15 }
+		relation = { who = RUS value = 10 }
+		relation = { who = USA value = -50 } 
+		relation = { who = FRA value = 50 } 
+		any_pop = { limit = { culture = german } consciousness = 3 militancy = 3 }
+		any_pop = { limit = { culture = german } ideology = { factor = 0.25 value = communist } }
+
+		#Release Hanover
+
+		534 = { add_core = HAN secede_province = HAN } 
+		535 = { add_core = HAN secede_province = HAN } 
+		536 = { add_core = HAN secede_province = HAN } 
+		537 = { add_core = HAN secede_province = HAN } 
+
+		create_vassal = HAN
+
+		HAN = { 
+			civilized = yes 
+			government = hms_government 
+			country_event = 800054 
+			ruling_party_ideology = conservative
+		}
+
+		diplomatic_influence = { who = HAN value = 200 }
+
+		#Release the NGF
+
+		any_owned = { 
+			limit = { is_core = GER } 
+			add_core = NGF 
+			secede_province = NGF 
+		}
+		
+		NGF = { 
+			civilized = yes 
+			government = democracy 
+			country_event = 800054 
+			ruling_party_ideology = conservative
+		}
+		
+		diplomatic_influence = { who = NGF value = 200 }
+
+		570 = { add_core = NGF }
+		573 = { add_core = NGF }
+		574 = { add_core = NGF }
+		571 = { add_core = NGF }
+		575 = { add_core = NGF }
+		576 = { add_core = NGF }
+		577 = { add_core = NGF }
+		572 = { add_core = NGF }
+
+		ai_chance = { 
+			factor = 0.1 
+			
+			#UK follows the US
+			modifier = { 
+				factor = 0 
+				USA = { has_country_flag = no_partition_of_west_germany } 
+			} 
+		}
+	}
+}
+
+#Decide the Future of Germany - FRA
+country_event = {
+  id = 82040102
+  title = "$COUNTRY_ADJ$ Policy on the Occupation of Germany"
+  desc = EVT_8204010_DESC
+  picture = "nwo2_allied_occupation_of_germany2"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = FRA
+		year = 1946 
+		NOT = { year = 1990 }
+		
+		any_owned_province = { is_core = GER }
+		NOT = { exists = GER }
+		has_country_flag = occupation_zones_in_germany
+		ENG = { has_country_flag = policy_on_germany }
+	}
+
+	immediate = { set_country_flag = policy_on_germany }
+
+	mean_time_to_happen = { months = 1 }
+
+	# UK - seeks to keep Soviet influence out of Germany
+	# FRA - seeks to detach the Saarland and the Rhineland from Germany as well as establish an international zone in the Ruhr to prevent further humiliation
+	# SOV - seeks a neutral united Germany although is firmly opposed to a continued US presence in Germany
+	# POL - seeks to preserve its current borders around the Oder Neisse line and perhaps expand them
+
+	option = {
+		name = EVT_8204185_A
+		set_country_flag = no_partition_of_west_germany
+		relation = { who = POL value = -25 }
+		relation = { who = RUS value = -20 } 
+		relation = { who = USA value = 50 } 
+		relation = { who = ENG value = 50 } 
+		any_pop = { limit = { culture = german } consciousness = -3 militancy = -3 }
+
+		#Release all cores to North Germany
+		random_owned = { 
+			limit = { owner = { exists = NGF } } 
+			owner = { 
+				any_owned = { 
+					limit = { is_core = GER } 
+					add_core = NGF 
+					secede_province = NGF 
+				} 
+			} 
+		}
+
+		ai_chance = { factor = 0.05 }
+	}
+	option = {
+		name = EVT_8204185_B
+		prestige = -25
+		set_country_flag = saar_option
+		relation = { who = POL value = -25 }
+		relation = { who = RUS value = -15 } 
+		relation = { who = USA value = 25 } 
+		relation = { who = ENG value = 25 }  
+		any_pop = { limit = { culture = german } consciousness = 0.5 militancy = 0.5 }
+
+		#Release all cores to South Germany
+		random_owned = { limit = { owner = { exists = SGF } } owner = { any_owned = { limit = { is_core = SGF } secede_province = SGF } } }
+
+		#Release all cores to North Germany
+		random_owned = { limit = { owner = { exists = NGF } } owner = { any_owned = { limit = { is_core = GER } add_core = NGF secede_province = NGF } } }
+
+		ai_chance = { factor = 0.8 }
+	}
+	option = {
+		name = EVT_8204185_C
+		set_country_flag = rhineland_option
+		prestige = -100
+		badboy = 5
+		relation = { who = POL value = 10 }
+		relation = { who = RUS value = -10 }
+		relation = { who = USA value = -50 } 
+		relation = { who = ENG value = -50 } 
+		any_pop = { limit = { culture = german } consciousness = 2 militancy = 2 }
+		any_pop = { limit = { culture = german } ideology = { factor = 0.15 value = communist } }
+
+		#Release Rhineland
+		570 = { add_core = RHL }
+		573 = { add_core = RHL }
+		574 = { add_core = RHL }
+		571 = { add_core = RHL }
+		575 = { add_core = RHL }
+		576 = { add_core = RHL }
+		577 = { add_core = RHL }
+		572 = { add_core = RHL }
+
+		any_owned = { 
+			limit = { 
+				is_core = RHL 
+				NOT = { is_core = SAL } 
+			} 
+			secede_province = RHL 
+		}
+
+		create_vassal = RHL
+		
+		RHL = { 
+			civilized = yes 
+			government = mandate_government 
+			country_event = 800054 
+			ruling_party_ideology = conservative
+		}
+		
+		diplomatic_influence = { who = RHL value = 200 }
+
+		ENG = { 
+			any_owned = { 
+				limit = { 
+					is_core = RHL 
+					NOT = { is_core = SAL } 
+				} 
+				secede_province = RHL 
+			}
+		}
+		
+		NGF = { 
+			any_owned = { 
+				limit = { 
+					is_core = RHL 
+					NOT = { is_core = SAL } 
+				} 
+				secede_province = RHL 
+			}
+		}
+
+		random_country = { limit = { tag = NGF exists = yes } FRA = { 579 = { secede_province = NGF } } }
+
+		random_country = { limit = { tag = ENG NGF = { exists = no } } FRA = { 579 = { secede_province = ENG } } }
+
+		random_country = { limit = { tag = SGF exists = no } FRA = { any_owned = { limit = { is_core = GER } secede_province = USA } } }
+
+		random_country = { limit = { tag = SGF exists = yes } FRA = { any_owned = { limit = { is_core = GER } add_core = SGF secede_province = SGF } } }
+
+		ai_chance = { factor = 0.15 }
+	}	
+}
+
+#Decide the Future of Germany - RUS
+country_event = {
+  id = 82040103
+  title = "$COUNTRY_ADJ$ Policy on the Occupation of Germany"
+  desc = EVT_8204010_DESC
+  picture = "nwo2_allied_occupation_of_germany2"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = RUS
+		year = 1946 
+		NOT = { year = 1990 }
+		
+		any_owned_province = { is_core = GER }
+		NOT = { exists = GER }
+		has_country_flag = occupation_zones_in_germany
+		FRA = { has_country_flag = policy_on_germany }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	immediate = { set_country_flag = policy_on_germany }
+
+	# UK - seeks to keep Soviet influence out of Germany
+	# FRA - seeks to detach the Saarland and the Rhineland from Germany as well as establish an international zone in the Ruhr to prevent further humiliation
+	# SOV - seeks a neutral united Germany although is firmly opposed to a continued US presence in Germany
+	# POL - seeks to preserve its current borders around the Oder Neisse line and perhaps expand them
+
+	option = {
+		name = EVT_8204185_A
+
+		set_country_flag = no_partition_of_west_germany
+
+		prestige = -100
+		badboy = -5
+		relation = { who = POL value = -25 }
+		relation = { who = USA value = 50 } 
+		relation = { who = ENG value = 25 } 
+		relation = { who = FRA value = -25 } 	 
+
+		any_pop = { limit = { culture = german } consciousness = -3 militancy = -3 }
+
+		#NGF inherits Berlin
+		random_owned = { 
+			limit = { owner = { exists = NGF } }
+			owner = { NGF = { inherit = ICB } }
+		}
+		
+		#GER inherits Berlin
+		random_owned = { 
+			limit = { owner = { exists = GER } }
+			owner = { GER = { inherit = ICB } }
+		}
+
+		USA = { 
+
+			random_owned = { 
+				limit = { owner = { owns = 549 NGF = { exists = yes } } } 
+				owner = { 549 = { secede_province = NGF } }
+			}
+
+			random_owned = { 
+				limit = { owner = { owns = 549 GER = { exists = yes } } } 
+				owner = { 549 = { secede_province = GER } }
+			}
+
+		}
+
+		#Release all cores to Germany
+		random_owned = { limit = { owner = { exists = GER } } owner = { any_owned = { limit = { is_core = GER } secede_province = GER } 549 = { secede_province = GER } } }
+
+		#Release all cores to North Germany
+		random_owned = { limit = { owner = { exists = NGF } } owner = { any_owned = { limit = { is_core = GER } secede_province = NGF } 549 = { secede_province = NGF } } }
+
+		ai_chance = { factor = 0.05 }
+	}
+	option = {
+		name = EVT_8204185_D
+		relation = { who = POL value = 15 }
+		relation = { who = USA value = -50 }
+		relation = { who = ENG value = -25 } 
+		relation = { who = FRA value = 50 } 	  
+
+		any_pop = { limit = { culture = german } consciousness = 3 militancy = 3 }
+
+		any_pop = { limit = { culture = german } ideology = { factor = 0.25 value = communist } }
+
+		#Release all cores to East Germany if North Germany exists
+		random_owned = { 
+			limit = { owner = { exists = NGF } } 
+			owner = { 
+				any_owned = { limit = { is_core = GER } secede_province = DDR } 
+				RUS = { create_vassal = DDR }
+				RUS = { diplomatic_influence = { who = DDR value = 200 } }
+				DDR = { 
+					government = proletarian_dictatorship 
+					country_event = 800052 
+					ruling_party_ideology = communist 
+				} 
+			} 
+		}
+
+		ai_chance = { factor = 0.95 }
+	}	
+}
+
+#German Occupation Economic Policy 
+country_event = {
+  id = 8204020
+  title = "Economic Policy of Occupied Germany"
+  desc = EVT_8204021_DESC
+  picture = "nwo2_soviet_occupation_of_germany"
+  
+	trigger = {
+		OR = { tag = USA tag = ENG tag = FRA tag = RUS }
+		year = 1946 NOT = { year = 1963 }
+		NOT = { exists = DDR }
+		NOT = { exists = GER }
+		any_owned_province = { is_core = GER }
+		NOT = { has_country_flag = decide_german_economy_morgenthau }
+		NOT = { has_country_flag = decide_german_economy_monnet }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "We will allow some reconstruction in Germany"
+		any_pop = { limit = { culture = german } militancy = 2.5 }
+	
+		any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_monnet_plan duration = -1 } }
+
+		set_country_flag = decide_german_economy_monnet
+
+		ai_chance = { factor = 0.8 modifier = { factor = 0 tag = RUS } modifier = { factor = 0 tag = FRA } }
+
+	}
+
+	option = {
+		name = "Keep Germany poor and weak"
+		any_pop = { limit = { culture = german } consciousness = 2 }
+
+		any_owned = { limit = { is_core = GER } add_province_modifier = { name = province_morgenthau_plan duration = -1 } }
+
+		set_country_flag = decide_german_economy_morgenthau
+
+		ai_chance = { factor = 0.2 modifier = { factor = 1 tag = RUS } modifier = { factor = 1 tag = FRA } }
+	}
+  
+}
+
+#Formation of the Soviet Occupation Zone
+country_event = {
+  id = 8204021
+  title = "Form the German Economic Commission"
+  desc = EVTDESC8204021
+  picture = "nwo2_soviet_occupation_of_germany"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = RUS
+		year = 1948 
+		NOT = { year = 1955 }
+		
+		government = proletarian_dictatorship
+		
+		DDR = { exists = no }
+		
+		owns = 551
+		has_country_flag = occupation_zones_in_germany
+		has_country_flag = policy_on_germany
+    	NOT = { has_country_flag = no_partition_of_west_germany }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Create the beginnings of an East German state"
+		prestige = 50
+		relation = { who = USA value = -50 }
+		any_owned = { limit = { is_core = DDR } secede_province = OG1 }
+		create_vassal = OG1
+		OG1 = { 
+			civilized = yes 
+			government = mandate_government 
+			country_event = 800054 
+			ruling_party_ideology = communist
+			
+			primary_culture = german 
+			
+			any_pop = { 
+				limit = { strata = poor }
+				ideology = { factor = 0.25 value = communist } 
+				consciousness = 10
+			} 
+		}
+		diplomatic_influence = { who = OG1 value = 200 }
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Continue to occupy Germany as supreme ruler"
+		prestige = -50
+		relation = { who = USA value = -100 }
+		badboy = 5
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Form the international authority for the Ruhr
+country_event = {
+  id = 8204030
+  title = "EVT_8204030_NAME"
+  desc = "EVT_8204030_DESC"
+  picture = "nwo2_occupation_zones_in_germany"
+  is_triggered_only = yes # GER
+
+	option = {
+		name = "EVT_8204030_A"
+		
+		#Release the Ruhr
+		any_owned = { 
+			limit = { OR = { province_id = 577 province_id = 578 province_id = 580 } }
+			secede_province = IAR
+		}
+		FRA = { 
+			create_vassal = IAR 
+			diplomatic_influence = { who = IAR value = 200 } 
+		}
+		IAR = { 
+			government = sar_government 
+			country_event = 800054 
+			ruling_party_ideology = conservative
+			any_owned = { add_province_modifier = { name = blood_and_iron_mine duration = 730 } }
+		}
+	}
+}
+
+#Return of the Saar protectorate to Germany - FRA
+country_event = {
+  id = 8204037
+  title = "Return Saarland to Germany?"
+  desc = "EVT_8204037_DESC"
+  picture = "nwo2_saar_protectorate"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		year = 1957
+		NOT = { year = 1990 }
+		
+		government = democracy
+		is_vassal = no
+		
+		GER = {
+			war = no
+			OR = { is_vassal = no vassal_of = USA }
+			government = democracy
+			exists = yes
+		}
+		
+		is_our_vassal = SAL
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Return the Saarland to its rightful owners"
+		prestige = 50
+		relation = { who = GER value = 200 }
+		
+		#GER annexes Saarland
+		GER = { country_event = 8204038 } 
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Grant Saarland independence instead"
+		badboy = 3
+		
+		release_vassal = SAL
+		
+		SAL = {
+			government = democracy
+			country_event = 800054
+		}
+		
+		relation = { who = GER value = -100 }
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+	option = {
+		name = "We like to keep it"
+		prestige = -50
+		badboy = 5
+		
+		relation = { who = GER value = -200 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Return of the Saar protectorate to Germany - GER
+country_event = {
+  id = 8204038
+  title = "The Return of Saarland"
+  desc = "EVT_8204037_DESC"
+  picture = "nwo2_saar_protectorate"
+  is_triggered_only = yes # GER
+
+	option = {
+		name = "We are one step closer to restoring Germany's borders"
+		prestige = 100
+		inherit = SAL 
+		any_pop = { militancy = -5 consciousness = 3 }
+	}
+}
+
+#The Currency Crisis 1948
+country_event = {
+  id = 8204040
+  title = "The German Currency Crisis"
+  desc = EVTDESC8204040
+  picture = "nwo2_deutsche_mark"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 1948 
+		NOT = { year = 1990 }
+		
+		war = no
+		
+		#Cold War
+		has_global_flag = blocsenabled
+		
+		#Marshall plan
+		has_global_flag = marshall_plan_enacted
+		
+		#USA has formed Occupation Zone
+		OR = { is_our_vassal = OG4 is_our_vassal = GER }
+		
+		#Russia has formed Occupation Zone
+		RUS = { 
+			OR = { owns = 551 is_our_vassal = OG1 is_our_vassal = DDR } 
+		}
+		
+		#Berlin is in the western zone
+		549 = { owned_by = OG4 }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Push through the Deutsche Mark"
+		relation = { who = RUS value = -50 }
+		relation = { who = ENG value = 50 }
+		
+		money = 200000
+		
+		#Trigger the Berlin Airlift
+		set_global_flag = deutsche_mark
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "It is best not to anger the Russian Bear"
+		prestige_factor = -0.025
+		relation = { who = RUS value = 50 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#New Capital in Bonn?
+country_event = {
+  id = 8204100
+  title = "The Capital of West Germany"
+  desc = EVTDESC8204100_B
+  picture = "bonn_capital"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		year = 1944 
+		NOT = { year = 1990 }
+	
+		owns = 574
+		owns = 564
+		owns = 549
+		NOT = { owns = 551 } # East Berlin
+		NOT = { has_global_flag = 1950_start_date_flag }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Select Bonn as our capital"
+		574 = { change_province_name = "Bonn" }
+		capital = 574
+		ai_chance = { factor = 0.5 }
+	}
+	option = {
+		name = "Select Frankfurt as our capital"
+		capital = 564
+		ai_chance = { factor = 0.3 }
+	}
+	option = {
+		name = "Leave Berlin as our capital"
+		capital = 549
+		ai_chance = { factor = 0.2 }
+	}
+
+}
+#New Capital in Bonn?
+country_event = {
+  id = 82041000
+  title = "The Capital of West Germany"
+  desc = EVTDESC8204100_B
+  picture = "bonn_capital"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = GER
+		year = 1945
+		NOT = { year = 1990 }
+		
+		NOT = { 
+			OR = { 
+				564 = { is_capital = yes } 
+				549 = { is_capital = yes } 
+			} 
+		}
+		
+		NOT = { owns = 574 }
+		owns = 564
+		owns = 549
+		NOT = { owns = 551 } # East Berlin
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Select Frankfurt as our capital"
+		capital = 564
+		ai_chance = { factor = 0.7 }
+	}
+	option = {
+		name = "Leave Berlin as our capital"
+		capital = 549
+		ai_chance = { factor = 0.3 }
+	}
+
+}
+#Question of the 1937 German Borders
+country_event = {
+  id = 82041001
+  title = "Recognition of the Oder–Neisse Line?"
+  desc = EVT_82041001_DESC
+  picture = "oder_line"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		has_global_flag = blocsenabled
+		NOT = { any_core = { owned_by = ENG } }
+		NOT = { any_core = { owned_by = USA } }
+		NOT = { any_core = { owned_by = FRA } }
+		DDR = { exists = yes }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Refuse to recognise the Oder–Neisse Line!"
+
+		badboy = 5
+
+		relation = { who = RUS value = -100 }
+		relation = { who = POL value = -100 }
+
+		set_country_flag = oder_line_claim
+
+		#Oder–Neisse Line claims
+
+		685 = { add_core = GER }
+		684 = { add_core = GER }
+		683 = { add_core = GER }
+		682 = { add_core = GER }
+		681 = { add_core = GER }
+		546 = { add_core = GER }
+		679 = { add_core = GER }
+		692 = { add_core = GER }
+		680 = { add_core = GER }
+		693 = { add_core = GER }
+		696 = { add_core = GER }
+		695 = { add_core = GER }
+		698 = { add_core = GER }
+		697 = { add_core = GER }
+		691 = { add_core = GER }
+		690 = { add_core = GER }
+		694 = { add_core = GER }
+		699 = { add_core = GER }
+		700 = { add_core = GER }
+		701 = { add_core = GER }
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Recognise the diminution of Germany"
+		prestige = -50
+		relation = { who = RUS value = 100 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+#East Berlin rename
+country_event = {
+  id = 8204101
+  title = "The Division of Berlin"
+  desc = EVTDESC8204101
+  picture = "nwo2_divided_berlin"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = DDR
+		
+		has_global_flag = blocsenabled
+		
+		#Divided Berlin
+		owns = 551
+		GER = { owns = 549 }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = EVT_8204101_A
+		551 = { change_province_name = "East Berlin" }
+		capital = 551
+	}
+}
+
+#German General Treaty - Independence of Germany via GP
+country_event = {
+  id = 8204102
+  title = "The General Treaty"
+  desc = EVTDESC8204102
+  picture = "german_general_treaty"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = GER
+		OR = { is_greater_power = yes is_vassal = no }
+		has_global_flag = blocsenabled
+		
+		NOT = { has_country_flag = german_general_treaty }
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "We are a sovereign nation once more!"
+		prestige = 100
+		set_country_flag = german_general_treaty
+	}
+}
+
+#German General Treaty - Independence of Germany historic
+country_event = {
+  id = 82041022
+  title = "General Treaty with Germany?"
+  desc = EVTDESC8204102
+  picture = "german_general_treaty"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1955
+		NOT = { year = 1990 }
+		
+		#Cold War
+		has_global_flag = blocsenabled
+		
+		#Germany is a vassal
+    	is_our_vassal = GER
+
+		#Austria is independent or is a democracy
+		AUS = { OR = { government = democracy is_vassal = no } }
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = "Grant Germany sovereignty!"
+		prestige = 50
+		badboy = -5
+		
+		relation = { who = ENG value = 50 }
+		relation = { who = FRA value = -50 }
+		relation = { who = RUS value = -50 }
+		
+		GER = { 
+			prestige = 100 
+			set_country_flag = german_general_treaty 
+		}
+	
+		release_vassal = GER
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Deny their self-determination"
+		prestige = -50
+		badboy = 5
+		
+		relation = { who = FRA value = 50 }
+		relation = { who = RUS value = 50 }
+		relation = { who = ENG value = -50 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+#German Economic Miracle
+country_event = {
+  id = 8204200
+  title = "The German Economic Miracle"
+  desc = "EVT_8204200_DESC"
+  picture = "nwo2_wirtschaftswunder"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = GER
+		OR = { is_vassal = no has_country_flag = german_general_treaty }
+		has_country_modifier = germaneconomy
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Rejoice!"
+		add_country_modifier = { name = economic_boom duration = 3500 }
+		any_owned = { remove_province_modifier = province_morgenthau_plan remove_province_modifier = province_monnet_plan }
+	}
+}
+
+#Berlin Wall - start
+country_event = {
+  id = 8204301
+  title = "The Berlin Wall"
+  desc = EVTDESC8204301
+  picture = "nwo2_berlin_wall"
+  
+	fire_only_once = yes
+	
+	major = yes
+
+	trigger = {
+		tag = DDR
+		year = 1961
+		NOT = { year = 1990 }
+		
+		war = no
+		ruling_party_ideology = communist
+		
+		#Cold War
+		has_global_flag = blocsenabled
+		
+		#Caused by the Berlin Crisis
+		has_global_flag = 1961_berlin_crisis_flag
+		has_global_flag = 1961_berlin_crisis_flag_build_wall
+		
+		#Divided Berlin
+		owns = 551  
+		GER = { owns = 549 }
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "We must stop the flow of people to West Berlin!"
+		
+		#Add Berlin Wall
+		549 = { add_province_modifier = { name = berlin_wall duration = -1 } }
+		551 = { add_province_modifier = { name = berlin_wall duration = -1 } }
+		
+		#Close borders
+		political_reform = nobody_gets_out
+		
+		#US response
+		USA = { country_event = 8204302 }
+		
+		ai_chance = { factor = 0.95 }
+	}
+	
+	option = {
+		name = "Let the city be free"
+		prestige = -50
+		
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		
+		#More liberal support
+		any_pop = { ideology = { factor = 0.10 value = liberal } }
+		
+		ai_chance = { factor = 0.05 }
+	}
+
+}
+
+#Berlin Wall - USA
+country_event = {
+  id = 8204302
+  title = "The Berlin Wall"
+  desc = EVTDESC8204302
+  picture = "nwo2_berlin_wall"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "We hope the wall will stop further escalation"
+		relation = { who = RUS value = 50 }
+		ai_chance = { factor = 0.95 }
+	}
+	
+	option = {
+		name = "We will fight to end this"
+		war = { 
+			target = RUS 
+			attacker_goal = { casus_belli = dismantle_cb } 
+			defender_goal = { casus_belli = dismantle_cb }
+			call_ally = yes 
+		}
+		
+		#A just war
+		badboy = -20
+		
+		ai_chance = { factor = 0.05 }
+	}
+}
+
+#Stalin's Note - Start
+country_event = {
+  id = 8204400
+  title = "The Stalin Note"
+  desc = EVTDESC8204400
+  picture = "nwo2_stalin_note"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1952 
+		NOT = { year = 1960 }
+		
+		has_global_flag = blocsenabled
+		has_global_flag = form_nato
+		
+		is_our_vassal = DDR
+		USA = { is_our_vassal = GER }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "We shall not pursue this any further"
+		prestige = 50
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Propose a united but neutral Germany"
+		badboy = -5
+		USA = { country_event = 8204401 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Stalin's Note - End
+country_event = {
+  id = 8204401
+  title = "The Stalin Note"
+  desc = EVTDESC8204400
+  picture = "nwo2_stalin_note"
+  
+	is_triggered_only = yes
+
+	option = {
+		name = "Reject the offer because Germany must join NATO"
+		prestige = 50
+		relation = { who = RUS value = -50 }
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Accept the offer of a united neutral Germany"
+		
+		badboy = -5 
+		
+		relation = { who = RUS value = 100 }
+		relation = { who = GER value = 100 }
+		relation = { who = FRA value = -200 }
+		relation = { who = ENG value = -100 }
+		relation = { who = ITA value = -100 }
+		
+		release_vassal = GER
+		GER = { 
+			inherit = DDR 
+			
+			#More communist support
+			any_pop = { ideology = { factor = 0.10 value = communist } }
+			
+			#Set neutrality
+			set_country_flag = neutrality
+			any_country = { 
+				limit = { alliance_with = THIS } 
+				leave_alliance = THIS 
+			}
+			set_country_flag = renounced_war_rights
+			country_event = 1512259
+			
+			#Add marker on capital for players to know which countries are neutral
+			random_owned = {
+				limit = { is_capital = yes }
+				add_province_modifier = { name = neutral_nation_marker duration = -1 }
+			}
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Nuremburg Trials - Controlled by the US
+country_event = {
+  id = 8204080
+  title = "The Nuremburg Trials"
+  desc = EVT_8204080_DESC
+  picture = "nwo2_nuremburg_trials"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = USA
+		year = 1946
+		NOT = { year = 1950 }
+	}
+	
+	mean_time_to_happen = { months = 9 }
+
+	option = {
+		name = "Pass a strict sentence"
+		prestige = 50
+		badboy = -5 
+		
+		relation = { who = RUS value = 50 }
+		relation = { who = FRA value = 50 }
+		relation = { who = ENG value = 50 }
+		relation = { who = ITA value = 50 }
+		
+		GER = { 
+			all_core = { 
+				any_pop = { 
+					limit = { culture = german } 
+					ideology = { factor = 0.10 value = conservative }
+					militancy = -5
+					consciousness = 5
+				} 
+			} 
+		}
+		
+		ai_chance = { factor = 0.7 }
+	}
+
+	option = {
+		name = "Pass a lenient sentence"
+		prestige = 25
+		badboy = -2
+		
+		GER = { 
+			all_core = { 
+				any_pop = { 
+					limit = { culture = german } 
+					ideology = { factor = 0.05 value = conservative }
+					militancy = -5
+					consciousness = 5
+				} 
+			} 
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+	option = {
+		name = "Acquit everyone!"
+		
+		relation = { who = RUS value = -50 }
+		relation = { who = FRA value = -50 }
+		relation = { who = ENG value = -50 }
+		relation = { who = ITA value = -50 }
+		
+		GER = { 
+			all_core = { 
+				any_pop = { 
+					limit = { culture = german } 
+					ideology = { factor = 0.10 value = nationalist }
+					militancy = -5
+					consciousness = 5
+				} 
+			} 
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+}
