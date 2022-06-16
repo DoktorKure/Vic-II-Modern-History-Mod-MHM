@@ -1,6 +1,6 @@
 ### What are needed for MHM to run ###
 
-Both the Heart of Darkness & A House Divided DLCs
+Both the Heart of Darkness and A House Divided DLCs
 
 The 3.04 beta patch for Victoria 2
 
