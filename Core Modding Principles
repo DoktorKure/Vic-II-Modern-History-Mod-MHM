@@ -1,3 +1,7 @@
+**Simplicity**
+Rule 1: Avoid unneeded events for minor details that have minimal historical impact.
+Rule 2: Simplify historical events wherever possible. Example: making long event chains for coups when it could be simplified to just "This coup succeeds" or "This coup fails".
+
 **Event Structure**
 
 Rule 1: No event is to have only 1 option unless a prior event triggered this event and that prior event gave an option to avoid the subsequent one option only event.
@@ -10,7 +14,7 @@ Rule 5: All options should have at least some AI chance of picking it. For histo
 
 Rule 1: No province can be ceded from country A to another country B through event unless: (1) A is not a vassal and B is not a vassal; (2) A actually owns the province; and (3) A was given a choice not to cede the province to B in the event.
 Rule 2: No province can be the subject of any event or decision's effect unless: THIS owns the province.
-Rule 3: No country can be made a puppet of another country or annexed by event unless: (1) both countries are independent at the time; and (2) the country to be puppetted or annexed has a choice not to be puppetted or annexed.
+Rule 3: No country can be made a puppet of another country or annexed by event unless: (1) both countries are independent at the time; and (2) the country to be puppeted or annexed has a choice not to be puppeted or annexed.
 Rule 4: No ceding of ownership of the capital of any country by event if that country is to remain on the map post annexation of the capital province.
 Rule 5: No country can be released via event unless: (1) there is a check of is_possible_vassal = TAG by THIS first; and (2) THIS is independent.
 Rule 6: No event can trigger a war between 2 countries unless: (1) both countries are independent; and (2) the aggressor had a choice to avoid the war.
