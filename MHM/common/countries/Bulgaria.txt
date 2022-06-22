@@ -1,5 +1,8 @@
 graphical_culture = EuropeanGC
 color = { 116 107 140 }
+proletarian_dictatorship = { 205 120 109 }
+proletarian_dictatorship1 = { 205 120 109 }
+socialist_democracy = { 205 120 109 }
 party = {
 		name = "Zveno"
 		citizenship_policy = limited_citizenship
