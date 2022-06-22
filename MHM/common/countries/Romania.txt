@@ -1,5 +1,8 @@
 graphical_culture = EuropeanGC
-color = { 200 190 126 }
+color = { 216 172 0 }
+proletarian_dictatorship = { 255 99 112 }
+proletarian_dictatorship1 = { 255 99 112 }
+socialist_democracy = { 255 99 112 }
 party = {
 		name = "Iron Guard"
 		citizenship_policy = limited_citizenship
