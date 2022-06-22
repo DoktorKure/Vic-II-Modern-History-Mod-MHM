@@ -1,5 +1,8 @@
 graphical_culture = BritishGC
-color = { 209  66  58 }
+color = { 255 144 144 }
+proletarian_dictatorship = { 220 20 60 }
+proletarian_dictatorship1 = { 220 20 60 }
+socialist_democracy = { 220 20 60 }
 party = {
 		name = "League of Empire Loyalists"
 		citizenship_policy = limited_citizenship
