@@ -13342,26 +13342,27 @@ remove_country_modifier = cmtlow
 #Nationalist Germany - Add Austrian Culture for anschluss
 country_event = {
 	id = 1512340
-title = "Return of German Nationalism"
+	title = "Return of German Nationalism"
 	desc = EVTDESC1512340
 	picture = "nazi_return"
 
-fire_only_once = yes
+	fire_only_once = yes
 
-trigger = {
-tag = GER
-is_vassal = no
-election = no
-ruling_party_ideology = nationalist
-}
+	trigger = {
+		tag = GER
+		is_vassal = no
+		election = no
+		ruling_party_ideology = nationalist
+		OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } # Must be a right-wing dictatorship
+	}
 
-mean_time_to_happen = { months = 6 }
+	mean_time_to_happen = { months = 6 }
 
-option = {
-name = "We shall unite all Germans under one flag!"
-any_country = { limit = { OR = { tag = USA tag = FRA tag = NET tag = BEL tag = LUX tag = RUS tag = ENG tag = POL tag = CZH tag = BOH } } relation = { who = THIS value = -100 } }
-add_accepted_culture = austrian_german
-		}
+	option = {
+		name = "We shall unite all Germans under one flag!"
+		any_country = { limit = { OR = { tag = USA tag = FRA tag = NET tag = BEL tag = LUX tag = RUS tag = ENG tag = POL tag = CZH tag = BOH } } relation = { who = THIS value = -100 } }
+		add_accepted_culture = austrian_german
+	}
 
 }
 

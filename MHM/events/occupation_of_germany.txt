@@ -944,28 +944,22 @@ country_event = {
 
 		set_country_flag = oder_line_claim
 
-		#Oder–Neisse Line claims
+		#1937 Borders + Danzig
 
-		685 = { add_core = GER }
-		684 = { add_core = GER }
-		683 = { add_core = GER }
-		682 = { add_core = GER }
-		681 = { add_core = GER }
 		546 = { add_core = GER }
 		679 = { add_core = GER }
-		692 = { add_core = GER }
 		680 = { add_core = GER }
-		693 = { add_core = GER }
-		696 = { add_core = GER }
-		695 = { add_core = GER }
-		698 = { add_core = GER }
-		697 = { add_core = GER }
-		691 = { add_core = GER }
+		681 = { add_core = GER }
+		682 = { add_core = GER }
+		683 = { add_core = GER }
+		684 = { add_core = GER }
 		690 = { add_core = GER }
-		694 = { add_core = GER }
-		699 = { add_core = GER }
-		700 = { add_core = GER }
-		701 = { add_core = GER }
+		692 = { add_core = GER }
+		693 = { add_core = GER }
+		695 = { add_core = GER }
+		696 = { add_core = GER }
+		697 = { add_core = GER }
+		698 = { add_core = GER }
 
 		ai_chance = { factor = 0.9 }
 	}
