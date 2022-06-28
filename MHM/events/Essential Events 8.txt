@@ -4025,6 +4025,7 @@ country_event = {
 		has_country_flag = former_colonial_nation
 		has_country_modifier = newly_independent_country
 		NOT = { has_country_flag = post_colonial_politics }
+		OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 government = socialist_democracy } # must be a democracy of some kind
 	}
 
 	mean_time_to_happen = { months = 1 }
