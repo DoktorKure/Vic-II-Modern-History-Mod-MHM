@@ -267,7 +267,7 @@ country_event = { # Economic Reform of 1973 - Brezhnev
 	}
 	
 	option = {
-		name = "Met us stop it."
+		name = "Let us stop it."
 		
 		any_pop = {
 			limit = { strata = poor }

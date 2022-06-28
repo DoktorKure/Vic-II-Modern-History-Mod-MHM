@@ -1435,7 +1435,7 @@ country_event = {
 		
 		has_country_flag = leonid_brezhnev
 		
-		#Removed Andropov
+		#Did not remove Andropov
 		NOT = { has_country_flag = vladimir_scherbitsky }
 	}
 
@@ -1724,12 +1724,13 @@ country_event = {
 				} 
 			}
 		}
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "Stop their bid for independence! (High infamy)"
 		prestige_factor = -0.25
+		badboy = 20
 
 		release = LIT 
 		release = LAT
@@ -1756,7 +1757,7 @@ country_event = {
 			call_ally = no
 		}
 
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 
 }
