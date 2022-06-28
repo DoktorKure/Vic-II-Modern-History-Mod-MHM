@@ -1293,8 +1293,8 @@ country_event = {
 		
 		#Reasons for Khrushchev's fall
 		OR = {
-			#USSR is no longer a GP
-			is_greater_power = no
+			#USSR is no longer a superpower
+			NOT = { rank = 2 }
 			
 			#Reformists in power
 			ruling_party_ideology = communist_social 
