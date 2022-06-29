@@ -16,7 +16,7 @@ political_decisions = {
             country_event = { id = 9999902 days = 3 }
             add_country_modifier = {
                 name = craftsmen_fix_cooldown
-                duration = 3650
+                duration = 1825
             }
         }
 		ai_will_do = { factor = 0 }
