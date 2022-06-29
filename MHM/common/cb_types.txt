@@ -1668,7 +1668,7 @@ annex_all_colonial_cores = {
 	
 }
 
-annex_all_cores = {
+annex_all_cores = { # acquire all core states in target's own hands
 	sprite_index = 25
 	is_triggered_only = yes
 	months = 12
@@ -2474,26 +2474,31 @@ release_puppet = {
 
 	can_use = {
 
-THIS = { NOT = { has_country_modifier = no_more_war } }
+		THIS = { NOT = { has_country_modifier = no_more_war } }
 
-THIS = { NOT = { has_country_flag = renounced_war_rights } }
-NOT = { is_our_vassal = THIS }
-NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
-
-
-THIS = { OR = { 
-
-government = theocracy
-government = absolute_monarchy
-government = populist_dictatorship
-government = nationalist_dictatorship
-government = presidential_dictatorship
-government = proletarian_dictatorship
-government = proletarian_dictatorship1
-
-NOT = { war_policy = pacifism } war = yes has_country_flag = world_medium has_country_flag = world_high has_country_flag = cold_war_high has_country_modifier = cold_war_hot } }
+		THIS = { NOT = { has_country_flag = renounced_war_rights } }
+		NOT = { is_our_vassal = THIS }
+		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 
 
+		THIS = {
+			OR = { 
+				government = theocracy
+				government = absolute_monarchy
+				government = populist_dictatorship
+				government = nationalist_dictatorship
+				government = presidential_dictatorship
+				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
+
+				NOT = { war_policy = pacifism }
+				war = yes
+				has_country_flag = world_medium
+				has_country_flag = world_high
+				has_country_flag = cold_war_high
+				has_country_modifier = cold_war_hot
+			}
+		}
 		num_of_vassals_no_substates = 1
 	}
 	
@@ -2549,29 +2554,36 @@ steal_puppet = {
 
 	can_use = {
 
-THIS = { NOT = { has_country_modifier = no_more_war } }
-THIS = { NOT = { has_country_flag = renounced_war_rights } }
-NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
+		THIS = { NOT = { has_country_modifier = no_more_war } }
+		THIS = { NOT = { has_country_flag = renounced_war_rights } }
+		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 
-THIS = { OR = { 
+		THIS = {
+			OR = { 
+				government = theocracy
+				government = absolute_monarchy
+				government = populist_dictatorship
+				government = nationalist_dictatorship
+				government = presidential_dictatorship
+				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
 
-government = theocracy
-government = absolute_monarchy
-government = populist_dictatorship
-government = nationalist_dictatorship
-government = presidential_dictatorship
-government = proletarian_dictatorship
-government = proletarian_dictatorship1
-
-NOT = { war_policy = pacifism } war = yes has_country_flag = world_medium has_country_flag = world_high has_country_flag = cold_war_high has_country_modifier = cold_war_hot } }
+				NOT = { war_policy = pacifism }
+				war = yes
+				has_country_flag = world_medium
+				has_country_flag = world_high
+				has_country_flag = cold_war_high
+				has_country_modifier = cold_war_hot
+			}
+		}
 
 		NOT = { is_our_vassal = THIS }
 		num_of_vassals_no_substates = 1
 
 		OR = {
-	NOT = { has_country_flag = dismantle_declared }
-	THIS = { NOT = { has_country_flag = in_great_war } }
-	THIS = { ai = no }
+			NOT = { has_country_flag = dismantle_declared }
+			THIS = { NOT = { has_country_flag = in_great_war } }
+			THIS = { ai = no }
 		}
 
 	}

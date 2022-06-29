@@ -1,0 +1,89 @@
+country_event = {
+    id = 9705979
+    title = "Peaceful Annexation"
+    desc = EVTDESC9705979
+    is_triggered_only = yes
+
+    option = {
+        name = "Begin diplomatic annexation."
+        any_country = {
+            limit = {
+                war = no
+                exists = yes
+				is_vassal = yes
+				vassal_of = THIS
+                any_owned_province = {
+                    is_core = THIS
+                }
+            }
+            country_event = 9705980
+        }
+    }
+	
+    option = {
+        name = "Now is not the time."
+    }
+	
+    option = {
+        name = "Disable this option permanently."
+        set_global_flag = no_vassal_cores_annex
+    }
+}
+
+country_event = {
+    id = 9705980
+    title = "Annexed by Overlords"
+    desc = EVTDESC9705980
+    allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "There is nothing we can do."
+        any_country = {
+            limit = {
+                is_sphere_leader_of = THIS
+            }
+            country_event = 9705981
+        }
+        ai_chance = {
+            factor = 100
+        }
+    }
+
+}
+
+country_event = {
+    id = 9705981
+    title = "Take Land from $FROMCOUNTRY$?"
+    desc = EVTDESC9705981
+    allow_multiple_instances = yes
+    is_triggered_only = yes
+
+    option = {
+        name = "Let's maintain the status quo."
+    }
+
+    option = {
+        name = "Our rightful territory must be returned. (Gain 3.5 infamy)"
+        badboy = 3.5
+        any_country = {
+            limit = {
+                tag = FROM
+                all_core = { is_core = THIS }
+            }
+            annex_to = THIS
+        }
+        any_country = {
+            limit = {
+                tag = FROM
+            }
+            any_owned = {
+                limit = {
+                    is_core = THIS
+                }
+                secede_province = THIS
+            }
+        }
+
+    }
+}
