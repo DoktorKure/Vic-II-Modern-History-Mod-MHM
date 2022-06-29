@@ -746,6 +746,7 @@ country_event = {
 		YUG = {
 			exists = yes 
 			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+			has_country_flag = YUG_federal_structure
 			is_vassal = no
 			war = no
 		}
@@ -763,7 +764,8 @@ country_event = {
 		YUG = { prestige = 50 }
 		
 		inherit = TRE
-		YUG = { inherit = TRB }
+		3345 = { secede_province = SLO }
+		3378 = { secede_province = CRO }
 		
 		any_pop = { 
 			limit = { is_primary_culture = yes }
