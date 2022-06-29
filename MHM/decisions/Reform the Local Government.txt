@@ -1,0 +1,437 @@
+political_decisions = {
+	reform_the_local_government = {
+        picture = "kaitakushi"
+        alert = yes
+        potential = {
+			war = no
+            civilized = yes
+            any_owned_province = {
+                any_core = {
+                    exists = no
+                    capital_scope = { owned_by = THIS }
+					
+					# Both are necessary to check for as they will impact whether or not the non-existent nation will become democratic or stay a dictatorship thanks to clean_up.txt in events
+                    OR = { # Vote franchise reforms
+                        AND =  {
+                            NOT = { vote_franschise = none_voting } # No Voting
+                            THIS = { vote_franschise = none_voting }
+                        }
+                        AND =  {
+                            NOT = { vote_franschise = registered_voting } # Harassment
+                            THIS = { vote_franschise = registered_voting }
+                        }
+                        AND =  {
+                            NOT = { vote_franschise = universal_weighted_voting } # Vote Rigging
+                            THIS = { vote_franschise = universal_weighted_voting }
+                        }
+                        AND =  {
+                            NOT = { vote_franschise = promoted_voting } # Gerrymandering
+                            THIS = { vote_franschise = promoted_voting }
+                        }
+                        AND =  {
+                            NOT = { vote_franschise = universal_voting } # Fair and Square
+                            THIS = { vote_franschise = universal_voting }
+                        }
+                    }
+                    OR = { # Political Party Reforms
+                        AND =  {
+                            NOT = { political_parties = parties_not_allowed } # Underground Only
+                            THIS = { political_parties = parties_not_allowed }
+                        }
+                        AND =  {
+                            NOT = { political_parties = parties_only_nominated } # Rigged Campaigning
+                            THIS = { political_parties = parties_only_nominated }
+                        }
+                        AND =  {
+                            NOT = { political_parties = parties_restrict_non_democratic } # Restricted Campaigning
+                            THIS = { political_parties = parties_restrict_non_democratic }
+                        }
+                        AND =  {
+                            NOT = { political_parties = parties_promote_democratic } # Short Campaigning
+                            THIS = { political_parties = parties_promote_democratic }
+                        }
+                        AND =  {
+                            NOT = { political_parties = parties_allowed } # Fair Campaigning
+                            THIS = { political_parties = parties_allowed }
+                        }
+                    }
+                }
+            }
+        }
+
+        allow = { war = no }
+
+        effect = {
+
+			#Vote Franchise
+            random_owned = {
+                limit = { owner = { vote_franschise = none_voting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = none_voting
+                }
+            }
+            random_owned = {
+                limit = { owner = { vote_franschise = registered_voting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = registered_voting
+                }
+            }
+            random_owned = {
+                limit = { owner = { vote_franschise = universal_weighted_voting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = universal_weighted_voting
+                }
+            }
+            random_owned = {
+                limit = { owner = { vote_franschise = promoted_voting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = promoted_voting
+                }
+            }
+            random_owned = {
+                limit = { owner = { vote_franschise = universal_voting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = universal_voting
+                }
+            }
+
+			#Upper House
+			random_owned = { # Ruling Party Only
+                limit = { owner = { political_opinions = ruling_party_opinion } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = ruling_party_opinion
+                }
+            }
+			random_owned = { # Semi-Appointed
+                limit = { owner = { political_opinions = regulated_opinion } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = regulated_opinion
+                }
+            }
+			random_owned = { # Qualified State Elections
+                limit = { owner = { political_opinions = open_opinion } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = open_opinion
+                }
+            }
+			random_owned = { # Open State Assembly
+                limit = { owner = { political_opinions = free_opinion } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = free_opinion
+                }
+            }
+			random_owned = { # Based on Population
+                limit = { owner = { political_opinions = democratic_opinion } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = democratic_opinion
+                }
+            }
+
+			#Meetings
+            random_owned = {
+                limit = { owner = { public_meetings = no_meeting } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = no_slavery
+                }
+            }
+            random_owned = {
+                limit = { owner = { public_meetings = limited_meetings } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = no_meeting
+                }
+            }
+            random_owned = {
+                limit = { owner = { public_meetings = free_meetings } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = yes_meeting
+                }
+            }
+
+			#Penal System
+            random_owned = {
+                limit = { owner = { penal_system = capital_punishment } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = capital_punishment
+                }
+            }
+            random_owned = {
+                limit = { owner = { penal_system = incarceration } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = incarceration
+                }
+            }
+            random_owned = {
+                limit = { owner = { penal_system = rehabilitation } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = rehabilitation
+                }
+            }
+
+			#Civil Service
+            random_owned = {
+                limit = { owner = { civil_service = politicised_service } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = politicised_service
+                }
+            }
+            random_owned = {
+                limit = { owner = { civil_service = elitist_service } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = elitist_service
+                }
+            }
+            random_owned = {
+                limit = { owner = { civil_service = professional_service } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = professional_service
+                }
+            }
+            random_owned = {
+                limit = { owner = { civil_service = independent_service } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = independent_service
+                }
+            }
+
+			#Publishing Rights
+            random_owned = { # State Press
+                limit = { owner = { publishing_rights = censored_publishing } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = censored_publishing
+                }
+            }
+            random_owned = { # Censored Publishing
+                limit = { owner = { publishing_rights = firewall_publishing } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = firewall_publishing
+                }
+            }
+            random_owned = { # Responsible Press
+                limit = { owner = { publishing_rights = responsible_publishing } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = responsible_publishing
+                }
+            }
+            random_owned = { # Free Press
+                limit = { owner = { publishing_rights = unregulated_publishing } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = unregulated_publishing
+                }
+            }
+
+			#Trade Unions
+            random_owned = {
+                limit = { owner = { union_rights = no_trade_unions } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = no_trade_unions
+                }
+            }
+            random_owned = {
+                limit = { owner = { union_rights = state_controlled_unions } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = state_controlled_unions
+                }
+            }
+            random_owned = {
+                limit = { owner = { union_rights = restricted_unions } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = restricted_unions
+                }
+            }
+            random_owned = {
+                limit = { owner = { union_rights = free_trade_unions } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = free_trade_unions
+                }
+            }
+
+			#Political Parties
+			random_owned = { # Underground Only
+                limit = { owner = { political_parties = parties_not_allowed } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = parties_not_allowed
+                }
+            }
+			random_owned = { # Rigged Campaigning
+                limit = { owner = { political_parties = parties_only_nominated } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = parties_only_nominated
+                }
+            }
+			random_owned = { # Restricted Campaigning
+                limit = { owner = { political_parties = parties_restrict_non_democratic } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = parties_restrict_non_democratic
+                }
+            }
+			random_owned = { # Short Campaigning
+                limit = { owner = { political_parties = parties_promote_democratic } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = parties_promote_democratic
+                }
+            }
+			random_owned = { # Fair Campaigning
+                limit = { owner = { political_parties = parties_allowed } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = parties_allowed
+                }
+            }
+
+			#Immigration
+			random_owned = {
+                limit = { owner = { immigration_policy = nobody_gets_out } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = nobody_gets_out
+                }
+            }
+			random_owned = {
+                limit = { owner = { immigration_policy = quota_immigration } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = quota_immigration
+                }
+            }
+			random_owned = {
+                limit = { owner = { immigration_policy = naturalization } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = naturalization
+                }
+            }
+			random_owned = {
+                limit = { owner = { immigration_policy = open_immigration } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = open_immigration
+                }
+            }
+			random_owned = {
+                limit = { owner = { immigration_policy = promoted_immigration } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = promoted_immigration
+                }
+            }
+
+			#Conscription
+			random_owned = {
+                limit = { owner = { conscription_policy = mandatory_service } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = mandatory_service
+                }
+            }
+			random_owned = {
+                limit = { owner = { conscription_policy = three_year_draft } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = three_year_draft
+                }
+            }
+			random_owned = {
+                limit = { owner = { conscription_policy = two_year_draft } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = two_year_draft
+                }
+            }
+			random_owned = {
+                limit = { owner = { conscription_policy = one_year_draft } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = one_year_draft
+                }
+            }
+			random_owned = {
+                limit = { owner = { conscription_policy = no_draft } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = no_draft
+                }
+            }
+
+			#Minorities
+            random_owned = {
+                limit = { owner = { minorities_reform = minorities_oppression } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = minorities_oppression
+                }
+            }
+            random_owned = {
+                limit = { owner = { minorities_reform = minorities_equal_rights } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = minorities_equal_rights
+                }
+            }
+            random_owned = {
+                limit = { owner = { minorities_reform = minorities_affirmative_action } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = minorities_affirmative_action
+                }
+            }
+
+			#Voting System
+            random_owned = {
+                limit = { owner = { voting_system = first_past_the_post } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = first_past_the_post
+                }
+            }
+            random_owned = {
+                limit = { owner = { voting_system = jefferson_method } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = jefferson_method
+                }
+            }
+            random_owned = {
+                limit = { owner = { voting_system = proportional_representation } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = proportional_representation
+                }
+            }
+        }
+        ai_will_do = {
+            factor = 1
+        }
+    }
+}
