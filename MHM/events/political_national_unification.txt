@@ -10,6 +10,10 @@ country_event = {
 	option = {
 		name = "EVTOPTA11106"
 		all_core = { add_core = FROM }
+		any_owned = {
+                secede_province = FROM
+        }
+        FROM = { inherit = THIS }
 		FROM = { country_event = 11107 }
 		ai_chance = { factor = 1 }
 	}
@@ -50,9 +54,12 @@ country_event = {
 	
 	option = {
 		name = "EVT_11107_A"
-		FROM = { all_core = { add_core = THIS } }
 		prestige = 40
-		inherit = FROM
+		FROM = {
+			all_core = { add_core = THIS }
+			any_owned = { secede_province = THIS }
+		}
+		THIS = { inherit = FROM }
 		ai_chance = { factor = 1 }
 	}
 
@@ -107,6 +114,7 @@ country_event = { # this is dead code, as I can't get the "acting country". is_p
 }
 
 # Event to Inherit - causd by master
+# Theory, annex_to = THIS will cause the inheriting superstate to inherit the armies as well
 country_event = {
 	id = 11100
 	title = "EVTNAME11100"
@@ -166,8 +174,12 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA11101"
+		all_core = { add_core = FROM }
+		any_owned = {
+                secede_province = FROM
+        }
+        FROM = { inherit = THIS }
 		FROM = { country_event = 11107 }
-		FROM = { inherit = THIS }
 		ai_chance = { factor = 1 }
 	}
 

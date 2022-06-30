@@ -259,6 +259,11 @@ country_event = {
 	
 	option = {
 		name = "We shall unite!"
+		all_core = { add_core = FROM }
+		any_owned = {
+                secede_province = FROM
+        }
+        FROM = { inherit = THIS }
 		FROM = { prestige = 50 country_event = 11107 }
 		ai_chance = { 
 			factor = 1 
