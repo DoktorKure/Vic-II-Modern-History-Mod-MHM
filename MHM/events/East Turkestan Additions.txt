@@ -1483,8 +1483,16 @@ country_event = {
 			exists = yes 
 			is_vassal = no 
 			
-			#Xinjiang must border the KMT
-			neighbour = THIS
+			OR = {
+				#Xinjiang must border the KMT or a KMT vassal
+				neighbour = THIS
+				AND = {
+					QHA = {
+						exists = yes
+						OR = { vassal_of = KMT vassal_of = CHI }
+					}
+				}
+			}
 		}
 		
 		NOT = { XIJ = { war_with = ETS } } #Ili Rebellion
