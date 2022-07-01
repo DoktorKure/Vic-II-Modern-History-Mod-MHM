@@ -442,7 +442,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Demand the US hand over Berlin to East Germany!"
+		name = "Demand the US hand over Berlin to East Germany! (30% chance of war)"
 		
 		set_country_flag = RUS_CMC_berlin_demand_flag
 		

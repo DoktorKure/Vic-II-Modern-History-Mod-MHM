@@ -46,7 +46,8 @@ publishing_rights = censored_publishing
 union_rights = state_controlled_unions
 voting_system = first_past_the_post
 vote_franschise = none_voting
-public_meetings = no_meetings penal_system = capital_punishment
+public_meetings = no_meetings
+penal_system = capital_punishment
 # Social Reforms
 safety_regulations = some_regulations
 pensions = no_pensions

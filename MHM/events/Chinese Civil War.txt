@@ -26,39 +26,22 @@ country_event = {
 		
 		war = no
 
-		NOT = { exists = MCK }
-		NOT = { exists = IMN }
-
 		#Chinese Civil War ongoing
 		CHI = { 
 			exists = yes
-			#war_with = KMT
+			war_with = KMT
 			government = proletarian_dictatorship 
 		}
-		
-		#Owns Chinese provinces except Port Arthur
-		any_owned_province = { 
-			is_core = CHI 
-			NOT = { is_core = RUS } 
-			NOT = { province_id = 1481 }
-		}
+		NOT = { has_country_flag = returned_manchuria }
 		
 		#Cold War
 		has_global_flag = blocsenabled
 	}
 
-	mean_time_to_happen = { 
-		months = 4 #Historical date of withdrawal was on 3 May 1946
-		
-		#Immediate return once China is not at war
-		modifier = { 
-			factor = 0 
-			CHI = { NOT = { war_with = KMT } } 
-		}
-	}
+	mean_time_to_happen = { months = 1 }
 
 	option = {
-		name = "Return the lands to the KMT but keep Port Arthur"
+		name = "Favor turnover to the KMT as we withdraw, but keep Port Arthur"
 		prestige = 50
 		badboy = -5
 		
@@ -69,43 +52,32 @@ country_event = {
 		
 		#Inform of return
 		KMT = { country_event = 8200001 }
-		
-		#Add cores
-		CHI_1552 = { add_core = MCK }
-		RUS_2589 = { add_core = MCK }
-		CHI_1479 = { add_core = MCK }
-		RUS_1072 = { add_core = MCK }
-		1533 = { add_core = IMN }
-		1002 = { add_core = IMN }
-		
-		#Secede all CHI cores, except Port Arthur, to the KMT
-		any_owned = { 
-			limit = { 
-				is_core = CHI 
-				NOT = { is_core = RUS } 
-				NOT = { province_id = 1481 } 
-			} 
-			secede_province = KMT
-		}
+		random_owned = { limit = { is_core = MCK NOT = { province_id = 1481 } } change_controller = KMT }
 		
 		#Apply Civil War borders
-		2613 = { change_controller = KMT } 
-		1479 = { change_controller = KMT } 
-		45 = { change_controller = KMT } 
-		1555 = { change_controller = KMT }
 		
-		1480 = { change_controller = CHI } 
-		44 = { change_controller = CHI } 
-		1554 = { change_controller = CHI } 
+		1002 = { change_controller = CHI }
+		1533 = { change_controller = CHI }
 		1553 = { change_controller = CHI }
+		1554 = { change_controller = CHI }
+		3371 = { change_controller = CHI }
+		3374 = { change_controller = CHI }
 		
-		ai_chance = {
-			factor = 0.1
+		#Give military goods
+		KMT = {
+			money = 200000
+			small_arms = 1000
+			weaponry = 1000
+			aeroplanes = 1000
+			ammunition = 1000
+			automobiles = 1000
 		}
+		
+		ai_chance = { factor = 0.1 }
 	}
 
 	option = {
-		name = "Return the lands to the PRC but keep Port Arthur"
+		name = "Favor turnover to PRC as we withdraw, but keep Port Arthur"
 		
 		#Relations boost and loss
 		relation = { who = MGL value = 25 } 
@@ -118,43 +90,25 @@ country_event = {
 		#Inform of return
 		CHI = { country_event = 8200001 }
 		
-		#Add cores
-		CHI_1552 = { add_core = MCK }
-		RUS_2589 = { add_core = MCK }
-		CHI_1479 = { add_core = MCK }
-		RUS_1072 = { add_core = MCK }
-		1533 = { add_core = IMN }
-		1002 = { add_core = IMN }
-		
-		#Secede all CHI cores, except Port Arthur, to the CHI
-		any_owned = { 
-			limit = { 
-				is_core = CHI 
-				NOT = { is_core = RUS } 
-				NOT = { province_id = 1481 } 
-			} 
-			secede_province = CHI
-		}
-		
 		#Apply Civil War borders
-		2613 = { change_controller = KMT } 
-		1479 = { change_controller = KMT } 
-		45 = { change_controller = KMT } 
 		1555 = { change_controller = KMT }
 		
-		1480 = { change_controller = CHI } 
-		44 = { change_controller = CHI } 
-		1554 = { change_controller = CHI } 
-		1553 = { change_controller = CHI }
-		
-		ai_chance = {
-			factor = 0.8
+		#Give military goods
+		CHI = {
+			money = 200000
+			small_arms = 1000
+			weaponry = 1000
+			aeroplanes = 1000
+			ammunition = 1000
+			automobiles = 1000
 		}
+		
+		ai_chance = { factor = 0.8 }
 
 	}
   
 	option = {
-		name = "Release Manchuria as a Soviet puppet"
+		name = "Withdraw and set up Manchuria as a Soviet buffer state"
 		prestige = -50
 		badboy = 5
 		
@@ -163,45 +117,23 @@ country_event = {
 		relation = { who = CHI value = -100 }
 		relation = { who = KMT value = -100 }
 		relation = { who = USA value = -100 }
-		
-		#Add cores
-		CHI_1552 = { add_core = MCK }
-		RUS_2589 = { add_core = MCK }
-		CHI_1479 = { add_core = MCK }
-		RUS_1072 = { add_core = MCK }
-		1533 = { add_core = IMN }
-		1002 = { add_core = IMN }
 
 		#Create communist MCK puppet
-		release_vassal = MCK
+		random_owned = { limit = { is_core = MCK NOT = { province_id = 1481 } } secede_province = MCK }
+		create_vassal = MCK
 		MCK = { 
 			government = proletarian_dictatorship 
 			country_event = 800052 
 			ruling_party_ideology = communist 
-			
-			#Give back Port Arthur
-			1481 = { secede_province = RUS }
 		}
 		relation = { who = MCK value = 200 }
 		diplomatic_influence = { who = MCK value = 200 }
 		
-		#Secede all remaining CHI cores, except Port Arthur, to the CHI
-		any_owned = { 
-			limit = { 
-				is_core = CHI 
-				NOT = { is_core = RUS } 
-				NOT = { province_id = 1481 } 
-			} 
-			secede_province = CHI
-		}
-		
-		ai_chance = {
-			factor = 0.1
-		}
+		ai_chance = { factor = 0.1 }
 	}
 
 	option = {
-		name = "Manchuria shall remain under Soviet rule"
+		name = "Integrate Manchuria as a Soviet SSR"
 		prestige_factor = -0.04
 		badboy = 10
 		
@@ -211,13 +143,7 @@ country_event = {
 		relation = { who = KMT value = -200 }
 		relation = { who = USA value = -200 }
 		
-		#Add cores
-		CHI_1552 = { add_core = MCK }
-		RUS_2589 = { add_core = MCK }
-		CHI_1479 = { add_core = MCK }
-		RUS_1072 = { add_core = MCK }
-		1533 = { add_core = IMN }
-		1002 = { add_core = IMN }
+		random_owned = { limit = { is_core = MCK NOT = { province_id = 1481 } } secede_province = RUS }
 		
 		#Militancy rises in Chinese provinces
 		any_owned = {
@@ -272,6 +198,399 @@ country_event = {
 	}
 }
 
+#Event to inherit warlords if CHI occupies one in full during civil war, with player being able to keep fighting
+country_event = {
+	id = 909031
+	title = "The defeat of the $COUNTRY_ADJ$ Clique"
+	desc = "EVTDESC909031"
+	picture = "ma_bufang"
+	
+	trigger = {
+		OR = {
+			tag = SXI
+			tag = QHA
+			tag = YNN
+			tag = SZC
+			tag = GGX
+		}
+		exists = yes
+		is_vassal = yes
+		vassal_of = KMT
+		NOT = { year = 1953 }
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
+		war_with = CHI
+		OR = { national_provinces_occupied = 0.85 capital_scope = { controlled_by = CHI } } # 85% occupied or controls the capital triggers this event
+		NOT = { has_country_flag = warlord_refused_surrender } # To prevent event spam
+	}
+	
+	option = {
+		name = "We fought valiantly but the Reds were too much... (Game Over)"
+		CHI = { inherit = THIS }
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "We may be defeated but the war is not over!"
+		prestige = 100
+		set_country_flag = warlord_refused_surrender
+		war_exhaustion = -25
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Master cleanup event when CCP wins the civil war if there are any remaining warlords
+country_event = {
+	id = 90909
+	title = "The defeat of the Kuomintang"
+	desc = "EVTDESC90909"
+	picture = "nwo2_kmt_flees_to_taiwan"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = {
+			tag = SXI
+			tag = QHA
+			tag = YNN
+			tag = SZC
+			tag = GGX
+		}
+		exists = yes
+		is_vassal = no
+		NOT = { year = 1953 }
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
+		has_global_flag = CHI_won_civil_war # KMT fled to Taiwan
+		KMT = { NOT = { war_with = CHI } } # CCP controls mainland
+		NOT = { war_with = CHI }
+	}
+	
+	option = {
+		name = "We accept their demands, the war must come to an end."
+		CHI = { inherit = THIS }
+		ai_chance = { factor = 0.4 }
+		modifier = { 
+			factor = 1 
+			tag = QHA
+		}
+		modifier = { 
+			factor = 1 
+			tag = SXI
+		}
+		modifier = { 
+			factor = 1 
+			tag = GGX
+		}
+	}
+	
+	option = {
+		name = "We will fight to the death!"
+		prestige = 100
+		set_country_flag = warlord_refused_surrender
+		war_exhaustion = -25
+		war = {
+			target = CHI
+			attacker_goal = {
+				casus_belli = annex_all_cores
+			}
+			defender_goal = {
+				casus_belli = civil_war
+			}
+		}
+		ai_chance = { factor = 0.6 }
+		modifier = { 
+			factor = 1 
+			tag = YNN
+		}
+		modifier = { 
+			factor = 1 
+			tag = SZC
+		}
+	}
+}
+
+#Fall of Nanjing Event
+country_event = {
+	id = 90910
+	title = "The Fall of Nanjing"
+	desc = "EVTDESC90910"
+	picture = "fall_of_nanjing_1949"
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	trigger = {
+		tag = KMT
+		exists = yes
+		is_vassal = no
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = CHI_won_civil_war} # KMT hasn't fled to Taiwan already
+		war_with = CHI
+		2221 = { controlled_by = CHI }
+	}
+	
+	option = {
+		name = "Damn it! Retreat to Chongqing!"
+		prestige = -500
+		capital = 1577
+		war_exhaustion = 75
+		land_organization = -0.35
+		SXI = { country_event = 909011 }
+		SZC = { country_event = 909011 }
+		QHA = { country_event = 909011 }
+		YNN = { country_event = 909011 }
+	}
+}
+
+#Defect to the PRC after Nanjing Falls
+country_event = {
+	id = 90911
+	title = "Defect to the PRC?"
+	desc = "EVTDESC90911"
+	picture = "fall_of_nanjing_1949"
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "The winds of fortune are changing and so must our loyalty."
+		CHI = { inherit = THIS }
+		ai_chance = { factor = 0.3 }
+		modifier = { 
+			factor = 1 
+			tag = QHA
+		}
+		modifier = { 
+			factor = 1 
+			tag = SXI
+		}
+		modifier = { 
+			factor = 1
+			tag = GGX
+		}
+	}
+	
+	option = {
+		name = "No compromise with the communists!"
+		prestige = 100
+		war = {
+			target = CHI
+			attacker_goal = {
+				casus_belli = annex_all_cores
+			}
+			defender_goal = {
+				casus_belli = civil_war
+			}
+		}
+		ai_chance = { factor = 0.7 }
+		modifier = { 
+			factor = 1 
+			tag = YNN
+		}
+		modifier = { 
+			factor = 1 
+			tag = SZC
+		}
+	}
+}
+
+#Chiang Steps Down event chain - start
+country_event = {
+	id = 90913
+	title = "A New Nationalist Government?"
+	desc = "EVTDESC90913"
+	picture = "chiang_lizonggren"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GGX
+		exists = yes
+		is_vassal = no
+		year = 1949
+		NOT = { year = 1952 }
+		KMT = { exists = yes war_with = CHI }
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "Demand Chiang step down for his failures! (90% chance of being annexed)"
+		KMT = { country_event = 90914 }
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "We can't risk a leadership crisis!"
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Chiang Steps Down
+country_event = {
+	id = 90914
+	title = "A New Nationalist Government?"
+	desc = "EVTDESC90913"
+	picture = "chiang_lizonggren"
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Step down and let Li Zonggren be the new president."
+		prestige = -100
+		inherit = GGX
+		country_event = 90915
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "I am the leader of China!"
+		release_vassal = GGX
+		relation = { who = GGX value = -100 }
+		influence = { who = GGX value = -200 }
+		GGX = { end_war = CHI }
+		GGX = { country_event = 909011 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#1949 Truce - KMT
+country_event = {
+	id = 90915
+	title = "The Yangtze River Truce?"
+	desc = "EVTDESC90915"
+	picture = "chiang_mao"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KMT
+		exists = yes
+		is_vassal = no
+		year = 1949
+		NOT = { year = 1952 }
+		war_with = CHI
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
+		has_country_flag = chiang_stepped_down # Li Zonggren took over
+	}
+	
+	option = {
+		name = "Reach out to Mao for negotiations"
+		CHI = { country_event = 90916 }
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Continue the war!"
+		prestige = 100
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#1949 Truce - CHI response
+country_event = {
+	id = 90916
+	title = "The Yangtze River Truce?"
+	desc = "EVTDESC90915"
+	picture = "chiang_mao"
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Make peace and regroup."
+		end_war = KMT
+		set_global_flag = 1949_truce_fired
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Continue the war!"
+		prestige = 100
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#The Yangtze River Crossing Campaign
+country_event = {
+	id = 90917
+	title = "The Yangtze River Crossing Campaign"
+	desc = "EVTDESC90910"
+	picture = "nwo2_kmt_flees_to_taiwan"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHI
+		exists = yes
+		is_vassal = no
+		KMT = { exists = yes }
+		year = 1949
+		NOT = { year = 1952 }
+		NOT = { war_with = KMT }
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
+		has_global_flag = 1949_truce_fired
+	}
+	
+	option = {
+		name = "Break the truce and conquer the Kuomintang!"
+		war = {
+			target = KMT
+			attacker_goal = {
+				casus_belli = civil_war
+			}
+			defender_goal = {
+				casus_belli = civil_war
+			}
+		}
+		ai_chance = { factor = 1 }
+	}
+	
+	option = {
+		name = "Continue the negotiations!"
+		prestige = -100
+		ai_chance = { factor = 0 }
+	}
+}
+
+#Cleanup in case PRC annexes KMT before the retreat to Taiwan event fires
+country_event = {
+	id = 90918
+	title = "The Last Kuomintang Holdout"
+	desc = "EVTDESC90903"
+	picture = "nwo2_kmt_flees_to_taiwan"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = TAI
+		KMT = { exists = no }
+		CHI = { exists = yes }
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { year = 1952 }
+	}
+	
+	option = {
+		name = "We shall become the last holdout of the Kuomintang!"
+		change_tag = KMT
+		2576 = { secede_province = KMT } # the Taiwan Strait islands
+		2562 = { secede_province = KMT }
+		set_global_flag = CHI_won_civil_war
+	}
+}
+
 #The KMT flees to Taiwan - End the Chinese Civil War
 country_event = {
 	id = 90903
@@ -283,13 +602,15 @@ country_event = {
 
 	trigger = {
 		tag = KMT
-		year = 1947
+		year = 1948
 		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
 		war_with = CHI
 
 		OR = {
-			AND = { national_provinces_occupied = 0.35 USA = { NOT = { war_with = CHI } } } 
-			AND = { national_provinces_occupied = 0.75 USA = { war_with = CHI } }
+			AND = { 2221 = { controlled_by = CHI } 1577 = { controlled_by = CHI } USA = { NOT = { war_with = CHI } } } #Nanjing and Chongqing already fell and USA didn't intervene
+			AND = { 2221 = { controlled_by = CHI } national_provinces_occupied = 0.35 USA = { NOT = { war_with = CHI } } }
+			AND = { national_provinces_occupied = 0.85 USA = { war_with = CHI } }
 		}
 		
 		#Has not retreated to Formosa
@@ -306,6 +627,18 @@ country_event = {
 		#End wars with East Turkestan and Tibet
 		end_war = ETS
 		end_war = TIB
+		
+		#Releases the warlords
+		release_vassal = QHA
+		QHA = { end_war = CHI }
+		release_vassal = YNN
+		YNN = { end_war = CHI }
+		release_vassal = SXI
+		SXI = { end_war = CHI }
+		release_vassal = SZC
+		SZC = { end_war = CHI }
+		release_vassal = GGX
+		GGX = { end_war = CHI }
 		
 		#Transfer provinces
 		any_owned = { 
@@ -335,7 +668,7 @@ country_event = {
 				} 
 				OR = { type = officers type = soldiers } 
 			} 
-			move_pop = 1485 # Taibei
+			move_pop = 1485 # Taipei
 		}
 		
 		KMT = { inherit = TAI }
@@ -444,7 +777,7 @@ country_event = {
 		war_exhaustion = 50
 		
 		prestige = 1000
-		capital = 2221 #Nanjing
+		capital = 2221 # Move capital back to Nanjing in case they already retreated to Chongqing
 		set_global_flag = KMT_won_civil_war
 		
 		#Inherit Taiwan
@@ -467,6 +800,79 @@ country_event = {
 		}
 	}
 
+}
+
+#Cede land to Shanxi Clique but only if they still exist
+country_event = {
+	id = 90912
+	title = "The Spoils of War"
+	desc = EVTDESC90912
+	picture = "shanxi_clique"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KMT
+		SXI = {
+			exists = yes
+			has_unclaimed_cores = yes
+		}
+		has_global_flag = KMT_won_civil_war
+	}
+	
+	option = {
+		name = "We will deal with them another time, grant their demand."
+		prestige = 50
+		any_owned = { limit = { is_core = SXI } secede_province = SXI }
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "We fought for that land, we will keep every inch of it!"
+		prestige = 100
+		badboy = 3
+		
+		#Shanxi gets pissed and breaks away
+		release_vassal = SXI
+		relation = { who = SXI value = -100 }
+		influence = { who = SXI value = -200 }
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "The communists were just the first to fall!"
+		prestige = 250
+		badboy = 5
+		
+		#Release all KMT vassals as they realize what's about to happen
+		release_vassal = SXI
+		relation = { who = SXI value = -200 }
+		influence = { who = SXI value = -400 }
+		
+		release_vassal = QHA
+		relation = { who = QHA value = -200 }
+		influence = { who = QHA value = -400 }
+		
+		release_vassal = SZC
+		relation = { who = SZC value = -200 }
+		influence = { who = SZC value = -400 }
+		
+		release_vassal = YNN
+		relation = { who = YNN value = -200 }
+		influence = { who = YNN value = -400 }
+		
+		release_vassal = GGX
+		relation = { who = GGX value = -200 }
+		influence = { who = GGX value = -400 }
+		ai_chance = { factor = 0.1 }
+		
+		war = {
+			target = SXI
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = annex_all_cores }
+			call_ally = yes
+		}
+	}
 }
 
 #US intervention in the Chinese Civil War

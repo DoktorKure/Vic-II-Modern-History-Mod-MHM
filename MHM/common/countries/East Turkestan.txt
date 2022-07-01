@@ -1,5 +1,7 @@
 graphical_culture = MiddleEasternGC
 color = { 176 196 222 }
+proletarian_dictatorship = { 229 110 122 }
+proletarian_dictatorship1 = { 229 110 122 }
 party = {
 		name = "National Revolution Committee" #Shortened to meet 31 character (including spaces) UI limit
 		citizenship_policy = limited_citizenship

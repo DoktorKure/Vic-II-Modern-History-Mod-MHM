@@ -9,7 +9,7 @@ culture = shan
 culture = hui
 culture = hani
 religion = secularism
-government = presidential_dictatorship
+government = populist_dictatorship
 plurality = 82.0
 nationalvalue = nv_order
 literacy = 0.01
@@ -17,7 +17,7 @@ non_state_culture_literacy = 0.0
 civilized = yes
 prestige = 12
 last_election = 1943.1.1
-ruling_party = "Yunnan Patriotic Front"
+ruling_party = "Yunnan Kuomintang"
 upper_house = {
 	populist = 4
 	liberal = 21
@@ -28,17 +28,18 @@ upper_house = {
 	communist = 5
 	}
 # Political Reforms
-political_opinions = free_opinion
-minorities_reform = minorities_equal_rights
-immigration_policy = naturalization
-civil_service = elitist_service
-political_parties = parties_allowed
-conscription_policy = one_year_draft
-publishing_rights = unregulated_publishing
-union_rights = no_trade_unions
+political_opinions = ruling_party_opinion
+minorities_reform = minorities_oppression
+immigration_policy = quota_immigration
+civil_service = politicised_service
+political_parties = parties_only_nominated
+conscription_policy = three_year_draft
+publishing_rights = censored_publishing
+union_rights = state_controlled_unions
 voting_system = first_past_the_post
-vote_franschise = universal_voting
-public_meetings = free_meetings penal_system = capital_punishment
+vote_franschise = none_voting
+public_meetings = no_meetings
+penal_system = capital_punishment
 # Social Reforms
 safety_regulations = some_regulations
 pensions = no_pensions
@@ -51,10 +52,13 @@ pollution = no_controls
 wage_and_work_hours = unregulated_hours
 social_service_reform = no_social_service
 # Technologies
+infantry = 1
 # Starting Consciousness
 consciousness = 8
 nonstate_consciousness = 8
 schools = army_tech_school
+
+oob = "/YNN_oob.txt"
 
 1992.1.1 = {
 	capital = 1601
@@ -66,7 +70,7 @@ schools = army_tech_school
 	non_state_culture_literacy = 0.09
 	civilized = yes
 	prestige = 17
-	ruling_party = "Yunnan Patriotic Front"
+	ruling_party = "Yunnan Kuomintang"
 	upper_house = {
 		populist = 4
 		liberal = 21

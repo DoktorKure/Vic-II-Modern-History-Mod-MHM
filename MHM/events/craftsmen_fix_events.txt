@@ -20,6 +20,8 @@ country_event = {
 					OR = {
 						type = craftsmen
 						type = bureaucrats
+						type = soldiers
+						type = officers
 					}
                 }
                 pop_type = farmers

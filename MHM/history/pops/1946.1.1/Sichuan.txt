@@ -1,0 +1,471 @@
+#SICHUAN CLIQUE
+#Ross River - Yaan (693000/173250 POPS)
+8 = {
+	officers = {
+		culture = chinese
+		religion =  taoism 
+		size = 968
+	} 
+	officers = {
+		culture = chinese
+		religion = secularism
+		size = 249
+	} 
+	soldiers = {
+		culture = chinese
+		religion =  taoism 
+		size = 3881
+	} 
+	soldiers = {
+		culture = chinese
+		religion = secularism
+		size = 1001
+	} 
+	artisans = {
+		culture = chinese
+		religion =  taoism 
+		size = 12941
+	} 
+	artisans = {
+		culture = chinese
+		religion = secularism
+		size = 3336
+	} 
+	bureaucrats = {
+		culture = chinese
+		religion =  taoism 
+		size = 322
+	} 
+	bureaucrats = {
+		culture = chinese
+		religion = secularism
+		size = 82
+	} 
+	capitalists = {
+		culture = chinese
+		religion =  taoism 
+		size = 1616
+	} 
+	capitalists = {
+		culture = chinese
+		religion = secularism
+		size = 416
+	} 
+	clergymen = {
+		culture = chinese
+		religion =  taoism 
+		size = 3232
+	} 
+	clergymen = {
+		culture = chinese
+		religion = secularism
+		size = 834
+	} 
+	artisans = {
+		culture = chinese
+		religion =  taoism 
+		size = 1564
+	} 
+	artisans = {
+		culture = chinese
+		religion = secularism
+		size = 402
+	} 
+	farmers = {
+		culture = chinese
+		religion =  taoism 
+		size = 299006
+	} 
+	farmers = {
+		culture = chinese
+		religion = secularism
+		size = 77102
+	} 
+}
+#Longan - Ngawa,  Mianyang, Guangyuan, Nanchong, Bazhong, Dazhou (3348000/837000 POPS)
+1582 = {
+	officers = {
+		culture = tibetan
+		religion =  buddhist 
+		size = 98
+	} 
+	officers = {
+		culture = tibetan
+		religion = secularism
+		size = 25
+	} 
+	soldiers = {
+		culture = tibetan
+		religion =  buddhist 
+		size = 391
+	} 
+	soldiers = {
+		culture = tibetan
+		religion = secularism
+		size = 101
+	} 
+	artisans = {
+		culture = tibetan
+		religion =  buddhist 
+		size = 1304
+	} 
+	artisans = {
+		culture = tibetan
+		religion = secularism
+		size = 336
+	} 
+	bureaucrats = {
+		culture = tibetan
+		religion =  buddhist 
+		size = 33
+	} 
+	bureaucrats = {
+		culture = tibetan
+		religion = secularism
+		size = 8
+	} 
+	capitalists = {
+		culture = tibetan
+		religion =  buddhist 
+		size = 163
+	} 
+	capitalists = {
+		culture = tibetan
+		religion = secularism
+		size = 42
+	} 
+	clergymen = {
+		culture = tibetan
+		religion =  buddhist 
+		size = 326
+	} 
+	clergymen = {
+		culture = tibetan
+		religion = secularism
+		size = 84
+	} 
+	artisans = {
+		culture = tibetan
+		religion =  buddhist 
+		size = 158
+	} 
+	artisans = {
+		culture = tibetan
+		religion = secularism
+		size = 41
+	} 
+	farmers = {
+		culture = tibetan
+		religion =  buddhist 
+		size = 29797
+	} 
+	farmers = {
+		culture = tibetan
+		religion = secularism
+		size = 7684
+	} 
+	farmers = {
+		culture = chinese
+		religion =  buddhist 
+		size = 7000
+	} 
+	farmers = {
+		culture = chinese
+		religion = secularism
+		size = 610
+	} 
+}
+#Yazhou - Garzê, Yaan (1084000/271000 POPS)
+1586 = {
+	officers = {
+		culture = tibetan
+		religion =  taoism 
+		size = 655
+	 } 
+	officers = {
+		culture = tibetan
+		religion = secularism
+		size = 168
+	 } 
+	soldiers = {
+		culture = tibetan
+		religion =  taoism 
+		size = 2621
+	 } 
+	soldiers = {
+		culture = tibetan
+		religion = secularism
+		size = 675
+	 } 
+	artisans = {
+		culture = tibetan
+		religion =  taoism 
+		size = 8736
+	 } 
+	artisans = {
+		culture = tibetan
+		religion = secularism
+		size = 2253
+	 } 
+	bureaucrats = {
+		culture = tibetan
+		religion =  taoism 
+		size = 218
+	 } 
+	bureaucrats = {
+		culture = tibetan
+		religion = secularism
+		size = 56
+	 } 
+	capitalists = {
+		culture = tibetan
+		religion =  taoism 
+		size = 1092
+	 } 
+	capitalists = {
+		culture = tibetan
+		religion = secularism
+		size = 281
+	 } 
+	clergymen = {
+		culture = tibetan
+		religion =  taoism 
+		size = 2184
+	 } 
+	clergymen = {
+		culture = tibetan
+		religion = secularism
+		size = 563
+	 } 
+	artisans = {
+		culture = tibetan
+		religion =  taoism 
+		size = 1056
+	 } 
+	artisans = {
+		culture = tibetan
+		religion = secularism
+		size = 272
+	 } 
+	farmers = {
+		culture = chinese
+		religion =  taoism 
+		size = 8199
+	 } 
+	farmers = {
+		culture = chinese
+		religion = secularism
+		size = 2114
+	 } 
+	farmers = {
+		culture = tibetan
+		religion =  buddhist 
+		size = 74260
+	 } 
+	farmers = {
+		culture = tibetan
+		religion = secularism
+		size = 19148
+	 } 
+}
+#Fairbanks - Garze (6259000/1564750 POPS)
+2599 = {
+	officers = {
+		culture = chinese
+		religion =  taoism 
+		size = 53
+	 } 
+	officers = {
+		culture = chinese
+		religion = secularism
+		size = 14
+	 } 
+	soldiers = {
+		culture = chinese
+		religion =  taoism 
+		size = 211
+	 } 
+	soldiers = {
+		culture = chinese
+		religion = secularism
+		size = 54
+	 } 
+	artisans = {
+		culture = chinese
+		religion =  taoism 
+		size = 703
+	 } 
+	artisans = {
+		culture = chinese
+		religion = secularism
+		size = 181
+	 } 
+	bureaucrats = {
+		culture = chinese
+		religion =  taoism 
+		size = 18
+	 } 
+	bureaucrats = {
+		culture = chinese
+		religion = secularism
+		size = 5
+	 } 
+	capitalists = {
+		culture = chinese
+		religion =  taoism 
+		size = 88
+	 } 
+	capitalists = {
+		culture = chinese
+		religion = secularism
+		size = 23
+	 } 
+	clergymen = {
+		culture = chinese
+		religion =  taoism 
+		size = 176
+	 } 
+	clergymen = {
+		culture = chinese
+		religion = secularism
+		size = 45
+	 } 
+	artisans = {
+		culture = chinese
+		religion =  taoism 
+		size = 85
+	 } 
+	artisans = {
+		culture = chinese
+		religion = secularism
+		size = 22
+	 } 
+	farmers = {
+		culture = chinese
+		religion =  taoism 
+		size = 16233
+	 } 
+	farmers = {
+		culture = chinese
+		religion = secularism
+		size = 4186
+	 } 
+	farmers = {
+		culture = tibetan
+		religion = buddhist 
+		size = 20255
+	 } 
+	farmers = {
+		culture = hani
+		religion = animist
+		size = 7626
+	 } 
+}
+#Fort Simpson - Heze (2503000/625750 POPS)
+3362 = {
+	soldiers = {
+		culture = yi
+		religion =  animist 
+		size = 2993
+	 } 
+	officers = {
+		culture = yi
+		religion = animist
+		size = 358
+	 } 
+	farmers = {
+		culture = yi
+		religion =  animist 
+		size = 241258
+	 } 
+	clerks = {
+		culture = yi
+		religion = animist
+		size = 34
+	 } 
+	clergymen = {
+		culture = yi
+		religion =  animist 
+		size = 2478
+	 } 
+	capitalists = {
+		culture = yi
+		religion = animist
+		size = 1239
+	 } 
+	bureaucrats = {
+		culture = yi
+		religion =  animist 
+		size = 247
+	 } 
+	soldiers = {
+		culture = chinese
+		religion =  taoism 
+		size = 2590
+	 } 
+	officers = {
+		culture = chinese
+		religion = taoism
+		size = 310
+	 } 
+	farmers = {
+		culture = chinese
+		religion =  taoism 
+		size = 208756
+	 } 
+	clerks = {
+		culture = chinese
+		religion = taoism
+		size = 29
+	 } 
+	clergymen = {
+		culture = chinese
+		religion =  taoism 
+		size = 2144
+	 } 
+	capitalists = {
+		culture = chinese
+		religion = taoism
+		size = 1072
+	 } 
+	bureaucrats = {
+		culture = chinese
+		religion =  taoism 
+		size = 214
+	 } 
+	soldiers = {
+		culture = chinese
+		religion =  secularism 
+		size = 647
+	 } 
+	officers = {
+		culture = chinese
+		religion = secularism
+		size = 77
+	 } 
+	farmers = {
+		culture = chinese
+		religion =  secularism 
+		size = 52189
+	 } 
+	clerks = {
+		culture = chinese
+		religion = secularism
+		size = 7
+	 } 
+	clergymen = {
+		culture = chinese
+		religion =  secularism 
+		size = 536
+	 } 
+	capitalists = {
+		culture = chinese
+		religion = secularism
+		size = 268
+	 } 
+	bureaucrats = {
+		culture = chinese
+		religion =  secularism 
+		size = 54
+	 } 
+}

@@ -1,8 +1,9 @@
 owner = CHI
-controller = KMT
+controller = CHI
 add_core = CHI
-add_core =  KMT
-add_core =  IMN
+add_core = KMT
+add_core = IMN
+add_core = SXI
 trade_goods = coal
 life_rating = 30
 terrain = hilly_grassland

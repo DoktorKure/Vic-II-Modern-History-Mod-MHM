@@ -155,6 +155,38 @@ substate = {
 
 ### 1946 Start Date ###
 
+# Chinese Warlords
+vassal = {
+	first = KMT
+	second = SXI
+	start_date = 1945.1.1
+	end_date = 1949.4.22
+}
+vassal = {
+	first = KMT
+	second = QHA
+	start_date = 1945.1.1
+	end_date = 1949.4.22
+}
+vassal = {
+	first = KMT
+	second = SZC
+	start_date = 1945.1.1
+	end_date = 1949.4.22
+}
+vassal = {
+	first = KMT
+	second = GGX
+	start_date = 1945.1.1
+	end_date = 1949.4.22
+}
+vassal = {
+	first = KMT
+	second = YNN
+	start_date = 1945.1.1
+	end_date = 1949.4.22
+}
+
 substate = {
 	first = ENG
 	second = IOM

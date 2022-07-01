@@ -1,7 +1,7 @@
-owner = KMT
-controller = KMT
+owner = QHA
+controller = QHA
 add_core = CHI
-add_core =  KMT
+add_core = KMT
 add_core = QHA
 add_core = NGX
 add_core = TIB
@@ -13,6 +13,9 @@ colonial = 0
 1950.1.1 = {
 owner = CHI
 controller = CHI
+add_core = CHI
+life_rating = 35
+colonial = 0
 }
 
 1992.1.1 = {

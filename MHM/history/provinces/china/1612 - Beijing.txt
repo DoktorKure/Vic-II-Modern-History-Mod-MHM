@@ -1,7 +1,8 @@
 owner = CHI
-controller = KMT
+controller = SXI
 add_core = CHI
-add_core =  KMT
+add_core = KMT
+add_core = SXI
 trade_goods = credit
 life_rating = 35
 terrain = urban_beijing

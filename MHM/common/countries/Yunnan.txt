@@ -1,5 +1,5 @@
 graphical_culture = ChineseGC
-color = { 160 82 45 }
+color = { 221 168 82 }
 party = {
 		name = "Yunnan Patriotic Front"
 		citizenship_policy = limited_citizenship
@@ -23,7 +23,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Conservative Union"
+		name = "Yunnan Kuomintang"
 		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative

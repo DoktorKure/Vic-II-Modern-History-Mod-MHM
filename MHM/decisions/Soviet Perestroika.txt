@@ -11,7 +11,6 @@ political_decisions = {
 			
 			NOT = {
 				OR = {
-					has_country_flag = ogas_project
 					has_country_flag = ussr_no_historical_reforms
 					has_country_flag = ussr_alternative_reformists
 					has_country_flag = shelepin_legacy
@@ -63,7 +62,6 @@ political_decisions = {
 			
 			NOT = {
 				OR = {
-					has_country_flag = ogas_project
 					has_country_flag = ussr_no_historical_reforms
 					has_country_flag = ussr_alternative_reformists
 					has_country_flag = shelepin_legacy
@@ -117,7 +115,6 @@ political_decisions = {
 			
 			NOT = {
 				OR = {
-					has_country_flag = ogas_project
 					has_country_flag = ussr_no_historical_reforms
 					has_country_flag = ussr_alternative_reformists
 					has_country_flag = shelepin_legacy

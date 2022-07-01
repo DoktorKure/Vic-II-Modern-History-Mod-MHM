@@ -1,7 +1,8 @@
-owner = CHI
-controller = CHI
+owner = SXI
+controller = SXI
 add_core = CHI
-add_core =  KMT
+add_core = KMT
+add_core = SXI
 trade_goods = coal
 life_rating = 35
 terrain = hilly_farmland
@@ -12,7 +13,10 @@ state_building = {
 	upgrade = yes
 }
 
-
+1950.1.1 = {
+owner = CHI
+controller = CHI
+}
 
 1992.1.1 = {
 owner = CHI

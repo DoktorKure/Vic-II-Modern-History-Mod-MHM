@@ -1,0 +1,66 @@
+KMT = {
+	level = 1
+	value = 200
+	influence_value = 0
+	military_access = yes
+}
+
+army = {
+	name = "Sichuan Army"
+	location = 8
+	regiment = {
+		name= "Regiment 1"
+		type = irregular
+		home = 8
+	}
+	regiment = {
+		name= "Regiment 2"
+		type = irregular
+		home = 8
+	}
+	regiment = {
+		name= "Regiment 3"
+		type = irregular
+		home = 8
+	}
+	regiment = {
+		name= "Regiment 4"
+		type = irregular
+		home = 8
+	}
+	regiment = {
+		name= "Regiment 5"
+		type = irregular
+		home = 8
+	}
+	regiment = {
+		name= "Regiment 6"
+		type = irregular
+		home = 8
+	}
+	regiment = {
+		name= "Regiment 7"
+		type = irregular
+		home = 8
+	}
+	regiment = {
+		name= "Regiment 8"
+		type = irregular
+		home = 8
+	}
+	regiment = {
+		name= "Regiment 9"
+		type = irregular
+		home = 8
+	}
+	regiment = {
+		name= "Regiment 10"
+		type = irregular
+		home = 8
+	}
+	regiment = {
+		name= "Regiment 11"
+		type = irregular
+		home = 8
+	}
+}
