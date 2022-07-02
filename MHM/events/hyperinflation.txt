@@ -1,0 +1,22 @@
+country_event = {
+	id = 7772173
+	title = "Hyperinflation in $COUNTRY$"
+	desc = "EVTDESC7772173"
+	picture = "hyperinflation"
+	
+	major = yes
+	
+	trigger = {
+		NOT = { has_country_modifier = hyperinflation }
+		has_country_modifier = print_money
+		OR = { # Reckless spending despite having to print money to sustain costs, or war is going poorly
+			administration_spending = 0.75
+			war_exhaustion = 0.65
+		}
+	}
+	
+	option = {
+		name = "Our currency is becoming worthless!"
+		add_country_modifier = { name = hyperinflation duration = 3650 }
+	}
+}
