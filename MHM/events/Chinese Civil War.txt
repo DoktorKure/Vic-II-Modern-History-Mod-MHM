@@ -338,10 +338,26 @@ country_event = {
 		capital = 1577
 		war_exhaustion = 75
 		land_organization = -0.35
-		SXI = { country_event = 909011 }
-		SZC = { country_event = 909011 }
-		QHA = { country_event = 909011 }
-		YNN = { country_event = 909011 }
+		any_country = {
+			limit = { tag = SXI exists = yes }
+			SXI = { country_event = 90911 }
+		}
+		any_country = {
+			limit = { tag = SZC exists = yes }
+			SZC = { country_event = 90911 }
+		}
+		any_country = {
+			limit = { tag = QHA exists = yes }
+			QHA = { country_event = 90911 }
+		}
+		any_country = {
+			limit = { tag = YNN exists = yes }
+			YNN = { country_event = 90911 }
+		}
+		any_country = {
+			limit = { tag = GGX exists = yes }
+			GGX = { country_event = 90911 }
+		}
 	}
 }
 
@@ -377,15 +393,6 @@ country_event = {
 	option = {
 		name = "No compromise with the communists!"
 		prestige = 100
-		war = {
-			target = CHI
-			attacker_goal = {
-				casus_belli = annex_all_cores
-			}
-			defender_goal = {
-				casus_belli = civil_war
-			}
-		}
 		ai_chance = { factor = 0.7 }
 		modifier = { 
 			factor = 1 
@@ -410,7 +417,6 @@ country_event = {
 	trigger = {
 		tag = GGX
 		exists = yes
-		is_vassal = no
 		year = 1949
 		NOT = { year = 1952 }
 		KMT = { exists = yes war_with = CHI }
@@ -457,7 +463,7 @@ country_event = {
 		relation = { who = GGX value = -100 }
 		influence = { who = GGX value = -200 }
 		GGX = { end_war = CHI }
-		GGX = { country_event = 909011 }
+		GGX = { country_event = 90911 }
 		ai_chance = { factor = 0.1 }
 	}
 }
@@ -649,17 +655,32 @@ country_event = {
 		end_war = ETS
 		end_war = TIB
 		
-		#Releases the warlords
-		release_vassal = QHA
-		QHA = { end_war = CHI }
-		release_vassal = YNN
-		YNN = { end_war = CHI }
-		release_vassal = SXI
-		SXI = { end_war = CHI }
-		release_vassal = SZC
-		SZC = { end_war = CHI }
-		release_vassal = GGX
-		GGX = { end_war = CHI }
+		#Releases the warlords if they still exist and are vassals
+		any_country = {
+			limit = { tag = QHA exists = yes vassal_of = KMT }
+			KMT = { release_vassal = QHA }
+			QHA = { end_war = CHI country_event = 90909 }
+		}
+		any_country = {
+			limit = { tag = YNN exists = yes vassal_of = KMT }
+			KMT = { release_vassal = YNN }
+			YNN = { end_war = CHI country_event = 90909 }
+		}
+		any_country = {
+			limit = { tag = SXI exists = yes vassal_of = KMT }
+			KMT = { release_vassal = SXI }
+			SXI = { end_war = CHI country_event = 90909 }
+		}
+		any_country = {
+			limit = { tag = SZC exists = yes vassal_of = KMT }
+			KMT = { release_vassal = SZC }
+			SZC = { end_war = CHI country_event = 90909 }
+		}
+		any_country = {
+			limit = { tag = GGX exists = yes vassal_of = KMT }
+			KMT = { release_vassal = GGX }
+			GGX = { end_war = CHI country_event = 90909 }
+		}
 		
 		#Transfer provinces
 		any_owned = { 
