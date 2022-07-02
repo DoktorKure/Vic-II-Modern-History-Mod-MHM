@@ -1,0 +1,19 @@
+army = {
+	name = "KMT 1st Cavalry Division"
+	location = 1595
+	regiment = {
+		name= "Regiment nr1"
+		type = irregular
+		home = 1595
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = irregular
+		home = 1595
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = irregular
+		home = 1595
+	}
+}

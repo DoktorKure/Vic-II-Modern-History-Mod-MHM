@@ -1,4 +1,4 @@
-capital = 1594
+capital = 1600
 primary_culture = chinese
 culture = hui
 religion = secularism
@@ -49,6 +49,8 @@ social_service_reform = no_social_service
 consciousness = 8
 nonstate_consciousness = 8
 schools = army_tech_school
+
+oob = "/XIJ_oob.txt"
 
 1992.1.1 = {
 	capital = 1600
