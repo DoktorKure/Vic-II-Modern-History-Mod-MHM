@@ -591,6 +591,27 @@ country_event = {
 	}
 }
 
+#Hyperinflation
+country_event = {
+	id = 90919
+	title = "Hyperinflation in the Republic of China"
+	desc = "EVTDESC90919"
+	picture = "hyperinflation"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = KMT
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag }
+	}
+	
+	option = {
+		name = "Our currency is worthless..."
+		add_country_modifier = { name = hyperinflation duration = 3650 }
+	}
+}
+
 #The KMT flees to Taiwan - End the Chinese Civil War
 country_event = {
 	id = 90903
@@ -747,6 +768,8 @@ country_event = {
 	picture = "kmt_victory"
 	
 	fire_only_once = yes
+	
+	major = yes
 
 	trigger = {
 		tag = KMT
@@ -800,79 +823,6 @@ country_event = {
 		}
 	}
 
-}
-
-#Cede land to Shanxi Clique but only if they still exist
-country_event = {
-	id = 90912
-	title = "The Spoils of War"
-	desc = EVTDESC90912
-	picture = "shanxi_clique"
-	
-	fire_only_once = yes
-	
-	trigger = {
-		tag = KMT
-		SXI = {
-			exists = yes
-			has_unclaimed_cores = yes
-		}
-		has_global_flag = KMT_won_civil_war
-	}
-	
-	option = {
-		name = "We will deal with them another time, grant their demand."
-		prestige = 50
-		any_owned = { limit = { is_core = SXI } secede_province = SXI }
-		ai_chance = { factor = 0.8 }
-	}
-	
-	option = {
-		name = "We fought for that land, we will keep every inch of it!"
-		prestige = 100
-		badboy = 3
-		
-		#Shanxi gets pissed and breaks away
-		release_vassal = SXI
-		relation = { who = SXI value = -100 }
-		influence = { who = SXI value = -200 }
-		ai_chance = { factor = 0.1 }
-	}
-	
-	option = {
-		name = "The communists were just the first to fall!"
-		prestige = 250
-		badboy = 5
-		
-		#Release all KMT vassals as they realize what's about to happen
-		release_vassal = SXI
-		relation = { who = SXI value = -200 }
-		influence = { who = SXI value = -400 }
-		
-		release_vassal = QHA
-		relation = { who = QHA value = -200 }
-		influence = { who = QHA value = -400 }
-		
-		release_vassal = SZC
-		relation = { who = SZC value = -200 }
-		influence = { who = SZC value = -400 }
-		
-		release_vassal = YNN
-		relation = { who = YNN value = -200 }
-		influence = { who = YNN value = -400 }
-		
-		release_vassal = GGX
-		relation = { who = GGX value = -200 }
-		influence = { who = GGX value = -400 }
-		ai_chance = { factor = 0.1 }
-		
-		war = {
-			target = SXI
-			attacker_goal = { casus_belli = civil_war }
-			defender_goal = { casus_belli = annex_all_cores }
-			call_ally = yes
-		}
-	}
 }
 
 #US intervention in the Chinese Civil War

@@ -344,15 +344,24 @@ province_event = {
 	mean_time_to_happen = {
 		months = 365
 
-		#Decrease
+		#Decrease frequency
+		#Decrease frequency - espionage policy
 		modifier = {
 			factor = 4
 			owner = { has_country_modifier = spy_low }
 		}
 		modifier = {
+			factor = 8
+			owner = { has_country_modifier = spy_high_gp }
+		}
+		
+		#Decrease
+		modifier = {
 			factor = 4
 			owner = { has_country_modifier = refugee_ban }
 		}
+		
+		#Decrease
 		modifier = {
 			factor = 8
 			owner = { has_country_modifier = recent_terrorist_attack }

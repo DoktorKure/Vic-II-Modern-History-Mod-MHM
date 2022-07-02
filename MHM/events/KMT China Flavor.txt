@@ -313,7 +313,7 @@ country_event = {
 #Beginning of the Martial Law
 country_event = {
 	id = 8004000
-	title = "The White Terror"
+	title = "The New Chinese Constitution"
 	desc = EVTDESC1412001
 	picture = "white_terror"
 	
@@ -349,6 +349,8 @@ country_event = {
 		add_country_modifier = { name = kmt_white_terror duration = -1 }
 		add_country_modifier = { name = revolution_chaos duration = 5480 } # Ends in the early 60s
 		
+		social_reform = security_data_cohesion
+		
 		any_pop = { 
 			ideology = {
 				factor = 0.2
@@ -356,7 +358,7 @@ country_event = {
 			}
 		}
 		
-		any_pop = { # Liberals and Left-wingers hate this
+		any_pop = { # Liberals and Left-wingers hate this, right-wingers love this
 			scaled_consciousness = {
 				factor = 3
 				ideology = liberal
@@ -377,6 +379,18 @@ country_event = {
 				factor = 10
 				ideology = communist_social
 			}
+			scaled_consciousness = {
+				factor = -3
+				ideology = populist
+			}
+			scaled_consciousness = {
+				factor = -3
+				ideology = conservative
+			}
+			scaled_consciousness = {
+				factor = -5
+				ideology = nationalist
+			}
 			scaled_militancy = {
 				factor = 3
 				ideology = liberal
@@ -396,6 +410,18 @@ country_event = {
 			scaled_militancy = {
 				factor = 10
 				ideology = communist_social
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = populist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = conservative
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = nationalist
 			}
 		}
 		
@@ -410,6 +436,7 @@ country_event = {
 		government = democracy
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		set_global_flag = active_CCP_insurgency
+		set_country_flag = KMT_excludes_communists
 		
 		any_pop = { 
 			ideology = {
@@ -495,6 +522,7 @@ country_event = {
 		
 		government = democracy
 		add_country_modifier = { name = revolution_chaos duration = 1825 }
+		set_country_flag = KMT_allows_free_elections
 		
 		any_pop = { 
 			ideology = {
@@ -574,6 +602,96 @@ country_event = {
 		
 		ai_chance = { factor = 0.1 }
 	}
+
+	option = {
+		name = "This is a Chinese nation for the Chinese people!!"
+		
+		government = nationalist_dictatorship
+		ruling_party_ideology = nationalist
+		country_event = 800050
+		remove_accepted_culture = mongol
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		set_country_flag = KMT_fascist_faction
+		set_global_flag = active_CCP_insurgency
+		
+		any_pop = { 
+			ideology = {
+				factor = 0.15
+				value = communist
+			}
+		}
+		
+		any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } ideology = { factor = 0.35 value = communist } }
+		
+		any_pop = { # Liberals and Left-wingers hate this, right-wingers love this
+			scaled_consciousness = {
+				factor = 3
+				ideology = liberal
+			}
+			scaled_consciousness = {
+				factor = 3
+				ideology = progressive
+			}
+			scaled_consciousness = {
+				factor = 5
+				ideology = socialist
+			}
+			scaled_consciousness = {
+				factor = 10
+				ideology = communist
+			}
+			scaled_consciousness = {
+				factor = 10
+				ideology = communist_social
+			}
+			scaled_consciousness = {
+				factor = -3
+				ideology = populist
+			}
+			scaled_consciousness = {
+				factor = -3
+				ideology = conservative
+			}
+			scaled_consciousness = {
+				factor = -5
+				ideology = nationalist
+			}
+			scaled_militancy = {
+				factor = 3
+				ideology = liberal
+			}
+			scaled_militancy = {
+				factor = 3
+				ideology = progressive
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = socialist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = communist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = communist_social
+			}
+			scaled_militancy = {
+				factor = 5
+				ideology = populist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = conservative
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = nationalist
+			}
+		}
+		
+		ai_chance = { factor = 0 }
+	}
 	
 }
 
@@ -585,9 +703,15 @@ province_event = {
 
 	trigger = {
 
-		#Is the KMT
+		#Is the KMT and allied warlords
 		owner = {
-			tag = CHI
+			OR = {
+				tag = CHI
+				tag = SXI
+				tag = GGX
+				tag = YNN
+			}
+			exists = yes
 			NOT = { has_global_flag = 1950_start_date_flag }
 			NOT = { has_global_flag = 1992_start_date_flag }
 			NOT = { ruling_party_ideology = communist } # Mao isn't in charge
@@ -596,13 +720,29 @@ province_event = {
 			NOT = { has_country_flag = Mao_assassinated }
 		}
 
-		#Province is owned by the KMT
-		owned_by = CHI
-		controlled_by = CHI
-
+		#Province is owned by the KMT + Allied Warlords
+		OR = {
+			AND = {
+				owned_by = CHI
+				controlled_by = CHI
+			}
+			AND = {
+				owned_by = SXI
+				controlled_by = SXI
+			}
+			AND = {
+				owned_by = GGX
+				controlled_by = GGX
+			}
+			AND = {
+				owned_by = YNN
+				controlled_by = YNN
+			}
+		}
 		NOT = { country_units_in_province = CHI } # It's stupid for insurgents to attack head-on
 		NOT = { has_province_modifier = terrorist_chaos } # Insurgents don't attack same target twice in short time
 		NOT = { is_core = TIB } # No Communist presence in Tibet
+		NOT = { is_core = QHA } # Not much communist presence in Ma Clique either
 		NOT = { is_core = TAI } # Not in Taiwan either
 		NOT = { province_id = 1499 } # Not on Quemoy and Matsu Islands or Penghu Islands
 		NOT = { province_id = 2576 }
@@ -611,13 +751,17 @@ province_event = {
 	mean_time_to_happen = {
 		months = 365
 
-		#Decrease
+		#Decrease frequency - espionage policy
 		modifier = {
 			factor = 4
 			owner = { has_country_modifier = spy_low }
 		}
+		modifier = {
+			factor = 8
+			owner = { has_country_modifier = spy_high_gp }
+		}
 
-		#Increase - Unemployment
+		#Increase frequency - Unemployment
 		modifier = {
 			factor = 0.9
 			unemployment = 0.1
@@ -645,19 +789,19 @@ province_event = {
 
 		#Reduce based on reforms
 		modifier = {
-			factor = 1.25
+			factor = 2
 			owner = { security_reform = security_service }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 4
 			owner = { security_reform = security_data_cohesion }
 		}
 		modifier = {
-			factor = 2
+			factor = 6
 			owner = { security_reform = security_clearance_for_gov_services }
 		}
 		modifier = {
-			factor = 4
+			factor = 8
 			owner = { security_reform = preemptive_security_actions }
 		}
 
@@ -901,6 +1045,144 @@ country_event = { # Mao dies!
 	}
 }
 
+#Round 3 of KMT-CCP war
+country_event = {
+	id = 8004012
+	title = "A second communist revolution!"
+	desc = EVTDESC8004012
+	picture = "civil_war_nat"
+	
+	trigger = {
+		tag = CHI
+		has_global_flag = KMT_won_civil_war
+		has_global_flag = active_CCP_insurgency
+		NOT = { has_country_flag = Mao_assassinated }
+		year = 1950
+		NOT = { year = 1971 }
+		NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } } # It is illogical for communists to rise up against their own government
+		is_vassal = no
+		average_militancy = 8 # Ripe conditions for a revolt
+		#pop_majority_ideology = communist # Majority or plurality of pops are communist
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "Then let us have the war!"
+		clr_global_flag = active_CCP_insurgency
+		set_global_flag = third_KMT_CCP_war_fired
+		random_owned = {
+			limit = {
+				OR = { owned_by = CHI owned_by = SXI owned_by = YNN owned_by = GGX }
+				communist = 10
+				NOT = { province_id = 2221 }
+				NOT = { is_capital = yes }
+				NOT = { country_units_in_province = CHI }
+			}
+			secede_province = KMT
+		}
+		KMT = {
+			government = proletarian_dictatorship
+			ruling_party_ideology = communist
+			country_event = 800052
+		}
+		war = { 
+			target = KMT
+			attacker_goal = { casus_belli = civil_war } 
+			defender_goal = { casus_belli = civil_war } 
+		}
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Seek a compromise somewhere!"
+		clr_global_flag = active_CCP_insurgency
+		government = democracy
+		ruling_party_ideology = communist
+		country_event = 8004007
+		
+		#Warlords get spooked
+		random_country = {
+			limit = { is_our_vassal = THIS }
+			release_vassal = THIS
+			leave_alliance = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -200
+			}
+			relation = {
+				who = THIS
+				value = -100
+			}
+		}
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Give in to the communists..."
+		clr_global_flag = active_CCP_insurgency
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+		country_event = 800052
+		
+		#Warlords get spooked
+		random_country = {
+			limit = { is_our_vassal = THIS }
+			release_vassal = THIS
+			leave_alliance = THIS
+			diplomatic_influence = {
+				who = THIS
+				value = -400
+			}
+			relation = {
+				who = THIS
+				value = -200
+			}
+		}
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Round 3 of KMT-CCP war
+country_event = {
+	id = 8004021
+	title = "A second communist revolution!"
+	desc = EVTDESC8004021
+	picture = "civil_war_nat"
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	trigger = {
+		tag = KMT
+		has_global_flag = KMT_won_civil_war
+		has_global_flag = third_KMT_CCP_war_fired
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+		CHI = { exists = no } # Kuomintang lost the war
+		is_vassal = no
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = "At long last, the revolution has prevailed!"
+		clr_global_flag = active_CCP_insurgency
+		clr_global_flag = KMT_won_civil_war
+		set_global_flag = CHI_won_civil_war
+		capital = 1612 # Beijing
+		CHI = { government = proletarian_dictatorship } # So Red China gets the communist color upon tagswitch
+		change_tag = CHI
+		#Warlords get cleanup event
+		SXI = { country_event = 90909 }
+		SZC = { country_event = 90909 }
+		YNN = { country_event = 90909 }
+		GGX = { country_event = 90909 }
+		QHA = { country_event = 90909 }
+	}
+}
+
 #Tibetan Question
 country_event = {
   id = 8004005
@@ -1061,6 +1343,9 @@ country_event = {
 			is_possible_vassal = ETS
 			is_possible_vassal = IMN
 			is_possible_vassal = TAI
+			is_possible_vassal = SZC
+			is_possible_vassal = QHA
+			is_possible_vassal = SXI
 		}
 		
 	}
@@ -1075,11 +1360,6 @@ country_event = {
 		
 		add_country_modifier = { name = revolution_chaos duration = 7300 }
 		
-		CHI_1552 = { add_core = MCK }
-		RUS_2589 = { add_core = MCK }
-		CHI_1479 = { add_core = MCK }
-		RUS_1072 = { add_core = MCK }
-		
 		#Nationalist support rises
 		any_owned = { 
 			limit = { 
@@ -1093,8 +1373,11 @@ country_event = {
 					is_core = ETS
 					is_core = IMN 
 					is_core = TAI
-				} 
-			} 
+					is_core = SZC
+					is_core = QHA
+					is_core = SXI
+				}
+			}
 			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
 			any_pop = { militancy = 10 ideology = { factor = 0.25 value = nationalist } }
 		}
@@ -1109,13 +1392,11 @@ country_event = {
 		
 		#Nationalists are not happy
 		any_pop = { scaled_militancy = { factor = 10 ideology = conservative } scaled_militancy = { factor = 10 ideology = nationalist } }
-		
-		CHI_1552 = { add_core = MCK }
-		RUS_2589 = { add_core = MCK }
-		CHI_1479 = { add_core = MCK }
-		RUS_1072 = { add_core = MCK }
 
 		random_owned = { limit = { owner = { is_possible_vassal = FUJ } } owner = { release_vassal = FUJ diplomatic_influence = { who = FUJ value = 200 } FUJ = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = SXI } } owner = { release_vassal = SXI diplomatic_influence = { who = SXI value = 200 } SXI = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = SZC } } owner = { release_vassal = SZC diplomatic_influence = { who = SZC value = 200 } SZC = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = QHA } } owner = { release_vassal = QHA diplomatic_influence = { who = QHA value = 200 } QHA = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
 		random_owned = { limit = { owner = { is_possible_vassal = MCK } } owner = { release_vassal = MCK diplomatic_influence = { who = MCK value = 200 } MCK = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
 		random_owned = { limit = { owner = { is_possible_vassal = KWA } } owner = { release_vassal = KWA diplomatic_influence = { who = KWA value = 200 } KWA = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
 		random_owned = { limit = { owner = { is_possible_vassal = YNN } } owner = { release_vassal = YNN diplomatic_influence = { who = YNN value = 200 } YNN = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
@@ -1130,13 +1411,11 @@ country_event = {
 	
 	option = {
 		name = "Stick to the status quo!"
-		
-		CHI_1552 = { add_core = MCK }
-		RUS_2589 = { add_core = MCK }
-		CHI_1479 = { add_core = MCK }
-		RUS_1072 = { add_core = MCK }
 
 		random_owned = { limit = { owner = { is_possible_vassal = FUJ } } owner = { release = FUJ FUJ = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = FUJ attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
+		random_owned = { limit = { owner = { is_possible_vassal = SZC } } owner = { release = SZC SZC = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = SZC attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
+		random_owned = { limit = { owner = { is_possible_vassal = SXI } } owner = { release = SXI SXI = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = SXI attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
+		random_owned = { limit = { owner = { is_possible_vassal = QHA } } owner = { release = QHA QHA = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = QHA attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
 		random_owned = { limit = { owner = { is_possible_vassal = MCK } } owner = { release = MCK MCK = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = MCK attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
 		random_owned = { limit = { owner = { is_possible_vassal = KWA } } owner = { release = KWA KWA = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = KWA attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
 		random_owned = { limit = { owner = { is_possible_vassal = YNN } } owner = { release = YNN YNN = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = YNN attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
@@ -1177,6 +1456,7 @@ country_event = {
 	option = {
 		name = "Embrace full democracy!"
 		remove_country_modifier = kmt_white_terror
+		set_global_flag = democratic_KMT
 		
 		political_reform = free_opinion
 		political_reform = minorities_affirmative_action
@@ -1193,11 +1473,16 @@ country_event = {
 		election = yes
 
 		ai_chance = { factor = 0.2 }
+		modifier = {
+			factor = 1
+			has_country_flag = KMT_allows_free_elections
+		}
 	}
 
 	option = {
 		name = "Adopt a more reserved form of democracy."
 		remove_country_modifier = kmt_white_terror
+		set_global_flag = democratic_KMT
 
 		political_reform = open_opinion
 		political_reform = minorities_equal_rights
@@ -1220,6 +1505,7 @@ country_event = {
 	option = {
 		name = "Adopt a democracy that favours ourselves."
 		remove_country_modifier = kmt_white_terror
+		set_global_flag = democratic_KMT
 		
 		political_reform = regulated_opinion
 		political_reform = minorities_equal_rights
@@ -1236,6 +1522,10 @@ country_event = {
 		election = yes
 
 		ai_chance = { factor = 0.3 }
+		modifier = {
+			factor = 2
+			has_country_flag = KMT_excludes_communists
+		}
 	}
 
 }
@@ -1352,4 +1642,107 @@ country_event = {
 		ai_chance = { factor = 0.01 }
 	}
 	
+}
+
+#Cede land to Shanxi Clique but only if they still exist
+country_event = {
+	id = 90912
+	title = "The Spoils of War"
+	desc = EVTDESC90912
+	picture = "shanxi_clique"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHI
+		government = populist_dictatorship
+		ruling_party_ideology = conservative
+		SXI = {	exists = yes }
+		has_global_flag = KMT_won_civil_war
+		1612 = { owned_by = CHI }
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = "We will deal with them another time, grant their demand."
+		prestige = 50
+		any_owned = { limit = { is_core = SXI } secede_province = SXI }
+		ai_chance = { factor = 0.5 }
+	}
+	
+	option = {
+		name = "We fought for that land, we will keep every inch of it!"
+		prestige = 100
+		badboy = 3
+		
+		#Shanxi gets pissed and breaks away
+		release_vassal = SXI
+		relation = { who = SXI value = -100 }
+		influence = { who = SXI value = -200 }
+		ai_chance = { factor = 0.4 }
+	}
+	
+	option = {
+		name = "The communists were just the first to fall!"
+		prestige = 250
+		badboy = 5
+		
+		#Release all KMT vassals as they realize what's about to happen
+		release_vassal = SXI
+		relation = { who = SXI value = -200 }
+		influence = { who = SXI value = -400 }
+		
+		release_vassal = QHA
+		relation = { who = QHA value = -200 }
+		influence = { who = QHA value = -400 }
+		
+		release_vassal = SZC
+		relation = { who = SZC value = -200 }
+		influence = { who = SZC value = -400 }
+		
+		release_vassal = YNN
+		relation = { who = YNN value = -200 }
+		influence = { who = YNN value = -400 }
+		
+		release_vassal = GGX
+		relation = { who = GGX value = -200 }
+		influence = { who = GGX value = -400 }
+		
+		war = {
+			target = SXI
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = annex_all_cores }
+			call_ally = yes
+		}
+		
+		war = {
+			target = QHA
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = annex_all_cores }
+			call_ally = yes
+		}
+		
+		war = {
+			target = SZC
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = annex_all_cores }
+			call_ally = yes
+		}
+		
+		war = {
+			target = YNN
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = annex_all_cores }
+			call_ally = yes
+		}
+		
+		war = {
+			target = GGX
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = annex_all_cores }
+			call_ally = yes
+		}
+		ai_chance = { factor = 0.1 }
+	}
 }

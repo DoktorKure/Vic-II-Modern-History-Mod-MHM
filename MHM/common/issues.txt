@@ -914,16 +914,16 @@ social_reforms = {
 			}
 		}
 	}
-	security_reform = { # work_hours 
+	security_reform = { 
 		administrative = yes
 		next_step_only = yes
-		police = { # no_work_hour_limit
+		police = { # basic security
 		
 			allow = { 
 				NOT = { has_country_flag = gridlocked_legislature }
 			}
 		}
-		security_service = { # fourteen_hours
+		security_service = { # weak security
 			administrative_multiplier = 1
 			global_pop_militancy_modifier = -0.02
 			suppression_points_modifier = 0.10
@@ -932,7 +932,7 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 			}
 		}
-		security_data_cohesion = { # twelve_hours
+		security_data_cohesion = { # acceptable security
 			administrative_multiplier = 2
 			suppression_points_modifier = 0.20
 			global_pop_militancy_modifier = -0.04
@@ -942,7 +942,7 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 			}
 		}
-		security_clearance_for_gov_services = { # ten_hours
+		security_clearance_for_gov_services = { # good security
 			administrative_multiplier = 3
 			suppression_points_modifier = 0.30
 			global_pop_consciousness_modifier = -0.02
@@ -953,7 +953,7 @@ social_reforms = {
 			}
 			
 		}
-		preemptive_security_actions = { # eight_hours
+		preemptive_security_actions = { # excellent security
 			administrative_multiplier = 4
 			suppression_points_modifier = 0.40
 			global_pop_consciousness_modifier = -0.03

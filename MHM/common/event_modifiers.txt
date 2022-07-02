@@ -663,6 +663,25 @@ loan_interest = 0.5
 icon = 10
 }
 
+### Hyperinflation ###
+
+hyperinflation = {
+tax_efficiency = -0.25
+factory_owner_cost = 0.5
+factory_cost = 1
+import_cost = 1
+loan_interest = 1
+factory_output = -0.50
+factory_input = 0.50
+pop_militancy_modifier = 0.075
+poor_life_needs = 0.75
+middle_life_needs = 0.5
+rich_life_needs = 0.25
+immigrant_attract = -0.5
+immigrant_push = 0.5
+icon = 10
+}
+
 ### Soviet Stagnation ###
 
 soviet_stagnation_1 = {
