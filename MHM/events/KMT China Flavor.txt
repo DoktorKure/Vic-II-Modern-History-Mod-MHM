@@ -1102,18 +1102,25 @@ country_event = {
 		country_event = 8004007
 		
 		#Warlords get spooked
-		random_country = {
-			limit = { is_our_vassal = THIS }
-			release_vassal = THIS
-			leave_alliance = THIS
-			diplomatic_influence = {
-				who = THIS
-				value = -200
-			}
-			relation = {
-				who = THIS
-				value = -100
-			}
+		any_country = {
+			limit = { tag = SXI exists = yes vassal_of = CHI }
+			CHI = { release_vassal = SXI leave_alliance = SXI relation = { who = SXI value = -200 } diplomatic_influence = { who = SXI value = -400 } }
+		}
+		any_country = {
+			limit = { tag = QHA exists = yes vassal_of = CHI }
+			CHI = { release_vassal = QHA leave_alliance = QHA relation = { who = QHA value = -200 } diplomatic_influence = { who = QHA value = -400 } }
+		}
+		any_country = {
+			limit = { tag = SZC exists = yes vassal_of = CHI }
+			CHI = { release_vassal = SZC leave_alliance = SZC relation = { who = SZC value = -200 } diplomatic_influence = { who = SZC value = -400 } }
+		}
+		any_country = {
+			limit = { tag = GGX exists = yes vassal_of = CHI }
+			CHI = { release_vassal = GGX leave_alliance = GGX relation = { who = GGX value = -200 } diplomatic_influence = { who = GGX value = -400 } }
+		}
+		any_country = {
+			limit = { tag = YNN exists = yes vassal_of = CHI }
+			CHI = { release_vassal = YNN leave_alliance = YNN relation = { who = YNN value = -200 } diplomatic_influence = { who = YNN value = -400 } }
 		}
 		ai_chance = { factor = 0.1 }
 	}
@@ -1126,18 +1133,25 @@ country_event = {
 		country_event = 800052
 		
 		#Warlords get spooked
-		random_country = {
-			limit = { is_our_vassal = THIS }
-			release_vassal = THIS
-			leave_alliance = THIS
-			diplomatic_influence = {
-				who = THIS
-				value = -400
-			}
-			relation = {
-				who = THIS
-				value = -200
-			}
+		any_country = {
+			limit = { tag = SXI exists = yes vassal_of = CHI }
+			CHI = { release_vassal = SXI leave_alliance = SXI relation = { who = SXI value = -200 } diplomatic_influence = { who = SXI value = -400 } }
+		}
+		any_country = {
+			limit = { tag = QHA exists = yes vassal_of = CHI }
+			CHI = { release_vassal = QHA leave_alliance = QHA relation = { who = QHA value = -200 } diplomatic_influence = { who = QHA value = -400 } }
+		}
+		any_country = {
+			limit = { tag = SZC exists = yes vassal_of = CHI }
+			CHI = { release_vassal = SZC leave_alliance = SZC relation = { who = SZC value = -200 } diplomatic_influence = { who = SZC value = -400 } }
+		}
+		any_country = {
+			limit = { tag = GGX exists = yes vassal_of = CHI }
+			CHI = { release_vassal = GGX leave_alliance = GGX relation = { who = GGX value = -200 } diplomatic_influence = { who = GGX value = -400 } }
+		}
+		any_country = {
+			limit = { tag = YNN exists = yes vassal_of = CHI }
+			CHI = { release_vassal = YNN leave_alliance = YNN relation = { who = YNN value = -200 } diplomatic_influence = { who = YNN value = -400 } }
 		}
 		ai_chance = { factor = 0.1 }
 	}
@@ -1679,7 +1693,7 @@ country_event = {
 		#Shanxi gets pissed and breaks away
 		release_vassal = SXI
 		relation = { who = SXI value = -100 }
-		influence = { who = SXI value = -200 }
+		diplomatic_influence = { who = SXI value = -200 }
 		ai_chance = { factor = 0.4 }
 	}
 	
@@ -1689,60 +1703,36 @@ country_event = {
 		badboy = 5
 		
 		#Release all KMT vassals as they realize what's about to happen
-		release_vassal = SXI
-		relation = { who = SXI value = -200 }
-		influence = { who = SXI value = -400 }
-		
-		release_vassal = QHA
-		relation = { who = QHA value = -200 }
-		influence = { who = QHA value = -400 }
-		
-		release_vassal = SZC
-		relation = { who = SZC value = -200 }
-		influence = { who = SZC value = -400 }
-		
-		release_vassal = YNN
-		relation = { who = YNN value = -200 }
-		influence = { who = YNN value = -400 }
-		
-		release_vassal = GGX
-		relation = { who = GGX value = -200 }
-		influence = { who = GGX value = -400 }
-		
-		war = {
-			target = SXI
-			attacker_goal = { casus_belli = civil_war }
-			defender_goal = { casus_belli = annex_all_cores }
-			call_ally = yes
+		any_country = {
+			limit = { tag = SXI exists = yes vassal_of = CHI }
+			CHI = { release_vassal = SXI leave_alliance = SXI relation = { who = SXI value = -200 } diplomatic_influence = { who = SXI value = -400 } }
+		}
+		any_country = {
+			limit = { tag = QHA exists = yes vassal_of = CHI }
+			CHI = { release_vassal = QHA leave_alliance = QHA relation = { who = QHA value = -200 } diplomatic_influence = { who = QHA value = -400 } }
+		}
+		any_country = {
+			limit = { tag = SZC exists = yes vassal_of = CHI }
+			CHI = { release_vassal = SZC leave_alliance = SZC relation = { who = SZC value = -200 } diplomatic_influence = { who = SZC value = -400 } }
+		}
+		any_country = {
+			limit = { tag = GGX exists = yes vassal_of = CHI }
+			CHI = { release_vassal = GGX leave_alliance = GGX relation = { who = GGX value = -200 } diplomatic_influence = { who = GGX value = -400 } }
+		}
+		any_country = {
+			limit = { tag = YNN exists = yes vassal_of = CHI }
+			CHI = { release_vassal = YNN leave_alliance = YNN relation = { who = YNN value = -200 } diplomatic_influence = { who = YNN value = -400 } }
 		}
 		
-		war = {
-			target = QHA
-			attacker_goal = { casus_belli = civil_war }
-			defender_goal = { casus_belli = annex_all_cores }
-			call_ally = yes
+		SXI = {
+			war = {
+				target = CHI
+				attacker_goal = { casus_belli = annex_all_cores }
+				defender_goal = { casus_belli = civil_war }
+				call_ally = no
+			}
 		}
 		
-		war = {
-			target = SZC
-			attacker_goal = { casus_belli = civil_war }
-			defender_goal = { casus_belli = annex_all_cores }
-			call_ally = yes
-		}
-		
-		war = {
-			target = YNN
-			attacker_goal = { casus_belli = civil_war }
-			defender_goal = { casus_belli = annex_all_cores }
-			call_ally = yes
-		}
-		
-		war = {
-			target = GGX
-			attacker_goal = { casus_belli = civil_war }
-			defender_goal = { casus_belli = annex_all_cores }
-			call_ally = yes
-		}
 		ai_chance = { factor = 0.1 }
 	}
 }
