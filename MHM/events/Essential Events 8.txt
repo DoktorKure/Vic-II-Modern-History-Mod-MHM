@@ -5994,9 +5994,6 @@ NOT = { year = 1990 }
 option = {
 name = "The Generalissimo will prevail!"
 activate_technology = cold_war_doctrine
-activate_technology = proxy_war
-activate_technology = guerrilla
-activate_technology = heavy_tanks
 activate_technology = post_war_radar
 activate_technology = infantry
 		}
