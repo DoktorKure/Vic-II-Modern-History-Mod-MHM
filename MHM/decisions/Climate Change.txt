@@ -5,6 +5,7 @@ political_decisions = {
 		potential = {
 			has_global_flag = paris_deal
 			NOT = { has_country_modifier = climate_denial }
+			NOT = { has_global_flag = climate_change_disabled }
 		}
 		allow = {
 			OR = {
@@ -15,19 +16,16 @@ political_decisions = {
 				ruling_party_ideology = communist_social
 			}
 		}
-
 		effect = {
 			add_country_modifier = { name = climate_denial duration = -1 }
 			remove_country_modifier = green_1
 			remove_country_modifier = green_2
 			remove_country_modifier = green_3
 			remove_country_modifier = green_4
-
 			any_owned = { 
 				limit = { OR = { trade_goods = natural_gas trade_goods = petroleum } }
 				add_province_modifier = { name = denial_production_province duration = -1 }
 			}
-
 		}
 		ai_will_do = {
 			factor = 1
@@ -38,8 +36,8 @@ political_decisions = {
 		picture = "climate_denial"
 		potential = {
 			has_country_modifier = climate_denial
+			NOT = { has_global_flag = climate_change_disabled }
 		}
-
 		allow = {
 			NOT = { 
 				OR = {
@@ -51,21 +49,16 @@ political_decisions = {
 				} 
 			}
 		}
-
 		effect = {
 			remove_country_modifier = climate_denial
-
 			any_owned = { 
 				limit = { has_province_modifier = denial_production_province }
 				remove_province_modifier = denial_production_province 
 			}
-
 		}
-
 		ai_will_do = {
 			factor = 1
 		}
-
 	}
 
 	join_ipcc = {
@@ -75,6 +68,7 @@ political_decisions = {
 			is_vassal = no
 			NOT = { has_country_modifier = ipcc_member }
 			NOT = { badboy = 1 }
+			NOT = { has_global_flag = climate_change_disabled }
 		}
 		allow = {
 			war = no
@@ -96,6 +90,7 @@ political_decisions = {
 			has_global_flag = montreal_start # 1987
 			NOT = { has_country_modifier = montreal_protocol }
 			NOT = { badboy = 1 }
+			NOT = { has_global_flag = climate_change_disabled }
 		}
 		allow = {
 			war = no
@@ -115,9 +110,9 @@ political_decisions = {
 		potential = {
 			international_science = 1 # 1990
 			any_owned_province = { has_province_modifier = exportfocus }
-			
 			has_global_flag = kyoto_protocol
 			NOT = { has_country_modifier = kyoto_protocol }
+			NOT = { has_global_flag = climate_change_disabled }
 		}
 		allow = {
 			war = no
@@ -125,13 +120,11 @@ political_decisions = {
 		}
 		effect = {
 			prestige = 5
-
 			#Add pollution reform
 			random_owned = {
 				limit = { owner = { pollution = no_controls } }
 				owner = { social_reform = trinket_envir }
 			}
-
 			add_country_modifier = { name = kyoto_protocol duration = -1 }
 		}
 		ai_will_do = { 
@@ -174,24 +167,21 @@ political_decisions = {
 			has_global_flag = paris_deal
 			year = 2015
 			NOT = { has_country_modifier = paris_climate_deal }
+			NOT = { has_global_flag = climate_change_disabled }
 		}
 		allow = {
 			war = no
 			election = no
-			
 			OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = big_tent ruling_party_ideology = socialist is_greater_power = yes }
-			
 			social_networking = 1 #2020
 		}
 		effect = {
 			prestige = 10
-
 			#Add pollution reform
 			random_owned = {
 				limit = { owner = { OR = { pollution = no_controls pollution = trinket_envir } } }
 				owner = { social_reform = low_envir }
 			}
-
 			add_country_modifier = { name = paris_climate_deal duration = -1 }
 		}
 		ai_will_do = { 
@@ -203,22 +193,17 @@ political_decisions = {
 		picture = "new_climate_deal"
 		potential = {
 			is_greater_power = yes
-			
 			has_country_modifier = paris_climate_deal
 			has_global_flag = paris_deal
-			
 			any_greater_power = { NOT = { OR = { pollution = acceptable_envir pollution = good_envir } } }
-			
 			OR = { any_owned_province = { has_province_modifier = one_degree } any_owned_province = { has_province_modifier = two_degree } }
-			
 			NOT = { has_country_modifier = new_climate_deal_timer }
+			NOT = { has_global_flag = climate_change_disabled }
 		}
 		allow = {
 			war = no
 			election = no
-			
 			OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = big_tent ruling_party_ideology = socialist }
-			
 			genetically_modified_organism = 1 #2025
 		}
 		effect = {
@@ -234,22 +219,17 @@ political_decisions = {
 		picture = "new_climate_deal"
 		potential = {
 			is_greater_power = yes
-			
 			has_country_modifier = paris_climate_deal
 			has_global_flag = paris_deal
-			
 			any_greater_power = { NOT = { pollution = good_envir } }
-
 			OR = { any_owned_province = { has_province_modifier = three_degree } any_owned_province = { has_province_modifier = four_point_five_degree } }
-
 			NOT = { has_country_modifier = new_climate_deal_timer }
+			NOT = { has_global_flag = climate_change_disabled }
 		}
 		allow = {
 			war = no
 			election = no
-			
 			OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = big_tent ruling_party_ideology = socialist }
-
 			political_polarization = 1 #2030
 		}
 		effect = {
