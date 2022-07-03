@@ -1246,6 +1246,7 @@ country_event = {
 		prestige = -100
 		badboy = -5
 		create_vassal = TIB
+		TIB = { government = absolute_monarchy ruling_party_ideology = traditionalist }
 		THIS = { diplomatic_influence = { who = TIB value = 200 } }
 		any_owned = { limit = { is_core = TIB } secede_province = TIB }
 		
