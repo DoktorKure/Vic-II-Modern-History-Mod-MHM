@@ -6681,6 +6681,17 @@ ethnic_cleansing = {
 	icon = 18
 }
 
+population_replacement = { 
+	global_immigrant_attract = -1
+	non_accepted_pop_consciousness_modifier = 0.2
+	non_accepted_pop_militancy_modifier = 0.15
+	tax_efficiency = -0.05
+	administrative_efficiency_modifier = -0.1
+	badboy = 0.05
+	suppression_points_modifier = 0.25
+	icon = 18
+}
+
 geno_cooldown = {
 	non_accepted_pop_consciousness_modifier = 0.2
 	non_accepted_pop_militancy_modifier = 0.2
