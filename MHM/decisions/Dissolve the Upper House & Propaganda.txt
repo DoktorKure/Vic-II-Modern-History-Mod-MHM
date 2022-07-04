@@ -61,10 +61,8 @@ add_country_modifier = { name = national_confusion duration = 1095 }
 		}
 		
 		allow = {
-			plurality = 8
 			money = 250000
-			literacy = 0.15
-		NOT = { has_country_modifier = government_propaganda }
+			NOT = { has_country_modifier = government_propaganda }
 			NOT = { has_country_modifier = war_propaganda }
 			OR = {
 				vote_franschise = none_voting
@@ -73,7 +71,6 @@ add_country_modifier = { name = national_confusion duration = 1095 }
 		}
 		
 		effect = {
-			plurality = -8
 			treasury = -250000
 			country_event = 201902
 			set_country_flag = propaganda_program
