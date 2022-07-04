@@ -125,7 +125,7 @@ political_decisions = {
 				minorities_reform = minorities_oppression
 			}
 			NOT = { has_country_flag = population_replacement_underway }
-			NOT = { has_country_modifier = population_replacement }
+			NOT = { has_country_modifier = population_replacement_modifier }
 			#Not already doing a hard genocide
 			NOT = { has_country_flag = ethnic_cleansed }
 			NOT = { has_country_modifier = ethnic_cleansing }
@@ -145,33 +145,28 @@ political_decisions = {
 						citizenship_policy = residency
 						has_recently_lost_war = yes
 					}
-					AND = { 
+					AND = {
 						average_militancy = 9 
 						citizenship_policy = residency
 						revolt_percentage = 0.80 
 					}
-					AND = { 
+					AND = {
 						jingoism = 24
 						citizenship_policy = residency
 						war = yes
 					}
 				}
 			}
-			NOT = { has_country_modifier = pop_replacement_cooldown }
+			NOT = { has_country_modifier = geno_cooldown }
 		}
 
 		effect = {
 			set_country_flag = population_replacement_underway
-			add_country_modifier = { name = population_replacement duration = -1 }
+			add_country_modifier = { name = population_replacement_modifier duration = -1 }
 			add_country_modifier = { name = geno_cooldown duration = 365 }
 			country_event = 15120371
 		}
-		ai_will_do = { 
-			factor = 1
-			modifier = { badboy = 1 war = no factor = 0 }
-			modifier = { tag = SAF factor = 0 }
-			modifier = { OR = { tag = RWA tag = RSR tag = SRK tag = SER tag = CRO tag = BOS } factor = 1 } 
-		}
+		ai_will_do = { factor = 0 }
 	}
 	
 	end_population_replacement = {
@@ -179,7 +174,7 @@ political_decisions = {
 		potential = {
 			OR = { 
 				has_country_flag = population_replacement_underway
-				has_country_modifier = population_replacement
+				has_country_modifier = population_replacement_modifier
 			}
 		}
 
@@ -204,7 +199,7 @@ political_decisions = {
 
 		effect = {
 			clr_country_flag = population_replacement_underway
-			remove_country_modifier = population_replacement
+			remove_country_modifier = population_replacement_modifier
 			clr_country_flag = discovered_genocide 
 			clr_country_flag = discovered_genocide1
 		}

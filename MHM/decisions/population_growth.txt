@@ -28,10 +28,14 @@ political_decisions = {
 			#Must have money to spend
 			money = 100000
 
-			#Traditionalist, nationalist, populist, communist governments with either nationalist, traditionalist, populist, or communist pop majority ideologies only
-			OR = { ruling_party_ideology = traditionalist ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = communist ruling_party_ideology = communist_social }
-			OR = { pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist pop_majority_ideology = communist pop_majority_ideology = communist_social }
-			
+			#Right-wing ruling parties with right-wing ideologies only for AI countries
+			OR = {
+				ai = no
+				AND = {
+					OR = { ruling_party_ideology = traditionalist ruling_party_ideology = nationalist ruling_party_ideology = populist }
+					OR = { pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist }
+				}
+			}
 			#AI
 			OR = {
 				ai = no
@@ -50,13 +54,13 @@ political_decisions = {
 			#Less than 5% higher education
 			random_owned = {
 				limit = { owner = { NOT = { literacy = 0.05 } } }
-				owner = { add_country_modifier = { name = natalism_1 duration = 1825 } }
+				owner = { add_country_modifier = { name = natalism_5 duration = 1825 } }
 			}
 			
 			#5-10% higher education
 			random_owned = {
 				limit = { owner = { literacy = 0.05 NOT = { literacy = 0.10 } } }
-				owner = { add_country_modifier = { name = natalism_2 duration = 1825 } }
+				owner = { add_country_modifier = { name = natalism_4 duration = 1825 } }
 			}
 			
 			#10-15% higher education
@@ -68,13 +72,13 @@ political_decisions = {
 			#15-20% higher education
 			random_owned = {
 				limit = { owner = { literacy = 0.15 NOT = { literacy = 0.20 } } }
-				owner = { add_country_modifier = { name = natalism_4 duration = 1825 } }
+				owner = { add_country_modifier = { name = natalism_2 duration = 1825 } }
 			}
 			
 			#20%+ higher education
 			random_owned = {
 				limit = { owner = { literacy = 0.20 } }
-				owner = { add_country_modifier = { name = natalism_5 duration = 1825 } }
+				owner = { add_country_modifier = { name = natalism_1 duration = 1825 } }
 			}
 		
 			#Accepted pops are happy
@@ -85,37 +89,6 @@ political_decisions = {
 			
 			#Oppressed pops are not happy
 			any_pop = { limit = { NOT = { is_culture_group = THIS } } consciousness = 5 militancy = 5 }
-			
-			#Pops become more socialist
-			any_pop = {
-				limit = { 
-					strata = middle
-					NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } 
-				}
-				ideology = { factor = 0.025 value = socialist }
-			}
-			any_pop = {
-				limit = { 
-					strata = poor 
-					NOT = { OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } 
-				}
-				ideology = { factor = 0.05 value = socialist }
-			}
-			
-			any_pop = {
-				limit = { 
-					strata = middle
-					OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
-				}
-				ideology = { factor = 0.025 value = communist }
-			}
-			any_pop = {
-				limit = { 
-					strata = poor 
-					OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social }
-				}
-				ideology = { factor = 0.05 value = communist }
-			}
 			
 			#Decision comes with education reforms
 			random_owned = {

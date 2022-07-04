@@ -6681,7 +6681,7 @@ ethnic_cleansing = {
 	icon = 18
 }
 
-population_replacement = { 
+population_replacement_modifier = {
 	global_immigrant_attract = -1
 	non_accepted_pop_consciousness_modifier = 0.2
 	non_accepted_pop_militancy_modifier = 0.15
@@ -6696,6 +6696,13 @@ geno_cooldown = {
 	non_accepted_pop_consciousness_modifier = 0.2
 	non_accepted_pop_militancy_modifier = 0.2
 	suppression_points_modifier = 0.1
+	icon = 12
+}
+
+pop_replacement_event_cooldown = {
+	non_accepted_pop_consciousness_modifier = 0.1
+	non_accepted_pop_militancy_modifier = 0.1
+	suppression_points_modifier = 0.05
 	icon = 12
 }
 
