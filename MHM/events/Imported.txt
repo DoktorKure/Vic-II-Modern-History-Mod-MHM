@@ -14,6 +14,7 @@ country_event = {
 
 	option = {
 		name = "We welcome our new vassals"
+		clr_country_flag = new_overlord
 		any_country = {
 			limit = {
 				exists = yes

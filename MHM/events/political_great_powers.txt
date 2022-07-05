@@ -799,6 +799,7 @@ country_event = {
 		#Create vassal
 		FROM = { create_vassal = THIS }
 		overlord = { diplomatic_influence = { who = THIS value = 200 } }
+		clr_country_flag = transfer_to_new_overlord
 
 		###### Modifiers Blocked for Vassals ######
 		
