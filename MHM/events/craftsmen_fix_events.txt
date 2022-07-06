@@ -20,21 +20,12 @@ country_event = {
 					OR = {
 						type = craftsmen
 						type = soldiers
+						type = officers
+						type = bureaucrats
 					}
                 }
                 pop_type = farmers
             }
-			any_pop = {
-				limit = {
-					is_primary_culture = no
-					is_accepted_culture = no
-					OR = {
-						type = officers
-						type = bureaucrats
-					}
-				}
-				all_core = { assimilate = yes }	
-			}
         }
     }
 }
