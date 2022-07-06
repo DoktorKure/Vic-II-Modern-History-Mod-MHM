@@ -19,13 +19,22 @@ country_event = {
                     is_accepted_culture = no
 					OR = {
 						type = craftsmen
-						type = bureaucrats
 						type = soldiers
-						type = officers
 					}
                 }
                 pop_type = farmers
             }
+			any_pop = {
+				limit = {
+					is_primary_culture = no
+					is_accepted_culture = no
+					OR = {
+						type = officers
+						type = bureaucrats
+					}
+				}
+				all_core = { assimilate = yes }	
+			}
         }
     }
 }
@@ -53,6 +62,15 @@ country_event = {
                     unemployment = 0.99
                 }
                 pop_type = labourers
+            }
+            any_pop = {
+                limit = {
+                    is_primary_culture = no
+                    is_accepted_culture = no
+					type = labourers
+                    unemployment = 0.99
+                }
+                pop_type = farmers
             }
         }
     }
