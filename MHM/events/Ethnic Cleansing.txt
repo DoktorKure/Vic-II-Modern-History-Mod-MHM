@@ -119,7 +119,7 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 
 	option = {
-		name = "Focus on the homeland (10% chance of discovery)"
+		name = "Focus on resettling our cores! (10% chance of discovery)"
 		add_country_modifier = { name = pop_replacement_event_cooldown duration = 185 } #To prevent event spam
 		
 		#Simulate population decline among non-accepteds
@@ -128,11 +128,11 @@ country_event = {
 			20 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
 			65 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
 		}
-		#Simulate population growth among primary cultures
+		#Simulate major population growth among primary cultures, but only in areas where they're not already the majority to prevent massive overpopulation too quickly
 		random_list = {
-			15 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = yes } } reduce_pop = 1.01 } }
-			20 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = yes } } reduce_pop = 1.025 } }
-			65 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = yes } } reduce_pop = 1.001 } }
+			15 = { any_pop = { limit = { location = { is_core = THIS is_primary_culture = no } AND = { is_primary_culture = yes } } reduce_pop = 1.5 } }
+			20 = { any_pop = { limit = { location = { is_core = THIS is_primary_culture = no } AND = { is_primary_culture = yes } } reduce_pop = 1.25 } }
+			65 = { any_pop = { limit = { location = { is_core = THIS is_primary_culture = no } AND = { is_primary_culture = yes } } reduce_pop = 1.1 } }
 		}
 
 		#Discovery Chance
@@ -150,7 +150,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Focus on the colonies (5% chance of discovery)"
+		name = "Focus on the colonies! (5% chance of discovery)"
 		add_country_modifier = { name = pop_replacement_event_cooldown duration = 185 } #To prevent event spam
 
 		#Simulate population decline among non-accepteds
@@ -159,11 +159,11 @@ country_event = {
 			20 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
 			65 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
 		}
-		#Simulate population growth among primary cultures
+		#Simulate major population growth among primary cultures, but only in areas where they're not already the majority to prevent massive overpopulation too quickly
 		random_list = {
-			15 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = yes } } reduce_pop = 1.5 } }
-			20 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = yes } } reduce_pop = 1.25 } }
-			65 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = yes } } reduce_pop = 1.1 } }
+			15 = { any_pop = { limit = { location = { is_colonial = yes is_primary_culture = no } AND = { is_primary_culture = yes } } reduce_pop = 1.5 } }
+			20 = { any_pop = { limit = { location = { is_colonial = yes is_primary_culture = no } AND = { is_primary_culture = yes } } reduce_pop = 1.25 } }
+			65 = { any_pop = { limit = { location = { is_colonial = yes is_primary_culture = no } AND = { is_primary_culture = yes } } reduce_pop = 1.1 } }
 		}
 
 		#Discovery Chance
@@ -185,7 +185,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Focus on non-core areas (15% chance of discovery)"
+		name = "Focus on non-core areas! (15% chance of discovery)"
 		add_country_modifier = { name = pop_replacement_event_cooldown duration = 185 } #To prevent event spam
 
 		#Simulate population decline among non-accepteds
@@ -194,11 +194,11 @@ country_event = {
 			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
 			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
 		}
-		#Simulate population growth among primary cultures
+		#Simulate major population growth among primary cultures, but only in areas where they're not already the majority to prevent massive overpopulation too quickly
 		random_list = {
-			15 = { any_pop = { limit = { location = { NOT = { is_core = THIS } } is_primary_culture = yes } reduce_pop = 1.5 } }
-			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS } } is_primary_culture = yes } reduce_pop = 1.25 } }
-			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS } } is_primary_culture = yes } reduce_pop = 1.1 } }
+			15 = { any_pop = { limit = { location = { NOT = { is_core = THIS } is_primary_culture = no } is_primary_culture = yes } reduce_pop = 1.5 } }
+			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS } is_primary_culture = no } is_primary_culture = yes } reduce_pop = 1.25 } }
+			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS } is_primary_culture = no } is_primary_culture = yes } reduce_pop = 1.1 } }
 		}
 
 		#Discovery Chance
@@ -230,11 +230,11 @@ country_event = {
 			20 = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
 			65 = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
 		}
-		#Simulate population growth among primary cultures
+		#Simulate major population growth among primary cultures, but only in areas where they're not already the majority to prevent massive overpopulation too quickly
 		random_list = {
-			15 = { any_pop = { limit = { is_primary_culture = yes } reduce_pop = 1.01 } }
-			20 = { any_pop = { limit = { is_primary_culture = yes } reduce_pop = 1.005 } }
-			65 = { any_pop = { limit = { is_primary_culture = yes } reduce_pop = 1.001 } }
+			15 = { any_pop = { limit = { location = { is_primary_culture = no } is_primary_culture = yes } reduce_pop = 1.5 } }
+			20 = { any_pop = { limit = { location = { is_primary_culture = no } is_primary_culture = yes } reduce_pop = 1.25 } }
+			65 = { any_pop = { limit = { location = { is_primary_culture = no } is_primary_culture = yes } reduce_pop = 1.1 } }
 		}
 
 		#Discovery Chance
