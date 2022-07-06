@@ -77,10 +77,10 @@ country_event = {
 
 		#Randomised Killing rates
 		random_list = {
-			15 = { any_pop = { limit = { location = { is_core = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
-			15 = { any_pop = { limit = { location = { is_core = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
-			20 = { any_pop = { limit = { location = { is_core = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
-			50 = { any_pop = { limit = { location = { is_core = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+			15 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
+			15 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
+			20 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
+			50 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
 		}
 
 		#Discovery Chance
@@ -98,7 +98,7 @@ country_event = {
 			factor = 0.2 
 			modifier = {
 				factor = 1
-				NOT = { any_owned_province = { is_colonial = yes is_core = no } }
+				NOT = { any_owned_province = { is_colonial = yes NOT = { is_core = THIS } } }
 			}
 		}
 	}
@@ -124,15 +124,15 @@ country_event = {
 		
 		#Simulate population decline among non-accepteds
 		random_list = {
-			15 = { any_pop = { limit = { location = { is_core = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
-			20 = { any_pop = { limit = { location = { is_core = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
-			65 = { any_pop = { limit = { location = { is_core = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
+			15 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
+			20 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+			65 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
 		}
 		#Simulate population growth among primary cultures
 		random_list = {
-			15 = { any_pop = { limit = { location = { is_core = yes } AND = { is_primary_culture = yes } } reduce_pop = 1.1 } }
-			20 = { any_pop = { limit = { location = { is_core = yes } AND = { is_primary_culture = yes } } reduce_pop = 1.075 } }
-			65 = { any_pop = { limit = { location = { is_core = yes } AND = { is_primary_culture = yes } } reduce_pop = 1.05 } }
+			15 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = yes } } reduce_pop = 1.01 } }
+			20 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = yes } } reduce_pop = 1.025 } }
+			65 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = yes } } reduce_pop = 1.001 } }
 		}
 
 		#Discovery Chance
@@ -161,9 +161,9 @@ country_event = {
 		}
 		#Simulate population growth among primary cultures
 		random_list = {
-			15 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = yes } } reduce_pop = 1.1 } }
-			20 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = yes } } reduce_pop = 1.075 } }
-			65 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = yes } } reduce_pop = 1.05 } }
+			15 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = yes } } reduce_pop = 1.5 } }
+			20 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = yes } } reduce_pop = 1.25 } }
+			65 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = yes } } reduce_pop = 1.1 } }
 		}
 
 		#Discovery Chance
@@ -185,7 +185,43 @@ country_event = {
 	}
 
 	option = {
-		name = "Focus on the entire nation (15% chance of discovery)"
+		name = "Focus on non-core areas (15% chance of discovery)"
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 185 } #To prevent event spam
+
+		#Simulate population decline among non-accepteds
+		random_list = {
+			15 = { any_pop = { limit = { location = { NOT = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
+			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
+		}
+		#Simulate population growth among primary cultures
+		random_list = {
+			15 = { any_pop = { limit = { location = { NOT = { is_core = THIS } } is_primary_culture = yes } reduce_pop = 1.5 } }
+			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS } } is_primary_culture = yes } reduce_pop = 1.25 } }
+			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS } } is_primary_culture = yes } reduce_pop = 1.1 } }
+		}
+
+		#Discovery Chance
+		random = {
+			chance = 15
+			prestige_factor = -0.05
+			badboy = 5
+			set_country_flag = discovered_genocide
+		}
+
+		#Event to notify everyone if discovered
+		random_owned = { limit = { owner = { has_country_flag = discovered_genocide NOT = { has_country_flag = discovered_genocide1 } } } owner = { set_country_flag = discovered_genocide1 country_event = 1410080 } }
+
+		ai_chance = { 
+			factor = 0.1 
+			modifier = { factor = 0 
+			NOT = { any_owned_province = { is_colonial = yes } } }
+			any_owned_province = { is_core = no }
+		}
+	}
+
+	option = {
+		name = "Focus on the entire nation (20% chance of discovery)"
 		add_country_modifier = { name = pop_replacement_event_cooldown duration = 185 } #To prevent event spam
 
 		#Simulate population decline among non-accepteds
@@ -196,14 +232,14 @@ country_event = {
 		}
 		#Simulate population growth among primary cultures
 		random_list = {
-			15 = { any_pop = { limit = { is_primary_culture = yes } reduce_pop = 1.1 } }
-			20 = { any_pop = { limit = { is_primary_culture = yes } reduce_pop = 1.075 } }
-			65 = { any_pop = { limit = { is_primary_culture = yes } reduce_pop = 1.05 } }
+			15 = { any_pop = { limit = { is_primary_culture = yes } reduce_pop = 1.01 } }
+			20 = { any_pop = { limit = { is_primary_culture = yes } reduce_pop = 1.005 } }
+			65 = { any_pop = { limit = { is_primary_culture = yes } reduce_pop = 1.001 } }
 		}
 
 		#Discovery Chance
 		random = {
-			chance = 35
+			chance = 20
 			prestige_factor = -0.05
 			badboy = 5
 			set_country_flag = discovered_genocide
@@ -213,8 +249,8 @@ country_event = {
 		random_owned = { limit = { owner = { has_country_flag = discovered_genocide NOT = { has_country_flag = discovered_genocide1 } } } owner = { set_country_flag = discovered_genocide1 country_event = 1410080 } }
 
 		ai_chance = { 
-			factor = 0.2 
-			modifier = { factor = 0 
+			factor = 0.1 
+			modifier = { factor = 1 
 			NOT = { any_owned_province = { is_colonial = yes is_core = no } } } 
 		}
 	}
