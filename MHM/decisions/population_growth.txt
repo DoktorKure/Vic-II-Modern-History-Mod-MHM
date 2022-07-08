@@ -15,6 +15,7 @@ political_decisions = {
 			
 			#Cannot have a pop boom on top of another pop boom
 			NOT = { has_country_modifier = baby_boom }
+			NOT = { has_country_modifier = industrial_pop_boom }
 		}
 
 		allow = {
@@ -51,33 +52,33 @@ political_decisions = {
 
 		effect = {
 			
-			#Less than 5% higher education
+			#Less than 10% higher education
 			random_owned = {
-				limit = { owner = { NOT = { literacy = 0.05 } } }
+				limit = { owner = { NOT = { literacy = 0.10 } } }
 				owner = { add_country_modifier = { name = natalism_5 duration = 1825 } }
 			}
 			
-			#5-10% higher education
+			#10-20% higher education
 			random_owned = {
-				limit = { owner = { literacy = 0.05 NOT = { literacy = 0.10 } } }
+				limit = { owner = { literacy = 0.10 NOT = { literacy = 0.20 } } }
 				owner = { add_country_modifier = { name = natalism_4 duration = 1825 } }
 			}
 			
-			#10-15% higher education
+			#20-30% higher education
 			random_owned = {
-				limit = { owner = { literacy = 0.10 NOT = { literacy = 0.15 } } }
+				limit = { owner = { literacy = 0.20 NOT = { literacy = 0.30 } } }
 				owner = { add_country_modifier = { name = natalism_3 duration = 1825 } }
 			}
 			
-			#15-20% higher education
+			#30-40% higher education
 			random_owned = {
-				limit = { owner = { literacy = 0.15 NOT = { literacy = 0.20 } } }
+				limit = { owner = { literacy = 0.30 NOT = { literacy = 0.40 } } }
 				owner = { add_country_modifier = { name = natalism_2 duration = 1825 } }
 			}
 			
-			#20%+ higher education
+			#40%+ higher education
 			random_owned = {
-				limit = { owner = { literacy = 0.20 } }
+				limit = { owner = { literacy = 0.40 } }
 				owner = { add_country_modifier = { name = natalism_1 duration = 1825 } }
 			}
 		
