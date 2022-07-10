@@ -117,9 +117,7 @@ political_decisions = {
 			war = no
 		}
 
-		effect = {
-			capital_scope = {  add_province_modifier = { name = single_market duration = -1 } }
-		}
+		effect = { capital_scope = {  add_province_modifier = { name = single_market duration = -1 } } }
 
 		ai_will_do = { factor = 1 }
 
@@ -148,9 +146,7 @@ political_decisions = {
 			war = no
 		}
 
-		effect = {
-			capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } }
-		}
+		effect = { capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } } }
 
 		ai_will_do = { factor = 1 } 
 
@@ -178,9 +174,7 @@ political_decisions = {
 			war = no
 			commodities_and_credit = 1
 		}
-		effect = {
-			all_core = { add_core = XIO }
-		}
+		effect = { all_core = { add_core = XIO } }
 		ai_will_do = { factor = 1 } 
 	}
 	xio_defence_union = {
@@ -205,9 +199,7 @@ political_decisions = {
 			age_of_protests = 1
 	
 		}
-		effect = {
-			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
-		}
+		effect = { capital_scope = { add_province_modifier = { name = defence_union duration = -1 } } }
 		ai_will_do = { factor = 1 } 
 	}
 
@@ -240,15 +232,11 @@ political_decisions = {
 		}
 		effect = {
 			prestige = 20
-			all_core = {
-				add_core = XIO
-			}
+			all_core = { add_core = XIO }
 			change_tag = XIO
 			add_accepted_culture = indian
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	xio_enlarge_union = {
@@ -259,11 +247,9 @@ political_decisions = {
             XIO = { 
 				any_core = { 
 					owner = { 
-						NOT = { tag = THIS}
-						OR = { 
-							in_sphere = THIS 
-							vassal_of = THIS
-						} 
+						NOT = { tag = THIS }
+						OR = { in_sphere = THIS vassal_of = THIS }
+						OR = { is_vassal = no vassal_of = THIS }
 						has_country_flag = xio_ambition
 						NOT = { has_country_modifier = rejected_union }
 					}
@@ -290,8 +276,9 @@ political_decisions = {
 				limit = {
 					has_country_flag = xio_ambition
 					OR = { vassal_of = THIS in_sphere = THIS }
+					OR = { is_vassal = no vassal_of = THIS }
 				}
-			country_event = 11106
+				country_event = 11106
 			}
 		}
 

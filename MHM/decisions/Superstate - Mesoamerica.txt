@@ -89,9 +89,7 @@ political_decisions = {
 			capitalism = 1
 			war = no
 		}
-		effect = {
-			capital_scope = {  add_province_modifier = { name = single_market duration = -1 } }
-		}
+		effect = { capital_scope = {  add_province_modifier = { name = single_market duration = -1 } } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -110,9 +108,7 @@ political_decisions = {
 			election = no
 			war = no
 		}
-		effect = {
-			capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } }
-		}
+		effect = { capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } } }
 		ai_will_do = { factor = 1 } 
 	}
 
@@ -121,7 +117,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { is_core = XME } }
-			OR = { tag = MEX tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ tag = XCI}
+			OR = { tag = MEX tag = HON tag = GUA tag = ELS tag = COS tag = PNM tag = NIC tag = BLZ tag = XCI }
 		}
 		allow = {
 			has_country_flag = xme_ambition
@@ -131,9 +127,7 @@ political_decisions = {
 			war = no
 			commodities_and_credit = 1
 		}
-		effect = {
-			all_core = { add_core = XME }
-		}
+		effect = { all_core = { add_core = XME } }
 		ai_will_do = { factor = 1 }
 	}
 	
@@ -153,9 +147,7 @@ political_decisions = {
 			age_of_protests = 1
 			#has_unclaimed_cores = no
 		}
-		effect = {
-			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
-		}
+		effect = { capital_scope = { add_province_modifier = { name = defence_union duration = -1 } } }
 		ai_will_do = { factor = 1 } 
 	}
 
@@ -181,9 +173,7 @@ political_decisions = {
 		}
 		effect = {
 			prestige = 20
-			all_core = {
-				add_core = XME
-			}
+			all_core = { add_core = XME }
 			change_tag = XME
 			add_accepted_culture = mestizo
 		}
@@ -195,7 +185,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			tag = XME
-			any_neighbor_country = { has_country_flag = xme_ambition in_sphere = THIS NOT = { has_country_modifier = rejected_union } } 
+			any_neighbor_country = { has_country_flag = xme_ambition OR = { is_vassal = no vassal_of = THIS } OR = { vassal_of = THIS in_sphere = THIS } NOT = { has_country_modifier = rejected_union } } 
 		}
 		allow = {
 			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
@@ -205,7 +195,7 @@ political_decisions = {
             war = no
 		}
 		effect = {
-			any_neighbor_country = { limit = { has_country_flag = xme_ambition OR = { vassal_of = THIS in_sphere = THIS } } country_event = 11106 }
+			any_neighbor_country = { limit = { has_country_flag = xme_ambition OR = { is_vassal = no vassal_of = THIS } OR = { vassal_of = THIS in_sphere = THIS } } country_event = 11106 }
 		}
 		ai_will_do = { factor = 1 }
 	}

@@ -200,9 +200,7 @@ political_decisions = {
 			election = no
 			war = no
 		}
-		effect = {
-			capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } }
-		}
+		effect = { capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } } }
 		ai_will_do = { factor = 1 } 
 	}
 
@@ -234,9 +232,7 @@ political_decisions = {
 			war = no
 			commodities_and_credit = 1
 		}
-		effect = {
-			all_core = { add_core = XMU }
-		}
+		effect = { all_core = { add_core = XMU } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -266,11 +262,8 @@ political_decisions = {
 			election = no
 			war = no
 			age_of_protests = 1
-			#has_unclaimed_cores = no
 		}
-		effect = {
-			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
-		}
+		effect = { capital_scope = { add_province_modifier = { name = defence_union duration = -1 } } }
 		ai_will_do = { factor = 1 } 
 	}
 
@@ -332,9 +325,7 @@ political_decisions = {
 			add_accepted_culture = arab
 			add_accepted_culture = persian
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	xmu_enlarge_union = {
@@ -362,14 +353,8 @@ political_decisions = {
 					NOT = { owned_by = THIS }
 					owner = {
 						war = no
-						OR = {
-							in_sphere = THIS
-							vassal_of = THIS
-						}
-						OR = {
-							is_vassal = no
-							vassal_of = THIS
-						}
+						OR = { in_sphere = THIS vassal_of = THIS }
+						OR = { is_vassal = no vassal_of = THIS }
 						has_country_flag = xmu_ambition
 						NOT = { has_country_modifier = rejected_union }
 					}
@@ -381,14 +366,8 @@ political_decisions = {
 				limit = {
 					exists = yes
 					war = no
-					OR = {
-						in_sphere = THIS
-						vassal_of = THIS
-					}
-					OR = {
-						is_vassal = no
-						vassal_of = THIS
-					}
+					OR = { in_sphere = THIS vassal_of = THIS }
+					OR = { is_vassal = no vassal_of = THIS }
 					has_country_flag = xmu_ambition
 					NOT = { has_country_modifier = rejected_union }
 				}

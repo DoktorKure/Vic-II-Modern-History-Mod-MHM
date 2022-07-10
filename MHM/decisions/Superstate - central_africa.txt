@@ -179,9 +179,7 @@ political_decisions = {
 			age_of_protests = 1
 			#has_unclaimed_cores = no
 		}
-		effect = {
-			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
-		}
+		effect = { capital_scope = { add_province_modifier = { name = defence_union duration = -1 } } }
 		ai_will_do = { factor = 1 } 
 	}
 
@@ -225,7 +223,8 @@ political_decisions = {
 				any_core = { 
 					owner = { 
 						NOT = { tag = THIS }
-						OR = { in_sphere = THIS vassal_of = THIS } 
+						OR = { in_sphere = THIS vassal_of = THIS }
+						OR = { is_vassal = no vassal_of = THIS }
 						has_country_flag = xec_ambition
 						NOT = { has_country_modifier = rejected_union }
 					}
@@ -244,8 +243,9 @@ political_decisions = {
 				limit = {
 					has_country_flag = xec_ambition
 					OR = { vassal_of = THIS in_sphere = THIS }
+					OR = { is_vassal = no vassal_of = THIS }
 				}
-			country_event = 11106
+				country_event = 11106
 			}
 		}
 		ai_will_do = { factor = 1 }

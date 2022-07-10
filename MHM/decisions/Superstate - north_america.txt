@@ -92,9 +92,7 @@ political_decisions = {
 			capitalism = 1
 			war = no
 		}
-		effect = {
-			capital_scope = {  add_province_modifier = { name = single_market duration = -1 } }
-		}
+		effect = { capital_scope = {  add_province_modifier = { name = single_market duration = -1 } } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -113,9 +111,7 @@ political_decisions = {
 			election = no
 			war = no
 		}
-		effect = {
-			capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } }
-		}
+		effect = { capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } } }
 		ai_will_do = { factor = 1 } 
 	}
 
@@ -135,9 +131,7 @@ political_decisions = {
 			war = no
 			commodities_and_credit = 1
 		}
-		effect = {
-			all_core = { add_core = XNA }
-		}
+		effect = { all_core = { add_core = XNA } }
 		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
 	}
 	
@@ -157,9 +151,7 @@ political_decisions = {
 			age_of_protests = 1
 			#has_unclaimed_cores = no
 		}
-		effect = {
-			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
-		}
+		effect = { capital_scope = { add_province_modifier = { name = defence_union duration = -1 } } }
 		ai_will_do = { factor = 1 } 
 	}
 
@@ -188,21 +180,16 @@ political_decisions = {
 		}
 		effect = {
 			prestige = 20
-			all_core = {
-				add_core = XNA
-			}
+			all_core = { add_core = XNA }
 			change_tag = XNA
 			add_accepted_culture = mestizo
-			add_accepted_culture = mesoamerican_white_spanish
-			add_accepted_culture = american_spanish
+			add_accepted_culture = white_spanish
 			add_accepted_culture = white_anglo
 			add_accepted_culture = black_anglo
 			add_accepted_culture = anglo_canadian
 			add_accepted_culture = french_canadian
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	xna_enlarge_union = {
@@ -210,10 +197,10 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			tag = XNA
-			any_neighbor_country = { has_country_flag = xna_ambition in_sphere = THIS NOT = { has_country_modifier = rejected_union } }
+			any_neighbor_country = { has_country_flag = xna_ambition OR = { is_vassal = no vassal_of = THIS } OR = { vassal_of = THIS in_sphere = THIS } NOT = { has_country_modifier = rejected_union } }
 		}
 		allow = {
-			OR = { government = democracy government = democracy1 government = hms_government1 }
+			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
 			election = no
 			is_greater_power = yes
 			political_polarization = 1
@@ -225,16 +212,15 @@ political_decisions = {
 			any_neighbor_country = { 
 				limit = { 
 					has_country_flag = xna_ambition 
-					OR = { vassal_of = THIS in_sphere = THIS } 
+					OR = { vassal_of = THIS in_sphere = THIS }
+					OR = { is_vassal = no vassal_of = THIS }
 				} 
 				country_event = 11106 
 			}
 			
 			add_country_modifier = { name = relations_timer duration = 30 }
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	xna_enlarge_union_gp = {
@@ -282,9 +268,7 @@ political_decisions = {
 			add_country_modifier = { name = relations_timer duration = 30 }
 		}
 		
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 }
