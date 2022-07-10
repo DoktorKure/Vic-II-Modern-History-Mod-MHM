@@ -2067,6 +2067,7 @@ political_decisions = {
 			607 = { add_core = FRA }
 			609 = { add_core = FRA }
 			608 = { add_core = FRA }
+			3361 = { add_core = FRA }
 		}
 
 	}
@@ -2129,6 +2130,7 @@ political_decisions = {
 						province_id = 607
 						province_id = 609
 						province_id = 608
+						province_id = 3361
 					}
 				}
 				remove_core = THIS
@@ -2190,6 +2192,7 @@ political_decisions = {
 			412 = { add_core = GER }
 			409 = { add_core = GER }
 			410 = { add_core = GER }
+			3361 = { add_core = GER }
 		}
 
 	}
@@ -2248,6 +2251,7 @@ political_decisions = {
 						province_id = 412
 						province_id = 409
 						province_id = 410
+						province_id = 3361
 					}
 				}
 				remove_core = THIS
