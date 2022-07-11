@@ -26,6 +26,8 @@ political_decisions = {
 			wars_of_national_liberation = 1
 
 			has_recently_lost_war = no
+
+			OR = { ai = no money = 2000000 }
 			
 			OR = { part_of_sphere = no is_secondary_power = yes }
 
@@ -86,10 +88,14 @@ political_decisions = {
 			has_recently_lost_war = no
 
 			is_disarmed = no
+
+			OR = { ai = no money = 2000000 }
 			
 			OR = { part_of_sphere = no is_secondary_power = yes is_greater_power = yes }
 
-			OR = { 
+			OR = {
+				ruling_party_ideology = nationalist
+				ruling_party_ideology = populist
 				ruling_party_ideology = socialist 
 				ruling_party_ideology = communist
 				ruling_party_ideology = communist_social

@@ -170,7 +170,6 @@ political_decisions = {
 				government = hms_government1
 			}
 			election = no
-			
 			war = no
 			commodities_and_credit = 1
 		}
@@ -197,7 +196,6 @@ political_decisions = {
 			election = no
 			war = no
 			age_of_protests = 1
-	
 		}
 		effect = { capital_scope = { add_province_modifier = { name = defence_union duration = -1 } } }
 		ai_will_do = { factor = 1 } 
@@ -249,7 +247,7 @@ political_decisions = {
 					owner = { 
 						NOT = { tag = THIS }
 						OR = { in_sphere = THIS vassal_of = THIS }
-						OR = { is_vassal = no vassal_of = THIS }
+						OR = { vassal_of = THIS is_vassal = no }
 						has_country_flag = xio_ambition
 						NOT = { has_country_modifier = rejected_union }
 					}
@@ -275,15 +273,12 @@ political_decisions = {
 			random_country = {
 				limit = {
 					has_country_flag = xio_ambition
-					OR = { vassal_of = THIS in_sphere = THIS }
-					OR = { is_vassal = no vassal_of = THIS }
+					OR = { in_sphere = THIS vassal_of = THIS }
+					OR = { vassal_of = THIS is_vassal = no }
 				}
 				country_event = 11106
 			}
 		}
-
 		ai_will_do = { factor = 1 }
-
 	}
-
 }

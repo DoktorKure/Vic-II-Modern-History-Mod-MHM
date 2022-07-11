@@ -166,10 +166,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			
-			#Has XEA ambitions
 			has_country_flag = xea_ambition
-			
 			OR = { capital_scope = { continent = europe } capital_scope = { continent = asia } capital_scope = { continent = mena } }
 		}
 		allow = {
@@ -194,10 +191,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			
-			#Has XEA ambitions
 			has_country_flag = xea_ambition
-			
 			OR = { capital_scope = { continent = europe } capital_scope = { continent = asia } capital_scope = { continent = mena } }
 		}
 		allow = {
@@ -224,10 +218,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { is_core = XEA } }
-			
-			#Has XEA ambitions
 			has_country_flag = xea_ambition
-			
 			OR = { capital_scope = { continent = europe } capital_scope = { continent = asia } capital_scope = { continent = mena } }
 		}
 		allow = {
@@ -242,12 +233,11 @@ political_decisions = {
 				government = socialist_democracy
 			}
 			election = no
-			#has_unclaimed_cores = no
 			war = no
 			age_of_protests = 1
 		}
 		effect = { all_core = { add_core = XEA } }
-		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 }
+		ai_will_do = { factor = 1 }
 	}
 
 	xea_defence_union = {
@@ -285,10 +275,8 @@ political_decisions = {
 		}
 		
 		allow = {
-		
 			#Not during the Cold War
 			NOT = { has_global_flag = blocsenabled }
-
 			has_country_flag = xea_ambition
 			tech_school = XEA_tech_school
 			capital_scope = { has_province_modifier = defence_union } 
@@ -300,7 +288,6 @@ political_decisions = {
 				government = proletarian_dictatorship1
 				government = socialist_democracy
 			}
-
 			election = no
 			is_greater_power = yes
 			political_polarization = 1
@@ -309,11 +296,7 @@ political_decisions = {
 				any_core = {
 					owner = {
 						war = no
-						OR = {
-							tag = THIS
-							in_sphere = THIS
-							vassal_of = THIS
-						}
+						OR = { tag = THIS in_sphere = THIS vassal_of = THIS }
 						has_country_flag = xea_ambition
 					}
 				}
@@ -350,7 +333,8 @@ political_decisions = {
 			any_neighbor_country = {
 				has_country_flag = xea_ambition
 				is_greater_power = no
-				OR = { is_vassal = no vassal_of = THIS }
+				OR = { vassal_of = THIS in_sphere = THIS }
+				OR = { vassal_of = THIS is_vassal = no }
 				NOT = {
 					OR = {
 						tag = XEA 
@@ -364,7 +348,7 @@ political_decisions = {
 			election = no
 			is_greater_power = yes
 			political_polarization = 1
-            		war = no
+            war = no
 		}
 		
 		effect = {
@@ -372,7 +356,8 @@ political_decisions = {
 				limit = {
 					exists = yes
 					has_country_flag = xea_ambition
-					OR = { is_vassal = no vassal_of = THIS }
+					OR = { vassal_of = THIS in_sphere = THIS }
+					OR = { vassal_of = THIS is_vassal = no }
 					NOT = {
 						is_greater_power = yes
 						tag = XEA
@@ -417,7 +402,7 @@ political_decisions = {
 			election = no
 			is_greater_power = yes 
 			political_polarization = 1
-            war = no
+            		war = no
 		}
 		
 		effect = {
@@ -425,6 +410,8 @@ political_decisions = {
 			add_country_modifier = { name = xea_enlarge_union_gp duration = 3500 }
 		}
 		
-		ai_will_do = { factor = 1 }
+		ai_will_do = {
+			factor = 1
+		}
 	}		
 }

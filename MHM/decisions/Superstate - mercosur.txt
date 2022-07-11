@@ -7,7 +7,7 @@ political_decisions = {
 		picture = "xms_ambition"
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
-			OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ }
+			 OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ }
 			NOT = { has_country_flag = xms_ambition } 
 		}
 		allow = {
@@ -15,7 +15,7 @@ political_decisions = {
 			NOT = { has_country_modifier = in_bankrupcy } 
 			OR = { part_of_sphere = no sphere_owner = { OR = { has_country_flag = xms_ambition NOT = { has_country_flag = deny_superstate } } } }
 			OR = { government = democracy1 government = democracy government = hms_government government = hms_government1 government = socialist_democracy ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
-			NOT = { government = proletarian_dictatorship }
+			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			bank_for_international_settlements = 1
 			war = no
 			NOT = { exists = XSU }
@@ -49,9 +49,8 @@ political_decisions = {
 		}
 		allow = {
 			OR = { 
-				AND = { part_of_sphere = yes sphere_owner = { 
-				NOT = { has_country_flag = xms_ambition } has_country_flag = deny_superstate } }
-				OR = { government = proletarian_dictatorship NOT = { OR = { government = democracy1 government = democracy government = hms_government government = hms_government1 government = socialist_democracy ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } }
+				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xms_ambition } has_country_flag = deny_superstate } }
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 NOT = { OR = { government = democracy1 government = democracy government = hms_government government = hms_government1 government = socialist_democracy ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } } }
 				has_country_modifier = in_bankrupcy
 				exists = XSU exists = XAC
 			}
@@ -91,13 +90,11 @@ political_decisions = {
 		allow = {
 			has_country_flag = xms_ambition
 			OR = { government = democracy1 government = democracy government = hms_government government = hms_government1 government = socialist_democracy ruling_party_ideology = socialist ruling_party_ideology = communist_social }
-			NOT = { government = proletarian_dictatorship }
+			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			capitalism = 1
 			war = no
 		}
-		effect = {
-			capital_scope = {  add_province_modifier = { name = single_market duration = -1 } }
-		}
+		effect = { capital_scope = {  add_province_modifier = { name = single_market duration = -1 } } }
 		ai_will_do = { factor = 1 }
 	}
 
@@ -112,14 +109,12 @@ political_decisions = {
 			has_country_flag = xms_ambition
 			capital_scope = { has_province_modifier = single_market }
 			OR = { government = democracy1 government = democracy government = hms_government government = hms_government1 government = socialist_democracy ruling_party_ideology = socialist ruling_party_ideology = communist_social }
-			NOT = { government = proletarian_dictatorship }
+			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			economic_globalization = 1
 			election = no
 			war = no
 		}
-		effect = {
-			capital_scope = { add_province_modifier = { name = currency_union_province duration = -1 } }
-		}
+		effect = { capital_scope = { add_province_modifier = { name = currency_union_province duration = -1 } } }
 		ai_will_do = { factor = 1 } 
 	}
 
@@ -134,15 +129,13 @@ political_decisions = {
 			has_country_flag = xms_ambition
 			capital_scope = { has_province_modifier = currency_union_province }
 			OR = { government = democracy1 government = democracy government = hms_government government = hms_government1 government = socialist_democracy ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
-			NOT = { government = proletarian_dictatorship }
+			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			election = no
 			war = no
 			commodities_and_credit = 1
 		}
-		effect = {
-			all_core = { add_core = XMS }
-		}
-		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
+		effect = { all_core = { add_core = XMS } }
+		ai_will_do = { factor = 1 }
 	}
 	xms_defence_union = {
 		picture = "defence_union"
@@ -155,14 +148,12 @@ political_decisions = {
 			has_country_flag = xms_ambition
 			capital_scope = { is_core = XMS }
 			OR = { government = democracy1 government = democracy government = hms_government government = hms_government1 government = socialist_democracy ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
-			NOT = { government = proletarian_dictatorship }
+			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			election = no
 			war = no
 			age_of_protests = 1
 		}
-		effect = {
-			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
-		}
+		effect = { capital_scope = { add_province_modifier = { name = defence_union duration = -1 } } }
 		ai_will_do = { factor = 1 } 
 	}
 
@@ -178,9 +169,9 @@ political_decisions = {
 		}
 		allow = {
 			has_country_flag = xms_ambition
-			capital_scope = { has_province_modifier = defence_union } 
+			capital_scope = { has_province_modifier = defence_union }
 			OR = { government = democracy1 government = democracy government = hms_government government = hms_government1 government = socialist_democracy ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
-			NOT = { government = proletarian_dictatorship }
+			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			election = no
 			is_greater_power = yes
 			political_polarization = 1
@@ -189,9 +180,7 @@ political_decisions = {
 		}
 		effect = {
 			prestige = 20
-			all_core = {
-				add_core = XMS
-			}
+			all_core = { add_core = XMS }
 			change_tag = XMS
 			add_accepted_culture = white_portuguese
 			add_accepted_culture = black_spanish
@@ -201,9 +190,7 @@ political_decisions = {
 			add_accepted_culture = platinean_white_spanish
 			add_accepted_culture = andean_white_spanish
 		}
-		ai_will_do = {
-			factor = 1
-		}
+		ai_will_do = { factor = 1 }
 	}
 	
 	xms_enlarge_union = {
@@ -211,22 +198,17 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			tag = XMS
-			any_neighbor_country = { OR = { vassal_of = THIS is_vassal = no } has_country_flag = xms_ambition in_sphere = THIS NOT = { has_country_modifier = rejected_union } }
+			any_neighbor_country = { has_country_flag = xms_ambition OR = { vassal_of = THIS in_sphere = THIS } OR = { vassal_of = THIS is_vassal = no } NOT = { has_country_modifier = rejected_union } }
 		}
 		allow = {
-
 			OR = { government = democracy1 government = democracy government = hms_government government = hms_government1 government = socialist_democracy ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
-			NOT = { government = proletarian_dictatorship }
+			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			election = no
 			is_greater_power = yes
 			political_polarization = 1
             war = no
 		}
-		effect = {
-			any_neighbor_country = { limit = { OR = { vassal_of = THIS is_vassal = no } has_country_flag = xms_ambition OR = { vassal_of = THIS in_sphere = THIS } } country_event = 11106 }
-		}
-		ai_will_do = {
-			factor = 1
-		}
+		effect = { any_neighbor_country = { limit = { has_country_flag = xms_ambition OR = { vassal_of = THIS in_sphere = THIS } OR = { vassal_of = THIS is_vassal = no } } country_event = 11106 } }
+		ai_will_do = { factor = 1 }
 	}		
 }

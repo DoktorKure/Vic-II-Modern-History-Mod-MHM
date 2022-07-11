@@ -8,7 +8,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			bank_for_international_settlements = 1
-			OR = { tag = BUR tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG }
+			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
 			NOT = { has_country_flag = xan_ambition } 
 		}
 
@@ -19,7 +19,7 @@ political_decisions = {
 				part_of_sphere = no 
 				sphere_owner = { OR = { has_country_flag = xan_ambition NOT = { has_country_flag = deny_superstate } } }
 			}
-			OR = { government = socialist_democracy government = democracy government = democracy1 government = hms_government government = hms_government1 government = presidential_dictatorship government = absolute_monarchy }
+			NOT = { OR = { government = theocracy government = nationalist_dictatorship government = populist_dictatorship } }
 			new_synthesis = 1
 			war = no
 			is_vassal = no
@@ -38,7 +38,7 @@ political_decisions = {
 					factor = 3
 				}
 			}
-			tech_school = XAN_tech_school			
+			tech_school = XAN_tech_school
 		}
 
 		ai_will_do = { factor = 1 }
@@ -55,9 +55,9 @@ political_decisions = {
 		}
 
 		allow = {
-			OR = { 
+			OR = {
 				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xan_ambition } has_country_flag = deny_superstate } }
-				NOT = { OR = { government = socialist_democracy government = democracy government = democracy1 government = hms_government government = hms_government1 government = presidential_dictatorship government = absolute_monarchy } }
+				OR = { government = theocracy government = nationalist_dictatorship government = populist_dictatorship }
 				has_country_modifier = in_bankrupcy
 			}
 			war = no
@@ -94,7 +94,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			OR = { tag = SWK tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG }
+			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
 		}
 
 		allow = {
@@ -115,7 +115,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			OR = { tag = SWK tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG }
+			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
 		}
 
 		allow = {
@@ -127,7 +127,9 @@ political_decisions = {
 			NOT = { OR = { ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist } }
 		}
 
-		effect = { capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } } }
+		effect = {
+			capital_scope = {  add_province_modifier = { name = currency_union_province duration = -1 } }
+		}
 
 		ai_will_do = { factor = 1 } 
 
@@ -138,7 +140,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { is_core = XAN } }
-			OR = { tag = SWK tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG }
+			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
 		}
 
 		allow = {
@@ -161,7 +163,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			OR = { tag = SWK tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG }
+			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
 		}
 
 		allow = {
@@ -187,7 +189,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			XAN = { exists = no }
-			OR = { tag = SWK tag = BUR tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG }
+			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
 		}
 
 		allow = {
@@ -197,15 +199,11 @@ political_decisions = {
 			is_greater_power = yes
 			political_polarization = 1
             war = no
-            XAN = {
-				any_core = {
-					owner = {
+            XAN = { 
+				any_core = { 
+					owner = { 
 						war = no 
-						OR = {
-							tag = THIS 
-							in_sphere = THIS 
-							vassal_of = THIS
-						}
+						OR = { tag = THIS in_sphere = THIS vassal_of = THIS } 
 						has_country_flag = xan_ambition 
 					}
 				}
@@ -241,8 +239,7 @@ political_decisions = {
 					owner = { 
 						NOT = { tag = THIS }
 						NOT = { OR = { ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist } }
-						OR = { government = socialist_democracy government = democracy government = democracy1 government = hms_government government = hms_government1 government = presidential_dictatorship government = absolute_monarchy }
-						OR = { in_sphere = THIS vassal_of = THIS } 
+						OR = { in_sphere = THIS vassal_of = THIS }
 						OR = { vassal_of = THIS is_vassal = no }
 						has_country_flag = xan_ambition
 						NOT = { has_country_modifier = rejected_union }
@@ -265,7 +262,7 @@ political_decisions = {
 					OR = { vassal_of = THIS in_sphere = THIS }
 					OR = { vassal_of = THIS is_vassal = no }
 					NOT = { OR = { ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist } }
-				}
+				} 
 				country_event = 11106
 			}
 		}

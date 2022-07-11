@@ -6,7 +6,7 @@ political_decisions = {
 	xtc_ambition = {
 		picture = "xtc_ambition"
 		potential = {
-NOT = { has_country_flag = hide_superstate }
+			NOT = { has_country_flag = hide_superstate }
 			NOT = { exists = XEA } OR = { tag = TUR tag = KAZ tag = KYR tag = TKR tag = UZB tag = AZB }
 			NOT = { has_country_flag = xtc_ambition } 
 		}
@@ -44,9 +44,8 @@ NOT = { has_country_flag = hide_superstate }
 			has_country_flag = xtc_ambition
 		}
 		allow = {
-			OR = { 
-				AND = { part_of_sphere = yes sphere_owner = { 
-				NOT = { has_country_flag = xtc_ambition } has_country_flag = deny_superstate } }
+			OR = {
+				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xtc_ambition } has_country_flag = deny_superstate } }
 				NOT = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } }
 				has_country_modifier = in_bankrupcy
 			}
@@ -128,8 +127,9 @@ NOT = { has_country_flag = hide_superstate }
 			commodities_and_credit = 1
 		}
 		effect = { all_core = { add_core = XTC } }
-		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
+		ai_will_do = { factor = 1 }
 	}
+
 	xtc_defence_union = {
 		picture = "defence_union"
 		potential = {
@@ -191,7 +191,7 @@ NOT = { has_country_flag = hide_superstate }
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			tag = XTC
-			any_neighbor_country = { has_country_flag = xtc_ambition OR = { vassal_of = THIS is_vassal = no } { vassal_of = THIS in_sphere = THIS } NOT = { has_country_modifier = rejected_union } }
+			any_neighbor_country = { has_country_flag = xtc_ambition OR = { vassal_of = THIS in_sphere = THIS } OR = { vassal_of = THIS is_vassal = no } NOT = { has_country_modifier = rejected_union } }
 		}
 		allow = {
 			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
@@ -201,7 +201,7 @@ NOT = { has_country_flag = hide_superstate }
             war = no
 		}
 		effect = {
-			any_neighbor_country = { limit = { has_country_flag = xtc_ambition OR = { vassal_of = THIS is_vassal = no } OR = { vassal_of = THIS in_sphere = THIS } } country_event = 11106 }
+			any_neighbor_country = { limit = { has_country_flag = xtc_ambition OR = { vassal_of = THIS in_sphere = THIS } OR = { vassal_of = THIS is_vassal = no } } country_event = 11106 }
 		}
 		ai_will_do = { factor = 1 }
 	}		

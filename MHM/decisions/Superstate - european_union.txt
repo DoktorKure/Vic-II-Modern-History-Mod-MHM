@@ -278,7 +278,10 @@ political_decisions = {
 			commodities_and_credit = 1
 		}
 		
-		effect = { all_core = { add_core = XEU } add_accepted_culture = european }
+		effect = {
+			all_core = { add_core = XEU }
+			add_accepted_culture = european
+		}
 		
 		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 }
 	}
@@ -305,7 +308,6 @@ political_decisions = {
 			election = no
 			war = no
 			age_of_protests = 1
-			#has_unclaimed_cores = no
 		}
 		
 		effect = { any_owned = { add_province_modifier = { name = defence_union duration = -1 } } }
@@ -350,7 +352,7 @@ political_decisions = {
 
 		effect = { tech_school = XEU_tech_school }
 
-		ai_will_do = {  factor = 1  }
+		ai_will_do = { factor = 1 }
 	}
 
 #
@@ -416,16 +418,14 @@ political_decisions = {
 				government = hms_government
 				government = hms_government1
 			}
-			any_neighbor_country = { tech_school = XEU_tech_school1 NOT = { tag = XEU } NOT = { has_country_modifier = wto_chairmanship } NOT = { has_country_modifier = ibrd_chairmanship } NOT = { has_country_modifier = imf_chairmanship } OR = { is_vassal = no vassal_of = THIS } OR = { in_sphere = THIS vassal_of = THIS } NOT = { has_country_modifier = rejected_union } }
+			any_neighbor_country = { tech_school = XEU_tech_school1 NOT = { tag = XEU } NOT = { has_country_modifier = wto_chairmanship } NOT = { has_country_modifier = ibrd_chairmanship } NOT = { has_country_modifier = imf_chairmanship } OR = { vassal_of = THIS in_sphere = THIS } OR = { vassal_of = THIS is_vassal = no } NOT = { has_country_modifier = rejected_union } }
 			election = no
 			is_greater_power = yes 
 			political_polarization = 1
             war = no
 		}
 		
-		effect = {
-			any_country = { limit = { has_country_flag = xeu_ambition tech_school = XEU_tech_school1 NOT = { tag = XEU } NOT = { has_country_modifier = wto_chairmanship } NOT = { has_country_modifier = ibrd_chairmanship } NOT = { has_country_modifier = imf_chairmanship } OR = { is_vassal = no vassal_of = THIS } OR = { in_sphere = THIS vassal_of = THIS } NOT = { has_country_modifier = rejected_union } } country_event = 11106 }
-		}
+		effect = { any_country = { limit = { has_country_flag = xeu_ambition tech_school = XEU_tech_school1 NOT = { tag = XEU } NOT = { has_country_modifier = wto_chairmanship } NOT = { has_country_modifier = ibrd_chairmanship } NOT = { has_country_modifier = imf_chairmanship } OR = { vassal_of = THIS in_sphere = THIS } OR = { vassal_of = THIS is_vassal = no } NOT = { has_country_modifier = rejected_union } } country_event = 11106 } }
 		
 		ai_will_do = { factor = 1 }
 	}
