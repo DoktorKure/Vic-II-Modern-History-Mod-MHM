@@ -2097,7 +2097,7 @@ country_event = {
 		AUS_734 = {
 			flashpoint_tension = 25
 			any_pop = { 
-				limit = { OR = { culture = german culture = austrian_german } }
+				limit = { OR = { culture = german culture = south_german } }
 				ideology = { factor = 0.05 value = nationalist } 
 				militancy = 5
 			}
@@ -2119,7 +2119,7 @@ country_event = {
 		AUS_734 = {
 			flashpoint_tension = 35
 			any_pop = { 
-				limit = { OR = { culture = german culture = austrian_german } }
+				limit = { OR = { culture = german culture = south_german } }
 				ideology = { factor = 0.1 value = nationalist } 
 				militancy = 7
 				consciousness = 4
@@ -2187,7 +2187,7 @@ country_event = {
 		name = "Legalize the SVP"
 		AUS_734 = {
 			any_pop = { 
-				limit = { OR = { culture = german culture = austrian_german } }
+				limit = { OR = { culture = german culture = south_german } }
 				ideology = { factor = 0.04 value = conservative } 
 				ideology = { factor = 0.03 value = big_tent } 
 				militancy = -3
@@ -2213,7 +2213,7 @@ country_event = {
 		name = "Give more autonomy and legalize SVP"
 		AUS_734 = {
 			any_pop = { 
-				limit = { OR = { culture = german culture = austrian_german } }
+				limit = { OR = { culture = german culture = south_german } }
 				ideology = { factor = 0.08 value = conservative } 
 				ideology = { factor = 0.06 value = big_tent } 
 				militancy = -4
@@ -2237,7 +2237,7 @@ country_event = {
 		name = "Maintain the hardline"
 		AUS_734 = {
 			any_pop = { 
-				limit = { OR = { culture = german culture = austrian_german } }
+				limit = { OR = { culture = german culture = south_german } }
 				ideology = { factor = 0.09 value = nationalist } 
 				militancy = 9
 				consciousness = 6
@@ -2274,7 +2274,7 @@ country_event = {
 		
 		AUS_734 = {
 			any_pop = { 
-				limit = { OR = { culture = german culture = austrian_german } }
+				limit = { OR = { culture = german culture = south_german } }
 				ideology = { factor = 0.02 value = nationalist } 
 				militancy = 4
 				consciousness = 2
@@ -2392,7 +2392,7 @@ country_event = {
 		
 		AUS_734 = {
 			any_pop = { 
-				limit = { OR = { culture = german culture = austrian_german } }
+				limit = { OR = { culture = german culture = south_german } }
 				ideology = { factor = 0.09 value = nationalist } 
 				militancy = 6
 				consciousness = 6
@@ -2420,7 +2420,7 @@ country_event = {
 		
 		AUS_734 = {
 			any_pop = { 
-				limit = { OR = { culture = german culture = austrian_german } }
+				limit = { OR = { culture = german culture = south_german } }
 				ideology = { factor = 0.15 value = nationalist } 
 				militancy = 9
 				consciousness = 9

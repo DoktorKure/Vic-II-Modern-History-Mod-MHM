@@ -130,8 +130,7 @@ country_event = {
 		539 = { secede_province = ENG }
 
 		any_owned = { 
-			limit = { is_core = GER } 
-			add_core = SGF 
+			limit = { is_core = SGF }
 			secede_province = SGF 
 		}
 		SGF = { 
@@ -144,13 +143,6 @@ country_event = {
 		diplomatic_influence = { who = SGF value = 200 }
 
 		SGF = { capital = 595 }
-
-		586 = { add_core = SGF }
-		587 = { add_core = SGF }
-		588 = { add_core = SGF }
-		591 = { add_core = SGF }
-		594 = { add_core = SGF }
-		593 = { add_core = SGF }
 
 		ai_chance = { factor = 0.1 }
 	}	
@@ -227,7 +219,6 @@ country_event = {
 		570 = { add_core = NGF }
 		573 = { add_core = NGF }
 		574 = { add_core = NGF }
-		571 = { add_core = NGF }
 		575 = { add_core = NGF }
 		576 = { add_core = NGF }
 		577 = { add_core = NGF }
@@ -292,7 +283,6 @@ country_event = {
 		570 = { add_core = NGF }
 		573 = { add_core = NGF }
 		574 = { add_core = NGF }
-		571 = { add_core = NGF }
 		575 = { add_core = NGF }
 		576 = { add_core = NGF }
 		577 = { add_core = NGF }
@@ -447,7 +437,7 @@ country_event = {
 
 		random_country = { limit = { tag = SGF exists = no } FRA = { any_owned = { limit = { is_core = GER } secede_province = USA } } }
 
-		random_country = { limit = { tag = SGF exists = yes } FRA = { any_owned = { limit = { is_core = GER } add_core = SGF secede_province = SGF } } }
+		random_country = { limit = { tag = SGF exists = yes } FRA = { any_owned = { limit = { is_core = SGF } secede_province = SGF } } }
 
 		ai_chance = { factor = 0.15 }
 	}	

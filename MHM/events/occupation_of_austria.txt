@@ -709,8 +709,6 @@ country_event = {
 		
 		#Set AUS
 		capital = 619 # Wien
-		primary_culture = austrian_german
-		set_country_flag = austrianisation_germanisation
 		any_pop = { ideology = { value = conservative factor = 0.25 } }
 		
 		#Victors of WW2
