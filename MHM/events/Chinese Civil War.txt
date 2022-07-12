@@ -636,8 +636,8 @@ country_event = {
 
 		OR = {
 			AND = { 2221 = { controlled_by = CHI } 1577 = { controlled_by = CHI } USA = { NOT = { war_with = CHI } } } #Nanjing and Chongqing already fell and USA didn't intervene
-			AND = { 2221 = { controlled_by = CHI } national_provinces_occupied = 0.35 USA = { NOT = { war_with = CHI } } }
-			AND = { national_provinces_occupied = 0.85 USA = { war_with = CHI } }
+			AND = { 2221 = { controlled_by = CHI } national_provinces_occupied = 0.30 USA = { NOT = { war_with = CHI } } }
+			AND = { national_provinces_occupied = 0.55 USA = { war_with = CHI } }
 		}
 		
 		#Has not retreated to Formosa

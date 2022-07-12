@@ -1531,18 +1531,6 @@ south_asian_indian = {
 		first_names = { Ranjit Kharak Nau Nihal Chand Kaur Shir Dhalip Diwan Jassa Hari Bhuma Nawab Banda Baba Kapur }
 		last_names = { Singh Kunwar Bahadur Dhillon Nalwa Ahluwalia Ramgarhia Mal Mulraj }
 	}
-	christian_malayalam = {
-		#!religion = { orthodox }
-		color = { 67 110 238 }
-		first_names = { Cheraman Swathi Thirunal Sri Sakthan Raja Moolam Marthanda Dharma Chithira Balarama Ayilyam Saamoothiri }
-		last_names = { Varma Kesavadas Thampuran "Rama Varma" Perumal }
-	}
-	malayalam = {
-		#!religion = { hindu }
-		color = { 145 44 238  }
-		first_names = { Cheraman Swathi Thirunal Sri Sakthan Raja Moolam Marthanda Dharma Chithira Balarama Ayilyam Saamoothiri }
-		last_names = { Varma Kesavadas Thampuran "Rama Varma" Perumal }
-	}
 	manipuri = {
  		#!religion = { hindu }
  		color = {  190 150 240  }
@@ -1646,6 +1634,18 @@ dravidian_cultures = {
 		color = { 124 231 156 }
 		first_names = { Abdul Vijaya Rajkumari Aurobindo Chandrashekhar Gopal Motilal Sardar Sarojini Subhas Srinivasa Mridula Gupinath Chittaranjan }
 		last_names = { Singh Prasad Ambedkar Khan Pandit Besant Sarabhai Gaidinliu Iyengar Baharjee Naidu }
+	}
+	christian_malayalam = {
+		#!religion = { orthodox }
+		color = { 67 110 238 }
+		first_names = { Cheraman Swathi Thirunal Sri Sakthan Raja Moolam Marthanda Dharma Chithira Balarama Ayilyam Saamoothiri }
+		last_names = { Varma Kesavadas Thampuran "Rama Varma" Perumal }
+	}
+	malayalam = {
+		#!religion = { hindu }
+		color = { 145 44 238  }
+		first_names = { Cheraman Swathi Thirunal Sri Sakthan Raja Moolam Marthanda Dharma Chithira Balarama Ayilyam Saamoothiri }
+		last_names = { Varma Kesavadas Thampuran "Rama Varma" Perumal }
 	}
 	union = DRA
 }
@@ -2181,7 +2181,7 @@ african = {
 	}
 	toubou = {
 		#!religion = { sunni }
-		color = { 60 179 113 }
+		color = { 160 94 104 }
 		first_names = { Brahima Salifu Seku Bubakar Aburahman Abdullahi Usman Famaghan Kere Magan Dramani Dyori Bako Laganfyela Ali Kokoroko Sabana Tyeba Pntyeba Karamoko }
 		last_names = { "bi Saydu" "bi Hama" "bi Salifu" "bi Isa" "bi Sori" "bi Faruku" Wattara "dan Tyeba" Moru Dyan }
 	}
