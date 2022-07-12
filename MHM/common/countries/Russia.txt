@@ -337,7 +337,7 @@ party = {
 }
 party = {
 		name = "All-Union Communist Party"
-		citizenship_policy = full_citizenship
+		citizenship_policy = limited_citizenship
 		economic_policy = planned_economy
 		ideology = communist
 		religious_policy = pro_atheism

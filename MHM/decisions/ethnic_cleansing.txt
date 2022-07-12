@@ -67,6 +67,7 @@ political_decisions = {
 			factor = 1
 			modifier = { badboy = 1 war = no factor = 0 }
 			modifier = { tag = SAF factor = 0 }
+			modifier = { AND = { tag = RUS government = proletarian_dictatorship } factor = 0 } #So AI USSR doesn't immediately start killing everyone
 			modifier = { OR = { tag = RWA tag = RSR tag = SRK tag = SER tag = CRO tag = BOS } factor = 1 } 
 		}
 	}
@@ -106,6 +107,7 @@ political_decisions = {
 			remove_country_modifier = ethnic_cleansing
 			clr_country_flag = discovered_genocide 
 			clr_country_flag = discovered_genocide1
+			any_owned = { remove_province_modifier = pop_replacement_province_modifier }
 		}
 		ai_will_do = { factor = 1 }
 	}
@@ -202,6 +204,7 @@ political_decisions = {
 			remove_country_modifier = population_replacement_modifier
 			clr_country_flag = discovered_genocide 
 			clr_country_flag = discovered_genocide1
+			any_owned = { remove_province_modifier = pop_replacement_province_modifier }
 		}
 		ai_will_do = { factor = 1 }
 	}

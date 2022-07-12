@@ -287,7 +287,7 @@ owner = { primary_culture = arab_sahrawi }
 		}
 		allow = {
 			election = no
-			OR = { ruling_party_ideology = nationalist ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
+			OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
 		}
 		effect = {
 		
@@ -542,7 +542,7 @@ owner = { add_accepted_culture = arab_sahrawi }
 
 		allow = {
 			election = no
-			OR = { ruling_party_ideology = traditionalist ruling_party_ideology = populist }
+			ruling_party_ideology = traditionalist
 		}
 
 		effect = {

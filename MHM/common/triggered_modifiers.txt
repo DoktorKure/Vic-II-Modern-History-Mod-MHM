@@ -1070,37 +1070,26 @@ overpopulated_nation16 = {
 
 iliterate_nation3 = {
 	trigger = {
-		NOT = { literacy = 0.06 }
+		NOT = { literacy = 0.05 }
 	}
 	global_population_growth = 0.004
 }
 
 iliterate_nation2 = {
 	trigger = {
-		NOT = { literacy = 0.08 }
+		NOT = { literacy = 0.10 }
 	}
 	global_population_growth = 0.002
 }
 
 iliterate_nation1 = {
 	trigger = {
-		NOT = { literacy = 0.10 }
+		NOT = { literacy = 0.15 }
 	}
 	global_population_growth = 0.001
 }
 
 literate_nation1 = {
-	trigger = {
-		literacy = 0.10
-	}
-	factory_throughput = 0.05
-	rgo_throughput = 0.05
-	research_points = 0.10
-	goods_demand = 0.05
-	factory_input = -0.05
-}
-
-literate_nation2 = {
 	trigger = {
 		literacy = 0.15
 	}
@@ -1111,81 +1100,88 @@ literate_nation2 = {
 	factory_input = -0.05
 }
 
-literate_nation3 = {
+literate_nation2 = {
 	trigger = {
 		literacy = 0.20
 	}
 	factory_throughput = 0.05
 	rgo_throughput = 0.05
-	research_points = 0.20
+	research_points = 0.10
 	goods_demand = 0.05
 	factory_input = -0.05
-	global_population_growth = -0.001
 }
 
-literate_nation4 = {
-	trigger = {
-		literacy = 0.25
-	}
-	factory_throughput = 0.05
-	rgo_throughput = 0.05
-	research_points = 0.20
-	goods_demand = 0.05
-	factory_input = -0.05
-	global_population_growth = -0.002
-}
-
-literate_nation5 = {
+literate_nation3 = {
 	trigger = {
 		literacy = 0.30
 	}
 	factory_throughput = 0.05
 	rgo_throughput = 0.05
-	research_points = 0.10
+	research_points = 0.20
 	goods_demand = 0.05
 	factory_input = -0.05
-	global_population_growth = -0.002
 }
 
-literate_nation6 = {
+literate_nation4 = {
 	trigger = {
-		literacy = 0.35
+		literacy = 0.40
+	}
+	factory_throughput = 0.05
+	rgo_throughput = 0.05
+	research_points = 0.20
+	goods_demand = 0.05
+	factory_input = -0.05
+}
+
+literate_nation5 = {
+	trigger = {
+		literacy = 0.50
 	}
 	factory_throughput = 0.05
 	rgo_throughput = 0.05
 	research_points = 0.10
 	goods_demand = 0.05
 	factory_input = -0.05
-	global_population_growth = -0.002
+}
+
+literate_nation6 = {
+	trigger = {
+		literacy = 0.55
+	}
+	factory_throughput = 0.05
+	rgo_throughput = 0.05
+	research_points = 0.10
+	goods_demand = 0.05
+	factory_input = -0.05
 }
 
 literate_nation7 = {
 	trigger = {
-		literacy = 0.40
+		literacy = 0.60
 	}
 	factory_throughput = 0.04
 	rgo_throughput = 0.04
 	research_points = 0.10
 	goods_demand = 0.05
 	factory_input = -0.05
-	global_population_growth = -0.002
+	global_population_growth = -0.001
 }
 
 literate_nation8 = {
 	trigger = {
-		literacy = 0.45
+		literacy = 0.65
 	}
 	factory_throughput = 0.05
 	rgo_throughput = 0.05
 	research_points = 0.10
 	goods_demand = 0.05
 	factory_input = -0.05
-	global_population_growth = -0.001
+	global_population_growth = -0.002
 }
 
 literate_nation9 = {
 	trigger = {
-		literacy = 0.50
+		literacy = 0.70
 	}
 	factory_throughput = 0.05
 	rgo_throughput = 0.05
@@ -1197,14 +1193,14 @@ literate_nation9 = {
 
 literate_nation10 = {
 	trigger = {
-		literacy = 0.60
+		literacy = 0.75
 	}
 	factory_throughput = 0.05
 	rgo_throughput = 0.05
 	research_points = 0.10
 	goods_demand = 0.05
 	factory_input = -0.05
-	global_population_growth = -0.001
+	global_population_growth = -0.005
 }
 
 ########

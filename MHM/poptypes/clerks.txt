@@ -318,7 +318,7 @@ country_migration_target = {
 }
 
 migration_target = {
-	factor = 0.1
+	factor = 1
 	
 	###Pops avoid provinces with high general unemployment###
     modifier = {
@@ -462,6 +462,11 @@ migration_target = {
     modifier = {
         factor = 1.05
         is_coastal = yes
+    }
+	###Pop massively prefers provinces undergoing population replacement###
+    modifier = {
+        factor = 4
+        has_province_modifier = pop_replacement_province_modifier
     }
 	###End of random rules###
 	

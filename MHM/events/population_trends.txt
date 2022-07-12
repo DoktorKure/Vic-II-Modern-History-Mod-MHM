@@ -5,8 +5,9 @@
 #############################################################
 
 # Demographic Steps
-# 1. Massive population boom - Literacy between 5% to 10%
-# 2. Stabilisation - Literacy between 10% to 25%
+# 1. Massive population boom - Literacy between 5% to 20%
+# 2. Longer Lifespans - Literacy between 20% to 40%
+# 2. Stabilisation - Literacy between 40% to 60%
 # 3. Ageing population - Reduce factory productivity
 
 # Special - haredim_jewish, roma and mennonites and not prim/accept
@@ -25,24 +26,8 @@ country_event = {
 		
 		OR = {
 			any_owned_province = { 
-				NOT = { literacy = 0.03 }
-				NOT = { has_province_modifier = iliterate_nation3_modifier }
-				
-				#Not for cored colonial and overseas provinces
-				NOT = { 
-					AND = { 
-						OR = { is_colonial = yes is_overseas = yes }
-						is_core = THIS
-					} 
-				}
-				
-				#Not Guantanamo Bay
-				NOT = { province_id = 3339 }
-			}
-			any_owned_province = { 
-				literacy = 0.03
 				NOT = { literacy = 0.05 }
-				NOT = { has_province_modifier = iliterate_nation2_modifier }
+				NOT = { has_province_modifier = iliterate_nation3_modifier }
 				
 				#Not for cored colonial and overseas provinces
 				NOT = { 
@@ -58,7 +43,23 @@ country_event = {
 			any_owned_province = { 
 				literacy = 0.05
 				NOT = { literacy = 0.10 }
-				NOT = { has_province_modifier = iliterate_nation3_modifier }
+				NOT = { has_province_modifier = iliterate_nation2_modifier }
+				
+				#Not for cored colonial and overseas provinces
+				NOT = { 
+					AND = { 
+						OR = { is_colonial = yes is_overseas = yes }
+						is_core = THIS
+					} 
+				}
+				
+				#Not Guantanamo Bay
+				NOT = { province_id = 3339 }
+			}
+			any_owned_province = { 
+				literacy = 0.10
+				NOT = { literacy = 0.15 }
+				NOT = { has_province_modifier = iliterate_nation1_modifier }
 				
 				#Not for cored colonial and overseas provinces
 				NOT = { 
@@ -87,7 +88,7 @@ country_event = {
 		
 		any_owned = {
 			limit = {
-				NOT = { literacy = 0.03 }
+				NOT = { literacy = 0.05 }
 				NOT = { has_province_modifier = iliterate_nation3_modifier }
 				
 				#Not for cored colonial and overseas provinces
@@ -108,8 +109,8 @@ country_event = {
 		
 		any_owned = {
 			limit = {
-				literacy = 0.03
-				NOT = { literacy = 0.05 }
+				literacy = 0.05
+				NOT = { literacy = 0.10 }
 				NOT = { has_province_modifier = iliterate_nation2_modifier }
 				
 				#Not for cored colonial and overseas provinces
@@ -130,8 +131,8 @@ country_event = {
 		
 		any_owned = {
 			limit = {
-				literacy = 0.05
-				NOT = { literacy = 0.10 }
+				literacy = 0.10
+				NOT = { literacy = 0.15 }
 				NOT = { has_province_modifier = iliterate_nation1_modifier }
 				
 				#Not for cored colonial and overseas provinces
@@ -165,8 +166,8 @@ country_event = {
 		NOT = { has_country_flag = demographic_transition_stage_1_flag }
 		
 		#Low development
-		literacy = 0.10
-		NOT = { literacy = 0.15 }
+		literacy = 0.20
+		NOT = { literacy = 0.40 }
 		
 		war = no
 		
@@ -178,8 +179,7 @@ country_event = {
 	option = {
 		name = "Great, our people can be more productive!"
 		
-		add_country_modifier = { name = industrial_pop_boom duration = 7300 }
-		
+		add_country_modifier = { name = industrial_pop_boom duration = 7305 }		
 		set_country_flag = demographic_transition_stage_1_flag
 	}
 	
@@ -198,8 +198,8 @@ country_event = {
 		has_country_modifier = industrial_pop_boom
 		
 		#Medium development
-		literacy = 0.15
-		NOT = { literacy = 0.25 }
+		literacy = 0.40
+		NOT = { literacy = 0.60 }
 	}
 	
 	mean_time_to_happen = { months = 6 }
@@ -232,7 +232,7 @@ country_event = {
 		OR = { health_care = acceptable_health_care health_care = good_health_care }
 		
 		#High development
-		literacy = 0.25
+		literacy = 0.60
 	}
 	
 	mean_time_to_happen = { months = 60 }

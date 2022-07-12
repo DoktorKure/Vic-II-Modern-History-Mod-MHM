@@ -146,7 +146,7 @@ country_migration_target = {
 }
 
 migration_target = {
-	factor = 0.1
+	factor = 1
 	
 	###Pop will not move overseas when borders are closed###
 	modifier = {
@@ -179,6 +179,11 @@ migration_target = {
     modifier = {
         factor = 1.5
         any_core = { is_primary_culture = THIS }
+    }
+	###Pop massively prefers provinces undergoing population replacement###
+    modifier = {
+        factor = 4
+        has_province_modifier = pop_replacement_province_modifier
     }
 
 }

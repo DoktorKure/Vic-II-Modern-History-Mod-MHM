@@ -6700,10 +6700,14 @@ geno_cooldown = {
 }
 
 pop_replacement_event_cooldown = {
+	icon = 12
+}
+
+pop_replacement_province_modifier = {
 	non_accepted_pop_consciousness_modifier = 0.1
 	non_accepted_pop_militancy_modifier = 0.1
-	suppression_points_modifier = 0.05
-	icon = 12
+	assimilation_rate = 0.25
+	icon = 8
 }
 
 ##### POLITICAL EVENTS ######
@@ -6896,33 +6900,28 @@ baby_boom = {
 }
 
 natalism_1 = {
-	global_population_growth = 0.005
-	tax_efficiency = -0.025
-	icon = 17
+	population_growth = 0.005
+	icon = 19
 }
 
 natalism_2 = {
-	global_population_growth = 0.004
-	tax_efficiency = -0.025
-	icon = 17
+	population_growth = 0.004
+	icon = 19
 }
 
 natalism_3 = {
-	global_population_growth = 0.003
-	tax_efficiency = -0.025
-	icon = 17
+	population_growth = 0.003
+	icon = 19
 }
 
 natalism_4 = {
-	global_population_growth = 0.002
-	tax_efficiency = -0.025
-	icon = 17
+	population_growth = 0.002
+	icon = 19
 }
 
 natalism_5 = {
-	global_population_growth = 0.001
-	tax_efficiency = -0.025
-	icon = 17
+	population_growth = 0.001
+	icon = 19
 }
 
 contraception_decay = {

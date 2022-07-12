@@ -282,14 +282,23 @@ hungarian_culture_group = {
 	}
 }
 
-european_germanic_cultures = {
+helvetic_cultures = {
 	leader = european
 	unit = PrussianGC
-	mennonites = {
-		#!religion = { mennonite }
-		color = { 139 139 131 }
-		first_names = { Albrecht Alexander Alfons Alois Anton Arthur Bernhard Christian Edmund Eduard Engelbert Ernst Erwin Ferdinand Franz Friedrich Gebhard Gerhard Gottfried Günther Gustav Heinrich Hermann Horst Jakob Joachim Johann Joseph Julius Karl Konrad Kurt Leonhard Leopold Lorenz Lothar Ludwig Maximilian Michael Otto Reinhold Rudolf Stefan Theodor Viktor Walter Werner Wilhelm }
-		last_names = { Beck-Rzikowsky Blos Dankl Eisner Geiss Goering Hainisch Haus Held Hellpach Hoffmann Hummel Köhler Mergenthaler Miklas Remmele Schmitt Schobber Seitz Steeb Stolzer Trunk "von Baden" "von Benedek" "von Böhm-Ermolli" "von Brudermann" "von Clam-Gallas" "von der Tann" "von Dietrich" "von Gablenz" "von Grünne" "von Habsburg" "von Hartmann" "von Haynau" "von Hess" "von Hohenhausen" "d'Aspre von Hoobreuk" "von Hortstein" "von Hötzendorf" "von Kirbach" "von Kobratin" "von Schönburg" "von Tegetthoff" "von Uchatius" "von Wittelsbach" "von Württemberg" "von Zahringen" Wagner Wittmann "zu Hohenlohe" }
+	swiss_german = { 
+		color = { 180 40 40 }
+		first_names = { Adolf Alexander Eduard Ernst Franz Hans Johann Josef Konstantin Martin Melchior Robert Rudolf Ulrich Wilhelm Augusto Enrico Flavio Giuseppe Vincenzo Antoine Charles Emmanuel Guillaume Gustave Henri Hugo Louis Marc Paul }
+		last_names = { Brenner Deucher Funk Haab Herzog Knüsel Munzinger Näff Schneider Siegwart-Müller "von Donatz" "von Salis-Soglio" "von Steiger" "von Tavel" Wille Celio Cotti Fogliardi Motta Zeni Ador Calonder Chaudet Comtesse "de Prangins" Dufour Fornerod Guisan Ruchet Ruchonnet }
+	}
+	swiss_french = {
+		color = { 159 143 234 }
+		first_names = { Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin Charles Daniel Denis Édouard Elie Éttiene Eugène Félicien Félix Fernand François Frédéric Georges Guillaume Gustave Henri Hubert Hugo Jacques Jean Joseph Jules Julien Lazare Léopold Leroy Louis Lucien Matthieu Michel Napoléon Nicolas Patrice Paul Philippe Pierre Robert Thibaut Thierry Thomas }
+		last_names = { Anthoine "Baraguey d'Hilliers" Bazaine Billot Bonaparte Bosquet "Boué de Lapeyrère" Bouët-Willaumez Boulanger Bourbaki Bugeaud Caillard Canrobert Courbet Cousin-Mountauban Davout "de Bourbon" "de Castellane" "de Castelnau" "de Gaulle" "de Langle de Cary" "de MacMahon" "de Montaignac" "de Saint Arnaud" d'Orleans Dubail Dubois Duchêne Dupetit-Thouars Exelmans Foch Forey "Franchet d'Espèrey" Gallieni Gouraud Guillaumat Hamelin Harispe Hoche Humbert Jaurès Joffre Lebouef Lyautey Murat "Ney d'Elchingen" Nivelle Péllissier Petain Vaillant }
+	}
+	swiss_italian = {
+		color = { 150 220 170 }
+		first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo Cesare Costanzo Davide Enrico Ettore Fabrizio Faustino Federico Felice Ferdinando Fiorenzo Francesco Gaetano Gennaro Girolamo Giulio Giuseppe Guglielmo Innocenzo Leopoldo Luigi Marco Massimo Matteo Nicola Oreste Paolo Pasquale Pietro Prospero Raffaele Roberto Ruggiero Silvio Simone Tancredi Ugo Umberto Vincenzo Vittorio }
+		last_names = { Acton Albricci Badoglio Baldissera Baratieri Bava-Beccaris Cadorna Cagni Canevaro Capello Caviglia Ceccherini Cialdini Cusani d'Absburgo-Toscana d'Austria-Este Dezza "di Borbone di Parma" "di Robilant" "di Savoia" "di Savoia-Aosta" Emo Fanti Fara Filomarino Garibaldi Giardino Govone "La Màrmora" Mambretti Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
 	}
 	romansh = {
 		#!religion = { catholic }
@@ -297,25 +306,27 @@ european_germanic_cultures = {
 		first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo Cesare Costanzo Davide Enrico Ettore Fabrizio Faustino Federico Felice Ferdinando Fiorenzo Francesco Gaetano Gennaro Girolamo Giulio Giuseppe Guglielmo Innocenzo Leopoldo Luigi Marco Massimo Matteo Nicola Oreste Paolo Pasquale Pietro Prospero Raffaele Roberto Ruggiero Silvio Simone Tancredi Ugo Umberto Vincenzo Vittorio }
 		last_names = { Acton Albricci Badoglio Baldissera Baratieri Bava-Beccaris Cadorna Cagni Canevaro Capello Caviglia Ceccherini Cialdini Cusani d'Absburgo-Toscana d'Austria-Este Dezza "di Borbone di Parma" "di Robilant" "di Savoia" "di Savoia-Aosta" Emo Fanti Fara Filomarino Garibaldi Giardino Govone "La Màrmora" Mambretti Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
 	}
-	swiss_german = { 
-		color = { 180 40 40 }
-		first_names = { Adolf Alexander Eduard Ernst Franz Hans Johann Josef Konstantin Martin Melchior Robert Rudolf Ulrich Wilhelm Augusto Enrico Flavio Giuseppe Vincenzo Antoine Charles Emmanuel Guillaume Gustave Henri Hugo Louis Marc Paul }
-		last_names = { Brenner Deucher Funk Haab Herzog Knüsel Munzinger Näff Schneider Siegwart-Müller "von Donatz" "von Salis-Soglio" "von Steiger" "von Tavel" Wille Celio Cotti Fogliardi Motta Zeni Ador Calonder Chaudet Comtesse "de Prangins" Dufour Fornerod Guisan Ruchet Ruchonnet }
-	}
+	union = SWI
 }
 
 german_cultures = {
 	leader = european
 	unit = PrussianGC
-	german = {
+	german = { #north german
 		color = { 110 80 80 }
 		first_names = { Albrecht Alexander Alfons Alois Anton Arthur Bernhard Christian Edmund Eduard Engelbert Ernst Erwin Ferdinand Franz Friedrich Gebhard Gerhard Gottfried Günther Gustav Heinrich Hermann Horst Jakob Joachim Johann Joseph Julius Karl Konrad Kurt Leonhard Leopold Lorenz Lothar Ludwig Maximilian Michael Otto Reinhold Rudolf Stefan Theodor Viktor Walter Werner Wilhelm }
 		last_names = { Beck-Rzikowsky Blos Dankl Eisner Geiss Goering Hainisch Haus Held Hellpach Hoffmann Hummel Köhler Merkel Mergenthaler Miklas Remmele Schmitt Schobber Seitz Steeb Stolzer Trunk "von Baden" "von Benedek" "von Böhm-Ermolli" "von Brudermann" "von Clam-Gallas" "von der Tann" "von Dietrich" "von Gablenz" "von Grünne" "von Habsburg" "von Hartmann" "von Haynau" "von Hess" "von Hohenhausen" "d'Aspre von Hoobreuk" "von Hortstein" "von Hötzendorf" "von Kirbach" "von Kobratin" "von Schönburg" "von Tegetthoff" "von Uchatius" "von Wittelsbach" "von Württemberg" "von Zahringen" Wagner Wittmann "zu Hohenlohe" }
 	}
-	austrian_german = {
+	south_german = {
 		color = { 140 110 110 }
 		first_names = { Adolf Albrecht Alexander Alfons Alois Anton Arthur Bernhard Christian Edmund Eduard Engelbert Ernst Erwin Ferdinand Franz Friedrich Gebhard Gerhard Gottfried Günther Gustav Heinrich Hermann Horst Jakob Joachim Johann Joseph Julius Karl Konrad Kurt Leonhard Leopold Lorenz Lothar Ludwig Maximilian Michael Otto Reinhold Rudolf Stefan Theodor Viktor Walter Werner Wilhelm }
 		last_names = { Beck-Rzikowsky Blos Dankl Eisner Geiss Goering Hainisch Haus Held Hellpach Hoffmann Hummel Köhler Mergenthaler Miklas Remmele Schmitt Schobber Seitz Steeb Hitler Stolzer Trunk "von Baden" "von Benedek" "von Böhm-Ermolli" "von Brudermann" "von Clam-Gallas" "von der Tann" "von Dietrich" "von Gablenz" "von Grünne" "von Habsburg" "von Hartmann" "von Haynau" "von Hess" "von Hohenhausen" "d'Aspre von Hoobreuk" "von Hortstein" "von Hötzendorf" "von Kirbach" "von Kobratin" "von Schönburg" "von Tegetthoff" "von Uchatius" "von Wittelsbach" "von Württemberg" "von Zahringen" Wagner Wittmann "zu Hohenlohe" }
+	}
+	mennonites = {
+		#!religion = { mennonite }
+		color = { 139 139 131 }
+		first_names = { Albrecht Alexander Alfons Alois Anton Arthur Bernhard Christian Edmund Eduard Engelbert Ernst Erwin Ferdinand Franz Friedrich Gebhard Gerhard Gottfried Günther Gustav Heinrich Hermann Horst Jakob Joachim Johann Joseph Julius Karl Konrad Kurt Leonhard Leopold Lorenz Lothar Ludwig Maximilian Michael Otto Reinhold Rudolf Stefan Theodor Viktor Walter Werner Wilhelm }
+		last_names = { Beck-Rzikowsky Blos Dankl Eisner Geiss Goering Hainisch Haus Held Hellpach Hoffmann Hummel Köhler Mergenthaler Miklas Remmele Schmitt Schobber Seitz Steeb Stolzer Trunk "von Baden" "von Benedek" "von Böhm-Ermolli" "von Brudermann" "von Clam-Gallas" "von der Tann" "von Dietrich" "von Gablenz" "von Grünne" "von Habsburg" "von Hartmann" "von Haynau" "von Hess" "von Hohenhausen" "d'Aspre von Hoobreuk" "von Hortstein" "von Hötzendorf" "von Kirbach" "von Kobratin" "von Schönburg" "von Tegetthoff" "von Uchatius" "von Wittelsbach" "von Württemberg" "von Zahringen" Wagner Wittmann "zu Hohenlohe" }
 	}
 	union = GER
 }
@@ -410,11 +421,21 @@ canadian_cultures = {
 american_cultures = {
 	leader = european
 	unit = UsGC
-	white_anglo = { 
+	white_anglo = { # Yankee
 		color = { 65 65 129 }
 		first_names = { Adam Alexander Dwight Harry Gerald William Henry Michael Samuel Joshua George John Matthew Mark Luke Lucas Jeffrey Ulysses Joseph Charles Russell Benjamin Robert Ronald Christopher Richard Stephen Chester Lafayette Lester Lyndon Nathaniel Francis James Donald Cyrus Ambrose Edward Eugene Augustus Norton Abner Isaac Amos Thomas Randolph Jesse Nathan Patrick Albert Braxton Jubal Lewis Edmund Leonida Wade Daniel Jonathan Stonewall Lemual Sterling Raphael Kirby Pierre Jonas Frank Peter Rand Leslie Howard Malvin Oscar Simon Gideon Evander Jerome Alfred Cadmus "Fitz Hugh" Carnot Ezra Wilton Hamilton Hiram Elkanah Wilburn Walter Hinchie Allison Horace Felix Lawrence Louis }
 		last_names = { Smith Washington Grant Sherman Chamberlain Powell Clemens Abbott Abercrombie Allen Ames Anderson Barkhauer Andrews Appleton Armstrong Arthur Atkins Asboth Babcock Baker Pope Banks Barnard Barnes Barnum Barry Barstow Bartlett Bates Baxter Beatty Belknap Benton Blair Blunt Bradley Brown Buell Buford Burnside Bush Butler Caldwell Campbell Carter Carr Chapman Chipman Clayton Clinton Coburn Connor Conrad Cook Cooper Crittenden Custer Davies Davis Doubleday Eisenhower Ewing Farnsworth Ford Forsyth Foster Franklin Fry Gilbert Gregg Griffin Halleck Hamlin Hancock Harper Harrison Hatch Hayes Heintzelman Hooker Howard Hunter Jackson Johnson Jones Kennedy Keyes Kimball Lyon McArthur McClellan McCook McDowell Meade Mitchell Morgan Nixon Paine Phelps Pearson Porter Potter Reagan Reynolds Rice Rhodes Robinson Rosencrans Saloman Schenck Schofield Scott Sedgwick Seward Sheridan Sickles Sprague Stevens Stevenson Stone Sullivan Taylor Turner Truman Trump Tyler Wade Wadsworth Wallace Ward Warner Wilson Wright Young }
 	}
+    dixie = {
+        color = { 129 129 129 }
+        first_names = { Robert Jesse James Nathan George Joseph John Patrick Albert Braxton William Ambrose Jubal Richard Lewis Edmund Leonida Benjamin Wade Daniel Thomas Jonathan Stonewall Lemual Sterling Raphael Kirby Pierre Jonas Frank Charles Peter Rand Leslie Howard Malvin Oscar Henry Simon Edward Gideon Isaac Evander Jerome Alfred Cadmus "Fitz Hugh" Carnot Ezra Wilton }
+        last_names = { Lee Jackson Johnson Beauregard Stuart Longstreet Forrest Pickett Mosby Cleburne Hood Breckenridge Bragg  Barksdale Early Hill Ewell Morgan Armistead Semmes Smith Hampton Polk Cheatham Wheeler Pemberton Gordon Hardee Floyd Price Wise "Van Dorn" Loring Buckner Taylor Williams French Gibbs Hindman Anderson Sibley Garnett Magruder Pillow McLaws Rodes Heth Pender Trimble Kershaw Wofford Kemper Law Robertson Benning Hays Walker Iverson Wilcox Mahone Wright Pettigrew Archer Davis Lane Posey Scales Warner Imboden Jenkins }
+    }
+    texan = {
+        color = { 153 0 0 }
+        first_names = { Hamilton Matthew Richard Hiram Thomas Elkanah John William James Albert Wilburn Walter Hinchie Samuel Benjamin Henry Allison Horace Felix Jerome Lawrence Alexander Louis }
+        last_names = { Bee Ector Gano Granbury Green Greer Gregg Hardeman Harrison Hood Johnston King Lane Mabry Maxey McCulloch Moore Nelson Randal Robertson Ross Rosser Scurry Steele Terrell Waterhouse Waul Wharton Whitfield Wigfall Young Bowie Travis Houston }
+    }
 	union = USA
 }
 
@@ -743,7 +764,7 @@ latin_american_cultures = {
 		last_names = { Aguirre Avellaneda Báez Balcarce Bareiro Berro Brown Caballero Cruz "de Alvear" "de la Plaza" "de Rosas" "de Urquiza" Derqui Díaz Ellauri Escobar Flores González Jovellanos Juárez Justo Latorre López Machaín Maza Meza Mitre Paz Pedernera Pellegrini Pereira Quintana Rivarola Rivera Roca "Rodríguez de Francia" Rojas Rondeau Sáenz Santos Sarmineto Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen }
 	}
 	american_spanish = { #Hispano
-		color = { 190 170 180 }
+		color = { 190 190 110 }
 		first_names = { Agustín Antonio Atanasio Baltasar Bartolomé Bernardino Bernardo Cándido Carlos Cecilio Cirilo Claudio Domingo Emiliano Esteban Eugenio Evaristo Facundo Faustino Feliciano Félix Francisco Fructuoso Gabriel Gaspar Guillermo Hipólito Ignacio José "Juan José" "Juan Manuel" "Juan Ramón" Julio Justo Lorenzo Luis Manuel Marcial Máximo Miguel Nicolás Patricio Pedro Ramón Roberto Roque Salvador Santiago Torcuato Venancio }
 		last_names = { Aguirre Avellaneda Báez Balcarce Bareiro Berro Brown Caballero Cruz "de Alvear" "de la Plaza" "de Rosas" "de Urquiza" Derqui Díaz Ellauri Escobar Flores González Jovellanos Juárez Justo Latorre López Machaín Maza Meza Mitre Paz Pedernera Pellegrini Pereira Quintana Rivarola Rivera Roca "Rodríguez de Francia" Rojas Rondeau Sáenz Santos Sarmineto Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen }
 	}

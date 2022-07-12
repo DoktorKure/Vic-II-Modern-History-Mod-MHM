@@ -11672,7 +11672,7 @@ fire_only_once = yes
 all_core = { remove_core = ROA remove_core = GER add_core = AUS }
 		change_tag = AUS
 		primary_culture = austrian_german
-		all_core = { assimilate = yes }	
+		all_core = { assimilate = yes }
 		ai_chance = { factor = 0.9 }
   }
 

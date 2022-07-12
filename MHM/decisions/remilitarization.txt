@@ -6,8 +6,10 @@ political_decisions = {
 			tag = GER
 			exists = AUS
 			is_greater_power = yes
-			OR = { is_our_vassal = AUS
-			has_country_modifier = superpower }
+			OR = {
+				is_our_vassal = AUS
+				is_sphere_leader_of = AUS
+			}
 			OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist }
 			AUS = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist } }
 		}
@@ -17,6 +19,7 @@ political_decisions = {
 			relation = { who = AUS value = 100 }
 		}
 		effect = {
+			AUS = { all_core = { add_core = GER } }
 			inherit = AUS
 			any_neighbor_country = { relation = { who = THIS value = -100 } }
 		}
@@ -29,8 +32,10 @@ political_decisions = {
 			tag = AUS
 			exists = GER
 			is_greater_power = yes
-			OR = { is_our_vassal = GER
-			has_country_modifier = superpower }
+			OR = {
+				is_our_vassal = GER
+				is_sphere_leader_of = GER
+			}
 			OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist }
 			GER = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist } }
 		}

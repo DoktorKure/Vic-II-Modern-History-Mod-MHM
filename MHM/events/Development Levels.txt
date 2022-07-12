@@ -1,3 +1,12 @@
+########## DEVELOPMENT LEVELS ##########
+# Level 1 - less than 10% literacy
+# Level 2 - Between 10% and 20% literacy
+# Level 3 - Between 20% and 30% literacy
+# Level 4 - Between 30% and 40% literacy
+# Level 5 - Between 40% and 50% literacy
+# Level 6 - above 50% literacy
+
+
 #Set Development Levels
 country_event = {
 	id = 1412201
@@ -5,156 +14,96 @@ country_event = {
 	desc = EVTDESC1412201
 	picture = "developmental_levels"
 
-	trigger = { 
-		any_owned_province = { 
-			NOT = { 
-				OR = { 
+	trigger = {
+		any_owned_province = {
+			NOT = {
+				OR = {
 					has_province_modifier = dev_1 
 					has_province_modifier = dev_2 
 					has_province_modifier = dev_3 
 					has_province_modifier = dev_4 
 					has_province_modifier = dev_5 
 					has_province_modifier = dev_6 
-				} 
-			} 
+				}
+			}
 		}
 	}
 
-	mean_time_to_happen = { 
-		months = 1
-	}
+	mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = "Time to start developing our nation"
 
 		add_country_modifier = { name = dev_timer duration = 730 }
 
-		#Less than 5% or less than 30K pops
-		any_owned = { 
-			limit = { 
-				OR = { 
-					NOT = { total_pops = 30000 }
-					NOT = { literacy = 0.05 } 
-				}
+		#Less than 10% or less than 30K pops
+		any_owned = {
+			limit = {
+				OR = { NOT = { total_pops = 30000 }	NOT = { literacy = 0.10 } }
 				#Must not have an existing dev modifier
-				NOT = { 
-					OR = { 
-						has_province_modifier = dev_1 
-						has_province_modifier = dev_2 
-						has_province_modifier = dev_3 
-						has_province_modifier = dev_4 
-						has_province_modifier = dev_5 
-						has_province_modifier = dev_6 
-					} 
-				} 
-			} 
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 } }
+			}
 			add_province_modifier = { name = dev_1 duration = -1 } 
 		}
 		
-		#Between 5% to 10%
-		any_owned = { 
-			limit = { 
+		#Between 10% to 20%
+		any_owned = {
+			limit = {
 				total_pops = 30000
-				literacy = 0.05
-				NOT = { literacy = 0.10 }
+				literacy = 0.10
+				NOT = { literacy = 0.20 }
 				#Must not have an existing dev modifier
-				NOT = { 
-					OR = { 
-						has_province_modifier = dev_1 
-						has_province_modifier = dev_2 
-						has_province_modifier = dev_3 
-						has_province_modifier = dev_4 
-						has_province_modifier = dev_5 
-						has_province_modifier = dev_6 
-					} 
-				}
-			} 
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 } }
+			}
 			add_province_modifier = { name = dev_2 duration = -1 } 
 		}
 		
-		#Between 10% to 15%
-		any_owned = { 
-			limit = { 
+		#Between 20% to 30%
+		any_owned = {
+			limit = {
 				total_pops = 30000
-				literacy = 0.10
-				NOT = { literacy = 0.15 }
+				literacy = 0.20
+				NOT = { literacy = 0.30 }
 				#Must not have an existing dev modifier
-				NOT = { 
-					OR = { 
-						has_province_modifier = dev_1 
-						has_province_modifier = dev_2 
-						has_province_modifier = dev_3 
-						has_province_modifier = dev_4 
-						has_province_modifier = dev_5 
-						has_province_modifier = dev_6 
-					} 
-				} 
-			} 
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 } }
+			}
 			add_province_modifier = { name = dev_3 duration = -1 } 
 		}
 		
-		#Between 15% to 20%
-		any_owned = { 
-			limit = { 
+		#Between 30% to 40%
+		any_owned = {
+			limit = {
 				total_pops = 30000
-				literacy = 0.15
-				NOT = { literacy = 0.20 }
+				literacy = 0.30
+				NOT = { literacy = 0.40 }
 				#Must not have an existing dev modifier
-				NOT = { 
-					OR = { 
-						has_province_modifier = dev_1 
-						has_province_modifier = dev_2 
-						has_province_modifier = dev_3 
-						has_province_modifier = dev_4 
-						has_province_modifier = dev_5 
-						has_province_modifier = dev_6 
-					} 
-				} 
-			} 
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 } }
+			}
 			add_province_modifier = { name = dev_4 duration = -1 } 
 		}
 		
-		#Between 20% to 25%
-		any_owned = { 
-			limit = { 
+		#Between 40% to 50%
+		any_owned = {
+			limit = {
 				total_pops = 30000
-				literacy = 0.20
-				NOT = { literacy = 0.25 }
+				literacy = 0.40
+				NOT = { literacy = 0.50 }
 				#Must not have an existing dev modifier
-				NOT = { 
-					OR = { 
-						has_province_modifier = dev_1 
-						has_province_modifier = dev_2 
-						has_province_modifier = dev_3 
-						has_province_modifier = dev_4 
-						has_province_modifier = dev_5 
-						has_province_modifier = dev_6 
-					} 
-				} 
-			} 
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 } }
+			}
 			add_province_modifier = { name = dev_5 duration = -1 } 
 		}
 		
-		#Above 25%
-		any_owned = { 
-			limit = { 
+		#Above 50%
+		any_owned = {
+			limit = {
 				total_pops = 30000
-				literacy = 0.25
+				literacy = 0.50
 				#Must not have an existing dev modifier
-				NOT = { 
-					OR = { 
-						has_province_modifier = dev_1 
-						has_province_modifier = dev_2 
-						has_province_modifier = dev_3 
-						has_province_modifier = dev_4 
-						has_province_modifier = dev_5 
-						has_province_modifier = dev_6 
-					} 
-				} 
-			} 
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 } }
+			}
 			add_province_modifier = { name = dev_6 duration = -1 } 
 		}
-		
 	}
 }
 
@@ -165,45 +114,32 @@ country_event = {
 	desc = EVTDESC1412201
 	picture = "developmental_levels"
 
-	trigger = { 
+	trigger = {
 		NOT = { has_country_modifier = dev_timer }
 		
 		OR = {
-			any_owned_province = {  
-				OR = { 
-					NOT = { total_pops = 30000 }
-					NOT = { literacy = 0.05 }
-				} 
+			any_owned_province = {
+				OR = { NOT = { total_pops = 30000 } NOT = { literacy = 0.10 } }
 				NOT = { has_province_modifier = dev_1 }
 			}
-			any_owned_province = { 
-				total_pops = 30000
-				literacy = 0.05
-				NOT = { literacy = 0.10 }
+			any_owned_province = {
+				OR = { total_pops = 30000 literacy = 0.10 NOT = { literacy = 0.20 } }
 				NOT = { has_province_modifier = dev_2 }
 			}
 			any_owned_province = {
-				total_pops = 30000 
-				literacy = 0.10
-				NOT = { literacy = 0.15 }
+				OR = { total_pops = 30000 literacy = 0.20 NOT = { literacy = 0.30 } }
 				NOT = { has_province_modifier = dev_3 }
 			}
-			any_owned_province = { 
-				total_pops = 30000 
-				literacy = 0.15
-				NOT = { literacy = 0.20 }
+			any_owned_province = {
+				OR = { total_pops = 30000 literacy = 0.30 NOT = { literacy = 0.40 } }
 				NOT = { has_province_modifier = dev_4 }
 			}
-			any_owned_province = { 
-				total_pops = 30000 
-				literacy = 0.20
-				NOT = { literacy = 0.25 }
+			any_owned_province = {
+				OR = { total_pops = 30000 literacy = 0.40 NOT = { literacy = 0.50 } }
 				NOT = { has_province_modifier = dev_5 }
 			}
-			any_owned_province = { 
-				total_pops = 30000
-				literacy = 0.25
-				
+			any_owned_province = {
+				OR = { total_pops = 30000 literacy = 0.50 }
 				NOT = { has_province_modifier = dev_6 }
 			}
 		}	
@@ -220,13 +156,10 @@ country_event = {
 
 		add_country_modifier = { name = dev_timer duration = 365 }
 
-		#Less than 5% or less than 30K pops
+		#Less than 10% or less than 30K pops
 		any_owned = { 
 			limit = { 
-				OR = { 
-					NOT = { total_pops = 30000 }
-					NOT = { literacy = 0.05 } 
-				}
+				OR = { NOT = { total_pops = 30000 } NOT = { literacy = 0.10 } }
 				NOT = { has_province_modifier = dev_1 }
 			} 
 			
@@ -238,79 +171,10 @@ country_event = {
 			add_province_modifier = { name = dev_1 duration = -1 } 
 		}
 		
-		#Above 25%
+		#Between 10% to 20%
 		any_owned = { 
-			limit = { 
-				total_pops = 30000
-				literacy = 0.25
-				NOT = { has_province_modifier = dev_6 }
-				has_province_modifier = dev_5
-			} 
-			remove_province_modifier = dev_1
-			remove_province_modifier = dev_2
-			remove_province_modifier = dev_3
-			remove_province_modifier = dev_4
-			remove_province_modifier = dev_5
-			
-			add_province_modifier = { name = dev_6 duration = -1 } 
-		}
-		
-		#Between 20% to 25%
-		any_owned = { 
-			limit = { 
-				total_pops = 30000
-				literacy = 0.20
-				NOT = { has_province_modifier = dev_5 }
-				has_province_modifier = dev_4
-			} 
-			remove_province_modifier = dev_1
-			remove_province_modifier = dev_2
-			remove_province_modifier = dev_3
-			remove_province_modifier = dev_4
-			
-			remove_province_modifier = dev_6
-			add_province_modifier = { name = dev_5 duration = -1 } 
-		}
-		
-		#Between 15% to 20%
-		any_owned = { 
-			limit = { 
-				total_pops = 30000
-				literacy = 0.15
-				NOT = { has_province_modifier = dev_4 }
-				has_province_modifier = dev_3
-			} 
-			remove_province_modifier = dev_1
-			remove_province_modifier = dev_2
-			remove_province_modifier = dev_3
-			
-			remove_province_modifier = dev_5
-			remove_province_modifier = dev_6
-			add_province_modifier = { name = dev_4 duration = -1 } 
-		}
-		
-		#Between 10% to 15%
-		any_owned = { 
-			limit = { 
-				total_pops = 30000
-				literacy = 0.10
-				NOT = { has_province_modifier = dev_3 }
-				has_province_modifier = dev_2
-			} 
-			remove_province_modifier = dev_1
-			remove_province_modifier = dev_2
-			
-			remove_province_modifier = dev_4
-			remove_province_modifier = dev_5
-			remove_province_modifier = dev_6
-			add_province_modifier = { name = dev_3 duration = -1 } 
-		}
-		
-		#Between 5% to 10%
-		any_owned = { 
-			limit = { 
-				total_pops = 30000
-				literacy = 0.05
+			limit = {
+				OR = { total_pops = 30000 literacy = 0.10 NOT = { literacy = 0.20 } }
 				NOT = { has_province_modifier = dev_2 }
 				has_province_modifier = dev_1
 			} 
@@ -321,6 +185,70 @@ country_event = {
 			remove_province_modifier = dev_5
 			remove_province_modifier = dev_6
 			add_province_modifier = { name = dev_2 duration = -1 } 
+		}
+		
+		#Between 20% to 30%
+		any_owned = {
+			limit = {
+				OR = { total_pops = 30000 literacy = 0.20 NOT = { literacy = 0.30 } }
+				NOT = { has_province_modifier = dev_3 }
+				has_province_modifier = dev_2
+			}
+			remove_province_modifier = dev_1
+			remove_province_modifier = dev_2
+			
+			remove_province_modifier = dev_4
+			remove_province_modifier = dev_5
+			remove_province_modifier = dev_6
+			add_province_modifier = { name = dev_3 duration = -1 } 
+		}
+		
+		#Between 30% to 40%
+		any_owned = {
+			limit = {
+				OR = { total_pops = 30000 literacy = 0.30 NOT = { literacy = 0.40 } }
+				NOT = { has_province_modifier = dev_4 }
+				has_province_modifier = dev_3
+			}
+			remove_province_modifier = dev_1
+			remove_province_modifier = dev_2
+			remove_province_modifier = dev_3
+			
+			remove_province_modifier = dev_5
+			remove_province_modifier = dev_6
+			add_province_modifier = { name = dev_4 duration = -1 } 
+		}
+		
+		#Between 40% to 50%
+		any_owned = {
+			limit = {
+				OR = { total_pops = 30000 literacy = 0.40 NOT = { literacy = 0.50 } }
+				NOT = { has_province_modifier = dev_5 }
+				has_province_modifier = dev_4
+			}
+			remove_province_modifier = dev_1
+			remove_province_modifier = dev_2
+			remove_province_modifier = dev_3
+			remove_province_modifier = dev_4
+			
+			remove_province_modifier = dev_6
+			add_province_modifier = { name = dev_5 duration = -1 } 
+		}
+		
+		#Above 50%
+		any_owned = {
+			limit = {
+				OR = { total_pops = 30000 literacy = 0.50 }
+				NOT = { has_province_modifier = dev_6 }
+				has_province_modifier = dev_5
+			}
+			remove_province_modifier = dev_1
+			remove_province_modifier = dev_2
+			remove_province_modifier = dev_3
+			remove_province_modifier = dev_4
+			remove_province_modifier = dev_5
+			
+			add_province_modifier = { name = dev_6 duration = -1 } 
 		}
 
 	}

@@ -2275,9 +2275,10 @@ country_event = {
 
 		NOT = { has_country_modifier = reducing_corruption }
 		
-		NOT = { crime_fighting = 0.30 }
+		NOT = { crime_fighting = 0.60 }
 
 		NOT = { has_country_modifier = massive_government_corruption }
+		has_country_modifier = massive_societal_corruption
 		
 	}
 
@@ -2317,9 +2318,10 @@ country_event = {
 
 		NOT = { has_country_modifier = reducing_corruption }
 
-		AND = { NOT = { crime_fighting = 0.40 } crime_fighting = 0.30 }
+		AND = { NOT = { crime_fighting = 0.70 } crime_fighting = 0.60 }
 
 		NOT = { has_country_modifier = large_government_corruption }
+		has_country_modifier = large_societal_corruption
 		
 	}
 
@@ -2359,9 +2361,10 @@ country_event = {
 
 		NOT = { has_country_modifier = reducing_corruption }
 
-		AND = { NOT = { crime_fighting = 0.50 } crime_fighting = 0.40 }
+		AND = { NOT = { crime_fighting = 0.80 } crime_fighting = 0.70 }
 
 		NOT = { has_country_modifier = medium_government_corruption }
+		has_country_modifier = medium_societal_corruption
 		
 	}
 
@@ -2401,9 +2404,10 @@ country_event = {
 
 		NOT = { has_country_modifier = reducing_corruption }
 
-		AND = { NOT = { crime_fighting = 0.70 } crime_fighting = 0.50 }
+		AND = { NOT = { crime_fighting = 0.90 } crime_fighting = 0.80 }
 
 		NOT = { has_country_modifier = low_government_corruption }
+		has_country_modifier = low_societal_corruption
 		
 	}
 
@@ -2444,9 +2448,10 @@ country_event = {
 	
 		NOT = { has_country_modifier = reducing_corruption }
 
-		crime_fighting = 0.70
+		crime_fighting = 0.90
 		
 		NOT = { has_country_modifier = minimal_government_corruption }
+		has_country_modifier = minimal_societal_corruption
 		
 	}
 
@@ -2487,7 +2492,7 @@ country_event = {
 
 	trigger = {
 
-		NOT = { literacy = 0.10 }
+		NOT = { literacy = 0.20 }
 
 		NOT = { has_country_modifier = massive_societal_corruption }
 	}
@@ -2526,7 +2531,7 @@ country_event = {
 
 	trigger = {
 
-		AND = { NOT = { literacy = 0.20 } literacy = 0.10 }
+		AND = { NOT = { literacy = 0.40 } literacy = 0.20 }
 
 		NOT = { has_country_modifier = large_societal_corruption }
 		
@@ -2568,7 +2573,7 @@ country_event = {
 
 	trigger = {
 
-		AND = { NOT = { literacy = 0.30 } literacy = 0.20 }
+		AND = { NOT = { literacy = 0.40 } literacy = 0.60 }
 
 		NOT = { has_country_modifier = medium_societal_corruption }
 	
@@ -2609,7 +2614,7 @@ country_event = {
 
 	trigger = {
 
-		AND = { NOT = { literacy = 0.40 } literacy = 0.30 }
+		AND = { NOT = { literacy = 0.60 } literacy = 0.80 }
 
 		NOT = { has_country_modifier = low_societal_corruption }
 		
@@ -2653,7 +2658,7 @@ country_event = {
 		AND = { 
 			education_spending = 0.60
 			crime_fighting = 0.80
-			literacy = 0.40
+			literacy = 0.80
 		}
 
 		NOT = { has_country_modifier = minimal_societal_corruption }

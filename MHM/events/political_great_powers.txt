@@ -839,7 +839,7 @@ country_event = {
 		###### Change Government Type ######
 		
 		random_owned = {
-			limit = { owner = { FROM = { government = theocracy } } }
+			limit = { owner = { overlord = { government = theocracy } } }
 			owner = { 
 				government = theocracy
 				political_reform = none_voting
@@ -856,7 +856,7 @@ country_event = {
 			}
 		}
 		random_owned = {
-			limit = { owner = { FROM = { government = absolute_monarchy } } }
+			limit = { owner = { overlord = { government = absolute_monarchy } } }
 			owner = { 
 				government = absolute_monarchy
 				political_reform = none_voting

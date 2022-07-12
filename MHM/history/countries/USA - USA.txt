@@ -1,5 +1,7 @@
 capital = 220
 primary_culture = white_anglo
+culture = dixie
+culture = texan
 culture = jewish
 culture = german
 religion = secularism
@@ -119,6 +121,8 @@ oob = "/USA_oob.txt"
 	capital = 220
 	religion = secularism
 	primary_culture = white_anglo
+	culture = dixie
+	culture = texan
 	government = democracy
 	plurality = 36.0
 	nationalvalue = nv_liberty

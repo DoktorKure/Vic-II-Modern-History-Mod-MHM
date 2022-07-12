@@ -120,7 +120,14 @@ country_event = {
 
 	option = {
 		name = "Focus on resettling our cores! (10% chance of discovery)"
-		add_country_modifier = { name = pop_replacement_event_cooldown duration = 185 } #To prevent event spam
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 365 } #To prevent event spam
+		
+		any_owned = {
+			limit = { is_core = THIS is_primary_culture = no is_accepted_culture = no } add_province_modifier = { name = pop_replacement_province_modifier duration = -1 }
+		}
+		any_owned = {
+			limit = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes has_province_modifier = pop_replacement_province_modifier } remove_province_modifier = pop_replacement_province_modifier
+		}
 		
 		#Simulate population decline among non-accepteds
 		random_list = {
@@ -137,9 +144,9 @@ country_event = {
 
 		#Discovery Chance
 		random = {
-			chance = 20
+			chance = 10
 			prestige_factor = -0.05
-			badboy = 5
+			badboy = 2.5
 			set_country_flag = discovered_genocide
 		}
 
@@ -151,7 +158,14 @@ country_event = {
 
 	option = {
 		name = "Focus on the colonies! (5% chance of discovery)"
-		add_country_modifier = { name = pop_replacement_event_cooldown duration = 185 } #To prevent event spam
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 365 } #To prevent event spam
+		
+		any_owned = {
+			limit = { is_colonial = yes is_primary_culture = no is_accepted_culture = no } add_province_modifier = { name = pop_replacement_province_modifier duration = -1 }
+		}
+		any_owned = {
+			limit = { is_colonial = yes is_primary_culture = yes is_accepted_culture = yes has_province_modifier = pop_replacement_province_modifier } remove_province_modifier = pop_replacement_province_modifier
+		}
 
 		#Simulate population decline among non-accepteds
 		random_list = {
@@ -168,7 +182,7 @@ country_event = {
 
 		#Discovery Chance
 		random = {
-			chance = 10
+			chance = 5
 			prestige_factor = -0.05
 			badboy = 5
 			set_country_flag = discovered_genocide
@@ -186,26 +200,33 @@ country_event = {
 
 	option = {
 		name = "Focus on non-core areas! (15% chance of discovery)"
-		add_country_modifier = { name = pop_replacement_event_cooldown duration = 185 } #To prevent event spam
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 365 } #To prevent event spam
+		
+		any_owned = {
+			limit = { NOT = { is_core = THIS } is_colonial = no is_primary_culture = no is_accepted_culture = no } add_province_modifier = { name = pop_replacement_province_modifier duration = -1 }
+		}
+		any_owned = {
+			limit = { NOT = { is_core = THIS } is_colonial = no is_primary_culture = yes is_accepted_culture = yes has_province_modifier = pop_replacement_province_modifier } remove_province_modifier = pop_replacement_province_modifier
+		}
 
 		#Simulate population decline among non-accepteds
 		random_list = {
-			15 = { any_pop = { limit = { location = { NOT = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
-			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
-			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
+			15 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } } reduce_pop = 0.95 } }
+			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } } reduce_pop = 0.975 } }
+			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } } reduce_pop = 0.99 } }
 		}
 		#Simulate major population growth among primary cultures, but only in areas where they're not already the majority to prevent massive overpopulation too quickly
 		random_list = {
-			15 = { any_pop = { limit = { location = { NOT = { is_core = THIS } is_primary_culture = no is_accepted_culture = no } is_primary_culture = yes } reduce_pop = 1.5 } }
-			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS } is_primary_culture = no is_accepted_culture = no } is_primary_culture = yes } reduce_pop = 1.25 } }
-			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS } is_primary_culture = no is_accepted_culture = no } is_primary_culture = yes } reduce_pop = 1.1 } }
+			15 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } is_primary_culture = no is_accepted_culture = no } is_primary_culture = yes } reduce_pop = 1.5 } }
+			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } is_primary_culture = no is_accepted_culture = no } is_primary_culture = yes } reduce_pop = 1.25 } }
+			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } is_primary_culture = no is_accepted_culture = no } is_primary_culture = yes } reduce_pop = 1.1 } }
 		}
 
 		#Discovery Chance
 		random = {
 			chance = 15
 			prestige_factor = -0.05
-			badboy = 5
+			badboy = 2.5
 			set_country_flag = discovered_genocide
 		}
 
@@ -214,15 +235,24 @@ country_event = {
 
 		ai_chance = { 
 			factor = 0.1 
-			modifier = { factor = 0 
-			NOT = { any_owned_province = { is_colonial = yes } } }
-			any_owned_province = { is_core = no }
+			modifier = {
+				factor = 0 
+				NOT = { any_owned_province = { is_colonial = yes } }
+				any_owned_province = { is_core = no }
+			}
 		}
 	}
 
 	option = {
-		name = "Focus on the entire nation (20% chance of discovery)"
-		add_country_modifier = { name = pop_replacement_event_cooldown duration = 185 } #To prevent event spam
+		name = "Focus on the entire nation! (20% chance of discovery)"
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 365 } #To prevent event spam
+		
+		any_owned = {
+			limit = { is_primary_culture = no is_accepted_culture = no } add_province_modifier = { name = pop_replacement_province_modifier duration = -1 }
+		}
+		any_owned = {
+			limit = { is_primary_culture = yes is_accepted_culture = yes has_province_modifier = pop_replacement_province_modifier } remove_province_modifier = pop_replacement_province_modifier
+		}
 
 		#Simulate population decline among non-accepteds
 		random_list = {
@@ -241,7 +271,7 @@ country_event = {
 		random = {
 			chance = 20
 			prestige_factor = -0.05
-			badboy = 5
+			badboy = 2.5
 			set_country_flag = discovered_genocide
 		}
 
@@ -250,8 +280,10 @@ country_event = {
 
 		ai_chance = { 
 			factor = 0.1 
-			modifier = { factor = 1 
-			NOT = { any_owned_province = { is_colonial = yes is_core = no } } } 
+			modifier = {
+				factor = 1 
+				NOT = { any_owned_province = { is_colonial = yes is_core = no } }
+			} 
 		}
 	}
 }

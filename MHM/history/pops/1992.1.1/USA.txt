@@ -91,6 +91,99 @@
 		size = 447
 	 } 
 }
+#Yakutat - Yakutat (34000/8500 POPS)
+2 = {
+	capitalists = {
+		culture = white_anglo
+		religion =  protestant 
+		size = 32
+	 } 
+	capitalists = {
+		culture = white_anglo
+		religion = secularism
+		size = 18
+	 } 
+	officers = {
+		culture = white_anglo
+		religion =  protestant 
+		size = 22
+	 } 
+	officers = {
+		culture = white_anglo
+		religion = secularism
+		size = 12
+	 } 
+	soldiers = {
+		culture = white_anglo
+		religion =  protestant 
+		size = 91
+	 } 
+	soldiers = {
+		culture = white_anglo
+		religion = secularism
+		size = 51
+	 } 
+	aristocrats = {
+		culture = white_anglo
+		religion =  protestant 
+		size = 108
+	 } 
+	aristocrats = {
+		culture = white_anglo
+		religion = secularism
+		size = 61
+	 } 
+	bureaucrats = {
+		culture = white_anglo
+		religion =  protestant 
+		size = 32
+	 } 
+	bureaucrats = {
+		culture = white_anglo
+		religion = secularism
+		size = 18
+	 } 
+	clergymen = {
+		culture = white_anglo
+		religion =  protestant 
+		size = 108
+	 } 
+	clergymen = {
+		culture = white_anglo
+		religion = secularism
+		size = 61
+	 } 
+	artisans = {
+		culture = white_anglo
+		religion =  protestant 
+		size = 158
+	 } 
+	artisans = {
+		culture = white_anglo
+		religion = secularism
+		size = 89
+	 } 
+	farmers = {
+		culture = white_anglo
+		religion =  protestant 
+		size = 2143
+	 } 
+	farmers = {
+		culture = white_anglo
+		religion = secularism
+		size = 1768
+	 } 
+	farmers = {
+		culture = inuit
+		religion =  animist
+		size = 1794
+	 } 
+	farmers = {
+		culture = inuit
+		religion = secularism
+		size = 447
+	 } 
+}
 #Phoenix - Phoenix (4163000/1040750 POPS)
 100 = {
 	capitalists = {
@@ -3696,102 +3789,102 @@
 #Oklahoma City - Oklahoma City (1749000/437250 POPS)
 129 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1678
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 944
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1180
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 663
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4721
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2656
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5596
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3148
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1678
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 944
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5596
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3148
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 9608
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 5404
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 8167
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 4593
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 30266
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 17025
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 105005
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 59065
 	 } 
@@ -3829,102 +3922,102 @@
 #Tahlequah - Tahlequah (676000/169000 POPS)
 130 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 648
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 365
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 455
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 256
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1824
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1026
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2163
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1216
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 648
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 365
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2163
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1216
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3713
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2088
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3156
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1775
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 11697
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 6580
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 60055
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 33781
 	 } 
@@ -3942,102 +4035,102 @@
 #Okmulgee - Okmulgee (676000/169000 POPS)
 131 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 648
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 365
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 455
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 256
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1824
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1026
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2163
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1216
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 648
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 365
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2163
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1216
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3713
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2088
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3156
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1775
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 11697
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 6580
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 60055
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 33781
 	 } 
@@ -4055,102 +4148,102 @@
 #Houston - Houston (6642000/1660500 POPS)
 132 = {
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 6376
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 3586
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 4483
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 2521
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 17933
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 10087
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 21254
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 11955
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 6376
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 3586
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 21254
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 11955
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 36489
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 20525
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 31015
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 17446
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 114942
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 64654
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 90572
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 50946
 	 } 
@@ -4228,92 +4321,92 @@
 #Austin - Austin (2969000/742250 POPS)
 133 = {
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 2849
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1603
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 2003
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1127
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 8016
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 4509
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 9500
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 5344
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 2849
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1603
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 9500
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 5344
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 16311
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 9174
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 13864
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 7798
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 30111
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 16937
 	 } 
@@ -4391,102 +4484,102 @@
 #Dallas - Dallas (7046000/1761500 POPS)
 134 = {
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 6764
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 3804
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 4755
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 2675
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 19024
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 10701
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 22547
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 12682
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 6764
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 3804
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 22547
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 12682
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 38709
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 21773
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 32902
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 18507
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 121933
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 68587
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 400468
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 225263
 	 } 
@@ -4554,102 +4647,102 @@
 #Lubbock - Lubbock (446000/111500 POPS)
 135 = {
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 428
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 240
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 300
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 169
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 1203
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 677
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 1427
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 802
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 428
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 240
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 1427
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 802
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 2449
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1378
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 2082
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1171
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 7717
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 4341
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 53894
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 30315
 	 } 
@@ -4657,92 +4750,92 @@
 #El Paso - El Paso (608000/152000 POPS)
 136 = {
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 583
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 328
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 410
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 230
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 1641
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 923
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 1945
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1094
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 583
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 328
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 1945
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1094
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 3340
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1878
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 2839
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1596
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 6166
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 3468
 	 } 
@@ -4780,92 +4873,92 @@
 #San Antonio - San Antonio (2887000/721750 POPS)
 137 = {
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 2771
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1558
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 1948
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1095
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 7794
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 4384
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 9238
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 5196
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 2771
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1558
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 9238
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 5196
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 15860
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 8921
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 13480
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 7583
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 29280
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 16470
 	 } 
@@ -4943,92 +5036,92 @@
 #Laredo - Laredo (608000/152000 POPS)
 138 = {
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 583
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 328
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 410
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 230
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 1641
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 923
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 1945
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1094
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 583
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 328
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 1945
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1094
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 3340
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1878
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 2839
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 1596
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion =  protestant 
 		size = 6166
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = texan
 		religion = secularism
 		size = 3468
 	 } 
@@ -5066,102 +5159,102 @@
 #New Orleans - New Orleans (1822000/455500 POPS)
 139 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1749
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 983
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1229
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 691
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4919
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2766
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5830
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3279
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1749
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 983
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5830
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3279
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 10009
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 5630
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 8508
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 4785
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 31530
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 17735
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 58574
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 28572
 	 } 
@@ -5239,102 +5332,102 @@
 #Baton Rouge - Baton Rouge (640000/160000 POPS)
 140 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 614
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 345
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 432
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 243
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1728
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 972
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2048
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1152
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 614
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 345
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2048
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1152
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3515
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1977
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2988
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1680
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 11075
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 6229
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 34568
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 15069
 	 } 
@@ -5362,102 +5455,102 @@
 #Lake Charles - Lake Charles (640000/160000 POPS)
 141 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 614
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 345
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 432
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 243
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1728
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 972
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2048
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1152
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 614
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 345
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2048
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1152
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3515
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1977
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2988
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1680
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 11075
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 6229
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 34568
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 15069
 	 } 
@@ -5485,102 +5578,102 @@
 #Shreveport - Shreveport (640000/160000 POPS)
 142 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 614
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 345
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 432
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 243
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1728
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 972
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2048
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1152
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 614
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 345
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2048
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1152
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3515
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1977
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2988
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1680
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 11075
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 6229
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 44568
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 25069
 	 } 
@@ -5598,102 +5691,102 @@
 #Little Rock - Little Rock (800000/200000 POPS)
 143 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 768
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 432
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 539
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 303
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2160
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1215
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2560
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1440
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 768
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 432
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2560
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1440
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4394
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2472
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3735
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2101
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 13843
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 7787
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 65950
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 37096
 	 } 
@@ -5741,102 +5834,102 @@
 #Hot Springs - Hot Springs (800000/200000 POPS)
 144 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 768
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 432
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 539
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 303
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2160
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1215
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2560
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1440
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 768
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 432
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2560
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1440
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4394
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2472
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3735
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2101
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 13843
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 7787
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 65950
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 37096
 	 } 
@@ -5884,102 +5977,102 @@
 #Fayetteville - Fayetteville (800000/200000 POPS)
 145 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 768
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 432
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 539
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 303
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2160
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1215
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2560
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1440
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 768
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 432
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2560
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1440
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4394
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2472
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3735
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2101
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 13843
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 7787
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 65950
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 37096
 	 } 
@@ -6170,7 +6263,7 @@
 #Joplin - Joplin (522000/130500 POPS)
 147 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 501
 	 } 
@@ -6180,7 +6273,7 @@
 		size = 281
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 352
 	 } 
@@ -6190,7 +6283,7 @@
 		size = 198
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1409
 	 } 
@@ -6200,7 +6293,7 @@
 		size = 792
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1670
 	 } 
@@ -6210,7 +6303,7 @@
 		size = 939
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 501
 	 } 
@@ -6220,7 +6313,7 @@
 		size = 281
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1670
 	 } 
@@ -6230,7 +6323,7 @@
 		size = 939
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2867
 	 } 
@@ -6240,7 +6333,7 @@
 		size = 1613
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2437
 	 } 
@@ -6250,7 +6343,7 @@
 		size = 1370
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 9033
 	 } 
@@ -6260,7 +6353,7 @@
 		size = 5081
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 63077
 	 } 
@@ -6273,7 +6366,7 @@
 #Malden - Malden (522000/130500 POPS)
 148 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 501
 	 } 
@@ -6283,7 +6376,7 @@
 		size = 281
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 352
 	 } 
@@ -6293,7 +6386,7 @@
 		size = 198
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1409
 	 } 
@@ -6303,7 +6396,7 @@
 		size = 792
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1670
 	 } 
@@ -6313,7 +6406,7 @@
 		size = 939
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 501
 	 } 
@@ -6323,7 +6416,7 @@
 		size = 281
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1670
 	 } 
@@ -6333,7 +6426,7 @@
 		size = 939
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2867
 	 } 
@@ -6343,7 +6436,7 @@
 		size = 1613
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2437
 	 } 
@@ -6353,7 +6446,7 @@
 		size = 1370
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 9033
 	 } 
@@ -6363,7 +6456,7 @@
 		size = 5081
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 63077
 	 } 
@@ -10634,102 +10727,102 @@
 #Louisville - Louisville (1688000/422000 POPS)
 184 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1620
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 911
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1139
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 640
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4557
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2563
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5401
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3038
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1620
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 911
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5401
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3038
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 9272
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 5216
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 7882
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 4433
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 29210
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 16431
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 128350
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 72197
 	 } 
@@ -10787,102 +10880,102 @@
 #Lexington - Lexington (625000/156250 POPS)
 185 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 599
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 337
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 421
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 237
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1687
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 948
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2000
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1125
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 599
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 337
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2000
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1125
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3433
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1931
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2918
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1641
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 10815
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 6083
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 75524
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 42482
 	 } 
@@ -10890,102 +10983,102 @@
 #Bowling Green - Bowling Green (625000/156250 POPS)
 186 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 599
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 337
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 421
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 237
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1687
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 948
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2000
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1125
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 599
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 337
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2000
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1125
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3433
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1931
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2918
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1641
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 10815
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 6083
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 75524
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 42482
 	 } 
@@ -10993,102 +11086,102 @@
 #Paducah - Paducah (625000/156250 POPS)
 187 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 599
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 337
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 421
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 237
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1687
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 948
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2000
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1125
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 599
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 337
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2000
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1125
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3433
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1931
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2918
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1641
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 10815
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 6083
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 75524
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 42482
 	 } 
@@ -11096,102 +11189,102 @@
 #Nashville - Nashville (2385000/596250 POPS)
 188 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2289
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1287
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1609
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 905
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6439
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3621
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 7632
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 4293
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2289
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1287
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 7632
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 4293
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 13102
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 7370
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 11137
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 6264
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 41272
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 23216
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 181347
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 102008
 	 } 
@@ -11239,102 +11332,102 @@
 #Memphis - Memphis (2047000/511750 POPS)
 189 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1964
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1105
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1381
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 776
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5526
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3108
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6550
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3684
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1964
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1105
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6550
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3684
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 11245
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 6325
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 9558
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 5376
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 35424
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 19926
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 155648
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 87552
 	 } 
@@ -11382,102 +11475,102 @@
 #Knoxville - Knoxville (410000/102500 POPS)
 190 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 393
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 221
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 276
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 155
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1106
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 622
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1312
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 738
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 393
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 221
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1312
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 738
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2252
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1266
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1914
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1076
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 7095
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3990
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 49544
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 27868
 	 } 
@@ -11485,102 +11578,102 @@
 #Chattanooga - Chattanooga (410000/102500 POPS)
 191 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 393
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 221
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 276
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 155
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1106
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 622
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1312
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 738
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 393
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 221
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1312
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 738
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2252
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1266
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1914
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1076
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 7095
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3990
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 49544
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 27868
 	 } 
@@ -11588,102 +11681,102 @@
 #Jackson - Jackson (804000/201000 POPS)
 192 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 771
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 434
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 542
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 304
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2170
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1220
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2572
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1447
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 771
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 434
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2572
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1447
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4416
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2484
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3754
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2111
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 13913
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 7826
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 45697
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 25705
 	 } 
@@ -11721,102 +11814,102 @@
 #Vicksburg - Vicksburg (804000/201000 POPS)
 193 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 771
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 434
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 542
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 304
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2170
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1220
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2572
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1447
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 771
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 434
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2572
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1447
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4416
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2484
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3754
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2111
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 13913
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 7826
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 45697
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 25705
 	 } 
@@ -11854,102 +11947,102 @@
 #Biloxi - Biloxi (804000/201000 POPS)
 194 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 771
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 434
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 542
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 304
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2170
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1220
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2572
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1447
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 771
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 434
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2572
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1447
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4416
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2484
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3754
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2111
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 13913
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 7826
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 45697
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 25705
 	 } 
@@ -11987,102 +12080,102 @@
 #Montgomery - Montgomery (991000/247750 POPS)
 195 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 951
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 534
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 668
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 376
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2675
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1504
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3171
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1783
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 951
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 534
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3171
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1783
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5443
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3062
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4627
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2602
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 17149
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 9646
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 89624
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 50413
 	 } 
@@ -12100,102 +12193,102 @@
 #Tuscaloosa - Tuscaloosa (1911000/477750 POPS)
 196 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1834
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1031
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1289
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 725
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5159
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2902
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6115
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3439
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1834
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1031
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6115
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3439
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 10498
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 5905
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 8923
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 5019
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 33070
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 18601
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 87212
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 49056
 	 } 
@@ -12243,102 +12336,102 @@
 #Mobile - Mobile (991000/247750 POPS)
 197 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 951
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 534
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 668
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 376
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2675
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1504
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3171
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1783
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 951
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 534
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3171
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1783
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5443
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3062
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4627
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2602
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 17149
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 9646
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 89624
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 50413
 	 } 
@@ -12356,102 +12449,102 @@
 #Tallahassee - Tallahassee (1924000/481000 POPS)
 198 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1847
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1038
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1298
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 730
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5194
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2921
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6156
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3463
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1847
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1038
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6156
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3463
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 10569
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 5945
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 8984
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 5053
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 33295
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 18728
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 103197
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 58048
 	 } 
@@ -12509,102 +12602,102 @@
 #St Augustine - St Augustine (4260000/1065000 POPS)
 199 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4089
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2300
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2875
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1617
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 11502
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 6469
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 13632
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 7668
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4089
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2300
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 13632
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 7668
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 23402
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 13164
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 19892
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 11189
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 73720
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 41467
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 228491
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 128526
 	 } 
@@ -12659,99 +12752,6 @@
 		size = 3834
 	 } 
 }
-#Yakutat - Yakutat (34000/8500 POPS)
-2 = {
-	capitalists = {
-		culture = white_anglo
-		religion =  protestant 
-		size = 32
-	 } 
-	capitalists = {
-		culture = white_anglo
-		religion = secularism
-		size = 18
-	 } 
-	officers = {
-		culture = white_anglo
-		religion =  protestant 
-		size = 22
-	 } 
-	officers = {
-		culture = white_anglo
-		religion = secularism
-		size = 12
-	 } 
-	soldiers = {
-		culture = white_anglo
-		religion =  protestant 
-		size = 91
-	 } 
-	soldiers = {
-		culture = white_anglo
-		religion = secularism
-		size = 51
-	 } 
-	aristocrats = {
-		culture = white_anglo
-		religion =  protestant 
-		size = 108
-	 } 
-	aristocrats = {
-		culture = white_anglo
-		religion = secularism
-		size = 61
-	 } 
-	bureaucrats = {
-		culture = white_anglo
-		religion =  protestant 
-		size = 32
-	 } 
-	bureaucrats = {
-		culture = white_anglo
-		religion = secularism
-		size = 18
-	 } 
-	clergymen = {
-		culture = white_anglo
-		religion =  protestant 
-		size = 108
-	 } 
-	clergymen = {
-		culture = white_anglo
-		religion = secularism
-		size = 61
-	 } 
-	artisans = {
-		culture = white_anglo
-		religion =  protestant 
-		size = 158
-	 } 
-	artisans = {
-		culture = white_anglo
-		religion = secularism
-		size = 89
-	 } 
-	farmers = {
-		culture = white_anglo
-		religion =  protestant 
-		size = 2143
-	 } 
-	farmers = {
-		culture = white_anglo
-		religion = secularism
-		size = 1768
-	 } 
-	farmers = {
-		culture = inuit
-		religion =  animist
-		size = 1794
-	 } 
-	farmers = {
-		culture = inuit
-		religion = secularism
-		size = 447
-	 } 
-}
 #Tampa - Tampa (6667000/1666750 POPS)
 200 = {
 	capitalists = {
@@ -12765,7 +12765,7 @@
 		size = 3600
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4499
 	 } 
@@ -12775,7 +12775,7 @@
 		size = 2531
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 18000
 	 } 
@@ -12785,7 +12785,7 @@
 		size = 10125
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 21334
 	 } 
@@ -12795,7 +12795,7 @@
 		size = 12000
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6400
 	 } 
@@ -12805,7 +12805,7 @@
 		size = 3600
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 21334
 	 } 
@@ -12815,7 +12815,7 @@
 		size = 12000
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 36626
 	 } 
@@ -12825,7 +12825,7 @@
 		size = 20602
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 31132
 	 } 
@@ -12835,7 +12835,7 @@
 		size = 17512
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 115374
 	 } 
@@ -12845,7 +12845,7 @@
 		size = 64898
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 331992
 	 } 
@@ -12918,102 +12918,102 @@
 #Atlanta - Atlanta (5205000/1301250 POPS)
 201 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4996
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2810
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3512
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1976
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 14053
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 7904
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 16656
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 9369
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4996
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2810
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 16656
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 9369
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 28594
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 16084
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 24305
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 13671
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 90074
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 50666
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 179242
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 100824
 	 } 
@@ -13091,102 +13091,102 @@
 #Valdosta - Valdosta (955000/238750 POPS)
 202 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 916
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 515
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 644
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 362
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2577
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1450
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3056
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1719
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 916
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 515
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3056
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1719
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5246
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2950
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4459
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2508
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 16526
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 9296
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 74144
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 41706
 	 } 
@@ -13204,102 +13204,102 @@
 #Savannah - Savannah (955000/238750 POPS)
 204 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 916
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 515
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 644
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 362
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2577
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1450
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3056
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1719
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 916
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 515
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3056
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1719
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5246
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2950
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4459
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2508
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 16526
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 9296
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 74144
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 41706
 	 } 
@@ -13317,102 +13317,102 @@
 #Charleston - Charleston (338000/84500 POPS)
 205 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 324
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 182
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 227
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 128
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 912
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 513
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1081
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 608
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 324
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 182
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1081
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 608
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1856
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1044
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1578
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 887
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5849
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3290
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 21374
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 12023
 	 } 
@@ -13450,102 +13450,102 @@
 #Columbia - Columbia (338000/84500 POPS)
 206 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 324
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 182
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 227
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 128
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 912
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 513
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1081
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 608
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 324
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 182
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1081
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 608
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1856
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1044
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1578
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 887
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5849
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3290
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 21374
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 12023
 	 } 
@@ -13583,102 +13583,102 @@
 #Greenville - Greenville (1173000/293250 POPS)
 207 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1125
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 633
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 791
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 445
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3166
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1781
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3753
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2111
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1125
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 633
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3753
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2111
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6444
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3624
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5477
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3080
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 20298
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 11418
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 94822
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 53337
 	 } 
@@ -13696,102 +13696,102 @@
 #Raleigh - Raleigh (1173000/293250 POPS)
 208 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1125
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 633
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 791
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 445
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3166
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1781
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3753
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2111
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1125
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 633
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3753
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2111
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6444
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3624
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5477
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3080
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 20298
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 11418
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 94822
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 53337
 	 } 
@@ -13809,102 +13809,102 @@
 #Charlotte - Charlotte (3161000/790250 POPS)
 209 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3034
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1706
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2133
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1199
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 8534
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 4800
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 10115
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 5689
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3034
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1706
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 10115
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 5689
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 17365
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 9768
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 14760
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 8303
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 54702
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 30769
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 154372
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 86834
 	 } 
@@ -13972,102 +13972,102 @@
 #WIlmington - WIlmington (1173000/293250 POPS)
 210 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1125
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 633
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 791
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 445
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3166
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1781
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3753
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2111
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1125
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 633
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3753
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2111
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6444
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3624
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5477
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3080
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 20298
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 11418
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 94822
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 53337
 	 } 
@@ -14085,102 +14085,102 @@
 #Richmond - Richmond (2006000/501500 POPS)
 211 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1925
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1083
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1353
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 761
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5415
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3046
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6419
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3610
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1925
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1083
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6419
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3610
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 11020
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 6198
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 9367
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 5268
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 34714
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 19526
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 114015
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 64133
 	 } 
@@ -14263,7 +14263,7 @@
 #Manassas - Manassas (3141000/785250 POPS)
 212 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3015
 	 } 
@@ -14273,7 +14273,7 @@
 		size = 1695
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2119
 	 } 
@@ -14283,7 +14283,7 @@
 		size = 1192
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 8480
 	 } 
@@ -14293,7 +14293,7 @@
 		size = 4770
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 10051
 	 } 
@@ -14303,7 +14303,7 @@
 		size = 5653
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3015
 	 } 
@@ -14313,7 +14313,7 @@
 		size = 1695
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 10051
 	 } 
@@ -14323,7 +14323,7 @@
 		size = 5653
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 17255
 	 } 
@@ -14333,7 +14333,7 @@
 		size = 9706
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 14667
 	 } 
@@ -14343,7 +14343,7 @@
 		size = 8250
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 54356
 	 } 
@@ -14353,7 +14353,7 @@
 		size = 30575
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 178523
 	 } 
@@ -14441,7 +14441,7 @@
 #Fredericksburg - Fredericksburg (378000/94500 POPS)
 213 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 362
 	 } 
@@ -14451,7 +14451,7 @@
 		size = 204
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 254
 	 } 
@@ -14461,7 +14461,7 @@
 		size = 143
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1020
 	 } 
@@ -14471,7 +14471,7 @@
 		size = 573
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1209
 	 } 
@@ -14481,7 +14481,7 @@
 		size = 680
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 362
 	 } 
@@ -14491,7 +14491,7 @@
 		size = 204
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1209
 	 } 
@@ -14501,7 +14501,7 @@
 		size = 680
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2076
 	 } 
@@ -14511,7 +14511,7 @@
 		size = 1167
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1765
 	 } 
@@ -14521,7 +14521,7 @@
 		size = 992
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6541
 	 } 
@@ -14531,7 +14531,7 @@
 		size = 3679
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 32371
 	 } 
@@ -14554,102 +14554,102 @@
 #Norfolk - Norfolk (378000/94500 POPS)
 214 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 362
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 204
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 254
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 143
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1020
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 573
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1209
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 680
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 362
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 204
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1209
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 680
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2076
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1167
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1765
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 992
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6541
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3679
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 32371
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 18209
 	 } 
@@ -14667,102 +14667,102 @@
 #Staunton - Staunton (378000/94500 POPS)
 215 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 362
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 204
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 254
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 143
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1020
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 573
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1209
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 680
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 362
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 204
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1209
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 680
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2076
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1167
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1765
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 992
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6541
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3679
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 45677
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 25693
 	 } 
@@ -14770,102 +14770,102 @@
 #Roanoke - Roanoke (378000/94500 POPS)
 216 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 362
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 204
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 254
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 143
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1020
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 573
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1209
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 680
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 362
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 204
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1209
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 680
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2076
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1167
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1765
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 992
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6541
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3679
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 45677
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 25693
 	 } 
@@ -14873,7 +14873,7 @@
 #Wheeling - Wheeling (754000/188500 POPS)
 217 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 723
 	 } 
@@ -14883,7 +14883,7 @@
 		size = 407
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 508
 	 } 
@@ -14893,7 +14893,7 @@
 		size = 286
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2035
 	 } 
@@ -14903,7 +14903,7 @@
 		size = 1144
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2412
 	 } 
@@ -14913,7 +14913,7 @@
 		size = 1357
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 723
 	 } 
@@ -14923,7 +14923,7 @@
 		size = 407
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2412
 	 } 
@@ -14933,7 +14933,7 @@
 		size = 1357
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4142
 	 } 
@@ -14943,7 +14943,7 @@
 		size = 2329
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3520
 	 } 
@@ -14953,7 +14953,7 @@
 		size = 1980
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 13048
 	 } 
@@ -14963,7 +14963,7 @@
 		size = 7339
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 85079
 	 } 
@@ -14996,7 +14996,7 @@
 #Huntington - Huntington (754000/188500 POPS)
 218 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 723
 	 } 
@@ -15006,7 +15006,7 @@
 		size = 407
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 508
 	 } 
@@ -15016,7 +15016,7 @@
 		size = 286
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2035
 	 } 
@@ -15026,7 +15026,7 @@
 		size = 1144
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2412
 	 } 
@@ -15036,7 +15036,7 @@
 		size = 1357
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 723
 	 } 
@@ -15046,7 +15046,7 @@
 		size = 407
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2412
 	 } 
@@ -15056,7 +15056,7 @@
 		size = 1357
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4142
 	 } 
@@ -15066,7 +15066,7 @@
 		size = 2329
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3520
 	 } 
@@ -15076,7 +15076,7 @@
 		size = 1980
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 13048
 	 } 
@@ -15086,7 +15086,7 @@
 		size = 7339
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 85079
 	 } 
@@ -20268,102 +20268,102 @@
 #Augusta - Augusta (955000/238750 POPS)
 2555 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 916
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 515
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 644
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 362
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 2577
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1450
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3056
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1719
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 916
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 515
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3056
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1719
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5246
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2950
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 4459
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2508
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 16526
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 9296
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 74144
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 41706
 	 } 
@@ -20381,102 +20381,102 @@
 #Asheville - Asheville (1173000/293250 POPS)
 2556 = {
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1125
 	 } 
 	capitalists = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 633
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 791
 	 } 
 	officers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 445
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3166
 	 } 
 	soldiers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 1781
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3753
 	 } 
 	aristocrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2111
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 1125
 	 } 
 	bureaucrats = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 633
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 3753
 	 } 
 	clergymen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 2111
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 6444
 	 } 
 	clerks = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3624
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 5477
 	 } 
 	artisans = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 3080
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 20298
 	 } 
 	craftsmen = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 11418
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion =  protestant 
 		size = 141742
 	 } 
 	farmers = {
-		culture = white_anglo
+		culture = dixie
 		religion = secularism
 		size = 79730
 	 } 
