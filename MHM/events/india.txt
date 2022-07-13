@@ -160,6 +160,7 @@ country_event = {
 		
 		#Had a war with Pakistan
 		PAK = { exists = yes is_vassal = no }
+		truce_with = PAK
 	}
 
 	mean_time_to_happen = { months = 6 }
@@ -217,6 +218,7 @@ country_event = {
 		
 		#Had a war with Pakistan
 		PAK = { exists = yes is_vassal = no }
+		truce_with = PAK
 	}
 
 	mean_time_to_happen = { months = 3 }

@@ -32,6 +32,7 @@ country_event = {
 	option = {
 		name = "Fight to keep East Pakistan!"
 		prestige = 50
+		set_country_flag = bengal_war_of_independence
 		
 		#Insurgency in Bangladesh
 		any_owned = { 
@@ -42,25 +43,19 @@ country_event = {
 			any_pop = {
 				militancy = 10
 				ideology = {
-					factor = 0.25
+					factor = 0.50
 					value = nationalist
 				}
 			}
 			
 		}
 		
-		#BNG is released
-		release = BNG
-		BNG = { 
-			government = democracy 
-			country_event = 800054 
-			ruling_party_ideology = nationalist 
-		}
-		war = { 
-			target = BNG
-			attacker_goal = { casus_belli = civil_war }
-			defender_goal = { casus_belli = become_independent }
-		}
+		#Bengal Genocide
+		set_country_flag = ethnic_cleansed
+		country_event = 1512037
+		clr_country_flag = discovered_genocide 
+		clr_country_flag = discovered_genocide1
+		add_country_modifier = { name = ethnic_cleansing duration = -1 }
 		
 		#Choice for Indian intervention
 		HND = { country_event = 8017041 }
@@ -112,11 +107,11 @@ country_event = {
 				target = HND
 				attacker_goal = { casus_belli = acquire_any_state state_province_id = 1224 }
 				attacker_goal = { casus_belli = territorial_dispute_internal }
-				defender_goal = { casus_belli = cut_down_to_size }
+				defender_goal = { casus_belli = liberate_country country = BNG }
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.95 }
 	}
 
 	option = {
@@ -125,7 +120,7 @@ country_event = {
 		
 		relation = { who = PAK value = 50 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
 }
 
@@ -147,7 +142,6 @@ country_event = {
 		war = no
 		
 		government = democracy
-		ruling_party_ideology = socialist
 	}
 
 	mean_time_to_happen = { months = 1 }
@@ -322,5 +316,35 @@ country_event = {
 		add_country_modifier = { name = revolution_chaos duration = 1825 }
 		
 		ai_chance = { factor = 0.1 }
+	}
+}
+
+#The Bengal Refugee Crisis
+country_event = {
+  id = 8017046
+  title = "The Bengal Refugee Crisis"
+  desc = EVTDESC8017046
+  picture = "Bengal Refugees"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = BNG
+		exists = yes
+		war = no
+		year = 1971
+		NOT = { year = 1980 }
+		is_vassal = no
+		PAK = { has_country_flag = bengal_war_of_independence } # Didn't just give up and release Bengal
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "They will come back one day"
+		any_pop = { limit = { location = { state_id = 2657 } culture = bengali_hindu } move_pop = 1251 } # Khulna-Barisal State -> Calcutta
+		any_pop = { limit = { location = { state_id = 1255 } culture = bengali_hindu } move_pop = 1252 } # Rajashahi-Rangpur State -> Darjeeling
+		any_pop = { limit = { location = { state_id = 1254 } culture = bengali_hindu } move_pop = 1260 } # Central Bengal State -> Dibrugarh
+		any_pop = { limit = { location = { state_id = 1257 } culture = bengali_hindu } move_pop = 3280 } # Chittagong State -> Tripura
 	}
 }

@@ -53211,17 +53211,22 @@
 } # Madurai
 
 1310 = {
-    unit = {
-        x = 4026.000000
-        y = 916.000000
-    }
-
     text_position = {
         x = 4026.300049
         y = 911.000000
     }
 
     text_scale = 3.199999
+    unit = {
+        x = 4026.000000
+        y = 916.000000
+    }
+
+    factory = {
+        x = 4018.699951
+        y = 927.000000
+    }
+
     building_construction = {
         x = 4017.300049
         y = 918.200012
@@ -53232,11 +53237,6 @@
         y = 907.000000
     }
 
-    factory = {
-        x = 4018.699951
-        y = 927.000000
-    }
-
     building_position = {
         fort = {
             x = 4021.000000
@@ -53244,14 +53244,14 @@
         }
 
         naval_base = {
-            x = 4026.699951
-            y = 897.799988
+            x = 4036.463333
+            y = 905.625000
         }
 
     }
 
     building_rotation = {
-        naval_base = 3.316126
+        naval_base = 2.356194
     }
 
 } # Coimbatore
@@ -83628,18 +83628,23 @@
 } # Mombasa
 
 2029 = {
+    text_position = {
+        x = 3426.272222
+        y = 705.279167
+    }
+
+    text_rotation = 1.134464
+    text_scale = 4
     unit = {
         x = 3421.000000
         y = 702.000000
     }
 
-    text_position = {
-        x = 3424.899902
-        y = 699.000000
+    factory = {
+        x = 3427.199951
+        y = 710.200012
     }
 
-    text_rotation = 1.134464
-    text_scale = 2.799999
     building_construction = {
         x = 3425.800049
         y = 706.599976
@@ -83648,11 +83653,6 @@
     military_construction = {
         x = 3422.100098
         y = 698.299988
-    }
-
-    factory = {
-        x = 3427.199951
-        y = 710.200012
     }
 
     building_position = {
@@ -83675,31 +83675,31 @@
 } # Lamu
 
 2030 = {
-    unit = {
-        x = 3436.000000
-        y = 727.000000
-    }
-
     text_position = {
-        x = 3436.899902
-        y = 723.400024
+        x = 3440.150000
+        y = 727.616667
     }
 
     text_rotation = 0.523599
-    text_scale = 2.400000
+    text_scale = 3
+    unit = {
+        x = 3442.450000
+        y = 728.716667
+    }
+
+    factory = {
+        x = 3449.000000
+        y = 733.000000
+    }
+
     building_construction = {
         x = 3443.899902
         y = 730.799988
     }
 
     military_construction = {
-        x = 3431.600098
-        y = 721.000000
-    }
-
-    factory = {
-        x = 3449.000000
-        y = 733.000000
+        x = 3443.616667
+        y = 729.416667
     }
 
     building_position = {
@@ -83708,22 +83708,14 @@
             y = 714.200012
         }
 
-        naval_base = {
-            x = 3438.699951
-            y = 720.200012
-        }
-
         railroad = {
             x = 3436.000000
             y = 725.000000
         }
 
-    }
-
-    spawn_railway_track = {
-        {
-            x = 3458.507324
-            y = 742.898071
+        naval_base = {
+            x = 3438.699951
+            y = 720.200012
         }
 
     }
@@ -83772,30 +83764,31 @@
 } # Garissa
 
 2032 = {
-    unit = {
-        x = 3422.000000
-        y = 751.000000
-    }
-
     text_position = {
-        x = 3421.199951
-        y = 740.799988
+        x = 3431.670833
+        y = 757.184722
     }
 
-    text_scale = 4.199998
+    text_rotation = 5.355890
+    text_scale = 5
+    unit = {
+        x = 3434.369444
+        y = 751.508333
+    }
+
+    factory = {
+        x = 3415.000000
+        y = 771.000000
+    }
+
     building_construction = {
         x = 3434.000000
         y = 754.000000
     }
 
     military_construction = {
-        x = 3420.000000
-        y = 732.000000
-    }
-
-    factory = {
-        x = 3415.000000
-        y = 771.000000
+        x = 3428.600000
+        y = 759.418056
     }
 
     building_position = {
@@ -83809,36 +83802,37 @@
 } # Voi
 
 2033 = {
-    unit = {
-        x = 3410.000000
-        y = 706.000000
-    }
-
     text_position = {
-        x = 3410.000000
-        y = 701.400024
+        x = 3413.031250
+        y = 727.965278
     }
 
-    text_scale = 3.699999
-    building_construction = {
-        x = 3402.199951
-        y = 705.400024
-    }
-
-    military_construction = {
-        x = 3418.500000
-        y = 709.000000
+    text_rotation = 5.898028
+    text_scale = 5
+    unit = {
+        x = 3409.562500
+        y = 727.451389
     }
 
     factory = {
-        x = 3399.000000
-        y = 710.099976
+        x = 3408.277778
+        y = 702.527778
+    }
+
+    building_construction = {
+        x = 3410.975694
+        y = 724.111111
+    }
+
+    military_construction = {
+        x = 3413.802083
+        y = 723.211806
     }
 
     building_position = {
         fort = {
-            x = 3412.300049
-            y = 697.000000
+            x = 3410.333333
+            y = 732.204861
         }
 
     }
@@ -112786,11 +112780,6 @@
 } # Straits of Gibraltar
 
 2746 = {
-    unit = {
-        x = 2695.000000
-        y = 1353.000000
-    }
-
     text_position = {
         x = 2695.199951
         y = 1353.800049
@@ -112798,6 +112787,11 @@
 
     text_rotation = 6.283185
     text_scale = 2.400000
+    unit = {
+        x = 2735.420000
+        y = 1361.176667
+    }
+
 } # Gulf of Almeira
 
 2747 = {
@@ -115747,6 +115741,11 @@
     }
 
     text_scale = 3.499999
+    unit = {
+        x = 1868.061667
+        y = 1139.356667
+    }
+
 } # Lesser Antilles
 
 2976 = {
