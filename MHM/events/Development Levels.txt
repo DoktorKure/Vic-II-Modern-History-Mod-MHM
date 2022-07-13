@@ -187,7 +187,6 @@ country_event = {
 				literacy = 0.10
 				NOT = { literacy = 0.20 }
 				NOT = { has_province_modifier = dev_2 }
-				has_province_modifier = dev_1
 			} 
 			remove_province_modifier = dev_1
 			
@@ -205,7 +204,6 @@ country_event = {
 				literacy = 0.20
 				NOT = { literacy = 0.30 }
 				NOT = { has_province_modifier = dev_3 }
-				has_province_modifier = dev_2
 			}
 			remove_province_modifier = dev_1
 			remove_province_modifier = dev_2
@@ -223,7 +221,6 @@ country_event = {
 				literacy = 0.30
 				NOT = { literacy = 0.40 }
 				NOT = { has_province_modifier = dev_4 }
-				has_province_modifier = dev_3
 			}
 			remove_province_modifier = dev_1
 			remove_province_modifier = dev_2
@@ -241,7 +238,6 @@ country_event = {
 				literacy = 0.40
 				NOT = { literacy = 0.50 }
 				NOT = { has_province_modifier = dev_5 }
-				has_province_modifier = dev_4
 			}
 			remove_province_modifier = dev_1
 			remove_province_modifier = dev_2
@@ -258,7 +254,6 @@ country_event = {
 				total_pops = 30000
 				literacy = 0.50
 				NOT = { has_province_modifier = dev_6 }
-				has_province_modifier = dev_5
 			}
 			remove_province_modifier = dev_1
 			remove_province_modifier = dev_2
