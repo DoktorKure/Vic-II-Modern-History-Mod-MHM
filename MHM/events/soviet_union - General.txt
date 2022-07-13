@@ -100,7 +100,13 @@ country_event = {
 		political_reform = firewall_publishing
 		political_reform = limited_meetings
 
-		ai_chance = { factor = 0.85 }
+		ai_chance = {
+			factor = 0.85
+			modifier = {
+				factor = 1
+				has_country_flag = USSR_events_railroaded
+			}
+		}
 	}
 
 	option = {
@@ -1293,6 +1299,8 @@ country_event = {
 		
 		#Reasons for Khrushchev's fall
 		OR = {
+			has_country_flag = USSR_events_railroaded
+			
 			#USSR is no longer a superpower
 			NOT = { rank = 2 }
 			
@@ -1342,7 +1350,13 @@ country_event = {
 		set_country_flag = leonid_brezhnev
 		set_global_flag = fall_of_nikita_khrushchev
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 1
+				has_country_flag = USSR_events_railroaded
+			}
+		}
 	}
 
 	option = {
@@ -1435,8 +1449,12 @@ country_event = {
 		
 		has_country_flag = leonid_brezhnev
 		
-		#Did not remove Andropov
-		NOT = { has_country_flag = vladimir_scherbitsky }
+		OR = {
+			has_country_flag = USSR_events_railroaded
+			
+			#Did not remove Andropov
+			NOT = { has_country_flag = vladimir_scherbitsky }
+		}
 	}
 
 	mean_time_to_happen = { months = 10 }
@@ -1455,7 +1473,13 @@ country_event = {
 		clr_country_flag = yuri_andropov_1
 
 		set_country_flag = yuri_andropov
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 1
+				has_country_flag = USSR_events_railroaded
+			}
+		}
 	}
 
 	option = {
@@ -1573,7 +1597,13 @@ country_event = {
 		clr_country_flag = konstantin_chernenko
 		clr_country_flag = ussr_no_historical_reforms
 		set_global_flag = perestroika_intention_global_flag
-		ai_chance = { factor = 0.85 }
+		ai_chance = {
+			factor = 0.85
+			modifier = {
+				factor = 1
+				has_country_flag = USSR_events_railroaded
+			}
+		}
 	}
 	
 	option = {
@@ -1665,7 +1695,13 @@ country_event = {
 			any_pop = { ideology = { factor = 0.10 value = nationalist } }
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 1
+				has_country_flag = USSR_events_railroaded
+			}
+		}
 	}
 
 	option = {
@@ -1837,7 +1873,13 @@ country_event = {
 		#Set flag for dissolution event
 		set_global_flag = august_coup
 		add_country_modifier = { name = revolution_chaos duration = 1460 }
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 1
+				has_country_flag = USSR_events_railroaded
+			}
+		}
 	}
 
 	option = {
@@ -1906,7 +1948,7 @@ country_event = {
 		#The Fall of the USSR
 		country_event = 8014271
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 	
 	option = {
@@ -1925,7 +1967,7 @@ country_event = {
 		}
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		add_country_modifier = { name = political_strife duration = 3650 }
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -1969,6 +2011,16 @@ country_event = {
 		random_owned = { limit = { owner = { is_possible_vassal = LAT } } owner = { release = LAT LAT = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
 		random_owned = { limit = { owner = { is_possible_vassal = LIT } } owner = { release = LIT LIT = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
 		random_owned = { limit = { owner = { is_possible_vassal = EST } } owner = { release = EST EST = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		
+		#In case USSR annexed Warsaw Pact nations for any reason
+		random_owned = { limit = { owner = { is_possible_vassal = DDR } } owner = { release = DDR DDR = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = CZH } } owner = { release = CZH CZH = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = POL } } owner = { release = POL POL = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = HUN } } owner = { release = HUN HUN = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = BUL } } owner = { release = BUL BUL = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = ROM } } owner = { release = ROM ROM = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = AUS } } owner = { release = AUS AUS = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = MGL } } owner = { release = MGL MGL = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
 		
 		any_owned = { limit = { is_core = SKO } secede_province = NKO }
 

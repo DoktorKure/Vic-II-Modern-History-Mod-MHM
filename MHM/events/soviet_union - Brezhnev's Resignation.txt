@@ -27,7 +27,13 @@ country_event = { # Resignation of Leonid Brezhnev?
 		
 		poor_strata = { consciousness = 3 }
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 1
+				has_country_flag = USSR_events_railroaded
+			}
+		}
 	}
 	
 	option = {

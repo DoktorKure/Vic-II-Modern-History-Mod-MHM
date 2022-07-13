@@ -160,7 +160,7 @@ country_event = { # Sinatra Doctrine
 		
 		any_pop = { limit = { strata = rich } militancy = 8 consciousness = 8 }
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 	
 	option = {
@@ -171,7 +171,7 @@ country_event = { # Sinatra Doctrine
 		any_pop = { limit = { strata = middle } militancy = 8 consciousness = 8 }
 		any_pop = { limit = { strata = poor } militancy = 4 consciousness = 4 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 	
 }

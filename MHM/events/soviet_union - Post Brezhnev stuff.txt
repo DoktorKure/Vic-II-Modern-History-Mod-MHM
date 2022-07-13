@@ -28,7 +28,13 @@ country_event = { # A new head of the KGB
 		#Disperse power
 		political_reform = regulated_opinion
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 1
+				has_country_flag = USSR_events_railroaded
+			}
+		}
 	}
 	
 	option = {
@@ -203,7 +209,7 @@ country_event = { # Elimination of Yuri Andropov
 		}
 		set_country_flag = vladimir_scherbitsky
 		clr_country_flag = andropov_0
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.9 }
 	}
 	
 	option = {
@@ -213,7 +219,7 @@ country_event = { # Elimination of Yuri Andropov
 			militancy = 3 
 			consciousness = 3 
 		}
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.1 }
 	}
 }
 
@@ -946,7 +952,7 @@ country_event = { # A Reformer comes to power
 	mean_time_to_happen = { years = 3 }
 
 	option = {
-		name = "Let's stop slowing down the inivitable!"
+		name = "Let's stop slowing down the inevitable!"
 
 		any_pop = { consciousness = 5 militancy = 5 }
 		
@@ -1498,7 +1504,13 @@ country_event = { # Death of Gromyko
 		clr_country_flag = new_immigration_policy
 		clr_country_flag = socialist_bank
 		
-		ai_chance = { factor = 0.2 }
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 1
+				has_country_flag = USSR_events_railroaded
+			}
+		}
 	}
 }
 
