@@ -1195,7 +1195,7 @@ caucasian_minorities = {
 	}
 	north_caucasian = {
 		#!religion = { sunni }
-		color = {  252 255 161  }
+		color = { 252 255 161 }
 		first_names = { Aslan Hamza "Jamal al-Din" Mansur Mohammad Murad Shamil }
 		last_names = { Mollah Bek }
 	}
@@ -1289,7 +1289,7 @@ turko_semitic = {
 	}
 	uzbek = {
 		#!religion = { sunni }
-		color = { 255 69 0  }
+		color = { 255 69 0 }
 		first_names = { "Abd al-Ahad" "Abd al-Karim" "Abu al-Ghazi" Abulfayz Alimqul Aqim "Allah Quli" Haydar Husayn Iltazar Isfandiyar Jahangir Khudayar Madali Mahmud Muhammad Murad Nasrallah "Nasir al-Din" Nurali Pulad Qilich Qutlugh Rahim Shir Umar Yadigar Yaqub }
 		last_names = { Bahadur Bukhari Khan }
 	}
@@ -1301,7 +1301,7 @@ turko_semitic = {
 	}
 	kirgiz = {
 		#!religion = { sunni }
-		color = { 32 178 170  }
+		color = { 32 178 170 }
 		first_names = { Askar Chingiz Ishim Kasim Kurman Jangir Murat Nasiridin Sadyk Vali }
 		last_names = { Beg }
 	}
@@ -1372,7 +1372,7 @@ taiwanese_culture = {
 	leader = asian
 	unit = ChineseGC
 	taiwanese = {
-		color = { 109  168  127 }
+		color = { 109 168 127 }
 		first_names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu }
 		last_names = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
 	}
@@ -1402,13 +1402,13 @@ chinese_cultures = {
 	}
 	chinese_hokkien = {
 		#!religion = { taoism }
-		color = {  0 0 128  }
+		color = { 0 0 128 }
 		first_names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu }
 		last_names = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
 	}
 	chinese_hakka = {
 		#!religion = { taoism }
-		color = {  255 69 0  }
+		color = { 255 69 0 }
 		first_names = { Hong Feng Shi Li Chen Liu Qiu Sun Soong Liao Xue Zhang Xie Wu Shu Tsai Deng Zhen Huang Ye Yang }
 		last_names = { Xiuquan Yunshan Xiuqing Dakai Yucheng Rengan Zicai Yongfu Fengjia Yatsen }
 	}
@@ -1438,7 +1438,7 @@ chinese_cultures = {
 	}
 	manchu = {
 		#!religion = { taoism }
-		color = { 255 60 0  }
+		color = { 255 60 0 }
 		first_names = { Ma Deng zhao Tong Guan Oboi Sonin Songgotu Suksaha Mingzhu Nalan Fu Hesehn Changlin }
 		last_names = { Zhanshan Tiemei Shangzhi Linge Xiangying Xingde Kang'an }
 	}
@@ -1462,7 +1462,7 @@ chinese_cultures = {
 	}
 	yue = {
 		#!religion = { taoism }
-		color = {  89 34 100  }
+		color = { 89 34 100 }
 		first_names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu }
 		last_names = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Ting Shen Fang Jin Qiu }
 	}
@@ -1515,7 +1515,7 @@ south_asian_indian = {
 	}
 	avadhi = {
 		#!religion = { hindu }
-		color = {  90 64 23  }
+		color = { 90 64 23 }
 		first_names = { Lokendra Raghuraj Vijay Vishvanath Pheran Jugal Parbhu Narayan Ishvari Udit Prasan Mahip }
 		last_names = { Singh }
 	}
@@ -1533,23 +1533,23 @@ south_asian_indian = {
 	}
 	manipuri = {
  		#!religion = { hindu }
- 		color = {  190 150 240  }
+ 		color = { 190 150 240 }
  		first_names = { Churachandra Kulachanrda Surachandra Chandrakirti Devendra Nara Genavira Pitambara Marjit Moduchanrda Charajit Harshachandra Chingthang }
  		last_names = { Singh Khomba Sai }
  	}	
 	rajput = {
 		#!religion = { hindu }
-		color = {  192 232 147  }
+		color = { 192 232 147 }
 		first_names = { Sardar Fateh Muhammad Malik Umar Hayat Rai Hussain Veer Durga Bhai Rao Harsha Bhagwant "Mirza Raja" Jawapala Sawai }
 		last_names = { "ur Rahman" Bhatti Tiwana Qaim Kunwar "Bachittar Singh" Shekha }
 	}
 	oriya = {
-		color = {190 63 88 }
+		color = { 190 63 88 }
 		first_names = { Dibvyasimhadeva Harekrushnadeva Gopinathdeva Padmanavadeva Birakishoredeva Mukundadeva Ramachandradeva }
 		last_names = { Deva Das Rao Mohaptra Mishra }
 	}
 	gujarati = {
-		color = {99 12 89}
+		color = { 99 12 89 }
 		first_names = { Chetan Fakirbhai Jivraj Madhavsingh Khemchand Manubhai Bharatsingh Balwantry Chabildas Maniraj }
 		last_names = { Pansara Vaghela Solanki Modhvadia Mehta Baro Parmar }
 	}
@@ -1602,7 +1602,7 @@ dravidian_cultures = {
 	unit = IndianGC
 	tamil = {
 		#!religion = { hindu }
-		color = { 132 112 255  }
+		color = { 132 112 255 }
 		first_names = { Ramayyan Seshayya Ramiengar Seshadri Shungrasoobyer Rajagopalachari Shanmukham Ramaswami Dheeran Subramania Chidambaram Sathyamurthy Vanchinathan Champakaraman }
 		last_names = { Mudaliar Krishnamachari Rajapopalachari Sastri Dalawa }
 	}
@@ -1619,7 +1619,7 @@ dravidian_cultures = {
 		last_names = { Mudaliar Krishnamachari Rajapopalachari Sastri Dalawa }
 	}
 	marathi = {
-		color = {190 220 10}
+		color = { 190 220 10 }
 		first_names = { Venkatji Shahuji Pratapsinha Rajaram Shivaji Shambhaji Balaji Bajirao Madhava Narayan Raghunath Sawai }
 		last_names = { "Appa Sahib" "Bowa Sahib" Phadnis Narayan Rao Ballal "Baji Rao" Bhat }
 	}
@@ -1643,7 +1643,7 @@ dravidian_cultures = {
 	}
 	malayalam = {
 		#!religion = { hindu }
-		color = { 145 44 238  }
+		color = { 145 44 238 }
 		first_names = { Cheraman Swathi Thirunal Sri Sakthan Raja Moolam Marthanda Dharma Chithira Balarama Ayilyam Saamoothiri }
 		last_names = { Varma Kesavadas Thampuran "Rama Varma" Perumal }
 	}
@@ -1683,7 +1683,7 @@ bangladeshi_cultures = {
 	unit = IndianGC
 	bengali = {
 		#!religion = { sunni }
-		color = { 60 179 113  }
+		color = { 60 179 113 }
 		first_names = { Murshid Quli Shujauddin Alauddin Alivardi Sirajuddaula "Mir Muhammad" Najimuddin Reza Saifuddaula Zainul Ahmad Mansur Mubarak Hasan Wasif Waris }
 		last_names = { Jafar Muhammad Sarfaraz Ali "Qasim Ali" Najabut Bahadur Mirza }
 	}
@@ -1707,7 +1707,7 @@ southeast_asian = {
 	}
 	khmer = {
 		#!religion = { buddhist }
-		color = { 250 128 114  }
+		color = { 250 128 114 }
 		first_names = { Ang Sisowath Norodom Pok Satha Thommo }
 		last_names = { Eng Chan Em Snguon Mey Reachea Tong Non }
 	}
@@ -1736,7 +1736,7 @@ filipino = {
 	unit = AsianGC
 	filipino = {
 		#!religion = { catholic }
-		color = { 218 165 32  }
+		color = { 218 165 32 }
 		first_names = { Emilio Apolinario Andrés José Hermano Jacinto Mariano Deodato Ladislao Teodoro Valentíne Antonio León Simeón Arcadio Artemio Manuel }
 		last_names = { Aguainaldo Mabini Bonifacio Jacinto Rizal Díaz Plata Diwa Arellano }
 	}
@@ -1776,13 +1776,13 @@ burmese_minorities = {
 	}
 	kachin = {
 		#!religion = { protestant }
-		color = { 123 104 238  }
+		color = { 123 104 238 }
 		first_names = { Sama Sinwa U Zan Hta Duwa Ding Ga Hkyeng }
 		last_names = { Ratang Nawng Sin Lahpai Lahtaw Maran Marip Nhkum }
 	}
 	karen = {
 		#!religion = { protestant }
-		color = { 0 0 128  }
+		color = { 0 0 128 }
 		first_names = { Po La Paban Hkun Maung Papw Sao Saw }
 		last_names = { Che Baw U Lawi Lasa Pyatin "Law Paw" Kyi Pun Nge Bye Kye }
 	}
@@ -1817,13 +1817,13 @@ southwestern_tai = {
 	}
 	shan = {
 		#!religion = { buddhist }
-		color = { 250 128 114  }
+		color = { 250 128 114 }
 		first_names = { Hswe Hsö Naw Hkam Hkun Hseng Hpa Pyi Nga Hmu Natsu Pe Than Shwe Hpo Lun Sun }
 		last_names = { Cheng Kaw Möng Hkawt Pak Nan Lek Leng Hmu Letya Hung Thi Hpu Ya Min }
 	}
 	lao = {
 		#!religion = { buddhist }
-		color = { 218 165 32  }
+		color = { 218 165 32 }
 		first_names = { Manthaturath Anurutha Unkeo Sukha Chantha Unkham Sakkarin Sisavang Setthathirath Nanthasen Ong Phraya }
 		last_names = { Vong Kuman Söm Bun Supho Long Intharavong Anuvong }
 	}
@@ -1834,7 +1834,7 @@ malaysian_culture = {
 	unit = AsianGC
 	malay = {
 		#!religion = { sunni }
-		color = { 131 139 131  }
+		color = { 131 139 131 }
 		first_names = { Shahabuddin Riayat Abdullah Jaafar Safiuddin Muhammad Ali Al-Mukammal Ismail Muabidin Tuanku Yusuf Idris Jalil Isandar Aziz }
 		last_names = { "Raja Inu" al-Marhum "Raja Ahmad" "Riayat Shah" al-Khairat Muadzam Bendahara Aadzam Murshidul }
 	}
@@ -1882,7 +1882,7 @@ indonesian_culture = {
 	}
 	moluccan = {
 		#!religion = { protestant }
-		color = { 132 112 255  }
+		color = { 132 112 255 }
 		first_names = { Ellyas Ignacio Jordao Michael Sonny Denny Mohammad Edinho Jos Levi }
 		last_names = { Leiwakabessy Mainaky Weisapy Bouma Palyama Pattinama Pelmelay Lilipaly Hafiedz }
 	}
@@ -1943,31 +1943,31 @@ african_diaspora_cultures = {
 	}
 	afro_american = {
 		#!religion = { protestant }
-		color = {  42 42 42  }
+		color = { 42 42 42 }
 		first_names = { Aaron Alexander Andre Benton Caesar Cathay Charles Colin Ebenezer Edgar Edward Frederick George Henry James Joseph Lewis Lloyd Matin Michael Milton Osborne Pinckney Powhatan Robert Samuel Stewart Thomas William Wilson Barack }
 		last_names = { Anderson Antoine Augusta Basset Beaty Blake Brooks Brown Cailloux Carney Delany Douglass "Du Bois" Fields Flipper Gardner Griffin Hawkins Holland Jackson King Mink Nell Pinn Ratcliff Remond Smith Stukes Tubman Veale Obama }
 	}
 	afro_antillean = {
 		#!religion = { protestant }
-		color = {  24 44 49  }
+		color = { 24 44 49 }
 		first_names = { Alexis André Anténor Antoine Augustin Balthazar Beaubrun Céligny Charlemagne Charles Cincinnatus Dantès Demesvar Denys Emmanuel Eugène Fabre Faustin Florvil François Guillaume Hannibal Henri Jacques Jean Jean-Baptiste Jean-Louis Jean-Pierre Jonathas Joseph Léon Louis Louis-Eugène Louis-Joseph Lysius Michel Monpoint Nissage Nord Oreste Philippe Pierre Simon Sténio Sylvain Tandredè Thomas Timoleón Tirésias Vilbrum }
 		last_names = { Alexis Ardouin Auguste Bellegarde Boisrond-Canal Bonnet Borno Boyer Brutus Christophe Conzé Dartiguenave Delorme Dessalines Domingue Firmin Geffrad Granville Guerrier Hyppolite Iginac Janvier Jeune Lafontant Laleau Leconte Légitime Legouaze Léon Lhérisson Madiou Péralte Pierrot Planchet Price Price-Mars Riché Rigaud Rivière-Hérard Roumain Roy Saget Salnave Salomon Sam Simon Soulouque Théodore Vincent Zamor }
 	}
 	afro_brazilian = {
 		#!religion = { catholic }
-		color = {  25 115 44  }
+		color = { 25 115 44 }
 		first_names = { Afonso Aleixo Alexandre Anderson André Artur Cândido Carlos Denílson Djalma Félix Francisco Guilherme Itamar João Joaquim Jorge José Kléber Leandro Luís Manuel Marco Marcos Maurício Mauro Nilo Procópio Ricardo Ronaldo }
 		last_names = { Aragão Assunçao Bahia Barbosa Borges "de Cruz e Sousa" "da Lima" "de Lima Barreto" "de Ouro" "de Sousa" "de Souza" "dos Reis" "dos Santos" Fidalgo Filho Gil Gomes "Machado de Assis" Nunes Oliveira Otelo Paim Pandeiro Peçanha Pereira Pitanga Rodrigues Santos Silva Teixeira }
 	}
 	afro_caribbean = {
 		#!religion = { protestant }
-		color = {  32 57 32  }
+		color = { 32 57 32 }
 		first_names = { Anderson Anselm Arthur Ben Colville Cyril Earl Edwin Ellis Eric Geoffrey George Graham Henry Herbert Hubert Jeffrey John Josiah Lennox Lloyd Malcolm Mervyn Nicholas Rainford Reginald Robert Stokely William Winston }
 		last_names = { Abbott Best Blaize Brathwaite Carmichael Chambers Clark Douglas Dymally Findley Goddard Hall Henson Holder James Jones Julian Kilgour Lassalle Lovelace McIntosh Nurse Perry Roberts Robinson Shadd Stollmeyer Sylvester Williams Young }
 	}
 	afro_caribeno = {
 		#!religion = { catholic }
-		color = {  12 83 12  }
+		color = { 12 83 12 }
 		first_names = { Antonio Armando Arsenio Arturo Bartolomé Carlos Dámaso Enrique Francisco Generoso Guillermo Gumersindo Ignacio Israel Jacinto Jaime "José Celso" Juan Luciano Mario Máximo Nelson Nicolás Orestes Orlando Pedro Pío Ramón Rubén Wifredo }
 		last_names = { Albizu Barbosa Barreto Bauzá Díaz Egües Estupiñán Garay González Guillén Gutiérrez Hurtado Jiménez Jorrín Lam Leyva López Maceo Moré Morel Peraza Pérez Piñeiro Pozo Repilado Rodríguez Santamaría Schomburg Valdés Villa }
 	}
@@ -2013,7 +2013,7 @@ african = {
 	}
 	bambara = {
 		#!religion = { catholic }
-		color = {  45 88 164  }
+		color = { 45 88 164 }
 		first_names = { Kaladian Mamari Biton Do Tyefolo Nyenemba Ben Kuma Masala Turukoro Bina Kege Mamuru Masaloma Karamoko Mari Bodyan }
 		last_names = { Coulibaly Koro Dembele Bari Tonmansa Dyara Makoto Tonkomo Keryengole Naluma Demba Mari }
 	}
@@ -2037,13 +2037,13 @@ african = {
 	}
 	dyula = {
 		#!religion = { catholic }
-		color = {  78 99 230  }
+		color = { 78 99 230  }
 		first_names = { Seku Famagan Samory Al-Hajj Koumbi Maghari Fode Muhammad al-Mustafa }
 		last_names = { Wattara Toure Salim-Suwari Drame Saghanughu }
 	}
 	edo = {
 		#!religion = { protestant }
-		color = {  88 99 154  }
+		color = { 88 99 154 }
 		first_names = { Odayon Ode Edegbe Osahon Igodo Erediauwa Osemwende Adolo Ovonramwen Eweka Akenzua Ezoti Esigie }
 		last_names = { Ewuare Nogbaisi Orhogbua Ehengbuda Akengbedo Akenzua Ogbebo }
 	}
@@ -2067,7 +2067,7 @@ african = {
 	}
 	fulbe = {
 		#!religion = { catholic }
-		color = {  22 146 187  }
+		color = { 22 146 187 }
 		first_names = { Dan Muhammed Abdullahi Seku Amadu Balobo Alfa Usman Yaqub Tukur Yusufu Malam Abubakar Umar Tidiani Ahmadu }
 		last_names = { Bello Fodio Amadu Ibrahim Dadi zaki "Sa'id Tall" }
 	}
@@ -2079,13 +2079,13 @@ african = {
 	}
 	hausa = {
 		#!religion = { sunni }
-		color = { 32 178 170  }
+		color = { 32 178 170 }
 		first_names = { Muhammad Kumbari Sharif Yaji Baba Daud Abdullah Kanajeji Bugaya Usman Tsamiya }
 		last_names = { al-Walid Abasama Zaki Kabe al-Hajj Zamnagawa Rumfa }
 	}
 	ibibio = {
 		#!religion = { protestant }
-		color = { 238 130 238  }
+		color = { 238 130 238 }
 		first_names = { Ekpenyong Effiom Offiong Edem Okoho Asibong Eyo Orok Eyamba Ekpo Effefiong Ededem Tete }
 		last_names = { Eyamba Minika Oku Ekpe Efa Nta Ene }
 	}
@@ -2103,7 +2103,7 @@ african = {
 	}
 	itsekari = {
 		#!religion = { catholic }
-		color = {  209 251 255  }
+		color = { 209 251 255 }
 		first_names = { Taabansi Enweleana Jiofo Obalike Ewenetem Chiemeka Elechi Ikenna Nonyelum Obijiaku Oji Onyeka Orji Rapuluchukwu Udoka Zebenjo Zinachukwudi Dibia Dumaka Azuka Anene Jideofor Nnaemeka Nnamdi Nnanna }
 		last_names = { Udene Onyeso Equiano Opobo Achebe }
 	}
@@ -2115,7 +2115,7 @@ african = {
 	}
 	kru = {
 		#!religion = { protestant }
-		color = { 238 232 170  }
+		color = { 238 232 170 }
 		first_names = { Nyennoh Borforh Konmlan Tehpoe Pennon Togba Teh Jlakon Forkay Nimene Boryee Yenseloh Odeleia Gbwe }
 		last_names = { Banguro Banna Kama Kindo Kanta Bombali Gbanka }
 	}
@@ -2127,7 +2127,7 @@ african = {
 	}
 	mossi = {
 		#!religion = { sunni }
-		color = { 124 252 0  }
+		color = { 124 252 0 }
 		first_names = { Builsa Babato Gazari Alfa Dyori Bako Laganfyela Ali Kokoroko Sabana Tyeba Pintyeba Karamoko Sapilem Nyambre Salma Korongo Koom Yamba Tigre }
 		last_names = { Hano Hamaria Wattara Moru Dyan Nyandane }
 	}
@@ -2151,7 +2151,7 @@ african = {
 	}
 	senufo = {
 		#!religion = { catholic }
-		color = {  88 190 62  }
+		color = { 88 190 62 }
 		first_names = { Brahima Salifu Seku Bubakar Aburahman Abdullahi Usman Famaghan Kere Magan Dramani Dyori Bako Laganfyela Ali Kokoroko Sabana Tyeba Pntyeba Karamoko }
 		last_names = { "bi Saydu" "bi Hama" "bi Salifu" "bi Isa" "bi Sori" "bi Faruku" Wattara "dan Tyeba" Moru Dyan }
 	}
@@ -2163,7 +2163,7 @@ african = {
 	}
 	songhai = {
 		#!religion = { sunni }
-		color = { 124 252 0  }
+		color = { 124 252 0 }
 		first_names = { Hanga Samsu Hargani Fodi Tomo Bassaru Bumi Koyze Wankoy Bigo Dauda Malla }
 		last_names = { Beri Mayrumfa Keyna Missi "Kodama Komi" Baba Baki Farma }
 	}
@@ -2283,7 +2283,7 @@ african = {
 	}
 	fang = { # tag = EQG
 		#!religion = { catholic }
-		color = { 135 206 250  }
+		color = { 135 206 250 }
 		first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth }
 		last_names = { Samba Atangana Tufoyn Kumong Yuh Nggam Ndi }
 	}
@@ -2343,7 +2343,7 @@ african = {
 	}
 	kanuri = {
 		#!religion = { catholic }
-		color = { 178 34 34  }
+		color = { 178 34 34 }
 		first_names = { Muhammad al-Amin Umar Mustapha Ahmad Dunama Ibrahim Ali Waziri Mamane }
 		last_names = { al-Kanemi Sayfawa Dalatumi Lefiami Kingibe Imam Gana }
 	}
@@ -2379,7 +2379,7 @@ african = {
 	}
 	kuba = {
 		#!religion = { catholic }
-		color = {  166 72 57  }
+		color = { 166 72 57 }
 		first_names = { Kasongo Umpafu Ilunga Kisula Nday Kitamba Maloba Ndaye Kumwimba Maniema }
 		last_names = { Nsungu Kukaya Ngombe Muzinga Kabale Konkola Kalombo Mande Nyembo }
 	}
@@ -2409,7 +2409,7 @@ african = {
 	}
 	luba = { # tag = UCS tag = _CNG
 		#!religion = { catholic }
-		color = { 188 143 143  }
+		color = { 188 143 143 }
 		first_names = { Kasongo Umpafu Ilunga Kisula Nday Kitamba Maloba Ndaye Kumwimba Maniema }
 		last_names = { Nsungu Kukaya Ngombe Muzinga Kabale Konkola Kalombo Mande Nyembo }
 	}
@@ -2421,7 +2421,7 @@ african = {
 	}
 	lunda = {
 		#!religion = { catholic }
-		color = {  142 65 188  }
+		color = { 142 65 188 }
 		first_names = { Kaumba Muteba Mushidi Mbala Mutand Mudib Kangapu Cimbindu Mbumb Cakasekene Mulay Nawej Cikombe Waranankong }
 		last_names = { Kasang Nambing Kalong Mukaz Ditend Yaava Namwan Naweej Kamong Isot Kat Muteba }
 	}
@@ -2457,7 +2457,7 @@ african = {
 	}
 	mongo = {
 		#!religion = { catholic }
-		color = { 255 20 147  }
+		color = { 255 20 147 }
 		first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth }
 		last_names = { Bolia Bokote Bongandu Ekonda Mbole Nkutu Ntomba Sengele Songomeno Dengese Tetela-Kusu }
 	}
@@ -2493,7 +2493,7 @@ african = {
 	}
 	teda = {
 		#!religion = { catholic }
-		color = {  156 198 100  }
+		color = { 156 198 100 }
 		first_names = { Yusuf Raqib Muhammad Adham Ali Ibrahim Ahmad Yakob Kharut Salih Jawda }
 		last_names = { "Abd al-Aziz" "Abda al-Karim" "Derret ibn Jawda" Arous as-Sarhir al-Sharif "ibn Yusuf" "ibn Ali" }
 	}
@@ -2511,7 +2511,7 @@ african = {
 	}
 	amhara = { # tag = ETH
 		#!religion = { orthodox }
-		color = { 148 0 211  }
+		color = { 148 0 211 }
 		first_names = { Amare Bekele Berhanu Saleh Haile Berihun Demissie Desta Geteye Girma Kelile Negasi }
 		last_names = { Selassie Mikael Mariam Melekot Seged Wossen Makonnen }
 	}
@@ -2541,7 +2541,7 @@ african = {
 	}
 	fur = { # tag = _DAR
 		#!religion = { protestant }
-		color = { 216 191 216  }
+		color = { 216 191 216 }
 		first_names = { Mohammed Abu "Abd al-rahman" Ahmad Hussein Bush Harun Bulad Abdallahi Jussuf Ali }
 		last_names = { Tayrab Bakri Badl Madyan al-Mahdi El-Fadl Khalid Ibrahim Dinar }
 	}
@@ -2559,19 +2559,19 @@ african = {
 	}
 	kikuyu = { # tag = KEN
 		#!religion = { protestant }
-		color = { 205 92 92  }
+		color = { 205 92 92 }
 		first_names = { Gacoki Kanja Kirimi Kioi Muiru Mukanda Muthengi Nderitu Nyamu Riitho Runo Waitimu Wamungunda Wamwara Warui Kariuki Githinji Gitonga Hiuhu Ikinya Kiara Matu Murathi Mbogo Ngigi Muriu }
 		last_names = { Njoroge Maina Mwangi Wairia Njuguna Gitau Kiarie Mbugua Chege Manjiri Mamba Tene Agu Manduti Cuma Ciira Mathathi Ndemi Iregi Kinuthia Karanja Kinyanjui Nganga Gathuru }
 	}
 	luo = { # tag = _KEN
 		#!religion = { protestant }
-		color = { 165 42 42  }
+		color = { 165 42 42 }
 		first_names = { Okeyo Wanyanga Jaramobi Oluoch Oso Othiamba Waga Okoth Odongo }
 		last_names = { Kony Oculi Oneko p'Bitek Orombi Ramogi Luwum Obote }
 	}
 	maasai = { # tag = KEN
 		#!religion = { protestant }
-		color = { 255 0 0  }
+		color = { 255 0 0 }
 		first_names = { Mbatian Lenana Segi Parasayip Koyati Kakenya Lekuton Olemeeli Meitikini }
 		last_names = { "Ole Mbatian" "Ole Lenana" "Ole Segi" "Ole Parasayip" "Ole Koyati" }
 	}
@@ -2589,19 +2589,19 @@ african = {
 	}
 	nuba = { # tag = -SUD
 		#!religion = { protestant }
-		color = { 119 136 153  }
+		color = { 119 136 153 }
 		first_names = { Awin Akoc Nyidok Kwadker Ajang Dedunyal Kuikon Yor Kur Fadyet Fafiti Nyadwai Muko Wak Tyelgut Kodit Aney }
 		last_names = { "wad Nyakwac" "wad Kudit" "wad Akwot" "wad Nyidok" "wad Ajang" "wad Kwadker" "wad Akoc" "wad Yor" "wad Kur" }
 	}
 	nuer = { # tag = _SSU
 		#!religion = { protestant }
-		color = { 49 79 79  }
+		color = { 49 79 79 }
 		first_names = { Diu Chol Dei Tongyiik Hon Pal Nyuon Deng Gai Ochan Puot Ruai }
 		last_names = { Anya-Nya Top Juak Gaach Bany Lieth Nyuot Luth Chotper Weiu }
 	}
 	oromo = { # tag = ORM tag = -ETH
 		#!religion = { protestant }
-		color = { 238 130 238  }
+		color = { 238 130 238 }
 		first_names = { Ras Debela Alemayehu Dirribi Heile Gobana Tsegaye Tilahun Waqo Ahmad Galasa Hailu Yilma Abadula Abdus }
 		last_names = { Makonnen Dacche Mideksa Dinsa Turnsaa Gemeda Eabisa Demissie Gessesse }
 	}
@@ -2613,7 +2613,7 @@ african = {
 	}
 	somali = { # tag = SOM tag = SML tag = DIJ
 		#!religion = { sunni }
-		color = { 0 255 255  }
+		color = { 0 255 255 }
 		first_names = { Yusuf Mahamud Ahmed Osman Ali Aul Shire Mohamud Naleye Abdikarim Dalmar Ghdi Labaan Roble Taban Erasto Abdi }
 		last_names = { Ibrahim Adeer Hassan  Gurey Hirsi Doreh Dekiye Afrah Mujahid Kenadid }
 	}
@@ -2679,7 +2679,7 @@ african = {
 	}
 	chewa = { # tag = MLW tag = ZAM
 		#!religion = { protestant }
-		color = { 208 32 144  }
+		color = { 208 32 144 }
 		first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth }
 		last_names = { Mwale Phiri Mkunkhuntha Mbewe Kalimakudzulu }
 	}
@@ -2697,7 +2697,7 @@ african = {
 	}
 	khoisan = { # tag = _BOT
 		#!religion = { protestant }
-		color = { 255 192 203  }
+		color = { 255 192 203 }
 		first_names = { Naresib Gabeb Gorakhab Oasib Na-khom Tsawub Gaob Hanab O-Naib Khaub Khomab Hab }
 		last_names = { Hamab Khomaa Khaumab O-Naimab Hanamab Gamab Nakhomab Manassee Oasmab }
 	}
@@ -2709,7 +2709,7 @@ african = {
 	}
 	makua = { # tag = MOZ
 		#!religion = { protestant }
-		color = { 199 21 133  }
+		color = { 199 21 133 }
 		first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth }
 		last_names = { "Muhammad Raja" Muhammad Raja Uthman Usufu Mukusedi Molidi "Umkubu Muntu" Marave "Ali Ibrahimu" }
 	}
@@ -2721,19 +2721,19 @@ african = {
 	}
 	nguni = { # tag = NDB tag = _ZIM
 		#!religion = { protestant }
-		color = { 255 20 147  }
+		color = { 255 20 147 }
 		first_names = { Kinjikitile Fambaltate Songea Ebabruma Mputa Mbemchapa Atepa Matola Magobi Rjoroza Wasesse Rinyizea Chapwanya Chakoma Kapola Kapungu Kindunda Kinjalla Kiwanga Mahengu Mburu Mhavanginonya Namkina Ngosingosi Schabruma Sentambandu Uawula Ulanga }
 		last_names = { Ngwale Farhenga Chimai Amari Kwira Mtemi Hanga Mwanawalifa Mbano }
 	}
 	ovimbundu = { # tag = _ANG
 		#!religion = { protestant }
-		color = { 153 50 204  }
+		color = { 153 50 204 }
 		first_names = { Kakembembe Ciponge Cikunyu Kinya Nguvenge Kayangula Kahala Cingi Ngelo Ciasungu Kapoko Vilombo Hungulu Livonge Wambu }
 		last_names = { Vasovava Hundungulu Njambayamina Ndunduma Cilemo Kanene Kaneketela Yale Cinene Kiapungo Kacingangu Kapusukusu Cimbungu }
 	}
 	sena = { # tag = -MOZ
 		#!religion = { protestant }
-		color = { 176 48 96  }
+		color = { 176 48 96 }
 		first_names = { Andikan Amadi Aren Bahari Averey Bakari Bash Bayode Bitalo Chane Chata Dakarai Davu Dume Fabunni Gamba Genet Guban Hajari Haruni Ife Ilo Issay Jabari Jabilo Jaguan Kabili Kamwimbile Kasim Kenyi Khairi Makalo Mansa Morathi Musawenkosi Raimi Razi Reth }
 		last_names = { Mutiwapangome Cipfumba nyasoro Cimininyambo Kandeya Dambamupute }
 	}
@@ -2751,7 +2751,7 @@ african = {
 	}
 	shona = { # tag = ZIM
 		#!religion = { protestant }
-		color = { 255 192 203  }
+		color = { 255 192 203 }
 		first_names = { Zuka Sundai Tichawonna Sekayi Runako Petiri Pepukayi Mwanyisa Muchaneta Mashama Mboro Goredenna Gamba Chionesu Chinouyazue Banga }
 		last_names = { Mzilikazi Lobengula Mlimo Soshangane Magaya Kwenda Muhuru Maraire }
 	}
@@ -2787,7 +2787,7 @@ african = {
 	}
 	xhosa = { # tag = SAF
 		#!religion = { protestant }
-		color = { 138 43 226  }
+		color = { 138 43 226 }
 		first_names = { Mthuthuzeli Nolizwe Nonceba Paki Sipliwo Themba Uuka Thandiwe }
 		last_names = { Behle Dosini Dlamini Gqunu Gxarha Hegebe Khawatu Khumalo Kwayi Maduna Qadi Rhadebe Ncuthu Mpemvu Sikhosana Xesibe Zangwa }
 	}

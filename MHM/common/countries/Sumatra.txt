@@ -2,14 +2,14 @@
 
 #========================= H E A D E R =========================
 
-color = { 255  115  76 }
+color = { 170  128  42 }
 graphical_culture = AsianGC
 
 
 #========================= P A R T I E S =========================
 
 party = {
-name = "JAV_conservative_92"
+name = "SUM_conservative_92"
 start_date = 1945.1.1
 end_date = 2092.1.1
 ideology = conservative
@@ -20,7 +20,7 @@ citizenship_policy = full_citizenship
 war_policy = pro_military
 }
 party = {
-name = "JAV_liberal_73"
+name = "SUM_liberal_73"
 start_date = 1945.1.1
 end_date = 2092.1.1
 ideology = liberal
@@ -31,7 +31,7 @@ citizenship_policy = full_citizenship
 war_policy = pacifism
 }
 party = {
-name = "JAV_big_tent_84"
+name = "SUM_big_tent_84"
 start_date = 1945.1.1
 end_date = 2092.1.1
 ideology = big_tent
@@ -42,7 +42,7 @@ citizenship_policy = limited_citizenship
 war_policy = pro_military
 }
 party = {
-name = "JAV_socialist_80"
+name = "SUM_socialist_80"
 start_date = 1945.1.1
 end_date = 2092.1.1
 ideology = socialist
@@ -53,7 +53,7 @@ citizenship_policy = full_citizenship
 war_policy = pacifism
 }
 party = {
-name = "JAV_progressive_83"
+name = "SUM_progressive_83"
 start_date = 1945.1.1
 end_date = 2092.1.1
 ideology = progressive
@@ -64,7 +64,7 @@ citizenship_policy = full_citizenship
 war_policy = pacifism
 }
 party = {
-name = "JAV_nationalist_80"
+name = "SUM_nationalist_80"
 start_date = 1945.1.1
 end_date = 2092.1.1
 ideology = nationalist
@@ -75,7 +75,7 @@ citizenship_policy = residency
 war_policy = jingoism
 }
 party = {
-name = "JAV_traditionalist_83"
+name = "SUM_traditionalist_83"
 start_date = 1945.1.1
 end_date = 2092.1.1
 ideology = traditionalist
@@ -86,7 +86,7 @@ citizenship_policy = residency
 war_policy = jingoism
 }
 party = {
-name = "JAV_populist_80"
+name = "SUM_populist_80"
 start_date = 1945.1.1
 end_date = 2092.1.1
 ideology = populist
@@ -97,7 +97,7 @@ citizenship_policy = limited_citizenship
 war_policy = jingoism
 }
 party = {
-name = "JAV_communist_86"
+name = "SUM_communist_86"
 start_date = 1945.1.1
 end_date = 2092.1.1
 ideology = communist
@@ -108,7 +108,7 @@ citizenship_policy = full_citizenship
 war_policy = pro_military
 }
 party = {
-name = "JAV_communist_social_101"
+name = "SUM_communist_social_101"
 start_date = 1945.1.1
 end_date = 2092.1.1
 ideology = communist_social
@@ -146,6 +146,7 @@ unit_names = {
 		"KRI Cakra" "KRI Nanggala"  "Pulau Breueh"
 	}
 
+}
 }
 
 
