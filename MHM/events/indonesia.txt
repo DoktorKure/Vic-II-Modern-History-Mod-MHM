@@ -971,12 +971,16 @@ country_event = {
 		inherit = IDO
 		release_vassal = EID
 		EID = { ruling_party_ideology = conservative government = colonial_government event = 800054 }
+		NET = { diplomatic_influence = { who = EID value = 200 } }
 		release_vassal = DYA
 		DYA = { ruling_party_ideology = conservative government = colonial_government event = 800054 }
+		NET = { diplomatic_influence = { who = DYA value = 200 } }
 		release_vassal = SUM
 		SUM = { ruling_party_ideology = conservative government = colonial_government event = 800054 }
+		NET = { diplomatic_influence = { who = SUM value = 200 } }
 		release_vassal = JAV
 		JAV = { ruling_party_ideology = conservative government = colonial_government event = 800054 }
+		NET = { diplomatic_influence = { who = JAV value = 200 } }
 		ai_chance = { factor = 0.1 }
 	}
 
