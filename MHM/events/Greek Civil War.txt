@@ -339,8 +339,7 @@ country_event = {
 country_event = {
 	id = 8940013
 	title = "Reunification of Greece"
-	desc = EVT_8500541_DESC
-	picture = "nwo2_kke_victory"
+	desc = "After a long and devastating civil war, the country of Greece has reunited under one banner!"
 	
 	major = yes
   

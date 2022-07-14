@@ -3422,6 +3422,12 @@ political_decisions = {
 				add_core = MEX 
 				}
 			}
+			GUA = { all_core = { add_core = MEX } }
+			HON = { all_core = { add_core = MEX } }
+			BLZ = { all_core = { add_core = MEX } }
+			ELS = { all_core = { add_core = MEX } }
+			NIC = { all_core = { add_core = MEX } }
+			COS = { all_core = { add_core = MEX } }
 		}
 
 	}
@@ -3468,6 +3474,12 @@ political_decisions = {
 						state_id = 132
 						state_id = 134
 						state_id = 137
+						is_core = GUA
+						is_core = HON
+						is_core = BLZ
+						is_core = ELS
+						is_core = NIC
+						is_core = COS
 					}
 				}
 				remove_core = THIS
