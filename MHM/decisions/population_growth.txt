@@ -67,7 +67,7 @@ political_decisions = {
 				limit = {
 					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
 					literacy = 0.10
-					NOT = { literacy 0.20 }
+					NOT = { literacy = 0.20 }
 					NOT = { has_province_modifier = natalism_4 }
 				}
 				remove_province_modifier = natalism_1
@@ -82,7 +82,7 @@ political_decisions = {
 				limit = {
 					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
 					literacy = 0.20
-					NOT = { literacy 0.30 }
+					NOT = { literacy = 0.30 }
 					NOT = { has_province_modifier = natalism_3 }
 				}
 				remove_province_modifier = natalism_1
@@ -97,7 +97,7 @@ political_decisions = {
 				limit = {
 					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
 					literacy = 0.30
-					NOT = { literacy 0.40 }
+					NOT = { literacy = 0.40 }
 					NOT = { has_province_modifier = natalism_2 }
 				}
 				remove_province_modifier = natalism_1
