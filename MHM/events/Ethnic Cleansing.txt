@@ -120,7 +120,7 @@ country_event = {
 
 	option = {
 		name = "Focus on resettling our cores! (10% chance of discovery)"
-		add_country_modifier = { name = pop_replacement_event_cooldown duration = 365 } #To prevent event spam
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 180 } #To prevent event spam
 		
 		any_owned = {
 			limit = { is_core = THIS is_primary_culture = no is_accepted_culture = no } add_province_modifier = { name = pop_replacement_province_modifier duration = -1 }
@@ -158,7 +158,7 @@ country_event = {
 
 	option = {
 		name = "Focus on the colonies! (5% chance of discovery)"
-		add_country_modifier = { name = pop_replacement_event_cooldown duration = 365 } #To prevent event spam
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 180 } #To prevent event spam
 		
 		any_owned = {
 			limit = { is_colonial = yes is_primary_culture = no is_accepted_culture = no } add_province_modifier = { name = pop_replacement_province_modifier duration = -1 }
@@ -200,7 +200,7 @@ country_event = {
 
 	option = {
 		name = "Focus on non-core areas! (15% chance of discovery)"
-		add_country_modifier = { name = pop_replacement_event_cooldown duration = 365 } #To prevent event spam
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 180 } #To prevent event spam
 		
 		any_owned = {
 			limit = { NOT = { is_core = THIS } is_colonial = no is_primary_culture = no is_accepted_culture = no } add_province_modifier = { name = pop_replacement_province_modifier duration = -1 }
@@ -245,7 +245,7 @@ country_event = {
 
 	option = {
 		name = "Focus on the entire nation! (20% chance of discovery)"
-		add_country_modifier = { name = pop_replacement_event_cooldown duration = 365 } #To prevent event spam
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 180 } #To prevent event spam
 		
 		any_owned = {
 			limit = { is_primary_culture = no is_accepted_culture = no } add_province_modifier = { name = pop_replacement_province_modifier duration = -1 }
