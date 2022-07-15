@@ -1238,7 +1238,7 @@ country_event = {
 		1591 = { change_controller = CHI }
 		1588 = { change_controller = CHI }
 		
-		ai_chance = { factor = 0.7 }
+		ai_chance = { factor = 0.2 }
 	}
 
 	option = {
@@ -1251,7 +1251,7 @@ country_event = {
 		any_owned = { limit = { is_core = TIB } secede_province = TIB }
 		
 		relation = { who = HND value = 100 } # India is happy with this
-		ai_chance = { factor = 0.2 }
+		ai_chance = { factor = 0.7 }
 	}
 
 	option = {

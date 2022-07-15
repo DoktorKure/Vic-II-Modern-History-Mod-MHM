@@ -1507,7 +1507,16 @@ country_event = {
 			change_province_name = "Urumqi"
 		}
 		XIJ = { country_event = 8023817 } 
-		ai_chance = { factor = 0.99 }
+		ai_chance = { factor = 0.2 }
+	}
+
+	option = {
+		name = "Negotiate a form of autonomy."
+		1600 = {
+			change_province_name = "Urumqi"
+		}
+		create_vassal = XIJ
+		ai_chance = { factor = 0.75 }
 	}
 
 	option = {
@@ -1519,7 +1528,7 @@ country_event = {
 		}
 		relation = { who = XIJ value = 100 }
 		
-		ai_chance = { factor = 0.01 }
+		ai_chance = { factor = 0.05 }
 	}
 	
 }
