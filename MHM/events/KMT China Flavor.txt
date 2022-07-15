@@ -1356,11 +1356,13 @@ country_event = {
 			is_possible_vassal = GGX
 			is_possible_vassal = TIB
 			is_possible_vassal = ETS
+			is_possible_vassal = XIJ
 			is_possible_vassal = IMN
 			is_possible_vassal = TAI
 			is_possible_vassal = SZC
 			is_possible_vassal = QHA
 			is_possible_vassal = SXI
+			is_possible_vassal = MGL
 		}
 		
 	}
@@ -1386,11 +1388,13 @@ country_event = {
 					is_core = GGX
 					is_core = TIB
 					is_core = ETS
+					is_core = XIJ
 					is_core = IMN 
 					is_core = TAI
 					is_core = SZC
 					is_core = QHA
 					is_core = SXI
+					is_core = MGL
 				}
 			}
 			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
@@ -1408,24 +1412,62 @@ country_event = {
 		#Nationalists are not happy
 		any_pop = { scaled_militancy = { factor = 10 ideology = conservative } scaled_militancy = { factor = 10 ideology = nationalist } }
 
-		random_owned = { limit = { owner = { is_possible_vassal = FUJ } } owner = { release_vassal = FUJ diplomatic_influence = { who = FUJ value = 200 } FUJ = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = SXI } } owner = { release_vassal = SXI diplomatic_influence = { who = SXI value = 200 } SXI = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = SZC } } owner = { release_vassal = SZC diplomatic_influence = { who = SZC value = 200 } SZC = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = QHA } } owner = { release_vassal = QHA diplomatic_influence = { who = QHA value = 200 } QHA = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = MCK } } owner = { release_vassal = MCK diplomatic_influence = { who = MCK value = 200 } MCK = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = KWA } } owner = { release_vassal = KWA diplomatic_influence = { who = KWA value = 200 } KWA = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = YNN } } owner = { release_vassal = YNN diplomatic_influence = { who = YNN value = 200 } YNN = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = GGX } } owner = { release_vassal = GGX diplomatic_influence = { who = GGX value = 200 } GGX = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = FUJ } } owner = { release_vassal = FUJ diplomatic_influence = { who = FUJ value = 200 } FUJ = { government = populist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = SXI } } owner = { release_vassal = SXI diplomatic_influence = { who = SXI value = 200 } SXI = { government = populist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = SZC } } owner = { release_vassal = SZC diplomatic_influence = { who = SZC value = 200 } SZC = { government = populist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = QHA } } owner = { release_vassal = QHA diplomatic_influence = { who = QHA value = 200 } QHA = { government = populist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = MCK } } owner = { release_vassal = MCK diplomatic_influence = { who = MCK value = 200 } MCK = { government = populist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = KWA } } owner = { release_vassal = KWA diplomatic_influence = { who = KWA value = 200 } KWA = { government = populist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = YNN } } owner = { release_vassal = YNN diplomatic_influence = { who = YNN value = 200 } YNN = { government = populist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = GGX } } owner = { release_vassal = GGX diplomatic_influence = { who = GGX value = 200 } GGX = { government = populist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
 		random_owned = { limit = { owner = { is_possible_vassal = TIB } } owner = { release_vassal = TIB diplomatic_influence = { who = TIB value = 200 } TIB = { government = absolute_monarchy country_event = 800050 ruling_party_ideology = traditionalist } } }
-		random_owned = { limit = { owner = { is_possible_vassal = ETS } } owner = { release_vassal = ETS diplomatic_influence = { who = ETS value = 200 } ETS = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = IMN } } owner = { release_vassal = IMN diplomatic_influence = { who = IMN value = 200 } IMN = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = TAI } } owner = { release_vassal = TAI diplomatic_influence = { who = TAI value = 200 } TAI = { government = sar_government country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = XIJ } } owner = { release_vassal = XIJ diplomatic_influence = { who = XIJ value = 200 } XIJ = { government = populist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = IMN } } owner = { release_vassal = IMN diplomatic_influence = { who = IMN value = 200 } IMN = { government = populist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = TAI } } owner = { release_vassal = TAI diplomatic_influence = { who = TAI value = 200 } TAI = { government = populist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = MGL } } owner = { release_vassal = MGL diplomatic_influence = { who = MGL value = 200 } MGL = { government = populist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
 
 		ai_chance = { factor = 0.1 }
 	}
 	
 	option = {
 		name = "Stick to the status quo!"
+		#Release all KMT vassals and potential releaseables
+		any_country = {
+			limit = { tag = SXI exists = yes vassal_of = CHI }
+			CHI = { release_vassal = SXI leave_alliance = SXI relation = { who = SXI value = -200 } diplomatic_influence = { who = SXI value = -400 } }
+		}
+		any_country = {
+			limit = { tag = QHA exists = yes vassal_of = CHI }
+			CHI = { release_vassal = QHA leave_alliance = QHA relation = { who = QHA value = -200 } diplomatic_influence = { who = QHA value = -400 } }
+		}
+		any_country = {
+			limit = { tag = SZC exists = yes vassal_of = CHI }
+			CHI = { release_vassal = SZC leave_alliance = SZC relation = { who = SZC value = -200 } diplomatic_influence = { who = SZC value = -400 } }
+		}
+		any_country = {
+			limit = { tag = GGX exists = yes vassal_of = CHI }
+			CHI = { release_vassal = GGX leave_alliance = GGX relation = { who = GGX value = -200 } diplomatic_influence = { who = GGX value = -400 } }
+		}
+		any_country = {
+			limit = { tag = YNN exists = yes vassal_of = CHI }
+			CHI = { release_vassal = YNN leave_alliance = YNN relation = { who = YNN value = -200 } diplomatic_influence = { who = YNN value = -400 } }
+		}
+		any_country = {
+			limit = { tag = XIJ exists = yes vassal_of = CHI }
+			CHI = { release_vassal = XIJ leave_alliance = XIJ relation = { who = XIJ value = -200 } diplomatic_influence = { who = XIJ value = -400 } }
+		}
+		any_country = {
+			limit = { tag = TIB exists = yes vassal_of = CHI }
+			CHI = { release_vassal = TIB leave_alliance = TIB relation = { who = TIB value = -200 } diplomatic_influence = { who = TIB value = -400 } }
+		}
+		any_country = {
+			limit = { tag = MGL exists = yes vassal_of = CHI }
+			CHI = { release_vassal = MGL leave_alliance = MGL relation = { who = MGL value = -200 } diplomatic_influence = { who = MGL value = -400 } }
+		}
+		any_country = {
+			limit = { tag = MCK exists = yes vassal_of = CHI }
+			CHI = { release_vassal = MCK leave_alliance = MCK relation = { who = MCK value = -200 } diplomatic_influence = { who = MCK value = -400 } }
+		}
 
 		random_owned = { limit = { owner = { is_possible_vassal = FUJ } } owner = { release = FUJ FUJ = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = FUJ attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
 		random_owned = { limit = { owner = { is_possible_vassal = SZC } } owner = { release = SZC SZC = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = SZC attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
@@ -1436,9 +1478,10 @@ country_event = {
 		random_owned = { limit = { owner = { is_possible_vassal = YNN } } owner = { release = YNN YNN = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = YNN attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
 		random_owned = { limit = { owner = { is_possible_vassal = GGX } } owner = { release = GGX GGX = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = GGX attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
 		random_owned = { limit = { owner = { is_possible_vassal = TIB } } owner = { release = TIB TIB = { government = absolute_monarchy country_event = 800050 ruling_party_ideology = traditionalist } CHI = { war = { target = TIB attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
-		random_owned = { limit = { owner = { is_possible_vassal = ETS } } owner = { release = ETS ETS = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = ETS attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
+		random_owned = { limit = { owner = { is_possible_vassal = XIJ } } owner = { release = XIJ XIJ = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = XIJ attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
 		random_owned = { limit = { owner = { is_possible_vassal = IMN } } owner = { release = IMN IMN = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = IMN attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
 		random_owned = { limit = { owner = { is_possible_vassal = TAI } } owner = { release = TAI TAI = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = TAI attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
+		random_owned = { limit = { owner = { is_possible_vassal = MGL } } owner = { release = MGL MGL = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = MGL attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
 
 		ai_chance = { factor = 0.2 }
 	}
@@ -1683,7 +1726,8 @@ country_event = {
 		name = "We will deal with them another time, grant their demand."
 		prestige = 50
 		any_owned = { limit = { is_core = SXI } secede_province = SXI }
-		ai_chance = { factor = 0.5 }
+		set_country_flag = return_of_fengtian
+		ai_chance = { factor = 0.7 }
 	}
 	
 	option = {
@@ -1695,7 +1739,7 @@ country_event = {
 		release_vassal = SXI
 		relation = { who = SXI value = -100 }
 		diplomatic_influence = { who = SXI value = -200 }
-		ai_chance = { factor = 0.4 }
+		ai_chance = { factor = 0.2 }
 	}
 	
 	option = {
@@ -1703,7 +1747,7 @@ country_event = {
 		prestige = 250
 		badboy = 5
 		
-		#Release all KMT vassals as they realize what's about to happen
+		#Release all KMT vassals as they get spooked by Chiang's treachery
 		any_country = {
 			limit = { tag = SXI exists = yes vassal_of = CHI }
 			CHI = { release_vassal = SXI leave_alliance = SXI relation = { who = SXI value = -200 } diplomatic_influence = { who = SXI value = -400 } }
@@ -1724,6 +1768,10 @@ country_event = {
 			limit = { tag = YNN exists = yes vassal_of = CHI }
 			CHI = { release_vassal = YNN leave_alliance = YNN relation = { who = YNN value = -200 } diplomatic_influence = { who = YNN value = -400 } }
 		}
+		any_country = {
+			limit = { tag = XIJ exists = yes vassal_of = CHI }
+			CHI = { release_vassal = XIJ leave_alliance = XIJ relation = { who = XIJ value = -200 } diplomatic_influence = { who = XIJ value = -400 } }
+		}
 		
 		SXI = {
 			war = {
@@ -1734,6 +1782,114 @@ country_event = {
 			}
 		}
 		
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#The restoration of the Fengtian Clique if Shanxi had their cores returned
+country_event = {
+	id = 8004013
+	title = "The Return of the Fengtian Clique?"
+	desc = EVTDESC8004013
+	picture = "zhang_xueliang"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHI
+		government = populist_dictatorship
+		ruling_party_ideology = conservative
+		SXI = {	exists = yes }
+		has_global_flag = KMT_won_civil_war
+		is_possible_vassal = MCK
+		has_country_flag = return_of_fengtian # Manchuria is "cut off" from the mainland
+	}
+	
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "We will restore the Fengtian Clique"
+		prestige = 50
+		release_vassal = MCK
+		MCK = { government = populist_dictatorship country_event = 800050 ruling_party_ideology = conservative }
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "We fought for that land, we will keep every inch of it!"
+		prestige = 100
+		badboy = 3
+		
+		#Manchuria gets pissed and breaks away
+		release = MCK
+		MCK = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist }
+		relation = { who = MCK value = -100 }
+		diplomatic_influence = { who = MCK value = -200 }
+		
+		war = {
+			target = MCK
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		ai_chance = { factor = 0.2 }
+	}
+}
+
+#The restoration of order to Mongolia
+country_event = {
+	id = 8004014
+	title = "The Return of Outer Mongolia?"
+	desc = EVTDESC8004014
+	picture = "outer_mongolia"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = CHI
+		government = populist_dictatorship
+		ruling_party_ideology = conservative
+		has_global_flag = KMT_won_civil_war
+		MGL = {	exists = yes is_vassal = no part_of_sphere = no NOT = { alliance_with = RUS } } # poor relations with Soviets
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = "Seize this opportunity, bring them back into the fold! (20% chance of Soviet intervention)"
+		prestige = 50
+		random_list = {
+			20 = { RUS = { create_alliance = MGL } }
+			80 = { }
+		}
+		war = {
+			target = MGL
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "They will become a province of China once again! (50% chance of Soviet intervention)"
+		prestige = 100
+		badboy = 5
+		random_list = {
+			50 = { RUS = { create_alliance = MGL } }
+			50 = { }
+		}
+		war = {
+			target = MGL
+			attacker_goal = { casus_belli = civil_war }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "It's too risky."
 		ai_chance = { factor = 0.1 }
 	}
 }

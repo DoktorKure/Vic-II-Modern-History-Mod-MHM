@@ -400,3 +400,36 @@ alliance = {
 	start_date = 1991.1.1
 	end_date = 2032.1.1
 }
+
+### KMT Warlords ###
+
+alliance = {
+	first = KMT
+	second = SZC
+	start_date = 1945.1.1
+	end_date = 1975.1.1
+}
+alliance = {
+	first = KMT
+	second = SXI
+	start_date = 1945.1.1
+	end_date = 1975.1.1
+}
+alliance = {
+	first = KMT
+	second = GGX
+	start_date = 1945.1.1
+	end_date = 1975.1.1
+}
+alliance = {
+	first = KMT
+	second = YNN
+	start_date = 1945.1.1
+	end_date = 1975.1.1
+}
+alliance = {
+	first = KMT
+	second = QHA
+	start_date = 1945.1.1
+	end_date = 1975.1.1
+}
