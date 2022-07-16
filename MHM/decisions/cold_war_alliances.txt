@@ -665,7 +665,7 @@ OR = { tag = USA sphere_owner = { has_country_modifier = rio_pact } relation = {
 					limit = {
 					has_country_modifier = rio_pact
 					}
-					relation = { who = THIS value = 200 }
+					relation = { who = THIS value = 25 }
 					create_alliance = THIS
 				}
 				add_country_modifier = {
