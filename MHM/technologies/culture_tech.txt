@@ -287,7 +287,7 @@ radio_network = {
 	cost = 3600
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.1
+	education_efficiency = 0.05
 	increase_research = 0.10
 	
 	ai_chance = {
@@ -324,7 +324,7 @@ public_switched_telephone_network = {
 	cost = 3600
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.1
+	education_efficiency = 0.05
 	increase_research = 0.10
 
 	ai_chance = {
@@ -363,7 +363,7 @@ pstn_network = {
 	activate_building = electric_telecommunications_factory
 	
 	administrative_efficiency = 0.025
-	education_efficiency = 0.1
+	education_efficiency = 0.05
 	increase_research = 0.10
 
 	ai_chance = {
@@ -400,7 +400,7 @@ telephone_exchange = {
 	cost = 7200
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.1
+	education_efficiency = 0.05
 	increase_research = 0.10
 
 	ai_chance = {
@@ -429,7 +429,7 @@ early_networks = {
 	cost = 12600
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.25
+	education_efficiency = 0.1
 	increase_research = 0.10
 
 	ai_chance = {
@@ -466,7 +466,7 @@ strd_internet = {
 	cost = 12600
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.25
+	education_efficiency = 0.1
 	increase_research = 0.10
 
 	ai_chance = {
@@ -507,7 +507,7 @@ high_speed_uni_network = {
 	cost = 14400
 	
 	administrative_efficiency = 0.025
-	education_efficiency = 0.25
+	education_efficiency = 0.1
 	increase_research = 0.10
 
 	ai_chance = {
@@ -617,7 +617,7 @@ compulsory_primary_education = {
 	year = 1946
 	cost = 3600
 
-	education_efficiency = 0.5
+	education_efficiency = 0.25
 	
 	ai_chance = {
 		factor = 1.01
@@ -640,7 +640,7 @@ compulsory_secondary_education = {
 	year = 1950
 	cost = 3600
 
-	education_efficiency = 0.5
+	education_efficiency = 0.25
 	
 	ai_chance = {
 		factor = 1.01
@@ -663,7 +663,7 @@ tripartite_system = {
 	year = 1960
 	cost = 4800
 
-	education_efficiency = 0.5
+	education_efficiency = 0.25
 	
 	ai_chance = {
 		factor = 1.01
@@ -686,7 +686,7 @@ comprehensive_education = {
 	year = 1970
 	cost = 7200
 
-	education_efficiency = 1.0
+	education_efficiency = 0.5
 	
 	ai_chance = {
 		factor = 1.01
@@ -709,7 +709,7 @@ preschool_education = {
 	year = 1980
 	cost = 10800
 
-	education_efficiency = 1.0
+	education_efficiency = 0.5
 	
 	ai_chance = {
 		factor = 1.01
@@ -733,7 +733,7 @@ global_enrollment = {
 	year = 1990
 	cost = 12600
 
-	education_efficiency = 1.0
+	education_efficiency = 0.5
 	
 	ai_chance = {
 		factor = 1.01
@@ -753,7 +753,7 @@ informatization_education = {
 	year = 2000
 	cost = 14400
 
-	education_efficiency = 1.0
+	education_efficiency = 0.5
 	
 	ai_chance = {
 		factor = 1.01

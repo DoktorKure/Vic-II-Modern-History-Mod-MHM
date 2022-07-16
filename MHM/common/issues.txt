@@ -997,14 +997,14 @@ social_reforms = {
 			allow = { NOT = { has_country_flag = gridlocked_legislature } }
 		}
 		public_education = {
-			education_efficiency_modifier = 0.25
+			education_efficiency_modifier = 0.05
 			research_points_modifier = 0.05
 			global_immigrant_attract = 0.1
 			administrative_multiplier = 1
 			allow = { NOT = { has_country_flag = gridlocked_legislature } }
 		}
 		subsidised_higher_education = {
-			education_efficiency_modifier = 0.50
+			education_efficiency_modifier = 0.10
 			research_points_modifier = 0.10
 			global_immigrant_attract = 0.2
 			global_pop_consciousness_modifier = 0.01
@@ -1012,7 +1012,7 @@ social_reforms = {
 			allow = { NOT = { has_country_flag = gridlocked_legislature } }
 		}
 		public_higher_education = {
-			education_efficiency_modifier = 0.75
+			education_efficiency_modifier = 0.25
 			research_points_modifier = 0.15
 			global_immigrant_attract = 0.3
 			global_pop_consciousness_modifier = 0.02
@@ -1020,7 +1020,7 @@ social_reforms = {
 			allow = { NOT = { has_country_flag = gridlocked_legislature } }
 		}
 		unlimited_education = {
-			education_efficiency_modifier = 1.00
+			education_efficiency_modifier = 0.50
 			research_points_modifier = 0.20
 			global_immigrant_attract = 0.4
 			global_pop_consciousness_modifier = 0.03
