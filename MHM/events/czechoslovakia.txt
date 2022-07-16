@@ -312,6 +312,7 @@ country_event = {
 				target = CZH
 				attacker_goal = { casus_belli = make_puppet }
 				defender_goal = { casus_belli = status_quo } 
+				call_ally = yes
 			}
 		}
 
