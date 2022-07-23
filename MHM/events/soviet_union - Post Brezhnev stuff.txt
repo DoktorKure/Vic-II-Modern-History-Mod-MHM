@@ -28,13 +28,7 @@ country_event = { # A new head of the KGB
 		#Disperse power
 		political_reform = regulated_opinion
 		
-		ai_chance = {
-			factor = 0.9
-			modifier = {
-				factor = 1
-				has_country_flag = USSR_events_railroaded
-			}
-		}
+		ai_chance = { factor = 0.9 }
 	}
 	
 	option = {
@@ -1504,13 +1498,7 @@ country_event = { # Death of Gromyko
 		clr_country_flag = new_immigration_policy
 		clr_country_flag = socialist_bank
 		
-		ai_chance = {
-			factor = 0.2
-			modifier = {
-				factor = 1
-				has_country_flag = USSR_events_railroaded
-			}
-		}
+		ai_chance = { factor = 0.2 }
 	}
 }
 

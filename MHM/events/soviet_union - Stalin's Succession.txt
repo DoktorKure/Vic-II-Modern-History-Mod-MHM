@@ -722,7 +722,6 @@ country_event = { # Anti-Party Group - Khrushchev
 		government = proletarian_dictatorship
 		has_global_flag = de_stalinization
 		has_country_flag = nikita_khrushchev
-		NOT = { has_country_flag = USSR_events_railroaded }
 	}
 
 	mean_time_to_happen = { months = 6 }

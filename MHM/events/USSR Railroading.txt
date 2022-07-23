@@ -12,6 +12,7 @@ country_event = {
 	trigger = {
 		ai = no
 		NOT = { tag = RUS }
+		RUS = { ai = yes }
 		NOT = { has_global_flag = USSR_railroading_toggled }
 		NOT = { has_global_flag = 1992_start_date_flag }
 	}
@@ -26,6 +27,52 @@ country_event = {
 		name = "Allow alternate history content to happen normally."
 		set_global_flag = USSR_railroading_toggled
 		RUS = { clr_country_flag = USSR_events_railroaded }
+	}
+
+}
+
+#Railroad USSR towards collapse if the player chooses so
+country_event = {
+	id = 669969
+	title = "The Rise of Gorbachev - Railroaded"
+	desc = EVTDESC669969
+	picture = "nwo2_mikhail_gorbachev"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1989
+		NOT = { year = 2000 }
+		
+		government = proletarian_dictatorship
+		is_vassal = no
+		war = no
+		
+		has_country_flag = USSR_events_railroaded
+	}
+
+	mean_time_to_happen = { months = 4 }
+	
+	option = {
+		name = "This can be bad..."
+		set_country_flag = mikhail_gorbachev
+		
+		ruling_party_ideology = communist_social
+		
+		#Rise of reformism
+		any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = communist } militancy = 4 consciousness = 4 }
+		any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = socialist } militancy = -4 consciousness = -4 }
+		any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = communist_social } militancy = -2 consciousness = -2 }
+		
+		clr_country_flag = ussr_no_historical_reforms
+		set_global_flag = perestroika_intention_global_flag
+		set_country_flag = perestroika_intention
+		set_country_flag = glasnost_intention
+		set_country_flag = democratisation_intention
+		
+		#Allow the Eastern Bloc to fall
+		set_global_flag = autumn_of_nations
 	}
 
 }

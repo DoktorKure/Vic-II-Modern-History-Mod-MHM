@@ -52,7 +52,6 @@ country_event = { # The Arrival of Nikolai Podgorny
 		NOT = { year = 1969 }
 		government = proletarian_dictatorship
 		has_country_flag = leonid_brezhnev
-		NOT = { has_country_flag = USSR_events_railroaded }
 	}
 
 	mean_time_to_happen = { months = 8 }
@@ -138,7 +137,6 @@ country_event = { # Attempted Assassination
 		tag = RUS
 		year = 1969
 		NOT = { year = 1972 }
-		NOT = { has_country_flag = USSR_events_railroaded }
 		government = proletarian_dictatorship
 		has_country_flag = leonid_brezhnev
 	}
@@ -1387,7 +1385,6 @@ country_event = { # Alexei Kosygin is the uncontested leader
 		tag = RUS
 		year = 1968
 		NOT = { year = 1973 }
-		NOT = { has_country_flag = USSR_events_railroaded }
 		government = proletarian_dictatorship
 		OR = {
 			AND = {
