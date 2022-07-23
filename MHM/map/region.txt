@@ -102,11 +102,7 @@ USA_211 = { 211 212 213 214 215 216 } #Virginia
 
 USA_218 = { 218 217 } #West Virginia
 
-USA_219 = { 219 221 } #Maryland 
-
-USA_222 = { 222 } #Delaware
-
-USA_220 = { 220 } #Washington DC
+USA_219 = { 219 220 221 222 } #Maryland 
 
 USA_223 = { 223 224 225 226 227 228 } #Pennsylvania
 
@@ -226,7 +222,7 @@ FRA_445 = { 445 446 447 } #Limousin
 
 FRA_448 = { 448 449 450 } #Auvergne
 
-FRA_451 = { 451 452 453 454 } #Rhone
+FRA_451 = { 451 452 453 454 465 466 } #Rhone
 
 FRA_455 = { 455 457 456 } #Le Midi
 
@@ -234,9 +230,7 @@ FRA_458 = { 458 459 460 } #Aquitaine
 
 FRA_461 = { 461 462 463 464 } #Languedoc
 
-SAR_466 = { 465 466 472 } #Savoie
-
-FRA_467 = { 467 468 469 470 471 } #Provence
+FRA_467 = { 467 468 469 470 471 472 } #Provence
 
 
 ### Spain & Portugal
@@ -365,7 +359,7 @@ AUS_771 = { 771 772 773 774 775 776 } #Croatia
 
 AUS_777 = { 779 793 777 } #Slavonia
 
-AUS_780 = { 780 781 782 2582 } #Dalmatia
+AUS_780 = { 780 781 782 } #Dalmatia
 
 AUS_2538 = { 2538 791 792 } #Vojvodina
 
@@ -405,7 +399,7 @@ TUR_788 = { 783 787 789 788 786 785 784 2688 } #Bosnia
 
 SER_794 = { 794 797 795 796 } #Northern Serbia Central Serbia
 
-MON_2582 = { 2583 2569 2577 800 } #Montenegro
+MON_2582 = { 2582 2583 2569 2577 800 } #Montenegro
 
 TUR_803 = { 803 804 798 802 799 } #Southern Serbia East Serbia
 
@@ -454,35 +448,25 @@ TUR_887 = { 887 885 888 } #Northeast Anatolia
 
 TUR_890 = { 890 889 891 892} #Central East Anatolia
 
-TUR_894 = { 894 875 896 895 900 } #Mediterranean
+TUR_894 = { 894 875 896 895 } #Mediterranean
 
 TUR_898 = { 898 893 899 } #Southeast Anatolia
 
-EGY_897 = { 897 907 } #Aleppo
-
-EGY_901 = { 901 } #Rojava
+EGY_897 = { 897 901 907 } #Aleppo
 
 EGY_903 = { 902 903 904 906 } #Damascus
 
-EGY_905 = { 905 } #Alawite State
+EGY_905 = { 900 905 } #Alawite State
 
 EGY_910 = { 908 910 911 922 909 } #Transjordan
 
 EGY_915 = { 913 915 912 914 } #Lebanon Lebanon_Syria
 
-EGY_917 = { 917 } #Jerusalem
-
-EGY_920 = { 920 } #Gaza
-
-EGY_921 = { 919 921 916 3346 3347 3348 3349} #Palestine
+EGY_921 = { 917 918 919 920 921 916 3346 3347 3348 3349 } #Palestine
 
 SYR_2687 = { 2687 } #Golan Heights
 
-EGY_922 = { 918 } #West Bank
-
-TUR_923 = { 923 } #Mosul
-
-TUR_931 = { 926 927 928 931 } #Middle Iraq
+TUR_931 = { 923 926 927 928 931 } #Middle Iraq
 
 TUR_932 = { 932 933 930 } #Southern Iraq
 
@@ -494,9 +478,7 @@ RUS_1090 = { 1090 1093 1091 1092 1094 1095 1096 } #Georgia
 
 RUS_1098 = { 1098 1099 1100 } #Armenia Armenia_Azerbaijan
 
-RUS_1101 = { 1101 } #Nakhchivan 
-
-RUS_1102 = { 1102 1105 1104 1107 1103 } #Azerbaijan Armenia_Azerbaijan
+RUS_1102 = { 1101 1102 1105 1104 1107 1103 } #Azerbaijan Armenia_Azerbaijan
 
 RUS_1106 = { 1106 } #Nagorno-Karabakh
 
@@ -540,15 +522,11 @@ YEM_1178 = { 1178 1179 1180 } #Sanaa
 
 KOK_1190 = { 1189 1190 1203 } #Kyrgyzstan
 
-KHI_1191 = { 1191 1195 1198 1199 1200 1202 } #Uzbekistan
-
-UZB_1192 = { 1192 } #Karakalpakstan
+KHI_1191 = { 1191 1192 1195 1198 1199 1200 1202 } #Uzbekistan
 
 PAK_1223 = { 1223 1218 1219 2653 } #Pashtunistan
 
-KOK_1208 = { 1208 } #Gorno-Badakhshan
-
-KOK_1210 = { 1207 1201 } #Tajikistan
+KOK_1210 = { 1201 1207 1208 } #Tajikistan
 
 AFG_1214 = { 1214 1215 } #Western Afghanistan
 
@@ -664,8 +642,6 @@ RUS_2618 = { 2638  1073 1416 1417 } #Upper Okhotsk - Central Java
 RUS_2621 = { 1239 1240 1241 2650 2644 1238 } #East Uttar Pradesh
 
 RUS_2653 = { 2654 1248 1247 1250 } #North Siberia - South Bihar
-
-CHI_2668 = { 2681 } #Shenzhen
 
 HKG_1496 = { 1496 }
 
@@ -786,9 +762,7 @@ SIA_1392 = { 1346 1353 1347 1351 1348 1349 } #Ayutthaya Siam
 
 ### East Indies
 
-BRU_1393 = { 1393 } #Brunei
-
-BRU_1394 = { 1394 1395 } #Sarawak
+BRU_1394 = { 1393 1394 1395 } #Sarawak
 
 BRU_1396 = { 1396 1397 } #Sabah
 
@@ -825,9 +799,7 @@ SPA_1463 = { 1463 1462 1464 } #Mindanao
 
 ### China
 
-CHI_1612 = { 1612 17 1616 1613 } #Beijing
-
-CHI_1617 = { 1617 } #Tianjin
+CHI_1612 = { 1612 17 1616 1617 1613 } #Beijing
 
 CHI_1538 = { 1538 2632 } #Shanghai
 
@@ -845,11 +817,9 @@ CHI_1482 = { 1482 1483 1484 1486 1487 3342 1065 } #Fujian
 
 CHI_1485 = { 1485 2562 3343 } #Formosa
 
-CHI_1490 = { 1490 1488 1489 1492 3369 3370 3372 } #Gansu
+CHI_1490 = { 1490 1491 1488 1489 1492 3369 3370 3372 } #Gansu
 
-CHI_1491 = { 1491 } #Ningxia
-
-CHI_1493 = { 1493 1500 1495 1501 2646 1494 1497 2690 } #Guangdong
+CHI_1493 = { 1493 1500 1495 1501 2646 1494 1497 2681 2690 } #Guangdong
 
 MCA_1498 = { 1498 }
 
