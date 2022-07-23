@@ -1122,6 +1122,22 @@ country_event = {
 			limit = { tag = YNN exists = yes vassal_of = CHI }
 			CHI = { release_vassal = YNN leave_alliance = YNN relation = { who = YNN value = -200 } diplomatic_influence = { who = YNN value = -400 } }
 		}
+		any_country = {
+			limit = { tag = TIB exists = yes vassal_of = CHI }
+			CHI = { release_vassal = TIB leave_alliance = TIB relation = { who = TIB value = -200 } diplomatic_influence = { who = TIB value = -400 } }
+		}
+		any_country = {
+			limit = { tag = XIJ exists = yes vassal_of = CHI }
+			CHI = { release_vassal = XIJ leave_alliance = XIJ relation = { who = XIJ value = -200 } diplomatic_influence = { who = XIJ value = -400 } }
+		}
+		any_country = {
+			limit = { tag = MGL exists = yes vassal_of = CHI }
+			CHI = { release_vassal = MGL leave_alliance = MGL relation = { who = MGL value = -200 } diplomatic_influence = { who = MGL value = -400 } }
+		}
+		any_country = {
+			limit = { tag = MCK exists = yes vassal_of = CHI }
+			CHI = { release_vassal = MCK leave_alliance = MCK relation = { who = MCK value = -200 } diplomatic_influence = { who = MCK value = -400 } }
+		}
 		ai_chance = { factor = 0.1 }
 	}
 	
@@ -1134,24 +1150,40 @@ country_event = {
 		
 		#Warlords get spooked
 		any_country = {
-			limit = { tag = SXI exists = yes vassal_of = CHI }
+			limit = { AND = { tag = SXI exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = SXI leave_alliance = SXI relation = { who = SXI value = -200 } diplomatic_influence = { who = SXI value = -400 } }
 		}
 		any_country = {
-			limit = { tag = QHA exists = yes vassal_of = CHI }
+			limit = { AND = { tag = QHA exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = QHA leave_alliance = QHA relation = { who = QHA value = -200 } diplomatic_influence = { who = QHA value = -400 } }
 		}
 		any_country = {
-			limit = { tag = SZC exists = yes vassal_of = CHI }
+			limit = { AND = { tag = SZC exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = SZC leave_alliance = SZC relation = { who = SZC value = -200 } diplomatic_influence = { who = SZC value = -400 } }
 		}
 		any_country = {
-			limit = { tag = GGX exists = yes vassal_of = CHI }
+			limit = { AND = { tag = GGX exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = GGX leave_alliance = GGX relation = { who = GGX value = -200 } diplomatic_influence = { who = GGX value = -400 } }
 		}
 		any_country = {
-			limit = { tag = YNN exists = yes vassal_of = CHI }
+			limit = { AND = { tag = YNN exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = YNN leave_alliance = YNN relation = { who = YNN value = -200 } diplomatic_influence = { who = YNN value = -400 } }
+		}
+		any_country = {
+			limit = { AND = { tag = TIB exists = yes vassal_of = CHI } }
+			CHI = { release_vassal = TIB leave_alliance = TIB relation = { who = TIB value = -200 } diplomatic_influence = { who = TIB value = -400 } }
+		}
+		any_country = {
+			limit = { AND = { tag = XIJ exists = yes vassal_of = CHI } }
+			CHI = { release_vassal = XIJ leave_alliance = XIJ relation = { who = XIJ value = -200 } diplomatic_influence = { who = XIJ value = -400 } }
+		}
+		any_country = {
+			limit = { AND = { tag = MGL exists = yes vassal_of = CHI } }
+			CHI = { release_vassal = MGL leave_alliance = MGL relation = { who = MGL value = -200 } diplomatic_influence = { who = MGL value = -400 } }
+		}
+		any_country = {
+			limit = { AND = { tag = MCK exists = yes vassal_of = CHI } }
+			CHI = { release_vassal = MCK leave_alliance = MCK relation = { who = MCK value = -200 } diplomatic_influence = { who = MCK value = -400 } }
 		}
 		ai_chance = { factor = 0.1 }
 	}
@@ -1356,7 +1388,6 @@ country_event = {
 			is_possible_vassal = GGX
 			is_possible_vassal = TIB
 			is_possible_vassal = ETS
-			is_possible_vassal = XIJ
 			is_possible_vassal = IMN
 			is_possible_vassal = TAI
 			is_possible_vassal = SZC
@@ -1388,7 +1419,6 @@ country_event = {
 					is_core = GGX
 					is_core = TIB
 					is_core = ETS
-					is_core = XIJ
 					is_core = IMN 
 					is_core = TAI
 					is_core = SZC
@@ -1402,7 +1432,7 @@ country_event = {
 		}
 		country_event = 8004007
 		
-		ai_chance = { factor = 0.7 }
+		ai_chance = { factor = 0.2 }
 	}
 
 	option = {
@@ -1433,39 +1463,39 @@ country_event = {
 		name = "Stick to the status quo!"
 		#Release all KMT vassals and potential releaseables
 		any_country = {
-			limit = { tag = SXI exists = yes vassal_of = CHI }
+			limit = { AND = { tag = SXI exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = SXI leave_alliance = SXI relation = { who = SXI value = -200 } diplomatic_influence = { who = SXI value = -400 } }
 		}
 		any_country = {
-			limit = { tag = QHA exists = yes vassal_of = CHI }
+			limit = { AND = { tag = QHA exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = QHA leave_alliance = QHA relation = { who = QHA value = -200 } diplomatic_influence = { who = QHA value = -400 } }
 		}
 		any_country = {
-			limit = { tag = SZC exists = yes vassal_of = CHI }
+			limit = { AND = { tag = SZC exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = SZC leave_alliance = SZC relation = { who = SZC value = -200 } diplomatic_influence = { who = SZC value = -400 } }
 		}
 		any_country = {
-			limit = { tag = GGX exists = yes vassal_of = CHI }
+			limit = { AND = { tag = GGX exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = GGX leave_alliance = GGX relation = { who = GGX value = -200 } diplomatic_influence = { who = GGX value = -400 } }
 		}
 		any_country = {
-			limit = { tag = YNN exists = yes vassal_of = CHI }
+			limit = { AND = { tag = YNN exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = YNN leave_alliance = YNN relation = { who = YNN value = -200 } diplomatic_influence = { who = YNN value = -400 } }
 		}
 		any_country = {
-			limit = { tag = XIJ exists = yes vassal_of = CHI }
+			limit = { AND = { tag = XIJ exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = XIJ leave_alliance = XIJ relation = { who = XIJ value = -200 } diplomatic_influence = { who = XIJ value = -400 } }
 		}
 		any_country = {
-			limit = { tag = TIB exists = yes vassal_of = CHI }
+			limit = { AND = { tag = TIB exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = TIB leave_alliance = TIB relation = { who = TIB value = -200 } diplomatic_influence = { who = TIB value = -400 } }
 		}
 		any_country = {
-			limit = { tag = MGL exists = yes vassal_of = CHI }
+			limit = { AND = { tag = MGL exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = MGL leave_alliance = MGL relation = { who = MGL value = -200 } diplomatic_influence = { who = MGL value = -400 } }
 		}
 		any_country = {
-			limit = { tag = MCK exists = yes vassal_of = CHI }
+			limit = { AND = { tag = MCK exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = MCK leave_alliance = MCK relation = { who = MCK value = -200 } diplomatic_influence = { who = MCK value = -400 } }
 		}
 
@@ -1483,7 +1513,7 @@ country_event = {
 		random_owned = { limit = { owner = { is_possible_vassal = TAI } } owner = { release = TAI TAI = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = TAI attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
 		random_owned = { limit = { owner = { is_possible_vassal = MGL } } owner = { release = MGL MGL = { government = presidential_dictatorship country_event = 800050 ruling_party_ideology = nationalist } CHI = { war = { target = MGL attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = status_quo } call_ally = no } } } }
 
-		ai_chance = { factor = 0.2 }
+		ai_chance = { factor = 0.7 }
 	}
 
 }
@@ -1749,27 +1779,27 @@ country_event = {
 		
 		#Release all KMT vassals as they get spooked by Chiang's treachery
 		any_country = {
-			limit = { tag = SXI exists = yes vassal_of = CHI }
+			limit = { AND = { tag = SXI exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = SXI leave_alliance = SXI relation = { who = SXI value = -200 } diplomatic_influence = { who = SXI value = -400 } }
 		}
 		any_country = {
-			limit = { tag = QHA exists = yes vassal_of = CHI }
+			limit = { AND = { tag = QHA exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = QHA leave_alliance = QHA relation = { who = QHA value = -200 } diplomatic_influence = { who = QHA value = -400 } }
 		}
 		any_country = {
-			limit = { tag = SZC exists = yes vassal_of = CHI }
+			limit = { AND = { tag = SZC exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = SZC leave_alliance = SZC relation = { who = SZC value = -200 } diplomatic_influence = { who = SZC value = -400 } }
 		}
 		any_country = {
-			limit = { tag = GGX exists = yes vassal_of = CHI }
+			limit = { AND = { tag = GGX exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = GGX leave_alliance = GGX relation = { who = GGX value = -200 } diplomatic_influence = { who = GGX value = -400 } }
 		}
 		any_country = {
-			limit = { tag = YNN exists = yes vassal_of = CHI }
+			limit = { AND = { tag = YNN exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = YNN leave_alliance = YNN relation = { who = YNN value = -200 } diplomatic_influence = { who = YNN value = -400 } }
 		}
 		any_country = {
-			limit = { tag = XIJ exists = yes vassal_of = CHI }
+			limit = { AND = { tag = XIJ exists = yes vassal_of = CHI } }
 			CHI = { release_vassal = XIJ leave_alliance = XIJ relation = { who = XIJ value = -200 } diplomatic_influence = { who = XIJ value = -400 } }
 		}
 		

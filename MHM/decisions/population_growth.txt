@@ -22,7 +22,7 @@ political_decisions = {
 			war = no
 			election = no
 			NOT = { average_militancy = 3 }
-			NOT = { has_country_modifier = contraception_decay }
+			NOT = { has_country_modifier = fertility_timer }
 			
 			#Must have money to spend
 			money = 100000
@@ -42,17 +42,17 @@ political_decisions = {
 				#Expansionist nations will take this decision
 				AND = { war_policy = jingoism is_disarmed = no }
 				#Nations facing a demographic crunch will take this
-				literacy = 0.60
+				AND = { literacy = 0.50 NOT = { literacy = 0.60 } }
 			}
 
 		}
 
 		effect = {
-			#Less than 10% higher education
+			#Less than 20% higher education
 			any_owned = {
 				limit = {
 					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
-					NOT = { literacy = 0.10 }
+					NOT = { literacy = 0.20 }
 					NOT = { has_province_modifier = natalism_5 }
 				}
 				remove_province_modifier = natalism_1
@@ -62,12 +62,12 @@ political_decisions = {
 				add_province_modifier = { name = natalism_5 duration = 1825 } 
 			}
 			
-			#10-20% higher education
+			#20-30% higher education
 			any_owned = {
 				limit = {
 					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
-					literacy = 0.10
-					NOT = { literacy = 0.20 }
+					literacy = 0.20
+					NOT = { literacy = 0.30 }
 					NOT = { has_province_modifier = natalism_4 }
 				}
 				remove_province_modifier = natalism_1
@@ -77,12 +77,12 @@ political_decisions = {
 				add_province_modifier = { name = natalism_4 duration = 1825 } 
 			}
 			
-			#20-30% higher education
+			#30-40% higher education
 			any_owned = {
 				limit = {
 					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
-					literacy = 0.20
-					NOT = { literacy = 0.30 }
+					literacy = 0.30
+					NOT = { literacy = 0.40 }
 					NOT = { has_province_modifier = natalism_3 }
 				}
 				remove_province_modifier = natalism_1
@@ -92,12 +92,12 @@ political_decisions = {
 				add_province_modifier = { name = natalism_3 duration = 1825 } 
 			}
 			
-			#30-40% higher education
+			#40-50% higher education
 			any_owned = {
 				limit = {
 					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
-					literacy = 0.30
-					NOT = { literacy = 0.40 }
+					literacy = 0.40
+					NOT = { literacy = 0.50 }
 					NOT = { has_province_modifier = natalism_2 }
 				}
 				remove_province_modifier = natalism_1
@@ -107,11 +107,12 @@ political_decisions = {
 				add_province_modifier = { name = natalism_2 duration = 1825 } 
 			}
 			
-			#40%+ higher education
+			#50-60% higher education
 			any_owned = {
 				limit = {
 					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
-					literacy = 0.40
+					literacy = 0.50
+					NOT = { literacy = 0.60 } # 60% or higher provinces will get no natalism as they will have already stabilized
 					NOT = { has_province_modifier = natalism_1 }
 				}
 				remove_province_modifier = natalism_2
@@ -121,7 +122,7 @@ political_decisions = {
 				add_province_modifier = { name = natalism_1 duration = 1825 } 
 			}
 
-			add_country_modifier = { name = contraception_decay duration = 1825 } # to prevent decision spam
+			add_country_modifier = { name = fertility_timer duration = 1825 } # to prevent decision spam
 		
 			#Accepted pops are happy
 			any_pop = { 
@@ -132,7 +133,7 @@ political_decisions = {
 			#Oppressed pops are not happy
 			any_pop = { limit = { NOT = { is_culture_group = THIS } } consciousness = 5 militancy = 5 }
 			
-			#Decision comes with public housing reforms
+			#Decision comes with public housing reforms and child care reforms
 			random_owned = {
 				limit = { owner = { social_service_reform = social_abuse_protection } }
 				owner = { social_reform = anti_terror_surveillance }
@@ -144,6 +145,19 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { social_service_reform = no_social_service } }
 				owner = { social_reform = social_services }
+			}
+			
+			random_owned = {
+				limit = { owner = { child_care = supported_child_care } }
+				owner = { social_reform = parental_leave_child_care }
+			}
+			random_owned = {
+				limit = { owner = { child_care = limited_child_care } }
+				owner = { social_reform = supported_child_care }
+			}
+			random_owned = {
+				limit = { owner = { child_care = no_child_care } }
+				owner = { social_reform = limited_child_care }
 			}
 		}
 

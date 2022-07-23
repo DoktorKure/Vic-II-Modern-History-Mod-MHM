@@ -1,0 +1,687 @@
+#########################################################
+#														#
+#				DEVELOPMENT LEVELS						#
+#			Level 1 - below 10% literacy				#
+#			Level 2 - 10% - 20% literacy				#
+#			Level 3 - 20% - 30% literacy				#
+#			Level 4 - 30% - 40% literacy				#
+#			Level 5 - 40% - 50% literacy				#
+#			Level 6 - 50% - 60% literacy				#
+#			Level 7 - above 60% literacy				#
+#														#
+#########################################################
+
+#Set Development Levels
+country_event = {
+	id = 1412201
+	title = "Development and Population Trends"
+	desc = EVTDESC1412201
+	picture = "developmental_levels"
+
+	trigger = {
+		any_owned_province = {
+			NOT = {
+				OR = {
+					has_province_modifier = dev_1
+					has_province_modifier = dev_2
+					has_province_modifier = dev_3
+					has_province_modifier = dev_4
+					has_province_modifier = dev_5
+					has_province_modifier = dev_6
+					has_province_modifier = dev_7
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "Time to start developing our nation"
+
+		add_country_modifier = { name = dev_timer duration = 730 }
+
+		#Less than 10% or less than 30K pops
+		any_owned = {
+			limit = {
+				OR = { NOT = { total_pops = 30000 }	NOT = { literacy = 0.10 } }
+				#Must not have an existing dev modifier
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 has_province_modifier = dev_7 } }
+			}
+			add_province_modifier = { name = dev_1 duration = -1 } 
+		}
+		
+		#Between 10% to 20%
+		any_owned = {
+			limit = {
+				total_pops = 30000
+				literacy = 0.10
+				NOT = { literacy = 0.20 }
+				#Must not have an existing dev modifier
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 has_province_modifier = dev_7 } }
+			}
+			add_province_modifier = { name = dev_2 duration = -1 } 
+		}
+		
+		#Between 20% to 30%
+		any_owned = {
+			limit = {
+				total_pops = 30000
+				literacy = 0.20
+				NOT = { literacy = 0.30 }
+				#Must not have an existing dev modifier
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 has_province_modifier = dev_7 } }
+			}
+			add_province_modifier = { name = dev_3 duration = -1 } 
+		}
+		
+		#Between 30% to 40%
+		any_owned = {
+			limit = {
+				total_pops = 30000
+				literacy = 0.30
+				NOT = { literacy = 0.40 }
+				#Must not have an existing dev modifier
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 has_province_modifier = dev_7 } }
+			}
+			add_province_modifier = { name = dev_4 duration = -1 } 
+		}
+		
+		#Between 40% to 50%
+		any_owned = {
+			limit = {
+				total_pops = 30000
+				literacy = 0.40
+				NOT = { literacy = 0.50 }
+				#Must not have an existing dev modifier
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 has_province_modifier = dev_7 } }
+			}
+			add_province_modifier = { name = dev_5 duration = -1 } 
+		}
+		
+		#Between 50% to 60%
+		any_owned = {
+			limit = {
+				total_pops = 30000
+				literacy = 0.50
+				NOT = { literacy = 0.60 }
+				#Must not have an existing dev modifier
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 has_province_modifier = dev_7 } }
+			}
+			add_province_modifier = { name = dev_6 duration = -1 } 
+		}
+		
+		#Above 50%
+		any_owned = {
+			limit = {
+				total_pops = 30000
+				literacy = 0.60
+				#Must not have an existing dev modifier
+				NOT = {	OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 has_province_modifier = dev_4 has_province_modifier = dev_5 has_province_modifier = dev_6 has_province_modifier = dev_7 } }
+			}
+			add_province_modifier = { name = dev_7 duration = -1 } 
+		}
+	}
+}
+
+#Developmental Levels Review
+country_event = {
+	id = 1412202
+	title = "Developmental Levels Progress"
+	desc = EVTDESC1412201
+	picture = "developmental_levels"
+
+	trigger = {
+		NOT = { has_country_modifier = dev_timer }
+		
+		OR = {
+			any_owned_province = {
+				OR = { NOT = { total_pops = 30000 } NOT = { literacy = 0.10 } }
+				NOT = { has_province_modifier = dev_1 }
+			}
+			any_owned_province = {
+				total_pops = 30000
+				literacy = 0.10
+				NOT = { literacy = 0.20 }
+				NOT = { has_province_modifier = dev_2 }
+			}
+			any_owned_province = {
+				total_pops = 30000
+				literacy = 0.20
+				NOT = { literacy = 0.30 }
+				NOT = { has_province_modifier = dev_3 }
+			}
+			any_owned_province = {
+				total_pops = 30000
+				literacy = 0.30
+				NOT = { literacy = 0.40 }
+				NOT = { has_province_modifier = dev_4 }
+			}
+			any_owned_province = {
+				total_pops = 30000
+				literacy = 0.40
+				NOT = { literacy = 0.50 }
+				NOT = { has_province_modifier = dev_5 }
+			}
+			any_owned_province = {
+				total_pops = 30000
+				literacy = 0.50
+				NOT = { literacy = 0.60 }
+				NOT = { has_province_modifier = dev_6 }
+			}
+			any_owned_province = {
+				total_pops = 30000
+				literacy = 0.60
+				NOT = { has_province_modifier = dev_7 }
+			}
+		}	
+
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+		modifier = { factor = 0.5 has_country_modifier = nprhigh }
+	}
+
+	option = {
+		name = "Press ahead with our nation's development"
+
+		add_country_modifier = { name = dev_timer duration = 365 }
+
+		#Less than 10% or less than 30K pops
+		any_owned = { 
+			limit = { 
+				OR = { NOT = { total_pops = 30000 } NOT = { literacy = 0.10 } }
+				NOT = { has_province_modifier = dev_1 }
+			} 
+			
+			remove_province_modifier = dev_2
+			remove_province_modifier = dev_3
+			remove_province_modifier = dev_4
+			remove_province_modifier = dev_5
+			remove_province_modifier = dev_6
+			remove_province_modifier = dev_7
+			add_province_modifier = { name = dev_1 duration = -1 } 
+		}
+		
+		#Between 10% to 20%
+		any_owned = {
+			limit = {
+				total_pops = 30000
+				literacy = 0.10
+				NOT = { literacy = 0.20 }
+				NOT = { has_province_modifier = dev_2 }
+			} 
+			remove_province_modifier = dev_1
+			
+			remove_province_modifier = dev_3
+			remove_province_modifier = dev_4
+			remove_province_modifier = dev_5
+			remove_province_modifier = dev_6
+			remove_province_modifier = dev_7
+			add_province_modifier = { name = dev_2 duration = -1 } 
+		}
+		
+		#Between 20% to 30%
+		any_owned = {
+			limit = {
+				total_pops = 30000
+				literacy = 0.20
+				NOT = { literacy = 0.30 }
+				NOT = { has_province_modifier = dev_3 }
+			}
+			remove_province_modifier = dev_1
+			remove_province_modifier = dev_2
+			
+			remove_province_modifier = dev_4
+			remove_province_modifier = dev_5
+			remove_province_modifier = dev_6
+			remove_province_modifier = dev_7
+			add_province_modifier = { name = dev_3 duration = -1 } 
+		}
+		
+		#Between 30% to 40%
+		any_owned = {
+			limit = {
+				total_pops = 30000
+				literacy = 0.30
+				NOT = { literacy = 0.40 }
+				NOT = { has_province_modifier = dev_4 }
+			}
+			remove_province_modifier = dev_1
+			remove_province_modifier = dev_2
+			remove_province_modifier = dev_3
+			
+			remove_province_modifier = dev_5
+			remove_province_modifier = dev_6
+			remove_province_modifier = dev_7
+			add_province_modifier = { name = dev_4 duration = -1 } 
+		}
+		
+		#Between 40% to 50%
+		any_owned = {
+			limit = {
+				total_pops = 30000
+				literacy = 0.40
+				NOT = { literacy = 0.50 }
+				NOT = { has_province_modifier = dev_5 }
+			}
+			remove_province_modifier = dev_1
+			remove_province_modifier = dev_2
+			remove_province_modifier = dev_3
+			remove_province_modifier = dev_4
+			
+			remove_province_modifier = dev_6
+			remove_province_modifier = dev_7
+			add_province_modifier = { name = dev_5 duration = -1 } 
+		}
+		
+		#Between 50% to 60%
+		any_owned = {
+			limit = {
+				total_pops = 30000
+				literacy = 0.50
+				NOT = { literacy = 0.60 }
+				NOT = { has_province_modifier = dev_6 }
+			}
+			remove_province_modifier = dev_1
+			remove_province_modifier = dev_2
+			remove_province_modifier = dev_3
+			remove_province_modifier = dev_4
+			remove_province_modifier = dev_5
+			
+			remove_province_modifier = dev_7
+			add_province_modifier = { name = dev_6 duration = -1 } 
+		}
+		
+		#Above 60%
+		any_owned = {
+			limit = {
+				total_pops = 30000
+				literacy = 0.60
+				NOT = { has_province_modifier = dev_7 }
+			}
+			remove_province_modifier = dev_1
+			remove_province_modifier = dev_2
+			remove_province_modifier = dev_3
+			remove_province_modifier = dev_4
+			remove_province_modifier = dev_5
+			remove_province_modifier = dev_6
+			
+			add_province_modifier = { name = dev_7 duration = -1 } 
+		}
+
+	}
+
+}
+
+#Infrastructure Renewal
+country_event = {
+	id = 14122021
+	title = "Ageing Infrastructure Networks"
+	desc = EVTDESC14122021
+	picture = "developmental_levels_renew"
+
+	trigger = { 
+		NOT = { has_country_modifier = dev_infrastructure }
+		
+		#Has development level higher than extremely underdeveloped
+		any_owned_province = { 
+			OR = { 
+				has_province_modifier = dev_2
+				has_province_modifier = dev_3
+				has_province_modifier = dev_4
+				has_province_modifier = dev_5
+				has_province_modifier = dev_6
+				has_province_modifier = dev_7
+			} 
+		}
+
+	}
+
+	mean_time_to_happen = { 
+		months = 240
+		modifier = { factor = 0.75 NOT = { has_country_modifier = nprhigh } }
+	}
+
+	option = {
+		name = "Spend the money!"
+		
+		#AI gets it cheap so it doesn't bankrupt itself
+		random_owned = {
+			limit = { owner = { ai = no } }
+			owner = { add_country_modifier = { name = dev_infrastructure duration = 1825 } }
+		}
+		random_owned = {
+			limit = { owner = { ai = yes } }
+			owner = { add_country_modifier = { name = dev_infrastructure duration = 365 } }
+		}
+		
+		ai_chance = { factor = 0.9 }
+
+	}
+	
+	option = {
+		name = "The money is better spent elsewhere"
+		
+		any_owned = { infrastructure = -1 } # Lose one level of infrastructure
+		
+		ai_chance = { factor = 0.1 }
+
+	}
+
+}
+
+#############################################################
+#															#
+#                  	Population Trends						#
+#															#
+#############################################################
+
+# Population trends
+# 0-20% literacy leads to large pop boom in provinces
+# 20-30% literacy leads to less pop growth in provinces but a large temporary global pop growth boom that serves out its entire length (not removed by attaining even higher literacy)
+# 30-40% literacy leads to tipping point
+# 40-60% literacy leads to a major demographic crunch
+# 60% and above literacy leads to reversing the demographic crunch and simple stabilizing - no growth, no shrink unless natalism decisions are taken
+
+# Special - haredim_jewish, roma and mennonites and not prim/accept
+
+# The Demographic Transition - Population Boom
+country_event = {
+	id = 22600
+	title = "Demographic Transition - Population Boom"
+	desc = EVT_22602_DESC
+	picture = "demographic_transition"
+
+	trigger = {
+		NOT = { has_country_flag = demographic_transition_stage_1_flag }
+	
+		#Very low development
+		NOT = { literacy = 0.20 }
+		war = no
+		NOT = { has_country_modifier = dev_timer }
+	}
+	
+	
+	option = {
+		name = "We welcome these new $COUNTRY_ADJ$ Citizens"
+		set_country_flag = demographic_transition_stage_1_flag
+	}
+}
+
+# The Demographic Transition - Longer Lifespans
+country_event = {
+	id = 22601
+	title = "Demographic Transition - Longer Lifespans"
+	desc = EVT_22602_DESC
+	picture = "demographic_transition"
+
+	trigger = {
+		NOT = { has_country_flag = demographic_transition_stage_2_flag }
+		
+		#Low development
+		literacy = 0.20
+		NOT = { literacy = 0.30 }
+		war = no
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "Great, our people can be more productive!"
+		
+		add_country_modifier = { name = industrial_pop_boom duration = 7305 }
+		set_country_flag = demographic_transition_stage_2_flag
+	}
+	
+}
+
+# The Demographic Transition - Stable Growth
+country_event = {
+	id = 22602
+	title = "Demographic Transition - Stable Growth"
+	desc = EVT_22602_DESC
+	picture = "demographic_transition"
+
+	trigger = {
+		NOT = { has_country_flag = demographic_transition_stage_3_flag }
+		
+		has_country_modifier = industrial_pop_boom
+		
+		#Medium development
+		literacy = 0.30
+		NOT = { literacy = 0.40 }
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "What's next, an ageing population?"
+		
+		remove_country_modifier = industrial_pop_boom
+		
+		set_country_flag = demographic_transition_stage_3_flag
+	}
+}
+
+# The Demographic Transition - Ageing Population
+country_event = {
+	id = 22603
+	title = "The Demographic Transition - Ageing Population"
+	desc = EVTDESC22602
+	picture = "demographic_transition"
+
+	trigger = {
+		NOT = { has_country_flag = demographic_transition_stage_4_flag }
+		
+		NOT = { has_country_modifier = industrial_pop_boom }
+		
+		#21st Century problem
+		year = 2000
+		
+		#High development
+		literacy = 0.40
+		NOT = { literacy = 0.50 }
+	}
+	
+	mean_time_to_happen = { months = 60 }
+	
+	option = {
+		name = "We must care for our seniors"
+		
+		add_country_modifier = { name = ageing_population duration = -1 }
+		
+		set_country_flag = demographic_transition_stage_4_flag
+	}
+}
+
+# The Demographic Transition - The Demographic Crunch
+country_event = {
+	id = 22604
+	title = "The Demographic Transition - The Demographic Crunch"
+	desc = EVTDESC22602
+	picture = "demographic_transition"
+
+	trigger = {
+		NOT = { has_country_flag = demographic_transition_stage_5_flag }
+		
+		#21st Century problem
+		year = 2000
+		
+		#Very High development
+		literacy = 0.50
+		NOT = { literacy = 0.60 }
+	}
+	
+	mean_time_to_happen = { months = 60 }
+	
+	option = {
+		name = "Our nation's elderly are dying off..."
+		
+		remove_country_modifier = ageing_population
+		add_country_modifier = { name = demographic_crunch duration = -1 }
+		
+		set_country_flag = demographic_transition_stage_5_flag
+	}
+}
+
+# The Demographic Transition - Stabilization
+country_event = {
+	id = 22605
+	title = "The Demographic Transition - Stabilization"
+	desc = EVTDESC22602
+	picture = "demographic_transition"
+
+	trigger = {
+		NOT = { has_country_flag = demographic_transition_stage_6_flag }
+		
+		has_country_modifier = demographic_crunch
+		
+		#21st Century problem
+		year = 2000
+		
+		#Extremely High development
+		literacy = 0.60
+	}
+	
+	mean_time_to_happen = { months = 60 }
+	
+	option = {
+		name = "At last, we have stabilized our nation's birthrates!"
+		
+		remove_country_modifier = demographic_crunch
+		
+		set_country_flag = demographic_transition_stage_6_flag
+	}
+}
+
+### From NWO ###
+
+# haredim_jewish
+country_event = {
+	id = 22612
+	title = EVT_22612_NAME 
+	desc = EVT_22612_DESC
+	picture = "haredim_jewish"
+	
+	trigger = {
+		NOT = { has_country_modifier = demographic_haredim_jewish } 
+		accepted_culture = haredim_jewish
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = EVT_22612_OPTA
+		any_pop = { 
+			limit = { has_pop_culture = haredim_jewish }
+			ideology = { factor = 0.9 value = traditionalist }
+			reduce_pop = 1.35
+        }
+		add_country_modifier = { 
+			name = demographic_haredim_jewish 
+			duration = 3665 
+		}
+	}
+	
+	option = {
+		name = EVT_22612_OPTB
+		any_pop = { 
+			limit = { has_pop_culture = haredim_jewish }
+			ideology = { factor = 0.9 value = traditionalist }
+		}
+		add_country_modifier = { 
+			name = demographic_haredim_jewish 
+			duration = 3665 
+		}
+	}
+	
+}
+
+# mennonites
+#country_event = { # mennonites
+#	id = 22613
+#	title = EVT_22613_NAME 
+#	desc = EVT_22613_DESC
+#	picture = "family_values"
+#	
+#	trigger = {
+#		NOT = { has_country_modifier = demographic_mennonites }
+#		any_pop = { 
+#			culture = mennonites
+#		}
+#	}
+#	
+#	mean_time_to_happen = { months = 1 }
+#	
+#	option = {
+#		name = EVT_22613_OPTA
+#		any_pop = { 
+#			limit = { culture = mennonites }
+#			reduce_pop = 1.35
+#		}
+#		add_country_modifier = { 
+#			name = demographic_mennonites 
+#			duration = 3665 
+#	    }
+#		ai_chance = { factor = 1 }
+# 	}
+#	
+#	option = {
+#		name = EVT_22613_OPTB
+#		any_pop = { 
+#			limit = { culture = mennonites }
+#			reduce_pop = 1.15
+#		}
+#		add_country_modifier = { 
+#			name = demographic_mennonites 
+#			duration = 3665 
+#	    }
+#		ai_chance = { factor = 0 }
+# 	}
+#	
+#}
+
+# romani
+country_event = {
+	id = 22614
+	title = EVT_22614_NAME 
+	desc = EVT_22614_DESC
+	picture = "romani"
+	
+	trigger = {
+		NOT = { has_country_modifier = demographic_romani }
+		any_pop = { 
+			culture = roma
+		}
+	}
+	
+	mean_time_to_happen = { months = 1 }
+	
+	option = {
+		name = EVT_22614_OPTA
+		any_pop = { 
+			limit = { culture = roma }
+			reduce_pop = 1.25
+		}
+		add_country_modifier = { 
+			name = demographic_romani 
+			duration = 3665 
+	    }
+		ai_chance = { factor = 1 }
+ 	}
+	option = {
+		name = EVT_22614_OPTB
+		any_pop = { 
+			limit = { culture = roma }
+			reduce_pop = 1.16
+		}
+		add_country_modifier = { 
+			name = demographic_romani 
+			duration = 3665 
+	    }
+		ai_chance = { factor = 0 }
+ 	}
+
+}

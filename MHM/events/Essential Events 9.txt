@@ -4900,7 +4900,6 @@ money = 500000
 relation = { who = RUS value = 100 }
 relation = { who = USA value = -50 }
 RUS = { years_of_research = 5 }
-RUS = { activate_technology = first_generation_subsonic_jet_fighters }
 ai_chance = { factor = 0.8 }
 		}
 

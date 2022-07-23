@@ -219,6 +219,11 @@ ageing_population = {
 	icon = 18
 }
 
+demographic_crunch = {
+	global_population_growth = -0.005
+	icon = 18
+}
+
 depressed_population = {
 	global_population_growth = -0.015
 	global_pop_consciousness_modifier = -0.10
@@ -1386,7 +1391,7 @@ icon = 13
 
 ### Province Developmental Levels ###
 
-dev_1 = { 
+dev_1 = { #Below 10% literacy
 local_factory_throughput = -0.40
 local_factory_input = 0.40
 factory_owner_cost = 0.020
@@ -1397,10 +1402,11 @@ mine_rgo_eff = -0.2
 immigrant_push = 0.40
 immigrant_attract = -0.8
 pop_consciousness_modifier = -0.20
+population_growth = 0.003
 icon = 14
 }
 
-dev_2 = { 
+dev_2 = { #10% - 20% literacy
 local_factory_throughput = -0.30
 local_factory_input = 0.30
 number_of_voters = -0.40
@@ -1411,10 +1417,11 @@ mine_rgo_eff = -0.15
 immigrant_push = 0.30
 immigrant_attract = -0.6
 pop_consciousness_modifier = -0.15
+population_growth = 0.002
 icon = 14
 }
 
-dev_3 = { 
+dev_3 = { #20% - 30% literacy
 local_factory_throughput = -0.20
 local_factory_input = 0.20
 number_of_voters = -0.20
@@ -1425,10 +1432,11 @@ mine_rgo_eff = -0.1
 immigrant_push = 0.20
 immigrant_attract = -0.4
 pop_consciousness_modifier = -0.10
+population_growth = 0.001
 icon = 14
 }
 
-dev_4 = { 
+dev_4 = { #30% - 40% literacy
 local_factory_throughput = -0.10
 local_factory_input = 0.10
 number_of_voters = -0.05
@@ -1438,19 +1446,32 @@ mine_rgo_eff = -0.05
 immigrant_push = 0.10
 immigrant_attract = -0.2
 pop_consciousness_modifier = -0.05
+population_growth = -0.001
 icon = 14
 }
 
-dev_5 = { 
+dev_5 = { #40% - 50% literacy
 icon = 13
+population_growth = -0.002
 }
 
-dev_6 = { 
+dev_6 = { #50% - 60% literacy
 local_artisan_output = 0.10
 local_factory_output = 0.10
 local_RGO_throughput = 0.10
 farm_rgo_eff = 0.10
 mine_rgo_eff = 0.10
+pop_consciousness_modifier = 0.05
+population_growth = -0.005
+icon = 13
+}
+
+dev_7 = { #Above 60% literacy
+local_artisan_output = 0.15
+local_factory_output = 0.15
+local_RGO_throughput = 0.15
+farm_rgo_eff = 0.15
+mine_rgo_eff = 0.15
 pop_consciousness_modifier = 0.05
 icon = 13
 }
@@ -1466,7 +1487,7 @@ icon = 10
 
 ### National Priority ###
 
-nprhigh = { 
+nprhigh = { #Development
 rich_income_modifier = -0.1
 middle_income_modifier = -0.1
 poor_income_modifier = -0.1
@@ -1482,7 +1503,7 @@ education_efficiency_modifier = 0.05
 icon = 11
 }
 
-nprmedium = { 
+nprmedium = { #Defence
 mobilization_economy_impact = -0.2
 navy_tech_research_bonus = 0.25
 army_tech_research_bonus = 0.25
@@ -1497,7 +1518,7 @@ suppression_points_modifier = 0.2
 icon = 15
 }
 
-nprlow = { 
+nprlow = { #Diplomacy
 loan_interest = -0.1
 navy_tech_research_bonus = -0.2
 army_tech_research_bonus = -0.2
@@ -6706,7 +6727,7 @@ pop_replacement_event_cooldown = {
 pop_replacement_province_modifier = {
 	non_accepted_pop_consciousness_modifier = 0.1
 	non_accepted_pop_militancy_modifier = 0.1
-	assimilation_rate = 0.25
+	immigrant_attract = 4.0
 	icon = 8
 }
 

@@ -19,10 +19,10 @@ country_event = {
 		set_country_flag = genocide_101
 		#Randomised Killing rates
 		random_list = {
+			15 = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
 			15 = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
-			15 = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
-			20 = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
-			50 = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+			20 = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
+			50 = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
 		}
 
 		#Discovery Chance
@@ -46,10 +46,10 @@ country_event = {
 
 		#Randomised Killing rates
 		random_list = {
+			15 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
 			15 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
-			15 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
-			20 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
-			50 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+			20 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
+			50 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
 		}
 
 		#Discovery Chance
@@ -77,10 +77,10 @@ country_event = {
 
 		#Randomised Killing rates
 		random_list = {
+			15 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
 			15 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
-			15 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
-			20 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
-			50 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+			20 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
+			50 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
 		}
 
 		#Discovery Chance
@@ -120,7 +120,7 @@ country_event = {
 
 	option = {
 		name = "Focus on resettling our cores! (10% chance of discovery)"
-		add_country_modifier = { name = pop_replacement_event_cooldown duration = 180 } #To prevent event spam
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 365 } #To prevent event spam
 		
 		any_owned = {
 			limit = { is_core = THIS is_primary_culture = no is_accepted_culture = no } add_province_modifier = { name = pop_replacement_province_modifier duration = -1 }
@@ -147,18 +147,14 @@ country_event = {
 			chance = 10
 			prestige_factor = -0.05
 			badboy = 2.5
-			set_country_flag = discovered_genocide
 		}
-
-		#Event to notify everyone if discovered
-		random_owned = { limit = { owner = { has_country_flag = discovered_genocide NOT = { has_country_flag = discovered_genocide1 } } } owner = { set_country_flag = discovered_genocide1 country_event = 1410080 } }
 
 		ai_chance = { factor = 0.6 }
 	}
 
 	option = {
 		name = "Focus on the colonies! (5% chance of discovery)"
-		add_country_modifier = { name = pop_replacement_event_cooldown duration = 180 } #To prevent event spam
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 365 } #To prevent event spam
 		
 		any_owned = {
 			limit = { is_colonial = yes is_primary_culture = no is_accepted_culture = no } add_province_modifier = { name = pop_replacement_province_modifier duration = -1 }
@@ -185,12 +181,8 @@ country_event = {
 			chance = 5
 			prestige_factor = -0.05
 			badboy = 5
-			set_country_flag = discovered_genocide
 		}
-
-		#Event to notify everyone if discovered
-		random_owned = { limit = { owner = { has_country_flag = discovered_genocide NOT = { has_country_flag = discovered_genocide1 } } } owner = { set_country_flag = discovered_genocide1 country_event = 1410080 } }
-
+		
 		ai_chance = { 
 			factor = 0.2 
 			modifier = { factor = 0 
@@ -200,7 +192,7 @@ country_event = {
 
 	option = {
 		name = "Focus on non-core areas! (15% chance of discovery)"
-		add_country_modifier = { name = pop_replacement_event_cooldown duration = 180 } #To prevent event spam
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 365 } #To prevent event spam
 		
 		any_owned = {
 			limit = { NOT = { is_core = THIS } is_colonial = no is_primary_culture = no is_accepted_culture = no } add_province_modifier = { name = pop_replacement_province_modifier duration = -1 }
@@ -227,12 +219,8 @@ country_event = {
 			chance = 15
 			prestige_factor = -0.05
 			badboy = 2.5
-			set_country_flag = discovered_genocide
 		}
-
-		#Event to notify everyone if discovered
-		random_owned = { limit = { owner = { has_country_flag = discovered_genocide NOT = { has_country_flag = discovered_genocide1 } } } owner = { set_country_flag = discovered_genocide1 country_event = 1410080 } }
-
+		
 		ai_chance = { 
 			factor = 0.1 
 			modifier = {
@@ -245,7 +233,7 @@ country_event = {
 
 	option = {
 		name = "Focus on the entire nation! (20% chance of discovery)"
-		add_country_modifier = { name = pop_replacement_event_cooldown duration = 180 } #To prevent event spam
+		add_country_modifier = { name = pop_replacement_event_cooldown duration = 365 } #To prevent event spam
 		
 		any_owned = {
 			limit = { is_primary_culture = no is_accepted_culture = no } add_province_modifier = { name = pop_replacement_province_modifier duration = -1 }
@@ -271,12 +259,8 @@ country_event = {
 		random = {
 			chance = 20
 			prestige_factor = -0.05
-			badboy = 2.5
-			set_country_flag = discovered_genocide
+			badboy = 5
 		}
-
-		#Event to notify everyone if discovered
-		random_owned = { limit = { owner = { has_country_flag = discovered_genocide NOT = { has_country_flag = discovered_genocide1 } } } owner = { set_country_flag = discovered_genocide1 country_event = 1410080 } }
 
 		ai_chance = { 
 			factor = 0.1 

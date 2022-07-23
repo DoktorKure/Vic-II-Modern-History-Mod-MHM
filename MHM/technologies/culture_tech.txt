@@ -466,7 +466,7 @@ strd_internet = {
 	cost = 12600
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.1
+	education_efficiency = 0.25
 	increase_research = 0.10
 
 	ai_chance = {
@@ -507,7 +507,7 @@ high_speed_uni_network = {
 	cost = 14400
 	
 	administrative_efficiency = 0.025
-	education_efficiency = 0.1
+	education_efficiency = 0.25
 	increase_research = 0.10
 
 	ai_chance = {
@@ -538,7 +538,7 @@ uni_internet = {
 	factory_goods_output = { education_rnd = 0.1 }
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.25
+	education_efficiency = 0.50
 	increase_research = 0.10
 
 	ai_chance = {
@@ -565,7 +565,7 @@ distributed_computing_research = {
 	factory_goods_output = { education_rnd = 0.1 }
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.25
+	education_efficiency = 1.0
 	increase_research = 0.10
 
 	ai_chance = {
@@ -592,7 +592,7 @@ research_supercomputers = {
 	factory_goods_output = { education_rnd = 0.2 }
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.25
+	education_efficiency = 1.0
 	increase_research = 0.10
 
 	ai_chance = {
@@ -733,7 +733,7 @@ global_enrollment = {
 	year = 1990
 	cost = 12600
 
-	education_efficiency = 0.5
+	education_efficiency = 0.75
 	
 	ai_chance = {
 		factor = 1.01
@@ -753,7 +753,7 @@ informatization_education = {
 	year = 2000
 	cost = 14400
 
-	education_efficiency = 0.5
+	education_efficiency = 0.75
 	
 	ai_chance = {
 		factor = 1.01
@@ -773,7 +773,7 @@ learning_management_systems = {
 	year = 2020
 	cost = 18000
 
-	education_efficiency = 1.0
+	education_efficiency = 1.5
 	
 	ai_chance = {
 		factor = 1.01
@@ -793,7 +793,7 @@ blended_learning = {
 	year = 2050
 	cost = 21600
 
-	education_efficiency = 1.0
+	education_efficiency = 2.0
 	
 	ai_chance = {
 		factor = 1.01
@@ -813,7 +813,7 @@ virtual_learning = {
 	year = 2070
 	cost = 25200
 	
-	education_efficiency = 1.0
+	education_efficiency = 3.0
 	
 	ai_chance = {
 		factor = 1.01
