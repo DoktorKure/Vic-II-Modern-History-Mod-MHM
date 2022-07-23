@@ -128,6 +128,9 @@ country_event = {
 		any_owned = {
 			limit = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes has_province_modifier = pop_replacement_province_modifier } remove_province_modifier = pop_replacement_province_modifier
 		}
+		any_owned = {
+			limit = { NOT = { is_core = THIS } has_province_modifier = pop_replacement_province_modifier } remove_province_modifier = pop_replacement_province_modifier
+		}
 		
 		#Simulate population decline among non-accepteds
 		random_list = {
@@ -161,6 +164,9 @@ country_event = {
 		}
 		any_owned = {
 			limit = { is_colonial = yes is_primary_culture = yes is_accepted_culture = yes has_province_modifier = pop_replacement_province_modifier } remove_province_modifier = pop_replacement_province_modifier
+		}
+		any_owned = {
+			limit = { is_colonial = no has_province_modifier = pop_replacement_province_modifier } remove_province_modifier = pop_replacement_province_modifier
 		}
 
 		#Simulate population decline among non-accepteds
@@ -199,6 +205,9 @@ country_event = {
 		}
 		any_owned = {
 			limit = { NOT = { is_core = THIS } is_colonial = no is_primary_culture = yes is_accepted_culture = yes has_province_modifier = pop_replacement_province_modifier } remove_province_modifier = pop_replacement_province_modifier
+		}
+		any_owned = {
+			limit = { OR = { is_core = THIS is_colonial = yes } has_province_modifier = pop_replacement_province_modifier } remove_province_modifier = pop_replacement_province_modifier
 		}
 
 		#Simulate population decline among non-accepteds

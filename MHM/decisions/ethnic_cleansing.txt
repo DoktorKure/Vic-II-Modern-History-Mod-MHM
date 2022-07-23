@@ -172,7 +172,7 @@ political_decisions = {
 	}
 	
 	end_population_replacement = {
-		picture = "ethnic_cleansing"
+		picture = "population_replacement"
 		potential = {
 			OR = { 
 				has_country_flag = population_replacement_underway
@@ -194,7 +194,8 @@ political_decisions = {
 					}
 				}
 				minorities_reform = minorities_equal_rights 
-				minorities_reform = minorities_affirmative_action 
+				minorities_reform = minorities_affirmative_action
+				citizenship_policy = full_citizenship
 			}
 			NOT = { has_country_modifier = geno_cooldown }
 		}
@@ -202,8 +203,6 @@ political_decisions = {
 		effect = {
 			clr_country_flag = population_replacement_underway
 			remove_country_modifier = population_replacement_modifier
-			clr_country_flag = discovered_genocide 
-			clr_country_flag = discovered_genocide1
 			any_owned = { remove_province_modifier = pop_replacement_province_modifier }
 		}
 		ai_will_do = { factor = 1 }
