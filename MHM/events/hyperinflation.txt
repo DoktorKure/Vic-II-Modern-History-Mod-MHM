@@ -10,7 +10,12 @@ country_event = {
 		NOT = { has_country_modifier = hyperinflation }
 		has_country_modifier = print_money
 		OR = { # Reckless spending despite having to print money to sustain costs, or war is going poorly
-			administration_spending = 0.75
+			AND = {
+				administration_spending = 0.80
+				social_spending = 0.65
+				education_spending = 0.75
+				military_spending 0.85
+			}
 			war_exhaustion = 0.85
 		}
 	}
@@ -19,6 +24,6 @@ country_event = {
 	
 	option = {
 		name = "Our currency is becoming worthless!"
-		add_country_modifier = { name = hyperinflation duration = 3650 }
+		add_country_modifier = { name = hyperinflation duration = 1095 }
 	}
 }
