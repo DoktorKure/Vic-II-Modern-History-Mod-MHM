@@ -346,9 +346,9 @@ country_event = {
 		release = CAM 
 		release = LUA 
 		
-		DAI = { all_core = { add_core = ICU } }
-		CAM = { government = absolute_monarchy country_event = 800050 ruling_party_ideology = conservative all_core = { add_core = ICU } }
-		LUA = { government = absolute_monarchy country_event = 800050 ruling_party_ideology = conservative all_core = { add_core = ICU } }
+		DAI = { remove_accepted_culture = khmer remove_accepted_culture = lao }
+		CAM = { government = absolute_monarchy country_event = 800050 ruling_party_ideology = conservative }
+		LUA = { government = absolute_monarchy country_event = 800050 ruling_party_ideology = conservative }
 
 		change_tag = DAI
 
@@ -367,10 +367,9 @@ country_event = {
 			}
 		}
 		
-		#Add cores
-		DAI = { all_core = { add_core = ICU add_province_modifier = { name = nationalist_agitation duration = 3650 } } }
-		CAM = { all_core = { add_core = ICU add_province_modifier = { name = nationalist_agitation duration = 3650 } } }
-		LUA = { all_core = { add_core = ICU add_province_modifier = { name = nationalist_agitation duration = 3650 } } }
+		DAI = { all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } } }
+		CAM = { all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } } }
+		LUA = { all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } } }
 		
 		ai_chance = { factor = 0.3 }
 	}

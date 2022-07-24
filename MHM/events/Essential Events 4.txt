@@ -489,11 +489,13 @@ country_event = {
 	option = {
 		name = "Unite the Indochinese colonies into a single nation!"
 		prestige = 50
-		
-		release_vassal = DAI
 	
 		#Form the ICU
-		DAI = { change_tag = ICU }
+		DAI = { all_core = { add_core = ICU } }
+		CAM = { all_core = { add_core = ICU } }
+		LUA = { all_core = { add_core = ICU } }
+		
+		release_vassal = ICU
 
 		ICU = { 
 			government = colonial_government 
