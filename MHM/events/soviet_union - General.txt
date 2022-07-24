@@ -1710,6 +1710,9 @@ country_event = {
 
 	option = {
 		name = "Set them free!"
+		LIT = { all_core = { remove_core = RUS } }
+		LAT = { all_core = { remove_core = RUS } }
+		EST = { all_core = { remove_core = RUS } }
 		release = LIT 
 		release = LAT
 		release = EST 
