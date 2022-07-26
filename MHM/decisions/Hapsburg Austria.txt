@@ -1,0 +1,26 @@
+political_decisions = {
+	restore_austrian_monarchy = {
+		picture = "austrian_monarchy"
+		potential = {
+			tag = AUS
+			OR = { government = democracy government = democracy1 }
+		}
+		
+		allow = {
+			war = no
+			is_vassal = no
+			election = no
+			NOT = { militancy = 4 }
+			ruling_party_ideology = traditionalist
+			pop_majority_ideology = traditionalist
+		}
+
+		effect = {
+			government = hms_government1
+			any_pop = { 
+				limit = { pop_majority_ideology = traditionalist }
+				militancy = -7
+			}
+		}
+	}
+}

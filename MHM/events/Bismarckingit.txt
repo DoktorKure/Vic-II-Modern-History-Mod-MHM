@@ -35,6 +35,7 @@ country_event = {
 		name = "Excellent."
 		prestige = 50
 		CZH = { all_core = { add_core = KUK } }
+		950 = { add_core = KUK } # Uzgorod
 		inherit = CZH
 		add_accepted_culture = czech
 		add_accepted_culture = slovak
@@ -60,6 +61,7 @@ country_event = {
 		any_country = { 
 			limit = { OR = { tag = CZH tag = BOH tag = SLV } } 
 			all_core = { add_core = KUK } 
+			950 = { add_core = KUK } # Uzgorod
 		}
 	}
 
