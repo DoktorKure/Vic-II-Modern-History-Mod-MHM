@@ -179,3 +179,5 @@ NORMAL_WAR_RELEASE_PUPPET_NAME;$ORDER$$FIRST$ War to Liberate $SECOND$ $COUNTRY$
 NORMAL_WAR_TAKE_SPHERE_NAME;$ORDER$$FIRST$-$SECOND$ War over $COUNTRY$;$ORDER$ guerre $FIRST$-$SECOND$ pour $COUNTRY$;$ORDER$$FIRST$-$SECOND$er Krieg um $COUNTRY$;;$ORDER$ Guerra $FIRST$-$SECOND$ sobre $COUNTRY$;;;;;;;;;x;
 NORMAL_WAR_UNIFICATION_ANNEX_NAME;$ORDER$ $FIRST$ Liberation of $SECOND_COUNTRY$;$ORDER$ $FIRST$ libération de $SECOND_COUNTRY$;$ORDER$$FIRST$e Befreiung von $SECOND_COUNTRY$;;$ORDER$ Liberación $FIRST$ de $SECOND_COUNTRY$;;;;;;;;;x;;;;;;;;;;;;;;;;
 NORMAL_WAR_UNIFICATION_NAME;$ORDER$ $FIRST$ Liberation of $STATE$;$ORDER$$FIRST$ libération de $STATE$;$ORDER$$FIRST$e Befreiung von $STATE$;;$ORDER$ Liberación $FIRST$ de $STATE$;;;;;;;;;x;;;;;;;;;;;;;;;;
+AGRESSION_WAR_REVANCHISM_NAME;$ORDER$ War to Recover $FIRST$ Lands;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;;
+NORMAL_WAR_REVANCHISM_NAME;$ORDER$ War to Recover $FIRST$ Lands;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;;

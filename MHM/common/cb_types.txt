@@ -39,6 +39,7 @@
 
 # Order that CBs are executed in a peace treaty
 peace_order = {
+revanchism_cb
 become_independent
 destroy_wmd
 dismantle_forts
@@ -1498,6 +1499,55 @@ cut_down_to_size = {
 		}
 
 	}
+	
+	on_add = {
+	
+		set_country_flag = this_is_aggressor
+	
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	on_po_accepted = {
+	
+		#Enforce an unconditional surrender
+		country_event = 1610129
+	
+		THIS = { set_country_flag = this_won_CB }
+		set_country_flag = this_lost_CB
+	}
+	
+}
+
+# Special CB for revanchism wars
+revanchism_cb = {
+	sprite_index = 8
+	is_triggered_only = yes
+	months = 12
+	
+	badboy_factor = 1.3
+	prestige_factor = 1
+	peace_cost_factor = 75
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	po_disarmament = yes
+	po_remove_prestige	= yes
+
+	war_name = WAR_REVANCHISM_NAME
+	
+	can_use = { always = no }
 	
 	on_add = {
 	
