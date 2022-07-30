@@ -30,7 +30,7 @@ civil_service = politicised_service
 political_parties = parties_only_nominated
 conscription_policy = mandatory_service
 publishing_rights = censored_publishing
-union_rights = no_trade_unions
+union_rights = state_controlled_unions
 voting_system = jefferson_method
 vote_franschise = universal_weighted_voting
 public_meetings = free_meetings penal_system = capital_punishment
@@ -94,7 +94,7 @@ schools = army_tech_school
 	political_parties = parties_allowed
 	conscription_policy = three_year_draft
 	publishing_rights = firewall_publishing
-	union_rights = no_trade_unions
+	union_rights = state_controlled_unions
 	voting_system = jefferson_method
 	vote_franschise = universal_weighted_voting
 	public_meetings = free_meetings penal_system = capital_punishment

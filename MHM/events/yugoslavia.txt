@@ -1513,7 +1513,7 @@ country_event = {
 		badboy = -5
 		release_vassal = MAC
 		MAC = { 
-			government = democracy 
+			government = democracy1 
 			country_event = 800054
 			ruling_party_ideology = nationalist
 		}

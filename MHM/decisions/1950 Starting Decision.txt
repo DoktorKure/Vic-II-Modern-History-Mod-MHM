@@ -23,9 +23,13 @@ political_decisions = {
 
 			#Faroe Islands SAR
 			FAR = { set_country_flag = former_devolved_nation }
+			
+			#Finlandization
+			FIN = { set_country_flag = finlandization }
 
 			#Tripartite Agreement, 1947
 			HND = {
+				add_accepted_culture = nepali #TODO events for gurkha citizenship
 				set_country_flag = tripartite_agreement
 				set_country_flag = has_mercenary_training
 			}

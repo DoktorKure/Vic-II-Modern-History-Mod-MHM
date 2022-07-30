@@ -5,8 +5,10 @@ AUS_proletarian_dictatorship1;East Austria;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 AUS_proletarian_dictatorship1_ADJ;East Austrian;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 AUS_proletarian_dictatorship1;East Austria;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 AUS_proletarian_dictatorship1_ADJ;East Austrian;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-BKF;The Balkan Federation;Fédération balkanique;;;Federación de Repúblicas Balcánicas;;;;;;;;;x;;;;;;;;;;;;;;;;
-BKF_ADJ;Balkan;;Balkanisch;Balkanski;Balcánico;;;;;;;;;x;;;;;;;;;;;;;;;;
+BKF;The Balkan Federation;F?d?ration balkanique;;;Federaci?n de Rep?blicas Balc?nicas;;;;;;;;;x;;;;;;;;;;;;;;;;
+BKF_ADJ;Balkan;;Balkanisch;Balkanski;Balc?nico;;;;;;;;;x;;;;;;;;;;;;;;;;
+BKF;The Balkan Federation;F?d?ration balkanique;;;Federaci?n de Rep?blicas Balc?nicas;;;;;;;;;x;;;;;;;;;;;;;;;;
+BKF_ADJ;Balkan;;Balkanisch;Balkanski;Balc?nico;;;;;;;;;x;;;;;;;;;;;;;;;;
 BKF_proletarian_dictatorship;The Balkan Union;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 BKF_hms_government;The Balkan Empire;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 BKF_populist_dictatorship;The Balkan Republic;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
@@ -24,8 +26,8 @@ CMR_mandate_government_ADJ;Camerounais;Camerounais;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;
 CMR_mandate_government;Cameroun;Cameroun;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
 CMR;Cameroon;Cameroun;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
 CMR_ADJ;Cameroonian;Camerounais;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
-CZH;Czechoslovakia;Tchécoslovaquie;Tschechoslowakei;;Checoslovaquia;;;;;;;;;x;;;;;;;;;;;;;;;;
-CZH_ADJ;Czechoslovak;Tchécoslovaque;Tschechoslowakisch;;checoslovaca;;;;;;;;;x;;;;;;;;;;;;;;;;
+CZH;Czechoslovakia;Tch?coslovaquie;Tschechoslowakei;;Checoslovaquia;;;;;;;;;x;;;;;;;;;;;;;;;;
+CZH_ADJ;Czechoslovak;Tch?coslovaque;Tschechoslowakisch;;checoslovaca;;;;;;;;;x;;;;;;;;;;;;;;;;
 DRZ_colonial_government;Jabal Druze State;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 DRZ;Druze;x
 DRZ_ADJ;Jabalian;x
@@ -38,9 +40,9 @@ ISI_ADJ;Islamic;;;;;;;x
 ISI_proletarian_dictatorship_ADJ;Anti-Imperialist;;;;;;;x
 ISP;Israeli-Palestinian Commonwealth;;;;;;;;x;;;;;;;;;;;;;;;;;
 ISP_ADJ;Israeli-Palestinian;;;;;;;;x;;;;;;;;;;;;;;;;;
-ISR_mandate_government;Mandatory Israel;Israël;Israel;;Israel;;;;;;;;x;;;;;;;;;;;;;;;;;
-ISR;Israel;Israël;Israel;;Israel;;;;;;;;x;;;;;;;;;;;;;;;;;
-ISR_ADJ;Israeli;israélien;Israelitisch;;Israelí;;;;;;;;x;;;;;;;;;;;;;;;;;
+ISR_mandate_government;Mandatory Israel;Isra?l;Israel;;Israel;;;;;;;;x;;;;;;;;;;;;;;;;;
+ISR;Israel;Isra?l;Israel;;Israel;;;;;;;;x;;;;;;;;;;;;;;;;;
+ISR_ADJ;Israeli;isra?lien;Israelitisch;;Israel?;;;;;;;;x;;;;;;;;;;;;;;;;;
 ICB_ADJ;Berliner;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 ICB;International City of Berlin;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 QGD;Qingdao;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
@@ -50,33 +52,6 @@ ROA;West Austria;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 ROA_ADJ;West Austrian;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 SCS_ADJ;Asian;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 SCS;South China Sea Islands International Zone;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
-SUM_ADJ;Sumatran;Sumatran;Sumatran;;;;;;;;;;;x;
-SUM;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
-SUM_presidential_dictatorship;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
-SUM_colonial_government;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
-SUM_mandate_government;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
-SUM_sar_government;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
-SUM_socialist_democracy;Sumatran People's Republic;Sumatran People's Republic;Sumatran People's Republic;;;;;;;;;;;x;
-SUM_proletarian_dictatorship;Sumatran People's Republic;Sumatran People's Republic;Sumatran People's Republic;;;;;;;;;;;x;
-SUM_proletarian_dictatorship1;Sumatran People's Republic;Sumatran People's Republic;Sumatran People's Republic;;;;;;;;;;;x;
-SUM_nationalist_dictatorship;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
-SUM_theocracy;Sumatran Islamic Republic;Sumatran Islamic Republic;Sumatran Islamic Republic;;;;;;;;;;;x;
-SUM_populist_dictatorship;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
-SUM_absolute_monarchy;Sumatran Kingdom;Sumatran Kingdom;Sumatran Kingdom;;;;;;;;;;;x;
-SUM_hms_government;Sumatran Kingdom;Sumatran Kingdom;Sumatran Kingdom;;;;;;;;;;;x;
-SUM_hms_government1;Sumatran Kingdom;Sumatran Kingdom;Sumatran Kingdom;;;;;;;;;;;x;
-SUM_democracy;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
-SUM_democracy1;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
-SUM_conservative_92;Conservatives;Conservatives;Conservatives;;;;;;;;;;;x;
-SUM_liberal_73;Liberals;Liberals;Liberals;;;;;;;;;;;x;
-SUM_big_tent_84;Centrists;Centrists;Centrists;;;;;;;;;;;x;
-SUM_socialist_80;Socialists;Socialists;Socialists;;;;;;;;;;;x;
-SUM_progressive_83;Progressives;Progressives;Progressives;;;;;;;;;;;x;
-SUM_nationalist_80;Nationalists;Nationalists;Nationalists;;;;;;;;;;;x;
-SUM_traditionalist_83;Traditionalists;Traditionalists;Traditionalists;;;;;;;;;;;x;
-SUM_populist_80;Populists;Populists;Populists;;;;;;;;;;;x;
-SUM_communist_86;Communists;Communists;Communists;;;;;;;;;;;x;
-SUM_communist_social_101;Market Communists;Market Communists;Market Communists;;;;;;;;;;;x;
 FBU_ADJ;Anglo-French;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 FBU;The Franco-British Union;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 FBU_hms_government;The United Kingdom of Britain and France;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
@@ -93,10 +68,10 @@ LSK_ADJ;Alaskan;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 LSK_colonial_government;Alyaska;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 MSU;Mosul;Mossoul;Mossul;Mosul;Mosul;;;;;;;;;x;;;;;;;;;;;;;;;;
 MSU_ADJ;Moswali;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-TGZ;Tangier;Tanger;Tanger;;Tánger;;;;;;;;;x;;;;;;;;;;;;;;;;
-TGZ_sar_government;Tangier International Zone;Zone internationale de Tanger;Internationale Zone von Tanger;;Zona Internacional de Tánger;;;;;;;;;x;;;;;;;;;;;;;;;;
+TGZ;Tangier;Tanger;Tanger;;T?nger;;;;;;;;;x;;;;;;;;;;;;;;;;
+TGZ_sar_government;Tangier International Zone;Zone internationale de Tanger;Internationale Zone von Tanger;;Zona Internacional de T?nger;;;;;;;;;x;;;;;;;;;;;;;;;;
 TGZ_ADJ;Tangerian;Tangerois;;;Tangerino;;;;;;;;;x;;;;;;;;;;;;;;;;
-ORM;Oromia;Oromia;Oromia;Oromia;Oromía;;;;;;;;;x;;;;;;;;;;;;;;;;
+ORM;Oromia;Oromia;Oromia;Oromia;Orom?a;;;;;;;;;x;;;;;;;;;;;;;;;;
 ORM_ADJ;Oromo;Oromo;Oromo;Oromo;Oromo;;;;;;;;;x;;;;;;;;;;;;;;;;
 YOR;Yorubaland;Yorubaland;Yorubaland;Yorubaland;Yorubaland;;;;;;;;;x;;;;;;;;;;;;;;;;
 YOR_ADJ;Yoruba;Yoruba;Yoruba;Yoruba;Yoruba;;;;;;;;;x;;;;;;;;;;;;;;;;
@@ -225,8 +200,8 @@ HOK_absolute_monarchy;Hokkaido;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 HOK_absolute_monarchy_ADJ;Ainu;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 SUL;Sulu;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 SUL_ADJ;Sulu;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-PRU;Königsberg;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-PRU_ADJ;Königsberger;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+PRU;K?nigsberg;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+PRU_ADJ;K?nigsberger;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 PRU_hms_government;Prussia;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 PRU_hms_government_ADJ;Prussian;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 PRU_hms_government1;Prussia;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
@@ -243,13 +218,13 @@ DHO;Dhofar;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 DHO_ADJ;Dhofari;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 FLK;Falkland Islands;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 FLK_ADJ;Falkland Islander;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-PCC;The Polish–Czechoslovak Union;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-PCC_ADJ;Polish–Czechoslovak;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+PCC;The Polish?Czechoslovak Union;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+PCC_ADJ;Polish?Czechoslovak;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 LPL;United Provinces of South America;;;;;;;;;;;;x
 LPL_ADJ;Platine;;;;;;;;;;;;x
 RSA;South Africa;;;;;;;;;;;;x
 RSA_ADJ;South African;;;;;;;;;;;;x
-FAG;Algérie;;;;;;;;;;;;x
+FAG;Alg?rie;;;;;;;;;;;;x
 FAG_ADJ;Algerian;;;;;;;;;;;;x
 KAV;Kavangoland;;;;;;;;;;;;x
 KAV_ADJ;Kavango;;;;;;;;;;;;x
@@ -357,3 +332,32 @@ JAV_traditionalist_83;Traditionalists;Traditionalists;Traditionalists;;;;;;;;;;;
 JAV_populist_80;Populists;Populists;Populists;;;;;;;;;;;x;
 JAV_communist_86;Communists;Communists;Communists;;;;;;;;;;;x;
 JAV_communist_social_101;Market Communists;Market Communists;Market Communists;;;;;;;;;;;x;
+SUM_ADJ;Sumatran;Sumatran;Sumatran;;;;;;;;;;;x;
+SUM;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
+SUM_presidential_dictatorship;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
+SUM_colonial_government;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
+SUM_mandate_government;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
+SUM_sar_government;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
+SUM_socialist_democracy;Sumatran People's Republic;Sumatran People's Republic;Sumatran People's Republic;;;;;;;;;;;x;
+SUM_proletarian_dictatorship;Sumatran People's Republic;Sumatran People's Republic;Sumatran People's Republic;;;;;;;;;;;x;
+SUM_proletarian_dictatorship1;Sumatran People's Republic;Sumatran People's Republic;Sumatran People's Republic;;;;;;;;;;;x;
+SUM_nationalist_dictatorship;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
+SUM_theocracy;Sumatran Islamic Republic;Sumatran Islamic Republic;Sumatran Islamic Republic;;;;;;;;;;;x;
+SUM_populist_dictatorship;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
+SUM_absolute_monarchy;Sumatran Kingdom;Sumatran Kingdom;Sumatran Kingdom;;;;;;;;;;;x;
+SUM_hms_government;Sumatran Kingdom;Sumatran Kingdom;Sumatran Kingdom;;;;;;;;;;;x;
+SUM_hms_government1;Sumatran Kingdom;Sumatran Kingdom;Sumatran Kingdom;;;;;;;;;;;x;
+SUM_democracy;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
+SUM_democracy1;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
+SUM_conservative_92;Conservatives;Conservatives;Conservatives;;;;;;;;;;;x;
+SUM_liberal_73;Liberals;Liberals;Liberals;;;;;;;;;;;x;
+SUM_big_tent_84;Centrists;Centrists;Centrists;;;;;;;;;;;x;
+SUM_socialist_80;Socialists;Socialists;Socialists;;;;;;;;;;;x;
+SUM_progressive_83;Progressives;Progressives;Progressives;;;;;;;;;;;x;
+SUM_nationalist_80;Nationalists;Nationalists;Nationalists;;;;;;;;;;;x;
+SUM_traditionalist_83;Traditionalists;Traditionalists;Traditionalists;;;;;;;;;;;x;
+SUM_populist_80;Populists;Populists;Populists;;;;;;;;;;;x;
+SUM_communist_86;Communists;Communists;Communists;;;;;;;;;;;x;
+SUM_communist_social_101;Market Communists;Market Communists;Market Communists;;;;;;;;;;;x;
+SMO;American Samoa;;;;;;;;;x
+SMO_ADJ;American Samoan;;;;;;;;;x

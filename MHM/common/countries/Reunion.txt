@@ -12,7 +12,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Les R?publicains"
+		name = "Les Républicains"
 		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative
@@ -45,7 +45,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Mouvement D?mocrate"
+		name = "Mouvement Démocrate"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -78,7 +78,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Parti Communiste R?unionnais"
+		name = "Parti Communiste Réunionnais"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = communist

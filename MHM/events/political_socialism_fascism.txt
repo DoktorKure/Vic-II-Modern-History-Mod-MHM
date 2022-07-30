@@ -28,6 +28,8 @@ province_event = {
 			OR = {
 				government = democracy
 				government = hms_government
+				government = democracy1
+				government = hms_government1
 				government = absolute_monarchy
 			}
 			OR = {
@@ -208,6 +210,8 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		OR = {
@@ -337,11 +341,7 @@ country_event = {
 			}
 			rich_strata = {
 				ideology = {
-					value = socialist
-					factor = -0.2
-				}
-				ideology = {
-					value = populist
+					value = traditionalist
 					factor = 0.2
 				}
 				consciousness = -4
@@ -371,6 +371,8 @@ province_event = {
 			OR = {
 				government = democracy
 				government = hms_government
+				government = democracy1
+				government = hms_government1
 				government = absolute_monarchy
 			}
 			OR = {
@@ -515,8 +517,8 @@ province_event = {
 				militancy = -2
 				consciousness = -4
 				ideology = {
-					value = socialist
-					factor = -0.2
+					value = conservative
+					factor = 0.2
 				}
 			}
 		}
@@ -561,6 +563,8 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		OR = {
@@ -707,6 +711,8 @@ province_event = {
 			OR = {
 				government = democracy
 				government = hms_government
+				government = democracy1
+				government = hms_government1
 				government = absolute_monarchy
 			}
 			OR = {
@@ -925,6 +931,8 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		OR = {
@@ -1066,9 +1074,11 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
-		civil_service = elitist_service
+		public_meetings = free_meetings
 		NOT = {
 			ruling_party_ideology = socialist
 			any_owned_province = { has_province_modifier = may_day }
@@ -1206,6 +1216,8 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		publishing_rights = unregulated_publishing
@@ -1339,6 +1351,8 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		any_owned_province = {
@@ -1467,10 +1481,6 @@ country_event = {
 			rich_strata = {
 				militancy = -4
 				ideology = {
-					value = socialist
-					factor = -0.2
-				}
-				ideology = {
 					value = populist
 					factor = 0.2
 				}
@@ -1532,6 +1542,8 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		any_state = {
@@ -1669,10 +1681,6 @@ country_event = {
 			}
 			rich_strata = {
 				ideology = {
-					value = socialist
-					factor = -0.2
-				}
-				ideology = {
 					value = populist
 					factor = 0.2
 				}
@@ -1706,10 +1714,12 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		OR = {
-			nationalvalue = nv_order
+			nationalvalue = nv_islamic
 			any_core = {
 				empty = no
 				NOT = { owned_by = THIS }
@@ -1856,7 +1866,7 @@ country_event = {
 					}
 				}
 				ideology = {
-					value = populist
+					value = traditionalist
 					factor = 0.10
 				}
 				ideology = {
@@ -1887,11 +1897,13 @@ country_event = {
 		is_ideology_enabled = nationalist
 		OR = { pop_majority_religion = sunni pop_majority_religion = shiite }
 		civilized = yes
-		civil_service = elitist_service
+		public_meetings = free_meetings
 		NOT = { has_country_flag = paramilitaries_outlawed }
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		OR = {
@@ -2074,6 +2086,8 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		OR = {
@@ -2235,12 +2249,17 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		any_owned_province = {
 			has_province_modifier = black_shirts
 			NOT = { has_province_modifier = the_massacre }
-			nationalist = 15
+			OR = {
+				populist = 15
+				nationalist = 15
+			}
 			liberal = 5
 			average_militancy = 4
 		}
@@ -2402,6 +2421,8 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		OR = {
@@ -2590,6 +2611,8 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		any_owned_province = {
@@ -2760,6 +2783,8 @@ country_event = {
 		OR = {
 			government = democracy
 			government = hms_government
+			government = democracy1
+			government = hms_government1
 			government = absolute_monarchy
 		}
 		any_owned_province = {
@@ -3595,7 +3620,7 @@ province_event = {
 				government = theocracy
 			}
 			civilized = yes
-			civil_service = elitist_service
+			public_meetings = free_meetings
 		}
 	}
 	
@@ -3743,14 +3768,6 @@ province_event = {
 		}
 		rich_strata = {
 			ideology = {
-				value = socialist
-				factor = -0.1
-			}
-			ideology = {
-				value = communist
-				factor = -0.2
-			}
-			ideology = {
 				value = populist
 				factor = 0.2
 			}
@@ -3786,4 +3803,3 @@ province_event = {
 		}
 	}
 }
-	

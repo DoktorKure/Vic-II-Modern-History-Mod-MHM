@@ -136,7 +136,7 @@ party = {
 		end_date = 1968.1.1
 }
 party = {
-		name = "L'Oeuvre Fran?aise"
+		name = "L'Oeuvre Française"
 		citizenship_policy = residency
 		economic_policy = state_capitalism
 		ideology = nationalist
@@ -477,7 +477,7 @@ party = {
 		end_date = 2017.1.1
 }
 party = {
-		name = "G?n?ration.s"
+		name = "Génération.s"
 		citizenship_policy = full_citizenship
 		economic_policy = interventionism
 		ideology = progressive
@@ -588,60 +588,60 @@ party = {
 }
 unit_names = {
 	carrier = {
-		"Brennus" "Charles Martel" "Carnot" "Jaureguiberry" "Mass?na" "Bouvet" "Charlemagne" "St Louis" Gaulois Iena Suffren Republique Patrie Liberte Justice Verite Democratie Danton Voltaire Diderot Condorcet Mirebeau Vergniaud "Henri IV"
+		"Brennus" "Charles Martel" "Carnot" "Jaureguiberry" "Masséna" "Bouvet" "Charlemagne" "St Louis" Gaulois Iena Suffren Republique Patrie Liberte Justice Verite Democratie Danton Voltaire Diderot Condorcet Mirebeau Vergniaud "Henri IV"
 	}
 	transportship = {
-		"Oc?an" "Marengo" "Suffren" "Friedland" "Richelieu" "Colbert" "Trident"
+		"Océan" "Marengo" "Suffren" "Friedland" "Richelieu" "Colbert" "Trident"
 	}
 	modern_frigate = {
 	    "Congreve" "Foudroyante" "Lave" "Tonnante" "Gloire" "Invincible" "Normandie" "Couronne"
         "Magenta" "Solferino" "Flandre" "Gauloise" "Magnanime" "Provence" "Revanche" "Savoie"
-        "Surveillante" "Valeureuse" "H?ro?ne"
+        "Surveillante" "Valeureuse" "Héroïne"
 	}
 	cruiser = {
-	    "Alexandre" "Breslaw" "Prince J?r?me" "Ville de Paris" "Ville de Nantes" "Duguay-Trouin"
+	    "Alexandre" "Breslaw" "Prince Jérôme" "Ville de Paris" "Ville de Nantes" "Duguay-Trouin"
         "Tage" "Donawerth" "Saint Louis" "Fontenoy" "Turenne" "Ville de Bordeaux" "Castiglione"
-        "Mass?na" "Bayard" "Ville de Lyon" "Louis XIV"
+        "Masséna" "Bayard" "Ville de Lyon" "Louis XIV"
 	}
 	modern_cruiser = {
 	    "Clovis" "Maurice de Saxe" "Vercingetorix" "Richemont" "Dunois" "Ney" "Leger" "Vauban"
         "Conde" "Turenne" "Montebello" "Austerlitz" "Souverain" "Navarin" "Ulm" "Wagram"
-        "Alg?siras" "Arcole" "Friedland" "Imp?rial" "Eylau" "Tilsitt" "Jena" "Auerstadt"
-        "Marengo" "Toulon" "Bellone" "Glorieuse" "Gracieuse" "Audacieuse" "Imp?tueuse" "Ardente"
-        "Victoire" "Guerri?re" "T?m?raire" "Triomphant" "Tigre" "Pers?v?rante" "Vigilant"
-        "Tenace" "?lan" "Duguay Trouin" "Lamotte-Picquet" "Primaguet" "Duquesne" "Tourville"
-        "Colbert" "Foch" "Alg?rie" "Jeanne D'Arc" "Maroc" "Lafayette" "Davout" "Suchet" "Forbin"
-        "Surcouf" "Cosmao" "Lalande" "Galil?e" "Lavoisier" "Linois" "La Galissionere"
+        "Algésiras" "Arcole" "Friedland" "Impérial" "Eylau" "Tilsitt" "Jena" "Auerstadt"
+        "Marengo" "Toulon" "Bellone" "Glorieuse" "Gracieuse" "Audacieuse" "Impétueuse" "Ardente"
+        "Victoire" "Guerrière" "Téméraire" "Triomphant" "Tigre" "Persévérante" "Vigilant"
+        "Tenace" "Élan" "Duguay Trouin" "Lamotte-Picquet" "Primaguet" "Duquesne" "Tourville"
+        "Colbert" "Foch" "Algérie" "Jeanne D'Arc" "Maroc" "Lafayette" "Davout" "Suchet" "Forbin"
+        "Surcouf" "Cosmao" "Lalande" "Galilée" "Lavoisier" "Linois" "La Galissionere"
         "Jean de Vienne" "Gloire" "Marseillaise" "Georges Leygues" "De Grasse" "La Fantasque"
 	}
 	frigate = {
 		"Condor" "Epervier" "Faucon" "Vautour" "Wattignies" "Levrier" "Casablanca" "D'Iberville"
-        "Cassini" "Lahire" "Circ?" "Hermione" "Pallas" "S?miramis" "Armorique" "Junon"
-        "Magicienne" "Th?mis" "Flore"
+        "Cassini" "Lahire" "Circé" "Hermione" "Pallas" "Sémiramis" "Armorique" "Junon"
+        "Magicienne" "Thémis" "Flore"
 	}
 	modern_destroyer = {
 		"Iphigenie" "Naiade" "Arethuse" "Dubourdieu" "Milan" "Belliqueuse" "Sfax" "Tage"
-        "Amiral C?cille" "Davout" "Suchet" "Co?tlogon" "Forbin" "Surcouf" "Cosmao" "Lalande"
-        "Troude" "Galil?e" "Lavoisier" "Linois" "Tunisi?" "Isly" "Bugeaud" "Chasseloup-Laubat"
+        "Amiral Cécille" "Davout" "Suchet" "Coëtlogon" "Forbin" "Surcouf" "Cosmao" "Lalande"
+        "Troude" "Galilée" "Lavoisier" "Linois" "Tunisié" "Isly" "Bugeaud" "Chasseloup-Laubat"
         "Friant" "Descartes" "Pascal" "Cassard" "D'Assas" "Du Chayla" "Catinat" "Protet"
-        "D'Entrecasteaux" "Guichen" "Ch?teaurenault" "D'Estr?es" "Infernet" "Jurien de la Gravi?re"
+        "D'Entrecasteaux" "Guichen" "Châteaurenault" "D'Estrées" "Infernet" "Jurien de la Gravière"
         "Pluton" "Emile Bertin" "Dupuy de Lome" "Admiral Charner" "Bruix" "Chanzy" "Latouche-Treville"
         "Pothau" "Dupetit-Thouars" "Gueydon" "Montcalm" "Desaix" "Dupleix" "Kleber"
         "Amiral Aube" "Conde" "Sully" "Leon Gambetta" "Victor Hugo" "Jules Michelet"
         "Ernest Renan" "Edgar Quinet" "Waldeck-Rousseau" "Thionville" "Metz" "Mulhouse" "Colmar"
-        "D'Assas" "Du Chayla" "Catinat" "Protet" "D'Entrecasteaux" "Guichen" "Ch?teaurenault"
+        "D'Assas" "Du Chayla" "Catinat" "Protet" "D'Entrecasteaux" "Guichen" "Châteaurenault"
 	}
 	destroyer = {
-		"Alexandre" "Breslaw" "Prince J?r?me" "Ville de Paris" "Ville de Nantes" "Duguay-Trouin"
+		"Alexandre" "Breslaw" "Prince Jérôme" "Ville de Paris" "Ville de Nantes" "Duguay-Trouin"
         "Tage" "Donawerth" "Saint Louis" "Fontenoy" "Turenne" "Ville de Bordeaux" "Castiglione"
-        "Mass?na" "Bayard" "Ville de Lyon" "Louis"
+        "Masséna" "Bayard" "Ville de Lyon" "Louis"
 	}
 	submarine = {
-		"Asmod?e" "Gomer" "Darien" "Labrador" "Ulloa" "Cacique" "Canada" "Christophe Colomb"
-        "Eldorado" "Magellan" "Montezuma" "Or?noque" "Panama" "Albatros" "Descartes" "Vauban"
-        "Caffarelli" "Mogador" "Pomone" "Isly" "Bellone" "Foudre" "Imp?ratrice Eug?nie"
-        "Souveraine" "Audacieuse" "Imp?tueuse" "Ardente" "Victoire" "Guerri?re" "Renomm?e"
-        "Dana?" "Pandore" "Z?nobie" "Clorinde" "Astr?e"
+		"Asmodée" "Gomer" "Darien" "Labrador" "Ulloa" "Cacique" "Canada" "Christophe Colomb"
+        "Eldorado" "Magellan" "Montezuma" "Orénoque" "Panama" "Albatros" "Descartes" "Vauban"
+        "Caffarelli" "Mogador" "Pomone" "Isly" "Bellone" "Foudre" "Impératrice Eugénie"
+        "Souveraine" "Audacieuse" "Impétueuse" "Ardente" "Victoire" "Guerrière" "Renommée"
+        "Danaé" "Pandore" "Zénobie" "Clorinde" "Astrée"
 	}
 
 }

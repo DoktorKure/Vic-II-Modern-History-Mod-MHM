@@ -1,5 +1,6 @@
 capital = 1901
-primary_culture = black_french
+primary_culture = mossi
+culture = black_french
 culture = mossi
 religion = secularism
 government = democracy
@@ -75,7 +76,7 @@ schools = army_tech_school
 	immigration_policy = quota_immigration
 	civil_service = politicised_service
 	political_parties = parties_only_nominated
-		conscription_policy = two_year_draft
+		lgbt_rights = lgbt_equal_rights
 	publishing_rights = censored_publishing
 	union_rights = no_trade_unions
 	voting_system = proportional_representation

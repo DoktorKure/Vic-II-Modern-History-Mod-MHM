@@ -536,6 +536,7 @@ owner = { add_accepted_culture = arab_sahrawi }
 				primary_culture = algerian
 				primary_culture = sudanese
 				primary_culture = mauritanian
+				primary_culture = arab_sahrawi
 			}
 
 		}
@@ -646,6 +647,11 @@ owner = { remove_accepted_culture = sudanese }
 random_owned = { 
 limit = { owner = { accepted_culture = mauritanian } } 
 owner = { remove_accepted_culture = mauritanian }
+}
+
+random_owned = { 
+limit = { owner = { accepted_culture = arab_sahrawi } } 
+owner = { remove_accepted_culture = arab_sahrawi }
 }
 
 random_owned = { 

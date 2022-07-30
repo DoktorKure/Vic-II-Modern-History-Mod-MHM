@@ -1485,6 +1485,12 @@ tax_efficiency = -0.05
 icon = 10
 }
 
+old_infrastructure = {
+prestige = -0.01
+factory_input = 0.10
+icon = 14
+}
+
 ### National Priority ###
 
 nprhigh = { #Development
@@ -3005,6 +3011,10 @@ icon = 13
 ### Relations ###
 
 relations_timer = {
+icon = 13
+}
+
+special_relations_timer = {
 icon = 13
 }
 
