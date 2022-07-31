@@ -5,10 +5,8 @@ AUS_proletarian_dictatorship1;East Austria;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 AUS_proletarian_dictatorship1_ADJ;East Austrian;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 AUS_proletarian_dictatorship1;East Austria;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 AUS_proletarian_dictatorship1_ADJ;East Austrian;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-BKF;The Balkan Federation;F?d?ration balkanique;;;Federaci?n de Rep?blicas Balc?nicas;;;;;;;;;x;;;;;;;;;;;;;;;;
-BKF_ADJ;Balkan;;Balkanisch;Balkanski;Balc?nico;;;;;;;;;x;;;;;;;;;;;;;;;;
-BKF;The Balkan Federation;F?d?ration balkanique;;;Federaci?n de Rep?blicas Balc?nicas;;;;;;;;;x;;;;;;;;;;;;;;;;
-BKF_ADJ;Balkan;;Balkanisch;Balkanski;Balc?nico;;;;;;;;;x;;;;;;;;;;;;;;;;
+BKF;The Balkan Federation;Fédération des Balkans;Balkan-Föderation;;Federación de los Balcanes;;;;;;;;;x;;;;;;;;;;;;;;;;
+BKF_ADJ;Balkan;;Balkanisch;Balkanski;Balcanico;;;;;;;;;x;;;;;;;;;;;;;;;;
 BKF_proletarian_dictatorship;The Balkan Union;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 BKF_hms_government;The Balkan Empire;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 BKF_populist_dictatorship;The Balkan Republic;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
@@ -26,8 +24,8 @@ CMR_mandate_government_ADJ;Camerounais;Camerounais;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;
 CMR_mandate_government;Cameroun;Cameroun;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
 CMR;Cameroon;Cameroun;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
 CMR_ADJ;Cameroonian;Camerounais;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
-CZH;Czechoslovakia;Tch?coslovaquie;Tschechoslowakei;;Checoslovaquia;;;;;;;;;x;;;;;;;;;;;;;;;;
-CZH_ADJ;Czechoslovak;Tch?coslovaque;Tschechoslowakisch;;checoslovaca;;;;;;;;;x;;;;;;;;;;;;;;;;
+CZH;Czechoslovakia;Tchecoslovaquie;Tschechoslowakei;;Checoslovaquia;;;;;;;;;x;;;;;;;;;;;;;;;;
+CZH_ADJ;Czechoslovak;Tchecoslovaque;Tschechoslowakisch;;checoslovaca;;;;;;;;;x;;;;;;;;;;;;;;;;
 DRZ_colonial_government;Jabal Druze State;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 DRZ;Druze;x
 DRZ_ADJ;Jabalian;x
@@ -40,9 +38,9 @@ ISI_ADJ;Islamic;;;;;;;x
 ISI_proletarian_dictatorship_ADJ;Anti-Imperialist;;;;;;;x
 ISP;Israeli-Palestinian Commonwealth;;;;;;;;x;;;;;;;;;;;;;;;;;
 ISP_ADJ;Israeli-Palestinian;;;;;;;;x;;;;;;;;;;;;;;;;;
-ISR_mandate_government;Mandatory Israel;Isra?l;Israel;;Israel;;;;;;;;x;;;;;;;;;;;;;;;;;
-ISR;Israel;Isra?l;Israel;;Israel;;;;;;;;x;;;;;;;;;;;;;;;;;
-ISR_ADJ;Israeli;isra?lien;Israelitisch;;Israel?;;;;;;;;x;;;;;;;;;;;;;;;;;
+ISR_mandate_government;Mandatory Israel;Israel;Israel;;Israel;;;;;;;;x;;;;;;;;;;;;;;;;;
+ISR;Israel;Israel;Israel;;Israel;;;;;;;;x;;;;;;;;;;;;;;;;;
+ISR_ADJ;Israeli;Israelien;Israelitisch;;Israeli;;;;;;;;x;;;;;;;;;;;;;;;;;
 ICB_ADJ;Berliner;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 ICB;International City of Berlin;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 QGD;Qingdao;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
@@ -68,10 +66,10 @@ LSK_ADJ;Alaskan;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 LSK_colonial_government;Alyaska;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 MSU;Mosul;Mossoul;Mossul;Mosul;Mosul;;;;;;;;;x;;;;;;;;;;;;;;;;
 MSU_ADJ;Moswali;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-TGZ;Tangier;Tanger;Tanger;;T?nger;;;;;;;;;x;;;;;;;;;;;;;;;;
-TGZ_sar_government;Tangier International Zone;Zone internationale de Tanger;Internationale Zone von Tanger;;Zona Internacional de T?nger;;;;;;;;;x;;;;;;;;;;;;;;;;
+TGZ;Tangier;Tanger;Tanger;;Tanger;;;;;;;;;x;;;;;;;;;;;;;;;;
+TGZ_sar_government;Tangier International Zone;Zone internationale de Tanger;Internationale Zone von Tanger;;Zona Internacional de Tanger;;;;;;;;;x;;;;;;;;;;;;;;;;
 TGZ_ADJ;Tangerian;Tangerois;;;Tangerino;;;;;;;;;x;;;;;;;;;;;;;;;;
-ORM;Oromia;Oromia;Oromia;Oromia;Orom?a;;;;;;;;;x;;;;;;;;;;;;;;;;
+ORM;Oromia;Oromia;Oromia;Oromia;Oromia;;;;;;;;;x;;;;;;;;;;;;;;;;
 ORM_ADJ;Oromo;Oromo;Oromo;Oromo;Oromo;;;;;;;;;x;;;;;;;;;;;;;;;;
 YOR;Yorubaland;Yorubaland;Yorubaland;Yorubaland;Yorubaland;;;;;;;;;x;;;;;;;;;;;;;;;;
 YOR_ADJ;Yoruba;Yoruba;Yoruba;Yoruba;Yoruba;;;;;;;;;x;;;;;;;;;;;;;;;;
@@ -200,8 +198,8 @@ HOK_absolute_monarchy;Hokkaido;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 HOK_absolute_monarchy_ADJ;Ainu;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 SUL;Sulu;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 SUL_ADJ;Sulu;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-PRU;K?nigsberg;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-PRU_ADJ;K?nigsberger;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+PRU;Königsberg;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+PRU_ADJ;Königsberger;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 PRU_hms_government;Prussia;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 PRU_hms_government_ADJ;Prussian;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 PRU_hms_government1;Prussia;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
@@ -218,13 +216,13 @@ DHO;Dhofar;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 DHO_ADJ;Dhofari;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 FLK;Falkland Islands;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 FLK_ADJ;Falkland Islander;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-PCC;The Polish?Czechoslovak Union;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-PCC_ADJ;Polish?Czechoslovak;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+PCC;The Polish-Czechoslovak Union;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+PCC_ADJ;Polish-Czechoslovak;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 LPL;United Provinces of South America;;;;;;;;;;;;x
 LPL_ADJ;Platine;;;;;;;;;;;;x
 RSA;South Africa;;;;;;;;;;;;x
 RSA_ADJ;South African;;;;;;;;;;;;x
-FAG;Alg?rie;;;;;;;;;;;;x
+FAG;Algérie;;;;;;;;;;;;x
 FAG_ADJ;Algerian;;;;;;;;;;;;x
 KAV;Kavangoland;;;;;;;;;;;;x
 KAV_ADJ;Kavango;;;;;;;;;;;;x
