@@ -2,6 +2,7 @@ owner = IRQ
 controller = IRQ
 add_core = IRQ
 add_core = KUR
+add_core = KRQ
 trade_goods = wool
 life_rating = 35
 terrain = mountain_grassland
