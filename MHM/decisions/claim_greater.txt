@@ -2132,16 +2132,20 @@ political_decisions = {
 		allow = {
 			part_of_sphere = no
 			has_unclaimed_cores = no
-			NOT = {	
-				ruling_party_ideology = socialist
-				ruling_party_ideology = progressive
-				ruling_party_ideology = liberal 
-			}
 			is_vassal = no
 			prestige = 45
 			OR = {
-				ruling_party_ideology = populist
-				ruling_party_ideology = nationalist
+				AND = {
+					OR = { 
+						government = nationalist_dictatorship
+						government = populist_dictatorship
+					}
+					OR = {
+						ruling_party_ideology = populist
+						ruling_party_ideology = nationalist
+						ruling_party_ideology = traditionalist
+					}
+				}
 				jingoism = 24
 				has_country_flag = reject_oder_neisse
 			}
@@ -2150,30 +2154,20 @@ political_decisions = {
 		effect = {
 			badboy = 24
 			set_country_flag = claim_greater_germany
-			685 = { add_core = GER }
-			684 = { add_core = GER }
-			683 = { add_core = GER }
-			682 = { add_core = GER }
-			681 = { add_core = GER }
-			546 = { add_core = GER }
-			679 = { add_core = GER }
-			692 = { add_core = GER }
-			680 = { add_core = GER }
-			693 = { add_core = GER }
-			696 = { add_core = GER }
+			POL = { all_core = { add_core = GER } }
+			ALS = { all_core = { add_core = GER } }
+			LUX = { all_core = { add_core = GER } }
+			BOH = { all_core = { add_core = GER } }
 			695 = { add_core = GER }
-			698 = { add_core = GER }
 			697 = { add_core = GER }
-			690 = { add_core = GER }
-			691 = { add_core = GER }
-			694 = { add_core = GER }
-			699 = { add_core = GER }
-			700 = { add_core = GER }
-			701 = { add_core = GER }
-			371 = { add_core = GER }
-			412 = { add_core = GER }
-			409 = { add_core = GER }
-			410 = { add_core = GER }
+			698 = { add_core = GER }
+			702 = { add_core = GER }
+			767 = { add_core = GER }
+			936 = { add_core = GER }
+			937 = { add_core = GER }
+			951 = { add_core = GER }
+			952 = { add_core = GER }
+			953 = { add_core = GER }
 			3361 = { add_core = GER }
 		}
 
@@ -2197,11 +2191,12 @@ political_decisions = {
 			OR = {
 				ruling_party_ideology = progressive
 				ruling_party_ideology = liberal
+				ruling_party_ideology = socialist
 			}
 		}
 
 		effect = {
-			badboy = -12
+			badboy = -24
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_germany
@@ -2209,30 +2204,20 @@ political_decisions = {
 				limit = { 
 					NOT = { owned_by = THIS }
 					OR = {
-						province_id = 685
-						province_id = 684
-						province_id = 683
-						province_id = 682
-						province_id = 681
-						province_id = 546
-						province_id = 679
-						province_id = 692
-						province_id = 680
-						province_id = 693
-						province_id = 696
+						is_core = POL
+						is_core = ALS
+						is_core = LUX
+						is_core = BOH
 						province_id = 695
-						province_id = 698
 						province_id = 697
-						province_id = 690
-						province_id = 691
-						province_id = 694
-						province_id = 699
-						province_id = 700
-						province_id = 701
-						province_id = 371
-						province_id = 412
-						province_id = 409
-						province_id = 410
+						province_id = 698
+						province_id = 702
+						province_id = 767
+						province_id = 936
+						province_id = 937
+						province_id = 951
+						province_id = 952
+						province_id = 953
 						province_id = 3361
 					}
 				}
