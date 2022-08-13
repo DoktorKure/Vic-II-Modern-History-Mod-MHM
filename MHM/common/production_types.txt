@@ -263,109 +263,39 @@ electric_template = {
 }
 
 ### CANNED FOOD ###
-
-fish_canned_food_factory = {       
+cattle_canned_food_factory = {       
 	template = factory_template	
 	input_goods = { 
-		fish = 4
+		cattle = 2
+		wool = 1
+		fish = 1
 		iron = 1	
 	}
 	output_goods = canned_food 
 	value = 7
-
 	bonus = {
 		trigger = { 
 			country = { has_country_flag = spcmedium }
 		}
 		value = 0.10
 	}
-
+	bonus = {
+		trigger = {
+			trade_goods_in_state = cattle 
+		}
+		value = 0.125
+	}
+	bonus = {
+		trigger = {
+			trade_goods_in_state = wool 
+		}
+		value = 0.125
+	}
 	bonus = {
 		trigger = { 
 			trade_goods_in_state = fish
 		}
-		value = 0.25
-	}
-	bonus = {
-		trigger = { 
-				trade_goods_in_state = iron
-	}
 		value = 0.125
-	}	
-}
-
-cattle_canned_food_factory = {       
-	template = factory_template	
-	input_goods = { 
-		cattle = 4
-		iron = 1	
-	}
-	output_goods = canned_food 
-	value = 7
-	bonus = {
-		trigger = { 
-			country = { has_country_flag = spcmedium }
-		}
-		value = 0.10
-	}
-
-	bonus = {
-		trigger = { 
-			trade_goods_in_state = cattle 
-		}
-		value = 0.25
-	}
-	bonus = {
-		trigger = { 
-				trade_goods_in_state = iron
-	}
-		value = 0.125
-	}	
-}
-
-wool_canned_food_factory = {       
-	template = factory_template	
-	input_goods = { 
-		wool = 4
-		iron = 1	
-	}
-	output_goods = canned_food 
-	value = 7
-	bonus = {
-		trigger = { 
-			trade_goods_in_state = wool 
-		}
-		value = 0.25
-	}
-	bonus = {
-		trigger = { 
-				trade_goods_in_state = iron
-	}
-		value = 0.125
-	}	
-}
-
-fruit_canned_food_factory = {       
-	template = factory_template	
-	input_goods = { 
-		fruit = 4
-		iron = 1	
-	}
-	output_goods = canned_food 
-	value = 7
-
-	bonus = {
-		trigger = { 
-			country = { has_country_flag = spcmedium }
-		}
-		value = 0.10
-	}
-
-	bonus = {
-		trigger = { 
-			trade_goods_in_state = fruit 
-		}
-		value = 0.25
 	}
 	bonus = {
 		trigger = { 
@@ -378,7 +308,9 @@ fruit_canned_food_factory = {
 grain_canned_food_factory = {       
 	template = factory_template	
 	input_goods = { 
-		grain = 4
+		grain = 2
+		fruit = 1
+		oil_seeds = 1
 		iron = 1	
 	}
 	output_goods = canned_food 
@@ -396,34 +328,19 @@ grain_canned_food_factory = {
 		}
 		value = 0.25
 	}
-	bonus = {
-		trigger = { 
-				trade_goods_in_state = iron
-	}
-		value = 0.125
-	}	
-}
 
-oil_seeds_canned_food_factory = {       
-	template = factory_template	
-	input_goods = { 
-		oil_seeds = 4
-		iron = 1
-	}
-	output_goods = canned_food 
-	value = 7
 	bonus = {
 		trigger = { 
-			country = { has_country_flag = spcmedium }
+			trade_goods_in_state = fruit 
 		}
-		value = 0.10
+		value = 0.125
 	}
 
 	bonus = {
 		trigger = { 
 			trade_goods_in_state = oil_seeds 
 		}
-		value = 0.25
+		value = 0.125
 	}
 	bonus = {
 		trigger = { 
@@ -731,7 +648,10 @@ electric_gear_factory = {
 bio_fuel_factory = {       
 	template = fuel_template
 	input_goods = {    
-		grain = 4.5
+		grain = 1
+		oil_seeds = 1
+		fruit = 1
+		canned_food = 3
 	} 
 	output_goods = fuel 
 	value = 2
@@ -742,7 +662,30 @@ bio_fuel_factory = {
 		value = 0.10
 	}
 	bonus = {
-		trigger = { trade_goods_in_state = grain }
+		trigger = {
+			trade_goods_in_state = grain
+		}
+		value = 0.10
+	}
+	bonus = {
+		trigger = {
+			trade_goods_in_state = oil_seeds
+		}
+		value = 0.10
+	}
+	bonus = {
+		trigger = {
+			trade_goods_in_state = fruit
+		}
+		value = 0.10
+	}
+	bonus = {
+		trigger = {
+			OR = {
+				has_building = cattle_canned_food_factory
+				has_building = grain_canned_food_factory
+			}
+		}
 		value = 0.5
 	}
 }

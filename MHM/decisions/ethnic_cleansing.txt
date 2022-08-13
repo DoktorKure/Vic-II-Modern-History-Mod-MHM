@@ -61,9 +61,6 @@ political_decisions = {
 			add_country_modifier = { name = ethnic_cleansing duration = -1 }
 			#Stop exploit
 			add_country_modifier = { name = geno_cooldown duration = 365 }
-			#Ends the population replacement program
-			clr_country_flag = population_replacement_underway
-			remove_country_modifier = population_replacement
 		}
 		ai_will_do = { 
 			factor = 1
@@ -109,7 +106,6 @@ political_decisions = {
 			remove_country_modifier = ethnic_cleansing
 			clr_country_flag = discovered_genocide 
 			clr_country_flag = discovered_genocide1
-			any_owned = { remove_province_modifier = pop_replacement_province_modifier }
 		}
 		ai_will_do = { factor = 1 }
 	}

@@ -18,8 +18,8 @@ political_decisions = {
 
 	effect = {
 	
-#Indicate that this is the CWE mod
-set_global_flag = CWE_MOD_ACTIVE
+#Indicate that this is the MHM mod
+set_global_flag = MHM_MOD_ACTIVE
 
 #Guatemalan Revolution
 random_country = {
