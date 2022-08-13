@@ -20,6 +20,7 @@ tactical_drone = {
 	build_time = 120
 	# cost 0.25/unit-> 200
 	build_cost = {
+		canned_food = 10
 		fuel = 10
 		small_arms = 30
 		weaponry = 10
