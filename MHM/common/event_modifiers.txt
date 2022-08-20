@@ -4863,6 +4863,10 @@ nukes_used_recently = {
 icon = 24
 }
 
+tactical_nukes_used_recently = {
+icon = 24
+}
+
 nuclear_cap_high = {
 prestige = 0.01
 tax_efficiency = -0.12
@@ -6025,6 +6029,7 @@ international_pariah = {
 	diplomatic_points_modifier = -0.25
 	non_accepted_pop_militancy_modifier = 0.2
 	prestige = -0.02
+	supply_consumption = -0.75 # So AI nations will declare war on THIS
 	icon = 8
 }
 

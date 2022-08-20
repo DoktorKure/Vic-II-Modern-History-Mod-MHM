@@ -29,6 +29,10 @@ country_event = {
 		remove_country_modifier = stop_un_spam
 		remove_country_modifier = resolution_vetoed_unsc
 		
+		#Clear flags for war genocides
+		clr_country_flag = war_genocide
+		clr_country_flag = under_existential_threat
+		
 		#Clear AI is more trigger happy with nukes flag
 		clr_country_flag = more_willing_nuke_behaviour
 		
@@ -161,6 +165,10 @@ country_event = {
 		remove_country_modifier = called_allies_un
 		remove_country_modifier = stop_un_spam
 		remove_country_modifier = resolution_vetoed_unsc
+		
+		#Clear flags for war genocides
+		clr_country_flag = war_genocide
+		clr_country_flag = under_existential_threat
 		
 		#Clear AI is more trigger happy with nukes flag
 		clr_country_flag = more_willing_nuke_behaviour
@@ -384,6 +392,10 @@ country_event = {
 		remove_country_modifier = stop_un_spam
 		remove_country_modifier = resolution_vetoed_unsc
 		
+		#Clear flags for war genocides
+		clr_country_flag = war_genocide
+		clr_country_flag = under_existential_threat
+		
 		#Clear AI is more trigger happy with nukes flag
 		clr_country_flag = more_willing_nuke_behaviour
 		
@@ -506,6 +518,10 @@ country_event = {
 		remove_country_modifier = called_allies_un
 		remove_country_modifier = stop_un_spam
 		remove_country_modifier = resolution_vetoed_unsc
+		
+		#Clear flags for war genocides
+		clr_country_flag = war_genocide
+		clr_country_flag = under_existential_threat
 		
 		#Clear AI is more trigger happy with nukes flag
 		clr_country_flag = more_willing_nuke_behaviour

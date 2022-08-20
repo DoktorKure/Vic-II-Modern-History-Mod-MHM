@@ -12,146 +12,54 @@ country_event = {
 	mean_time_to_happen = { 
 		months = 6
 		modifier = { factor = 0 NOT = { has_country_flag = genocide_101 } }
-	}
-
-	option = {
-		name = "Cleanse the entire nation! (30% chance of discovery)"
-		set_country_flag = genocide_101
-		
-		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide
-		random_owned = { 
-			limit = { owner = { NOT = { cold_war_doctrine = 1 } } } owner = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.98 } }
-		}
-		random_owned = { 
-			limit = { owner = { cold_war_doctrine = 1 } } owner = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
-		}
-		random_owned = { 
-			limit = { owner = { mutual_assured_destruction = 1 } } owner = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
-		}
-		random_owned = { 
-			limit = { owner = { assymetric_warfare = 1 } } owner = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
-		}
-		random_owned = { 
-			limit = { owner = { arms_race_doctrine = 1 } } owner = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.80 } }
-		}
-		random_owned = { 
-			limit = { owner = { fourth_generation_warfare = 1 } } owner = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.75 } }
-		}
-		random_owned = { 
-			limit = { owner = { network_centric_warfare = 1 } } owner = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.70 } }
-		}
-		random_owned = { 
-			limit = { owner = { modern_asymmetric_warfare = 1 } } owner = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.60 } }
-		}
-		random_owned = { 
-			limit = { owner = { full_spectrum_dominance = 1 } } owner = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.40 } }
-		}
-		random_owned = { 
-			limit = { owner = { fifth_generation_warfare = 1 } } owner = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.20 } }
-		}
-
-		#Discovery Chance
-		random = {
-			chance = 30
-			prestige_factor = -0.05
-			badboy = 5
-			set_country_flag = discovered_genocide
-		}
-
-		#Event to notify everyone if discovered
-		random_owned = { limit = { owner = { has_country_flag = discovered_genocide NOT = { has_country_flag = discovered_genocide1 } } } owner = { set_country_flag = discovered_genocide1 country_event = 1410080 } }
-
-		ai_chance = { factor = 0.6 }
-	}
-
-	option = {
-		name = "Cleanse the colonies! (10% chance of discovery)"
-		set_country_flag = genocide_101
-		
-		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide
-		random_owned = { 
-			limit = { owner = { NOT = { cold_war_doctrine = 1 } } } owner = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.98 } }
-		}
-		random_owned = { 
-			limit = { owner = { cold_war_doctrine = 1 } } owner = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
-		}
-		random_owned = { 
-			limit = { owner = { mutual_assured_destruction = 1 } } owner = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
-		}
-		random_owned = { 
-			limit = { owner = { assymetric_warfare = 1 } } owner = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
-		}
-		random_owned = { 
-			limit = { owner = { arms_race_doctrine = 1 } } owner = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.80 } }
-		}
-		random_owned = { 
-			limit = { owner = { fourth_generation_warfare = 1 } } owner = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.75 } }
-		}
-		random_owned = { 
-			limit = { owner = { network_centric_warfare = 1 } } owner = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.70 } }
-		}
-		random_owned = { 
-			limit = { owner = { modern_asymmetric_warfare = 1 } } owner = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.60 } }
-		}
-		random_owned = { 
-			limit = { owner = { full_spectrum_dominance = 1 } } owner = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.40 } }
-		}
-		random_owned = { 
-			limit = { owner = { fifth_generation_warfare = 1 } } owner = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.20 } }
-		}
-
-		#Discovery Chance
-		random = {
-			chance = 10
-			prestige_factor = -0.05
-			badboy = 5
-			set_country_flag = discovered_genocide
-		}
-
-		#Event to notify everyone if discovered
-		random_owned = { limit = { owner = { has_country_flag = discovered_genocide NOT = { has_country_flag = discovered_genocide1 } } } owner = { set_country_flag = discovered_genocide1 country_event = 1410080 } }
-
-		ai_chance = { 
-			factor = 0.2 
-			modifier = { factor = 0 
-			NOT = { any_owned_province = { is_colonial = yes } } } 
-		}
+		modifier = { factor = 0.5 has_country_flag = war_genocide }
 	}
 	
 	option = {
-		name = "Cleanse the homeland! (20% chance of discovery)"
+		name = "Cleanse the homeland! (15% chance of discovery)"
 		set_country_flag = genocide_101
+		clr_country_flag = war_genocide
 		
 		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide
 		random_owned = { 
-			limit = { owner = { NOT = { cold_war_doctrine = 1 } } } owner = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.98 } }
+			limit = { owner = { NOT = { cold_war_doctrine = 1 } } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
 		}
 		random_owned = { 
-			limit = { owner = { cold_war_doctrine = 1 } } owner = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
+			limit = { owner = { cold_war_doctrine = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
 		}
 		random_owned = { 
-			limit = { owner = { mutual_assured_destruction = 1 } } owner = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
+			limit = { owner = { mutual_assured_destruction = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
 		}
 		random_owned = { 
-			limit = { owner = { assymetric_warfare = 1 } } owner = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
+			limit = { owner = { assymetric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
 		}
 		random_owned = { 
-			limit = { owner = { arms_race_doctrine = 1 } } owner = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.80 } }
+			limit = { owner = { arms_race_doctrine = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.875 } }
 		}
 		random_owned = { 
-			limit = { owner = { fourth_generation_warfare = 1 } } owner = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.75 } }
+			limit = { owner = { fourth_generation_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
 		}
 		random_owned = { 
-			limit = { owner = { network_centric_warfare = 1 } } owner = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.70 } }
+			limit = { owner = { network_centric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.825 } }
 		}
 		random_owned = { 
-			limit = { owner = { modern_asymmetric_warfare = 1 } } owner = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.60 } }
+			limit = { owner = { modern_asymmetric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.80 } }
 		}
 		random_owned = { 
-			limit = { owner = { full_spectrum_dominance = 1 } } owner = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.40 } }
+			limit = { owner = { full_spectrum_dominance = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.70 } }
 		}
 		random_owned = { 
-			limit = { owner = { fifth_generation_warfare = 1 } } owner = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.20 } }
+			limit = { owner = { fifth_generation_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.50 } }
 		}
 
 		#Discovery Chance
@@ -172,6 +80,167 @@ country_event = {
 				NOT = { any_owned_province = { is_colonial = yes NOT = { is_core = THIS } } }
 			}
 		}
+	}
+
+	option = {
+		name = "Cleanse the colonies! (20% chance of discovery)"
+		set_country_flag = genocide_101
+		clr_country_flag = war_genocide
+		
+		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide
+		random_owned = { 
+			limit = { owner = { NOT = { cold_war_doctrine = 1 } } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+		}
+		random_owned = { 
+			limit = { owner = { cold_war_doctrine = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
+		}
+		random_owned = { 
+			limit = { owner = { mutual_assured_destruction = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
+		}
+		random_owned = { 
+			limit = { owner = { assymetric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
+		}
+		random_owned = { 
+			limit = { owner = { arms_race_doctrine = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.875 } }
+		}
+		random_owned = { 
+			limit = { owner = { fourth_generation_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
+		}
+		random_owned = { 
+			limit = { owner = { network_centric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.825 } }
+		}
+		random_owned = { 
+			limit = { owner = { modern_asymmetric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.80 } }
+		}
+		random_owned = { 
+			limit = { owner = { full_spectrum_dominance = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.70 } }
+		}
+		random_owned = { 
+			limit = { owner = { fifth_generation_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.50 } }
+		}
+
+		#Discovery Chance
+		random = {
+			chance = 10
+			prestige_factor = -0.05
+			badboy = 5
+			set_country_flag = discovered_genocide
+		}
+
+		#Event to notify everyone if discovered
+		random_owned = { limit = { owner = { has_country_flag = discovered_genocide NOT = { has_country_flag = discovered_genocide1 } } } owner = { set_country_flag = discovered_genocide1 country_event = 1410080 } }
+
+		ai_chance = { 
+			factor = 0.2 
+			modifier = { factor = 0 
+			NOT = { any_owned_province = { is_colonial = yes } } } 
+		}
+	}
+
+	option = {
+		name = "Cleanse the entire nation! (30% chance of discovery)"
+		set_country_flag = genocide_101
+		clr_country_flag = war_genocide
+		
+		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide
+		random_owned = { 
+			limit = { owner = { NOT = { cold_war_doctrine = 1 } } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+		}
+		random_owned = { 
+			limit = { owner = { cold_war_doctrine = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
+		}
+		random_owned = { 
+			limit = { owner = { mutual_assured_destruction = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
+		}
+		random_owned = { 
+			limit = { owner = { assymetric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
+		}
+		random_owned = { 
+			limit = { owner = { arms_race_doctrine = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.875 } }
+		}
+		random_owned = { 
+			limit = { owner = { fourth_generation_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
+		}
+		random_owned = { 
+			limit = { owner = { network_centric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.825 } }
+		}
+		random_owned = { 
+			limit = { owner = { modern_asymmetric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.80 } }
+		}
+		random_owned = { 
+			limit = { owner = { full_spectrum_dominance = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.70 } }
+		}
+		random_owned = { 
+			limit = { owner = { fifth_generation_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.50 } }
+		}
+
+		#Discovery Chance
+		random = {
+			chance = 30
+			prestige_factor = -0.05
+			badboy = 5
+			set_country_flag = discovered_genocide
+		}
+
+		#Event to notify everyone if discovered
+		random_owned = { limit = { owner = { has_country_flag = discovered_genocide NOT = { has_country_flag = discovered_genocide1 } } } owner = { set_country_flag = discovered_genocide1 country_event = 1410080 } }
+
+		ai_chance = { 
+			factor = 0.4 
+			modifier = { factor = 0 war = no }
+		}
+	}
+
+	option = {
+		name = "Exterminate people in areas occupied by us! (High Infamy!)"
+		set_country_flag = genocide_101
+		any_country = { limit = { war_with = THIS } country_event = 15120372 }
+
+		prestige_factor = -0.1
+		badboy = 15
+		set_country_flag = discovered_genocide
+		set_country_flag = war_genocide
+
+		#Event to notify everyone if discovered
+		random_owned = { limit = { owner = { has_country_flag = discovered_genocide NOT = { has_country_flag = discovered_genocide1 } } } owner = { set_country_flag = discovered_genocide1 country_event = 1410080 } }
+
+		ai_chance = { factor = 0.2 }
+	}
+}
+
+country_event = {
+	id = 15120372
+	title = "$FROMCOUNTRY_ADJ$ war crimes discovered in $COUNTRY$!"
+	desc = EVTDESC1512037
+	picture = "genocide_options"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We will bring the perpetrators to justice!"
+		any_pop = { limit = { location = { AND = { owned_by = THIS controlled_by = FROM } } } reduce_pop = 0.95 }
+		war_exhaustion = -75 # Population becomes galvanized against existential threat
+		set_country_flag = under_existential_threat
 	}
 }
 
@@ -205,15 +274,15 @@ country_event = {
 		
 		#Simulate population decline among non-accepteds
 		random_list = {
-			15 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
-			20 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
-			65 = { any_pop = { limit = { location = { is_core = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
+			15 = { any_pop = { limit = { location = { is_core = THIS AND = { owned_by = THIS controlled_by = THIS } } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
+			20 = { any_pop = { limit = { location = { is_core = THIS AND = { owned_by = THIS controlled_by = THIS } } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+			65 = { any_pop = { limit = { location = { is_core = THIS AND = { owned_by = THIS controlled_by = THIS } } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
 		}
 		#Simulate major population growth among primary cultures, but only in areas where they're not already the majority to prevent massive overpopulation too quickly
 		random_list = {
-			15 = { any_pop = { limit = { location = { is_core = THIS is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.5 } }
-			20 = { any_pop = { limit = { location = { is_core = THIS is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.25 } }
-			65 = { any_pop = { limit = { location = { is_core = THIS is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.1 } }
+			15 = { any_pop = { limit = { location = { is_core = THIS AND = { owned_by = THIS controlled_by = THIS } is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.5 } }
+			20 = { any_pop = { limit = { location = { is_core = THIS AND = { owned_by = THIS controlled_by = THIS } is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.25 } }
+			65 = { any_pop = { limit = { location = { is_core = THIS AND = { owned_by = THIS controlled_by = THIS } is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.1 } }
 		}
 
 		#Discovery Chance
@@ -245,15 +314,15 @@ country_event = {
 
 		#Simulate population decline among non-accepteds
 		random_list = {
-			15 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
-			20 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
-			65 = { any_pop = { limit = { location = { is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
+			15 = { any_pop = { limit = { location = { is_colonial = yes AND = { owned_by = THIS controlled_by = THIS } } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
+			20 = { any_pop = { limit = { location = { is_colonial = yes AND = { owned_by = THIS controlled_by = THIS } } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+			65 = { any_pop = { limit = { location = { is_colonial = yes AND = { owned_by = THIS controlled_by = THIS } } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
 		}
 		#Simulate major population growth among primary cultures and accepted cultures, but only in areas where they're not already the majority to prevent massive overpopulation too quickly
 		random_list = {
-			15 = { any_pop = { limit = { location = { is_colonial = yes is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.5 } }
-			20 = { any_pop = { limit = { location = { is_colonial = yes is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.25 } }
-			65 = { any_pop = { limit = { location = { is_colonial = yes is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.1 } }
+			15 = { any_pop = { limit = { location = { AND = { owned_by = THIS controlled_by = THIS } is_colonial = yes is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.5 } }
+			20 = { any_pop = { limit = { location = { AND = { owned_by = THIS controlled_by = THIS } is_colonial = yes is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.25 } }
+			65 = { any_pop = { limit = { location = { AND = { owned_by = THIS controlled_by = THIS } is_colonial = yes is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.1 } }
 		}
 
 		#Discovery Chance
@@ -286,15 +355,15 @@ country_event = {
 
 		#Simulate population decline among non-accepteds
 		random_list = {
-			15 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } } reduce_pop = 0.95 } }
-			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } } reduce_pop = 0.975 } }
-			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } AND = { is_primary_culture = no is_accepted_culture = no } } } reduce_pop = 0.99 } }
+			15 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } AND = { owned_by = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } } reduce_pop = 0.95 } }
+			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } AND = { owned_by = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } } reduce_pop = 0.975 } }
+			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } AND = { owned_by = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } } reduce_pop = 0.99 } }
 		}
 		#Simulate major population growth among primary cultures, but only in areas where they're not already the majority to prevent massive overpopulation too quickly
 		random_list = {
-			15 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.5 } }
-			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.25 } }
-			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.1 } }
+			15 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } AND = { owned_by = THIS controlled_by = THIS } is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.5 } }
+			20 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } AND = { owned_by = THIS controlled_by = THIS } is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.25 } }
+			65 = { any_pop = { limit = { location = { NOT = { is_core = THIS is_colonial = yes } AND = { owned_by = THIS controlled_by = THIS } is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.1 } }
 		}
 
 		#Discovery Chance
@@ -327,15 +396,15 @@ country_event = {
 
 		#Simulate population decline among non-accepteds
 		random_list = {
-			15 = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
-			20 = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
-			65 = { any_pop = { limit = { AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
+			15 = { any_pop = { limit = { location = { owned_by = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
+			20 = { any_pop = { limit = { location = { owned_by = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+			65 = { any_pop = { limit = { location = { owned_by = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.99 } }
 		}
 		#Simulate major population growth among primary cultures, but only in areas where they're not already the majority to prevent massive overpopulation too quickly
 		random_list = {
-			15 = { any_pop = { limit = { location = { is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.5 } }
-			20 = { any_pop = { limit = { location = { is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.25 } }
-			65 = { any_pop = { limit = { location = { is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.1 } }
+			15 = { any_pop = { limit = { location = { AND = { owned_by = THIS controlled_by = THIS } is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.5 } }
+			20 = { any_pop = { limit = { location = { AND = { owned_by = THIS controlled_by = THIS } is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.25 } }
+			65 = { any_pop = { limit = { location = { AND = { owned_by = THIS controlled_by = THIS } is_primary_culture = no is_accepted_culture = no } AND = { is_primary_culture = yes is_accepted_culture = yes } } reduce_pop = 1.1 } }
 		}
 
 		#Discovery Chance
