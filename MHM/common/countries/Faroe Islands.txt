@@ -1,7 +1,7 @@
 graphical_culture = EuropeanGC
 color = { 135 206 250 }
-colonial_government = { 167 16 52 }
-sar_government = { 167 16 52 }
+colonial_government = { 0 255 255 }
+sar_government = { 0 255 255 }
 party = {
 		name = "Faroese Party"
 		citizenship_policy = full_citizenship

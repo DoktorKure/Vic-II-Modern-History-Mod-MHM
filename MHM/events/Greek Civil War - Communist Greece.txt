@@ -556,10 +556,6 @@ country_event = {
 		
 		ai_chance = {
 			factor = 0.01
-			modifier = {
-				factor = 90
-				has_country_flag = kke_election_boycott
-			}
 		}
 	}
 	
@@ -571,6 +567,8 @@ country_event = {
 	title = "The End of the Ceasefire"
 	desc = EVTDESC8940021
 	picture = "greek_civil_war"
+	
+	major = yes
 
 	is_triggered_only = yes
 

@@ -132,10 +132,13 @@ country_event = { # Sinatra Doctrine
 		#Has an Eastern Bloc
 		OR = {
 			is_our_vassal = POL
+			is_our_vassal = PCC
 			is_our_vassal = CZH
 			is_our_vassal = HUN
 			is_our_vassal = ROM
 			is_our_vassal = BUL
+			is_our_vassal = AUS
+			is_our_vassal = YUG
 		}
 	}
 	
@@ -203,12 +206,16 @@ country_event = { # The New Government
 		NOT = { has_country_flag = mikhail_gorbachev }
 		
 		#Has an Eastern Bloc
+		#Has an Eastern Bloc
 		OR = {
 			is_our_vassal = POL
+			is_our_vassal = PCC
 			is_our_vassal = CZH
 			is_our_vassal = HUN
 			is_our_vassal = ROM
 			is_our_vassal = BUL
+			is_our_vassal = AUS
+			is_our_vassal = YUG
 		}
 	}
 	
@@ -286,10 +293,13 @@ country_event = { # Modernizing the Brezhnev Doctrine?
 		badboy = -5
 		
 		random_country = { limit = { tag = POL OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = POL value = -25 } diplomatic_influence = { who = POL value = 75 } } }
+		random_country = { limit = { tag = PCC OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = PCC value = -25 } diplomatic_influence = { who = PCC value = 75 } } }
 		random_country = { limit = { tag = CZH OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = CZH value = -25 } diplomatic_influence = { who = CZH value = 75 } } }
 		random_country = { limit = { tag = HUN OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = HUN value = -25 } diplomatic_influence = { who = HUN value = 75 } } }
 		random_country = { limit = { tag = ROM OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = ROM value = -25 } diplomatic_influence = { who = ROM value = 75 } } }
 		random_country = { limit = { tag = BUL OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = BUL value = -25 } diplomatic_influence = { who = BUL value = 75 } } }
+		random_country = { limit = { tag = AUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = AUS value = -25 } diplomatic_influence = { who = AUS value = 75 } } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = YUG value = -25 } diplomatic_influence = { who = YUG value = 75 } } }
 		
 		#Destabilisation in Eastern bloc nations
 		any_country = {
@@ -309,10 +319,13 @@ country_event = { # Modernizing the Brezhnev Doctrine?
 		name = "Stick to the tried and tested method of using tanks."
 		
 		random_country = { limit = { tag = POL OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = POL value = 50 } diplomatic_influence = { who = POL value = 50 } } }
+		random_country = { limit = { tag = PCC OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = PCC value = 50 } diplomatic_influence = { who = PCC value = 50 } } }
 		random_country = { limit = { tag = CZH OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = CZH value = 50 } diplomatic_influence = { who = CZH value = 50 } } }
 		random_country = { limit = { tag = HUN OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = HUN value = 50 } diplomatic_influence = { who = HUN value = 50 } } }
 		random_country = { limit = { tag = ROM OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = ROM value = 50 } diplomatic_influence = { who = ROM value = 50 } } }
 		random_country = { limit = { tag = BUL OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = BUL value = 50 } diplomatic_influence = { who = BUL value = 50 } } }
+		random_country = { limit = { tag = AUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = AUS value = 50 } diplomatic_influence = { who = AUS value = 50 } } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } THIS = { relation = { who = YUG value = 50 } diplomatic_influence = { who = YUG value = 50 } } }
 		
 		ai_chance = { factor = 0.4 }
 	}
@@ -353,6 +366,7 @@ country_event = { # New Doctrine?
 		badboy = -5
 		
 		random_owned = { limit = { owner = { is_our_vassal = POL } } owner = { release_vassal = POL } }
+		random_owned = { limit = { owner = { is_our_vassal = PCC } } owner = { release_vassal = PCC } }
 		random_owned = { limit = { owner = { is_our_vassal = DDR } } owner = { release_vassal = DDR } }
 		random_owned = { limit = { owner = { is_our_vassal = HUN } } owner = { release_vassal = HUN } }
 		random_owned = { limit = { owner = { is_our_vassal = CZH } } owner = { release_vassal = CZH } }
@@ -360,6 +374,8 @@ country_event = { # New Doctrine?
 		random_owned = { limit = { owner = { is_our_vassal = BUL } } owner = { release_vassal = BUL } }
 		random_owned = { limit = { owner = { is_our_vassal = MGL } } owner = { release_vassal = MGL } }
 		random_owned = { limit = { owner = { is_our_vassal = NKO } } owner = { release_vassal = NKO } }
+		random_owned = { limit = { owner = { is_our_vassal = AUS } } owner = { release_vassal = AUS } }
+		random_owned = { limit = { owner = { is_our_vassal = YUG } } owner = { release_vassal = YUG } }
 		
 		any_pop = { limit = { strata = rich } militancy = 4 consciousness = 4 }
 		
@@ -1008,4 +1024,129 @@ country_event = {
 		ai_chance = { factor = 0.1 }
 	}
 	
+}
+
+#End of the Warsaw Pact
+country_event = {
+	id = 1512136
+	title = "Dissolution of the USSR"
+	desc = EVT_8014249_DESC
+	picture = "rus_form_pic"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Declare $COUNTRY_ADJ$ sovereignty!"
+		prestige = 100
+		
+		#FROM releases THIS
+		overlord = { release_vassal = THIS }
+		FROM = { diplomatic_influence = { who = THIS value = -200 } }
+		relation = { who = FROM value = -200 }
+		
+		#Choice to choose gov type if USSR collapsed messily, otherwise this remains as communist
+		random_owned = {
+			limit = { owner = { RUS = { has_country_flag = eussr } } }
+			owner = { country_event = { id = 1512137 days = 2 } }
+		}
+		
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Remain in the $FROMCOUNTRY_ADJ$ sphere"
+		prestige = -50
+		
+		#Nationalist movements begin
+		any_pop = {
+			limit = { is_culture_group = THIS }
+			militancy = 10 
+			consciousness = 10 
+			ideology = { factor = 0.25 value = nationalist }
+		}
+		
+		ai_chance = { factor = 0 }
+	}
+
+}
+
+#End of the Warsaw Pact - choose Gov type
+country_event = {
+	id = 1512137
+	title = "The Future of $COUNTRY$"
+	desc = EVTDESC1512137
+	picture = "warsaw_pact_end_gov"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Embrace democracy!"
+		
+		government = democracy
+		country_event = 800054
+		ruling_party_ideology = socialist
+		
+		election = yes
+		
+		#Fragmentation of domestic politics
+		any_pop = {
+			limit = { strata = rich is_culture_group = THIS }
+			consciousness = 5
+			ideology = { factor = 0.3 value = conservative }
+		}
+		any_pop = {
+			limit = { strata = middle is_culture_group = THIS }
+			consciousness = 10
+			ideology = { factor = 0.3 value = liberal }
+		}
+		any_pop = {
+			limit = { strata = poor is_culture_group = THIS }
+			consciousness = 5
+			ideology = { factor = 0.2 value = socialist }
+			ideology = { factor = 0.2 value = conservative }
+		}
+		
+		#Communists are not happy to lose power
+		any_pop = {
+			scaled_militancy = {
+				factor = 10
+				ideology = communist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = communist_social
+			}
+		}
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Communism is still relevant!"
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		
+		#Fragmentation of domestic politics
+		any_pop = {
+			limit = { strata = rich is_culture_group = THIS }
+			consciousness = 10 
+			ideology = { factor = 0.1 value = communist }
+		}
+		any_pop = {
+			limit = { strata = middle is_culture_group = THIS }
+			militancy = 10
+			consciousness = 10
+			ideology = { factor = 0.3 value = liberal }
+		}
+		any_pop = {
+			limit = { strata = poor is_culture_group = THIS }
+			militancy = 10
+			consciousness = 10
+			ideology = { factor = 0.1 value = conservative }
+			ideology = { factor = 0.1 value = big_tent }
+			ideology = { factor = 0.1 value = liberal }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+
 }

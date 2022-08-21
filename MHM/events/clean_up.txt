@@ -179,7 +179,6 @@ country_event = {
 			government = presidential_dictatorship
 			government = populist_dictatorship
 			government = nationalist_dictatorship
-			government = absolute_monarchy
 			government = theocracy
 		}
 
@@ -194,20 +193,9 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA60050"
-
-		#Transition to Democracy
-		random_owned = { 
-			limit = { owner = { NOT = { government = absolute_monarchy } } }
-			owner = { government = democracy }
-		}
-
-		#Transition to Constitutional Monarchy
-		random_owned = { 
-			limit = { owner = { government = absolute_monarchy } }
-			owner = { government = hms_government }
-		}
-
+		government = democracy
 	}
+
 }
 
 country_event = {
