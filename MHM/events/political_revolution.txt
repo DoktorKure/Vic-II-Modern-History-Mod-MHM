@@ -926,6 +926,8 @@ country_event = { # The New Regime - Democracy
 	option = {
 		name = "EVTOPTA800054"
 		
+		upper_house = { ideology = liberal value = 95 } #To prevent instant reverts back to a dictatorship
+		
 		# remove ideology based modifiers 
 		remove_country_modifier = comecon 
 		remove_country_modifier = comecon_excluded
