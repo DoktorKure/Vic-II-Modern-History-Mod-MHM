@@ -567,8 +567,7 @@ political_decisions = {
 			has_country_flag = show_campaigning_decision
 			ai = no
 			
-			#Democracies only
-			OR = { government = socialist_democracy government = democracy government = democracy1 government = hms_government government = hms_government1 government = sar_government government = colonial_government government = mandate_government }
+			#Every gov type can do this
 			
 			#Has the required pop type
 			OR = { has_pop_type = officers has_pop_type = soldiers }
@@ -1439,7 +1438,7 @@ political_decisions = {
 			NOT = { has_country_modifier = party_campaigning_timer }
 		}
 		effect = {
-			add_country_modifier = { name = party_campaigning_timer duration = 365 }
+			add_country_modifier = { name = party_campaigning_timer duration = 182 }
 			
 			#Hardliners get angry
 			any_pop = {
@@ -1515,7 +1514,7 @@ political_decisions = {
 			NOT = { has_country_modifier = party_campaigning_timer }
 		}
 		effect = {
-			add_country_modifier = { name = party_campaigning_timer duration = 365 }
+			add_country_modifier = { name = party_campaigning_timer duration = 182 }
 			
 			#Hardliners are happy
 			any_pop = {
