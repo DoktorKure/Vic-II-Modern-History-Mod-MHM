@@ -24,7 +24,10 @@ country_event = {
 		NOT = { has_global_flag = 1950_start_date_flag }
 	}
 
-	mean_time_to_happen = { months = 8 }
+	mean_time_to_happen = { 
+		months = 8
+		modifier = { factor = 0 year = 1950 }
+	}
 
 	option = {
 		name = "Adopt the new Constitution!"

@@ -265,7 +265,7 @@ country_event = {
 		set_country_flag = gheorghiu_dej_romania #Don't know where else to set this flag
 
 		ai_chance = {
-			factor = 0.95
+			factor = 1
 		}
 	}
 
@@ -302,7 +302,7 @@ country_event = {
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 
 		ai_chance = {
-			factor = 0.05
+			factor = 0
 		}
 	}
 }
@@ -310,7 +310,7 @@ country_event = {
 #1948 Constitution
 country_event = {
 	id = 1612
-	title = "1948 Constitution"
+	title = "$YEAR$ Constitution"
 	desc = EVTDESC1612
 	picture = "1600"
   
@@ -333,7 +333,10 @@ country_event = {
 		NOT = { has_global_flag = 1950_start_date_flag }
 	}
 
-	mean_time_to_happen = { months = 4 }
+	mean_time_to_happen = { 
+		months = 4
+		modifier = { factor = 0 year = 1949 }
+	}
 
 	option = {
 		name = "Adopt the new Constitution!"

@@ -101,6 +101,7 @@ country_event = {
 		prestige = 50
 		create_vassal = FROM
 		create_alliance = FROM
+		military_access = FROM
 		ai_chance = { factor = 1 }
 	}
 	option = {

@@ -1768,7 +1768,10 @@ country_event = {
 		has_global_flag = autumn_of_nations
 	}
 
-	mean_time_to_happen = { months = 8 }
+	mean_time_to_happen = { 
+		months = 8
+		modifier = { factor = 0 year = 1990 }
+	}
 
 	option = {
 		name = "Set them free!"
@@ -1879,7 +1882,10 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = { months = 8 }
+	mean_time_to_happen = { 
+		months = 8
+		modifier = { factor = 0 year = 1992 }
+	}
 	
 	option = {
 		name = "Side with Yeltsin! (Belavezha Accords)"
