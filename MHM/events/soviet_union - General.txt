@@ -1715,11 +1715,16 @@ country_event = {
 		ruling_party_ideology = communist_social
 	}
 
-	mean_time_to_happen = { months = 1 }
+	mean_time_to_happen = {
+		months = 1
+		modifier = { factor = 0 year = 1990 }
+	}
 
 	option = {
 		name = "Take that risk!"
 		any_pop = { militancy = 3 consciousness = 3 }
+		
+		set_country_flag = perestroika_gone_bad
 
 		#Nationalism rises in the USSR
 		any_owned = { 
@@ -1728,7 +1733,7 @@ country_event = {
 			any_pop = { ideology = { factor = 0.10 value = nationalist } }
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -1738,7 +1743,7 @@ country_event = {
 		ruling_party_ideology = communist
 		country_event = 800052
 		remove_country_modifier = uss_timer
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 
 }
@@ -1754,7 +1759,7 @@ country_event = {
 
 	trigger = {
 		tag = RUS
-		year = 1989
+		year = 1990
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
 		government = proletarian_dictatorship
@@ -1770,7 +1775,7 @@ country_event = {
 
 	mean_time_to_happen = { 
 		months = 8
-		modifier = { factor = 0 year = 1990 }
+		modifier = { factor = 0 year = 1991 }
 	}
 
 	option = {
@@ -1865,6 +1870,7 @@ country_event = {
 
 	trigger = {
     	tag = RUS
+		year = 1991
 		
 		has_global_flag = autumn_of_nations
 		
@@ -2047,6 +2053,7 @@ country_event = {
 
 	option = {
 		name = "Slav'sya, Otechestvo nashe svobodnoye"
+		set_global_flag = breakup_of_ussr
 		
 		#To block event 1991 from firing
 		set_country_flag = eussr
@@ -2100,26 +2107,6 @@ country_event = {
 		random_owned = { limit = { owner = { is_possible_vassal = LIT } } owner = { release = LIT LIT = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
 		random_owned = { limit = { owner = { is_possible_vassal = EST } } owner = { release = EST EST = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
 		
-		#In case USSR annexed Warsaw Pact nations for any reason
-		random_owned = { limit = { owner = { is_possible_vassal = DDR } } owner = { release = DDR DDR = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
-		random_owned = { limit = { owner = { is_possible_vassal = CZH } } owner = { release = CZH CZH = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
-		random_owned = { limit = { owner = { is_possible_vassal = POL } } owner = { release = POL POL = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
-		random_owned = { limit = { owner = { is_possible_vassal = HUN } } owner = { release = HUN HUN = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
-		random_owned = { limit = { owner = { is_possible_vassal = BUL } } owner = { release = BUL BUL = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
-		random_owned = { limit = { owner = { is_possible_vassal = ROM } } owner = { release = ROM ROM = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
-		random_owned = { limit = { owner = { is_possible_vassal = AUS } } owner = { release = AUS AUS = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
-		random_owned = { limit = { owner = { is_possible_vassal = YUG } } owner = { release = YUG YUG = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
-		random_owned = { limit = { owner = { is_possible_vassal = MGL } } owner = { release = MGL MGL = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
-		
-		#Release any Korean Cores
-		random_owned = { limit = { owner = { exists = NKO } } owner = { any_owned = { limit = { is_core = NKO } secede_province = NKO } } }
-		random_owned = { limit = { owner = { exists = SKO } } owner = { any_owned = { limit = { is_core = SKO } secede_province = SKO } } }
-		random_owned = { limit = { owner = { exists = KOR } } owner = { any_owned = { limit = { is_core = KOR } secede_province = KOR } } }
-		
-		random_owned = { limit = { owner = { is_possible_vassal = KOR } } owner = { release = KOR KOR = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
-		random_owned = { limit = { owner = { is_possible_vassal = SKO } } owner = { release = SKO SKO = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
-		random_owned = { limit = { owner = { is_possible_vassal = NKO } } owner = { release = NKO NKO = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
-		
 		#Moldovan situation
 		random_country = {
 			limit = { tag = MOL is_possible_vassal = TRD }
@@ -2137,63 +2124,6 @@ country_event = {
 				diplomatic_influence = { who = TRD value = 200 } 
 			}
 			
-		}
-
-		#Return West Berlin, if USSR managed to annex West Berlin
-		random_owned = { 
-			limit = { 
-				owner = { 
-					GER = { exists = yes } 
-					owns = 549 
-				} 
-			} 
-			owner = { 549 = { secede_province = GER } } 
-		}
-		random_owned = { 
-			limit = { 
-				owner = { 
-					GER = { exists = no } 
-					DDR = { exists = yes }
-					owns = 549 
-				} 
-			} 
-			owner = { 549 = { secede_province = DDR } } 
-		}
-		
-		#Release IC Berlin if GER or DDR does not exist
-		random_owned = { 
-			limit = { 
-				owner = { 
-					owns = 549 
-					GER = { exists = no } 
-					DDR = { exists = no } 
-				} 
-			} 
-			owner = { 
-				release = ICB 
-				government = sar_government 
-				country_event = 800054 
-				ruling_party_ideology = socialist 
-			} 
-		}
-		
-		#GER annexes ICB if ICB was a puppet of THIS
-		random_country = { 
-			limit = { 
-				tag = ICB 
-				OR = { is_vassal = no vassal_of = THIS } 
-				GER = { exists = yes }
-			}
-			GER = { inherit = ICB }
-		}
-		random_country = { 
-			limit = { 
-				tag = ICB 
-				OR = { is_vassal = no vassal_of = THIS } 
-				GER = { exists = no }
-				DDR = { exists = yes }
-			}
-			DDR = { inherit = ICB }
 		}
 		
 		#Ukraine situation
@@ -2218,7 +2148,7 @@ country_event = {
 		
 		#Dissolution of the Warsaw Pact
 		random_owned = { 
-			limit = { owner = { NOT = { has_global_flag = breakup_of_ussr } } } 
+			limit = { owner = { NOT = { has_global_flag = depuppetize_warsaw_pact } } } 
 			owner = { country_event = 8225006 } 
 		}
 
@@ -2369,7 +2299,7 @@ country_event = {
 		
 		#Dissolution of the Warsaw Pact
 		random_owned = { 
-			limit = { owner = { NOT = { has_global_flag = breakup_of_ussr } } } 
+			limit = { owner = { NOT = { has_global_flag = depuppetize_warsaw_pact } } } 
 			owner = { country_event = 8225006 } 
 		}
 
