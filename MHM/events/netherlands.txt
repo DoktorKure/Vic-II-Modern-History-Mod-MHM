@@ -136,23 +136,23 @@ country_event = {
     plurality = 1
     #Movement pops to (German) province closest to MariënBosch/Nijmegen
     NET = {
-      any_pop = { limit = { culture = german } move_pop = 581 } #Westfalen 
+      any_pop = { limit = { location = { is_core = NET } culture = german } move_pop = 581 } #Westfalen 
     }
     #Movement from German border provinces to nearest Dutch province 
     576 = {
-      any_pop = { limit = { culture = dutch } move_pop = 381 } #Limburg
+      any_pop = { limit = { location = { is_core = NET } culture = dutch } move_pop = 381 } #Limburg
     }
     577 = {
-      any_pop = { limit = { culture = dutch } move_pop = 379 } #Eindhoven
+      any_pop = { limit = { location = { is_core = NET } culture = dutch } move_pop = 379 } #Eindhoven
     }
     581 = {
-      any_pop = { limit = { culture = dutch } move_pop = 382 } #Arnhem
+      any_pop = { limit = { location = { is_core = NET } culture = dutch } move_pop = 382 } #Arnhem
     }
     542 = {
-      any_pop = { limit = { culture = dutch } move_pop = 384 } #Zwolle 
+      any_pop = { limit = { location = { is_core = NET } culture = dutch } move_pop = 384 } #Zwolle 
     }
     543 = {
-      any_pop = { limit = { culture = dutch } move_pop = 386 } #Assen
+      any_pop = { limit = { location = { is_core = NET } culture = dutch } move_pop = 386 } #Assen
     }
     ai_chance = { factor = 1 }
   }
