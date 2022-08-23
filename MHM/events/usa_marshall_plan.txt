@@ -139,7 +139,7 @@ country_event = {
 					government = hms_government
 					government = hms_government1
 				}
-				NOT = { ruling_party_ideology = communist }
+				NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social in_sphere = RUS } } # So it won't fire for Eastern Bloc nations
 			} 
 			country_event = 8202020
 		}
