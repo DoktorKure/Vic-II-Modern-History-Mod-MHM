@@ -15,9 +15,7 @@ country_event = {
 		NOT = { has_global_flag = tito_stalin_split }
 		
 		BUL = {
-			exists = yes 
-			government = proletarian_dictatorship 
-			vassal_of = RUS 
+			exists = yes
 			war = no
 		}
 		
@@ -26,7 +24,10 @@ country_event = {
 		
 	}
 
-	mean_time_to_happen = { months = 8 }
+	mean_time_to_happen = {
+		months = 8
+		modifier = { factor 0.5	BUL = { exists = yes war = no government = proletarian_dictatorship vassal_of = RUS } } #So the event will actually fire within the alotted time 
+	}
 
 	option = {
 		name = EVT_8216020_A
