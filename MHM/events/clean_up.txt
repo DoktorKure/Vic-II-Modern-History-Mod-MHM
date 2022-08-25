@@ -187,6 +187,7 @@ country_event = {
 		civilized = yes
 		NOT = { vote_franschise = none_voting }
 		NOT = { political_parties = parties_not_allowed }
+		NOT = { political_parties = ruling_party_opinion }
 	}
 	
 	mean_time_to_happen = { days = 1 }
@@ -230,7 +231,8 @@ country_event = {
 	trigger = {
 		government = absolute_monarchy
 		NOT = { vote_franschise = none_voting }
-		NOT = { political_parties = parties_not_allowed }	
+		NOT = { political_parties = parties_not_allowed }
+		NOT = { political_parties = ruling_party_opinion }
 		civilized = yes	
 	}
 	
