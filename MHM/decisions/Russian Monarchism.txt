@@ -113,7 +113,7 @@ political_decisions = {
 			LAT = { all_core = { add_core = RUS } }
 			LIT = { all_core = { add_core = RUS } }
 			EST = { all_core = { add_core = RUS } }
-			BEL = { all_core = { add_core = RUS } }
+			BYE = { all_core = { add_core = RUS } }
 			UKR = { all_core = { add_core = RUS } }
 			MOL = { all_core = { add_core = RUS } }
 			
@@ -176,7 +176,7 @@ political_decisions = {
 						is_core = LAT
 						is_core = LIT
 						is_core = EST
-						is_core = BEL
+						is_core = BYE
 						is_core = UKR
 						is_core = MOL
 						
