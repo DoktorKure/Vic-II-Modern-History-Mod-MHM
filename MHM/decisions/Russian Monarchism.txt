@@ -1,0 +1,73 @@
+political_decisions = {
+	restore_russian_monarchy = {
+		picture = "russian_monarchy"
+		potential = {
+			tag = RUS
+			NOT = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+			NOT = { has_country_flag = restore_russian_monarchy }
+		}
+		
+		allow = {
+			is_vassal = no
+			war = no
+			election = no
+			
+			#Not a theocracy
+			NOT = { government = theocracy }
+			
+			#Traditionalist majority
+			AND = {
+				ruling_party_ideology = traditionalist
+				pop_majority_ideology = traditionalist
+				upper_house = { ideology = traditionalist value = 0.66 }
+			}
+		}
+
+		effect = {
+			prestige = 100
+
+			#Democracy becomes a Constitutional Monarchy
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							government = democracy 
+							government = democracy1 
+							government = hms_government 
+							government = hms_government1 
+							government = sar_government 
+							government = colonial_government 
+							government = mandate_government 
+						}
+					}
+				}
+				owner = {
+					government = hms_government
+				}
+			}
+
+			#Dictatorship becomes an absolute monarchy
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							OR = {
+								government = democracy 
+								government = democracy1 
+								government = hms_government 
+								government = hms_government1 
+								government = sar_government 
+								government = colonial_government 
+								government = mandate_government 
+							}
+						}
+					}
+				}
+				owner = {
+					government = absolute_monarchy
+				}
+			}
+			set_country_flag = restore_russian_monarchy
+		}
+		ai_will_do = { factor = 1 }
+	}
