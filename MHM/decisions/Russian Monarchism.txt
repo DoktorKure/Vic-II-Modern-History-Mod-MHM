@@ -71,3 +71,127 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }
 	}
+	
+	claim_imperial_russia = {
+		picture = "claim_greater_russia"
+		potential = {
+			tag = RUS
+			OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
+			NOT = { has_country_flag = claim_imperial_russia }
+			958 = { owner = { NOT = { tag = THIS vassal_of = THIS } } }
+			718 = { owner = { NOT = { tag = THIS vassal_of = THIS } } }
+		}
+
+		allow = {
+			part_of_sphere = no
+			has_unclaimed_cores = no
+			NOT = {	
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = liberal 
+			}
+			is_vassal = no
+			prestige = 45
+			OR = {
+				ruling_party_ideology = populist
+				ruling_party_ideology = nationalist
+				ruling_party_ideology = traditionalist
+				ruling_party_ideology = communist
+				jingoism = 24
+			}
+		}
+
+		effect = {
+			badboy = 24
+			set_country_flag = claim_imperial_russia
+			KAZ = { all_core = { add_core = RUS } }
+			UZB = { all_core = { add_core = RUS } }
+			TKR = { all_core = { add_core = RUS } }
+			TAJ = { all_core = { add_core = RUS } }
+			KYR = { all_core = { add_core = RUS } }
+			
+			LAT = { all_core = { add_core = RUS } }
+			LIT = { all_core = { add_core = RUS } }
+			EST = { all_core = { add_core = RUS } }
+			BEL = { all_core = { add_core = RUS } }
+			UKR = { all_core = { add_core = RUS } }
+			MOL = { all_core = { add_core = RUS } }
+			
+			GEO = { all_core = { add_core = RUS } }
+			ARM = { all_core = { add_core = RUS } }
+			AZB = { all_core = { add_core = RUS } }
+			
+			FIN = { all_core = { add_core = RUS } }
+			POL = { all_core = { add_core = RUS } } # 1914 borders in Poland results in bordergore due to Kaliningrad
+			
+			LSK = { all_core = { add_core = RUS } }
+			
+			885 = { add_core = RUS }
+			886 = { add_core = RUS }
+		}
+
+	}
+
+	abandon_claim_imperial_russia = {
+		picture = "claim_greater_russia"
+		potential = {
+			has_country_flag = claim_imperial_russia
+			OR = {
+				government = democracy
+				government = democracy1
+				government = hms_government
+				government = hms_government1
+			}
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			OR = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = liberal
+			}
+		}
+
+		effect = {
+			badboy = -6
+			prestige = 10
+			any_pop = { consciousness = 1 }
+			clr_country_flag = claim_imperial_russia
+			all_core = { 
+				limit = { 
+					NOT = { owned_by = THIS }
+					OR = {
+						is_core = KAZ
+						is_core = TAJ
+						is_core = TKR
+						is_core = UZB
+						is_core = KYR
+						
+						is_core = ARM
+						is_core = AZB
+						is_core = GEO
+						
+						is_core = LAT
+						is_core = LIT
+						is_core = EST
+						is_core = BEL
+						is_core = UKR
+						is_core = MOL
+						
+						is_core = FIN
+						is_core = POL
+						is_core = LSK
+						
+						province_id = 885
+						province_id = 886
+					}
+				}
+				remove_core = THIS
+			}
+		}
+
+	}
+	
+}
