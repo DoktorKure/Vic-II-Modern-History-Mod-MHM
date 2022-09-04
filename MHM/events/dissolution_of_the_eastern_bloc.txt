@@ -330,7 +330,7 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -358,7 +358,7 @@ country_event = {
 			ideology = { factor = 0.1 value = liberal }
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 
 }
