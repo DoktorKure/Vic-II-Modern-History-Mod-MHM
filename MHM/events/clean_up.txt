@@ -48,7 +48,7 @@ country_event = {
 			AND = { # jingoist ruling parties gets nationalist dictatorship, otherwise it's presidential dictatorship
 				OR = {
 					ruling_party_ideology = socialist
-					AND = { ruling_party_ideology = conservative NOT = { religious_policy = moralism } } # must be secular for conservatives to get nationalist dictatorship to prevent conflict with theocracy entry
+					ruling_party_ideology = conservative
 					ruling_party_ideology = populist
 				}
 				war_policy = jingoism
@@ -58,6 +58,7 @@ country_event = {
 			NOT = { minorities_reform = minorities_oppression }
 			NOT = { citizenship_policy = residency }
 		}
+		NOT = { religious_policy = moralism } # must be secular or they get reactionary regime instead
 	}
 	
 	mean_time_to_happen = { days = 1 }
@@ -99,9 +100,9 @@ country_event = {
 
 country_event = {
 	id = 60030
-	title = "EVTNAME60030"
+	title = "The New Reactionary Regime"
 	desc = "EVTDESC60030"
-	picture = "theocracy_cleanup"
+	picture = "reactionary_cleanup"
 	
 	trigger = {
 
@@ -120,7 +121,7 @@ country_event = {
 		vote_franschise = none_voting
 		AND = {
 			NOT = { has_country_flag = pre_existing_monarchy }
-			OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative }
+			OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = populist }
 			religious_policy = moralism
 		}
 	}
@@ -128,8 +129,103 @@ country_event = {
 	mean_time_to_happen = { days = 1 }
 	
 	option = {
-		name = "EVTOPTA60030"
+		name = "We will bring about a revival of the Faith!"
 		government = theocracy
+		ai_chance = { 
+			factor = 0.1
+			
+			#Guarantee theocracy if Islamic nation
+			modifier = { 
+				factor = 10
+				OR = { pop_majority_religion = sunni pop_majority_religion = ibad pop_majority_religion = shiite has_country_flag = muslim }
+			}
+			
+			#Higher chance for Jewish nations
+			modifier = { 
+				factor = 1
+				OR = { pop_majority_religion = jewish is_culture_group = jewish_cultures }
+			}
+			
+			#Higher chance for Indian nations
+			modifier = { 
+				factor = 1
+				OR = { pop_majority_religion = hindi capital_scope = { is_core = HND } }
+			}
+			
+			#Special case for Italy due to Italy having experienced both theocracy and monarchy in recent history
+			modifier = { 
+				factor = 0.5
+				tag = ITA
+			}
+		}
+	}
+	
+	option = {
+		name = "We wish for the return of the king!"
+		government = absolute_monarchy
+		ai_chance = { 
+			factor = 0.2
+			
+			#Lower chance if nation is in Islamic countries
+			modifier = { 
+				factor = 0
+				OR = { pop_majority_religion = sunni pop_majority_religion = ibad pop_majority_religion = shiite has_country_flag = muslim }
+			}
+			
+			#Lower chance for Jewish nations
+			modifier = { 
+				factor = 0
+				OR = { pop_majority_religion = jewish is_culture_group = jewish_cultures }
+			}
+			
+			#Increase chance in certain Asian regions
+			modifier = { 
+				factor = 1
+				capital_scope = { OR = { is_core = CHI is_core = KOR is_core = JAP is_core = MGL is_core = NEP is_core = BHU } }
+			}
+			
+			#Increase chance if nation is in Europe
+			modifier = { 
+				factor = 1
+				capital_scope = { continent = europe NOT = { province_id = 749 } }
+			}
+			
+			#Special case for Italy due to Italy having experienced both theocracy and monarchy in recent history
+			modifier = { 
+				factor = 0.5
+				tag = ITA
+			}
+			
+			#Reduce chance if nation is in North America, South America, and Africa (because most African nations have colonial flags for monarchies)
+			modifier = { 
+				factor = 0
+				OR = {
+					capital_scope = { continent = north_america }
+					capital_scope = { continent = south_america }
+					capital_scope = { continent = africa }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "We just want a return to simpler days..."
+		government = presidential_dictatorship
+		ai_chance = { 
+			factor = 0.7
+			
+			#Lower chance if nation is in Islamic countries
+			modifier = { 
+				factor = 0
+				OR = { pop_majority_religion = sunni pop_majority_religion = ibad pop_majority_religion = shiite has_country_flag = muslim }
+			}
+			
+			#Lower chance for Jewish nations
+			modifier = { 
+				factor = 0
+				OR = { pop_majority_religion = jewish is_culture_group = jewish_cultures }
+			}
+		}
 	}
 }
 
@@ -260,11 +356,12 @@ country_event = {
 		OR = {
 			AND = {
 				OR = {
-					AND = { ruling_party_ideology = conservative NOT = { religious_policy = moralism } } # must be secular to prevent conservatives from getting theocracy
+					ruling_party_ideology = conservative 
 					ruling_party_ideology = populist
 					ruling_party_ideology = socialist
 				}
 				NOT = { war_policy = jingoism } # must not be jingoist or they get nationalist dictatorship instead
+				NOT = { religious_policy = moralism } # must be secular or they get reactionary regime instead
 			}
 			ruling_party_ideology = big_tent
 		}
@@ -295,6 +392,7 @@ country_event = {
 			minorities_reform = minorities_oppression
 			NOT = { citizenship_policy = full_citizenship }
 		}
+		NOT = { religious_policy = moralism } # must be secular or they get reactionary regime instead
 		civilized = yes
 	}
 	
@@ -341,6 +439,7 @@ country_event = {
 	picture = "theocracy_cleanup"
 	
 	trigger = {
+		has_country_flag = is_disabled_for_now #Keep disabled to prevent conflict with reactionary regime entry
 
 		is_vassal = no
 

@@ -8,8 +8,8 @@ country_event = {
 	trigger = {
 		government = theocracy
 		
-		#Does not have a traditionalist ruling party
-		NOT = { ruling_party_ideology = traditionalist }
+		#Does not have a moralist ruling party
+		NOT = { religious_policy = moralism }
 		
 		#Not a democratic theocracy
 		political_opinions = ruling_party_opinion
@@ -48,9 +48,15 @@ country_event = {
 		
 		add_country_modifier = { name = leader_cooldown duration = 365 }
 		
-		#Traditionalist - Radicals
+		#Populist - Radicals
 		random_owned = {
-			limit = { owner = { OR = { pop_majority_ideology = traditionalist pop_majority_ideology = nationalist pop_majority_ideology = populist } } }
+			limit = { owner = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist } } }
+			owner = { ruling_party_ideology = populist }
+		}
+		
+		#Traditionalist - Fundamentalists
+		random_owned = {
+			limit = { owner = { pop_majority_ideology = traditionalist } }
 			owner = { ruling_party_ideology = traditionalist }
 		}
 		

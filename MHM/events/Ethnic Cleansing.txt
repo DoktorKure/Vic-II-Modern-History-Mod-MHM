@@ -423,3 +423,228 @@ country_event = {
 		}
 	}
 }
+
+#Theocide
+country_event = {
+	id = 15120373
+	title = "Religious Cleansing in $COUNTRY$"
+	desc = EVTDESC15120373
+	picture = "theocide_options"
+
+	trigger = {
+		OR = { has_country_flag = theocide has_country_modifier = theocide_active }
+	}
+
+	mean_time_to_happen = { 
+		months = 6
+		modifier = { factor = 0 NOT = { has_country_flag = theocide_101 } }
+	}
+	
+	option = {
+		name = "Cleanse the homeland! (15% chance of discovery)"
+		set_country_flag = theocide_101
+		
+		#Killing rates dependent on technology - lower tech, less efficient theocide; higher tech, more efficient theocide
+		random_owned = { 
+			limit = { owner = { NOT = { cold_war_doctrine = 1 } } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.975 } }
+		}
+		random_owned = { 
+			limit = { owner = { cold_war_doctrine = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.95 } }
+		}
+		random_owned = { 
+			limit = { owner = { mutual_assured_destruction = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.925 } }
+		}
+		random_owned = { 
+			limit = { owner = { assymetric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.90 } }
+		}
+		random_owned = { 
+			limit = { owner = { arms_race_doctrine = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.875 } }
+		}
+		random_owned = { 
+			limit = { owner = { fourth_generation_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.85 } }
+		}
+		random_owned = { 
+			limit = { owner = { network_centric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.825 } }
+		}
+		random_owned = { 
+			limit = { owner = { modern_asymmetric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.80 } }
+		}
+		random_owned = { 
+			limit = { owner = { full_spectrum_dominance = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.70 } }
+		}
+		random_owned = { 
+			limit = { owner = { fifth_generation_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.50 } }
+		}
+
+		#Discovery Chance
+		random = {
+			chance = 20
+			prestige_factor = -0.05
+			badboy = 5
+			set_country_flag = discovered_theocide
+		}
+
+		#Event to notify everyone if discovered
+		random_owned = { limit = { owner = { has_country_flag = discovered_theocide NOT = { has_country_flag = discovered_theocide1 } } } owner = { set_country_flag = discovered_theocide1 country_event = 1410080 } }
+
+		ai_chance = { 
+			factor = 0.4 
+			modifier = {
+				factor = 1
+				NOT = { any_owned_province = { is_colonial = yes NOT = { is_core = THIS } } }
+			}
+		}
+	}
+
+	option = {
+		name = "Cleanse the colonies! (20% chance of discovery)"
+		set_country_flag = theocide_101
+		
+		#Killing rates dependent on technology - lower tech, less efficient theocide; higher tech, more efficient theocide
+		random_owned = { 
+			limit = { owner = { NOT = { cold_war_doctrine = 1 } } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.975 } }
+		}
+		random_owned = { 
+			limit = { owner = { cold_war_doctrine = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.95 } }
+		}
+		random_owned = { 
+			limit = { owner = { mutual_assured_destruction = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.925 } }
+		}
+		random_owned = { 
+			limit = { owner = { assymetric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.90 } }
+		}
+		random_owned = { 
+			limit = { owner = { arms_race_doctrine = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.875 } }
+		}
+		random_owned = { 
+			limit = { owner = { fourth_generation_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.85 } }
+		}
+		random_owned = { 
+			limit = { owner = { network_centric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.825 } }
+		}
+		random_owned = { 
+			limit = { owner = { modern_asymmetric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.80 } }
+		}
+		random_owned = { 
+			limit = { owner = { full_spectrum_dominance = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.70 } }
+		}
+		random_owned = { 
+			limit = { owner = { fifth_generation_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.50 } }
+		}
+
+		#Discovery Chance
+		random = {
+			chance = 10
+			prestige_factor = -0.05
+			badboy = 5
+			set_country_flag = discovered_theocide
+		}
+
+		#Event to notify everyone if discovered
+		random_owned = { limit = { owner = { has_country_flag = discovered_theocide NOT = { has_country_flag = discovered_theocide1 } } } owner = { set_country_flag = discovered_theocide1 country_event = 1410080 } }
+
+		ai_chance = { 
+			factor = 0.3 
+			modifier = { factor = 0 
+			NOT = { any_owned_province = { is_colonial = yes } } } 
+		}
+	}
+
+	option = {
+		name = "Cleanse the entire nation! (30% chance of discovery)"
+		set_country_flag = theocide_101
+		
+		#Killing rates dependent on technology - lower tech, less efficient theocide; higher tech, more efficient theocide
+		random_owned = { 
+			limit = { owner = { NOT = { cold_war_doctrine = 1 } } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.975 } }
+		}
+		random_owned = { 
+			limit = { owner = { cold_war_doctrine = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.95 } }
+		}
+		random_owned = { 
+			limit = { owner = { mutual_assured_destruction = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.925 } }
+		}
+		random_owned = { 
+			limit = { owner = { assymetric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.90 } }
+		}
+		random_owned = { 
+			limit = { owner = { arms_race_doctrine = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.875 } }
+		}
+		random_owned = { 
+			limit = { owner = { fourth_generation_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.85 } }
+		}
+		random_owned = { 
+			limit = { owner = { network_centric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.825 } }
+		}
+		random_owned = { 
+			limit = { owner = { modern_asymmetric_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.80 } }
+		}
+		random_owned = { 
+			limit = { owner = { full_spectrum_dominance = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.70 } }
+		}
+		random_owned = { 
+			limit = { owner = { fifth_generation_warfare = 1 } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } OR = { has_pop_religion = secularism is_state_religion = no } } reduce_pop = 0.50 } }
+		}
+
+		#Discovery Chance
+		random = {
+			chance = 30
+			prestige_factor = -0.05
+			badboy = 5
+			set_country_flag = discovered_theocide
+		}
+
+		#Event to notify everyone if discovered
+		random_owned = { limit = { owner = { has_country_flag = discovered_theocide NOT = { has_country_flag = discovered_theocide1 } } } owner = { set_country_flag = discovered_theocide1 country_event = 1410080 } }
+
+		ai_chance = { 
+			factor = 0.3 
+			modifier = { factor = 0 war = no }
+		}
+	}
+}
+
+#Genocide discovery
+country_event = {
+	id = 1410080
+	title = "$COUNTRY_ADJ$ Genocide of $YEAR$"
+	desc = "The Government of $COUNTRY$ has been discovered to have to begun killing off their minorities. The international community is outraged."
+	picture = "genocide"
+	major = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "We must brace the international fallout!"
+		any_country = { limit = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } } relation = { who = THIS value = -200 } }
+	}
+}

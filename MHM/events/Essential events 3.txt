@@ -154,16 +154,16 @@ country_event = {
 	
 	trigger = {
 		year = 1946
-	NOT = { has_country_modifier = wto_chairmanship }
-	has_country_flag = wto_chairmanship
+		NOT = { has_country_modifier = wto_chairmanship }
+		has_country_flag = wto_chairmanship
 	}
 	
 	option = {
-	name = "We had a good run."
-random_country = { limit = { AND = { is_greater_power = yes NOT = { has_country_modifier = wto_chairmanship } has_country_modifier = wto_member } } country_event = 1300020 }
-	remove_country_modifier = wto_chairmanship
-	clr_country_flag = wto_chairmanship
-		}
+		name = "We had a good run."
+		random_country = { limit = { AND = { is_greater_power = yes NOT = { has_country_modifier = wto_chairmanship } has_country_modifier = wto_member } } country_event = 1300020 }
+		remove_country_modifier = wto_chairmanship
+		clr_country_flag = wto_chairmanship
+	}
 }
 #Rotating Chairmanship of the WTO - select the new leader
 country_event = {
@@ -191,17 +191,17 @@ country_event = {
 	
 	trigger = {
 		year = 1946
-NOT = { has_country_modifier = ibrd_chairmanship }
-has_country_flag = ibrd_chairmanship
+		NOT = { has_country_modifier = ibrd_chairmanship }
+		has_country_flag = ibrd_chairmanship
 	}
 	
 	option = {
-	name = "We had a good run."
-random_country = { limit = { AND = { NOT = { has_country_modifier = ibrd_chairmanship } has_country_modifier = ibrd_member has_country_modifier = creditor_nation } } country_event = 1300022 }
-	remove_country_modifier = ibrd_chairmanship
-	clr_country_flag = ibrd_chairmanship
-		}
+		name = "We had a good run."
+		clr_country_flag = ibrd_chairmanship
+		random_country = { limit = { AND = { NOT = { has_country_modifier = ibrd_chairmanship } has_country_modifier = ibrd_member has_country_modifier = creditor_nation } } country_event = 1300022 }
+	}
 }
+
 #Rotating Chairmanship of the IBRD - select the new leader
 country_event = {
 	id = 1300022
@@ -209,15 +209,69 @@ country_event = {
 	desc = "The Chairmanship of the IBRD is rotating and the Chairmanship has come to us. The Chairmanship only lasts 5 years." 
 	picture = "world_bank"
 	
-is_triggered_only = yes
+	is_triggered_only = yes
 	major = yes
 	
 	option = {
-	name = "Splendid!"
-prestige = 10
-add_country_modifier = { name = ibrd_chairmanship duration = 1825 }
-set_country_flag = ibrd_chairmanship
+		name = "Splendid!"
+		prestige = 10
+		add_country_modifier = { name = ibrd_chairmanship duration = 1825 }
+		set_country_flag = ibrd_chairmanship
+	}
+}
+
+#Rotating Chairmanships USA first - IBRD
+country_event = {
+	id = 1300025
+	title = "Chairmanship of the IBRD"
+	desc = "The Chairmanship of the IBRD is currently vacant so we have been chosen to fill it. The Chairmanship only lasts 5 years." 
+	picture = "world_bank"
+	
+	major = yes
+	
+	trigger = { 
+		is_greater_power = yes
+		has_country_modifier = ibrd_member
+		#NOT = { has_global_flag = ibrdusafirst }
+		
+		NOT = { has_country_modifier = ibrd_chairmanship }
+		
+		NOT = { any_greater_power = { has_country_modifier = ibrd_chairmanship } }
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "Splendid!"
+		prestige = 10
+		add_country_modifier = { name = ibrd_chairmanship duration = 1825 }
+		set_country_flag = ibrd_chairmanship
+		set_global_flag = ibrdusafirst
+
+		random_owned = { 
+			limit = { owner = { OR = { economic_policy = state_capitalism economic_policy = planned_economy1 economic_policy = planned_economy } } } 
+			owner = { 
+				add_country_modifier = { name = ibrdhigh_gp duration = -1 } 
+				any_country = { limit = { has_country_modifier = ibrd_member } add_country_modifier = { name = ibrdhigh duration = -1 } }
+			} 
 		}
+		random_owned = { 
+			limit = { owner = { economic_policy = interventionism } } 
+			owner = { 
+				add_country_modifier = { name = ibrdmedium_gp duration = -1 }
+				any_country = { limit = { has_country_modifier = ibrd_member } add_country_modifier = { name = ibrdmedium duration = -1 } }
+			} 
+		}
+		random_owned = { 
+			limit = { owner = { economic_policy = laissez_faire } } 
+			owner = { 
+				add_country_modifier = { name = ibrdlow_gp duration = -1 }
+				any_country = { limit = { has_country_modifier = ibrd_member } add_country_modifier = { name = ibrdlow duration = -1 } }
+			} 
+		}
+		
+	}
+	
 }
 
 #Rotating Chairmanships USA first - IMF
@@ -327,59 +381,7 @@ country_event = {
 	}
 	
 }
-#Rotating Chairmanships USA first - IBRD
-country_event = {
-	id = 1300025
-	title = "Chairmanship of the IBRD"
-	desc = "The Chairmanship of the IBRD is currently vacant so we have been chosen to fill it. The Chairmanship only lasts 5 years." 
-	picture = "world_bank"
-	
-	major = yes
-	
-	trigger = { 
-		is_greater_power = yes
-		has_country_modifier = ibrd_member
-		#NOT = { has_global_flag = ibrdusafirst }
-		
-		NOT = { has_country_modifier = ibrd_chairmanship }
-		
-		NOT = { any_greater_power = { has_country_modifier = ibrd_chairmanship } }
-	}
-	
-	mean_time_to_happen = { months = 6 }
-	
-	option = {
-		name = "Splendid!"
-		prestige = 10
-		add_country_modifier = { name = ibrd_chairmanship duration = 1825 }
-		set_country_flag = ibrd_chairmanship
-		set_global_flag = ibrdusafirst
 
-		random_owned = { 
-			limit = { owner = { OR = { economic_policy = state_capitalism economic_policy = planned_economy1 economic_policy = planned_economy } } } 
-			owner = { 
-				add_country_modifier = { name = ibrdhigh_gp duration = -1 } 
-				any_country = { limit = { has_country_modifier = ibrd_member } add_country_modifier = { name = ibrdhigh duration = -1 } }
-			} 
-		}
-		random_owned = { 
-			limit = { owner = { economic_policy = interventionism } } 
-			owner = { 
-				add_country_modifier = { name = ibrdmedium_gp duration = -1 }
-				any_country = { limit = { has_country_modifier = ibrd_member } add_country_modifier = { name = ibrdmedium duration = -1 } }
-			} 
-		}
-		random_owned = { 
-			limit = { owner = { economic_policy = laissez_faire } } 
-			owner = { 
-				add_country_modifier = { name = ibrdlow_gp duration = -1 }
-				any_country = { limit = { has_country_modifier = ibrd_member } add_country_modifier = { name = ibrdlow duration = -1 } }
-			} 
-		}
-		
-	}
-	
-}
 #UK Choice to go with Empire or the EEC
 country_event = {
 	id = 1300026
@@ -2203,21 +2205,6 @@ add_country_modifier = { name = regime_change_rejected duration = 365 }
 		ai_chance = { factor = 1 }
 	}
 
-}
-
-#Genocide
-country_event = {
-	id = 1410080
-	title = "$COUNTRY_ADJ$ Genocide of $YEAR$"
-	desc = "The Government of $COUNTRY$ has been discovered to have to begun killing off their ethnic minorities. The international community is outraged."
-	picture = "genocide"
-	major = yes
-is_triggered_only = yes
-
-option = {
-name = "We must brace the international fallout!"
-any_country = { limit = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } } relation = { who = THIS value = -200 } }
-	}
 }
 
 #Remove Nuclear Animations

@@ -26,7 +26,7 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 8
-		modifier = { factor 0.5	BUL = { exists = yes war = no government = proletarian_dictatorship vassal_of = RUS } } #So the event will actually fire within the alotted time 
+		modifier = { factor 0.3	BUL = { exists = yes war = no government = proletarian_dictatorship vassal_of = RUS } } #So the event will actually fire within the alotted time
 	}
 
 	option = {

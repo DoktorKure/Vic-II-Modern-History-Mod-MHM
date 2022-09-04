@@ -95,6 +95,8 @@ oob = "/RUS_oob.txt"
 
 1992.1.1 = {
 	capital = 1008
+	remove_accepted_culture = ukrainian
+	remove_accepted_culture = byelorussian
 	religion = secularism
 	government = democracy1
 	plurality = 59.0
@@ -112,7 +114,7 @@ oob = "/RUS_oob.txt"
 		progressive = 0
 		socialist = 25
 		communist = 5
-		}
+	}
 	# Political Reforms
 	political_opinions = regulated_opinion
 	minorities_reform = minorities_equal_rights
@@ -242,6 +244,6 @@ oob = "/RUS_oob.txt"
 	power_projection = 1
 	green_blue_water_navies = 1
 	carrier_battle_groups = 1
-decision = hydrogen_setup
-oob = "1992/RUS_oob.txt"
+	decision = hydrogen_setup
+	oob = "1992/RUS_oob.txt"
 }

@@ -55,7 +55,7 @@ country_event = {
 		#Remove strategic bombardment flag
 		clr_country_flag = strategic_bombardment
 
-		#Great Patriotic War gives post war war exhaustion
+		#Great Patriotic War gives postwar exhaustion
 
 		random_owned = { 
 			limit = { owner = { has_country_modifier = fanatic_army } }
@@ -68,59 +68,104 @@ country_event = {
 		#Remove constricting trade
 		remove_country_modifier = constricting_international_trade
 		remove_country_modifier = constrict_international_trade_modifier
+		
+		#Jingoism grows based on gov type
+		random_owned = {
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } militancy = -10 dominant_issue = { value = jingoism factor = 0.1 } } }
+		}
+		
+		random_owned = {
+			limit = { owner = { government = nationalist_dictatorship } }
+			owner = { any_pop = { limit = { is_culture_group = THIS } militancy = -10 dominant_issue = { value = jingoism factor = 0.1 } } }
+		}
+		
+		random_owned = {
+			limit = { owner = { government = theocracy } }
+			owner = { any_pop = { limit = { is_state_religion = yes } militancy = -10 dominant_issue = { value = jingoism factor = 0.1 } } }
+		}
 
-		#Jingoism grows
-		any_pop = { limit = { is_culture_group = THIS } militancy = -10 dominant_issue = { value = jingoism factor = 0.1 } }
-
-		#Slight ideology gain
+		#Substantial ideology gain based on gov type
+		#Default increase
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = conservative } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = conservative } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.15 value = conservative } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = big_tent } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.15 value = big_tent } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = socialist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.15 value = socialist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = traditionalist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.15 value = traditionalist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = populist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.15 value = populist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = nationalist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.15 value = nationalist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = progressive } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.15 value = progressive } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = liberal } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.15 value = liberal } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = communist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.15 value = communist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = communist_social } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.15 value = communist_social } } }
+		}
+		
+		#Sectarian Regime - boost by primary culture group
+		random_owned = { 
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = conservative } } }
 			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.15 value = conservative } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = big_tent } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.15 value = big_tent } } }
-		}
-
-		random_owned = { 
-			limit = { owner = { ruling_party_ideology = socialist } }
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = socialist } } }
 			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.15 value = socialist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = traditionalist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.15 value = traditionalist } } }
-		}
-
-		random_owned = { 
-			limit = { owner = { ruling_party_ideology = populist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.15 value = populist } } }
-		}
-
-		random_owned = { 
-			limit = { owner = { ruling_party_ideology = nationalist } }
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = nationalist } } }
 			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.15 value = nationalist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = progressive } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.15 value = progressive } } }
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = populist } } }
+			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.15 value = populist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = liberal } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.15 value = liberal } } }
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = traditionalist } } }
+			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.15 value = traditionalist } } }
 		}
-
+		
+		#Theocracy - boost by religion
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = communist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.15 value = communist } } }
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = conservative } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.15 value = conservative } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = communist_social } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.15 value = communist_social } } }
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = big_tent } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.15 value = big_tent } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = traditionalist } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.15 value = traditionalist } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = populist } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.15 value = populist } } }
 		}
 		
 		#Clear nuke and chemical flags
@@ -192,7 +237,7 @@ country_event = {
 		#Remove strategic bombardment flag
 		clr_country_flag = strategic_bombardment
 
-		#Great Patriotic War gives post war war exhaustion
+		#Great Patriotic War gives postwar exhaustion
 
 		random_owned = { 
 			limit = { owner = { has_country_modifier = fanatic_army } }
@@ -206,64 +251,130 @@ country_event = {
 		remove_country_modifier = constricting_international_trade
 		remove_country_modifier = constrict_international_trade_modifier
 
-		#Pacifism grows
-		any_pop = { 
-			limit = { is_culture_group = THIS }
-			dominant_issue = { value = pacifism factor = 0.25 } 
-			scaled_militancy = {
-				factor = 10
-				issue = jingoism
+		#Pacifism grows based on gov type
+		random_owned = {
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } } }
+			owner = {
+				any_pop = { 
+					limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
+					dominant_issue = { value = pacifism factor = 0.25 } 
+					scaled_militancy = {
+						factor = 10
+						issue = jingoism
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { government = nationalist_dictatorship } }
+			owner = {
+				any_pop = { 
+					limit = { is_culture_group = THIS }
+					dominant_issue = { value = pacifism factor = 0.25 } 
+					scaled_militancy = {
+						factor = 10
+						issue = jingoism
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { government = theocracy } }
+			owner = {
+				any_pop = { 
+					limit = { is_state_religion = yes }
+					dominant_issue = { value = pacifism factor = 0.25 } 
+					scaled_militancy = {
+						factor = 10
+						issue = jingoism
+					}
+				}
 			}
 		}
 
+		#Substantial ideology decrease based on gov type
+		#Default decrease
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = conservative } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.25 value = conservative } } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = conservative } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.15 value = conservative } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = big_tent } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.25 value = big_tent } } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = big_tent } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.15 value = big_tent } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = socialist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.25 value = socialist } } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = socialist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.15 value = socialist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = traditionalist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.25 value = traditionalist } } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = traditionalist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.15 value = traditionalist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = populist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.25 value = populist } } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = populist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.15 value = populist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = nationalist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.25 value = nationalist } } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = nationalist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.15 value = nationalist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = progressive } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.25 value = progressive } } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = progressive } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.15 value = progressive } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = liberal } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.25 value = liberal } } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = liberal } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.15 value = liberal } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = communist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.25 value = communist } } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = communist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.15 value = communist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = communist_social } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.25 value = communist_social } } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = communist_social } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.15 value = communist_social } } }
+		}
+		
+		#Sectarian Regime - decrease by primary culture group
+		random_owned = { 
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = conservative } } }
+			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.15 value = conservative } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = socialist } } }
+			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.15 value = socialist } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = nationalist } } }
+			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.15 value = nationalist } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = populist } } }
+			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.15 value = populist } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = traditionalist } } }
+			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.15 value = traditionalist } } }
+		}
+		
+		#Theocracy - decrease by religion
+		random_owned = { 
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = conservative } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = -0.15 value = conservative } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = big_tent } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = -0.15 value = big_tent } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = traditionalist } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = -0.15 value = traditionalist } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = populist } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = -0.15 value = populist } } }
 		}
 
 	}
@@ -288,13 +399,46 @@ country_event = {
 	option = {
 		name = "May the best country win, which is us!"
 		set_country_flag = country_at_war
-
-		any_pop = { 
-			limit = { is_culture_group = THIS }
-			dominant_issue = { value = pro_military factor = 0.05 }
-			scaled_militancy = {
-				factor = 10
-				issue = pacifism
+		
+		random_owned = {
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } } }
+			owner = {
+				any_pop = { 
+					limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
+					dominant_issue = { value = pro_military factor = 0.05 }
+					scaled_militancy = {
+						factor = 10
+						issue = pacifism
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { government = nationalist_dictatorship } }
+			owner = {
+				any_pop = { 
+					limit = { is_culture_group = THIS }
+					dominant_issue = { value = pro_military factor = 0.05 }
+					scaled_militancy = {
+						factor = 10
+						issue = pacifism
+					}
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { government = theocracy } }
+			owner = {
+				any_pop = { 
+					limit = { is_state_religion = yes }
+					dominant_issue = { value = pro_military factor = 0.05 }
+					scaled_militancy = {
+						factor = 10
+						issue = pacifism
+					}
+				}
 			}
 		}
 		
@@ -418,7 +562,7 @@ country_event = {
 		#Remove strategic bombardment flag
 		clr_country_flag = strategic_bombardment
 
-		#Great Patriotic War gives post war war exhaustion
+		#Great Patriotic War gives postwar exhaustion
 
 		random_owned = { 
 			limit = { owner = { has_country_modifier = fanatic_army } }
@@ -432,55 +576,89 @@ country_event = {
 		remove_country_modifier = constricting_international_trade
 		remove_country_modifier = constrict_international_trade_modifier
 
-		#Slight ideology loss
+		
+
+		#Slight ideology decrease based on gov type
+		#Default decrease
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = conservative } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = conservative } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.05 value = conservative } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = big_tent } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.05 value = big_tent } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = socialist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.05 value = socialist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = traditionalist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.05 value = traditionalist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = populist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.05 value = populist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = nationalist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.05 value = nationalist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = progressive } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.05 value = progressive } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = liberal } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.05 value = liberal } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = communist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.05 value = communist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = communist_social } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = -0.05 value = communist_social } } }
+		}
+		
+		#Sectarian Regime - decrease by primary culture group
+		random_owned = { 
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = conservative } } }
 			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.05 value = conservative } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = big_tent } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.05 value = big_tent } } }
-		}
-
-		random_owned = { 
-			limit = { owner = { ruling_party_ideology = socialist } }
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = socialist } } }
 			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.05 value = socialist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = traditionalist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.05 value = traditionalist } } }
-		}
-
-		random_owned = { 
-			limit = { owner = { ruling_party_ideology = populist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.05 value = populist } } }
-		}
-
-		random_owned = { 
-			limit = { owner = { ruling_party_ideology = nationalist } }
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = nationalist } } }
 			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.05 value = nationalist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = progressive } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.05 value = progressive } } }
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = populist } } }
+			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.05 value = populist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = liberal } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.05 value = liberal } } }
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = traditionalist } } }
+			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.05 value = traditionalist } } }
 		}
-
+		
+		#Theocracy - decrease by religion
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = communist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.05 value = communist } } }
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = conservative } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = -0.05 value = conservative } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = communist_social } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.05 value = communist_social } } }
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = big_tent } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = -0.05 value = big_tent } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = traditionalist } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = -0.05 value = traditionalist } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = populist } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = -0.05 value = populist } } }
 		}
 
 	}
@@ -545,7 +723,7 @@ country_event = {
 		#Remove strategic bombardment flag
 		clr_country_flag = strategic_bombardment
 
-		#Great Patriotic War gives post war war exhaustion
+		#Great Patriotic War gives postwar exhaustion
 
 		random_owned = { 
 			limit = { owner = { has_country_modifier = fanatic_army } }
@@ -559,55 +737,87 @@ country_event = {
 		remove_country_modifier = constricting_international_trade
 		remove_country_modifier = constrict_international_trade_modifier
 
-		#Slight ideology gain
+		#Slight ideology gain based on gov type
+		#Default increase
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = conservative } }
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = conservative } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = conservative } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = big_tent } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = big_tent } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = socialist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = socialist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = traditionalist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = traditionalist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = populist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = populist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = nationalist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = nationalist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = progressive } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = progressive } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = liberal } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = liberal } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = communist } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = communist } } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { OR = { government = nationalist_dictatorship government = theocracy } } ruling_party_ideology = communist_social } }
+			owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = communist_social } } }
+		}
+		
+		#Sectarian Regime - boost by primary culture group
+		random_owned = { 
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = conservative } } }
 			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.05 value = conservative } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = big_tent } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.05 value = big_tent } } }
-		}
-
-		random_owned = { 
-			limit = { owner = { ruling_party_ideology = socialist } }
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = socialist } } }
 			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.05 value = socialist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = traditionalist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.05 value = traditionalist } } }
-		}
-
-		random_owned = { 
-			limit = { owner = { ruling_party_ideology = populist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.05 value = populist } } }
-		}
-
-		random_owned = { 
-			limit = { owner = { ruling_party_ideology = nationalist } }
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = nationalist } } }
 			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.05 value = nationalist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = progressive } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.05 value = progressive } } }
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = populist } } }
+			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.05 value = populist } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = liberal } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.05 value = liberal } } }
+			limit = { owner = { AND = { government = nationalist_dictatorship ruling_party_ideology = traditionalist } } }
+			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.05 value = traditionalist } } }
 		}
-
+		
+		#Theocracy - boost by religion
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = communist } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.05 value = communist } } }
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = conservative } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.05 value = conservative } } }
 		}
-
 		random_owned = { 
-			limit = { owner = { ruling_party_ideology = communist_social } }
-			owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.05 value = communist_social } } }
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = big_tent } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.05 value = big_tent } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = traditionalist } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.05 value = traditionalist } } }
+		}
+		random_owned = { 
+			limit = { owner = { AND = { government = theocracy ruling_party_ideology = populist } } }
+			owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.05 value = populist } } }
 		}
 
 	}

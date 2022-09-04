@@ -6717,6 +6717,17 @@ ethnic_cleansing = {
 	icon = 18
 }
 
+theocide_active = { 
+	global_immigrant_attract = -2
+	non_accepted_pop_consciousness_modifier = 0.4
+	non_accepted_pop_militancy_modifier = 0.3
+	tax_efficiency = -0.05
+	administrative_efficiency_modifier = -0.4
+	badboy = 0.1
+	suppression_points_modifier = 0.5
+	icon = 18
+}
+
 population_replacement_modifier = {
 	global_immigrant_attract = -1
 	non_accepted_pop_consciousness_modifier = 0.2

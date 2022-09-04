@@ -933,9 +933,6 @@ political_decisions = {
 			
 			#Religious party
 			religious_policy = moralism
-			
-			#Religion is less of a politicised issue in highly educated nations
-			NOT = { literacy = 0.20 }
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }

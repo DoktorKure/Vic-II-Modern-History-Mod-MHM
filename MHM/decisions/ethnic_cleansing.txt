@@ -10,7 +10,6 @@ political_decisions = {
 				government = presidential_dictatorship
 				government = populist_dictatorship
 				government = nationalist_dictatorship
-				government = theocracy
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
 				minorities_reform = minorities_oppression
@@ -91,11 +90,12 @@ political_decisions = {
 						ruling_party_ideology = traditionalist 
 						ruling_party_ideology = populist
 						ruling_party_ideology = communist 
-						ruling_party_ideology = communist_social 
+						ruling_party_ideology = communist_social
 					}
 				}
 				minorities_reform = minorities_equal_rights 
 				minorities_reform = minorities_affirmative_action 
+				government = theocracy
 			}
 			NOT = { has_country_modifier = geno_cooldown }
 		}
@@ -511,5 +511,121 @@ political_decisions = {
 			factor = 1
 		}
 		
+	}
+	
+	##### Reduces non-state religion pops in THIS #####
+	
+	theocide = {
+		picture = "theocide"
+		alert = no
+		potential = {
+			#Available only to theocracies
+			government = theocracy
+			NOT = { has_country_flag = theocide }
+			NOT = { has_country_modifier = theocide_active }
+		}
+
+		allow = {
+			is_vassal = no
+			is_disarmed = no
+			election = no
+			
+			#Available only to hardline theocratic regimes
+			ruling_party_ideology = traditionalist
+			religious_policy = moralism
+			has_country_flag = desecularized
+			minorities_reform = minorities_oppression
+			NOT = { citizenship_policy = full_citizenship }
+			OR = {
+				ai = no
+				AND = { 
+					average_militancy = 7 
+					citizenship_policy = residency
+					has_recently_lost_war = yes
+				}
+				AND = { 
+					average_militancy = 9 
+					citizenship_policy = residency
+					revolt_percentage = 0.80 
+				}
+				AND = { 
+					jingoism = 24
+					citizenship_policy = residency
+					war = yes
+				}
+			}
+			NOT = { has_country_modifier = geno_cooldown }
+		}
+
+		effect = {
+			set_country_flag = theocide
+			country_event = 15120373
+			clr_country_flag = discovered_theocide 
+			clr_country_flag = discovered_theocide1
+			add_country_modifier = { name = theocide_active duration = -1 }
+			#Stop exploit
+			add_country_modifier = { name = geno_cooldown duration = 365 }
+			
+			#Atheist or non state religion pops go ballistic
+			any_pop = {
+				limit = { 
+					OR = { 
+						has_pop_religion = secularism 
+						is_state_religion = no
+					}
+				}
+				militancy = 10
+				consciousness = 10
+			}
+			
+			#State religion pops are happy to see heretics eliminated
+			any_pop = {
+				limit = { 
+					is_state_religion = yes
+				}
+				militancy = -5
+				consciousness = -5
+				ideology = { factor = 0.1 value = traditionalist }
+			}
+		}
+		
+		ai_will_do = { 
+			factor = 1
+			modifier = { badboy = 1 war = no factor = 0 }
+			modifier = { tag = PER factor = 0 }
+			modifier = { tag = ISI factor = 1 }
+		}
+	}
+	
+	end_theocide = {
+		picture = "theocide"
+		potential = {
+			OR = { 
+				has_country_flag = theocide
+				has_country_modifier = theocide_active 
+				has_country_flag = theocide_101
+			}
+		}
+
+		allow = {
+			OR = { is_vassal = yes is_disarmed = yes NOT = { average_militancy = 5 } ai = no }
+			OR = { 
+				ai = no
+				NOT = { ruling_party_ideology = traditionalist }
+				minorities_reform = minorities_equal_rights 
+				minorities_reform = minorities_affirmative_action
+				citizenship_policy = full_citizenship
+			}
+			NOT = { has_country_modifier = geno_cooldown }
+		}
+
+		effect = {
+			clr_country_flag = theocide
+			clr_country_flag = theocide_101
+			remove_country_modifier = theocide_active
+			clr_country_flag = discovered_theocide 
+			clr_country_flag = discovered_theocide1
+		}
+		ai_will_do = { factor = 1 }
 	}
 }

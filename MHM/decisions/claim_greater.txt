@@ -3465,7 +3465,7 @@ political_decisions = {
 
 		allow = {
 			part_of_sphere = no
-			has_unclaimed_cores = no
+			#has_unclaimed_cores = no
 			NOT = {	
 				ruling_party_ideology = socialist
 				ruling_party_ideology = progressive
@@ -3476,6 +3476,7 @@ political_decisions = {
 			OR = {
 				ruling_party_ideology = populist
 				ruling_party_ideology = nationalist
+				ruling_party_ideology = conservative
 				jingoism = 24
 			}
 		}

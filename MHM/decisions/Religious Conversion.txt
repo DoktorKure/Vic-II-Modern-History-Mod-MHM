@@ -30,8 +30,8 @@ political_decisions = {
 			#Ruling Party must love accepted pops only
 			religious_policy = moralism
 		
-			#Laws must already be against minorities
-			minorities_reform = minorities_oppression
+			#Laws must already be against minorities or is a theocracy
+			OR = { minorities_reform = minorities_oppression government = theocracy }
 			
 			is_vassal = no
 		}
