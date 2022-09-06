@@ -12,7 +12,7 @@ country_event = {
 		has_global_flag = sino_soviet_split
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		is_vassal = no
 		
@@ -33,7 +33,7 @@ country_event = {
 		
 		#CHI is communist
 		CHI = {
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no
 			war = no
 		}
@@ -234,7 +234,7 @@ country_event = { #Chinese leader visits USSR #1
 	trigger = {
 		tag = CHI
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		is_vassal = no
 		
@@ -282,7 +282,7 @@ country_event = { #Formalization of the Restoration
 	trigger = {
 		tag = CHI
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		is_vassal = no
 		
@@ -331,13 +331,13 @@ country_event = { #Friendship Pact? - RUS
     	tag = RUS
 		has_country_flag = oleg_appointed
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
 		#CHI is communist
 		CHI = {
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no
 			war = no
 		}

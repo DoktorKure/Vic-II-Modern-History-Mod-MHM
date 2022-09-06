@@ -31,8 +31,8 @@ country_event = {
 		modifier = { factor = 0.5 average_militancy = 8 }
 		modifier = { factor = 1.5 public_meetings = limited_meetings }
 		modifier = { factor = 1.5 penal_system = capital_punishment }
-		modifier = { factor = 1.5 NOT = { security_reform = police } }
-		modifier = { factor = 1.5 OR = { publishing_rights = censored_publishing publishing_rights = firewall_publishing } }
+		modifier = { factor = 1.5 NOT = { security_reform = basic_security } }
+		modifier = { factor = 1.5 OR = { publishing_rights = state_publishing publishing_rights = censored_publishing } }
 	}
 
 	option = {
@@ -112,8 +112,8 @@ country_event = {
 		modifier = { factor = 0.5 average_militancy = 8 }
 		modifier = { factor = 1.5 public_meetings = limited_meetings }
 		modifier = { factor = 1.5 penal_system = capital_punishment }
-		modifier = { factor = 1.5 NOT = { security_reform = police } }
-		modifier = { factor = 1.5 OR = { publishing_rights = censored_publishing publishing_rights = firewall_publishing } }
+		modifier = { factor = 1.5 NOT = { security_reform = basic_security } }
+		modifier = { factor = 1.5 OR = { publishing_rights = state_publishing publishing_rights = censored_publishing } }
 	}
 
 	option = {
@@ -195,8 +195,8 @@ country_event = {
 		modifier = { factor = 0.5 average_militancy = 8 }
 		modifier = { factor = 1.5 public_meetings = limited_meetings }
 		modifier = { factor = 1.5 penal_system = capital_punishment }
-		modifier = { factor = 1.5 NOT = { security_reform = police } }
-		modifier = { factor = 1.5 OR = { publishing_rights = censored_publishing publishing_rights = firewall_publishing } }
+		modifier = { factor = 1.5 NOT = { security_reform = basic_security } }
+		modifier = { factor = 1.5 OR = { publishing_rights = state_publishing publishing_rights = censored_publishing } }
 	}
 	
 	option = {
@@ -262,12 +262,12 @@ country_event = {
 		modifier = { factor = 0.5 average_militancy = 8 }
 		modifier = { factor = 1.5 public_meetings = limited_meetings }
 		modifier = { factor = 1.5 penal_system = capital_punishment }
-		modifier = { factor = 1.5 NOT = { security_reform = police } }
-		modifier = { factor = 1.5 OR = { publishing_rights = censored_publishing publishing_rights = firewall_publishing } }
+		modifier = { factor = 1.5 NOT = { security_reform = basic_security } }
+		modifier = { factor = 1.5 OR = { publishing_rights = state_publishing publishing_rights = censored_publishing } }
 	}
 
 	option = {
-		name = "Send in the police!"
+		name = "Send in the basic_security!"
 		
 		#Increase consciousness and militancy
 		any_pop = { limit = { NOT = { strata = rich } } consciousness = 1 militancy = 1 }

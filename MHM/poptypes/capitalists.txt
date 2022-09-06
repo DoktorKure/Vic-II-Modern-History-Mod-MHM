@@ -97,8 +97,8 @@ country_migration_target = {
 			government = theocracy
 			government = proletarian_dictatorship
 			government = proletarian_dictatorship1
+			government = sectarian_dictatorship
 			government = nationalist_dictatorship
-			government = populist_dictatorship
 		}
 	}
 	
@@ -324,19 +324,19 @@ country_migration_target = {
 
 	modifier = { 
 		factor = 1.1
-		education = public_education
+		education = weak_public_education
 	}
 	modifier = { 
 		factor = 1.2
-		education = subsidised_higher_education
+		education = competent_public_education
 	}
 	modifier = { 
 		factor = 1.3
-		education = public_higher_education
+		education = good_public_education
 	}
 	modifier = { 
 		factor = 1.4
-		education = unlimited_education
+		education = excellent_public_education
 	}
 	
 }
@@ -577,8 +577,8 @@ ideologies = {
 		modifier = {
 			factor = 4
 			country = {
-OR = { government = nationalist_dictatorship 
-	government = populist_dictatorship }
+OR = { government = sectarian_dictatorship 
+	government = nationalist_dictatorship }
 			}
 			OR = {
 				is_primary_culture = yes
@@ -620,7 +620,7 @@ modifier = { factor = 1.5 country = { has_country_flag = nationalist_surge } }
 		modifier = {
 			factor = 0.5
 			NOT = { militancy = 6 }
-NOT = { country = { OR = { government = nationalist_dictatorship government = populist_dictatorship } } }
+NOT = { country = { OR = { government = sectarian_dictatorship government = nationalist_dictatorship } } }
 		}
 		
 		modifier = {
@@ -2624,12 +2624,12 @@ issues = {
 
 # vote_franschise
 	#none_voting
-	registered_voting = {
+	harassed_voting = {
 		factor = 1.0
 		#Not next reform
 		modifier = {
 			factor = 0
-			NOT = { is_next_reform = registered_voting }
+			NOT = { is_next_reform = harassed_voting }
 		}
 		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -2657,12 +2657,12 @@ issues = {
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.50 } }
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.55 } }
 	}
-	universal_weighted_voting = {
+	rigged_voting = {
 		factor = 1.0
 		#Not next reform
 		modifier = {
 			factor = 0
-			NOT = { is_next_reform = universal_weighted_voting }
+			NOT = { is_next_reform = rigged_voting }
 		}
 		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -2691,12 +2691,12 @@ issues = {
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.55 } }
 
 	}			
-	universal_voting = {
+	free_voting = {
 		factor = 1.0
 		#Not next reform
 		modifier = {
 			factor = 0
-			NOT = { is_next_reform = universal_voting }
+			NOT = { is_next_reform = free_voting }
 		}
 		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -2724,12 +2724,12 @@ issues = {
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.50 } }
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.55 } }
 	}
-	promoted_voting = {
+	gerrymandered_voting = {
 		factor = 1
 		#Not next reform
 		modifier = {
 			factor = 0
-			NOT = { is_next_reform = promoted_voting }
+			NOT = { is_next_reform = gerrymandered_voting }
 		}
 		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -2760,12 +2760,12 @@ issues = {
 
 # political_opinions
 	# ruling_party_opinion
-	regulated_opinion = {
+	appointed_opinion = {
 		factor = 1
 		#Not next reform
 		modifier = {
 			factor = 0
-			NOT = { is_next_reform = regulated_opinion }
+			NOT = { is_next_reform = appointed_opinion }
 		}
 		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -2787,12 +2787,12 @@ issues = {
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.50 } }
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.55 } }
 	}
-	open_opinion = {
+	semi_democratic_state_opinion = {
 		factor = 1.0
 		#Not next reform
 		modifier = {
 			factor = 0
-			NOT = { is_next_reform = open_opinion }
+			NOT = { is_next_reform = semi_democratic_state_opinion }
 		}
 		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -2814,12 +2814,12 @@ issues = {
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.50 } }
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.55 } }
 	}
-	free_opinion = {
+	democratic_state_opinion = {
 		factor = 1.0
 		#Not next reform
 		modifier = {
 			factor = 0
-			NOT = { is_next_reform = free_opinion }
+			NOT = { is_next_reform = democratic_state_opinion }
 		}
 		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -2841,12 +2841,12 @@ issues = {
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.50 } }
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.55 } }
 	}	
-	democratic_opinion = {
+	popular_opinion = {
 		factor = 1
 		#Not next reform
 		modifier = {
 			factor = 0
-			NOT = { is_next_reform = democratic_opinion }
+			NOT = { is_next_reform = popular_opinion }
 		}
 		modifier = { factor = 1.50 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -2941,13 +2941,13 @@ issues = {
 	}
 
 # publishing_rights
-	# censored_publishing
-	firewall_publishing = {
+	# state_publishing
+	censored_publishing = {
 		factor = 1
 		#Not next reform
 		modifier = {
 			factor = 0
-			NOT = { is_next_reform = firewall_publishing }
+			NOT = { is_next_reform = censored_publishing }
 		}
 		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -2969,12 +2969,12 @@ issues = {
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.50 } }
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.55 } }
 	}
-	unregulated_publishing = {
+	free_publishing = {
 		factor = 1
 		#Not next reform
 		modifier = {
 			factor = 0
-			NOT = { is_next_reform = unregulated_publishing }
+			NOT = { is_next_reform = free_publishing }
 		}
 		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -3001,7 +3001,7 @@ issues = {
 		#Not next reform
 		modifier = {
 			factor = 0
-			NOT = { is_next_reform = parties_only_nominated }
+			NOT = { is_next_reform = parties_restricted }
 		}
 		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -3093,12 +3093,12 @@ issues = {
 
 # political_parties
 	# parties_not_allowed
-	parties_only_nominated = {
+	parties_restricted = {
 		factor = 1
 		#Not next reform
 		modifier = { 
 			factor = 0
-			NOT = { is_next_reform = parties_only_nominated }
+			NOT = { is_next_reform = parties_restricted }
 		}
 		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -3120,12 +3120,12 @@ issues = {
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.50 } }
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.55 } }
 	}
-	parties_allowed = {
+	parties_fair = {
 		factor = 1
 		#Not next reform
 		modifier = { 
 			factor = 0
-			NOT = { is_next_reform = parties_allowed }
+			NOT = { is_next_reform = parties_fair }
 		}
 		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -3147,12 +3147,12 @@ issues = {
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.50 } }
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.55 } }
 	}
-	parties_promote_democratic = {
+	parties_short = {
 		factor = 1
 		#Not next reform
 		modifier = { 
 			factor = 0
-			NOT = { is_next_reform = parties_promote_democratic }
+			NOT = { is_next_reform = parties_short }
 		}
 		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -3174,13 +3174,13 @@ issues = {
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.50 } }
 		modifier = { factor = 1.10 NOT = { agree_with_ruling_party = 0.55 } }
 	}
-	parties_restrict_non_democratic = {
+	parties_rigged = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0
-			NOT = { is_next_reform = parties_restrict_non_democratic }
+			NOT = { is_next_reform = parties_rigged }
 		}
 		modifier = { factor = 1.25 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 		
@@ -3593,7 +3593,7 @@ rehabilitation = {
 
 # Social Reforms 
 
-# wage_and_work_hours
+# wage_reform
 	# unregulated_hours
 	unregulated_hours = {
 		factor = 1
@@ -3623,13 +3623,13 @@ rehabilitation = {
 		modifier = { factor = 1.10 literacy = 0.40 consciousness = 5 }
 		
 	}
-	eight_work_hours = {
+	trinket_wage = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = eight_work_hours }
+			NOT = { is_next_reform = trinket_wage }
 		}
 		
 		#Rollback gang
@@ -3651,13 +3651,13 @@ rehabilitation = {
 		modifier = { factor = 1.10 literacy = 0.40 consciousness = 5 }
 		
 	}
-	paid_vacation_hours = {
+	low_minimum_wage = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = paid_vacation_hours }
+			NOT = { is_next_reform = low_minimum_wage }
 		}
 		
 		#Rollback gang
@@ -3678,13 +3678,13 @@ rehabilitation = {
 		modifier = { factor = 1.10 literacy = 0.30 consciousness = 5 }
 		modifier = { factor = 1.10 literacy = 0.40 consciousness = 5 }
 	}
-	paid_sick_leave_hours = {
+	acceptable_minimum_wage = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = paid_sick_leave_hours }
+			NOT = { is_next_reform = acceptable_minimum_wage }
 		}
 		
 		#Rollback gang
@@ -3705,13 +3705,13 @@ rehabilitation = {
 		modifier = { factor = 1.10 literacy = 0.30 consciousness = 5 }
 		modifier = { factor = 1.10 literacy = 0.40 consciousness = 5 }
 	}
-	six_hours = {
+	good_minimum_wage = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = six_hours }
+			NOT = { is_next_reform = good_minimum_wage }
 		}
 		
 		#Rollback gang
@@ -3735,14 +3735,14 @@ rehabilitation = {
 	}
 
 # security_reform
-	# police
-	police = {
+	# basic_security
+	basic_security = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = police }
+			NOT = { is_next_reform = basic_security }
 		}
 		
 		#Rollback gang
@@ -3762,40 +3762,13 @@ rehabilitation = {
 		modifier = { factor = 1.25 militancy = 8 }
 		modifier = { factor = 1.25 militancy = 10 }
 	}
-	security_service = {
+	weak_security = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = security_service }
-		}
-		
-		#Rollback gang
-		modifier = { factor = 0.1 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
-		modifier = { factor = 0.5 pop_majority_ideology = big_tent }
-		
-		modifier = { factor = 1.2 strata = rich }
-		
-		modifier = { factor = 0.75 literacy = 0.20 consciousness = 5 }
-		modifier = { factor = 0.75 literacy = 0.25 consciousness = 5 }
-		modifier = { factor = 0.75 literacy = 0.30 consciousness = 5 }
-		modifier = { factor = 0.75 literacy = 0.40 consciousness = 5 }
-		
-		modifier = { factor = 1.25 militancy = 2 }
-		modifier = { factor = 1.25 militancy = 4 }
-		modifier = { factor = 1.25 militancy = 6 }
-		modifier = { factor = 1.25 militancy = 8 }
-		modifier = { factor = 1.25 militancy = 10 }
-		
-	}
-	security_data_cohesion = {
-		factor = 1
-		
-		#Not next reform
-		modifier = { 
-			factor = 0 
-			NOT = { is_next_reform = security_data_cohesion }
+			NOT = { is_next_reform = weak_security }
 		}
 		
 		#Rollback gang
@@ -3816,12 +3789,39 @@ rehabilitation = {
 		modifier = { factor = 1.25 militancy = 10 }
 		
 	}
-	security_clearance_for_gov_services = {
+	acceptable_security = {
+		factor = 1
+		
+		#Not next reform
+		modifier = { 
+			factor = 0 
+			NOT = { is_next_reform = acceptable_security }
+		}
+		
+		#Rollback gang
+		modifier = { factor = 0.1 OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+		modifier = { factor = 0.5 pop_majority_ideology = big_tent }
+		
+		modifier = { factor = 1.2 strata = rich }
+		
+		modifier = { factor = 0.75 literacy = 0.20 consciousness = 5 }
+		modifier = { factor = 0.75 literacy = 0.25 consciousness = 5 }
+		modifier = { factor = 0.75 literacy = 0.30 consciousness = 5 }
+		modifier = { factor = 0.75 literacy = 0.40 consciousness = 5 }
+		
+		modifier = { factor = 1.25 militancy = 2 }
+		modifier = { factor = 1.25 militancy = 4 }
+		modifier = { factor = 1.25 militancy = 6 }
+		modifier = { factor = 1.25 militancy = 8 }
+		modifier = { factor = 1.25 militancy = 10 }
+		
+	}
+	good_security = {
 		factor = 1
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = security_clearance_for_gov_services }
+			NOT = { is_next_reform = good_security }
 		}
 		
 		#Rollback gang
@@ -3841,12 +3841,12 @@ rehabilitation = {
 		modifier = { factor = 1.25 militancy = 8 }
 		modifier = { factor = 1.25 militancy = 10 }
 	}
-	preemptive_security_actions = {
+	excellent_security = {
 		factor = 1
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = preemptive_security_actions }
+			NOT = { is_next_reform = excellent_security }
 		}
 		
 		#Rollback gang
@@ -3869,14 +3869,14 @@ rehabilitation = {
 	}
 
 # safety_regulations
-	# some_regulations
-	some_regulations = {
+	# no_safety
+	no_safety = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = some_regulations }
+			NOT = { is_next_reform = no_safety }
 		}
 		
 		#Rollback gang
@@ -3894,13 +3894,13 @@ rehabilitation = {
 		modifier = { factor = 1.25 literacy = 0.30 consciousness = 5 }
 		modifier = { factor = 1.25 literacy = 0.40 consciousness = 5 }
 	}
-	balanced_regulations = {
+	trinket_safety = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = balanced_regulations }
+			NOT = { is_next_reform = trinket_safety }
 		}
 		
 		#Rollback gang
@@ -3918,13 +3918,13 @@ rehabilitation = {
 		modifier = { factor = 1.25 literacy = 0.30 consciousness = 5 }
 		modifier = { factor = 1.25 literacy = 0.40 consciousness = 5 }
 	}
-	restrictive_regulations = {
+	low_safety = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = restrictive_regulations }
+			NOT = { is_next_reform = low_safety }
 		}
 		
 		#Rollback gang
@@ -3942,13 +3942,13 @@ rehabilitation = {
 		modifier = { factor = 1.25 literacy = 0.30 consciousness = 5 }
 		modifier = { factor = 1.25 literacy = 0.40 consciousness = 5 }
 	}
-	strict_regulations = {
+	acceptable_safety = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = strict_regulations }
+			NOT = { is_next_reform = acceptable_safety }
 		}
 		
 		#Rollback gang
@@ -3966,13 +3966,13 @@ rehabilitation = {
 		modifier = { factor = 1.25 literacy = 0.30 consciousness = 5 }
 		modifier = { factor = 1.25 literacy = 0.40 consciousness = 5 }
 	}
-	rigid_regulations = {
+	good_safety = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = rigid_regulations }
+			NOT = { is_next_reform = good_safety }
 		}
 		
 		#Rollback gang
@@ -4008,13 +4008,13 @@ rehabilitation = {
 		modifier = { factor = 0.75 strata = middle }
 		
 	}
-	minimal_subsidies = { 
+	trinket_subsidies = { 
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = minimal_subsidies }
+			NOT = { is_next_reform = trinket_subsidies }
 		}
 		modifier = { factor = 0.75 OR = { pop_majority_ideology = traditionalist pop_majority_ideology = conservative pop_majority_ideology = liberal } }
 		modifier = { factor = 0.50 pop_majority_ideology = liberal }
@@ -4028,12 +4028,12 @@ rehabilitation = {
 		modifier = { factor = 1.25 unemployment = 0.25 }
 		
 	}
-	ghent_system = { 
+	low_subsidies = { 
 		factor = 1
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = ghent_system }
+			NOT = { is_next_reform = low_subsidies }
 		}
 		modifier = { factor = 0.75 OR = { pop_majority_ideology = traditionalist pop_majority_ideology = conservative pop_majority_ideology = liberal } }
 		modifier = { factor = 0.50 pop_majority_ideology = liberal }
@@ -4046,12 +4046,12 @@ rehabilitation = {
 		modifier = { factor = 1.25 unemployment = 0.20 }
 		modifier = { factor = 1.25 unemployment = 0.25 }
 	}
-	generous_subsidies = { 
+	extended_subsidies = { 
 		factor = 1
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = generous_subsidies }
+			NOT = { is_next_reform = extended_subsidies }
 		}
 		modifier = { factor = 0.75 OR = { pop_majority_ideology = traditionalist pop_majority_ideology = conservative pop_majority_ideology = liberal } }
 		modifier = { factor = 0.50 pop_majority_ideology = liberal }
@@ -4064,12 +4064,12 @@ rehabilitation = {
 		modifier = { factor = 1.25 unemployment = 0.20 }
 		modifier = { factor = 1.25 unemployment = 0.25 }
 	}
-	citizen_salary  = { 
+	universal_subsidies  = { 
 		factor = 1
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = citizen_salary }
+			NOT = { is_next_reform = universal_subsidies }
 		}
 		modifier = { factor = 0.75 OR = { pop_majority_ideology = traditionalist pop_majority_ideology = conservative pop_majority_ideology = liberal } }
 		modifier = { factor = 0.50 pop_majority_ideology = liberal }
@@ -4145,13 +4145,13 @@ rehabilitation = {
 		modifier = { factor = 1.05 unemployment = 0.20 }
 		modifier = { factor = 1.05 unemployment = 0.25 }
 	}
-	supported_child_care = {
+	adequate_child_care = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = supported_child_care }
+			NOT = { is_next_reform = adequate_child_care }
 		}
 		
 		#Rollback gang
@@ -4175,13 +4175,13 @@ rehabilitation = {
 		modifier = { factor = 1.05 unemployment = 0.20 }
 		modifier = { factor = 1.05 unemployment = 0.25 }
 	}
-	parental_leave_child_care = {
+	good_child_care = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = parental_leave_child_care }
+			NOT = { is_next_reform = good_child_care }
 		}
 		
 		#Rollback gang
@@ -4206,13 +4206,13 @@ rehabilitation = {
 		modifier = { factor = 1.05 unemployment = 0.25 }
 		
 	}
-	state_provided_child_care = {
+	generous_child_care = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = state_provided_child_care }
+			NOT = { is_next_reform = generous_child_care }
 		}
 		
 		#Rollback gang
@@ -4701,14 +4701,14 @@ modifier = { factor = 1.05 has_global_flag = zero_five_two }
 	}
 
 # education
-	# self_financed_education
-	self_financed_education = {
+	# private_education
+	private_education = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = self_financed_education }
+			NOT = { is_next_reform = private_education }
 		}
 		
 		#Rollback gang
@@ -4733,13 +4733,13 @@ modifier = { factor = 1.05 has_global_flag = zero_five_two }
 		modifier = { factor = 1.05 unemployment = 0.25 militancy = 1 }
 		
 	}
-	public_education = {
+	weak_public_education = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = public_education }
+			NOT = { is_next_reform = weak_public_education }
 		}
 		
 		#Rollback gang
@@ -4764,13 +4764,13 @@ modifier = { factor = 1.05 has_global_flag = zero_five_two }
 		modifier = { factor = 1.05 unemployment = 0.25 militancy = 1 }
 		
 	}
-	subsidised_higher_education = {
+	competent_public_education = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = subsidised_higher_education }
+			NOT = { is_next_reform = competent_public_education }
 		}
 		
 		#Rollback gang
@@ -4795,13 +4795,13 @@ modifier = { factor = 1.05 has_global_flag = zero_five_two }
 		modifier = { factor = 1.05 unemployment = 0.25 militancy = 1 }
 		
 	}
-	public_higher_education = {
+	good_public_education = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = public_higher_education }
+			NOT = { is_next_reform = good_public_education }
 		}
 		
 		#Rollback gang
@@ -4826,13 +4826,13 @@ modifier = { factor = 1.05 has_global_flag = zero_five_two }
 		modifier = { factor = 1.05 unemployment = 0.25 militancy = 1 }
 		
 	}
-	unlimited_education = {
+	excellent_public_education = {
 		factor = 1
 		
 		#Not next reform
 		modifier = {
 			factor = 0 
-			NOT = { is_next_reform = unlimited_education }
+			NOT = { is_next_reform = excellent_public_education }
 		}
 		
 		#Rollback gang
@@ -4858,15 +4858,15 @@ modifier = { factor = 1.05 has_global_flag = zero_five_two }
 		
 	}
 
-# social_service_reform
-	# no_social_service
-	no_social_service = {
+# public_housing_reform
+	# no_public_housing
+	no_public_housing = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = no_social_service }
+			NOT = { is_next_reform = no_public_housing }
 		}
 		
 		#Rollback gang
@@ -4893,13 +4893,13 @@ modifier = { factor = 1.05 has_global_flag = zero_five_two }
 		modifier = { factor = 1.05 unemployment = 0.25 }
 		
 	}
-	social_services = {
+	minimal_public_housing = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = social_services }
+			NOT = { is_next_reform = minimal_public_housing }
 		}
 		
 		#Rollback gang
@@ -4925,13 +4925,13 @@ modifier = { factor = 1.05 has_global_flag = zero_five_two }
 		modifier = { factor = 1.05 unemployment = 0.20 }
 		modifier = { factor = 1.05 unemployment = 0.25 }
 	}
-	social_abuse_protection = {
+	low_public_housing = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = social_abuse_protection }
+			NOT = { is_next_reform = low_public_housing }
 		}
 		
 		#Rollback gang
@@ -4958,13 +4958,13 @@ modifier = { factor = 1.05 has_global_flag = zero_five_two }
 		modifier = { factor = 1.05 unemployment = 0.25 }
 		
 	}
-	anti_terror_surveillance = {
+	acceptable_public_housing = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = anti_terror_surveillance }
+			NOT = { is_next_reform = acceptable_public_housing }
 		}
 		
 		#Rollback gang
@@ -4990,13 +4990,13 @@ modifier = { factor = 1.05 has_global_flag = zero_five_two }
 		modifier = { factor = 1.05 unemployment = 0.20 }
 		modifier = { factor = 1.05 unemployment = 0.25 }
 	}
-	the_safety_grid = {
+	good_public_housing = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = the_safety_grid }
+			NOT = { is_next_reform = good_public_housing }
 		}
 		
 		#Rollback gang

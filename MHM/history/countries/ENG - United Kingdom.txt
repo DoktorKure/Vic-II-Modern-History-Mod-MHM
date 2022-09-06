@@ -28,28 +28,28 @@ upper_house = {
 	communist = 5
 	}
 # Political Reforms
-political_opinions = free_opinion
+political_opinions = democratic_state_opinion
 minorities_reform = minorities_oppression
 immigration_policy = open_immigration
 civil_service = elitist_service
-political_parties = parties_allowed
+political_parties = parties_fair
 conscription_policy = one_year_draft
-publishing_rights = unregulated_publishing
+publishing_rights = free_publishing
 union_rights = free_trade_unions
 voting_system = first_past_the_post
-vote_franschise = universal_voting
+vote_franschise = free_voting
 public_meetings = free_meetings penal_system = capital_punishment
 # Social Reforms
-safety_regulations = some_regulations
+safety_regulations = no_safety
 pensions = trinket_pensions
-education = self_financed_education
+education = private_education
 health_care = no_health_care
-security_reform = police
+security_reform = basic_security
 child_care = no_child_care
 unemployment_subsidies = no_subsidies
 pollution = no_controls
-wage_and_work_hours = unregulated_hours
-social_service_reform = no_social_service
+wage_reform = unregulated_hours
+public_housing_reform = no_public_housing
 # Technologies
 post_war_radar = 1
 strategic_bomber = 1
@@ -98,16 +98,16 @@ oob = "/ENG_oob.txt"
 	ruling_party = "party_conservative_0_ENG"
 	
 	# Social Reforms
-	safety_regulations = balanced_regulations
+	safety_regulations = trinket_safety
 	pensions = low_pensions
-	education = public_education
+	education = weak_public_education
 	health_care = trinket_health_care
-	security_reform = security_service
+	security_reform = weak_security
 	child_care = no_child_care
-	unemployment_subsidies = minimal_subsidies
+	unemployment_subsidies = trinket_subsidies
 	pollution = no_controls
-	wage_and_work_hours = eight_work_hours
-	social_service_reform = social_services
+	wage_reform = trinket_wage
+	public_housing_reform = minimal_public_housing
 }
 
 1992.1.1 = {
@@ -132,28 +132,28 @@ oob = "/ENG_oob.txt"
 		communist = 6
 		}
 	# Political Reforms
-	political_opinions = open_opinion
+	political_opinions = semi_democratic_state_opinion
 	minorities_reform = minorities_oppression
 	immigration_policy = naturalization
 	civil_service = elitist_service
-	political_parties = parties_allowed
+	political_parties = parties_fair
 	conscription_policy = no_draft
-	publishing_rights = unregulated_publishing
+	publishing_rights = free_publishing
 	union_rights = free_trade_unions
 	voting_system = first_past_the_post
-	vote_franschise = universal_voting
+	vote_franschise = free_voting
 	public_meetings = free_meetings penal_system = capital_punishment
 	# Social Reforms
-	safety_regulations = balanced_regulations
+	safety_regulations = trinket_safety
 	pensions = trinket_pensions
-	education = public_education
+	education = weak_public_education
 	health_care = low_health_care
-	security_reform = security_service
+	security_reform = weak_security
 	child_care = limited_child_care
-	unemployment_subsidies = ghent_system
+	unemployment_subsidies = low_subsidies
 	pollution = low_envir
-	wage_and_work_hours = eight_work_hours
-	social_service_reform = social_services
+	wage_reform = trinket_wage
+	public_housing_reform = minimal_public_housing
 	# Technologies
 	post_war_radar = 1
 	strategic_bomber = 1

@@ -13,7 +13,7 @@ country_event = {
 		tag = BYE
 		year = 1995
 		
-		OR = { government = democracy government = democracy1 government = presidential_dictatorship government = proletarian_dictatorship }
+		OR = { government = democracy government = democracy1 government = presidential_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		is_vassal = no
 	}
@@ -23,15 +23,15 @@ country_event = {
 	option = { #Historic, President dictatorship
 		name = "Appoint a President for Life"
 		relation = { who = RUS value = 50 }
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		ruling_party_ideology = populist
 
 		add_accepted_culture = russian
 		political_reform = ruling_party_opinion
 		political_reform = politicised_service #Politicized
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		
 		ai_chance = { factor = 0.8 }
 	}
@@ -46,9 +46,9 @@ country_event = {
    
 		political_reform = ruling_party_opinion
 		political_reform = politicised_service #Politicized
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		
 		ai_chance = { factor = 0.1 }
 	}
@@ -140,8 +140,8 @@ country_event = {
        name = "The King is the supreme sovereign"
 		prestige = 50
 	political_reform = parties_not_allowed
-       political_reform = registered_voting
-       political_reform = regulated_opinion
+       political_reform = harassed_voting
+       political_reform = appointed_opinion
        political_reform = no_meetings
        political_reform = minorities_oppression
        political_reform = elitist_service
@@ -152,11 +152,11 @@ country_event = {
        name = "Create a socialist state"
        government = proletarian_dictatorship
        ruling_party_ideology = communist
-   political_reform = universal_voting
+   political_reform = free_voting
    political_reform = ruling_party_opinion
    political_reform = limited_meetings
    political_reform = politicised_service #Politicized
-   political_reform = censored_publishing
+   political_reform = state_publishing
    political_reform = state_controlled_unions #State Unions
    political_reform = parties_not_allowed
    political_reform = no_draft #no_draft
@@ -168,12 +168,12 @@ country_event = {
    option = { #Constitutional Monarchy modeled on UK
        name = "Embrace democracy"
        government = hms_government
-political_reform = free_opinion
+political_reform = democratic_state_opinion
 political_reform = minorities_oppression
 political_reform = elitist_service
-political_reform = parties_promote_democratic
-political_reform = firewall_publishing
-political_reform = registered_voting
+political_reform = parties_short
+political_reform = censored_publishing
+political_reform = harassed_voting
 political_reform = limited_meetings
 	ai_chance = { factor = 0.2 }
    }

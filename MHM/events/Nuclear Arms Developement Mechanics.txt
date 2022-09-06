@@ -318,7 +318,7 @@ has_country_flag = is_disabled_for_now
 
 OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
 NOT = { has_country_modifier = nuke_sanctions }
-OR = { government = theocracy government = populist_dictatorship government = nationalist_dictatorship government = presidential_dictatorship  }
+OR = { government = theocracy government = nationalist_dictatorship government = sectarian_dictatorship government = presidential_dictatorship  }
 war = no
 in_sphere = THIS
 is_vassal = no

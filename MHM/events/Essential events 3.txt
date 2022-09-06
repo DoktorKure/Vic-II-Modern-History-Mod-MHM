@@ -947,8 +947,8 @@ SYE = { exists = yes }
 YEM = { is_vassal = no war = no }
 SYE = { is_vassal = no war = no }
 
-RUS = { NOT = { government = proletarian_dictatorship } }
-YEM = { NOT = { government = proletarian_dictatorship } }	
+RUS = { NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+YEM = { NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } }	
 		}
 
 mean_time_to_happen = { months = 6 }
@@ -1406,13 +1406,13 @@ country_event = {
 		#Own Port Arthur
 		1481 = { owned_by = RUS }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		is_vassal = no
 		
 		CHI = { 
 			exists = yes
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no
 		}
 		
@@ -1715,7 +1715,7 @@ country_event = {
 	
 trigger = {
 tag = CHI
-CHI = { government = proletarian_dictatorship }
+CHI = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 exists = KMT
 NOT = { war_with = KMT }
 war = no
@@ -1929,7 +1929,7 @@ country_event = {
 	
 	trigger = { 
 		tag = RUS
-		NOT = { government = proletarian_dictatorship }
+		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		
 		#Higher Education rate prevents this
 		NOT = { literacy = 0.15 }
@@ -2710,13 +2710,13 @@ country_event = {
 		name = "Three cheers for Socialism!"
 		government = socialist_democracy
 		
-		political_reform = universal_voting
-		political_reform = open_opinion
+		political_reform = free_voting
+		political_reform = semi_democratic_state_opinion
 		political_reform = limited_meetings
 		political_reform = elitist_service
 		political_reform = responsible_publishing
 		political_reform = state_controlled_unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = jefferson_method
 		
 		any_country = {
@@ -2764,13 +2764,13 @@ country_event = {
 			owner = { ruling_party_ideology = progressive }
 		}
 		
-		political_reform = universal_voting
-		political_reform = open_opinion
+		political_reform = free_voting
+		political_reform = semi_democratic_state_opinion
 		political_reform = limited_meetings
 		political_reform = elitist_service
 		political_reform = responsible_publishing
 		political_reform = state_controlled_unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = jefferson_method
 		
 		#Domestic reaction
@@ -2839,7 +2839,7 @@ country_event = {
 	
 trigger = { 
 tag = THI
-NOT = { government = proletarian_dictatorship }
+NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 year = 1964
 DAI = { ruling_party_ideology = communist }
 NOT = { year = 1990 }
@@ -2868,6 +2868,7 @@ trigger = {
 tag = THI
 OR = { 
 government = proletarian_dictatorship
+government = proletarian_dictatorship1
 ruling_party_ideology = communist
 AND = { CAM = { ruling_party_ideology = communist } relation = { who = CAM value = 100 } }
 DAI = { NOT = { ruling_party_ideology = communist } }
@@ -4103,7 +4104,7 @@ country_event = {
 		tag = MAD
 		NOT = { year = 1991 }
 
-		NOT = { government = proletarian_dictatorship }
+		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 
 		NOT = { has_country_flag = mad_communist }
 	}
@@ -4248,7 +4249,7 @@ OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nati
 USA = { government = democracy }
 RUS = { OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation } }
 assymetric_warfare = 1
-RUS = { government = proletarian_dictatorship }
+RUS = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 has_country_modifier = cold_war_high
 }
 
@@ -4304,7 +4305,7 @@ USA = { OR = { has_country_modifier = atomic_nation has_country_modifier = hydro
 
 USA = { government = democracy }
 assymetric_warfare = 1
-RUS = { government = proletarian_dictatorship }
+RUS = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 has_country_modifier = cold_war_high
 }
 
@@ -4447,7 +4448,7 @@ tag = KMT
 government = democracy
 ruling_party_ideology = nationalist
 NOT = { war_with = CHI }
-OR = { CHI = { exists = yes } CHI = { government = proletarian_dictatorship } }
+OR = { CHI = { exists = yes } CHI = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
 }
 
 mean_time_to_happen = { 
@@ -4572,7 +4573,7 @@ year = 1959
 war = no
 NOT = { has_country_flag = tibet_visit_by_usa_1 }
 has_country_modifier = superpower
-CHI = { government = proletarian_dictatorship }
+CHI = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 USA = { government = democracy }
 }
 

@@ -13,7 +13,7 @@ country_event = { # A new head of the KGB
 		tag = RUS
 		year = 1965
 		NOT = { year = 1970 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		NOT = { has_country_flag = alexender_shelepin }
 	}
 	
@@ -26,7 +26,7 @@ country_event = { # A new head of the KGB
 		any_pop = { militancy = -3 consciousness = 3 }
 		
 		#Disperse power
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		
 		ai_chance = { factor = 0.9 }
 	}
@@ -56,7 +56,7 @@ country_event = { # Elimination of Fyodor Kulakov
 		tag = RUS
 		year = 1977
 		NOT = { year = 1978 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = andropov_3
 	}
 	
@@ -99,7 +99,7 @@ country_event = { # Elimination of Pyotr Masherov
 		tag = RUS
 		year = 1978
 		NOT = { year = 1979 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = andropov_2
 	}
 	
@@ -142,7 +142,7 @@ country_event = { # Elimination of Dinmoukhammed Kunaev
 		tag = RUS
 		year = 1979
 		NOT = { year = 1980 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = andropov_1
 	}
 	
@@ -185,7 +185,7 @@ country_event = { # Elimination of Yuri Andropov
 		tag = RUS
 		year = 1979
 		NOT = { year = 1982 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = andropov_0
 	}
 	
@@ -229,7 +229,7 @@ country_event = { # Attempt at Reform
     	tag = RUS
 		year = 1982
 		NOT = { year = 1985 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = yuri_andropov
 		NOT = { has_country_flag = brezhnev_resignation }
 	}
@@ -261,7 +261,7 @@ country_event = { # Brezhnev's successor - Vladimir Scherbitsky
     	tag = RUS
 		year = 1982
 		NOT = { year = 1990 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = leonid_brezhnev
 		has_country_flag = vladimir_scherbitsky
 	}
@@ -294,7 +294,7 @@ country_event = { # Expose Corruption
     	tag = RUS
 		year = 1982
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = purge_party
 	}
 	
@@ -356,7 +356,7 @@ country_event = { # Replaced Administration
     	tag = RUS
 		year = 1982
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = purge_party
 		has_country_flag = conservators_exposed
 	}
@@ -423,7 +423,7 @@ country_event = { # Youthfulness
     	tag = RUS
 		year = 1982
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			AND = {
 				has_country_flag = vladimir_scherbitsky
@@ -465,7 +465,7 @@ country_event = { # Suppress the Last Reformist ?
     	tag = RUS
 		year = 1982
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = purge_party
 		has_country_flag = conservators_exposed
 		has_country_flag = administration_exposed
@@ -511,7 +511,7 @@ country_event = { # Beginning of Economic Reorganization
     	tag = RUS
 		year = 1982
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = renewing_economy
 	}
 	
@@ -537,7 +537,7 @@ country_event = { # Automating of Economy ?
     	tag = RUS
 		year = 1982
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = renewing_economy
 		has_country_flag = economic_reorganization
 		NOT = { has_country_flag = ogas_actived }
@@ -573,7 +573,7 @@ country_event = { # Unification of the Eastern Bloc Economy
     	tag = RUS
 		year = 1982
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = renewing_economy
 		has_country_flag = economic_reorganization
 	}
@@ -615,7 +615,7 @@ country_event = { # Legislative Policy
 	option = {
 		name = "The Supreme Soviet makes the laws."
 		
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = elitist_service
 		
 		country_event = 9001065
@@ -633,7 +633,7 @@ country_event = { # Press Supervision
 	option = {
 		name = "We can still influence them."
 		
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		any_pop = { consciousness = 1 }
 		country_event = 9001066
 		ai_chance = { factor = 0.8 }
@@ -642,7 +642,7 @@ country_event = { # Press Supervision
 	option = {
 		name = "Let's give more press freedom."
 		
-		political_reform = unregulated_publishing
+		political_reform = free_publishing
 		any_pop = { consciousness = 2 }
 		country_event = 9001066
 		ai_chance = { factor = 0.2 }
@@ -659,7 +659,7 @@ country_event = { # Trade Union
 	
 	trigger = {
     	tag = RUS
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = minor_political_reform
 		has_country_flag = legislative_policy
 		has_country_flag = press_supervision
@@ -743,7 +743,7 @@ country_event = { # Death of Scherbitsky
     	tag = RUS
 		year = 2001
 		NOT = { year = 2006 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = vladimir_scherbitsky
 	}
 	
@@ -768,7 +768,7 @@ country_event = { # Brezhnev's legacy
     	tag = RUS
 		year = 1986
 		NOT = { year = 1990 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = viktor_grishin
 		
 		money = 1600000
@@ -876,7 +876,7 @@ country_event = { # Death of Grishin - Good Ending
     	tag = RUS
 		year = 1990
 		NOT = { year = 1996 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = viktor_grishin
 		has_country_flag = ussr_brezhnevism
 	}
@@ -905,7 +905,7 @@ country_event = { # Death of Grishin - Bad Ending
     	tag = RUS
 		year = 1990
 		NOT = { year = 1996 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = viktor_grishin
 		NOT = { has_country_flag = ussr_brezhnevism }
 	}
@@ -939,7 +939,7 @@ country_event = { # A Reformer comes to power
 	trigger = {
     	tag = RUS
 		year = 1997
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = ussr_brezhnevism
 	}
 
@@ -974,7 +974,7 @@ country_event = { # Elimination of Reformists
 		tag = RUS
 		year = 1985
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = eliminate_dissenters
 	}
 	
@@ -1008,7 +1008,7 @@ country_event = { # Ideological Checking
 		tag = RUS
 		year = 1985
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = eliminate_dissenters
 		has_country_flag = no_reformist
 		has_country_flag = renewal
@@ -1040,7 +1040,7 @@ country_event = { # New Administrative Method
 		tag = RUS
 		year = 1985
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = eliminate_dissenters
 		has_country_flag = no_reformist
 		has_country_flag = renewal
@@ -1103,7 +1103,7 @@ country_event = { # Rise of Nationalism
 		tag = RUS
 		year = 1985
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = eliminate_dissenters
 		has_country_flag = no_reformist
 		has_country_flag = renewal
@@ -1139,7 +1139,7 @@ country_event = { # The Jewish Question
 		tag = RUS
 		year = 1985
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = eliminate_dissenters
 		has_country_flag = no_reformist
 		has_country_flag = renewal
@@ -1190,7 +1190,7 @@ country_event = { # Automating the Economy ?
 		tag = RUS
 		year = 1988
 		NOT = { year = 1995 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		NOT = {
 			OR = {
 				has_country_flag = partial_automation
@@ -1228,7 +1228,7 @@ country_event = { # Scientific Complex
 		tag = RUS
 		year = 1985
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = new_economic_management
 		NOT = {
 			OR = {
@@ -1260,7 +1260,7 @@ country_event = { # Cultural Development
 		tag = RUS
 		year = 1985
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = new_economic_management
 		has_country_flag = science
 	}
@@ -1288,7 +1288,7 @@ country_event = { # The Fate of the COMECON
 		tag = RUS
 		year = 1985
 		NOT = { year = 2001 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = new_economic_management
 		has_country_flag = science
 		has_country_flag = culture
@@ -1303,7 +1303,7 @@ country_event = { # The Fate of the COMECON
 		badboy = 5
 		any_country = {
 			limit = {
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				capital_scope = { continent = europe }
 				is_vassal = yes
 			}
@@ -1328,7 +1328,7 @@ country_event = { # The Fate of the COMECON
 		badboy = 3
 		any_country = {
 			limit = {
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				capital_scope = { continent = europe }
 				vassal_of = THIS
 			}
@@ -1354,7 +1354,7 @@ country_event = { # Death of Romanov - Good Ending
     	tag = RUS
 		year = 2003
 		NOT = { year = 2010 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = grigori_romanov
 		has_country_modifier = ogas
 	}
@@ -1380,7 +1380,7 @@ country_event = { # Death of Romanov - Bad Ending
     	tag = RUS
 		year = 2003
 		NOT = { year = 2010 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = grigori_romanov
 		has_country_flag = no_ogas
 	}
@@ -1415,7 +1415,7 @@ country_event = { # Gromyko in hospital
     	tag = RUS
 		year = 1987
 		NOT = { year = 1995 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = andrei_gromyko
 	}
 	
@@ -1446,7 +1446,7 @@ country_event = { # Death of Gromyko
     	tag = RUS
 		year = 1987
 		NOT = { year = 1995 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = andrei_gromyko
 		
 		NOT = { has_country_flag = gromyko_alive }
@@ -1514,7 +1514,7 @@ country_event = { # Planned Economy with Market Elements
     	tag = RUS
 		year = 1982
 		NOT = { year = 1997 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = andrei_gromyko
 		has_country_flag = introduction_liberalization
 	}
@@ -1541,7 +1541,7 @@ country_event = { # Small Business
     	tag = RUS
 		year = 1982
 		NOT = { year = 1997 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = andrei_gromyko
 		has_country_flag = PEME
 	}
@@ -1569,7 +1569,7 @@ country_event = { # Price Policy
     	tag = RUS
 		year = 1982
 		NOT = { year = 1997 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = andrei_gromyko
 			has_country_flag = egor_ligatchev
@@ -1684,7 +1684,7 @@ country_event = { # New Immigration Policy in the Eastern Bloc
     	tag = RUS
 		year = 1982
 		NOT = { year = 1997 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = andrei_gromyko
 			has_country_flag = egor_ligatchev
@@ -1700,7 +1700,7 @@ country_event = { # New Immigration Policy in the Eastern Bloc
 		political_reform = quota_immigration
 		any_country = {
 			limit = {
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				capital_scope = { continent = europe }
 				vassal_of = THIS
 			}
@@ -1722,7 +1722,7 @@ country_event = { # Socialist Banking Institution
     	tag = RUS
 		year = 1982
 		NOT = { year = 1997 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = andrei_gromyko
 			has_country_flag = egor_ligatchev
@@ -1738,7 +1738,7 @@ country_event = { # Socialist Banking Institution
 
 		any_country = {
 			limit = {
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				capital_scope = { continent = europe }
 				vassal_of = THIS
 			}
@@ -1766,7 +1766,7 @@ country_event = { # Unification of the Economy
     	tag = RUS
 		year = 1982
 		NOT = { year = 1997 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = andrei_gromyko
 			has_country_flag = egor_ligatchev
@@ -1823,7 +1823,7 @@ country_event = { # Legislative Policy
 		name = "The Supreme Soviet makes the laws."
 		
 		country_event = 9001118
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = professional_service
 		ai_chance = { factor = 0.9 }
 	}
@@ -1842,7 +1842,7 @@ country_event = { # Elections ?
 		
 		country_event = 9001119
 		
-		political_reform = free_opinion
+		political_reform = democratic_state_opinion
 		
 		ai_chance = {
 			factor = 0.9
@@ -1857,7 +1857,7 @@ country_event = { # Elections ?
 		name = "Contested elections within the Party."
 		
 		country_event = 9001119
-		political_reform = open_opinion
+		political_reform = semi_democratic_state_opinion
 		ai_chance = { factor = 0.1 }
 	}
 }
@@ -1875,7 +1875,7 @@ country_event = { # Press Supervision
 		
 		country_event = 9001120
 		
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		
 		any_pop = { consciousness = 1 }
 		
@@ -1893,7 +1893,7 @@ country_event = { # Press Supervision
 		
 		country_event = 9001120
 		
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		
 		any_pop = { consciousness = 2.5 }
 		
@@ -2019,7 +2019,7 @@ country_event = { # Death of Gromyko - Good Ending
     	tag = RUS
 		year = 1997
 		NOT = { year = 2000 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = andrei_gromyko
 		has_country_flag = gromyko_alive
 	}
@@ -2044,7 +2044,7 @@ country_event = { # Return of NEP
 	
 	trigger = {
     	tag = RUS
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = egor_ligatchev
 		has_country_flag = introduction_liberalization
 	}
@@ -2069,7 +2069,7 @@ country_event = { # Beginning of Oligarchy
 	
 	trigger = {
     	tag = RUS
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = egor_ligatchev
 		has_country_flag = new_NEP
 	}
@@ -2114,7 +2114,7 @@ country_event = { # Ligachev's retreat
     	tag = RUS
 		year = 2000
 		NOT = { year = 2006 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = egor_ligatchev
 	}
 	

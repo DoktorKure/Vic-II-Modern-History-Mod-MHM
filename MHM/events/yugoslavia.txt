@@ -10,7 +10,7 @@ country_event = {
 		tag = YUG
 		year = 1980
 		NOT = { year = 1990 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		NOT = { has_country_flag = tito_dead_flag }
 	}
 
@@ -35,7 +35,7 @@ country_event = {
 		tag = YUG
 		year = 1946 
 		NOT = { year = 1960 }
-		government = proletarian_dictatorship   
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }   
 	}
 
 	mean_time_to_happen = { months = 12 }
@@ -81,7 +81,7 @@ country_event = {
 		year = 1948 
 		NOT = { year = 1953 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		
 		NOT = { ruling_party_ideology = communist_social }
@@ -219,7 +219,7 @@ country_event = {
 		year = 1966
 		NOT = { year = 1990 }
 		is_vassal = no
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_global_flag = blocsenabled
 		
 		NOT = { has_country_modifier = centrallow }
@@ -277,7 +277,7 @@ country_event = {
 		year = 1971
 		NOT = { year = 1990 }
 		is_vassal = no
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_global_flag = blocsenabled
 		has_country_flag = rankovic_removed
 		
@@ -410,7 +410,7 @@ country_event = {
 
 	trigger = {
 		tag = YUG
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		year = 1974 
 		NOT = { year = 1990 }
     	is_vassal = no
@@ -573,7 +573,7 @@ country_event = {
 		#USSR has adopted Gorbachev's reforms
 		RUS = { ruling_party_ideology = communist_social }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
     	is_vassal = no
 		war = no
 	}
@@ -861,7 +861,7 @@ country_event = {
 		}
 		
 		SRK = { 
-			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 			ruling_party_ideology = nationalist
 			country_event = 800050
 		}
@@ -965,7 +965,7 @@ country_event = {
 			#Release Republic Sprska
 			release = RSR
 			RSR = { 
-				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				ruling_party_ideology = nationalist
 				country_event = 800050
 			}
@@ -1042,7 +1042,7 @@ country_event = {
 			#Release Republic Sprska
 			release = RSR
 			RSR = { 
-				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				ruling_party_ideology = nationalist
 				country_event = 800050
 			}
@@ -1084,7 +1084,7 @@ country_event = {
 		#Release Croatian Bosnia
 		release = HZB
 		HZB = {
-			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 			ruling_party_ideology = nationalist
 			country_event = 800050
 		}
@@ -1204,7 +1204,7 @@ country_event = {
 	trigger = {
 		tag = RSR
 		year = 1995
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		war_with = BOS
 	}
 
@@ -1549,7 +1549,7 @@ country_event = {
 	id = 8022753
 	title = "The Federal Republic of Yugoslavia"
 	desc = EVTDESC8022753
-	picture = "YUG_1992_populist_dictatorship"
+	picture = "YUG_1992_nationalist_dictatorship"
 
 	fire_only_once = yes
 
@@ -1572,7 +1572,7 @@ country_event = {
 
 	option = {
 		name = "Become a new republic!"
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		ruling_party_ideology = nationalist
 		country_event = 800050
 		ai_chance = { factor = 0.9 }
@@ -1821,7 +1821,7 @@ country_event = {
 		ITA = {
 			exists = yes
 			
-			government = populist_dictatorship 
+			government = nationalist_dictatorship 
 			is_vassal = no
 		}
 		
@@ -1836,7 +1836,7 @@ country_event = {
 		name = "The Coup succeeds"
 		badboy = 5
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		country_event = 800050
 		ruling_party_ideology = populist
 		
@@ -1854,27 +1854,27 @@ country_event = {
 		}
 		
 		random_country = {   
-			limit = { tag = ITA government = populist_dictatorship is_vassal = no }
+			limit = { tag = ITA government = nationalist_dictatorship is_vassal = no }
 			relation = { who = THIS value = 100 }
 		}
 		random_country = {   
-			limit = { tag = FRA OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = FRA OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 75 }
 		}
 		random_country = {   
-			limit = { tag = SPA OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = SPA OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = POR OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = POR OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = FAG OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = FAG OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = GRE OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = GRE OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
@@ -1882,11 +1882,11 @@ country_event = {
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = SAF OR = { government = populist_dictatorship government = nationalist_dictatorship government = democracy } is_vassal = no }
+			limit = { tag = SAF OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = democracy } is_vassal = no }
 			relation = { who = THIS value = 25 }
 		}
 		random_country = {   
-			limit = { tag = RHO OR = { government = populist_dictatorship government = nationalist_dictatorship government = democracy } is_vassal = no }
+			limit = { tag = RHO OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = democracy } is_vassal = no }
 			relation = { who = THIS value = 25 }
 		}
 		
@@ -1906,7 +1906,7 @@ country_event = {
 		}
 		
 		random_country = {   
-			limit = { tag = ITA OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = ITA OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = -150 }
 		}
 		

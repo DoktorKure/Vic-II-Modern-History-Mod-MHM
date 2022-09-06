@@ -34,10 +34,10 @@ country_event = {
 		modifier = { health_care = acceptable_health_care factor = 3 }
 		modifier = { health_care = good_health_care factor = 3 }
 
-		modifier = { safety_regulations = balanced_regulations factor = 1.5 }
-		modifier = { safety_regulations = restrictive_regulations factor = 2 }
-		modifier = { safety_regulations = strict_regulations factor = 2.5 }
-		modifier = { safety_regulations = rigid_regulations factor = 3 }
+		modifier = { safety_regulations = trinket_safety factor = 1.5 }
+		modifier = { safety_regulations = low_safety factor = 2 }
+		modifier = { safety_regulations = acceptable_safety factor = 2.5 }
+		modifier = { safety_regulations = good_safety factor = 3 }
 
 		modifier = { NOT = { any_greater_power = { globalization = 1 } } factor = 3 }
 		
@@ -730,8 +730,8 @@ country_event = {
 
 	mean_time_to_happen = { 
 		months = 2
-		modifier = { publishing_rights = firewall_publishing factor = 3 }
-		modifier = { publishing_rights = censored_publishing factor = 6 }
+		modifier = { publishing_rights = censored_publishing factor = 3 }
+		modifier = { publishing_rights = state_publishing factor = 6 }
 	}
 
 	option = {

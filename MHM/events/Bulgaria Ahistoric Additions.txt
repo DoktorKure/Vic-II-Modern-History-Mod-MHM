@@ -540,7 +540,7 @@ country_event = {
 
 		has_global_flag = blocsenabled
 		
-		RUS = { exists = yes government = proletarian_dictatorship is_greater_power = yes }
+		RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 	}
 
 	mean_time_to_happen = { 
@@ -626,7 +626,7 @@ country_event = {
 		
 		RUS = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			OR = { 
 				ruling_party_ideology = communist_social 
 				has_country_flag = mikhail_gorbachev 
@@ -686,7 +686,7 @@ country_event = {
 		
 		RUS = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			OR = { 
 				ruling_party_ideology = communist_social 
 				has_country_flag = mikhail_gorbachev 
@@ -853,7 +853,7 @@ country_event = {
 		#Sino-Soviet Split
 		CHI = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		}
 		has_global_flag = sino_soviet_split
 
@@ -1016,7 +1016,7 @@ country_event = {
 		#Technocratic Government
 		political_reform = elitist_service
 		political_reform = state_controlled_unions
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 
 		#random_pop = { limit = { type = aristocrats } money = 1000 } 
 		aristocrats = { money = 100 } #Incentive to empower Nomenklatura
@@ -1112,7 +1112,7 @@ country_event = {
 		#Technocratic Government
 		political_reform = elitist_service
 		political_reform = state_controlled_unions
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 		any_pop = { 
@@ -1135,7 +1135,7 @@ country_event = {
 		#Reformist Government
 		political_reform = professional_service
 		political_reform = restricted_unions
-		political_reform = open_opinion
+		political_reform = semi_democratic_state_opinion
 		
 		any_pop = { militancy = -5 consciousness = -5 }
 		any_pop = { 
@@ -1300,7 +1300,7 @@ country_event = {
 		
 		RUS = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			OR = { 
 				ruling_party_ideology = communist_social 
 				has_country_flag = mikhail_gorbachev 
@@ -1377,7 +1377,7 @@ country_event = {
 		
 		RUS = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			OR = { 
 				ruling_party_ideology = communist_social 
 				has_country_flag = mikhail_gorbachev 

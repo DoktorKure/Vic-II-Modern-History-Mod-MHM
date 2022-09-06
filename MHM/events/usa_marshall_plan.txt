@@ -44,7 +44,8 @@ country_event = {
 				exists = yes
 				capital_scope = { continent = europe } 
 				OR = { 
-					government = proletarian_dictatorship 
+					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
 					ruling_party_ideology = communist 
 				}
 			} 
@@ -121,7 +122,8 @@ country_event = {
 				exists = yes
 				capital_scope = { continent = europe } 
 				OR = { 
-					government = proletarian_dictatorship 
+					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
 					ruling_party_ideology = communist 
 				}
 			} 

@@ -30,22 +30,22 @@ immigration_policy = nobody_gets_out
 civil_service = politicised_service
 political_parties = parties_not_allowed
 conscription_policy = two_year_draft
-publishing_rights = censored_publishing
+publishing_rights = state_publishing
 union_rights = no_trade_unions
 voting_system = proportional_representation
 vote_franschise = none_voting
 public_meetings = no_meetings penal_system = capital_punishment
 # Social Reforms
-safety_regulations = balanced_regulations
+safety_regulations = trinket_safety
 pensions = trinket_pensions
-education = public_education
+education = weak_public_education
 health_care = trinket_health_care
-security_reform = preemptive_security_actions
+security_reform = excellent_security
 child_care = no_child_care
-unemployment_subsidies = minimal_subsidies
+unemployment_subsidies = trinket_subsidies
 pollution = no_controls
-wage_and_work_hours = eight_work_hours
-social_service_reform = social_services
+wage_reform = trinket_wage
+public_housing_reform = minimal_public_housing
 # Technologies
 post_war_radar = 1
 infantry = 1
@@ -104,28 +104,28 @@ oob = "/YUG_oob.txt"
 		communist = 5
 	}
 	# Political Reforms
-	political_opinions = regulated_opinion
+	political_opinions = appointed_opinion
 	minorities_reform = minorities_oppression
 	immigration_policy = quota_immigration
 	civil_service = politicised_service
-	political_parties = parties_restrict_non_democratic
+	political_parties = parties_rigged
 	conscription_policy = no_draft
-	publishing_rights = censored_publishing
+	publishing_rights = state_publishing
 	union_rights = state_controlled_unions
 	voting_system = first_past_the_post
-	vote_franschise = registered_voting
+	vote_franschise = harassed_voting
 	public_meetings = no_meetings penal_system = capital_punishment
 	# Social Reforms
-	safety_regulations = balanced_regulations
+	safety_regulations = trinket_safety
 	pensions = trinket_pensions
-	education = public_education
+	education = weak_public_education
 	health_care = trinket_health_care
-	security_reform = security_service
+	security_reform = weak_security
 	child_care = no_child_care
-	unemployment_subsidies = minimal_subsidies
+	unemployment_subsidies = trinket_subsidies
 	pollution = no_controls
-	wage_and_work_hours = eight_work_hours
-	social_service_reform = social_services
+	wage_reform = trinket_wage
+	public_housing_reform = minimal_public_housing
 	# Technologies
 	post_war_radar = 1
 	strategic_bomber = 1

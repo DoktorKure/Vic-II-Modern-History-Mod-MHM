@@ -106,7 +106,7 @@ OR = { government = democracy government = presidential_dictatorship }
 
   option = {
     name = EVT_8014720_A
-	government = populist_dictatorship 
+	government = nationalist_dictatorship 
 	country_event = 800050
 	ruling_party_ideology = socialist
 	ai_chance = { factor = 0.9 }
@@ -131,14 +131,14 @@ country_event = {
     year = 1970 NOT = { year = 1990 }
 	is_vassal = no
 	war = no
-	government = populist_dictatorship
+	government = nationalist_dictatorship
   }
 
   mean_time_to_happen = { months = 6 }
 
   option = {
     name = EVT_8014725_A
-	government = nationalist_dictatorship 
+	government = sectarian_dictatorship 
 	country_event = 800050
 	ruling_party_ideology = socialist
 	ai_chance = { factor = 0.9 }

@@ -655,7 +655,7 @@ country_event = {
 		OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		
-		YUG = { exists = yes government = proletarian_dictatorship is_vassal = no ruling_party_ideology = communist_social }
+		YUG = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no ruling_party_ideology = communist_social }
 		
 		NOT = { OR = { has_country_flag = ugr_moscow has_country_flag = ugr_tito } }
 		has_global_flag = tito_stalin_split
@@ -869,13 +869,13 @@ country_event = {
 	option = {
 		name = "We are the vanguard of Greece!"
 		
-		political_reform = regulated_opinion #Using the event treats it as a 'rebellion'
+		political_reform = appointed_opinion #Using the event treats it as a 'rebellion'
 		political_reform = none_voting #No voting
 		political_reform = limited_meetings
 		political_reform = politicised_service #Politicized
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = open_immigration
 		political_reform = no_draft #no_draft
 		political_reform = minorities_affirmative_action
@@ -1502,8 +1502,8 @@ country_event = {
 		government = proletarian_dictatorship
 		ruling_party_ideology = communist
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes } relation = { who = THIS value = 50 } diplomatic_influence = { who = THIS value = 50 } }
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes } relation = { who = THIS value = 50 } diplomatic_influence = { who = THIS value = 50 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 50 } }
 
 		ai_chance = {
 			factor = 0.9
@@ -1519,8 +1519,8 @@ country_event = {
 		country_event = 800054
 		ruling_party_ideology = socialist
 	   
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes } relation = { who = THIS value = 25 } diplomatic_influence = { who = THIS value = 25 } }
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 25 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes } relation = { who = THIS value = 25 } diplomatic_influence = { who = THIS value = 25 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 25 } }
 
 		ai_chance = {
 			factor = 0.1

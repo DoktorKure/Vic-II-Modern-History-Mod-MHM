@@ -1417,7 +1417,7 @@ country_event = {
 		is_ideology_enabled = socialist
 		age_of_protests = 1
 		NOT = {
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			ruling_party_ideology = socialist
 		}
 	}
@@ -1627,7 +1627,7 @@ country_event = {
 	trigger = {
 		colonial_nation = yes
 		NOT = {
-			publishing_rights = censored_publishing
+			publishing_rights = state_publishing
 		}
 		NOT = {
 			administration_spending = 0.9
@@ -1652,7 +1652,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.9
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 		modifier = {
 			factor = 1.5

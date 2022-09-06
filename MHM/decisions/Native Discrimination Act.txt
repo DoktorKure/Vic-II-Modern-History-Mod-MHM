@@ -287,7 +287,7 @@ has_pop_culture = zulu
 		allow = {
 			war = no
 
-			OR = { citizenship_policy = residency government = nationalist_dictatorship ai = no }
+			OR = { citizenship_policy = residency government = sectarian_dictatorship ai = no }
 			NOT = { citizenship_policy = full_citizenship }
 
 			is_vassal = no

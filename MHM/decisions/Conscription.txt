@@ -46,7 +46,7 @@ political_decisions = {
 					NOT = { conscription_policy = mandatory_service }
 					OR = {
 						conscription_policy = three_year_draft
-						government = populist_dictatorship
+						government = nationalist_dictatorship
 						government = proletarian_dictatorship
 						government = proletarian_dictatorship1
 						has_country_flag = in_great_war
@@ -75,7 +75,7 @@ political_decisions = {
 					conscription_policy = three_year_draft
 					OR = {
 						war_policy = jingoism
-						government = populist_dictatorship
+						government = nationalist_dictatorship
 						government = proletarian_dictatorship
 						government = proletarian_dictatorship1
 						has_country_flag = in_great_war
@@ -91,7 +91,7 @@ political_decisions = {
 					owner = {
 						NOT = { conscription_policy = mandatory_service }
 						OR = {
-							government = populist_dictatorship
+							government = nationalist_dictatorship
 							government = proletarian_dictatorship
 							government = proletarian_dictatorship1
 							has_country_flag = in_great_war

@@ -25,7 +25,7 @@ country_event = {
 		
 		#Communist China
 		exists = CHI
-		CHI = { government = proletarian_dictatorship is_vassal = no }
+		CHI = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 	}
 
 	mean_time_to_happen = { 
@@ -94,7 +94,7 @@ country_event = {
 		
 		#PRC civil war
 		exists = CHI
-		CHI = { owns = 2221 government = proletarian_dictatorship is_vassal = no }
+		CHI = { owns = 2221 OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 		
 		#SKO is not a vassal
      	exists = SKO
@@ -159,7 +159,7 @@ country_event = {
 		
 		#Soviet boycott
 		has_global_flag = blocsenabled
-		CHI = { government = proletarian_dictatorship NOT = { has_country_modifier = unsc_permanent_member } }
+		CHI = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } NOT = { has_country_modifier = unsc_permanent_member } }
 		
 		#Korean War
 		has_global_flag = korea_war
@@ -247,7 +247,7 @@ country_event = {
 		year = 1949 
 		NOT = { year = 1970 }
 	
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		
 		#Cold War

@@ -946,7 +946,7 @@ guiTypes = {
 			########################
 		
 			windowType = {
-			name = "wage_and_work_hours"
+			name = "wage_reform"
 			backGround =""
 			position = { x = 382 y = 58 }
 			size = { x=310 y=100 }
@@ -1170,7 +1170,7 @@ guiTypes = {
 		}
 		
 		windowType = {
-			name = "social_service_reform"
+			name = "public_housing_reform"
 			backGround =""
 			position = { x = 530 y = 358 }
 			size = { x=310 y=100 }
@@ -1181,8 +1181,8 @@ guiTypes = {
 			fullScreen = no
 			
 			iconType = {
-			 name = "politics_social_services"
-			 spriteType = "GFX_politics_social_services"
+			 name = "politics_public_housing"
+			 spriteType = "GFX_politics_public_housing"
 			 position = { x= 10 y = 6 } #WAS { x= 7 y = 7 }
 			 Orientation = "UPPER_LEFT"
 		 }

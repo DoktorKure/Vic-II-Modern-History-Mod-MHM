@@ -59,7 +59,7 @@ country_event = {
 		}
 		
 		#Undermine the Press
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		
 		add_country_modifier = { name = ruling_party_scandal duration = 365 }
 		
@@ -440,7 +440,7 @@ country_event = {
     mean_time_to_happen = { months = 6 }
   
 	option = {
-		name = "Send the police to deal with these delinquents!"
+		name = "Send the basic_security to deal with these delinquents!"
 		
 		#progressive gain popularity
 		any_pop = { 
@@ -489,7 +489,7 @@ country_event = {
 		name = "Perhaps we can meet some of their demands..."
 		
 		#Enact social reforms
-		social_reform = subsidised_higher_education
+		social_reform = competent_public_education
 		
 		#USA loses influence
 		relation = { who = USA value = -50 }
@@ -708,7 +708,7 @@ country_event = {
 		LBY = { 
 			exists = yes 
 			is_vassal = no 
-			OR = { government = nationalist_dictatorship government = populist_dictatorship government = theocracy } 
+			OR = { government = sectarian_dictatorship government = nationalist_dictatorship government = theocracy } 
 		}
 	}
 

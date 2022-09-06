@@ -135,25 +135,25 @@ political_decisions = {
 			
 			#Decision comes with public housing reforms and child care reforms
 			random_owned = {
-				limit = { owner = { social_service_reform = social_abuse_protection } }
-				owner = { social_reform = anti_terror_surveillance }
+				limit = { owner = { public_housing_reform = low_public_housing } }
+				owner = { social_reform = acceptable_public_housing }
 			}
 			random_owned = {
-				limit = { owner = { social_service_reform = social_services } }
-				owner = { social_reform = social_abuse_protection }
+				limit = { owner = { public_housing_reform = minimal_public_housing } }
+				owner = { social_reform = low_public_housing }
 			}
 			random_owned = {
-				limit = { owner = { social_service_reform = no_social_service } }
-				owner = { social_reform = social_services }
+				limit = { owner = { public_housing_reform = no_public_housing } }
+				owner = { social_reform = minimal_public_housing }
 			}
 			
 			random_owned = {
-				limit = { owner = { child_care = supported_child_care } }
-				owner = { social_reform = parental_leave_child_care }
+				limit = { owner = { child_care = adequate_child_care } }
+				owner = { social_reform = good_child_care }
 			}
 			random_owned = {
 				limit = { owner = { child_care = limited_child_care } }
-				owner = { social_reform = supported_child_care }
+				owner = { social_reform = adequate_child_care }
 			}
 			random_owned = {
 				limit = { owner = { child_care = no_child_care } }

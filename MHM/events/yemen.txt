@@ -21,7 +21,7 @@ country_event = {
 
   	option = {
 		name = "End the monarchy!"
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		country_event = 800050
 		ruling_party_ideology = socialist
 
@@ -49,7 +49,7 @@ country_event = {
 
 		#USSR's response
 		random_country = { 
-			limit = { tag = RUS is_greater_power = yes government = proletarian_dictatorship }
+			limit = { tag = RUS is_greater_power = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			country_event = 80182012
 		}
 
@@ -263,7 +263,7 @@ country_event = {
     	year = 1973 
 		NOT = { year = 1990 }
 		
-		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+		OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship }
 		is_vassal = no
 		war = no
 		
@@ -317,7 +317,7 @@ country_event = {
     	year = 1979 
 		NOT = { year = 1990 }
 		
-		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+		OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship }
 		is_vassal = no
 		war = no
 		
@@ -371,7 +371,7 @@ country_event = {
 		year = 1990
 		has_global_flag = south_yemen_civil_war_1986
 		
-		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+		OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship }
 		is_vassal = no
 		war = no
 		
@@ -634,7 +634,7 @@ country_event = {
     	year = 1986
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -646,7 +646,7 @@ country_event = {
 	option = {
 		name = EVT_8018213_A
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		country_event = 800050
 		ruling_party_ideology = socialist
 		
@@ -711,7 +711,7 @@ country_event = { # Yemen Reunification Project?
 		year = 1980
 		NOT = { year = 1986 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		
@@ -727,7 +727,7 @@ country_event = { # Yemen Reunification Project?
 		YEM = { 
 			exists = yes 
 			
-			OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 }
+			OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no
 			war = no
 			
@@ -773,7 +773,7 @@ country_event = { # Investment and Soviet Concession - RUS
 		year = 1991
 		NOT = { year = 1999 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		

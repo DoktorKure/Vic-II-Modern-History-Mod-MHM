@@ -11,7 +11,7 @@ country_event = {
 		NOT = { year = 1990 }
 		OR = { tag = EGY tag = UAR }
 		1827 = { owner = { capital_scope = { continent = europe } } } # Khartoum
-		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+		OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship }
 	}
 
 	mean_time_to_happen = {
@@ -283,7 +283,7 @@ country_event = {
 	option = {
 		name = EVT_8014520_A
 		ai_chance = { factor = 0.9 }
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		country_event = 800050
 		any_pop = { limit = { NOT = { religion = sunni } } militancy = 5.0  consciousness = 5.0 }
 		any_owned = { 

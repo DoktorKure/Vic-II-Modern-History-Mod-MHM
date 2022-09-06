@@ -7,7 +7,7 @@ political_decisions = {
 			NOT = { has_global_flag = 1992_start_date_flag }
 			
 			#Italy is right wing dictatorship and is either an SP or GP
-			OR = { government = populist_dictatorship government = nationalist_dictatorship government = presidential_dictatorship }
+			OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = presidential_dictatorship }
 			
 			#Italy is in NATO
 			has_country_modifier = alliance_nato
@@ -61,8 +61,8 @@ political_decisions = {
 			
 			#Dictatorships or Right Wing governments only
 			OR = { 
-				government = populist_dictatorship 
 				government = nationalist_dictatorship 
+				government = sectarian_dictatorship 
 				government = presidential_dictatorship 
 				government = absolute_monarchy 
 				
@@ -86,7 +86,7 @@ political_decisions = {
 					exists = no
 					is_vassal = yes
 					AND = { is_greater_power = no is_secondary_power = no }
-					NOT = { OR = { government = populist_dictatorship government = nationalist_dictatorship government = presidential_dictatorship } }
+					NOT = { OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = presidential_dictatorship } }
 				} 
 			}
 		}
@@ -131,8 +131,8 @@ political_decisions = {
 				#Member states that are NOT dictatorships or Right Wing governments leave
 				NOT = {
 					OR = { 
-						government = populist_dictatorship 
 						government = nationalist_dictatorship 
+						government = sectarian_dictatorship 
 						government = presidential_dictatorship 
 						government = absolute_monarchy 
 				

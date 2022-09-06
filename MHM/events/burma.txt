@@ -135,10 +135,10 @@ country_event = {
 
 	option = {
 		name = "We begin on the road to socialism!"
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		country_event = 800050
 		ruling_party_ideology = socialist
-		any_owned = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.25 } } }
+		any_owned = { any_pop = { dominant_issue = { value = parties_fair factor = 0.25 } } }
 		any_owned = { any_pop = { dominant_issue = { value = planned_economy factor = 0.25 } } }
 		ai_chance = { factor = 0.8 }
 	}
@@ -209,7 +209,7 @@ country_event = {
 		year = 1974
 		NOT = { year = 1990 }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		war = no
 		
@@ -340,7 +340,7 @@ country_event = {
 		
 		war = no
 		is_vassal = no
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 	}
 
 	mean_time_to_happen = { 
@@ -349,7 +349,7 @@ country_event = {
 
 	option = {
 		name = "The military junta takes over (road to democracy)"
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		ruling_party_ideology = nationalist
 		
 		set_country_flag = 8888_revolt_flag
@@ -383,7 +383,7 @@ country_event = {
 		war = no
 		is_vassal = no
 
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		ruling_party_ideology = nationalist
 	}
 
@@ -396,7 +396,7 @@ country_event = {
 		
 		set_country_flag = 1990_BUR_elections_flag
 		
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		
 		any_pop = { 
 			scaled_militancy = {
@@ -472,7 +472,7 @@ country_event = {
 		war = no
 		is_vassal = no
 
-		OR = { government = populist_dictatorship government = nationalist_dictatorship }
+		OR = { government = nationalist_dictatorship government = sectarian_dictatorship }
 		ruling_party_ideology = nationalist
 	}
 
@@ -520,7 +520,7 @@ country_event = {
 		war = no
 		is_vassal = no
 
-		OR = { government = populist_dictatorship government = nationalist_dictatorship }
+		OR = { government = nationalist_dictatorship government = sectarian_dictatorship }
 		ruling_party_ideology = nationalist
 	}
 
@@ -608,11 +608,11 @@ country_event = {
 		ruling_party_ideology = liberal
 		
 		#Special political set up
-		political_reform = registered_voting
-		political_reform = regulated_opinion
+		political_reform = harassed_voting
+		political_reform = appointed_opinion
 		political_reform = limited_meetings
 		political_reform = politicised_service
-		political_reform = parties_restrict_non_democratic #Restricted campaigning
+		political_reform = parties_rigged #Restricted campaigning
 		political_reform = first_past_the_post
 		
 		set_country_flag = ASSK_BUR_flag

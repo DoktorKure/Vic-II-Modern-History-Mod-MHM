@@ -85,13 +85,13 @@ country_event = { # Rwanda Independence
 		name = "It's the end of the $COUNTRY_ADJ$ union"
 		prestige = -25
 		
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		country_event = 800050
 		ruling_party_ideology = nationalist
 		
 		release = BRN
 		BRN = { 
-			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 			country_event = 800050 
 			ruling_party_ideology = nationalist
 		}
@@ -180,7 +180,7 @@ country_event = {
 
 	option = {
 		name = "Expel the King!"
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		country_event = 800050
 		#remove_accepted_culture = hutu
 		ai_chance = { factor = 0.9 }
@@ -231,10 +231,10 @@ country_event = {
 		year = 1973
 		OR = {
 			primary_culture = tutsi
-			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 		}
 		NOT = { year = 1990 }
-		NOT = { government = populist_dictatorship }
+		NOT = { government = nationalist_dictatorship }
 	}
 	
 	mean_time_to_happen = {
@@ -243,7 +243,7 @@ country_event = {
 	
 	option = {
 		name = "EVT_1029503_A"
-		government = populist_dictatorship country_event = 800050
+		government = nationalist_dictatorship country_event = 800050
 		add_country_modifier = { name = nationalist_agitation duration = 7300 }
 		primary_culture = hutu
 		ai_chance = { factor = 1 }
@@ -271,14 +271,14 @@ country_event = {
 		tag = RWA
 		year = 1992
 		NOT = { year = 1996 }
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 	}
 	
 	mean_time_to_happen = { months = 12 }
 	
 	option = {
 		name = "Kill the Tutsi!"
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		country_event = 800050
 		ruling_party_ideology = nationalist
 		prestige_factor = -0.05
@@ -325,8 +325,8 @@ country_event = {
 			has_country_modifier = ethnic_cleansing
 		}
 		OR = {
-			government = populist_dictatorship
 			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 		}
 	}
 	

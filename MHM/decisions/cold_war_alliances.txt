@@ -413,8 +413,8 @@ political_decisions = {
 					}
 					OR = {
 						government = presidential_dictatorship
-						government = populist_dictatorship
 						government = nationalist_dictatorship
+						government = sectarian_dictatorship
 						government = absolute_monarchy
 					}
 					OR = { 
@@ -565,8 +565,8 @@ political_decisions = {
 					}
 					OR = {
 						government = presidential_dictatorship
-						government = populist_dictatorship
 						government = nationalist_dictatorship
+						government = sectarian_dictatorship
 						government = absolute_monarchy
 					}
 					OR = { 

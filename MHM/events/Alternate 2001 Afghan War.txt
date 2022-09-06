@@ -13,7 +13,7 @@ country_event = { # The Afghan Threat
 		year = 2001
 		NOT = { year = 2011 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		
@@ -171,7 +171,7 @@ country_event = { # Kabul under UN supervision
 		year = 2001
 		NOT = { year = 2011 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -401,7 +401,7 @@ country_event = { # Creation of the Democratic Republic of Afghanistan
 		year = 2005
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		

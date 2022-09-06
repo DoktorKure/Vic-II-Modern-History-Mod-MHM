@@ -796,7 +796,7 @@ random_owned = { limit = { owner = { THIS = { government = proletarian_dictators
 
 random_owned = { limit = { owner = { THIS = { government = theocracy } } } owner = { government = theocracy country_event = 800050 } }
 
-random_owned = { limit = { owner = { THIS = { OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } } } } owner = { government = presidential_dictatorship country_event = 800050 } }
+random_owned = { limit = { owner = { THIS = { OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } } } } owner = { government = presidential_dictatorship country_event = 800050 } }
 
 }
 

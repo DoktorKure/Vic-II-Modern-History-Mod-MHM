@@ -65,13 +65,13 @@ country_event = {
 		add_country_modifier = { name = five_year_plan duration = 1825 }
 		
 		#Enact socialist reforms
-		social_reform = public_education
+		social_reform = weak_public_education
 		social_reform = trinket_health_care
-		social_reform = eight_work_hours
-		social_reform = balanced_regulations
-		social_reform = minimal_subsidies
+		social_reform = trinket_wage
+		social_reform = trinket_safety
+		social_reform = trinket_subsidies
 		social_reform = trinket_pensions
-		social_reform = social_services
+		social_reform = minimal_public_housing
 		
 		#Boost Socialist support
 		any_pop = {
@@ -617,7 +617,7 @@ country_event = {
   id = 8007229
   title = EVT_8007229_NAME
   desc = EVT_8007229_DESC
-  picture = "hyd_police_action"
+  picture = "hyd_basic_security_action"
   
 	fire_only_once = yes
 
@@ -1205,7 +1205,7 @@ country_event = {
   title = EVT_8007280_NAME
   # EVT_8007280_NAME;Naxalite Insurgency
   desc = EVT_8007280_DESC
-  # EVT_8007280_DESC;The term Naxalites comes from Naxalbari, a small village in West Bengal, where a section of the Communist Party of India (Marxist) (CPI-M) led by Charu Majumdar, Kanu Sanyal, and Jangal Santhal initiated a violent uprising in 1967. On 18 May 1967, the Siliguri Kishan Sabha, of which Jangal was the president, declared their support for the movement initiated by Kanu Sanyal, and their readiness to adopt armed struggle to redistribute land to the landless.[14] The following week, a sharecropper near Naxalbari village was attacked by the landlord's men over a land dispute. On 24 May, when a police team arrived to arrest the peasant leaders, it was ambushed by a group of tribals led by Jangal Santhal, and a police inspector was killed in a hail of arrows. This event encouraged many Santhal tribals and other poor people to join the movement and to start attacking local landlords.
+  # EVT_8007280_DESC;The term Naxalites comes from Naxalbari, a small village in West Bengal, where a section of the Communist Party of India (Marxist) (CPI-M) led by Charu Majumdar, Kanu Sanyal, and Jangal Santhal initiated a violent uprising in 1967. On 18 May 1967, the Siliguri Kishan Sabha, of which Jangal was the president, declared their support for the movement initiated by Kanu Sanyal, and their readiness to adopt armed struggle to redistribute land to the landless.[14] The following week, a sharecropper near Naxalbari village was attacked by the landlord's men over a land dispute. On 24 May, when a basic_security team arrived to arrest the peasant leaders, it was ambushed by a group of tribals led by Jangal Santhal, and a basic_security inspector was killed in a hail of arrows. This event encouraged many Santhal tribals and other poor people to join the movement and to start attacking local landlords.
   picture = "naxalite"
   
 	fire_only_once = yes
@@ -1277,7 +1277,7 @@ country_event = {
   title = EVT_8007282_NAME
   # EVT_8007282_NAME;Naxalite Civil War
   desc = EVT_8007280_DESC
-  # EVT_8007282_DESC;The April 2010 Dantewada Maoist attack, was an ambush by Naxalite-Maoist insurgents from the Communist Party of India (Maoist) near Chintalnar village in Dantewada district, Chhattisgarh, India, leading to the killing of 76 CRPF policemen and 8 Maoists — the deadliest attack by the Maoists on Indian security forces. The attack occurred when over 80 officers from the central paramilitary force Central Reserve Police Force (CRPF) and a local police group were conducting an area domination exercise in the Bastar tribal region of the Indian state of Chhattisgarh. This is nolonger a mere insurgency, it is a civil war!
+  # EVT_8007282_DESC;The April 2010 Dantewada Maoist attack, was an ambush by Naxalite-Maoist insurgents from the Communist Party of India (Maoist) near Chintalnar village in Dantewada district, Chhattisgarh, India, leading to the killing of 76 CRPF basic_securitymen and 8 Maoists — the deadliest attack by the Maoists on Indian security forces. The attack occurred when over 80 officers from the central paramilitary force Central Reserve Police Force (CRPF) and a local basic_security group were conducting an area domination exercise in the Bastar tribal region of the Indian state of Chhattisgarh. This is nolonger a mere insurgency, it is a civil war!
   picture = "naxalite_civil_war"
   
 	fire_only_once = yes

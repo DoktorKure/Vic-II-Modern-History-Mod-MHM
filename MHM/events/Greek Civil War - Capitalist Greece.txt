@@ -535,7 +535,7 @@ country_event = {
 		UGR = {
 			exists = yes
 			
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no
 			war = no
 		}
@@ -717,7 +717,7 @@ country_event = {
 		UGR = {
 			exists = yes
 			
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no
 			war = no
 		}
@@ -909,7 +909,7 @@ country_event = {
 		UGR = {
 			exists = yes
 			
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no
 			war = no
 		}
@@ -963,7 +963,7 @@ country_event = {
 		UGR = {
 			exists = yes
 			
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no
 			
 		}
@@ -1185,8 +1185,8 @@ country_event = {
 
 		ruling_party_ideology = communist_social
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes } relation = { who = THIS value = -25 } diplomatic_influence = { who = THIS value = -50 } }
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 25 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes } relation = { who = THIS value = -25 } diplomatic_influence = { who = THIS value = -50 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 25 } }
 
 		ai_chance = {
 			factor = 0.2
@@ -1200,8 +1200,8 @@ country_event = {
 
 		ruling_party_ideology = communist
 	   
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes } relation = { who = THIS value = 25 } diplomatic_influence = { who = THIS value = 50 } }
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -25 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes } relation = { who = THIS value = 25 } diplomatic_influence = { who = THIS value = 50 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -25 } }
 
 		ai_chance = {
 			factor = 0.1

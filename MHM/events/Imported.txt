@@ -115,12 +115,12 @@ country_event = {
 			owner = { FROM = { government = presidential_dictatorship country_event = 800050 } }
 		}
 		random_owned = { 
-			limit = { owner = { government = populist_dictatorship } }
-			owner = { FROM = { government = populist_dictatorship country_event = 800050 } }
-		}
-		random_owned = { 
 			limit = { owner = { government = nationalist_dictatorship } }
 			owner = { FROM = { government = nationalist_dictatorship country_event = 800050 } }
+		}
+		random_owned = { 
+			limit = { owner = { government = sectarian_dictatorship } }
+			owner = { FROM = { government = sectarian_dictatorship country_event = 800050 } }
 		}
 
 		#Republic

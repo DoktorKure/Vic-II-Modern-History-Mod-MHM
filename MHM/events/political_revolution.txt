@@ -280,6 +280,7 @@ country_event = { #The New Regime- traditionalist
 					government = democracy
 					government = hms_government
 					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
 				}
 				NOT = {
 					has_country_flag = former_sphere_leader
@@ -302,6 +303,7 @@ country_event = { #The New Regime- traditionalist
 				NOT = {
 					OR = {
 						government = proletarian_dictatorship
+						government = proletarian_dictatorship1
 						government = theocracy
 						government = democracy
 						government = hms_government
@@ -335,6 +337,7 @@ country_event = { #The New Regime- traditionalist
 					government = democracy
 					government = hms_government
 					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
 				}
 				is_greater_power = no
 				NOT = { 
@@ -353,6 +356,7 @@ country_event = { #The New Regime- traditionalist
 				NOT = {
 					OR = {
 						government = proletarian_dictatorship
+						government = proletarian_dictatorship1
 						government = theocracy
 						government = democracy
 						government = hms_government
@@ -486,7 +490,7 @@ country_event = { # The New Regime - Communist
 					neighbour = THIS
 					is_culture_group = THIS
 				}
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				NOT = {
 					has_country_flag = former_sphere_leader
 					has_country_flag = former_overlord
@@ -502,7 +506,7 @@ country_event = { # The New Regime - Communist
 			limit = {
 				neighbour = THIS
 				civilized = yes
-				NOT = { government = proletarian_dictatorship }
+				NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			}
 			any_pop = {
 				scaled_militancy = {
@@ -514,7 +518,7 @@ country_event = { # The New Regime - Communist
 		any_country = {
 			limit = { 
 				NOT = {
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				has_country_flag = former_sphere_leader
 					has_country_flag = former_overlord
 				}
@@ -532,7 +536,7 @@ country_event = { # The New Regime - Communist
 		}
 		any_country = {
 			limit = { 
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				NOT = {
 					has_country_flag = former_sphere_leader
 					has_country_flag = former_overlord
@@ -545,7 +549,7 @@ country_event = { # The New Regime - Communist
 		}
 		any_country = {
 			limit = { 
-		NOT = { government = proletarian_dictatorship }
+		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 				is_greater_power = no
 				NOT = {
 				has_country_flag = former_sphere_leader
@@ -710,7 +714,7 @@ country_event = { # The New Regime - Democracy
 		}
 		any_country = {
 			limit = {
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				NOT = { 
 					has_country_flag = former_sphere_leader
 					has_country_flag = former_overlord
@@ -727,6 +731,7 @@ country_event = { # The New Regime - Democracy
 				NOT = {
 					OR = {
 						government = proletarian_dictatorship
+						government = proletarian_dictatorship1
 						government = theocracy
 						government = democracy
 						government = hms_government
@@ -749,6 +754,7 @@ country_event = { # The New Regime - Democracy
 			limit = { 
 				OR = {
 					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
 					government = theocracy
 				}
 				NOT = { has_country_flag = former_overlord }
@@ -777,6 +783,7 @@ country_event = { # The New Regime - Democracy
 				NOT = {
 					OR = {
 						government = proletarian_dictatorship
+						government = proletarian_dictatorship1
 						government = theocracy
 						government = democracy
 						government = hms_government
@@ -823,7 +830,7 @@ country_event = { #The New Regime - populist or dictatorship
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
 		#removed
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = no_trade_unions
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
@@ -854,7 +861,7 @@ country_event = { #The New Regime- traditionalist
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
 		#removed
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = no_trade_unions
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
@@ -878,7 +885,7 @@ country_event = { # The New Regime - Communist
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
 		#removed
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = no_trade_unions
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
@@ -939,18 +946,18 @@ country_event = { # The New Regime - Democracy
 		
 		# from rebel_types
 
-		random_owned = { limit = { owner = { vote_franschise = none_voting } } owner = { political_reform = universal_weighted_voting } }	
+		random_owned = { limit = { owner = { vote_franschise = none_voting } } owner = { political_reform = rigged_voting } }	
 
-		random_owned = { limit = { owner = { political_opinions = ruling_party_opinion } } owner = { political_reform = open_opinion } }	
+		random_owned = { limit = { owner = { political_opinions = ruling_party_opinion } } owner = { political_reform = semi_democratic_state_opinion } }	
 
 
 		random_owned = { limit = { owner = { public_meetings = no_meetings } } owner = { political_reform = limited_meetings } }	
 
-		random_owned = { limit = { owner = { publishing_rights = censored_publishing } } owner = { political_reform = responsible_publishing } }
+		random_owned = { limit = { owner = { publishing_rights = state_publishing } } owner = { political_reform = responsible_publishing } }
 		
 		random_owned = { limit = { owner = { union_rights = no_trade_unions } } owner = { political_reform = restricted_unions } } 
 
-		random_owned = { limit = { owner = { political_parties = parties_not_allowed } } owner = { political_reform = parties_restrict_non_democratic } }
+		random_owned = { limit = { owner = { political_parties = parties_not_allowed } } owner = { political_reform = parties_rigged } }
 
 		# end - from rebel_types	
 	}
@@ -975,14 +982,14 @@ country_event = { # The New Regime Form of Government
 
 	option = {
 		name = "Become a Nationalist Dictatorship"
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		country_event = 800050 
 		ai_chance = { factor = 0 }
 	}
 
 	option = {
 		name = "Become a Sectarian Regime"
-		government = nationalist_dictatorship 
+		government = sectarian_dictatorship 
 		country_event = 800050 
 		ai_chance = { factor = 0 }
 	}
@@ -1312,10 +1319,11 @@ country_event = {
 				factor = 0.25
 				OR = {
 					government = absolute_monarchy
-					government = nationalist_dictatorship
+					government = sectarian_dictatorship
 					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
 					government = presidential_dictatorship
-					government = populist_dictatorship
+					government = nationalist_dictatorship
 					government = theocracy
 				}
 			}
@@ -1383,10 +1391,11 @@ country_event = {
 				factor = 0.25
 				OR = {
 					government = absolute_monarchy
-					government = nationalist_dictatorship
+					government = sectarian_dictatorship
 					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
 					government = presidential_dictatorship
-					government = populist_dictatorship
+					government = nationalist_dictatorship
 					government = theocracy
 				}
 			}
@@ -1459,10 +1468,11 @@ OR = { government = hms_government government = hms_government1 government = dem
 				factor = 1.75
 				OR = {
 					government = absolute_monarchy
-					government = nationalist_dictatorship
+					government = sectarian_dictatorship
 					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
 					government = presidential_dictatorship
-					government = populist_dictatorship
+					government = nationalist_dictatorship
 					government = theocracy
 				}
 			}
@@ -1570,10 +1580,11 @@ country_event = {
 				factor = 0.25
 				OR = {
 					government = absolute_monarchy
-					government = nationalist_dictatorship
+					government = sectarian_dictatorship
 					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
 					government = presidential_dictatorship
-					government = populist_dictatorship
+					government = nationalist_dictatorship
 					government = theocracy
 				}
 			}
@@ -1667,10 +1678,11 @@ country_event = {
 				factor = 1.75
 				OR = {
 					government = absolute_monarchy
-					government = nationalist_dictatorship
+					government = sectarian_dictatorship
 					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
 					government = presidential_dictatorship
-					government = populist_dictatorship
+					government = nationalist_dictatorship
 					government = theocracy
 				}
 			}

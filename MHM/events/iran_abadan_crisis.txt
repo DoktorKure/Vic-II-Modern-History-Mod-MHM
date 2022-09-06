@@ -403,7 +403,7 @@ country_event = {
 
 		remove_country_modifier = embargo_nation
 
-		any_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.3 } } }
+		any_state = { any_pop = { dominant_issue = { value = parties_fair factor = 0.3 } } }
 		any_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.35 } } }
 	}
 

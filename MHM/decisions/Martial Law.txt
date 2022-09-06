@@ -145,17 +145,17 @@ political_decisions = {
 			#What press laws to revert back to
 			random_owned = { 
 				limit = { owner = { publishing_rights = responsible_publishing } }
-				owner = { political_reform = censored_publishing set_country_flag = return_to_responsible_publishing }
+				owner = { political_reform = state_publishing set_country_flag = return_to_responsible_publishing }
 			}
 
 			random_owned = { 
-				limit = { owner = { publishing_rights = unregulated_publishing } }
-				owner = { political_reform = censored_publishing set_country_flag = return_to_unregulated_publishing }
+				limit = { owner = { publishing_rights = free_publishing } }
+				owner = { political_reform = state_publishing set_country_flag = return_to_unregulated_publishing }
 			}
 
 			random_owned = { 
-				limit = { owner = { publishing_rights = firewall_publishing } }
-				owner = { political_reform = censored_publishing set_country_flag = return_to_firewall_publishing }
+				limit = { owner = { publishing_rights = censored_publishing } }
+				owner = { political_reform = state_publishing set_country_flag = return_to_firewall_publishing }
 			}
 
 			add_country_modifier = { name = martial_law duration = -1 }
@@ -206,11 +206,11 @@ political_decisions = {
 			}
 			random_owned = { 
 				limit = { owner = { has_country_flag = return_to_unregulated_publishing} }
-				owner = { political_reform = unregulated_publishing clr_country_flag = return_to_unregulated_publishing }
+				owner = { political_reform = free_publishing clr_country_flag = return_to_unregulated_publishing }
 			}
 			random_owned = { 
 				limit = { owner = { has_country_flag = return_to_firewall_publishing } }
-				owner = { political_reform = firewall_publishing clr_country_flag = return_to_firewall_publishing }
+				owner = { political_reform = censored_publishing clr_country_flag = return_to_firewall_publishing }
 			}
 
 			remove_country_modifier = martial_law

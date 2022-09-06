@@ -260,7 +260,7 @@ country_event = {
 		year = 1962
 		NOT = { year = 1990 }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		war = yes
 		
@@ -322,7 +322,7 @@ country_event = {
 		year = 1973
 		NOT = { year = 1990 }
 		
-		OR = { government = nationalist_dictatorship government = populist_dictatorship }
+		OR = { government = sectarian_dictatorship government = nationalist_dictatorship }
 		is_vassal = no
 		OR = { war_with = GUB truce_with = GUB }
 		
@@ -419,7 +419,7 @@ country_event = {
 		year = 1968
 		NOT = { year = 1978 }
 		
-		OR = { government = nationalist_dictatorship government = populist_dictatorship }
+		OR = { government = sectarian_dictatorship government = nationalist_dictatorship }
 		is_vassal = no
 		
 		OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist }
@@ -525,7 +525,7 @@ country_event = {
 		year = 1970
 		NOT = { year = 1990 }
 		
-		OR = { government = nationalist_dictatorship government = populist_dictatorship }
+		OR = { government = sectarian_dictatorship government = nationalist_dictatorship }
 		
 		OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist }
 	}
@@ -557,7 +557,7 @@ country_event = {
 		year = 1971
 		NOT = { year = 1990 }
 		
-		OR = { government = nationalist_dictatorship government = populist_dictatorship }
+		OR = { government = sectarian_dictatorship government = nationalist_dictatorship }
 		is_vassal = no
 		war = no
 		
@@ -613,7 +613,7 @@ country_event = {
 		tag = POR
 		has_country_flag = carnation_revolution
 		
-		OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship }
+		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
 		is_vassal = no
 		war = no
 		
@@ -743,12 +743,12 @@ country_event = {
 		# Timor -> indonesia.txt events
 		
 		#Set social reforms
-		social_reform = the_safety_grid
-		social_reform = unlimited_education
+		social_reform = good_public_housing
+		social_reform = excellent_public_education
 		social_reform = good_health_care
 		social_reform = good_pensions
-		social_reform = citizen_salary 
-		social_reform = six_hours
+		social_reform = universal_subsidies 
+		social_reform = good_minimum_wage
 		
 		#Domestic politics
 		any_pop = {
@@ -844,7 +844,7 @@ country_event = {
 		random_country = {
 			limit = { 
 				tag = GUB 
-				government = proletarian_dictatorship 
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 				is_vassal = no 
 			}
 			create_alliance = CPV
@@ -956,7 +956,7 @@ country_event = {
 		
 		#International reaction
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 400 }
 			diplomatic_influence  = { who = THIS value = 200 }
 		}		
@@ -987,7 +987,7 @@ country_event = {
 		year = 1990
 		NOT = { year = 2000 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -1050,7 +1050,7 @@ country_event = {
 		name = "The Armed Forces take full power"
 		prestige = -50
 		
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		ruling_party_ideology = socialist
 		
 		any_pop = { 
@@ -1144,7 +1144,7 @@ country_event = {
 		year = 1976
 		NOT = { year = 1990 }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		war = no
 		
@@ -1196,7 +1196,7 @@ country_event = {
 		year = 1978
 		NOT = { year = 1990 }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		war = no
 		

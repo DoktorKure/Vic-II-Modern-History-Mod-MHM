@@ -12,13 +12,13 @@ country_event = {
 		year = 1962 
 		NOT = { year = 1990 }
 	
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
     	war = no
 		
 		#Cuba is communist
 		CUB = {
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no
 			war = no
 		
@@ -131,7 +131,7 @@ country_event = {
 		
 		#Cuba is communist
 		CUB = {
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no
 			war = no
 		
@@ -208,7 +208,7 @@ country_event = {
 		
 		#Cuba is communist
 		CUB = {
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no
 			war = no
 		

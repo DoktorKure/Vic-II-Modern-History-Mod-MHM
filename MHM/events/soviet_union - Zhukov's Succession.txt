@@ -12,7 +12,7 @@ country_event = { # Budget Allocation of $YEAR$
 		tag = RUS
 		year = 1967
 		NOT = { year = 1970 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = dmitry_ustinov
 	}
 
@@ -71,7 +71,7 @@ country_event = { # The Zhukov Economy Model
 		year = 1970
 		NOT = { year = 1975 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -119,7 +119,7 @@ country_event = { # Which Branch of the Army Favored?
 		year = 1973
 		NOT = { year = 1978 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		
@@ -175,7 +175,7 @@ country_event = { # The Army in Space
 		tag = RUS
 		year = 1975
 		NOT = { year = 1983 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = dmitry_ustinov
 	}
 
@@ -231,7 +231,7 @@ country_event = { # Death of Ustinov
 		tag = RUS
 		year = 1983
 		NOT = { year = 1986 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = dmitry_ustinov
 	}
 
@@ -262,7 +262,7 @@ country_event = { # Political reform?
 		year = 1986
 		NOT = { year = 1988 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -325,7 +325,7 @@ country_event = { # Legislative Policy
 		
 		set_country_flag = ussr_parliament
 		
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = professional_service
 		any_pop = { consciousness = 2 militancy = 2 }
 		country_event = 9001297
@@ -498,7 +498,7 @@ country_event = { # Determining our Economic Model - Zhukov Reform
 		year = 1986
 		NOT = { year = 1989 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -554,7 +554,7 @@ country_event = { # Determining our Economic Model - Not Zhukov Reform
 		year = 1986
 		NOT = { year = 1989 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -622,7 +622,7 @@ country_event = { # Militarization of the Soviet Union
 		year = 1990
 		NOT = { year = 1995 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		has_country_flag = sergei_sokolov
 		
@@ -665,7 +665,7 @@ country_event = { # A Preserved Soviet Union
 		year = 1990
 		NOT = { year = 1995 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -715,7 +715,7 @@ country_event = { # A Modernized Soviet Union
 		year = 1990
 		NOT = { year = 1995 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -770,7 +770,7 @@ country_event = { # Proclamation of the Union of Sovereign Soviet Respublics
 		year = 1990
 		NOT = { year = 1995 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -821,7 +821,7 @@ country_event = { # Death of Sokolov - Military Ending
 		year = 2010
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		has_country_flag = sergei_sokolov
 		has_country_flag = ussr_military_ending
@@ -851,7 +851,7 @@ country_event = { # Death of Sokolov - Conservators Ending
 		year = 2010
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		has_country_flag = sergei_sokolov
 		
@@ -893,6 +893,7 @@ country_event = { # Death of Sokolov - Reformist Ending
 		NOT = { year = 2015 }
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 		has_country_flag = sergei_sokolov

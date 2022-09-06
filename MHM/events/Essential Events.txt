@@ -131,7 +131,7 @@ country_event = {
 		OR = { NOT = { year = 1955 } war = no }
 		tag = CHI
 		ai = yes
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war_with = KMT
 		NOT = { money = 1000000 }
 
@@ -377,7 +377,7 @@ country_event = {
 		NOT = { year = 1946 }
 		NOT = { has_country_flag = third }
 		NOT = { OR = { tag = SNG tag = HKG tag = ISR tag = AST tag = NZL tag = SAF tag = RHO tag = MSY tag = BRU tag = JAP tag = SKO tag = KOR tag = KMT tag = RUS } } 
-OR = { government = proletarian_dictatorship government = presidential_dictatorship government = theocracy tag = PAK }
+OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = theocracy tag = PAK }
 			}
 	
 	option = {
@@ -485,7 +485,7 @@ country_event = {
 	trigger = {
 		NOT = { year = 1955 }
 		exists = CHI
-		CHI = { government = proletarian_dictatorship }
+		CHI = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		NOT = { has_country_flag = releasekmt }
 		tag = TAI
 		NOT = { exists = KMT }
@@ -1015,7 +1015,7 @@ country_event = {
 		year = 1975
 		is_greater_power = yes
 		NOT = { has_country_flag = gg }
-		NOT = { AND = { government = proletarian_dictatorship ruling_party_ideology = communist } }
+		NOT = { AND = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist } }
 	}
 	
 	mean_time_to_happen = { months = 6 }
@@ -1037,7 +1037,7 @@ country_event = {
 	
 	trigger = {
 		has_country_flag = gg
-		OR = { is_greater_power = no AND = { government = proletarian_dictatorship ruling_party_ideology = communist } }
+		OR = { is_greater_power = no AND = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist } }
 	}
 	
 	mean_time_to_happen = { months = 6 }
@@ -1122,7 +1122,7 @@ country_event = {
 		NOT = { tag = ENG }
 		NOT = { tag = USA }
 		NOT = { tag = SNG }
-		NOT = { government = proletarian_dictatorship }
+		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		NOT = { has_country_flag = postwarprotectionism }
 	}
 	

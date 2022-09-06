@@ -70,9 +70,9 @@ country_event = {
 		ruling_party_ideology = big_tent
 		
 		#Weaken Finnish democracy
-		political_reform = regulated_opinion
-		political_reform = registered_voting
-		political_reform = parties_restrict_non_democratic
+		political_reform = appointed_opinion
+		political_reform = harassed_voting
+		political_reform = parties_rigged
 		political_reform = politicised_service
 		
 		any_pop = { 

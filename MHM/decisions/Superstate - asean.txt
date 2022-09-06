@@ -19,7 +19,7 @@ political_decisions = {
 				part_of_sphere = no 
 				sphere_owner = { OR = { has_country_flag = xan_ambition NOT = { has_country_flag = deny_superstate } } }
 			}
-			NOT = { OR = { government = theocracy government = nationalist_dictatorship government = populist_dictatorship } }
+			NOT = { OR = { government = theocracy government = sectarian_dictatorship government = nationalist_dictatorship } }
 			new_synthesis = 1
 			war = no
 			is_vassal = no
@@ -57,7 +57,7 @@ political_decisions = {
 		allow = {
 			OR = {
 				AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_flag = xan_ambition } has_country_flag = deny_superstate } }
-				OR = { government = theocracy government = nationalist_dictatorship government = populist_dictatorship }
+				OR = { government = theocracy government = sectarian_dictatorship government = nationalist_dictatorship }
 				has_country_modifier = in_bankrupcy
 			}
 			war = no

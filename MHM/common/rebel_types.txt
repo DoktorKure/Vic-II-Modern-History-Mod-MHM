@@ -29,8 +29,8 @@ pan_nationalist_rebels = {
 		theocracy = theocracy
 		proletarian_dictatorship = proletarian_dictatorship
 		presidential_dictatorship = presidential_dictatorship
+		sectarian_dictatorship = sectarian_dictatorship
 		nationalist_dictatorship = nationalist_dictatorship
-		populist_dictatorship = populist_dictatorship
 		absolute_monarchy = absolute_monarchy
 		hms_government = hms_government
 		hms_government1 = hms_government1
@@ -280,8 +280,8 @@ royalist_rebels = {
 		theocracy = hms_government
 		proletarian_dictatorship = hms_government
 		presidential_dictatorship = hms_government
+		sectarian_dictatorship = hms_government
 		nationalist_dictatorship = hms_government
-		populist_dictatorship = hms_government
 		absolute_monarchy = absolute_monarchy
 		hms_government = absolute_monarchy
 		democracy = hms_government
@@ -483,8 +483,8 @@ militant_suffrage_rebels = {
 	theocracy = theocracy
 	proletarian_dictatorship = proletarian_dictatorship 
 	presidential_dictatorship = presidential_dictatorship 
+	sectarian_dictatorship = sectarian_dictatorship 
 	nationalist_dictatorship = nationalist_dictatorship 
-	populist_dictatorship = populist_dictatorship 
 	absolute_monarchy = absolute_monarchy
 	hms_government = hms_government 
 	democracy = democracy
@@ -700,8 +700,8 @@ militant_environmentalists = {
 	theocracy = theocracy
 	proletarian_dictatorship = proletarian_dictatorship 
 	presidential_dictatorship = presidential_dictatorship 
+	sectarian_dictatorship = sectarian_dictatorship 
 	nationalist_dictatorship = nationalist_dictatorship 
-	populist_dictatorship = populist_dictatorship 
 	absolute_monarchy = absolute_monarchy
 	hms_government = hms_government 
 	democracy = democracy
@@ -899,8 +899,8 @@ anti_colonial_rebels = {
 	theocracy = theocracy
 	proletarian_dictatorship = proletarian_dictatorship 
 	presidential_dictatorship = presidential_dictatorship
-	nationalist_dictatorship = nationalist_dictatorship
-	populist_dictatorship = populist_dictatorship 
+	sectarian_dictatorship = sectarian_dictatorship
+	nationalist_dictatorship = nationalist_dictatorship 
 	absolute_monarchy = absolute_monarchy 
 	hms_government = hms_government 
 	democracy = democracy
@@ -1104,8 +1104,8 @@ reactionary_rebels = {
 		theocracy = presidential_dictatorship
 		proletarian_dictatorship = presidential_dictatorship
 		presidential_dictatorship = absolute_monarchy
+		sectarian_dictatorship = presidential_dictatorship
 		nationalist_dictatorship = presidential_dictatorship
-		populist_dictatorship = presidential_dictatorship
 		absolute_monarchy = presidential_dictatorship
 		hms_government = absolute_monarchy
 		democracy = presidential_dictatorship
@@ -1250,8 +1250,8 @@ reactionary_rebels = {
 					government = absolute_monarchy
 					
 					government = presidential_dictatorship
-					government = populist_dictatorship
 					government = nationalist_dictatorship
+					government = sectarian_dictatorship
 					
 					government = proletarian_dictatorship
 					government = proletarian_dictatorship1
@@ -1321,7 +1321,7 @@ reactionary_rebels = {
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
 		political_reform = politicised_service
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
@@ -1364,8 +1364,8 @@ left_reactionary_rebels = {
 		theocracy = presidential_dictatorship
 		proletarian_dictatorship = presidential_dictatorship
 		presidential_dictatorship = presidential_dictatorship
+		sectarian_dictatorship = presidential_dictatorship
 		nationalist_dictatorship = presidential_dictatorship
-		populist_dictatorship = presidential_dictatorship
 		absolute_monarchy = presidential_dictatorship
 		hms_government = presidential_dictatorship
 		democracy = presidential_dictatorship
@@ -1511,8 +1511,8 @@ left_reactionary_rebels = {
 					government = absolute_monarchy
 					
 					government = presidential_dictatorship
-					government = populist_dictatorship
 					government = nationalist_dictatorship
+					government = sectarian_dictatorship
 					
 					government = proletarian_dictatorship
 					government = proletarian_dictatorship1
@@ -1581,7 +1581,7 @@ left_reactionary_rebels = {
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
 		political_reform = politicised_service
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
@@ -1613,21 +1613,21 @@ populist_rebels = {
 	# <this is the government in the country> = <this is what the rebels want>
 	government = {
 	
-		proletarian_dictatorship1 = populist_dictatorship
-		colonial_government = populist_dictatorship
-		hms_government1 = populist_dictatorship
-		democracy1 = populist_dictatorship
-		mandate_government = populist_dictatorship
-		sar_government = populist_dictatorship
-		socialist_democracy = populist_dictatorship
-		populist_dictatorship = populist_dictatorship
-		nationalist_dictatorship = populist_dictatorship
-		proletarian_dictatorship = populist_dictatorship
-		presidential_dictatorship = populist_dictatorship
-		theocracy = populist_dictatorship
-		absolute_monarchy = populist_dictatorship
-		hms_government = populist_dictatorship
-		democracy = populist_dictatorship
+		proletarian_dictatorship1 = nationalist_dictatorship
+		colonial_government = nationalist_dictatorship
+		hms_government1 = nationalist_dictatorship
+		democracy1 = nationalist_dictatorship
+		mandate_government = nationalist_dictatorship
+		sar_government = nationalist_dictatorship
+		socialist_democracy = nationalist_dictatorship
+		nationalist_dictatorship = nationalist_dictatorship
+		sectarian_dictatorship = nationalist_dictatorship
+		proletarian_dictatorship = nationalist_dictatorship
+		presidential_dictatorship = nationalist_dictatorship
+		theocracy = nationalist_dictatorship
+		absolute_monarchy = nationalist_dictatorship
+		hms_government = nationalist_dictatorship
+		democracy = nationalist_dictatorship
 	}
 	
 	
@@ -1734,10 +1734,10 @@ populist_rebels = {
 			}
 		}
 
-		#Rebels dont spawn in a populist_dictatorship
+		#Rebels dont spawn in a nationalist_dictatorship
 		modifier = {
 			factor = 0
-			country = { government = populist_dictatorship }
+			country = { government = nationalist_dictatorship }
 		}
 		
 		#Rebels spawn less if ruling party is nationalist or populist
@@ -1874,21 +1874,21 @@ sectarian_rebels = {
 	
 	# <this is the government in the country> = <this is what the rebels want>
 	government = {
-		proletarian_dictatorship1 = nationalist_dictatorship
-		colonial_government = nationalist_dictatorship
-		hms_government1 = nationalist_dictatorship
-		democracy1 = nationalist_dictatorship
-		mandate_government = nationalist_dictatorship
-		sar_government = nationalist_dictatorship
-		socialist_democracy = nationalist_dictatorship
-		populist_dictatorship = nationalist_dictatorship
-		nationalist_dictatorship = nationalist_dictatorship
-		proletarian_dictatorship = nationalist_dictatorship
-		presidential_dictatorship = nationalist_dictatorship
-		theocracy = nationalist_dictatorship
-		absolute_monarchy = nationalist_dictatorship
-		hms_government = nationalist_dictatorship
-		democracy = nationalist_dictatorship
+		proletarian_dictatorship1 = sectarian_dictatorship
+		colonial_government = sectarian_dictatorship
+		hms_government1 = sectarian_dictatorship
+		democracy1 = sectarian_dictatorship
+		mandate_government = sectarian_dictatorship
+		sar_government = sectarian_dictatorship
+		socialist_democracy = sectarian_dictatorship
+		nationalist_dictatorship = sectarian_dictatorship
+		sectarian_dictatorship = sectarian_dictatorship
+		proletarian_dictatorship = sectarian_dictatorship
+		presidential_dictatorship = sectarian_dictatorship
+		theocracy = sectarian_dictatorship
+		absolute_monarchy = sectarian_dictatorship
+		hms_government = sectarian_dictatorship
+		democracy = sectarian_dictatorship
 	}
 	
 	
@@ -1994,7 +1994,7 @@ sectarian_rebels = {
 		#Rebels dont spawn in a sectarian regime
 		modifier = {
 			factor = 0
-			country = { government = nationalist_dictatorship }
+			country = { government = sectarian_dictatorship }
 		}
 		
 		#Rebels spawn less if ruling party is nationalist or populist
@@ -2129,8 +2129,8 @@ communist_rebels = {
 		hms_government1 = proletarian_dictatorship
 		sar_government = proletarian_dictatorship
 		mandate_government = proletarian_dictatorship
+		sectarian_dictatorship = proletarian_dictatorship
 		nationalist_dictatorship = proletarian_dictatorship
-		populist_dictatorship = proletarian_dictatorship
 		presidential_dictatorship = proletarian_dictatorship
 		theocracy = proletarian_dictatorship
 		absolute_monarchy = proletarian_dictatorship
@@ -2364,8 +2364,8 @@ socialist_rebels = {
 		hms_government1 = socialist_democracy
 		sar_government = socialist_democracy
 		mandate_government = socialist_democracy
+		sectarian_dictatorship = presidential_dictatorship
 		nationalist_dictatorship = presidential_dictatorship
-		populist_dictatorship = presidential_dictatorship
 		presidential_dictatorship = presidential_dictatorship
 		theocracy = presidential_dictatorship
 		absolute_monarchy = presidential_dictatorship
@@ -2613,8 +2613,8 @@ separatist_rebels = {
 		proletarian_dictatorship = proletarian_dictatorship
 		presidential_dictatorship = presidential_dictatorship
 		theocracy = theocracy
+		sectarian_dictatorship = sectarian_dictatorship
 		nationalist_dictatorship = nationalist_dictatorship
-		populist_dictatorship = populist_dictatorship
 		absolute_monarchy = absolute_monarchy
 		hms_government = hms_government
 		democracy = democracy
@@ -2922,8 +2922,8 @@ nationalist_rebels = {
 		proletarian_dictatorship = proletarian_dictatorship
 		presidential_dictatorship = presidential_dictatorship
 		theocracy = theocracy
+		sectarian_dictatorship = sectarian_dictatorship
 		nationalist_dictatorship = nationalist_dictatorship
-		populist_dictatorship = populist_dictatorship
 		absolute_monarchy = absolute_monarchy
 		hms_government = hms_government
 		democracy = democracy
@@ -3167,8 +3167,8 @@ superstate_separatist_rebels = {
 		proletarian_dictatorship = proletarian_dictatorship
 		presidential_dictatorship = presidential_dictatorship
 		theocracy = theocracy
+		sectarian_dictatorship = sectarian_dictatorship
 		nationalist_dictatorship = nationalist_dictatorship
-		populist_dictatorship = populist_dictatorship
 		absolute_monarchy = absolute_monarchy
 		hms_government = hms_government
 		democracy = democracy
@@ -3381,8 +3381,8 @@ liberal_rebels = {
 		proletarian_dictatorship = democracy
 		presidential_dictatorship = democracy
 		theocracy = democracy
+		sectarian_dictatorship = democracy
 		nationalist_dictatorship = democracy
-		populist_dictatorship = democracy
 		absolute_monarchy = hms_government
 		hms_government = hms_government1
 		democracy = democracy
@@ -3475,8 +3475,8 @@ liberal_rebels = {
 			factor = 0.05
 			country = {
 				OR = { 
-					vote_franschise = universal_weighted_voting
-					vote_franschise = promoted_voting
+					vote_franschise = rigged_voting
+					vote_franschise = gerrymandered_voting
 				}
 			}
 		}
@@ -3627,8 +3627,8 @@ islamist_rebels = {
 		theocracy = theocracy
 		proletarian_dictatorship = theocracy
 		presidential_dictatorship = theocracy
+		sectarian_dictatorship = theocracy
 		nationalist_dictatorship = theocracy
-		populist_dictatorship = theocracy
 		absolute_monarchy = theocracy
 		hms_government = theocracy
 		democracy = theocracy
@@ -3778,7 +3778,7 @@ islamist_rebels = {
 		}
 		modifier = {
 			factor = 1.1
-	country = { government = nationalist_dictatorship }
+	country = { government = sectarian_dictatorship }
 		}
 		modifier = {
 			factor = 1.015
@@ -3840,7 +3840,7 @@ islamist_rebels = {
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
 		political_reform = politicised_service
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
@@ -3879,8 +3879,8 @@ islamist_sunni_rebels = {
 		theocracy = theocracy
 		proletarian_dictatorship = theocracy
 		presidential_dictatorship = theocracy
+		sectarian_dictatorship = theocracy
 		nationalist_dictatorship = theocracy
-		populist_dictatorship = theocracy
 		absolute_monarchy = theocracy
 		hms_government = theocracy
 		democracy = theocracy
@@ -4039,7 +4039,7 @@ islamist_sunni_rebels = {
 		}
 		modifier = {
 			factor = 1.1
-			country = { government = nationalist_dictatorship }
+			country = { government = sectarian_dictatorship }
 		}
 		modifier = {
 			factor = 1.015
@@ -4101,7 +4101,7 @@ islamist_sunni_rebels = {
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
 		political_reform = politicised_service
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
@@ -4142,8 +4142,8 @@ islamist_ibad_rebels = {
 		theocracy = theocracy
 		proletarian_dictatorship = theocracy
 		presidential_dictatorship = theocracy
+		sectarian_dictatorship = theocracy
 		nationalist_dictatorship = theocracy
-		populist_dictatorship = theocracy
 		absolute_monarchy = theocracy
 		hms_government = theocracy
 		democracy = theocracy
@@ -4302,7 +4302,7 @@ islamist_ibad_rebels = {
 		}
 		modifier = {
 			factor = 1.1
-			country = { government = nationalist_dictatorship }
+			country = { government = sectarian_dictatorship }
 		}
 		modifier = {
 			factor = 1.015
@@ -4364,7 +4364,7 @@ islamist_ibad_rebels = {
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
 		political_reform = politicised_service
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
@@ -4405,8 +4405,8 @@ islamist_shiite_rebels = {
 		theocracy = theocracy
 		proletarian_dictatorship = theocracy
 		presidential_dictatorship = theocracy
+		sectarian_dictatorship = theocracy
 		nationalist_dictatorship = theocracy
-		populist_dictatorship = theocracy
 		absolute_monarchy = theocracy
 		hms_government = theocracy
 		democracy = theocracy
@@ -4571,7 +4571,7 @@ islamist_shiite_rebels = {
 		}
 		modifier = {
 			factor = 1.1
-			country = { government = nationalist_dictatorship }
+			country = { government = sectarian_dictatorship }
 		}
 		modifier = {
 			factor = 1.015
@@ -4633,7 +4633,7 @@ islamist_shiite_rebels = {
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
 		political_reform = politicised_service
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
@@ -4674,8 +4674,8 @@ islamist_druze_rebels = {
 		theocracy = theocracy
 		proletarian_dictatorship = theocracy
 		presidential_dictatorship = theocracy
+		sectarian_dictatorship = theocracy
 		nationalist_dictatorship = theocracy
-		populist_dictatorship = theocracy
 		absolute_monarchy = theocracy
 		hms_government = theocracy
 		democracy = theocracy
@@ -4834,7 +4834,7 @@ islamist_druze_rebels = {
 		}
 		modifier = {
 			factor = 1.1
-			country = { government = nationalist_dictatorship }
+			country = { government = sectarian_dictatorship }
 		}
 		modifier = {
 			factor = 1.015
@@ -4896,7 +4896,7 @@ islamist_druze_rebels = {
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
 		political_reform = politicised_service
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out

@@ -141,7 +141,7 @@ country_event = {
     	tag = SOM
 	is_vassal = no
 	war = no
-	NOT = { government = proletarian_dictatorship }
+	NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
     	year = 1969 NOT = { year = 1990 }
   }
 
@@ -176,7 +176,7 @@ country_event = {
     	year = 1991
 	is_vassal = no
 	war = no
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 1 }

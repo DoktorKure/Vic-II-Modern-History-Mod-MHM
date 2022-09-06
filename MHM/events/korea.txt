@@ -14,7 +14,7 @@ country_event = {
 		year = 1972
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		
 		#Adopting Autarky
@@ -49,7 +49,7 @@ country_event = {
 	trigger = {
     	tag = NKO
 		year = 1994
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 	}
 
 	mean_time_to_happen = { months = 7 }
@@ -72,7 +72,7 @@ country_event = {
 		
 		ruling_party_ideology = communist_social
 		
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		
@@ -108,14 +108,14 @@ country_event = {
     	tag = NKO
 		year = 1994
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		
 		#Fully planned economy
 		ruling_party_ideology = communist
 		
 		#USSR collapsed
-		RUS = { NOT = { government = proletarian_dictatorship } } 
+		RUS = { NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } 
 		
 		#Has corruption
 		NOT = { has_country_modifier = minimal_government_corruption }
@@ -155,7 +155,7 @@ country_event = {
 	trigger = {
     	tag = NKO
 		year = 2011
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		#Kim Jong il is in charge
 		ruling_party_ideology = communist
@@ -185,7 +185,7 @@ country_event = {
 		
 		ruling_party_ideology = communist_social
 		
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		
@@ -387,7 +387,7 @@ country_event = {
 	option = {
 		name = "Stick to the status quo"
 		
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		ai_chance = { factor = 0.1 }
@@ -423,7 +423,7 @@ country_event = {
 		name = "A dictator falls!"
 		prestige_factor = -0.03
 		
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		
 		#New dictator in power
 		ruling_party_ideology = big_tent
@@ -480,7 +480,7 @@ country_event = {
 		name = "Begin transitioning the nation into a democracy!"
 		prestige = 50
 		
-		political_reform = open_opinion
+		political_reform = semi_democratic_state_opinion
 		
 		set_country_flag = fifth_republic_adopted
 		

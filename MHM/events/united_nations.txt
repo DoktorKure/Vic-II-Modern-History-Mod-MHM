@@ -239,7 +239,7 @@ country_event = {
 		NOT = { has_country_modifier = not_member_of_united_nations }
 		NOT = { has_country_modifier = united_nations }
 		war = no
-		OR = { is_vassal = no government = proletarian_dictatorship }
+		OR = { is_vassal = no government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		year = 1946
 		NOT = { 
 			OR = { 
@@ -816,7 +816,7 @@ country_event = { # TODO trigger by taiwan war
 		#Taiwan War ongoing
 		year = 1954
 		KMT = { is_vassal = no war_with = CHI }
-		CHI = { is_vassal = no government = proletarian_dictatorship }
+		CHI = { is_vassal = no OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		
 		KMT = { NOT = { has_country_modifier = requested_un_peacemaking } } #No Double Dipping.
 		

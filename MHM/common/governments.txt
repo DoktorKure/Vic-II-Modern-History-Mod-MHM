@@ -27,7 +27,7 @@ colonial_government = {
 	election = yes
 	duration = 54
 	appoint_ruling_party = yes
-	flagType = realm
+	flagType = monarchy
 
 }
 mandate_government = {
@@ -44,7 +44,7 @@ mandate_government = {
 	election = yes
 	duration = 54
 	appoint_ruling_party = yes
-	flagType = realm
+	flagType = monarchy
 }
 sar_government = {
 	progressive = yes
@@ -113,23 +113,6 @@ proletarian_dictatorship1 =
 	appoint_ruling_party = no
 	flagType = socialist
 }
-nationalist_dictatorship =
-{
-	#which ideology of parties.
-	progressive = no
-	liberal = no
-	conservative = yes
-	socialist = yes
-	populist = yes
-	traditionalist = yes
-	big_tent = no
-	communist = no
-	communist_social = no
-	nationalist = yes	
-	election = no
-	appoint_ruling_party = no #Dictators don't change their minds readily
-	flagType = nationalist
-}
 # rigth_group dictatorship
 theocracy =
 {
@@ -148,7 +131,24 @@ theocracy =
 	appoint_ruling_party = no
 	flagType = theocracy
 }
-populist_dictatorship =
+sectarian_dictatorship =
+{
+	#which ideology of parties.
+	progressive = no
+	liberal = no
+	conservative = yes
+	socialist = yes
+	populist = yes
+	traditionalist = yes
+	big_tent = no
+	communist = no
+	communist_social = no
+	nationalist = yes	
+	election = no
+	appoint_ruling_party = no #Dictators don't change their minds readily
+	flagType = sectarian
+}
+nationalist_dictatorship =
 {
 	progressive = no
 	liberal = no
@@ -164,7 +164,7 @@ populist_dictatorship =
 	nationalist = yes
 	election = no
 	appoint_ruling_party = no #Dictators don't change their minds readily
-	flagType = populist
+	flagType = nationalist
 }
 absolute_monarchy = {
 	progressive = no
@@ -179,7 +179,7 @@ absolute_monarchy = {
 	socialist = yes
 	election = no
 	appoint_ruling_party = yes
-	flagType = realm
+	flagType = monarchy
 }
 # democracy
 hms_government = {
@@ -196,7 +196,7 @@ hms_government = {
 	election = yes
 	duration = 54
 	appoint_ruling_party = no
-	flagType = realm
+	flagType = monarchy
 }
 hms_government1 = {
 	progressive = yes
@@ -242,5 +242,5 @@ democracy1 = {
 	election = yes
 	duration = 42
 	appoint_ruling_party = no
-	flagType = nationalist
+	flagType = sectarian
 }

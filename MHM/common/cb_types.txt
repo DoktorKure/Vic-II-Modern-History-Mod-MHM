@@ -179,8 +179,8 @@ THIS = { OR = {
 
 government = theocracy
 government = absolute_monarchy
-government = populist_dictatorship
 government = nationalist_dictatorship
+government = sectarian_dictatorship
 government = presidential_dictatorship
 government = proletarian_dictatorship
 government = proletarian_dictatorship1
@@ -275,8 +275,8 @@ THIS = { OR = {
 
 government = theocracy
 government = absolute_monarchy
-government = populist_dictatorship
 government = nationalist_dictatorship
+government = sectarian_dictatorship
 government = presidential_dictatorship
 government = proletarian_dictatorship
 government = proletarian_dictatorship1
@@ -302,8 +302,8 @@ NOT = { war_policy = pacifism } war = yes has_country_flag = world_medium has_co
 	THIS = { NOT = { has_country_modifier = no_more_war } }
 		}
 		OR = {
+		THIS = { government = sectarian_dictatorship }
 		THIS = { government = nationalist_dictatorship }
-		THIS = { government = populist_dictatorship }
 		THIS = { government = proletarian_dictatorship }
 		THIS = { government = proletarian_dictatorship1 }
 			THIS = { civilized = no }
@@ -467,8 +467,8 @@ conquest = {
 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -490,7 +490,7 @@ conquest = {
 					has_country_modifier = un_king1
 					has_country_modifier = un_king2
 					
-					AND = { government = populist_dictatorship ruling_party_ideology = nationalist }
+					AND = { government = nationalist_dictatorship ruling_party_ideology = nationalist }
 				} 
 			}
 			AND = {
@@ -796,8 +796,8 @@ THIS = { OR = {
 
 government = theocracy
 government = absolute_monarchy
-government = populist_dictatorship
 government = nationalist_dictatorship
+government = sectarian_dictatorship
 government = presidential_dictatorship
 government = proletarian_dictatorship
 government = proletarian_dictatorship1
@@ -869,8 +869,8 @@ THIS = { OR = {
 
 government = theocracy
 government = absolute_monarchy
-government = populist_dictatorship
 government = nationalist_dictatorship
+government = sectarian_dictatorship
 government = presidential_dictatorship
 government = proletarian_dictatorship
 government = proletarian_dictatorship1
@@ -950,8 +950,8 @@ acquire_core_state = {
 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -1047,8 +1047,8 @@ annex_core_country = {
 			OR = { 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -1165,8 +1165,8 @@ THIS = { OR = {
 
 government = theocracy
 government = absolute_monarchy
-government = populist_dictatorship
 government = nationalist_dictatorship
+government = sectarian_dictatorship
 government = presidential_dictatorship
 government = proletarian_dictatorship
 government = proletarian_dictatorship1
@@ -1275,8 +1275,8 @@ THIS = { OR = {
 
 government = theocracy
 government = absolute_monarchy
-government = populist_dictatorship
 government = nationalist_dictatorship
+government = sectarian_dictatorship
 government = presidential_dictatorship
 government = proletarian_dictatorship
 government = proletarian_dictatorship1
@@ -1380,8 +1380,8 @@ THIS = { OR = {
 
 government = theocracy
 government = absolute_monarchy
-government = populist_dictatorship
 government = nationalist_dictatorship
+government = sectarian_dictatorship
 government = presidential_dictatorship
 government = proletarian_dictatorship
 government = proletarian_dictatorship1
@@ -1483,8 +1483,8 @@ cut_down_to_size = {
 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -1608,8 +1608,8 @@ annex_all_colonial_cores = {
 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -1753,8 +1753,8 @@ annex_all_cores = { # acquire all core states in target's own hands
 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -1897,8 +1897,8 @@ annex_un_occupied_territories = {
 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -2012,8 +2012,8 @@ THIS = { OR = {
 
 government = theocracy
 government = absolute_monarchy
-government = populist_dictatorship
 government = nationalist_dictatorship
+government = sectarian_dictatorship
 government = presidential_dictatorship
 government = proletarian_dictatorship
 government = proletarian_dictatorship1
@@ -2135,8 +2135,8 @@ THIS = { OR = {
 
 government = theocracy
 government = absolute_monarchy
-government = populist_dictatorship
 government = nationalist_dictatorship
+government = sectarian_dictatorship
 government = presidential_dictatorship
 government = proletarian_dictatorship
 government = proletarian_dictatorship1
@@ -2238,8 +2238,8 @@ liberate_country = {
 			OR = { 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -2391,8 +2391,8 @@ assisted_unification = {
 			OR = { 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -2536,8 +2536,8 @@ release_puppet = {
 			OR = { 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -2613,8 +2613,8 @@ steal_puppet = {
 			OR = { 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -2735,7 +2735,7 @@ make_puppet = {
 				OR = {
 					has_country_modifier = un_king1
 					has_country_modifier = un_king2
-					AND = { government = populist_dictatorship ruling_party_ideology = nationalist OR = { is_greater_power = yes is_secondary_power = yes number_of_states = 9 } } # Tiny countries cannot puppet large countries
+					AND = { government = nationalist_dictatorship ruling_party_ideology = nationalist OR = { is_greater_power = yes is_secondary_power = yes number_of_states = 9 } } # Tiny countries cannot puppet large countries
 				}
 			}
 			NOT = { number_of_states = 9 }
@@ -2746,8 +2746,8 @@ make_puppet = {
 			OR = { 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -2950,8 +2950,8 @@ humiliate = {
 			OR = { 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -3039,8 +3039,8 @@ destroy_wmd = {
 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -3118,8 +3118,8 @@ territorial_dispute = {
 			OR = { 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -3548,7 +3548,7 @@ install_authoritarian_regime = {
 				is_secondary_power = yes
 				ai = no
 			}
-			OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship }
+			OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
 			
 		}
 		OR = { is_vassal = no is_our_vassal = THIS }
@@ -4137,8 +4137,8 @@ dismantle_cb = {
 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -4302,8 +4302,8 @@ dismantle_cb_add = {
 			OR = { 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -4418,8 +4418,8 @@ dismantle_cb_add_new = {
 			OR = { 
 				government = theocracy
 				government = absolute_monarchy
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = presidential_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1

@@ -680,7 +680,7 @@ country_event = {
 		#PRC exists
 		CHI = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		}
 		
 		#Cold War ongoing

@@ -70,7 +70,7 @@ country_event = {
 			limit = { 
 				owner = { OR = { child_care = limited_child_care child_care = no_child_care } } 
 			}
-			owner = { social_reform = supported_child_care }
+			owner = { social_reform = adequate_child_care }
 		}
 		
 		ai_chance = { factor = 0.9 }
@@ -287,7 +287,7 @@ country_event = {
 	trigger = {
 		tag = AST
 		year = 1946 NOT = { year = 1950 }
-		security_reform = preemptive_security_actions
+		security_reform = excellent_security
 		war = no
 	}
   
@@ -296,7 +296,7 @@ country_event = {
 	option = {
 		name = EVT_8001057_A
 		any_pop = { consciousness = 2 }
-		social_reform = police
+		social_reform = basic_security
 	}
 
 	option = {
@@ -325,7 +325,7 @@ country_event = {
 	option = {
 		name = EVT_8001058_A
 		any_pop = { militancy = -2.0 }
-		social_reform = eight_work_hours
+		social_reform = trinket_wage
 		any_owned = { 
 			remove_province_modifier = province_strike
 		}
@@ -815,8 +815,8 @@ country_event = {
 	option = {
 		name = "I am the Senate"
 		prestige = -100
-		political_reform = regulated_opinion
-		political_reform = parties_only_nominated
+		political_reform = appointed_opinion
+		political_reform = parties_restricted
 		ai_chance = { factor = 0.1 }
 	}
 
@@ -927,8 +927,8 @@ country_event = {
 
 	option = {
 		name = EVT_8001081_B
-		political_reform = regulated_opinion
-		political_reform = parties_only_nominated
+		political_reform = appointed_opinion
+		political_reform = parties_restricted
 		any_pop = { consciousness = 2.0 }
 		any_pop = {
 			scaled_militancy = {

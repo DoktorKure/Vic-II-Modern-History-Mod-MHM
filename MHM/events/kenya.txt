@@ -43,7 +43,7 @@ country_event = {
 		name = "Give in to the Mau Mau" 
 		prestige = -100
 		release = KEN
-		KEN = { government = nationalist_dictatorship country_event = 800050 ruling_party_ideology = nationalist }
+		KEN = { government = sectarian_dictatorship country_event = 800050 ruling_party_ideology = nationalist }
 		ai_chance = { factor = 0.1 }
 	}
 	

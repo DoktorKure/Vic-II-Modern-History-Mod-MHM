@@ -65,7 +65,7 @@ e_government = {
 		base = 1
 		modifier = {
 			factor = 1
-			NOT = { OR = { government = nationalist_dictatorship government = populist_dictatorship government = absolute_monarchy government = presidential_dictatorship } }
+			NOT = { OR = { government = sectarian_dictatorship government = nationalist_dictatorship government = absolute_monarchy government = presidential_dictatorship } }
 		}
 		modifier = {
 			factor = 2
@@ -84,7 +84,7 @@ cyberocracy = {
 		base = 1
 		modifier = {
 			factor = 1
-			NOT = { OR = { government = nationalist_dictatorship government = populist_dictatorship government = absolute_monarchy government = presidential_dictatorship } }
+			NOT = { OR = { government = sectarian_dictatorship government = nationalist_dictatorship government = absolute_monarchy government = presidential_dictatorship } }
 		}
 		modifier = {
 			factor = 2
@@ -360,7 +360,7 @@ techno_progressivism = {
 		}
 		modifier = {
 			factor = 1
-			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = nationalist_dictatorship government = populist_dictatorship government = absolute_monarchy government = presidential_dictatorship } }
+			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = sectarian_dictatorship government = nationalist_dictatorship government = absolute_monarchy government = presidential_dictatorship } }
 		}
 		modifier = {
 			factor = 2

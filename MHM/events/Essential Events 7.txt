@@ -60,10 +60,10 @@ hacktivism = 1
 
 mean_time_to_happen = { 
 months = 36
-modifier = { security_reform = security_service factor = 1.2 }
-modifier = { security_reform = security_data_cohesion factor = 1.4 } 
-modifier = { security_reform = security_clearance_for_gov_services factor = 1.6 } 
-modifier = { security_reform = preemptive_security_actions factor = 1.8 } 
+modifier = { security_reform = weak_security factor = 1.2 }
+modifier = { security_reform = acceptable_security factor = 1.4 } 
+modifier = { security_reform = good_security factor = 1.6 } 
+modifier = { security_reform = excellent_security factor = 1.8 } 
 modifier = { has_country_modifier = cyber_counter_aim factor = 2 }
 }
 
@@ -864,7 +864,7 @@ trigger = {
 election = yes
 war = no
 social_networking = 1
-OR = { publishing_rights = unregulated_publishing publishing_rights = responsible_publishing }
+OR = { publishing_rights = free_publishing publishing_rights = responsible_publishing }
 OR = { average_militancy = 3 average_consciousness = 3 }
 NOT = { has_country_modifier = media_conspiracy1 }
 NOT = { has_country_modifier = media_conspiracy2 }
@@ -1734,7 +1734,7 @@ trigger = {
 year = 1948
 has_global_flag = UNDHR
 OR = { any_greater_power = { cultural_imperialism = 1 } has_global_flag = human_rights_watch }
-OR = { government = presidential_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = populist_dictatorship government = nationalist_dictatorship government = theocracy government = absolute_monarchy }
+OR = { government = presidential_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = nationalist_dictatorship government = sectarian_dictatorship government = theocracy government = absolute_monarchy }
 NOT = { has_country_modifier = undhr_sanctions }
 	}
 
@@ -1761,7 +1761,7 @@ trigger = {
 year = 1948
 has_global_flag = UNDHR
 OR = { any_greater_power = { cultural_imperialism = 1 } has_global_flag = human_rights_watch }
-NOT = { OR = { government = presidential_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = populist_dictatorship government = nationalist_dictatorship government = theocracy government = absolute_monarchy } }
+NOT = { OR = { government = presidential_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = nationalist_dictatorship government = sectarian_dictatorship government = theocracy government = absolute_monarchy } }
 has_country_modifier = undhr_sanctions
 	}
 
@@ -1827,7 +1827,7 @@ title = "The Truman Doctrine"
 is_triggered_only = yes
 
 option = {
-name = "They are now the free world's policeman"
+name = "They are now the free world's basic_securityman"
 		}
 }
 
@@ -1897,15 +1897,15 @@ title = "Nuclear Accident"
 
 trigger = { 
 OR = { has_country_flag = nuclear_power_ge any_owned_province = { has_building = nuclear_fuel_factory } }
-OR = { safety_regulations = some_regulations safety_regulations = balanced_regulations safety_regulations = restrictive_regulations }
+OR = { safety_regulations = no_safety safety_regulations = trinket_safety safety_regulations = low_safety }
 	}
 
 mean_time_to_happen = { 
 months = 300
 modifier = { factor = 1.5 
-safety_regulations = balanced_regulations }
+safety_regulations = trinket_safety }
 modifier = { factor = 2 
-safety_regulations = restrictive_regulations }
+safety_regulations = low_safety }
 }
 
 option = {
@@ -2190,7 +2190,7 @@ title = "Return of the Rhodesian Front"
 fire_only_once = yes
 
 trigger = { 
-government = populist_dictatorship
+government = nationalist_dictatorship
 tag = RHO
 NOT = { ruling_party_ideology = nationalist }
 }
@@ -3155,12 +3155,12 @@ owner = { political_reform = responsible_publishing clr_country_flag = return_to
 
 random_owned = { 
 limit = { owner = { has_country_flag = return_to_unregulated_publishing} }
-owner = { political_reform = unregulated_publishing clr_country_flag = return_to_unregulated_publishing }
+owner = { political_reform = free_publishing clr_country_flag = return_to_unregulated_publishing }
 }
 
 random_owned = { 
 limit = { owner = { has_country_flag = return_to_firewall_publishing } }
-owner = { political_reform = firewall_publishing clr_country_flag = return_to_firewall_publishing }
+owner = { political_reform = censored_publishing clr_country_flag = return_to_firewall_publishing }
 }
 
 random_owned = { 
@@ -3361,12 +3361,12 @@ owner = { political_reform = responsible_publishing clr_country_flag = return_to
 
 random_owned = { 
 limit = { owner = { has_country_flag = return_to_unregulated_publishing} }
-owner = { political_reform = unregulated_publishing clr_country_flag = return_to_unregulated_publishing }
+owner = { political_reform = free_publishing clr_country_flag = return_to_unregulated_publishing }
 			}
 
 random_owned = { 
 limit = { owner = { has_country_flag = return_to_firewall_publishing } }
-owner = { political_reform = firewall_publishing clr_country_flag = return_to_firewall_publishing }
+owner = { political_reform = censored_publishing clr_country_flag = return_to_firewall_publishing }
 			}
 
 #Pop ideology support effects
@@ -3541,7 +3541,7 @@ country_event = {
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
 		political_reform = no_meetings
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = parties_not_allowed
 
 		any_pop = { 
@@ -3595,7 +3595,7 @@ title = "Toppling of the $COUNTRY_ADJ$ dictorship"
 	picture = "toppling_dictator"
 
 trigger = {
-NOT = { OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship } }
+NOT = { OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship } }
 has_country_flag = disabled_for_now
 has_country_flag = extraord
 }
@@ -3695,10 +3695,10 @@ fire_only_once = yes
 trigger = {
 tag = YUG
 in_sphere = RUS
-government = proletarian_dictatorship
+OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 has_global_flag = blocsenabled
 RUS = { ruling_party_ideology = communist_social }
-RUS = { government = proletarian_dictatorship }
+RUS = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 }
 
 mean_time_to_happen = { 

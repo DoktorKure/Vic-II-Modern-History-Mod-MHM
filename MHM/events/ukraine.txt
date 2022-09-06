@@ -38,9 +38,9 @@ country_event = {
 		}
 		
 		#Weakened democracy
-		political_reform = registered_voting
-		political_reform = regulated_opinion
-		political_reform = censored_publishing
+		political_reform = harassed_voting
+		political_reform = appointed_opinion
+		political_reform = state_publishing
 		political_reform = politicised_service
 		political_reform = parties_not_allowed
 		political_reform = state_controlled_unions
@@ -206,9 +206,9 @@ country_event = {
 		ruling_party_ideology = big_tent
 		
 		#Weakened democracy
-		political_reform = registered_voting
-		political_reform = regulated_opinion
-		political_reform = censored_publishing
+		political_reform = harassed_voting
+		political_reform = appointed_opinion
+		political_reform = state_publishing
 		political_reform = politicised_service
 		political_reform = parties_not_allowed
 		political_reform = state_controlled_unions
@@ -295,9 +295,9 @@ country_event = {
 		ruling_party_ideology = big_tent
 		
 		#Weakened democracy
-		political_reform = registered_voting
-		political_reform = regulated_opinion
-		political_reform = censored_publishing
+		political_reform = harassed_voting
+		political_reform = appointed_opinion
+		political_reform = state_publishing
 		political_reform = politicised_service
 		political_reform = parties_not_allowed
 		political_reform = state_controlled_unions
@@ -704,7 +704,7 @@ country_event = {
 		
 		UKR = { release = NRO }
 		NRO = {
-			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 			country_event = 800050
 			ruling_party_ideology = nationalist
 			

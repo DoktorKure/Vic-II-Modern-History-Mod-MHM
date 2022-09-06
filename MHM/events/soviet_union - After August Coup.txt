@@ -11,7 +11,7 @@ country_event = { # Condemnation of Gobachev's legacy
 	trigger = {
 		tag = RUS
 		year = 1992
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_global_flag = august_coup_victory
 	}
 	
@@ -54,7 +54,7 @@ country_event = { # Independence of the Caucasian States
 		tag = RUS
 		year = 1992
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -196,7 +196,7 @@ country_event = { # Independence of Turkmenistan
 		tag = RUS
 		year = 1992
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -264,7 +264,7 @@ country_event = { # Independence of Ukraine
 		tag = RUS
 		year = 1992
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -342,7 +342,7 @@ country_event = { # Independence of Belarus
 		tag = RUS
 		year = 1992
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -418,7 +418,7 @@ country_event = { # Independence of other Central Asian Republics
 		tag = RUS
 		year = 1992
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -520,7 +520,7 @@ country_event = { # The Soviet Economy
 	trigger = {
 		tag = RUS
 		year = 1994
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_global_flag = august_coup_victory
 	}
 	
@@ -576,7 +576,7 @@ country_event = { # Reconquering the Baltic States
 		tag = RUS
 		year = 1995
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -640,7 +640,7 @@ country_event = { # A New Chairman of the KGB
 	trigger = {
 		tag = RUS
 		year = 1996
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_global_flag = august_coup_victory
 	}
 	
@@ -669,7 +669,7 @@ country_event = { # $YEAR$ Red Square Protest
 	trigger = {
 		tag = RUS
 		year = 1997
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_global_flag = august_coup_victory
 		has_country_flag = ussr_gorbatchev_traitor
 	}
@@ -702,7 +702,7 @@ country_event = { # $YEAR$ Red Square Protest
 		any_pop = { consciousness = 2 }
 		
 		political_reform = incarceration
-		political_reform = unregulated_publishing
+		political_reform = free_publishing
 		political_reform = minorities_affirmative_action
 		political_reform = free_meetings
 		
@@ -724,7 +724,7 @@ country_event = { # The Vozhd Ideology (Kryuchkov)
 		year = 1998
 		NOT = { year = 2000 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		NOT = { has_country_modifier = juche }
 		
@@ -761,7 +761,7 @@ country_event = { # Death of Kryuchkov
 		year = 2006
 		NOT = { year = 2010 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		has_global_flag = august_coup_victory
 	}

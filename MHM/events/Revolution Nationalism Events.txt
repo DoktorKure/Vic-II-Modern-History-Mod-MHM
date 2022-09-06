@@ -54,11 +54,11 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.8
-			government = populist_dictatorship
+			government = nationalist_dictatorship
 		}
 		modifier = {
 			factor = 0.8
-			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 		}
 		modifier = {
 			factor = 1.2

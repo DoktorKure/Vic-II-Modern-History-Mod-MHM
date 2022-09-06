@@ -132,7 +132,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		publishing_rights = censored_publishing
+		publishing_rights = state_publishing
 		average_consciousness = 3
 	}
 	
@@ -197,7 +197,7 @@ country_event = {
 	trigger = {
 		civilized = yes
 		NOT = {
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 	
@@ -252,7 +252,7 @@ country_event = {
 			}
 			any_pop = {
 				dominant_issue = {
-					value = unregulated_publishing
+					value = free_publishing
 					factor = 0.5
 				}
 			}
@@ -269,7 +269,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		publishing_rights = unregulated_publishing
+		publishing_rights = free_publishing
 		has_pop_type = capitalists
 		any_state = {
 			is_colonial = no
@@ -423,7 +423,7 @@ country_event = {
 			any_pop = {
 				dominant_issue = {
 					factor = 0.5
-					value = parties_only_nominated
+					value = parties_restricted
 				}
 			}
 		}
@@ -439,7 +439,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		political_parties = parties_only_nominated 
+		political_parties = parties_restricted 
 	}
 	
 	mean_time_to_happen = {
@@ -501,7 +501,7 @@ country_event = {
 			any_pop = {
 				militancy = -1
 				dominant_issue = {
-					value = parties_allowed
+					value = parties_fair
 					factor = 0.8
 				}
 			}
@@ -518,7 +518,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		political_parties = parties_allowed
+		political_parties = parties_fair
 		OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent }
 	}
 	
@@ -610,7 +610,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		political_parties = parties_promote_democratic
+		political_parties = parties_short
 	}
 	
 	mean_time_to_happen = {
@@ -646,7 +646,7 @@ country_event = {
 			any_pop = {
 				militancy = -1
 				dominant_issue = {
-					value = parties_restrict_non_democratic
+					value = parties_rigged
 					factor = 0.7
 				}
 			}
@@ -677,7 +677,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		political_parties = parties_restrict_non_democratic
+		political_parties = parties_rigged
 	}
 	
 	mean_time_to_happen = {
@@ -1323,7 +1323,7 @@ country_event = {
 		civilized = yes
 		OR = {
 			unemployment_subsidies = no_subsidies
-			unemployment_subsidies = minimal_subsidies
+			unemployment_subsidies = trinket_subsidies
 		}
 		NOT = { public_meetings = no_meetings }
 		unemployment = 0.1
@@ -1511,12 +1511,12 @@ country_event = {
 			}
 			any_pop = {
 				dominant_issue = {
-					value = regulated_opinion
+					value = appointed_opinion
 					factor = 0.9
 				}
 				scaled_militancy = {
 					factor = 4
-					issue = regulated_opinion
+					issue = appointed_opinion
 				}
 			}
 		}
@@ -1537,7 +1537,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		political_opinions = regulated_opinion
+		political_opinions = appointed_opinion
 		political_reform_want = 0.2
 		average_militancy = 4
 		plurality = 6
@@ -1569,7 +1569,7 @@ country_event = {
 				militancy = 1
 				consciousness = 1
 				dominant_issue = {
-					value = free_opinion
+					value = democratic_state_opinion
 					factor = 0.5
 				}
 			}
@@ -1611,7 +1611,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		political_opinions = free_opinion
+		political_opinions = democratic_state_opinion
 		political_reform_want = 0.2
 		any_state = {
 			average_militancy = 6
@@ -1656,7 +1656,7 @@ country_event = {
 		name = "EVTOPTB4102"
 		any_pop = {
 			dominant_issue = {
-				value = democratic_opinion
+				value = popular_opinion
 				factor = 0.1
 			}
 		}
@@ -1674,7 +1674,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		political_opinions = democratic_opinion
+		political_opinions = popular_opinion
 	}
 	
 	mean_time_to_happen = {
@@ -1947,7 +1947,7 @@ country_event = {
 			}
 			any_pop = {
 				dominant_issue = {
-					value = registered_voting
+					value = harassed_voting
 					factor = 0.2
 				}
 				militancy = 2
@@ -1965,7 +1965,7 @@ country_event = {
 			}
 			any_pop = {
 				dominant_issue = {
-					value = registered_voting
+					value = harassed_voting
 					factor = 0.1
 				}
 				militancy = 3
@@ -1983,7 +1983,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		vote_franschise = registered_voting
+		vote_franschise = harassed_voting
 		middle_strata_everyday_needs = 0.9
 	}
 	
@@ -2045,7 +2045,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		vote_franschise = universal_weighted_voting
+		vote_franschise = rigged_voting
 	}
 	
 	mean_time_to_happen = {
@@ -2106,7 +2106,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		vote_franschise = universal_weighted_voting
+		vote_franschise = rigged_voting
 	}
 	
 	mean_time_to_happen = {
@@ -2160,15 +2160,15 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		vote_franschise = universal_weighted_voting
-		promoted_voting = 15
+		vote_franschise = rigged_voting
+		gerrymandered_voting = 15
 	}
 	
 	mean_time_to_happen = {
 		months = 800
 		modifier = {
 			factor = 0.9
-			promoted_voting = 20
+			gerrymandered_voting = 20
 		}
 		modifier = {
 			factor = 1.1
@@ -2226,7 +2226,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		vote_franschise = promoted_voting
+		vote_franschise = gerrymandered_voting
 		average_militancy = 3
 	}
 	
@@ -2603,7 +2603,7 @@ country_event = {
 	trigger = {
 		civilized = yes
 		war_policy = jingoism
-		publishing_rights = unregulated_publishing
+		publishing_rights = free_publishing
 	}
 	
 	mean_time_to_happen = {
@@ -3460,7 +3460,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		political_parties = parties_only_nominated
+		political_parties = parties_restricted
 		NOT = {
 			ruling_party_ideology = conservative
 			ruling_party_ideology = big_tent
@@ -3508,7 +3508,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB4421"
-		political_reform = parties_allowed
+		political_reform = parties_fair
 		any_pop = {
 			scaled_militancy = {
 				ideology = conservative
@@ -3605,8 +3605,8 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		publishing_rights = firewall_publishing
-		unregulated_publishing = 5
+		publishing_rights = censored_publishing
+		free_publishing = 5
 	}
 	
 	mean_time_to_happen = {
@@ -3645,7 +3645,7 @@ country_event = {
 		any_pop = {
 			consciousness = 2
 			dominant_issue = {
-				value = unregulated_publishing
+				value = free_publishing
 				factor = 0.2
 			}	
 		}
@@ -3722,7 +3722,7 @@ country_event = {
 		civilized = yes
 		religious_policy = moralism
 		OR = {
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 			publishing_rights = responsible_publishing
 		}
 		average_consciousness = 6
@@ -3751,7 +3751,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA4425"
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		any_pop = {
 			scaled_militancy = {
 				issue = secularized
@@ -3829,7 +3829,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA4430"
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		any_pop = {
 			militancy = -1
 			consciousness = 2

@@ -9,7 +9,7 @@ political_decisions = {
 			year = 2005
 			
 			#Military Junta
-			OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship }
+			OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
 			
 			#Current capital is Yangon
 			capital = 1330

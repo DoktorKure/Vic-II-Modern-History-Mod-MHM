@@ -90,13 +90,13 @@ country_event = {
 		
 		government = democracy
 		
-		political_reform = universal_weighted_voting
-		political_reform = regulated_opinion 
+		political_reform = rigged_voting
+		political_reform = appointed_opinion 
 		political_reform = limited_meetings 
 		political_reform = incarceration 
 		political_reform = professional_service 
 		political_reform = free_trade_unions 
-		political_reform = parties_restrict_non_democratic 
+		political_reform = parties_rigged 
 		
 		set_country_flag = villa_constitution
 		
@@ -115,7 +115,7 @@ country_event = {
 		
 		political_reform = politicised_service
 		political_reform = state_controlled_unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		
 		set_country_flag = villa_constitution
 
@@ -705,9 +705,9 @@ country_event = {
 			limit = { strata = poor }
 			ideology = { factor = 0.1 value = socialist }
 		}
-		any_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.05 } } }
+		any_state = { any_pop = { dominant_issue = { value = parties_fair factor = 0.05 } } }
 		any_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.05 } } }
-		any_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.10 } } }
+		any_state = { any_pop = { dominant_issue = { value = democratic_state_opinion factor = 0.10 } } }
 		
 		any_pop = {
 			scaled_militancy = { 
@@ -798,12 +798,12 @@ country_event = {
 		
 		ruling_party_ideology = progressive
 		
-		political_reform = universal_weighted_voting
-		political_reform = regulated_opinion 
+		political_reform = rigged_voting
+		political_reform = appointed_opinion 
 		political_reform = limited_meetings 
 		political_reform = professional_service 
 		political_reform = free_trade_unions 
-		political_reform = parties_only_nominated 
+		political_reform = parties_restricted 
 		
 		any_pop = {
 			ideology = {
@@ -845,18 +845,18 @@ country_event = {
 		
 		#USSR comes in
 		random_country = { 
-			limit = { tag = RUS is_greater_power = yes government = proletarian_dictatorship } 
+			limit = { tag = RUS is_greater_power = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
 			relation = { who = THIS value = 200 }
 			diplomatic_influence = { who = THIS value = 100 }
 		}
 
 		government = socialist_democracy
 		
-		political_reform = universal_weighted_voting
-		political_reform = regulated_opinion
+		political_reform = rigged_voting
+		political_reform = appointed_opinion
 		political_reform = politicised_service
 		political_reform = state_controlled_unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = limited_meetings
 		
 		add_country_modifier = { name = revolution_chaos duration = 1460 }
@@ -1558,13 +1558,13 @@ country_event = {
 		government = democracy
 		ruling_party_ideology = big_tent
 		
-		political_reform = universal_weighted_voting
-		political_reform = regulated_opinion 
+		political_reform = rigged_voting
+		political_reform = appointed_opinion 
 		political_reform = limited_meetings 
 		political_reform = incarceration 
 		political_reform = professional_service 
 		political_reform = free_trade_unions 
-		political_reform = parties_restrict_non_democratic 
+		political_reform = parties_rigged 
 
 		#Domestic politics
 		any_pop = { 
@@ -1598,13 +1598,13 @@ country_event = {
 		government = democracy
 		ruling_party_ideology = liberal
 		
-		political_reform = universal_weighted_voting
-		political_reform = regulated_opinion 
+		political_reform = rigged_voting
+		political_reform = appointed_opinion 
 		political_reform = limited_meetings 
 		political_reform = incarceration 
 		political_reform = professional_service 
 		political_reform = free_trade_unions 
-		political_reform = parties_restrict_non_democratic 
+		political_reform = parties_rigged 
 		
 		#Domestic politics
 		any_pop = { 
@@ -1859,7 +1859,7 @@ country_event = {
     	tag = BOL
 		year = 1995 
 		
-		OR = { government = proletarian_dictatorship government = socialist_democracy ruling_party_ideology = communist ruling_party_ideology = communist_social }
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy ruling_party_ideology = communist ruling_party_ideology = communist_social }
 		
 		NOT = { has_country_flag = BOL_MAS }
 	}

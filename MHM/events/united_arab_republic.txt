@@ -145,7 +145,7 @@ country_event = {
 		#UAR formed by EGY
 		capital_scope = { is_core = EGY }
 		
-		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+		OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship }
 		war = no
 		is_vassal = no
 		

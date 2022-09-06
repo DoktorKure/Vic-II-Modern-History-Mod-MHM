@@ -6,7 +6,7 @@ political_decisions = {
 		potential = {
 			election = yes
 			NOT = { has_country_modifier = election_rigging }
-			NOT = { political_parties = parties_only_nominated }
+			NOT = { political_parties = parties_restricted }
 		}
 		allow = {
 
@@ -53,18 +53,18 @@ political_decisions = {
 			
 			#Reduce voting reforms
 			random_owned = {
-				limit = { owner = { political_parties = parties_restrict_non_democratic } }
-				owner = { political_reform = parties_only_nominated }
+				limit = { owner = { political_parties = parties_rigged } }
+				owner = { political_reform = parties_restricted }
 			}
 			
 			random_owned = {
-				limit = { owner = { political_parties = parties_promote_democratic } }
-				owner = { political_reform = parties_restrict_non_democratic }
+				limit = { owner = { political_parties = parties_short } }
+				owner = { political_reform = parties_rigged }
 			}
 			
 			random_owned = {
-				limit = { owner = { political_parties = parties_allowed } }
-				owner = { political_reform = parties_promote_democratic }
+				limit = { owner = { political_parties = parties_fair } }
+				owner = { political_reform = parties_short }
 			}
 			
 			random_owned = { 

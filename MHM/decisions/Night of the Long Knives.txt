@@ -4,7 +4,7 @@ political_decisions = {
 		picture = "purge_them_all"
 		potential = {
 			NOT = { has_country_modifier = purge_ongoing }
-			OR = { government = theocracy government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship }
+			OR = { government = theocracy government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
 		}
 		allow = {
 			war = no

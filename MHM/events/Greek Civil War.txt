@@ -19,7 +19,7 @@ country_event = {
 		
 		#Parties to the war
 		GRE = { government = hms_government }
-		UGR = { government = proletarian_dictatorship }
+		UGR = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		
 		#War is underway
 		GRE = { war_with = UGR }
@@ -127,7 +127,7 @@ country_event = {
 		
 		#Parties to the war
 		GRE = { government = hms_government }
-		UGR = { government = proletarian_dictatorship }
+		UGR = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		
 		#War is underway
 		GRE = { war_with = UGR }
@@ -232,13 +232,13 @@ country_event = {
 		NOT = { has_global_flag = 1950_start_date_flag }
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		
 		#Parties to the war
 		GRE = { government = hms_government }
-		UGR = { government = proletarian_dictatorship }
+		UGR = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		
 		#War is underway
 		GRE = { war_with = UGR }
@@ -255,7 +255,7 @@ country_event = {
 		
 		#YUG is not happy
 		random_country = {
-			limit = { tag = YUG government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = -50 }
 		}
 		
@@ -284,7 +284,7 @@ country_event = {
 		
 		#YUG is not happy
 		random_country = {
-			limit = { tag = YUG government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = -50 }
 		}
 		

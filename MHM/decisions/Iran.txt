@@ -35,7 +35,7 @@ political_decisions = {
 			government = theocracy
 			OR = {
 				political_opinions = ruling_party_opinion
-				political_opinions = regulated_opinion
+				political_opinions = appointed_opinion
 			}
 		}
 		allow = {
@@ -54,7 +54,7 @@ political_decisions = {
 			prestige = 100
 			set_global_flag = iranian_theocracy_reforms
 			
-			political_reform = open_opinion
+			political_reform = semi_democratic_state_opinion
 			
 			any_pop = { 
 				limit = { OR = { strata = poor strata = middle } }

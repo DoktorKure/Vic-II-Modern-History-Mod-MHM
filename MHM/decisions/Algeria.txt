@@ -33,9 +33,9 @@ political_decisions = {
 			FAG = {
 				government = colonial_government
 				ruling_party_ideology = conservative
-				political_reform = registered_voting
-				political_reform = regulated_opinion
-				political_reform = parties_only_nominated
+				political_reform = harassed_voting
+				political_reform = appointed_opinion
+				political_reform = parties_restricted
 				political_reform = minorities_oppression
 				political_reform = jefferson_method
 			}

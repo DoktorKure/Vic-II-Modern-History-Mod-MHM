@@ -16,7 +16,7 @@ country_event = {
 		year = 1970 
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -133,7 +133,7 @@ country_event = {
 		year = 1972 
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -284,7 +284,7 @@ country_event = {
 		year = 1973
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -325,7 +325,7 @@ country_event = {
 		prestige = 10
 		
 		political_reform = responsible_publishing
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = first_past_the_post
 		
 		any_pop = {  
@@ -405,7 +405,7 @@ country_event = {
 		year = 1974
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -554,7 +554,7 @@ country_event = {
 		year = 1970 
 		NOT = { year = 1990 }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		war = no
 		
@@ -669,7 +669,7 @@ country_event = {
 		year = 1970 
 		NOT = { year = 1990 }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		war = no
 		
@@ -702,16 +702,16 @@ country_event = {
 		
 		government = democracy
 		
-		political_reform = free_opinion
+		political_reform = democratic_state_opinion
         political_reform = minorities_oppression
         political_reform = quota_immigration
         political_reform = elitist_service
-        political_reform = parties_only_nominated
+        political_reform = parties_restricted
         political_reform = two_year_draft
         political_reform = responsible_publishing
         political_reform = no_trade_unions
         political_reform = proportional_representation
-        political_reform = universal_voting
+        political_reform = free_voting
         political_reform = free_meetings 
 		political_reform = capital_punishment
 		
@@ -734,16 +734,16 @@ country_event = {
 		
 		government = democracy
 		
-		political_reform = free_opinion
+		political_reform = democratic_state_opinion
         political_reform = minorities_oppression
         political_reform = quota_immigration
         political_reform = elitist_service
-        political_reform = parties_only_nominated
+        political_reform = parties_restricted
         political_reform = two_year_draft
         political_reform = responsible_publishing
         political_reform = no_trade_unions
         political_reform = proportional_representation
-        political_reform = universal_voting
+        political_reform = free_voting
         political_reform = free_meetings 
 		political_reform = capital_punishment
 		
@@ -764,16 +764,16 @@ country_event = {
 		
 		government = democracy
 		
-		political_reform = free_opinion
+		political_reform = democratic_state_opinion
         political_reform = minorities_oppression
         political_reform = quota_immigration
         political_reform = elitist_service
-        political_reform = parties_only_nominated
+        political_reform = parties_restricted
         political_reform = two_year_draft
         political_reform = responsible_publishing
         political_reform = no_trade_unions
         political_reform = proportional_representation
-        political_reform = universal_voting
+        political_reform = free_voting
         political_reform = free_meetings 
 		political_reform = capital_punishment
 		
@@ -1311,7 +1311,7 @@ country_event = {
 		year = 1973
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -1379,7 +1379,7 @@ country_event = {
 		year = 1973
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -1483,7 +1483,7 @@ country_event = {
 		year = 1973
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -1568,7 +1568,7 @@ country_event = {
 		year = 1973
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -1655,7 +1655,7 @@ country_event = {
 		year = 1973
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -1682,12 +1682,12 @@ country_event = {
 		
 		government = democracy
 		
-		political_reform = free_opinion
+		political_reform = democratic_state_opinion
         political_reform = minorities_oppression
         political_reform = quota_immigration
         political_reform = elitist_service
         political_reform = no_trade_unions
-        political_reform = universal_voting
+        political_reform = free_voting
 		
 		any_pop = {  
 		    limit = { is_primary_culture = yes }
@@ -1719,12 +1719,12 @@ country_event = {
 		
 		government = democracy
 		
-		political_reform = free_opinion
+		political_reform = democratic_state_opinion
         political_reform = minorities_oppression
         political_reform = quota_immigration
         political_reform = elitist_service
         political_reform = no_trade_unions
-        political_reform = universal_voting
+        political_reform = free_voting
 		
 		any_pop = {  
 		    limit = { is_primary_culture = yes }
@@ -1918,7 +1918,7 @@ country_event = {
 		year = 1972 
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -1937,7 +1937,7 @@ country_event = {
 		prestige = 10
 		
 		random_country = {
-			limit = { tag = SPA OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = SPA OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 25 }
         }
 		
@@ -1996,7 +1996,7 @@ country_event = {
 		year = 1973 
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -2019,7 +2019,7 @@ country_event = {
 			relation = { who = THIS value = -50 } 
 		}
 		random_country = {
-			limit = { tag = SPA OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = SPA OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 25 }
         }
 		
@@ -2046,7 +2046,7 @@ country_event = {
 			relation = { who = THIS value = -15 } 
 		}
 		random_country = {
-			limit = { tag = SPA OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = SPA OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 10 }
         }
 		
@@ -2076,7 +2076,7 @@ country_event = {
 			relation = { who = THIS value = 15 } 
 		}
 		random_country = {
-			limit = { tag = SPA OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = SPA OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = -10 }
         }
 		
@@ -2109,7 +2109,7 @@ country_event = {
 		year = 1976 
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -2160,27 +2160,27 @@ country_event = {
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = ARG OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = ARG OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = SPA OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = SPA OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			relation = { who = THIS value = 25 }
 		}
 		random_country = {   
-			limit = { tag = POR OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = POR OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 25 }
 		}
 		random_country = {   
-			limit = { tag = FAG OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = FAG OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 25 }
 		}
 		random_country = {   
-			limit = { tag = GRE OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = GRE OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			relation = { who = THIS value = 25 }
 		}
 		random_country = {   
-			limit = { tag = CYP government = populist_dictatorship is_vassal = no }
+			limit = { tag = CYP government = nationalist_dictatorship is_vassal = no }
 			relation = { who = THIS value = 25 }
 		}
 		random_country = {   
@@ -2188,11 +2188,11 @@ country_event = {
 			relation = { who = THIS value = 15 }
 		}
 		random_country = {   
-			limit = { tag = SAF OR = { government = populist_dictatorship government = nationalist_dictatorship government = democracy } is_vassal = no }
+			limit = { tag = SAF OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = democracy } is_vassal = no }
 			relation = { who = THIS value = 15 }
 		}
 		random_country = {   
-			limit = { tag = RHO OR = { government = populist_dictatorship government = nationalist_dictatorship government = democracy government = democracy1 } is_vassal = no }
+			limit = { tag = RHO OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = democracy government = democracy1 } is_vassal = no }
 			relation = { who = THIS value = 15 }
 		}
 		
@@ -2281,7 +2281,7 @@ country_event = {
 			limit = {
 				exists = yes
 				OR = { 
-					AND = { primary_culture = arab OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } is_vassal = no }
+					AND = { primary_culture = arab OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } is_vassal = no }
 					AND = { tag = JOR OR = { government = hms_government government = hms_government1 government = absolute_monarchy } is_vassal = no }
 					AND = { primary_culture = arab tag = LEB is_vassal = no }
 					AND = { primary_culture = arab tag = PAL is_vassal = no }
@@ -2358,7 +2358,7 @@ country_event = {
 		year = 1974 
 		NOT = { year = 1990 }
 		
-		OR = { government = populist_dictatorship government = nationalist_dictatorship government = presidential_dictatorship }
+		OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = presidential_dictatorship }
 		
 		is_vassal = no
 		war = no
@@ -2425,7 +2425,7 @@ country_event = {
 		year = 2019
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		
 		has_country_flag = ITA_delle_Chiaie
 		has_global_flag = ITA_Operation_Tora_Tora
@@ -2460,7 +2460,7 @@ country_event = {
 		year = 1977
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		war = no
 		is_vassal = no
 		
@@ -2515,11 +2515,11 @@ country_event = {
 			relation = { who = THIS value = -15 }
 		}
 		random_country = {   
-			limit = { tag = ARG OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = ARG OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = -15 }
 		}
 		random_country = {   
-			limit = { tag = CYP government = populist_dictatorship is_vassal = no }
+			limit = { tag = CYP government = nationalist_dictatorship is_vassal = no }
 			relation = { who = THIS value = -15 }
 		}
 		random_country = {   
@@ -2527,23 +2527,23 @@ country_event = {
 			relation = { who = THIS value = -25 }
 		}
 		random_country = {   
-			limit = { tag = SAF OR = { government = populist_dictatorship government = nationalist_dictatorship government = democracy } is_vassal = no }
+			limit = { tag = SAF OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = democracy } is_vassal = no }
 			relation = { who = THIS value = -25 }
 		}
 		random_country = {   
-			limit = { tag = RHO OR = { government = populist_dictatorship government = nationalist_dictatorship government = democracy government = democracy1 } is_vassal = no }
+			limit = { tag = RHO OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = democracy government = democracy1 } is_vassal = no }
 			relation = { who = THIS value = -25 }
 		}
 		random_country = {   
-			limit = { tag = POR OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = POR OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = -50 }
 		}
 		random_country = {   
-			limit = { tag = FAG OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = FAG OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = -50 }
 		}
 		random_country = {   
-			limit = { tag = GRE OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = GRE OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			relation = { who = THIS value = -50 }
 		}
 		
@@ -2565,7 +2565,7 @@ country_event = {
 		name = "The Coup succeeds"
 		badboy = 2
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		country_event = 800050
 		ruling_party_ideology = populist
 		
@@ -2612,19 +2612,19 @@ country_event = {
 		}
 		
 		random_country = {   
-			limit = { tag = ITA government = populist_dictatorship is_vassal = no }
+			limit = { tag = ITA government = nationalist_dictatorship is_vassal = no }
 			relation = { who = THIS value = 100 }
 		}
 		random_country = {   
-			limit = { tag = POR OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = POR OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 100 }
 		}
 		random_country = {   
-			limit = { tag = FAG OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = FAG OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 100 }
 		}
 		random_country = {   
-			limit = { tag = GRE OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = GRE OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			relation = { who = THIS value = 100 }
 		}
 		random_country = {   
@@ -2632,11 +2632,11 @@ country_event = {
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = ARG OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = ARG OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = CYP government = populist_dictatorship is_vassal = no }
+			limit = { tag = CYP government = nationalist_dictatorship is_vassal = no }
 			relation = { who = THIS value = 25 }
 		}
 		random_country = {   
@@ -2644,11 +2644,11 @@ country_event = {
 			relation = { who = THIS value = 25 }
 		}
 		random_country = {   
-			limit = { tag = SAF OR = { government = populist_dictatorship government = nationalist_dictatorship government = democracy } is_vassal = no }
+			limit = { tag = SAF OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = democracy } is_vassal = no }
 			relation = { who = THIS value = 15 }
 		}
 		random_country = {   
-			limit = { tag = RHO OR = { government = populist_dictatorship government = nationalist_dictatorship government = democracy government = democracy1 } is_vassal = no }
+			limit = { tag = RHO OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = democracy government = democracy1 } is_vassal = no }
 			relation = { who = THIS value = 15 }
 		}
 		
@@ -2679,7 +2679,7 @@ country_event = {
 		}
 		
 		random_country = {   
-			limit = { tag = ITA government = populist_dictatorship is_vassal = no }
+			limit = { tag = ITA government = nationalist_dictatorship is_vassal = no }
 			relation = { who = THIS value = -50 }
 			country_event = 8020434
 		}
@@ -2740,7 +2740,7 @@ country_event = {
 		year = 1981
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		war = no
 		is_vassal = no
 		
@@ -2844,7 +2844,7 @@ country_event = {
 		year = 1988
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		war = no
 		is_vassal = no
 		
@@ -2923,7 +2923,7 @@ country_event = {
 		year = 1989
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		war = no
 		
@@ -3022,7 +3022,7 @@ country_event = {
 		year = 1992
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		war = no
 		
@@ -3096,7 +3096,7 @@ country_event = {
 		year = 1992
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		war = no
 		
@@ -3299,7 +3299,7 @@ country_event = {
 		month = 2
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -3372,7 +3372,7 @@ country_event = {
 		
 		money = 250000
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -3470,7 +3470,7 @@ country_event = {
 		
 		money = 150000
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -3493,27 +3493,27 @@ country_event = {
 		
 		#Relations with Authoritarian Regimes if they exist
 		random_country = {   
-			limit = { tag = SPA OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = SPA OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			diplomatic_influence = { who = THIS value = 50 } 
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = POR OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = POR OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			diplomatic_influence = { who = THIS value = 50 } 
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = FAG OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = FAG OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			diplomatic_influence = { who = THIS value = 50 } 
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = GRE OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = GRE OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			diplomatic_influence = { who = THIS value = 50 } 
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = CYP government = populist_dictatorship is_vassal = no }
+			limit = { tag = CYP government = nationalist_dictatorship is_vassal = no }
 			diplomatic_influence = { who = THIS value = 50 } 
 			relation = { who = THIS value = 50 }
 		}
@@ -3600,7 +3600,7 @@ country_event = {
 		month = 10
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -3740,7 +3740,7 @@ country_event = {
 		month = 5
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -3765,8 +3765,8 @@ country_event = {
 		
 		social_reform = acceptable_pensions
 		social_reform = acceptable_health_care
-		social_reform = citizen_salary
-		social_reform = the_safety_grid
+		social_reform = universal_subsidies
+		social_reform = good_public_housing
 		
 		any_pop = {  
 		    limit = { is_primary_culture = yes OR = { strata = middle strata = poor } }
@@ -3809,7 +3809,7 @@ country_event = {
 		month = 12
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -3918,7 +3918,7 @@ country_event = {
 		month = 4
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		
 		has_country_flag = ITA_Mennitti
 		has_global_flag = ITA_Operation_Tora_Tora
@@ -3956,7 +3956,7 @@ country_event = {
 		year = 1989
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -4038,7 +4038,7 @@ country_event = {
 		month = 1
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -4067,12 +4067,12 @@ country_event = {
 		
 		government = democracy
 		
-		political_reform = free_opinion
+		political_reform = democratic_state_opinion
         political_reform = elitist_service
-        political_reform = parties_promote_democratic
+        political_reform = parties_short
         political_reform = two_year_draft
         political_reform = proportional_representation
-        political_reform = universal_voting
+        political_reform = free_voting
 		political_reform = capital_punishment
 		
 		any_pop = {  
@@ -4118,12 +4118,12 @@ country_event = {
 		
 		government = democracy
 		
-		political_reform = free_opinion
+		political_reform = democratic_state_opinion
         political_reform = elitist_service
-        political_reform = parties_promote_democratic
+        political_reform = parties_short
         political_reform = two_year_draft
         political_reform = proportional_representation
-        political_reform = universal_voting
+        political_reform = free_voting
 		political_reform = capital_punishment
 		
 		any_pop = {  
@@ -4372,7 +4372,7 @@ country_event = {
 		year = 1980
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		war = no
 		
@@ -4436,7 +4436,7 @@ country_event = {
 			limit = {
 				exists = yes
 				OR = { 
-					AND = { primary_culture = arab OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } is_vassal = no }
+					AND = { primary_culture = arab OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } is_vassal = no }
 					AND = { tag = JOR OR = { government = hms_government government = hms_government1 government = absolute_monarchy } is_vassal = no }
 				}
 			}
@@ -4453,7 +4453,7 @@ country_event = {
 		
 		#Lose relations with South Africa
 		random_country = {
-			limit = { tag = SAF OR = { government = democracy government = democracy1 government = nationalist_dictatorship government = populist_dictatorship } is_vassal = no }
+			limit = { tag = SAF OR = { government = democracy government = democracy1 government = sectarian_dictatorship government = nationalist_dictatorship } is_vassal = no }
 			relation = { who = THIS value = -75 }
 		}
 		
@@ -4495,7 +4495,7 @@ country_event = {
 		month = 4
 		NOT = { year = 1992 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -4594,7 +4594,7 @@ country_event = {
 		
 		ruling_party_ideology = nationalist
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		war = no
 		
@@ -4610,9 +4610,9 @@ country_event = {
 		name = "Adopt the new Constitution!"
 		prestige = 50
 		
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = minorities_equal_rights
 		political_reform = professional_service
 		political_reform = responsible_publishing
@@ -4668,7 +4668,7 @@ country_event = {
 		month = 12
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -4728,12 +4728,12 @@ country_event = {
 			relation = { who = THIS value = 100 }
         }
 		random_country = {
-			limit = { tag = SAF OR = { government = democracy government = democracy1 government = nationalist_dictatorship government = populist_dictatorship } is_vassal = no }
+			limit = { tag = SAF OR = { government = democracy government = democracy1 government = sectarian_dictatorship government = nationalist_dictatorship } is_vassal = no }
 			diplomatic_influence  = { who = THIS value = 25 }
 			relation = { who = THIS value = 100 }
         }
 		random_country = {
-			limit = { tag = RHO OR = { government = democracy government = democracy1 government = nationalist_dictatorship government = populist_dictatorship } is_vassal = no }
+			limit = { tag = RHO OR = { government = democracy government = democracy1 government = sectarian_dictatorship government = nationalist_dictatorship } is_vassal = no }
 			diplomatic_influence  = { who = THIS value = 25 }
 			relation = { who = THIS value = 75 }
         }
@@ -4758,7 +4758,7 @@ country_event = {
 		month = 5
 		NOT = { year = 1992 }
 		
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		is_vassal = no
 		war = no
 		
@@ -4874,7 +4874,7 @@ country_event = {
 		month = 10
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = nationalist_dictatorship 
+		government = sectarian_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -4949,7 +4949,7 @@ country_event = {
 		month = 11
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		
 		has_country_flag = ITA_Spiazzi
 		has_global_flag = ITA_Operation_Tora_Tora
@@ -4985,7 +4985,7 @@ country_event = {
 		month = 9
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		
 		has_country_flag = ITA_dalla_Chiesa
 		has_global_flag = ITA_Operation_Tora_Tora
@@ -5019,7 +5019,7 @@ country_event = {
 		month = 7
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = nationalist_dictatorship 
+		government = sectarian_dictatorship 
 		is_vassal = no
 		war = no
 		
@@ -5163,7 +5163,7 @@ country_event = {
 		year = 1994
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		war = no
 		is_vassal = no
 		
@@ -5213,11 +5213,11 @@ country_event = {
 			relation = { who = THIS value = -15 }
 		}
 		random_country = {   
-			limit = { tag = ARG OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = ARG OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = -15 }
 		}
 		random_country = {   
-			limit = { tag = CYP government = populist_dictatorship is_vassal = no }
+			limit = { tag = CYP government = nationalist_dictatorship is_vassal = no }
 			relation = { who = THIS value = -15 }
 		}
 		random_country = {   
@@ -5225,19 +5225,19 @@ country_event = {
 			relation = { who = THIS value = -25 }
 		}
 		random_country = {   
-			limit = { tag = RHO OR = { government = populist_dictatorship government = nationalist_dictatorship government = democracy government = democracy1 } is_vassal = no }
+			limit = { tag = RHO OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = democracy government = democracy1 } is_vassal = no }
 			relation = { who = THIS value = -25 }
 		}
 		random_country = {   
-			limit = { tag = POR OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = POR OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = -50 }
 		}
 		random_country = {   
-			limit = { tag = FAG OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = FAG OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = -50 }
 		}
 		random_country = {   
-			limit = { tag = GRE OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = GRE OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			relation = { who = THIS value = -50 }
 		}
 		
@@ -5261,7 +5261,7 @@ country_event = {
 		month = 6
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		
 		has_country_flag = ITA_Maletti
 		has_global_flag = ITA_Operation_Tora_Tora
@@ -5606,7 +5606,7 @@ country_event = {
 		war_exhaustion = 5
 		
 		random_country = {
-			limit = { tag = SPA OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = SPA OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 25 }
 		}
 		
@@ -6343,7 +6343,7 @@ country_event = {
 		}
 		#Pan-Arabists are Happy
 		any_country = {
-			limit = { exists = yes primary_culture = arab NOT = { tag = EGY } NOT = { tag = IRQ } OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } is_vassal = no }
+			limit = { exists = yes primary_culture = arab NOT = { tag = EGY } NOT = { tag = IRQ } OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 25 } 
 		}
 		
@@ -6615,7 +6615,7 @@ country_event = {
 		
 		#Involved countries are angry
 		any_country = {
-			limit = { exists = yes primary_culture = arab NOT = { tag = EGY } NOT = { tag = IRQ } OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } is_vassal = no }
+			limit = { exists = yes primary_culture = arab NOT = { tag = EGY } NOT = { tag = IRQ } OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } is_vassal = no }
 			relation = { who = THIS value = -25 } 
 		}
 		
@@ -6642,7 +6642,7 @@ country_event = {
 		
 		#Involved countries are angry
 		any_country = {
-			limit = { exists = yes primary_culture = arab NOT = { tag = EGY } NOT = { tag = IRQ } OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } is_vassal = no }
+			limit = { exists = yes primary_culture = arab NOT = { tag = EGY } NOT = { tag = IRQ } OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } is_vassal = no }
 			relation = { who = THIS value = -10 } 
 		}
 		

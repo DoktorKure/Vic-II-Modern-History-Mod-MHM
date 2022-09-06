@@ -42,7 +42,7 @@ political_decisions = {
 		picture = the_cult_of_personality
 		potential = {
 		
-			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship }			
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }			
 
 			NOT = { has_country_modifier = cult_of_personality }
 			
@@ -78,7 +78,7 @@ political_decisions = {
 		
 			NOT = { has_country_flag = president_for_life }
 
-			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship government = theocracy }
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship government = theocracy }
 
 		}
 
@@ -189,7 +189,7 @@ political_decisions = {
 		}
 
 		effect = {
-			political_reform = regulated_opinion
+			political_reform = appointed_opinion
 			any_pop = { limit = { OR = { type = bureaucrats type = officers } } militancy = 10 }
 
 			any_pop = { limit = { NOT = { OR = { type = bureaucrats type = officers } } } militancy = -6 }

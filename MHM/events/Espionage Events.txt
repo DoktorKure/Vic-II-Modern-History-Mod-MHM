@@ -386,7 +386,7 @@ country_event = {
 		war = no
 		is_disarmed = no
 
-		OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = theocracy }
+		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = theocracy }
 
 		any_neighbor_country = { is_vassal = no NOT = { alliance_with = THIS } NOT = { in_sphere = THIS } }
 	}

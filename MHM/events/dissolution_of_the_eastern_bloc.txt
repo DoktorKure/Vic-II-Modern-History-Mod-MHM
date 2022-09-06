@@ -1,5 +1,3 @@
-
-
 country_event = { # Sinatra Doctrine
 	id = 9001396
 	title = "The Sinatra Doctrine"
@@ -13,7 +11,7 @@ country_event = { # Sinatra Doctrine
 		year = 1989
 		NOT = { year = 1999 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -103,7 +101,7 @@ country_event = {
 		#Perestroika had bad effects
 		has_global_flag = autumn_of_nations
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
   	}
@@ -420,7 +418,7 @@ country_event = { # The New Government
 		year = 1985
 		NOT = { year = 1995 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -456,7 +454,7 @@ country_event = { # The New Government
 		random_country = { limit = { tag = FRA is_greater_power = yes government = democracy } relation = { who = THIS value = 15 } }
 		random_country = { limit = { tag = ENG is_greater_power = yes OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } } relation = { who = THIS value = 15 } }
 		random_country = { limit = { tag = GER is_vassal = no government = democracy } relation = { who = THIS value = 15 } }
-		random_country = { limit = { tag = CHI is_greater_power = yes government = proletarian_dictatorship } relation = { who = THIS value = 15 } }
+		random_country = { limit = { tag = CHI is_greater_power = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } relation = { who = THIS value = 15 } }
 		
 		# New Doctrine?
 		country_event = 9001400
@@ -471,7 +469,7 @@ country_event = { # The New Government
 		
 		random_country = { limit = { tag = USA is_greater_power = yes government = democracy } relation = { who = THIS value = -50 } }
 		random_country = { limit = { tag = FRA is_greater_power = yes government = democracy } relation = { who = THIS value = -25 } }
-		random_country = { limit = { tag = CHI is_greater_power = yes government = proletarian_dictatorship } relation = { who = THIS value = -25 } }
+		random_country = { limit = { tag = CHI is_greater_power = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } relation = { who = THIS value = -25 } }
 		
 		# Modernise the Brezhnev Doctrine?
 		country_event = 9001399
@@ -674,7 +672,7 @@ country_event = { # Our own Ideologist?
 		name = "The current interpretation is fine!"
 		
 		relation = { who = RUS value = 25 }
-		random_country = { limit = { tag = CHI is_greater_power = yes government = proletarian_dictatorship } relation = { who = THIS value = 25 } }
+		random_country = { limit = { tag = CHI is_greater_power = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } relation = { who = THIS value = 25 } }
 		
 		any_pop = { limit = { strata = middle } militancy = 8 consciousness = 8 }
 		any_pop = { limit = { strata = poor } militancy = 4 consciousness = 4 }
@@ -1104,7 +1102,7 @@ country_event = {
 	id = 9001407
 	title = "Democratization in $COUNTRY$?"
 	desc = EVTDESC9001407
-	picture = "ussr_police_militsia"
+	picture = "ussr_basic_security_militsia"
 
 	trigger = {
 		capital_scope = { continent = europe }

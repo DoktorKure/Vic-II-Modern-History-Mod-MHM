@@ -8,8 +8,8 @@ political_decisions = {
 		potential = {
 			OR = {
 				government = presidential_dictatorship
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
 				minorities_reform = minorities_oppression
@@ -65,7 +65,7 @@ political_decisions = {
 			factor = 1
 			modifier = { badboy = 1 war = no factor = 0 }
 			modifier = { tag = SAF factor = 0 }
-			modifier = { AND = { tag = RUS government = proletarian_dictatorship } factor = 0 } #So AI USSR doesn't immediately start killing everyone
+			modifier = { AND = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } factor = 0 } #So AI USSR doesn't immediately start killing everyone
 			modifier = { OR = { tag = RWA tag = RSR tag = SRK tag = SER tag = CRO tag = BOS } factor = 1 } 
 		}
 	}
@@ -118,8 +118,8 @@ political_decisions = {
 		potential = {
 			OR = {
 				government = presidential_dictatorship
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = theocracy
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -219,8 +219,8 @@ political_decisions = {
 			#Government must be a non-socialist dictatorship
 			OR = {
 				government = presidential_dictatorship
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = absolute_monarchy
 				government = theocracy
 			}
@@ -311,8 +311,8 @@ political_decisions = {
 				NOT = {
 					OR = {
 						government = presidential_dictatorship
-						government = populist_dictatorship
 						government = nationalist_dictatorship
+						government = sectarian_dictatorship
 						government = absolute_monarchy
 						government = theocracy
 					}

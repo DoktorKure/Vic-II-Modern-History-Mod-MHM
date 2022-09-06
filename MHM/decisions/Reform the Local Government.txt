@@ -17,20 +17,20 @@ political_decisions = {
                             THIS = { vote_franschise = none_voting }
                         }
                         AND =  {
-                            NOT = { vote_franschise = registered_voting } # Harassment
-                            THIS = { vote_franschise = registered_voting }
+                            NOT = { vote_franschise = harassed_voting } # Harassment
+                            THIS = { vote_franschise = harassed_voting }
                         }
                         AND =  {
-                            NOT = { vote_franschise = universal_weighted_voting } # Vote Rigging
-                            THIS = { vote_franschise = universal_weighted_voting }
+                            NOT = { vote_franschise = rigged_voting } # Vote Rigging
+                            THIS = { vote_franschise = rigged_voting }
                         }
                         AND =  {
-                            NOT = { vote_franschise = promoted_voting } # Gerrymandering
-                            THIS = { vote_franschise = promoted_voting }
+                            NOT = { vote_franschise = gerrymandered_voting } # Gerrymandering
+                            THIS = { vote_franschise = gerrymandered_voting }
                         }
                         AND =  {
-                            NOT = { vote_franschise = universal_voting } # Fair and Square
-                            THIS = { vote_franschise = universal_voting }
+                            NOT = { vote_franschise = free_voting } # Fair and Square
+                            THIS = { vote_franschise = free_voting }
                         }
                     }
                     OR = { # Political Party Reforms
@@ -39,20 +39,20 @@ political_decisions = {
                             THIS = { political_parties = parties_not_allowed }
                         }
                         AND =  {
-                            NOT = { political_parties = parties_only_nominated } # Rigged Campaigning
-                            THIS = { political_parties = parties_only_nominated }
+                            NOT = { political_parties = parties_restricted } # Rigged Campaigning
+                            THIS = { political_parties = parties_restricted }
                         }
                         AND =  {
-                            NOT = { political_parties = parties_restrict_non_democratic } # Restricted Campaigning
-                            THIS = { political_parties = parties_restrict_non_democratic }
+                            NOT = { political_parties = parties_rigged } # Restricted Campaigning
+                            THIS = { political_parties = parties_rigged }
                         }
                         AND =  {
-                            NOT = { political_parties = parties_promote_democratic } # Short Campaigning
-                            THIS = { political_parties = parties_promote_democratic }
+                            NOT = { political_parties = parties_short } # Short Campaigning
+                            THIS = { political_parties = parties_short }
                         }
                         AND =  {
-                            NOT = { political_parties = parties_allowed } # Fair Campaigning
-                            THIS = { political_parties = parties_allowed }
+                            NOT = { political_parties = parties_fair } # Fair Campaigning
+                            THIS = { political_parties = parties_fair }
                         }
                     }
                 }
@@ -72,31 +72,31 @@ political_decisions = {
                 }
             }
             random_owned = {
-                limit = { owner = { vote_franschise = registered_voting } }
+                limit = { owner = { vote_franschise = harassed_voting } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = registered_voting
+                    political_reform = harassed_voting
                 }
             }
             random_owned = {
-                limit = { owner = { vote_franschise = universal_weighted_voting } }
+                limit = { owner = { vote_franschise = rigged_voting } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = universal_weighted_voting
+                    political_reform = rigged_voting
                 }
             }
             random_owned = {
-                limit = { owner = { vote_franschise = promoted_voting } }
+                limit = { owner = { vote_franschise = gerrymandered_voting } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = promoted_voting
+                    political_reform = gerrymandered_voting
                 }
             }
             random_owned = {
-                limit = { owner = { vote_franschise = universal_voting } }
+                limit = { owner = { vote_franschise = free_voting } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = universal_voting
+                    political_reform = free_voting
                 }
             }
 
@@ -109,31 +109,31 @@ political_decisions = {
                 }
             }
 			random_owned = { # Semi-Appointed
-                limit = { owner = { political_opinions = regulated_opinion } }
+                limit = { owner = { political_opinions = appointed_opinion } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = regulated_opinion
+                    political_reform = appointed_opinion
                 }
             }
 			random_owned = { # Qualified State Elections
-                limit = { owner = { political_opinions = open_opinion } }
+                limit = { owner = { political_opinions = semi_democratic_state_opinion } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = open_opinion
+                    political_reform = semi_democratic_state_opinion
                 }
             }
 			random_owned = { # Open State Assembly
-                limit = { owner = { political_opinions = free_opinion } }
+                limit = { owner = { political_opinions = democratic_state_opinion } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = free_opinion
+                    political_reform = democratic_state_opinion
                 }
             }
 			random_owned = { # Based on Population
-                limit = { owner = { political_opinions = democratic_opinion } }
+                limit = { owner = { political_opinions = popular_opinion } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = democratic_opinion
+                    political_reform = popular_opinion
                 }
             }
 
@@ -215,17 +215,17 @@ political_decisions = {
 
 			#Publishing Rights
             random_owned = { # State Press
+                limit = { owner = { publishing_rights = state_publishing } }
+                any_country = {
+                    limit = { exists = no capital_scope = { owned_by = THIS } }
+                    political_reform = state_publishing
+                }
+            }
+            random_owned = { # Censored Publishing
                 limit = { owner = { publishing_rights = censored_publishing } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
                     political_reform = censored_publishing
-                }
-            }
-            random_owned = { # Censored Publishing
-                limit = { owner = { publishing_rights = firewall_publishing } }
-                any_country = {
-                    limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = firewall_publishing
                 }
             }
             random_owned = { # Responsible Press
@@ -236,10 +236,10 @@ political_decisions = {
                 }
             }
             random_owned = { # Free Press
-                limit = { owner = { publishing_rights = unregulated_publishing } }
+                limit = { owner = { publishing_rights = free_publishing } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = unregulated_publishing
+                    political_reform = free_publishing
                 }
             }
 
@@ -282,31 +282,31 @@ political_decisions = {
                 }
             }
 			random_owned = { # Rigged Campaigning
-                limit = { owner = { political_parties = parties_only_nominated } }
+                limit = { owner = { political_parties = parties_restricted } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = parties_only_nominated
+                    political_reform = parties_restricted
                 }
             }
 			random_owned = { # Restricted Campaigning
-                limit = { owner = { political_parties = parties_restrict_non_democratic } }
+                limit = { owner = { political_parties = parties_rigged } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = parties_restrict_non_democratic
+                    political_reform = parties_rigged
                 }
             }
 			random_owned = { # Short Campaigning
-                limit = { owner = { political_parties = parties_promote_democratic } }
+                limit = { owner = { political_parties = parties_short } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = parties_promote_democratic
+                    political_reform = parties_short
                 }
             }
 			random_owned = { # Fair Campaigning
-                limit = { owner = { political_parties = parties_allowed } }
+                limit = { owner = { political_parties = parties_fair } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = parties_allowed
+                    political_reform = parties_fair
                 }
             }
 

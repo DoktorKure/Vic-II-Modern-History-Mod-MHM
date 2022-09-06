@@ -146,10 +146,10 @@ country_event = {
 	trigger = {
 		war = no
 		money = 20000
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		any_neighbor_country = {
 			NOT = { 
-				government = populist_dictatorship
+				government = nationalist_dictatorship
 				ruling_party_ideology = populism
 				alliance_with = THIS
 			}
@@ -191,7 +191,7 @@ country_event = {
 					NOT = { owned_by = THIS }
 					owner = {
 						NOT = { 
-				government = populist_dictatorship
+				government = nationalist_dictatorship
 				ruling_party_ideology = populism
 				alliance_with = THIS
 						}
@@ -205,7 +205,7 @@ country_event = {
 					NOT = { owned_by = THIS }
 					owner = {
 						NOT = { 
-				government = populist_dictatorship
+				government = nationalist_dictatorship
 				ruling_party_ideology = populism
 				alliance_with = THIS
 						}

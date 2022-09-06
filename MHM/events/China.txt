@@ -202,7 +202,7 @@ country_event = {
 		NOT = { year = 1990 }
 		
 		NOT = { war_with = KMT }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		#Beijing is not the Capital
 		owns = 1612
@@ -236,7 +236,7 @@ country_event = {
 		year = 1950
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -253,7 +253,7 @@ country_event = {
 		
 		money = -100000
 		
-		social_reform = unlimited_education
+		social_reform = excellent_public_education
 		
 		add_country_modifier = { name = literacy_campaign duration = 3650 }
 		
@@ -298,7 +298,7 @@ country_event = {
 		tag = CHI
 		year = 1976
 		NOT = { year = 1990 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 	}
 
 	mean_time_to_happen = { months = 9 }
@@ -324,7 +324,7 @@ country_event = {
 		tag = CHI
 		year = 1976
 		NOT = { year = 1990 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = mao_zedong_death
 	}
 
@@ -357,7 +357,7 @@ country_event = {
 
 	trigger = {
 		tag = CHI
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		year = 1978 NOT = { year = 1990 }
 		has_country_flag = mao_zedong_death
 		has_country_flag = gang_of_four_executed
@@ -396,7 +396,7 @@ country_event = {
 
 	trigger = {
 		tag = CHI
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		year = 1979 NOT = { year = 1990 }
 		has_country_flag = deng_xiaoping_selected
 		NOT = { ruling_party_ideology = communist_social }
@@ -476,13 +476,13 @@ country_event = {
 		NOT = { year = 1990 }
 		
 		is_greater_power = yes
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		
 		#Khruschev
     	has_global_flag = de_stalinization
 		RUS = { 
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 			is_greater_power = yes 
 		}
 	}
@@ -542,7 +542,7 @@ country_event = {
 		NOT = { year = 1990 }
 		
 		is_greater_power = yes
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		
 		#Reconcilled borders
@@ -550,7 +550,7 @@ country_event = {
 		
 		RUS = {
 			is_greater_power = yes
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			war = no
 		}
 		
@@ -902,7 +902,7 @@ country_event = {
 		year = 1989 
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		is_greater_power = yes
 		ruling_party_ideology = communist_social

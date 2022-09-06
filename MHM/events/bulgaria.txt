@@ -43,13 +43,13 @@ country_event = {
 
 		set_country_flag = dimitrov_bul
        
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = none_voting #No voting
 		political_reform = limited_meetings
 		political_reform = politicised_service #Politicized
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = open_immigration
 		political_reform = no_draft #no_draft
 		political_reform = minorities_affirmative_action
@@ -103,7 +103,7 @@ country_event = {
 		year = 1971
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -125,7 +125,7 @@ country_event = {
 		#Historic constitution signed in 1971, established more rigid state control
 		political_reform = ruling_party_opinion
 		political_reform = no_meetings
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = parties_not_allowed #increased centralization
 		political_reform = nobody_gets_out
 
@@ -166,13 +166,13 @@ country_event = {
 	   
 		#Second chance at socialist democracy
 		government = socialist_democracy
-		political_reform = universal_voting
-		political_reform = open_opinion
+		political_reform = free_voting
+		political_reform = semi_democratic_state_opinion
 		political_reform = limited_meetings
 		political_reform = elitist_service #Elitist
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = open_immigration
 		political_reform = no_draft #no_draft
 		political_reform = minorities_affirmative_action

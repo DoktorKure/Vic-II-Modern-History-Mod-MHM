@@ -45,8 +45,8 @@ political_decisions = {
 					OR = { ruling_party_ideology = conservative ruling_party_ideology = populist }
 					OR = {
 						government = presidential_dictatorship
-						government = populist_dictatorship
 						government = nationalist_dictatorship
+						government = sectarian_dictatorship
 						government = absolute_monarchy
 					} 
 				}
@@ -144,8 +144,8 @@ political_decisions = {
 					ruling_party_ideology = socialist
 					OR = {
 						government = presidential_dictatorship
-						government = populist_dictatorship
 						government = nationalist_dictatorship
+						government = sectarian_dictatorship
 					} 
 				}
 
@@ -329,8 +329,8 @@ political_decisions = {
 					ruling_party_ideology = socialist
 					OR = {
 						government = presidential_dictatorship
-						government = populist_dictatorship
 						government = nationalist_dictatorship
+						government = sectarian_dictatorship
 					} 
 				}
 
@@ -343,6 +343,26 @@ political_decisions = {
 			relation = { who = CHI value = -50 }
 			RUS = { diplomatic_influence = { who = THIS value = 25 } }
 			CHI = { diplomatic_influence = { who = THIS value = -25 } }
+			
+			#Democratic leader is angry
+			random_country = { 
+				limit = { has_country_modifier = democratic_bloc_leader } 
+				diplomatic_influence = { who = THIS value = -20 }
+				relation = { who = THIS value = -20 }
+			}
+			
+			#All Democratic Bloc members are not happy
+			any_country = { 
+				limit = { has_country_modifier = democratic_bloc } 
+				diplomatic_influence =  { who = THIS value = -10 }
+				relation = { who = THIS value = -20 }
+			}
+			
+			#All NAM GPs lose influence in THIS
+			any_country = { 
+				limit = { has_country_flag = joinnam } 
+				diplomatic_influence =  { who = THIS value = -10 }
+			}
 		}
 
 		ai_will_do = { 
@@ -398,8 +418,8 @@ political_decisions = {
 					ruling_party_ideology = socialist
 					OR = {
 						government = presidential_dictatorship
-						government = populist_dictatorship
 						government = nationalist_dictatorship
+						government = sectarian_dictatorship
 					} 
 				}
 
@@ -412,6 +432,26 @@ political_decisions = {
 			relation = { who = RUS value = -50 }
 			CHI = { diplomatic_influence = { who = THIS value = 25 } }
 			RUS = { diplomatic_influence = { who = THIS value = -25 } }
+			
+			#Democratic leader is angry
+			random_country = { 
+				limit = { has_country_modifier = democratic_bloc_leader } 
+				diplomatic_influence = { who = THIS value = -20 }
+				relation = { who = THIS value = -20 }
+			}
+			
+			#All Democratic Bloc members are not happy
+			any_country = { 
+				limit = { has_country_modifier = democratic_bloc } 
+				diplomatic_influence =  { who = THIS value = -10 }
+				relation = { who = THIS value = -20 }
+			}
+			
+			#All NAM GPs lose influence in THIS
+			any_country = { 
+				limit = { has_country_flag = joinnam } 
+				diplomatic_influence =  { who = THIS value = -10 }
+			}
 		}
 
 		ai_will_do = { 

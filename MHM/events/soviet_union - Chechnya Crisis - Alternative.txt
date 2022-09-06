@@ -15,6 +15,7 @@ country_event = { # The Chechnya Question
 		
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 		is_vassal = no
@@ -142,6 +143,7 @@ country_event = { # Martial Law in Chechnya - Good
 		tag = RUS
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 		has_country_flag = ussr_chechnya_good
@@ -333,6 +335,7 @@ country_event = { # Martial Law in Chechnya - Meh
 		tag = RUS
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 		has_country_flag = ussr_chechnya_meh
@@ -443,6 +446,7 @@ country_event = { # Martial Law in Chechnya - Bad
 		
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 		
@@ -634,6 +638,7 @@ country_event = { # Restoration of Order in Chechnya
 		tag = RUS
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 		has_country_flag = martial_law_chechnya_1
@@ -669,6 +674,7 @@ country_event = { # Insurgency in Chechnya
 		
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 		is_vassal = no

@@ -832,8 +832,8 @@ country_event = {
 			pensions = good_pensions
 		}
 		NOT = {
-			wage_and_work_hours = paid_sick_leave_hours
-			wage_and_work_hours = six_hours
+			wage_reform = acceptable_minimum_wage
+			wage_reform = good_minimum_wage
 		}
 	}
 	
@@ -843,8 +843,8 @@ country_event = {
 		modifier = {
 			factor = 1.3
 			OR = {
-				wage_and_work_hours = paid_vacation_hours
-				wage_and_work_hours = eight_work_hours
+				wage_reform = low_minimum_wage
+				wage_reform = trinket_wage
 			}
 		}
 		
@@ -859,9 +859,9 @@ country_event = {
 		modifier = {
 			factor = 1.5
 			OR = {
-				security_reform = security_data_cohesion
-				security_reform = security_clearance_for_gov_services
-				security_reform = preemptive_security_actions
+				security_reform = acceptable_security
+				security_reform = good_security
+				security_reform = excellent_security
 			}
 		}
 		
@@ -893,7 +893,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB3305"
-		social_reform = paid_sick_leave_hours
+		social_reform = acceptable_minimum_wage
 		rich_strata = {
 			scaled_consciousness = {
 				ideology = conservative
@@ -1059,7 +1059,7 @@ country_event = {
 			poor_strata = {
 				scaled_militancy = {
 					factor = 7
-					issue = ghent_system
+					issue = low_subsidies
 				}
 			}
 		}
@@ -1071,7 +1071,7 @@ country_event = {
 			poor_strata = {
 				scaled_consciousness = {
 					factor = 7
-					issue = ghent_system
+					issue = low_subsidies
 				}
 			}
 		}
@@ -1082,7 +1082,7 @@ country_event = {
 		random_state = {
 			poor_strata = {
 				dominant_issue = {
-					value = ghent_system
+					value = low_subsidies
 					factor = 0.3
 				}
 				consciousness = 1
@@ -1101,7 +1101,7 @@ country_event = {
 	trigger = {
 		civilized = yes
 		unemployment = 0.05
-		unemployment_subsidies = ghent_system
+		unemployment_subsidies = low_subsidies
 		OR = { big_tent = 0.1 conservative = 0.1 }
 		liberal = 0.1
 		NOT = {
@@ -1145,7 +1145,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC3401"
-		social_reform = generous_subsidies
+		social_reform = extended_subsidies
 		any_pop = {
 			scaled_militancy = {
 				ideology = conservative
@@ -1168,7 +1168,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		unemployment_subsidies = generous_subsidies
+		unemployment_subsidies = extended_subsidies
 		unemployment = 0.05
 	}
 	
@@ -1188,7 +1188,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB3402"
-		social_reform = ghent_system
+		social_reform = low_subsidies
 		rich_strata = {
 			consciousness = -1
 			militancy = -1
@@ -1207,7 +1207,7 @@ country_event = {
 		name = "EVTOPTC3402"
 		any_pop = {
 			dominant_issue = {
-				value = citizen_salary
+				value = universal_subsidies
 				factor = 0.3
 			}
 			militancy = 1
@@ -1224,8 +1224,8 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		unemployment_subsidies = ghent_system
-		wage_and_work_hours = paid_vacation_hours
+		unemployment_subsidies = low_subsidies
+		wage_reform = low_minimum_wage
 		NOT = {
 			union_rights = no_trade_unions
 		}
@@ -1254,11 +1254,11 @@ country_event = {
 			any_pop = {
 				dominant_issue = {
 					factor = 0.4
-					value = generous_subsidies
+					value = extended_subsidies
 				}
 				scaled_militancy = {
 					factor = 2
-					issue = paid_sick_leave_hours
+					issue = acceptable_minimum_wage
 				}
 			}
 		}
@@ -1270,11 +1270,11 @@ country_event = {
 			any_pop = {
 				dominant_issue = {
 					factor = 0.4
-					value = paid_sick_leave_hours
+					value = acceptable_minimum_wage
 				}
 				scaled_militancy = {
 					factor = 2
-					issue = generous_subsidies
+					issue = extended_subsidies
 				}
 			}
 		}
@@ -1299,7 +1299,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		unemployment_subsidies = generous_subsidies
+		unemployment_subsidies = extended_subsidies
 		NOT = {
 			union_rights = no_trade_unions
 		}
@@ -1324,7 +1324,7 @@ country_event = {
 		random_state = {
 			any_pop = {
 				dominant_issue = {
-					value = citizen_salary
+					value = universal_subsidies
 					factor = 0.2
 				}
 				consciousness = 3
@@ -1352,8 +1352,8 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		safety_regulations = some_regulations
-		balanced_regulations = 1
+		safety_regulations = no_safety
+		trinket_safety = 1
 	}
 	
 	mean_time_to_happen = {
@@ -1374,12 +1374,12 @@ country_event = {
 		name = "EVTOPTA3600"
 		random_state = {
 			limit = {
-				balanced_regulations = 1
+				trinket_safety = 1
 			}
 			any_pop = {
 				scaled_militancy = {
 					factor = 4
-					issue = balanced_regulations
+					issue = trinket_safety
 				}
 			}
 		}
@@ -1389,12 +1389,12 @@ country_event = {
 		name = "EVTOPTB3600"
 		random_state = {
 			limit = {
-				balanced_regulations = 1
+				trinket_safety = 1
 			}
 			any_pop = {
 				scaled_consciousness = {
 					factor = 4
-					issue = balanced_regulations
+					issue = trinket_safety
 				}
 			}
 		}
@@ -1411,7 +1411,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		safety_regulations = balanced_regulations
+		safety_regulations = trinket_safety
 	}
 	
 	mean_time_to_happen = {
@@ -1434,7 +1434,7 @@ country_event = {
 			any_pop = {
 				scaled_militancy = {
 					factor = 4
-					issue = restrictive_regulations
+					issue = low_safety
 				}
 			}
 		}
@@ -1446,7 +1446,7 @@ country_event = {
 			any_pop = {
 				dominant_issue = {
 					factor = 0.4
-					value = restrictive_regulations
+					value = low_safety
 				}
 			}
 		}
@@ -1462,7 +1462,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		safety_regulations = restrictive_regulations
+		safety_regulations = low_safety
 		social_reform_want = 0.2
 	}
 	
@@ -1488,7 +1488,7 @@ country_event = {
 			any_pop = {
 				scaled_militancy = {
 					factor = 5
-					issue = strict_regulations
+					issue = acceptable_safety
 				}
 			}
 		}
@@ -1500,7 +1500,7 @@ country_event = {
 			any_pop = {
 				scaled_consciousness = {
 					factor = 4
-					issue = strict_regulations
+					issue = acceptable_safety
 				}
 			}
 		}
@@ -1512,11 +1512,11 @@ country_event = {
 			any_pop = {
 				scaled_militancy = {
 					factor = 2
-					issue = strict_regulations
+					issue = acceptable_safety
 				}
 				scaled_consciousness = {
 					factor = 2
-					issue = strict_regulations
+					issue = acceptable_safety
 				}
 			}
 		}
@@ -1532,7 +1532,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		safety_regulations = strict_regulations
+		safety_regulations = acceptable_safety
 	}
 	
 	mean_time_to_happen = {
@@ -1562,7 +1562,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTB3603"
-		social_reform = restrictive_regulations
+		social_reform = low_safety
 		random_state = {
 			poor_strata = {
 				consciousness = 4
@@ -1572,7 +1572,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC3603"
-		social_reform = rigid_regulations
+		social_reform = good_safety
 		random_state = {
 			rich_strata = {
 				consciousness = 4
@@ -1594,7 +1594,7 @@ country_event = {
 			union_rights = free_trade_unions
 		}
 		NOT = {
-			safety_regulations = rigid_regulations
+			safety_regulations = good_safety
 		}
 	}
 	
@@ -1642,7 +1642,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		safety_regulations = restrictive_regulations
+		safety_regulations = low_safety
 		health_care = low_health_care
 	}
 	
@@ -1679,7 +1679,7 @@ country_event = {
 			any_pop = {
 				militancy = 2
 				dominant_issue = {
-					value = strict_regulations
+					value = acceptable_safety
 					factor = 0.3
 				}
 				dominant_issue = {
@@ -1700,7 +1700,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		safety_regulations = strict_regulations
+		safety_regulations = acceptable_safety
 		health_care = acceptable_health_care
 		mineral_processing = 1
 	}
@@ -1733,7 +1733,7 @@ country_event = {
 		random_state = {
 			poor_strata = {
 				dominant_issue = {
-					value = rigid_regulations
+					value = good_safety
 					factor = 0.3
 				}
 			}
@@ -1750,7 +1750,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		safety_regulations = rigid_regulations
+		safety_regulations = good_safety
 		health_care = good_health_care
 	}
 	
@@ -1796,7 +1796,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		security_reform = police
+		security_reform = basic_security
 	}
 	
 	mean_time_to_happen = {
@@ -1820,7 +1820,7 @@ country_event = {
 		random_state = {
 			any_pop = {
 				dominant_issue = {
-					value = security_service
+					value = weak_security
 					factor = 0.4
 				}
 				militancy = 1
@@ -1847,7 +1847,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		security_reform = security_service
+		security_reform = weak_security
 	}
 	
 	mean_time_to_happen = {
@@ -1861,7 +1861,7 @@ country_event = {
 		modifier = {
 			factor = 1.3
 			NOT = {
-				security_data_cohesion = 10
+				acceptable_security = 10
 			}
 		}
 	}
@@ -1875,7 +1875,7 @@ country_event = {
 	
 	option = {	
 		name = "EVTOPTB3701"
-		social_reform = security_data_cohesion
+		social_reform = acceptable_security
 		poor_strata = {
 			militancy = -1
 		}
@@ -1886,7 +1886,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC3701"
-		social_reform = police
+		social_reform = basic_security
 		poor_strata = {
 			militancy = 3
 		}
@@ -1905,7 +1905,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		security_reform = security_data_cohesion
+		security_reform = acceptable_security
 		NOT = {
 			union_rights = no_trade_unions
 		}
@@ -1928,7 +1928,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA3702"
-		social_reform = security_service
+		social_reform = weak_security
 		poor_strata = {
 			militancy = 3
 		}
@@ -1954,7 +1954,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC3702"
-		social_reform = security_clearance_for_gov_services
+		social_reform = good_security
 		rich_strata = {
 			militancy = 4
 		}
@@ -1973,7 +1973,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		security_reform = security_clearance_for_gov_services
+		security_reform = good_security
 		OR = { conservative = 0.3 big_tent = 0.3 }
 	}
 	
@@ -1984,7 +1984,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA3703"
-		social_reform = security_service
+		social_reform = weak_security
 		poor_strata = {
 			militancy = 3
 			consciousness = 2
@@ -2006,7 +2006,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC3703"
-		social_reform = preemptive_security_actions
+		social_reform = excellent_security
 		rich_strata = {
 			militancy = 5
 			consciousness = 5
@@ -2029,7 +2029,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		wage_and_work_hours = unregulated_hours
+		wage_reform = unregulated_hours
 		social_reform_want = 0.1
 	}
 	
@@ -2061,7 +2061,7 @@ country_event = {
 		random_state = {
 			any_pop = {
 				dominant_issue = {
-					value = eight_work_hours
+					value = trinket_wage
 					factor = 0.4
 				}
 				militancy = 1
@@ -2080,7 +2080,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC3800"
-		social_reform = eight_work_hours
+		social_reform = trinket_wage
 		poor_strata = {
 			militancy = -1
 		}
@@ -2100,7 +2100,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		wage_and_work_hours = eight_work_hours
+		wage_reform = trinket_wage
 		NOT = {
 			OR = {
 				government = proletarian_dictatorship
@@ -2168,7 +2168,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		wage_and_work_hours = paid_vacation_hours
+		wage_reform = low_minimum_wage
 		average_consciousness = 5
 		social_reform_want = 0.1
 	}
@@ -2217,7 +2217,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTC3802"
-		social_reform = paid_sick_leave_hours
+		social_reform = acceptable_minimum_wage
 		rich_strata = {
 			militancy = 4
 			consciousness = 2
@@ -2242,7 +2242,7 @@ country_event = {
 	
 	trigger = {
 		civilized = yes
-		wage_and_work_hours = six_hours
+		wage_reform = good_minimum_wage
 		has_pop_type = capitalists
 	}
 	
@@ -2253,7 +2253,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA3803"
-		social_reform = paid_sick_leave_hours
+		social_reform = acceptable_minimum_wage
 		poor_strata = {
 			militancy = 2
 			consciousness = -1

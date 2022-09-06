@@ -396,7 +396,7 @@ country_event = {
 	option = {
 		name = "I love democracy - don't rig the elections"
 		
-		political_reform = universal_voting
+		political_reform = free_voting
 		
 		election = yes
 		
@@ -410,7 +410,7 @@ country_event = {
 	option = {
 		name = "Rig the election slightly!"
 		
-		political_reform = universal_weighted_voting
+		political_reform = rigged_voting
 		
 		ruling_party_ideology = big_tent
 		
@@ -439,7 +439,7 @@ country_event = {
 	option = {
 		name = "Rig the election bigly!"
 		
-		political_reform = registered_voting
+		political_reform = harassed_voting
 		
 		ruling_party_ideology = big_tent
 		
@@ -556,9 +556,9 @@ country_event = {
 		
 		OR = { government = democracy government = democracy1 }
 		
-		NOT = { vote_franschise = universal_voting }
-		NOT = { political_opinions = free_opinion }
-		NOT = { political_parties = parties_allowed }
+		NOT = { vote_franschise = free_voting }
+		NOT = { political_opinions = democratic_state_opinion }
+		NOT = { political_parties = parties_fair }
 		
 	}
 
@@ -567,9 +567,9 @@ country_event = {
 	option = {
 		name = "Carry out the reforms"
 		
-		political_reform = universal_voting
-		political_reform = free_opinion
-		political_reform = parties_allowed
+		political_reform = free_voting
+		political_reform = democratic_state_opinion
+		political_reform = parties_fair
 		
 		ai_chance = { factor = 0.9 }
 	}
@@ -618,9 +618,9 @@ country_event = {
 		OR = { government = democracy government = democracy1 }
 		
 		minorities_reform = minorities_oppression
-		NOT = { vote_franschise = universal_voting }
-		NOT = { political_opinions = free_opinion }
-		NOT = { political_parties = parties_allowed }
+		NOT = { vote_franschise = free_voting }
+		NOT = { political_opinions = democratic_state_opinion }
+		NOT = { political_parties = parties_fair }
 		
 		#NAFTA
 		tech_school = XNA_tech_school

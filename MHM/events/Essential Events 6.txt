@@ -115,7 +115,7 @@ country_event = {
 		NOT = { year = 1990 }
 		OR = { capital_scope = { continent = mena } owns = 2266 } # Calabozo, VNZ
 		NOT = { has_country_flag = petro_rise }
-		NOT = { government = proletarian_dictatorship }
+		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		any_owned_province = { trade_goods = petroleum }
 	}
 

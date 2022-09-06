@@ -382,10 +382,10 @@ country_event = {
 		name = "The government is forced to cede to their demands."
 		prestige = -50
 		ruling_party_ideology = communist_social #A lot of what would become the leadership of the Parcham faction of the PDPA helped organize and involve themselves in the protests
-		political_reform = promoted_voting
-		political_reform = open_opinion
+		political_reform = gerrymandered_voting
+		political_reform = semi_democratic_state_opinion
 		political_reform = free_meetings
-		political_reform = parties_restrict_non_democratic
+		political_reform = parties_rigged
 		add_country_modifier = { name = political_strife duration = 3650 }
 		any_pop = { 
 			ideology = { factor = 0.10 value = communist }
@@ -575,7 +575,7 @@ country_event = {
 		year = 1976
 		NOT = { year = 1990 }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		ruling_party_ideology = nationalist
 		is_vassal = no
 		war = no
@@ -625,7 +625,7 @@ country_event = {
 		year = 1975
 		NOT = { year = 1990 }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		
 		ruling_party_ideology = nationalist
@@ -678,7 +678,7 @@ country_event = {
 		year = 1978
 		NOT = { year = 1990 }
 	
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		ruling_party_ideology = communist
 		
@@ -726,7 +726,7 @@ country_event = {
 		year = 1978
 		NOT = { year = 1990 }
 	
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		ruling_party_ideology = communist
 		
@@ -795,7 +795,7 @@ country_event = {
  		year = 1979
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no 
 		war = no
 		
@@ -823,7 +823,7 @@ country_event = {
 		clr_country_flag = amin_afg_coup
 		
 		random_country = {
-			limit = { tag = RUS is_greater_power = yes government = proletarian_dictatorship }
+			limit = { tag = RUS is_greater_power = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			relation = { who = THIS value = -50 }
 		}
 		
@@ -847,7 +847,7 @@ country_event = {
 		year = 1979
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		ruling_party_ideology = communist
 		
@@ -892,7 +892,7 @@ country_event = {
 		year = 1979
 		NOT = { year = 1990 }
 	
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 	
 		ruling_party_ideology = communist
 		
@@ -935,7 +935,7 @@ country_event = {
     	year = 1979
 		NOT = { year = 1990 }
 	
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		ruling_party_ideology = communist
 		
@@ -1130,7 +1130,7 @@ country_event = {
 		year = 1980
 		NOT = { year = 1990 }
 	
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
 	
@@ -1237,10 +1237,10 @@ country_event = {
 		prestige = 10
 		government = socialist_democracy
 		ruling_party_ideology = communist_social
-		political_reform = universal_voting 
-		political_reform = open_opinion 
+		political_reform = free_voting 
+		political_reform = semi_democratic_state_opinion 
 		political_reform = professional_service 
-		political_reform = parties_only_nominated 
+		political_reform = parties_restricted 
 		any_pop = { 
 			ideology = { factor = 0.05 value = communist_social }
 			militancy = -2
@@ -1251,7 +1251,7 @@ country_event = {
 
 	option = {
 		name = "Divert resources to the army instead."
-		social_reform = preemptive_security_actions
+		social_reform = excellent_security
 		add_country_modifier = { name = political_strife duration = 1365 }
 		any_pop = { 
 			ideology = { factor = 0.05 value = traditionalist }
@@ -1288,7 +1288,7 @@ country_event = {
 		#Gorbachev
 		RUS = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			OR = { 
 				ruling_party_ideology = communist_social 
 				has_country_flag = mikhail_gorbachev 
@@ -1444,10 +1444,10 @@ country_event = {
 		prestige = 10
 		government = socialist_democracy
 		ruling_party_ideology = communist_social
-		political_reform = universal_voting 
-		political_reform = open_opinion 
+		political_reform = free_voting 
+		political_reform = semi_democratic_state_opinion 
 		political_reform = professional_service 
-		political_reform = parties_only_nominated 
+		political_reform = parties_restricted 
 		any_pop = { 
 			ideology = { factor = 0.05 value = communist_social }
 			militancy = -2
@@ -1458,7 +1458,7 @@ country_event = {
 
 	option = {
 		name = "Divert resources to the army instead."
-		social_reform = preemptive_security_actions
+		social_reform = excellent_security
 		add_country_modifier = { name = political_strife duration = 1365 }
 		any_pop = { 
 			ideology = { factor = 0.05 value = traditionalist }
@@ -1672,10 +1672,10 @@ country_event = {
 		prestige = 10
 		government = socialist_democracy
 		ruling_party_ideology = communist_social
-		political_reform = universal_voting 
-		political_reform = open_opinion 
+		political_reform = free_voting 
+		political_reform = semi_democratic_state_opinion 
 		political_reform = professional_service 
-		political_reform = parties_only_nominated 
+		political_reform = parties_restricted 
 		any_pop = { 
 			ideology = { factor = 0.05 value = communist_social }
 			militancy = -2
@@ -1858,7 +1858,7 @@ country_event = {
 			militancy = -10
 			consciousness = -10
 		}
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		country_event = 800050
 		ruling_party_ideology = conservative
 		ai_chance = { 
@@ -2277,7 +2277,7 @@ country_event = {
 	mean_time_to_happen = { months = 1 }
 
 	option = {
-		name = "Military and police forces must respond to this threat!"
+		name = "Military and basic_security forces must respond to this threat!"
 		any_pop = {
 			limit = { strata = poor }
 			ideology = { factor = 0.15 value = traditionalist }

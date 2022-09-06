@@ -4,7 +4,7 @@ political_decisions = {
 		picture = "start_autarky"
 		potential = {
 			NOT = { has_country_modifier = juche }
-			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = populist_dictatorship government = nationalist_dictatorship government = presidential_dictatorship government = theocracy government = absolute_monarchy }
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = nationalist_dictatorship government = sectarian_dictatorship government = presidential_dictatorship government = theocracy government = absolute_monarchy }
 		}
 		alert = no
 		allow = {
@@ -76,8 +76,8 @@ political_decisions = {
 				OR = { 
 					government = proletarian_dictatorship 
 					government = proletarian_dictatorship1 
-					government = populist_dictatorship 
 					government = nationalist_dictatorship 
+					government = sectarian_dictatorship 
 					government = presidential_dictatorship 
 					government = theocracy 
 					government = absolute_monarchy 

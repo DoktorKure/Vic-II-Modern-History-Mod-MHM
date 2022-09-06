@@ -367,9 +367,9 @@ country_event = {
 		government = socialist_democracy
 		ruling_party_ideology = communist 
 		
-		political_reform = democratic_opinion
-		political_reform = universal_voting
-		political_reform = parties_only_nominated
+		political_reform = popular_opinion
+		political_reform = free_voting
+		political_reform = parties_restricted
 		political_reform = state_controlled_unions
 		
 		#1959 Cuban General Election
@@ -433,7 +433,7 @@ country_event = {
 		year = 1959 
 		NOT = { year = 1990 }
 		
-    	OR = { government = socialist_democracy government = proletarian_dictatorship }
+    	OR = { government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
     	war = no
 		
@@ -447,12 +447,12 @@ country_event = {
 		name = "Begin the land reforms!"
 		
 		#Socialist reforms
-		social_reform = the_safety_grid
-		social_reform = unlimited_education
+		social_reform = good_public_housing
+		social_reform = excellent_public_education
 		social_reform = good_health_care
 		social_reform = good_pensions
-		social_reform = citizen_salary 
-		social_reform = six_hours
+		social_reform = universal_subsidies 
+		social_reform = good_minimum_wage
 		
 		#Domestic reaction
 		any_pop = { 
@@ -791,7 +791,7 @@ country_event = {
 		tag = CUB
 		year = 2016
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 	}
   

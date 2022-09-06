@@ -12,7 +12,7 @@ country_event = {
 		year = 1950 
 		NOT = { year = 1963 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 	}
 	
@@ -41,14 +41,14 @@ country_event = {
 		has_global_flag = sino_soviet_split
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
 		#PRC exists
 		CHI = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		}
 		
 		#Cold War ongoing
@@ -117,7 +117,7 @@ country_event = {
 		has_global_flag = autumn_of_nations
 		has_country_flag = mgl_batmonkh
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		#vassal_of = RUS #Soviet Withdraw Event now makes Mongolia independent
 		war = no
 		
@@ -211,12 +211,12 @@ country_event = {
 		government = democracy
 
 		#Enact the full demands of the protesters and establish a western-style democratic state.
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = minorities_equal_rights
-		political_reform = parties_restrict_non_democratic
+		political_reform = parties_rigged
 		political_reform = responsible_publishing
 		political_reform = free_trade_unions
-		political_reform = universal_weighted_voting
+		political_reform = rigged_voting
 		political_reform = free_meetings
 
 		any_pop = {
@@ -242,11 +242,11 @@ country_event = {
 		badboy = 5
 		
 		#Only Enact Minimal Changes, keep a commitment to socialism - upset pro-democracy elements.
-		political_reform = registered_voting
-		political_reform = regulated_opinion
+		political_reform = harassed_voting
+		political_reform = appointed_opinion
 		political_reform = politicised_service
 		political_reform = state_controlled_unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = free_meetings
 		
 		add_country_modifier = { name = revolution_chaos duration = 1825 }
@@ -282,9 +282,9 @@ country_event = {
 		#Give into Ostalgia, face the wrath of a brand new world alone.
 		political_reform = ruling_party_opinion
 		political_reform = politicised_service #Politicized
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 

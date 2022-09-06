@@ -24,15 +24,15 @@ country_event = {
 		months = 3
 		modifier = {
 			factor = 0.8
-			publishing_rights = censored_publishing
+			publishing_rights = state_publishing
 		}
 		modifier = {
 			factor = 0.9
-			publishing_rights = firewall_publishing
+			publishing_rights = censored_publishing
 		}
 		modifier = {
 			factor = 1.2
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 	
@@ -71,15 +71,15 @@ country_event = {
 		months = 3
 		modifier = {
 			factor = 1.2
-			publishing_rights = censored_publishing
+			publishing_rights = state_publishing
 		}
 		modifier = {
 			factor = 1.2
-			publishing_rights = firewall_publishing
+			publishing_rights = censored_publishing
 		}
 		modifier = {
 			factor = 0.8
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 	
@@ -115,15 +115,15 @@ country_event = {
 		months = 3
 		modifier = {
 			factor = 0.8
-			publishing_rights = censored_publishing
+			publishing_rights = state_publishing
 		}
 		modifier = {
 			factor = 0.9
-			publishing_rights = firewall_publishing
+			publishing_rights = censored_publishing
 		}
 		modifier = {
 			factor = 1.2
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 	
@@ -159,15 +159,15 @@ country_event = {
 		months = 3
 		modifier = {
 			factor = 1.2
-			publishing_rights = censored_publishing
+			publishing_rights = state_publishing
 		}
 		modifier = {
 			factor = 1.2
-			publishing_rights = firewall_publishing
+			publishing_rights = censored_publishing
 		}
 		modifier = {
 			factor = 0.8
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 	
@@ -203,15 +203,15 @@ country_event = {
 		months = 3
 		modifier = {
 			factor = 0.8
-			publishing_rights = censored_publishing
+			publishing_rights = state_publishing
 		}
 		modifier = {
 			factor = 0.9
-			publishing_rights = firewall_publishing
+			publishing_rights = censored_publishing
 		}
 		modifier = {
 			factor = 1.2
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 	
@@ -247,15 +247,15 @@ country_event = {
 		months = 3
 		modifier = {
 			factor = 1.2
-			publishing_rights = censored_publishing
+			publishing_rights = state_publishing
 		}
 		modifier = {
 			factor = 1.2
-			publishing_rights = firewall_publishing
+			publishing_rights = censored_publishing
 		}
 		modifier = {
 			factor = 0.8
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 	
@@ -294,15 +294,15 @@ country_event = {
 		months = 3
 		modifier = {
 			factor = 0.8
-			publishing_rights = censored_publishing
+			publishing_rights = state_publishing
 		}
 		modifier = {
 			factor = 0.9
-			publishing_rights = firewall_publishing
+			publishing_rights = censored_publishing
 		}
 		modifier = {
 			factor = 1.2
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 	
@@ -341,15 +341,15 @@ country_event = {
 		months = 3
 		modifier = {
 			factor = 1.2
-			publishing_rights = censored_publishing
+			publishing_rights = state_publishing
 		}
 		modifier = {
 			factor = 1.2
-			publishing_rights = firewall_publishing
+			publishing_rights = censored_publishing
 		}
 		modifier = {
 			factor = 0.8
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 	

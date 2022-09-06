@@ -25,7 +25,7 @@ sea_starts = {
 }
     
 #definitions = "definition.csv"
-definitions = "../mod/MHM/map/definition.csv"
+definitions = "../mod/MHM_Testing/map/definition.csv"
 provinces = "provinces.bmp"
 positions = "positions.txt"
 terrain = "terrain.bmp"

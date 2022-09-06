@@ -74,7 +74,7 @@ country_event = {
 	option = {
 		name = "The President survives!"
 		
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 	
 		any_pop = { limit = { strata = rich } militancy = 10 consciousness = 10 }
 	
@@ -713,13 +713,13 @@ country_event = {
 
 		government = democracy
 		
-		political_reform = universal_weighted_voting
-		political_reform = regulated_opinion 
+		political_reform = rigged_voting
+		political_reform = appointed_opinion 
 		political_reform = limited_meetings 
 		political_reform = incarceration 
 		political_reform = professional_service 
 		political_reform = free_trade_unions 
-		political_reform = parties_restrict_non_democratic 
+		political_reform = parties_rigged 
 		social_reforms = acceptable_health_care
 		
 		any_pop = {
@@ -745,11 +745,11 @@ country_event = {
 
 		government = socialist_democracy
 		
-		political_reform = registered_voting
-		political_reform = regulated_opinion
+		political_reform = harassed_voting
+		political_reform = appointed_opinion
 		political_reform = politicised_service
 		political_reform = state_controlled_unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = free_meetings
 		
 		add_country_modifier = { name = revolution_chaos duration = 1825 }
@@ -791,7 +791,7 @@ country_event = {
 		political_reform = none_voting
 		political_reform = parties_not_allowed
 		political_reform = politicised_service #Politicized
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions #State Unions
 		
 		add_country_modifier = { name = revolution_chaos duration = 1825 }

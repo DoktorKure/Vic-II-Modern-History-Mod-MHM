@@ -58,7 +58,7 @@ any_country = {
 
 #All dictatorships start with President for Life
 any_country = {
-	limit = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship government = theocracy } }
+	limit = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship government = theocracy } }
 	set_country_flag = president_for_life
 }
 
@@ -323,8 +323,8 @@ any_country = {
 			government = proletarian_dictatorship 
 			government = proletarian_dictatorship1 
 			government = presidential_dictatorship 
-			government = populist_dictatorship 
 			government = nationalist_dictatorship 
+			government = sectarian_dictatorship 
 			government = theocracy 
 		}
 	}
@@ -549,7 +549,7 @@ any_country = {
 		has_country_flag = parliamentary_system_republic 
 		OR = { government = democracy government = democracy1 government = socialist_democracy }
 	}
-	political_reform = free_opinion
+	political_reform = democratic_state_opinion
 }
 
 #Setup semi-presidential republics
@@ -580,7 +580,7 @@ any_country = {
 		has_country_flag = semi_presidential_system_republic
 		OR = { government = democracy government = democracy1 government = socialist_democracy }
 	}
-	political_reform = free_opinion
+	political_reform = democratic_state_opinion
 }
 
 #Setup presidential republics
@@ -611,7 +611,7 @@ any_country = {
 		has_country_flag = presidential_system_republic
 		OR = { government = democracy government = democracy1 government = socialist_democracy }
 	}
-	political_reform = free_opinion
+	political_reform = democratic_state_opinion
 }
 
 #Constitutional Monarchies
@@ -619,7 +619,7 @@ any_country = {
 	limit = { 
 		OR = { government = hms_government government = hms_government1 }
 	}
-	political_reform = open_opinion
+	political_reform = semi_democratic_state_opinion
 }
 
 #set apartheid flag
@@ -738,7 +738,7 @@ add_country_modifier = { name = centrallow duration = -1 }
 any_country = {
 limit = {
 num_of_cities = 2
-OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = nationalist_dictatorship government = presidential_dictatorship government = populist_dictatorship government = theocracy government = absolute_monarchy }
+OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = sectarian_dictatorship government = presidential_dictatorship government = nationalist_dictatorship government = theocracy government = absolute_monarchy }
 	}
 add_country_modifier = { name = centralhigh duration = -1 }
 }
@@ -908,8 +908,8 @@ set_country_flag = pre_existing_monarchy
 
 #Set Free Speech Policy
 any_country = {
-limit = { publishing_rights = censored_publishing OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } }
-political_reform = firewall_publishing
+limit = { publishing_rights = state_publishing OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } }
+political_reform = censored_publishing
 }
 
 #Set Trade Union Policy
@@ -1440,8 +1440,8 @@ any_country = {
 
 #Auto set starting social reforms based on literacy
 USA = {
-	random_owned = { limit = { owner = { wage_and_work_hours = unregulated_hours literacy = 0.08 } } owner = { social_reform = eight_work_hours } } #-0.002 to -0.001
-	random_owned = { limit = { owner = { wage_and_work_hours = eight_work_hours literacy = 0.10 } } owner = { social_reform = paid_vacation_hours } } #-0.001 to +0
+	random_owned = { limit = { owner = { wage_reform = unregulated_hours literacy = 0.08 } } owner = { social_reform = trinket_wage } } #-0.002 to -0.001
+	random_owned = { limit = { owner = { wage_reform = trinket_wage literacy = 0.10 } } owner = { social_reform = low_minimum_wage } } #-0.001 to +0
 	
 	random_owned = { limit = { owner = { pensions = no_pensions literacy = 0.10 } } owner = { social_reform = trinket_pensions } } #-0.001 to +0
 	
@@ -1450,13 +1450,13 @@ USA = {
 	
 	random_owned = { limit = { owner = { pollution = no_controls literacy = 0.10 } } owner = { social_reform = trinket_envir } } #-0.001 to +0
 	
-	random_owned = { limit = { owner = { social_service_reform = no_social_service literacy = 0.10 } } owner = { social_reform = social_services } } #-0.001 to +0
+	random_owned = { limit = { owner = { public_housing_reform = no_public_housing literacy = 0.10 } } owner = { social_reform = minimal_public_housing } } #-0.001 to +0
 }
 
 any_country = {
 	limit = { exists = yes }
-	random_owned = { limit = { owner = { wage_and_work_hours = unregulated_hours literacy = 0.08 } } owner = { social_reform = eight_work_hours } } #-0.002 to -0.001
-	random_owned = { limit = { owner = { wage_and_work_hours = eight_work_hours literacy = 0.10 } } owner = { social_reform = paid_vacation_hours } } #-0.001 to +0
+	random_owned = { limit = { owner = { wage_reform = unregulated_hours literacy = 0.08 } } owner = { social_reform = trinket_wage } } #-0.002 to -0.001
+	random_owned = { limit = { owner = { wage_reform = trinket_wage literacy = 0.10 } } owner = { social_reform = low_minimum_wage } } #-0.001 to +0
 	
 	random_owned = { limit = { owner = { pensions = no_pensions literacy = 0.10 } } owner = { social_reform = trinket_pensions } } #-0.001 to +0
 	
@@ -1465,7 +1465,7 @@ any_country = {
 	
 	random_owned = { limit = { owner = { pollution = no_controls literacy = 0.10 } } owner = { social_reform = trinket_envir } } #-0.001 to +0
 	
-	random_owned = { limit = { owner = { social_service_reform = no_social_service literacy = 0.10 } } owner = { social_reform = social_services } } #-0.001 to +0
+	random_owned = { limit = { owner = { public_housing_reform = no_public_housing literacy = 0.10 } } owner = { social_reform = minimal_public_housing } } #-0.001 to +0
 }
 
 #Bretton Woods System

@@ -112,7 +112,7 @@ country_event = {
     tag = USA
 	year = 1982 NOT = { year = 1990 }
     exists = NIC
-	NIC = { government = proletarian_dictatorship }
+	NIC = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
   }
 
   mean_time_to_happen = { months = 2 }
@@ -163,7 +163,7 @@ country_event = {
   trigger = {
     tag = NIC
 	year = 1988 NOT = { year = 1990 }
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 1 }

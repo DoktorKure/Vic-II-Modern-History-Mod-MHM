@@ -396,19 +396,19 @@ province_event = {
 		#Reduce based on reforms
 		modifier = {
 			factor = 1.25
-			owner = { security_reform = security_service }
+			owner = { security_reform = weak_security }
 		}
 		modifier = {
 			factor = 1.5
-			owner = { security_reform = security_data_cohesion }
+			owner = { security_reform = acceptable_security }
 		}
 		modifier = {
 			factor = 2
-			owner = { security_reform = security_clearance_for_gov_services }
+			owner = { security_reform = good_security }
 		}
 		modifier = {
 			factor = 4
-			owner = { security_reform = preemptive_security_actions }
+			owner = { security_reform = excellent_security }
 		}
 		
 		modifier = {
@@ -516,7 +516,7 @@ province_event = {
 		}
 		modifier = {
 			factor = 0.5
-			owner = { government = nationalist_dictatorship }
+			owner = { government = sectarian_dictatorship }
 		}
 
 		modifier = {
@@ -563,7 +563,7 @@ province_event = {
 			has_crime = terrorist_cells #requires militancy 6
 		}
 
-		#Reduce, province police
+		#Reduce, province basic_security
 		modifier = {
 			factor = 1.1
 			crime_fighting = 0.5
@@ -1081,7 +1081,7 @@ province_event = {
 	}
 
 	option = {
-		name = "We need to step up police presence in the area"
+		name = "We need to step up basic_security presence in the area"
 		any_pop = {
 			limit = {
 				OR = {
@@ -1190,20 +1190,20 @@ country_event = { #possibly disable this if missing free press?
 		name = EVT_1511120_A
 		prestige = -15
 		random_owned = { 
-			limit = { owner = { security_reform = police } }
-			owner = { social_reform = security_service }
+			limit = { owner = { security_reform = basic_security } }
+			owner = { social_reform = weak_security }
 		}
 		random_owned = { 
-			limit = { owner = { security_reform = security_service } }
-			owner = { social_reform = security_data_cohesion }
+			limit = { owner = { security_reform = weak_security } }
+			owner = { social_reform = acceptable_security }
 		}
 		random_owned = { 
-			limit = { owner = { security_reform = security_data_cohesion } }
-			owner = { social_reform = security_clearance_for_gov_services }
+			limit = { owner = { security_reform = acceptable_security } }
+			owner = { social_reform = good_security }
 		}
 		random_owned = { 
-			limit = { owner = { security_reform = security_clearance_for_gov_services } }
-			owner = { social_reform = preemptive_security_actions }
+			limit = { owner = { security_reform = good_security } }
+			owner = { social_reform = excellent_security }
 		}
 		any_pop = {
 			ideology = {
@@ -1232,7 +1232,7 @@ country_event = { #possibly disable this if missing free press?
 					NOT = { tag = THIS }
 					NOT = { immigration_policy = nobody_gets_out }
 					NOT = {
-						publishing_rights = censored_publishing
+						publishing_rights = state_publishing
 						civil_service = politicised_service
 					}
 				}
@@ -1247,7 +1247,7 @@ country_event = { #possibly disable this if missing free press?
 					NOT = { tag = THIS }
 					NOT = { immigration_policy = nobody_gets_out }
 					NOT = {
-						publishing_rights = censored_publishing
+						publishing_rights = state_publishing
 						civil_service = politicised_service
 					}
 				}
@@ -1287,7 +1287,7 @@ country_event = { #possibly disable this if missing free press?
 					NOT = { tag = THIS }
 					NOT = { immigration_policy = nobody_gets_out }
 					NOT = {
-						publishing_rights = censored_publishing
+						publishing_rights = state_publishing
 						civil_service = politicised_service
 					}
 				}
@@ -1302,7 +1302,7 @@ country_event = { #possibly disable this if missing free press?
 					NOT = { tag = THIS }
 					NOT = { immigration_policy = nobody_gets_out }
 					NOT = {
-						publishing_rights = censored_publishing
+						publishing_rights = state_publishing
 						civil_service = politicised_service
 					}
 				}

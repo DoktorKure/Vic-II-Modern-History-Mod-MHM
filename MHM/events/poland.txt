@@ -62,12 +62,12 @@ country_event = {
 		government = proletarian_dictatorship
 		
 		political_reform = none_voting #No voting
-		political_reform = open_opinion #Two Per State
+		political_reform = semi_democratic_state_opinion #Two Per State
 		political_reform = limited_meetings
 		political_reform = elitist_service #Elitist
-		political_reform = firewall_publishing #censored_press
+		political_reform = censored_publishing #censored_press
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated #Rigged Campaigning
+		political_reform = parties_restricted #Rigged Campaigning
 		political_reform = no_draft #no_draft
 		political_reform = minorities_equal_rights
 		political_reform = proportional_representation
@@ -105,7 +105,7 @@ country_event = {
 		year = 1952
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		vassal_of = RUS
 		
@@ -123,9 +123,9 @@ country_event = {
    
 		political_reform = ruling_party_opinion
 		political_reform = politicised_service #Politicized
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 
 		ai_chance = {
 			factor = 0.95
@@ -168,7 +168,7 @@ country_event = {
 	year = 1970 
 	NOT = { year = 1979 }
     
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 5  }
@@ -189,7 +189,7 @@ country_event = {
     tag = POL
 	year = 1980 NOT = { year = 1991 }
     
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
     war = no
   }
 
@@ -219,7 +219,7 @@ country_event = {
   trigger = {
     tag = POL
     
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 	year = 1980 NOT = { year = 1990 }
 	average_militancy  = 5.0
   }
@@ -239,7 +239,7 @@ country_event = {
   trigger = {
     tag = POL
 	year = 1944 NOT = { year = 1945 }
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
     
   }
 
@@ -268,7 +268,7 @@ country_event = {
     tag = POL
 	year = 1946 NOT = { year = 1950 }
     
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -299,7 +299,7 @@ country_event = {
     tag = POL
 	year = 1949 NOT = { year = 1960 }
     
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 8 }
@@ -321,7 +321,7 @@ country_event = {
     tag = POL
 	year = 1948 NOT = { year = 1949 }
     
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -341,7 +341,7 @@ country_event = {
     tag = POL
 	year = 1948 NOT = { year = 1949 }
     
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -362,7 +362,7 @@ country_event = {
     tag = POL
 	year = 1954 NOT = { year = 1965 }
     
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 6  }
@@ -384,7 +384,7 @@ country_event = {
     tag = POL
 	year = 1956 NOT = { year = 1957 }
     
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
   immediate = { set_global_flag = event_fired_8023232 }
 
@@ -407,7 +407,7 @@ country_event = {
 	year = 1956 NOT = { year = 1967 }
     
 	has_global_flag = event_fired_8023232
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -436,7 +436,7 @@ country_event = {
     tag = POL
 	year = 1963 NOT = { year = 1970 }
     NOT = { has_country_flag = poland_west_littlegains }
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 1  }
@@ -457,7 +457,7 @@ country_event = {
   trigger = {
     tag = POL
 	year = 1954 NOT = { year = 1960 }
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 2 }
@@ -478,7 +478,7 @@ country_event = {
     tag = POL
 	year = 1977 NOT = { year = 1990 }
     
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 2 }
@@ -591,7 +591,7 @@ country_event = {
   trigger = {
     tag = POL
     has_global_flag = autumn_of_nations
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 	OR = { vassal_of = RUS is_vassal = no }
 	war = no
   }
@@ -657,7 +657,7 @@ country_event = { # Movement for Defense of Human and Civic Rights
     tag = POL
 	year = 1977 NOT = { year = 1990 }
     
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 2 }
@@ -684,14 +684,14 @@ country_event = { # Workers' Defence Committee
     tag = POL
 	year = 1976 NOT = { year = 1990 }
     
-	government = proletarian_dictatorship
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
   }
 
   mean_time_to_happen = { months = 10 }
 
   option = {
     name = EVT_8023247_A
-	any_greater_power = { limit = { NOT = { government = proletarian_dictatorship} } relation = { who = THIS value = -50 } }
+	any_greater_power = { limit = { NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }} } relation = { who = THIS value = -50 } }
 	any_pop = { militancy = 0.5 consciousness = 1 } 
   }
   option = {
@@ -740,9 +740,9 @@ country_event = {
 
   option = {
     name = EVT_8222001_A
-	random_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.1 } } }
+	random_state = { any_pop = { dominant_issue = { value = parties_fair factor = 0.1 } } }
 	random_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.45 } } }
-	random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.15 } } }
+	random_state = { any_pop = { dominant_issue = { value = democratic_state_opinion factor = 0.15 } } }
 	random_state = { any_pop = { dominant_issue = { value = laissez_faire factor = 0.2 } } }
 	random_state = { any_pop = { dominant_issue = { value = pro_military factor = 0.5 } } }
 	random_state = { any_pop = { dominant_issue = { value = jingoism factor = 0.1 } } }
@@ -912,7 +912,7 @@ country_event = { #"Poland is free"
     tag = POL
 	is_vassal = no
     year = 1953 NOT = { year = 1983 }
-	NOT = { government = proletarian_dictatorship }
+	NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
     NOT = { has_country_flag  = cores_returned }
   }
 

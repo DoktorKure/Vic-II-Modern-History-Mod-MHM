@@ -13,7 +13,7 @@ country_event = { # Request for Independence for Kurgystan and Tajikistan
 		year = 1992
 		NOT = { year = 1996 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -177,7 +177,7 @@ country_event = { # Stayed close to Moscow?
 	option = {
 		name = "Establish a Nationalist Regime."
 		
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		country_event = 800050
 		ruling_party_ideology = nationalist
 		
@@ -213,7 +213,7 @@ country_event = { # Send our Warriors to the North?
 		KYR = { exists = yes is_vassal = no }
 		TAJ = { exists = yes is_vassal = no }
 		
-		RUS = { exists = yes OR = { government = proletarian_dictatorship government = socialist_democracy } is_vassal = no }
+		RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } is_vassal = no }
 		
 		has_global_flag = ussr_kyr_taj_independance
 	}
@@ -302,7 +302,7 @@ country_event = { # The Mujahideen take power! - RUS
 		year = 1997
 		NOT = { year = 2000 }
 		
-		OR = { government = proletarian_dictatorship government = socialist_democracy }
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 		is_greater_power = yes
 		war = no
 		

@@ -77,12 +77,12 @@ country_event = {
 
 	option = {
 		name = EVT_8006610_A
-		government = nationalist_dictatorship 
+		government = sectarian_dictatorship 
 		country_event = 800050
 		ruling_party_ideology = nationalist
 		
 		any_pop = { militancy = 1 consciousness = 2 }
-		random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.65 } } }
+		random_state = { any_pop = { dominant_issue = { value = democratic_state_opinion factor = 0.65 } } }
 		ai_chance = { factor = 0.9 }
 	}
 
@@ -107,7 +107,7 @@ country_event = {
 		year = 1980 
 		NOT = { year = 1983 }
 		
-		OR = { government = nationalist_dictatorship ruling_party_ideology = nationalist }
+		OR = { government = sectarian_dictatorship ruling_party_ideology = nationalist }
 	}
 
 	mean_time_to_happen = { months = 2 }
@@ -115,7 +115,7 @@ country_event = {
 	option = {
 		name = EVT_8006611_A
 		any_pop = { militancy = 1.0 consciousness = 2 }
-		random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }
+		random_state = { any_pop = { dominant_issue = { value = democratic_state_opinion factor = 0.6 } } }
 	}
 	
 }
@@ -146,7 +146,7 @@ country_event = {
 		
 		any_pop = { militancy = 3 consciousness = 2 }
 		
-		random_state = { any_pop = { dominant_issue = { value = free_opinion factor = 0.6 } } }
+		random_state = { any_pop = { dominant_issue = { value = democratic_state_opinion factor = 0.6 } } }
 	}
 	
 }

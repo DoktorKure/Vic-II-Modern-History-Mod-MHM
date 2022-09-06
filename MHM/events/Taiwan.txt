@@ -112,7 +112,7 @@ country_event = {
 		year = 1952
 		NOT = { year = 1990 }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		ruling_party_ideology = conservative
 		war = no
 		is_vassal = no
@@ -124,7 +124,7 @@ country_event = {
 		name = "Allow some discourse in parliament"
 		
 		#Semi-appointed UH
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		government = presidential_dictatorship
 		
 		#Boost conservative support
@@ -169,7 +169,7 @@ country_event = {
 		
 		#KMT in Taiwan
 		capital = 1485 #Taipei
-		OR = { government = populist_dictatorship government = presidential_dictatorship }
+		OR = { government = nationalist_dictatorship government = presidential_dictatorship }
 		ruling_party_ideology = conservative
 		
 		war = no

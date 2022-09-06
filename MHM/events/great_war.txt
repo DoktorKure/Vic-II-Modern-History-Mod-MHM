@@ -883,7 +883,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { government = populist_dictatorship }
+					NOT = { government = nationalist_dictatorship }
 				}
 			}
 			owner = {
@@ -1996,7 +1996,7 @@ country_event = {
 			limit = {
 				owner = {
 					is_ideology_enabled = nationalist
-					NOT = { government = populist_dictatorship }
+					NOT = { government = nationalist_dictatorship }
 				}
 			}
 			owner = {
@@ -2137,9 +2137,9 @@ country_event = {
 						FROM = { NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
 					}
 					AND = {
-						OR = { government = populist_dictatorship government = nationalist_dictatorship }
-						THIS = { OR = { government = populist_dictatorship government = nationalist_dictatorship } }
-						FROM = { NOT = { OR = { government = populist_dictatorship government = nationalist_dictatorship } } }
+						OR = { government = nationalist_dictatorship government = sectarian_dictatorship }
+						THIS = { OR = { government = nationalist_dictatorship government = sectarian_dictatorship } }
+						FROM = { NOT = { OR = { government = nationalist_dictatorship government = sectarian_dictatorship } } }
 					}
 					AND = {
 						government = presidential_dictatorship
@@ -2165,8 +2165,8 @@ country_event = {
 							OR = {
 								government = theocracy
 								
-								government = populist_dictatorship
 								government = nationalist_dictatorship
+								government = sectarian_dictatorship
 								
 								government = proletarian_dictatorship
 								government = proletarian_dictatorship1
@@ -2349,34 +2349,35 @@ country_event = {
 					war_with = FROM
 					OR = {
 						government = proletarian_dictatorship
-						government = populist_dictatorship
+						government = proletarian_dictatorship1
+						government = nationalist_dictatorship
 					}
 				}
 			}
 			modifier = {
 				factor = 2
-				government = proletarian_dictatorship
-				FROM = { government = proletarian_dictatorship}		
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+				FROM = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }}		
 			}
 			modifier = {
 				factor = 1.5
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				any_greater_power = {
 					war_with = FROM
-					government = populist_dictatorship
+					government = nationalist_dictatorship
 				}
 			}
 			modifier = {
 				factor = 2
-				government = populist_dictatorship
-				FROM = { government = populist_dictatorship }		
+				government = nationalist_dictatorship
+				FROM = { government = nationalist_dictatorship }		
 			}
 			modifier = {
 				factor = 1.5
-				government = populist_dictatorship
+				government = nationalist_dictatorship
 				any_greater_power = {
 					war_with = FROM
-					government = proletarian_dictatorship
+					OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				}
 			}
 			modifier = {
@@ -2386,13 +2387,13 @@ country_event = {
 			}
 			modifier = {
 				factor = 0
-				government = proletarian_dictatorship
-				FROM = { government = populist_dictatorship }		
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+				FROM = { government = nationalist_dictatorship }		
 			}
 			modifier = {
 				factor = 0
-				government = populist_dictatorship
-				FROM = { government = proletarian_dictatorship }		
+				government = nationalist_dictatorship
+				FROM = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }		
 			}
 		}
 	}
@@ -2445,7 +2446,7 @@ country_event = {
 					government = hms_government1
 				}
 				NOT = { ruling_party_ideology = communist }
-				FROM = { government = proletarian_dictatorship }
+				FROM = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			}
 			modifier = {
 				factor = 2
@@ -2456,11 +2457,11 @@ country_event = {
 					government = hms_government1
 				}
 				NOT = { ruling_party_ideology = nationalist }
-				FROM = { government = populist_dictatorship }
+				FROM = { government = nationalist_dictatorship }
 			}
 			modifier = {
 				factor = 1.5
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				FROM = {
 					OR = {
 						government = democracy
@@ -2472,17 +2473,17 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.5
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				FROM = { government = presidential_dictatorship }		
 			}
 			modifier = {
 				factor = 1.5
 				government = presidential_dictatorship
-				FROM = { government = proletarian_dictatorship }		
+				FROM = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }		
 			}
 			modifier = {
 				factor = 2
-				government = populist_dictatorship
+				government = nationalist_dictatorship
 				FROM = {
 					OR = {
 						government = democracy
@@ -2553,8 +2554,9 @@ country_event = {
 			factor = 0.8
 			OR = {
 				government = absolute_monarchy
-				government = populist_dictatorship
+				government = nationalist_dictatorship
 				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
 			}
 		}
 		modifier = {
@@ -2673,8 +2675,9 @@ country_event = {
 			factor = 0.8
 			OR = {
 				government = absolute_monarchy
-				government = populist_dictatorship
+				government = nationalist_dictatorship
 				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
 			}
 		}
 		modifier = {

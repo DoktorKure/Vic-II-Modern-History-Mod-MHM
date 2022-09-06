@@ -198,7 +198,7 @@ country_event = {
 		ruling_party_ideology = big_tent
 		
 		political_reform = professional_service 
-		political_reform = parties_promote_democratic 
+		political_reform = parties_short 
 		
 		#Hardliners get angry
 		any_pop = {

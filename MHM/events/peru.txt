@@ -1655,7 +1655,7 @@ country_event = {
 	
 }
 
-#January 2005 occupation a rural police station in Andahuaylas
+#January 2005 occupation a rural basic_security station in Andahuaylas
 country_event = {
 	id = 8012103
 	title = "Andahuaylas Uprising"
@@ -1724,7 +1724,7 @@ country_event = {
 		change_tag = IGP
 
 		IGP = {
-			government = populist_dictatorship
+			government = nationalist_dictatorship
 			ruling_party_ideology = populist
 			
 			primary_culture = mestizo
@@ -1819,7 +1819,7 @@ country_event = {
 	
 }
 
-#Sectarian Regime is nationalist_dictatorship, but Imma use populist_dictatorship.
+#Sectarian Regime is sectarian_dictatorship, but Imma use nationalist_dictatorship.
 #Creation of a Ethnocacerist State
 country_event = {
 	id = 8012105
@@ -1893,7 +1893,7 @@ country_event = {
 		change_tag = IGP
 
 		IGP = {
-			government = populist_dictatorship
+			government = nationalist_dictatorship
 			country_event = 800050
 			ruling_party_ideology = populist
 		
@@ -1954,7 +1954,7 @@ country_event = {
 		has_country_flag = begin_IGP_event_flag
 		NOT = { year = 2010 }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 		war = no
 	}
@@ -2006,7 +2006,7 @@ country_event = {
 		ruling_party_ideology = populist
 		
 		#Rich only UH reform
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		
 		set_country_flag = tdp_ollanta_humala
 		
@@ -2038,7 +2038,7 @@ country_event = {
 		ruling_party_ideology = nationalist
 		
 		#Qualified State Assembly reform
-		political_reform = open_opinion
+		political_reform = semi_democratic_state_opinion
 		
 		set_country_flag = tdp_ulises_humala
 		
@@ -2079,7 +2079,7 @@ country_event = {
    	 	tag = IGP
 		year = 2025
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -2180,7 +2180,7 @@ country_event = {
 	trigger = {
    	 	tag = IGP
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -2211,8 +2211,8 @@ country_event = {
 		
 		government = socialist_democracy
 		
-		political_reform = open_opinion
-		political_reform = registered_voting
+		political_reform = semi_democratic_state_opinion
+		political_reform = harassed_voting
 		political_reform = limited_meetings
 		political_reform = elitist_service 
 		
@@ -2257,7 +2257,7 @@ country_event = {
 	trigger = {
    	 	tag = IGP
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -2297,7 +2297,7 @@ country_event = {
 
 	option = {
 		name = "Shift the proletarian state towards a more pragmatic course."
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		ruling_party_ideology = nationalist
 		
 		add_country_modifier = { name = revolution_chaos duration = 1825 }
@@ -2473,8 +2473,8 @@ country_event = {
 		OR = { ruling_party_ideology = communist_social ruling_party_ideology = communist }
 		
 		OR = {
-			KOR = { government = proletarian_dictatorship has_country_modifier = juche is_vassal = no exists = yes }
-			NKO = { government = proletarian_dictatorship has_country_modifier = juche is_vassal = no exists = yes }
+			KOR = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } has_country_modifier = juche is_vassal = no exists = yes }
+			NKO = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } has_country_modifier = juche is_vassal = no exists = yes }
 		}
 	}
 
@@ -2490,7 +2490,7 @@ country_event = {
 		random_country = {
 			limit = { 
 				OR = { tag = NKO tag = KOR } 
-				government = proletarian_dictatorship 
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 				has_country_modifier = juche 
 				is_vassal = no 
 			}
@@ -2554,7 +2554,7 @@ country_event = {
 		ruling_party_ideology = socialist
 		
 		LBY = {
-			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 			ruling_party_ideology = socialist
 			exists = yes
 			is_vassal = no

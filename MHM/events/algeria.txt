@@ -430,7 +430,7 @@ country_event = {
 			remove_accepted_culture = arab
 			add_accepted_culture = jewish
 			
-			government = nationalist_dictatorship 
+			government = sectarian_dictatorship 
 			ruling_party_ideology = nationalist
 			country_event = 800050
 		}
@@ -463,7 +463,7 @@ country_event = {
 		
 		FAG = {
 			capital = 1702 #Setif
-			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 			country_event = 800050
 			ruling_party_ideology = nationalist
 		}
@@ -539,7 +539,7 @@ country_event = {
 
 	option = {
 		name = "The generals win"
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		country_event = 800050
 		ruling_party_ideology = nationalist
 		

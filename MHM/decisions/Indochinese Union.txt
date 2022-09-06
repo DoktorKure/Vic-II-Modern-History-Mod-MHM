@@ -114,9 +114,9 @@ political_decisions = {
 					owner = { 
 						OR = { 
 							government = presidential_dictatorship
-							government = populist_dictatorship
-							government = absolute_monarchy
 							government = nationalist_dictatorship
+							government = absolute_monarchy
+							government = sectarian_dictatorship
 							government = theocracy
 						} 
 					} 

@@ -796,7 +796,7 @@ terrorism = {
 	}
 	effect = {
 		enable_crime = terrorist_cells 
-		enable_crime = police_brutality
+		enable_crime = basic_security_brutality
 		rebel_org_gain = {
 			faction = islamist_rebels
 			value = 0.25
@@ -830,7 +830,7 @@ identity_politics = {
 		suppression_points_modifier = -0.01	
 	}
 }
-secret_police = {
+secret_basic_security = {
 	limit = { containment = 1 }
 	news = no
 	chance = {
@@ -858,7 +858,7 @@ secret_police = {
 	}
 }
 #new_world_order
-the_police_state = {
+the_basic_security_state = {
 	limit = { wars_of_national_liberation = 1 }
 	news = no
 	chance = {
@@ -1046,7 +1046,7 @@ cartoon_advertising = {
 		}
 		modifier = {
 			factor = 2
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 	effect = {
@@ -1109,7 +1109,7 @@ dank_memes = {
 		modifier = {
 			factor = -1
 			NOT = {
-				publishing_rights = unregulated_publishing
+				publishing_rights = free_publishing
 			}
 		}
 	}

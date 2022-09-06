@@ -25,9 +25,9 @@ joinfrancophone = {
 			NOT = { capital_scope = { continent = europe } }
 			NOT = { government = theocracy }
 			NOT = { government = proletarian_dictatorship }
-			NOT = { government = nationalist_dictatorship }
+			NOT = { government = sectarian_dictatorship }
 			NOT = { government = presidential_dictatorship }
-			NOT = { government = populist_dictatorship }
+			NOT = { government = nationalist_dictatorship }
 		}
 		effect = {
 		prestige = 20
@@ -59,8 +59,8 @@ formthefrancophone = {
 			war = no
 			NOT = { government = theocracy }
 			NOT = { government = proletarian_dictatorship }
+			NOT = { government = sectarian_dictatorship }
 			NOT = { government = nationalist_dictatorship }
-			NOT = { government = populist_dictatorship }
 		}
 		effect = {
 		prestige = 25
@@ -88,9 +88,9 @@ leavefrancophone = {
 			OR = { 
 			government = theocracy
 			government = proletarian_dictatorship
-			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 			government = presidential_dictatorship
-			government = populist_dictatorship 
+			government = nationalist_dictatorship 
 			NOT = { in_sphere = FRA } }
 		}
 		effect = {

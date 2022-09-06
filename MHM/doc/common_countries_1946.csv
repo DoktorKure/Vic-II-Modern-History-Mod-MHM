@@ -18,10 +18,10 @@ ATL;Atlantico;;black_anglo,mestizo;Bluefields;4.75%;secularism;democracy;2.88%;-
 AST;Australia;8267;white_anglo;Sydney;16.75%;secularism;hms_government;15.83%;-1,365777;2,7;89,2;
 AUS;Austria;6935;german;Vienna;12.75%;secularism;democracy;14.43%;0,98916;3,1;67,7;
 AZK;Tribal Areas;;pashtun;Saskylah;1.00%;sunni;absolute_monarchy;2.63%;-2,295822;3,7;36,2;34-139-34
-AZB;Azerbaijan;2885;azerbaijani:azerbaijani;Tabriz;13.50%;secularism;nationalist_dictatorship;5.58%;-1,605049;8,1;53,6;106-90-205, communist255-0-0
+AZB;Azerbaijan;2885;azerbaijani:azerbaijani;Tabriz;13.50%;secularism;sectarian_dictatorship;5.58%;-1,605049;8,1;53,6;106-90-205, communist255-0-0
 AZO;Azores;;portuguese;Azores;8.25%;secularism;democracy;12.55%;-0,890684;4;61,1;
 BAH;Bahamas;70;black_anglo;Bahamas;4.50%;secularism;hms_government;7.38%;-1;2,8;84,3;
-BHR;Bahrain;115;shia_arab:sunni_arab;Bahrain;2.50%;secularism;nationalist_dictatorship;6.30%;-1,8;11,3;88,7;193-205-193
+BHR;Bahrain;115;shia_arab:sunni_arab;Bahrain;2.50%;secularism;sectarian_dictatorship;6.30%;-1,8;11,3;88,7;193-205-193
 BLO;Balochistan;;baluchi;Kalat;1.00%;secularism;democracy;2.63%;-2,295822;3,7;36,2;
 BNG;Bangladesh;45646;bengali;Dacca;3.00%;secularism;democracy;1.65%;-2,53418;1;28,4;
 BAR;Barbados;211;black_anglo;Barbados;4.50%;secularism;hms_government;9.55%;-1;2,1;44,4;
@@ -35,7 +35,7 @@ BEU;Bermuda;39;white_anglo,black_anglo;Bermuda;19.00%;secularism;hms_government;
 BHU;Bhutan;164;ngalop;Thimpu;1.25%;buddhist;absolute_monarchy;0.70%;-2,7;11,3;35,6;
 BOH;Bohemia;;czech;Prague;17.00%;secularism;democracy;7.45%;0,07035;3,3;97,5;
 BOL;Bolivia;2766;white_spanish,mestizo;Chuquisaca;3.25%;secularism;presidential_dictatorship;0.5%;-2,218373;4,7;66,8;205-133-63
-BOP;Bophuthatswana;;tswana;Klerksdorp;5.00%;secularism;populist_dictatorship;1.15%;-1,061362;1,3;62;106-90-205
+BOP;Bophuthatswana;;tswana;Klerksdorp;5.00%;secularism;nationalist_dictatorship;1.15%;-1,061362;1,3;62;106-90-205
 BOS;Bosnia;2662;bosniak,croat;Sarajevo;9.50%;secularism;proletarian_dictatorship;7.08%;-1,30036;2,1;48,3;154-205-50, communist 153-50-204
 BOT;Botswana;430;tswana;Gaborone;4.00%;secularism;democracy;1.15%;-0,9;4,5;61,7;
 BOU;Bougainville;;melanesian;Bougainville;1.50%;secularism;hms_government;0.58%;-2,86825;0,5;12,5;
@@ -45,7 +45,7 @@ BRU;Brunei;45;malay;Brunei;0.50%;secularism;absolute_monarchy;3.60%;-1,8;18;76;
 BUL;Bulgaria;7251;bulgarian;Sofia;14.50%;secularism;proletarian_dictatorship;10.20%;-1,011985;4,3;73,1;
 BUF;Burkina Faso;4376;black_french,mossi;Wagadugu;1.50%;secularism;democracy;0.25%;-3;0,7;26,5;
 BUR;Burma;19488;burmese;Ava;0.75%;secularism;presidential_dictatorship;2.88%;-2,5;8,4;33;255-127-80
-BRN;Burundi;2363;hutu:tutsi;Usumbura;0.50%;secularism;nationalist_dictatorship;0.30%;-3;2,1;10,9;
+BRN;Burundi;2363;hutu:tutsi;Usumbura;0.50%;secularism;sectarian_dictatorship;0.30%;-3;2,1;10,9;
 BYU;Buryatia;;buryat,russian;Chita;14.75%;secularism;proletarian_dictatorship;16.03%;-0,671825;5,3;73,8;205-205-193, communist255-0-0
 CAM;Cambodia;4471;khmer;Phnom Penh;0.75%;secularism;absolute_monarchy;0.70%;-2,76098;8,6;20;153-50-204,communist240-128-128
 CMR;Cameroon;4888;black_french,fula;Yaounde;1.50%;secularism;democracy;1.23%;-3,36252;0,7;52,1;123-104-238
@@ -61,7 +61,7 @@ CHS;Chin State;;chin;Sittwe;0.75%;secularism;presidential_dictatorship;1.68%;-2,
 CHI;China;562580;chinese;Yenan;20.50%;secularism;proletarian_dictatorship;1%;-2,53555;1,7;13,7;255-165-0
 CHU;Chuvashia;;chuvash,russian;Simbirsk;14.75%;secularism;proletarian_dictatorship;16.03%;-0,671825;5,3;73,8;131-139-131, communist255-0-0
 CIR;Circassia;;circassians,russian;Adygei;14.75%;secularism;democracy;16.03%;-0,671825;5,3;73,8;
-CIS;Ciskei;;xhosa;Bisho;5.00%;secularism;populist_dictatorship;1.15%;-1,061362;1,3;62;
+CIS;Ciskei;;xhosa;Bisho;5.00%;secularism;nationalist_dictatorship;1.15%;-1,061362;1,3;62;
 CLM;Colombia;11592;white_spanish,mestizo;Bogota;3.25%;secularism;democracy;5.83%;-1,214399;9,5;75,3;
 COM;Comoros;148;comore;Comoros;0.25%;secularism;democracy;0.28%;-3;0;28;
 CNG;Congo Free State;13569;black_french,lingala,bakongo,mongo;Kinshasa;1.25%;secularism;democracy;1.23%;-2,5;4,8;34,3;139-119-101
@@ -81,7 +81,7 @@ DEN;Denmark;4271;danish;Copenhagen;20.75%;secularism;hms_government;14.73%;0,062
 DJI;Djibouti;79;afar;Djibuti;0.75%;secularism;democracy;0.23%;-3;11,3;77,1;
 DMC;Dominica;51;black_anglo;Dominica;2.50%;secularism;democracy;5.73%;-1,2;0;67,1;
 DOM;Dominican Republic;2353;white_spanish,mestizo;Santo Domingo;3.50%;secularism;presidential_dictatorship;5.73%;-2,161183;2,5;69,7;255-222-173
-ECA;East Caprivi;;lozi;Linyati;5.00%;secularism;populist_dictatorship;1.23%;-1,061362;1,3;62;
+ECA;East Caprivi;;lozi;Linyati;5.00%;secularism;nationalist_dictatorship;1.23%;-1,061362;1,3;62;
 DDR;East Germany;;german;Pritzwalk;15.50%;secularism;proletarian_dictatorship;11.55%;0,75528;2,2;73,9;139-134-130,communist255-99-71
 TIM;East Timor;436;ambon-timor;Dili;1.00%;secularism;democracy;0.43%;-3;1,3;28,3;
 ETS;East Turkestan;3200;uighur;Ili;20.50%;secularism;proletarian_dictatorship;1.88%;-1,23555;1,7;53,7;176-196-222,communist255-160-0
@@ -104,7 +104,7 @@ GAG;Gagauzia;;gagauz,romanian;Chisinau;5.25%;secularism;democracy;5.93%;-1,33252
 GAL;Galicia;;portuguese,white_spanish;La Coruna;13.75%;secularism;hms_government;14.93%;-0,32302;2,6;77,4;
 GAM;Gambia;271;white_anglo,mande;Banjul;1.00%;secularism;democracy;0.43%;-2;0,4;57,3;
 GAZ;Gaza;245;sunni_arab;Gaza;1.25%;sunni;theocracy;3.40%;-2,5;0;74,3;
-GZA;Gazankulu;;tsonga;Thohoyandu;5.00%;secularism;populist_dictatorship;0.78%;-1,061362;1,3;62;230-230-250
+GZA;Gazankulu;;tsonga;Thohoyandu;5.00%;secularism;nationalist_dictatorship;0.78%;-1,061362;1,3;62;230-230-250
 GEO;Georgia;3516;georgian;Tblisi;3.75%;secularism;proletarian_dictatorship;8.63%;-0,938735;8,4;52,8;139-131-120, communist255-0-0
 GER;Germany;58420;german;Kreuznach;15.50%;secularism;democracy;11.58%;0,95528;2,2;73,9;
 GHA;Ghana;5297;black_anglo,akan;Accra;1.00%;secularism;democracy;0.83%;-2,5859;0,6;51,9;
@@ -144,7 +144,7 @@ JOR;Jordan;561;sunni_arab;Amman;1.00%;secularism;absolute_monarchy;7.15%;-1,0332
 KAB;Kabardino-Balkaria ;;russian;Derbent;14.75%;secularism;proletarian_dictatorship;10.28%;-0,671825;5,3;73,8;176-196-222,communist255-0-0
 KAC;Kachin;;kachin;Putao;0.75%;secularism;presidential_dictatorship;0.68%;-2,5;8,4;33;
 KAM;Kalmykia ;;kalmyk,russian;Elitsa;14.75%;secularism;proletarian_dictatorship;10.28%;-0,671825;5,3;73,8;238-238-224, communist255-0-0
-NGW;KaNgwane;;swazi;Lydenburg;5.00%;secularism;populist_dictatorship;0.68%;-1,061362;1,3;62;
+NGW;KaNgwane;;swazi;Lydenburg;5.00%;secularism;nationalist_dictatorship;0.68%;-1,061362;1,3;62;
 KCH;Karachay-Cherkessia ;;karachay,russian;Pyatigorsk;14.75%;secularism;proletarian_dictatorship;10.28%;-0,671825;5,3;73,8;176-196-222,communist255-0-0
 KKP;Karakalpakstan;;karakalpak;Nukus;4.50%;secularism;democracy;10.28%;-2,183509;4,5;48,7;
 KRL;Karelia ;;finnish,russian;Kostomushka;14.75%;secularism;proletarian_dictatorship;15.43%;-0,671825;5,3;73,8;240-248-255, communist255-0-0
@@ -159,10 +159,10 @@ SRK;Krajina;;serb;Senj;9.50%;secularism;presidential_dictatorship;7.35%;-1,30036
 KYR;Kyrgyzstan;1739;kirgiz;Bishkek;9.00%;secularism;proletarian_dictatorship;10.28%;-1,5600967;2;35,3;65-105-225,communist 255-0-0 
 KUR;Kurdistan;;kurdish;Khvoy;3.25%;secularism;democracy;3.33%;-1,287659;8,7;71,5;
 KUW;Kuwait;145;sunni_arab;Kuwait;0.50%;secularism;hms_government;5.28%;-2,098712;5,8;98,3;
-NDB;KwaNdebele;;nguni;Lydenburg;5.00%;secularism;populist_dictatorship;3.33%;-1,061362;1,3;62;255-228-196
+NDB;KwaNdebele;;nguni;Lydenburg;5.00%;secularism;nationalist_dictatorship;3.33%;-1,061362;1,3;62;255-228-196
 LAT;Latvia;1936;latvian;Riga;14.50%;secularism;proletarian_dictatorship;15.28%;-1,399771;2,1;67,7;238-229-222, communist255-0-0
 LEB;Lebanon;1364;christian_arab;Beirut;3.25%;secularism;democracy;10.58%;-1,4879924;14,7;87,2;230-230-250
-LBW;Lebowa;;sepedi;Mosega;5.00%;secularism;populist_dictatorship;0.53%;-1,061362;1,3;62;255-215-0
+LBW;Lebowa;;sepedi;Mosega;5.00%;secularism;nationalist_dictatorship;0.53%;-1,061362;1,3;62;255-215-0
 LES;Lesotho;726;sotho;Thaba Bosiu;1.75%;secularism;absolute_monarchy;0.65%;-2,5;0,9;27,6;
 LIB;Liberia;824;black_anglo:black_anglo;Monrovia;1.75%;secularism;presidential_dictatorship;0.70%;-2,473432;0,7;48,2;
 LIT;Lithuania;2553;lithuanian;Vilnius;13.00%;secularism;proletarian_dictatorship;13.13%;-1,356395;3;67,1;238-232-170, communist255-0-0
@@ -226,18 +226,18 @@ PEU;Peru;7633;white_spanish,mestizo;Lima;3.75%;secularism;presidential_dictators
 PHI;Philippines;21131;filipino;Manila;1.50%;secularism;democracy;7.80%;-1,676072;1,3;48,8;25-25-112
 POL;Poland;30000;polish;Warsaw;6.00%;secularism;proletarian_dictatorship;5.88%;-0,46815;3,1;60,9;255-69-0
 POY;Polynesia;;white_french,micronesian;Tahiti;18.50%;secularism;democracy;7.25%;0,1592;3,4;85,8;
-POR;Portugal;8443;portuguese,white_portuguese;Lisbon;8.25%;secularism;populist_dictatorship;12.55%;-0,72302;4;61,1;34-139-34
+POR;Portugal;8443;portuguese,white_portuguese;Lisbon;8.25%;secularism;nationalist_dictatorship;12.55%;-0,72302;4;61,1;34-139-34
 PUR;Puerto Rico;2218;white_spanish;Puerto Rico;9.00%;secularism;democracy;7.00%;0,44247;4,4;92,5;106-90-205
 PUL;Puntland;;somali;Bossangoa;0.50%;secularism;presidential_dictatorship;1.00%;-3;0,2;37,7;
 QAT;Qatar;25;sunni_arab;Doha;1.00%;sunni;absolute_monarchy;6.15%;-1,905426;13,4;98,8;85-107-47
 QUE;Quebec;;white_french;Quebec City;15.25%;secularism;hms_government;15.00%;-0,38799;2;80,7;
-QWA;QwaQwa;;sotho;Winburg;5.00%;secularism;populist_dictatorship;0.78%;-1,061362;1,3;62;238-223-204
+QWA;QwaQwa;;sotho;Winburg;5.00%;secularism;nationalist_dictatorship;0.78%;-1,061362;1,3;62;238-223-204
 RAK;Rakhine;;rakhine;Sittwe;0.75%;secularism;presidential_dictatorship;1.43%;-2,5;8,4;33;
 ROC;Rep Of The Congo;826;black_french,teke;Nkuna;1.50%;secularism;proletarian_dictatorship;0.45%;-2,68153;2,5;63,7;238-221-130,communist250-128-114 
 RSR;Republica Srpska;;serb;Banja Luka;9.50%;secularism;presidential_dictatorship;9.85%;-1,30036;2,1;48,3;
 ROM;Romania;16311;romanian;Bucharest;4.25%;secularism;proletarian_dictatorship;6.93%;-0,921521;3,3;52,8;
 RUS;Russia;101937;russian,german,ukrainian,byelorussian,estonian,latvian,lithuanian;Moscow;14.75%;secularism;proletarian_dictatorship;16.03%;0,871825;5,3;73,8;176-196-222,communist255-0-0
-RWA;Rwanda;2439;hutu;Kigali;1.25%;secularism;populist_dictatorship;0.43%;-3;3,1;19,1;
+RWA;Rwanda;2439;hutu;Kigali;1.25%;secularism;nationalist_dictatorship;0.43%;-3;3,1;19,1;
 RYK;Ryukyu;;japanese;Okinawa;17.75%;secularism;hms_government;11.93%;0,85193;1,9;91,3;
 SPM;Saint Pierre and Miquelon;5;white_french;St Pierre & Miquelon;18.50%;secularism;democracy;6.25%;0,1592;3,4;85,8;
 SAM;Samoa;82;polynesian;Apia;2.00%;secularism;democracy;2.73%;-2,5;0;19,9;
@@ -265,9 +265,9 @@ SKO;South Korea;20846;korean;Seoul;13.00%;secularism;democracy;12.25%;-0,40823;0
 SOT;South Ossetia;;ossetian;Pasanauri;13.25%;secularism;democracy;7.00%;-1,605049;8,1;53,6;
 SSU;South Sudan;;nuer,dinka;Lado;2.25%;secularism;presidential_dictatorship;0.03%;-2,89062;2,7;33,2;
 SUT;South Tyrol;;german;Bozen;7.50%;secularism;democracy;12.25%;-0,02114;3;68,4;
-SVI;South Vietnam;12000;vietnamese:vietnamese;Saigon;11.00%;secularism;nationalist_dictatorship;2.43%;-2,215529;5,4;31;255-140-0
+SVI;South Vietnam;12000;vietnamese:vietnamese;Saigon;11.00%;secularism;sectarian_dictatorship;2.43%;-2,215529;5,4;31;255-140-0
 SYE;South Yemen;;sunni_arab;Aden;0.25%;secularism;hms_government;5.43%;-2,83394;2,9;32,3;143-188-143,communist255-0-0
-SPA;Spain;28063;spanish,catalan,basque;Madrid;3.75%;secularism;populist_dictatorship;14.0%;-0,72302;2,6;77,4;
+SPA;Spain;28063;spanish,catalan,basque;Madrid;3.75%;secularism;nationalist_dictatorship;14.0%;-0,72302;2,6;77,4;
 SRL;Sri Lanka;7533;sinhala;Colombo;0.50%;secularism;democracy;1.28%;-2,186109;7,5;15,1;255-140-0
 SKN;St Kits And Nevis;44;black_anglo;Saint Kitts;4.75%;secularism;hms_government;6.95%;-2,5;0;32;
 STL;St Lucia;79;black_anglo;Saint Lucia;4.75%;secularism;hms_government;5.03%;-2,5;0;17,5;
@@ -287,7 +287,7 @@ TIB;Tibet;1270;tibetan;Lhasa;20.50%;secularism;absolute_monarchy;1.00%;-1,23555;
 TOG;Togo;1172;black_french,kabye;Lome;3.25%;secularism;democracy;0.93%;-3;1,4;38;
 TOK;Tokelau;;polynesian;Tokelau;16.75%;secularism;hms_government;0.75%;-0,9122;2,3;86,2;190-190-190
 TON;Tonga;46;polynesian;Tonga;4.75%;secularism;hms_government;0.95%;-1,5;;23,4;
-TRK;Transkei;;xhosa;Umtata;5.00%;secularism;populist_dictatorship;0.78%;-1,061362;1,3;62;
+TRK;Transkei;;xhosa;Umtata;5.00%;secularism;nationalist_dictatorship;0.78%;-1,061362;1,3;62;
 TRD;Transnistria;;russian;Balti;5.25%;secularism;proletarian_dictatorship;9.63%;-1,332522;1,2;47,7;
 TAT;Trinidad and Tobago;632;black_anglo,indian;Trinidad;2.00%;secularism;democracy;1.63%;-1,5236306;3,3;13,7;
 LBY;Tripoli;961;sunni_arab;Tripoli;3.00%;secularism;absolute_monarchy;12.20%;-2,12552;12;77,7;193-205-193,facist139-134-130
@@ -305,7 +305,7 @@ URU;Uruguay;2194;white_spanish;Montevideo;16.00%;secularism;democracy;9.03%;-1,1
 USA;USA;151868;white_anglo,german,jewish;Washington;9.00%;secularism;democracy;12.15%;0,94247;4,4;92,5;135-206-250
 UZB;Uzbekistan;6293;uzbek;Tashkent;9.75%;secularism;proletarian_dictatorship;9.83%;-1,930372;2,4;36,2;221-160-221,communist255-0-0
 VAN;Vanuatu;52;melanesian;New Hebrides;4.75%;secularism;democracy;0.08%;-2,5;0;24,9;
-VED;Venda;;venda;Mosega;5.00%;secularism;populist_dictatorship;0.78%;-1,061362;1,3;62;160-82-45 
+VED;Venda;;venda;Mosega;5.00%;secularism;nationalist_dictatorship;0.78%;-1,061362;1,3;62;160-82-45 
 VNZ;Venezuela;5009;white_spanish,mestizo;Caracas;4.75%;secularism;presidential_dictatorship;7.13%;-1,4163809;4,3;93,5;
 VIR;Virgin Islands;27;white_anglo;Tortola;19.00%;secularism;hms_government;7.25%;0,46008;3,1;79,6;
 VOJ;Vojvodina;;serb,hungarian;Novi Sad;11.25%;secularism;proletarian_dictatorship;9.50%;-1;3,8;56,4;131-139-131,communist 153-50-204
@@ -328,7 +328,7 @@ NRO;Novorossiya;;russian;Luhansk;11.50%;secularism;presidential_dictatorship;10.
 ISI;Islamic State;;sunni_arab;Mosul;3.75%;sunni;theocracy;1.53%;-2,53894;13,6;56,1;0-0-0
 ROJ;Rojava;;kurdish;Dayr al;3.25%;secularism;democracy;3.33%;-1,287659;8,7;71,5;230-230-250
 TEX;Texas;;white_anglo;Austin;9.00%;secularism;democracy;18.15%;0,44247;4,4;92,5;0-128-255
-CSA;CSA;;white_anglo;Montgomery;36.00%;secularism;populist_dictatorship;72.60%;1,94247;4,4;92,5;0-128-255
+CSA;CSA;;white_anglo;Montgomery;36.00%;secularism;nationalist_dictatorship;72.60%;1,94247;4,4;92,5;0-128-255
 HAW;Hawaii;;polynesian;Hawaii;36.00%;secularism;democracy;72.60%;1,94247;4,4;92,5;0-128-255
 XGC;Gulf Cooperation Council;;sunni_arab;Riyadh;9.00%;secularism;democracy;18.15%;0,44247;4,4;82,3;60-179-113
 XEF;East African Federation;;swahili;Arusha;9.00%;secularism;democracy;18.15%;0,44247;4,4;26,7;85-107-47

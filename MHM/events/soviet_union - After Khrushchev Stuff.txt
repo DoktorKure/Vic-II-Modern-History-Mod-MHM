@@ -12,7 +12,7 @@ country_event = { # Collective Leadership
 		tag = RUS
 		year = 1953 
 		NOT = { year = 1968 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = leonid_brezhnev
 			has_country_flag = georgy_malenkov
@@ -25,7 +25,7 @@ country_event = { # Collective Leadership
 		name = "Communism must be built together."
 		
 		#Appointed UH
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		
 		#Soviet elite is less hardline
 		any_pop = { 
@@ -50,7 +50,7 @@ country_event = { # The Arrival of Nikolai Podgorny
 		tag = RUS
 		year = 1964 
 		NOT = { year = 1969 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = leonid_brezhnev
 	}
 
@@ -81,7 +81,7 @@ country_event = { # The Siniavski-Daniel Trial
 		tag = RUS
 		year = 1966
 		NOT = { year = 1969 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = leonid_brezhnev
 	}
 
@@ -137,7 +137,7 @@ country_event = { # Attempted Assassination
 		tag = RUS
 		year = 1969
 		NOT = { year = 1972 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = leonid_brezhnev
 	}
 
@@ -206,7 +206,7 @@ country_event = { # The Death of Khrushchev
 		tag = RUS
 		year = 1971
 		NOT = { year = 1976 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = nikita_khrushchev
 	}
 
@@ -245,7 +245,7 @@ country_event = { # Economic Reform of 1973 - Brezhnev
 		tag = RUS
 		year = 1973
 		NOT = { year = 1975 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = leonid_brezhnev
 	}
 
@@ -292,7 +292,7 @@ country_event = { # Gerontocracy
 		tag = RUS
 		year = 1973 
 		NOT = { year = 1978 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = leonid_brezhnev
 	}
 
@@ -317,7 +317,7 @@ country_event = { # Expulsion of Solzhenitsyn?
 		tag = RUS
 		year = 1972 
 		NOT = { year = 1975 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = leonid_brezhnev
 	}
 
@@ -359,7 +359,7 @@ country_event = { # Andrei Sakharov
 		tag = RUS
 		year = 1977 
 		NOT = { year = 1981 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = leonid_brezhnev
 			has_country_flag = alexender_shelepin
@@ -390,7 +390,7 @@ country_event = { # Elimination of Podgorny
 		tag = RUS
 		year = 1975 
 		NOT = { year = 1980 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = leonid_brezhnev
 		has_country_flag = nikolai_podgorny
 	}
@@ -445,7 +445,7 @@ country_event = { # Soviet Constitution of 1977
 		tag = RUS
 		year = 1977
 		NOT = { year = 1979 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = leonid_brezhnev
 		has_country_flag = new_soviet_constitution
 	}
@@ -472,7 +472,7 @@ country_event = { # Economic Reform of 1979
 		tag = RUS
 		year = 1979
 		NOT = { year = 1980 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = leonid_brezhnev
 		NOT = { has_country_flag = no_more_kosygin }
 	}
@@ -518,7 +518,7 @@ country_event = { # The Fall of Kosygin
 		tag = RUS
 		year = 1980 
 		NOT = { year = 1982 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = leonid_brezhnev
 		NOT = { has_country_flag = no_more_kosygin }
 	}
@@ -561,7 +561,7 @@ country_event = { # Countering Brezhnev
 		tag = RUS
 		year = 1960 
 		NOT = { year = 1966 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexender_shelepin
 	}
 
@@ -684,7 +684,7 @@ country_event = { # Shelepin stays in power
 		tag = RUS
 		year = 1960 
 		NOT = { year = 1968 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexender_shelepin
 		OR = {
 			has_country_flag = shelepin_using_kgb_pressure_army
@@ -735,7 +735,7 @@ country_event = { # Shelepin fails to stay in power
 		tag = RUS
 		year = 1960 
 		NOT = { year = 1968 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexender_shelepin
 		NOT = {
 			OR = {
@@ -787,7 +787,7 @@ country_event = { # XXIIIrd Congress of the CPUS - Alternative
 		tag = RUS
 		year = 1965 
 		NOT = { year = 1982 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexender_shelepin
 		has_country_flag = shelepin_wins_brezhnev
 	}
@@ -807,7 +807,7 @@ country_event = { # XXIIIrd Congress of the CPUS - Alternative
 		any_country = {
 			limit = {
 				exists = yes
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				ruling_party_ideology = communist
 				capital_scope = { continent = europe }
 			}
@@ -846,7 +846,7 @@ country_event = { # XXIIIrd Congress of the CPUS - Alternative
 		any_country = {
 			limit = {
 				exists = yes
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				ruling_party_ideology = communist
 				capital_scope = { continent = europe }
 			}
@@ -883,7 +883,7 @@ country_event = { # Shelepin's Reform passes!
 		any_country = {
 			limit = {
 				exists = yes
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				ruling_party_ideology = communist
 				capital_scope = { continent = europe }
 			}
@@ -915,7 +915,7 @@ country_event = { # Kosygin's Reform passes!
 		any_country = {
 			limit = {
 				exists = yes
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				ruling_party_ideology = communist
 				capital_scope = { continent = europe }
 			}
@@ -941,7 +941,7 @@ country_event = { # Putting the brakes on Reforms
 		tag = RUS
 		year = 1969
 		NOT = { year = 1985 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexender_shelepin
 		has_country_flag = kosygin_reform
 	}
@@ -961,7 +961,7 @@ country_event = { # Putting the brakes on Reforms
 		any_country = {
 			limit = {
 				exists = yes
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				ruling_party_ideology = communist
 				capital_scope = { continent = europe }
 			}
@@ -1009,7 +1009,7 @@ country_event = { # Recentralization
 		tag = RUS
 		year = 1967
 		NOT = { year = 1975 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexender_shelepin
 	}
 
@@ -1040,7 +1040,7 @@ country_event = { # The Case of the Katyn Massacre
 		tag = RUS
 		year = 1968
 		NOT = { year = 1981 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexender_shelepin
 	}
 
@@ -1087,7 +1087,7 @@ country_event = { # Administration Reform
 		tag = RUS
 		year = 1970
 		NOT = { year = 1978 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexender_shelepin
 	}
 
@@ -1141,7 +1141,7 @@ country_event = { # Disciplinary Committee
 	id = 9001171
 	title = "Disciplinary Committee"
 	desc = EVT_9001171_DESC
-	picture = "ussr_police_militsia"
+	picture = "ussr_basic_security_militsia"
   
 	fire_only_once = yes
 
@@ -1149,7 +1149,7 @@ country_event = { # Disciplinary Committee
 		tag = RUS
 		year = 1972
 		NOT = { year = 1980 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexender_shelepin
 	}
 
@@ -1214,7 +1214,7 @@ country_event = { # Worker Discipline
 		tag = RUS
 		year = 1973
 		NOT = { year = 1985 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexender_shelepin
 	}
 
@@ -1278,7 +1278,7 @@ country_event = { # The Fate of Brezhnev
 		tag = RUS
 		year = 1977
 		NOT = { year = 1981 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexender_shelepin
 	}
 
@@ -1346,7 +1346,7 @@ country_event = { # The Death of Shelepin
 		tag = RUS
 		year = 1992
 		NOT = { year = 1999 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexender_shelepin
 	}
 
@@ -1385,7 +1385,7 @@ country_event = { # Alexei Kosygin is the uncontested leader
 		tag = RUS
 		year = 1968
 		NOT = { year = 1973 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			AND = {
 				has_country_flag = reformist_not_traitors
@@ -1418,7 +1418,7 @@ country_event = { # Opening to the West?
 		tag = RUS
 		year = 1970
 		NOT = { year = 1973 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexei_kosygin
 	}
 
@@ -1444,7 +1444,7 @@ country_event = { # Opening to the West?
 		any_country = {
 			limit = {
 				exists = yes
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				ruling_party_ideology = communist
 				capital_scope = { continent = europe }
 			}
@@ -1469,7 +1469,7 @@ country_event = { # Economic Reform of 1973 - Kosygin
 		tag = RUS
 		year = 1972
 		NOT = { year = 1975 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexei_kosygin
 	}
 
@@ -1522,7 +1522,7 @@ country_event = { # Youthfulness VS Elders
 		tag = RUS
 		year = 1973
 		NOT = { year = 1975 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexei_kosygin
 	}
 
@@ -1555,7 +1555,7 @@ country_event = { # Reduce Censorship?
 		tag = RUS
 		year = 1973
 		NOT = { year = 1975 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexei_kosygin
 	}
 
@@ -1576,7 +1576,7 @@ country_event = { # Reduce Censorship?
 	option = {
 		name = "More liberalisation."
 		
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		any_pop = {
 			ideology = { factor = 0.05 value = liberal }
 			consciousness = 2
@@ -1598,7 +1598,7 @@ country_event = { # The Type of Army
 		tag = RUS
 		year = 1974
 		NOT = { year = 1976 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexei_kosygin
 		
 		#No accidental bankruptcy
@@ -1644,7 +1644,7 @@ country_event = { # Great Political Reform
 		tag = RUS
 		year = 1975
 		NOT = { year = 1977 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexei_kosygin
 	}
 
@@ -1670,7 +1670,7 @@ country_event = { # The Conservatives are discontent
 		tag = RUS
 		year = 1975
 		NOT = { year = 1978 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexei_kosygin
 		has_country_flag = promises_constitutional_reform
 	}
@@ -1717,7 +1717,7 @@ country_event = { # Dispute between Reformers
 		tag = RUS
 		year = 1975
 		NOT = { year = 1978 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexei_kosygin
 		has_country_flag = nikolai_podgorny
 		has_country_flag = promises_constitutional_reform
@@ -1763,7 +1763,7 @@ country_event = { # Soviet Constitution of $YEAR$ - Kosygin
 		clr_country_flag = nikolai_podgorny
 		
 		ruling_party_ideology = communist_social
-		political_reform = registered_voting
+		political_reform = harassed_voting
 		political_reform = elitist_service
 		political_reform = restricted_unions
 		political_reform = limited_meetings
@@ -1782,7 +1782,7 @@ country_event = { # Request for Independance in the Baltic States
 		tag = RUS
 		year = 1976
 		NOT = { year = 1979 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = alexei_kosygin
 			has_country_flag = nikolai_podgorny
@@ -1885,7 +1885,7 @@ country_event = { # Agricultural Reform
 		tag = RUS
 		year = 1976
 		NOT = { year = 1979 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = alexei_kosygin
 			has_country_flag = nikolai_podgorny
@@ -1926,7 +1926,7 @@ country_event = { # The Belarusian Model
 		tag = RUS
 		year = 1977
 		NOT = { year = 1980 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexei_kosygin
 	}
 
@@ -1967,7 +1967,7 @@ country_event = { # The Death of Kosygin
 		tag = RUS
 		year = 1979
 		NOT = { year = 1982 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = alexei_kosygin
 	}
 
@@ -2023,8 +2023,8 @@ country_event = { # Soviet Constitution of $YEAR$ - Podgorny
 		set_country_flag = independence_baltic_states
 		clr_country_flag = alexei_kosygin
 		ruling_party_ideology = communist_social
-		political_reform = universal_weighted_voting
-		political_reform = regulated_opinion
+		political_reform = rigged_voting
+		political_reform = appointed_opinion
 		political_reform = professional_service
 		political_reform = quota_immigration
 		political_reform = restricted_unions
@@ -2044,7 +2044,7 @@ country_event = { # The Death of Podgorny
 		tag = RUS
 		year = 1981
 		NOT = { year = 1986 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = nikolai_podgorny
 	}
 
@@ -2055,9 +2055,9 @@ country_event = { # The Death of Podgorny
 		
 		government = socialist_democracy
 		
-		political_reform = registered_voting
-		political_reform = open_opinion
-		political_reform = parties_only_nominated
+		political_reform = harassed_voting
+		political_reform = semi_democratic_state_opinion
+		political_reform = parties_restricted
 		political_reform = jefferson_method
 		
 		election = yes

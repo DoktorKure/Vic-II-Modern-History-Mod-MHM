@@ -160,8 +160,8 @@ country_event = {
 				OR = { 
 					ruling_party_ideology = traditionalist
 					government = theocracy 
+					government = sectarian_dictatorship 
 					government = nationalist_dictatorship 
-					government = populist_dictatorship 
 					government = proletarian_dictatorship
 					government = proletarian_dictatorship1
 					government = socialist_democracy
@@ -343,7 +343,7 @@ country_event = {
 				#Iraq is still under Saddam
 				IRQ = { 
 					ruling_party_ideology = socialist 
-					OR = { government = nationalist_dictatorship government = populist_dictatorship } 
+					OR = { government = sectarian_dictatorship government = nationalist_dictatorship } 
 				}
 			}
 			
@@ -1405,8 +1405,8 @@ country_event = {
 		add_country_modifier = { name = revolution_chaos duration = 1825 }
 		
 		#Weaken US democracy
-		political_reform = regulated_opinion
-		political_reform = universal_weighted_voting
+		political_reform = appointed_opinion
+		political_reform = rigged_voting
 		political_reform = politicised_service
 		
 		#Military becomes more disloyal
@@ -1453,8 +1453,8 @@ country_event = {
 		name = "A win for Nixon, a loss for America"
 		
 		#Weaken US democracy
-		political_reform = regulated_opinion
-		political_reform = universal_weighted_voting
+		political_reform = appointed_opinion
+		political_reform = rigged_voting
 		political_reform = politicised_service
 		
 		#Democrats are furious
@@ -1709,12 +1709,12 @@ country_event = {
 		#Has reforms to repeal
 		NOT = { 
 			OR = { 
+				publishing_rights = state_publishing 
 				publishing_rights = censored_publishing 
-				publishing_rights = firewall_publishing 
 			} 
 		}
 		
-		NOT = { security_reform = preemptive_security_actions }
+		NOT = { security_reform = excellent_security }
 		
 		#Republicans
 		ruling_party_ideology = conservative
@@ -1728,8 +1728,8 @@ country_event = {
 		name = "This is a necessary evil"
 		
 		#Roll back press reforms and increase security reforms
-		political_reform = firewall_publishing
-		social_reform = preemptive_security_actions
+		political_reform = censored_publishing
+		social_reform = excellent_security
 		
 		#Progressives are furious
 		any_pop = {
@@ -1847,34 +1847,34 @@ country_event = {
 			limit = { 
 				owner = { 
 					OR = { 
-						wage_and_work_hours = unregulated_hours 
-						wage_and_work_hours = eight_work_hours 
+						wage_reform = unregulated_hours 
+						wage_reform = trinket_wage 
 					} 
 				} 
 			}
-			social_reform = paid_vacation_hours
+			social_reform = low_minimum_wage
 		}
 		random_owned = {
 			limit = { 
 				owner = { 
 					OR = { 
-						safety_regulations = some_regulations
-						safety_regulations = balanced_regulations 
+						safety_regulations = no_safety
+						safety_regulations = trinket_safety 
 					} 
 				} 
 			}
-			social_reform = restrictive_regulations
+			social_reform = low_safety
 		}
 		random_owned = {
 			limit = { 
 				owner = { 
 					OR = { 
 						unemployment_subsidies = no_subsidies
-						unemployment_subsidies = minimal_subsidies
+						unemployment_subsidies = trinket_subsidies
 					} 
 				} 
 			}
-			social_reform = ghent_system
+			social_reform = low_subsidies
 		}
 		random_owned = {
 			limit = { 
@@ -3054,10 +3054,10 @@ country_event = {
 		}
 		
 		#Democracy is weakened
-		political_reform = regulated_opinion
-		political_reform = registered_voting
+		political_reform = appointed_opinion
+		political_reform = harassed_voting
 		political_reform = politicised_service
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		
 		ai_chance = { factor = 0.1 }
 	}
@@ -3163,12 +3163,12 @@ country_event = {
 		
 		#Government becomes like Russia
 		political_reform = none_voting
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = no_meetings
 		political_reform = politicised_service
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		political_reform = state_controlled_unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		
 		#Trump policies
 		political_reform = quota_immigration
@@ -3331,13 +3331,13 @@ country_event = {
 					ruling_party_ideology = populist
 					
 					#Russian style government
-					political_reform = registered_voting
-					political_reform = regulated_opinion
+					political_reform = harassed_voting
+					political_reform = appointed_opinion
 					political_reform = no_meetings
 					political_reform = politicised_service
-					political_reform = firewall_publishing
+					political_reform = censored_publishing
 					political_reform = state_controlled_unions
-					political_reform = parties_only_nominated
+					political_reform = parties_restricted
 		
 					#Trump policies
 					political_reform = quota_immigration
@@ -3358,13 +3358,13 @@ country_event = {
 					ruling_party_ideology = populist
 					
 					#Russian style government
-					political_reform = registered_voting
-					political_reform = regulated_opinion
+					political_reform = harassed_voting
+					political_reform = appointed_opinion
 					political_reform = no_meetings
 					political_reform = politicised_service
-					political_reform = firewall_publishing
+					political_reform = censored_publishing
 					political_reform = state_controlled_unions
-					political_reform = parties_only_nominated
+					political_reform = parties_restricted
 		
 					#Trump policies
 					political_reform = quota_immigration
@@ -3429,13 +3429,13 @@ country_event = {
 					ruling_party_ideology = populist
 					
 					#Government becomes like Russia
-					political_reform = registered_voting
-					political_reform = regulated_opinion
+					political_reform = harassed_voting
+					political_reform = appointed_opinion
 					political_reform = no_meetings
 					political_reform = politicised_service
-					political_reform = firewall_publishing
+					political_reform = censored_publishing
 					political_reform = state_controlled_unions
-					political_reform = parties_only_nominated
+					political_reform = parties_restricted
 		
 					#Trump policies
 					political_reform = quota_immigration
@@ -3463,13 +3463,13 @@ country_event = {
 					ruling_party_ideology = populist
 					
 					#Government becomes like Russia
-					political_reform = registered_voting
-					political_reform = regulated_opinion
+					political_reform = harassed_voting
+					political_reform = appointed_opinion
 					political_reform = no_meetings
 					political_reform = politicised_service
-					political_reform = firewall_publishing
+					political_reform = censored_publishing
 					political_reform = state_controlled_unions
-					political_reform = parties_only_nominated
+					political_reform = parties_restricted
 		
 					#Trump policies
 					political_reform = quota_immigration
@@ -3503,13 +3503,13 @@ country_event = {
 					ruling_party_ideology = populist
 					
 					#Government becomes like Russia
-					political_reform = registered_voting
-					political_reform = regulated_opinion
+					political_reform = harassed_voting
+					political_reform = appointed_opinion
 					political_reform = no_meetings
 					political_reform = politicised_service
-					political_reform = firewall_publishing
+					political_reform = censored_publishing
 					political_reform = state_controlled_unions
-					political_reform = parties_only_nominated
+					political_reform = parties_restricted
 		
 					#Trump policies
 					political_reform = quota_immigration
@@ -3532,13 +3532,13 @@ country_event = {
 					ruling_party_ideology = populist
 					
 					#Government becomes like Russia
-					political_reform = registered_voting
-					political_reform = regulated_opinion
+					political_reform = harassed_voting
+					political_reform = appointed_opinion
 					political_reform = no_meetings
 					political_reform = politicised_service
-					political_reform = firewall_publishing
+					political_reform = censored_publishing
 					political_reform = state_controlled_unions
-					political_reform = parties_only_nominated
+					political_reform = parties_restricted
 		
 					#Trump policies
 					political_reform = quota_immigration
@@ -3622,34 +3622,34 @@ country_event = {
 			limit = { 
 				owner = { 
 					OR = { 
-						wage_and_work_hours = unregulated_hours 
-						wage_and_work_hours = eight_work_hours 
+						wage_reform = unregulated_hours 
+						wage_reform = trinket_wage 
 					} 
 				} 
 			}
-			social_reform = paid_vacation_hours
+			social_reform = low_minimum_wage
 		}
 		random_owned = {
 			limit = { 
 				owner = { 
 					OR = { 
-						safety_regulations = some_regulations
-						safety_regulations = balanced_regulations 
+						safety_regulations = no_safety
+						safety_regulations = trinket_safety 
 					} 
 				} 
 			}
-			social_reform = restrictive_regulations
+			social_reform = low_safety
 		}
 		random_owned = {
 			limit = { 
 				owner = { 
 					OR = { 
 						unemployment_subsidies = no_subsidies
-						unemployment_subsidies = minimal_subsidies
+						unemployment_subsidies = trinket_subsidies
 					} 
 				} 
 			}
-			social_reform = ghent_system
+			social_reform = low_subsidies
 		}
 		random_owned = {
 			limit = { 

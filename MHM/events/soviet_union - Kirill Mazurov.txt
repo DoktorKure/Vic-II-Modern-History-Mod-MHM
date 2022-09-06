@@ -12,7 +12,7 @@ country_event = { # Agricultural Program
 		tag = RUS
 		year = 1980 
 		NOT = { year = 1983 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = kirill_mazurov
 	}
 
@@ -93,7 +93,7 @@ country_event = { # New Virgin Campaign
 		tag = RUS
 		year = 1983 
 		NOT = { year = 1987 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = kirill_mazurov
 		has_country_flag = ussr_food_program
 	}
@@ -149,7 +149,7 @@ country_event = { # The Return of Michurin
 		tag = RUS
 		year = 1982 
 		NOT = { year = 1986 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = kirill_mazurov
 		has_country_flag = ussr_new_branch_academy
 	}
@@ -192,7 +192,7 @@ country_event = { # Generalization of GMO
 		tag = RUS
 		year = 1985 
 		NOT = { year = 1989 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = kirill_mazurov
 		has_country_flag = ussr_new_branch_academy
 		has_country_flag = ussr_return_michurin
@@ -233,7 +233,7 @@ country_event = { # Political "Amnesty"
 		tag = RUS
 		year = 1982 
 		NOT = { year = 1987 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = kirill_mazurov
 	}
 
@@ -282,7 +282,7 @@ country_event = { # The Problem of Alcohol
 		tag = RUS
 		year = 1983 
 		NOT = { year = 1986 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = kirill_mazurov
 	}
 
@@ -323,7 +323,7 @@ country_event = { # Soviet Infrastructure and Cars
 		tag = RUS
 		year = 1985 
 		NOT = { year = 1989 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = kirill_mazurov
 	}
 
@@ -459,7 +459,7 @@ country_event = { # Death of Mazurov
 		tag = RUS
 		year = 1989 
 		NOT = { year = 1992 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = kirill_mazurov
 	}
 

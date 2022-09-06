@@ -12,7 +12,7 @@ country_event = {
 		year = 1949
 		NOT = { year = 1990 }
 		
-		NOT = { government = proletarian_dictatorship }
+		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		war = no
 		is_vassal = no
 		
@@ -41,9 +41,9 @@ country_event = {
 		political_reform = none_voting #No voting
 		political_reform = limited_meetings
 		political_reform = politicised_service #Politicized
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = proportional_representation
 
 		RUS = { country_event = 120003 } #Vassalise

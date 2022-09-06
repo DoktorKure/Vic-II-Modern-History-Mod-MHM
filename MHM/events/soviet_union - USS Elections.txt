@@ -91,7 +91,7 @@ country_event = { # President Viktor Alksnis (Communist)
 	option = {
 		name = "The stereotype of the hardcore Communist."
 		
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out
 		
@@ -127,7 +127,7 @@ country_event = { # President Oleg Shenin (Communist)
 	option = {
 		name = "The Union is led by an 'old-school' Communist..."
 		
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = state_controlled_unions
 		
 		rich_strata = { 
@@ -163,7 +163,7 @@ country_event = { # President Maxim Suraykin (Communist)
 	option = {
 		name = "A young and non-revisionist Communist leader."
 		
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = elitist_service
 		political_reform = state_controlled_unions
 		
@@ -311,7 +311,7 @@ country_event = { # President Vladimir Putin (Communist Social) - Succession
 		year = 2005
 		NOT = { year = 2011 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		election = no
 		

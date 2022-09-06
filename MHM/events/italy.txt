@@ -100,7 +100,7 @@ country_event = {
 		
 		#Umberto II escapes to Portugal
 		random_country = {   
-			limit = { tag = POR OR = { government = nationalist_dictatorship government = populist_dictatorship } is_vassal = no }
+			limit = { tag = POR OR = { government = sectarian_dictatorship government = nationalist_dictatorship } is_vassal = no }
 			relation = { who = THIS value = -15 }
 			
 			#Leader flees
@@ -213,7 +213,7 @@ country_event = {
 	option = {
 		name = "So it must be..."
 		
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		
 		#Generic Change in Leadership event
 		country_event = 111222
@@ -705,13 +705,13 @@ country_event = {
 		political_reform = nobody_gets_out
 		political_reform = politicised_service
 		political_reform = parties_not_allowed
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions
 		political_reform = none_voting
 		political_reform = no_meetings 
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 100 }
 			diplomatic_influence = { who = THIS value = 200 }
 		}
@@ -736,7 +736,7 @@ country_event = {
 		prestige = -50
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -400 }
 			diplomatic_influence = { who = THIS value = -200 }
 		}
@@ -1452,7 +1452,7 @@ country_event = {
 			relation = { who = THIS value = 25 }
         }
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = -50 }
         }
 			
@@ -1480,7 +1480,7 @@ country_event = {
 			country_event = 8020321
         }
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = -75 }
         }
 			
@@ -1541,7 +1541,7 @@ country_event = {
 			relation = { who = THIS value = -10 }
         }
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = 25 }
         }
 		
@@ -1613,7 +1613,7 @@ country_event = {
 		#Socialists & Communists are not in power (PCI & PSI can avoid breaking up if they are in government)
 		NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist } }
 		
-		RUS = { exists = yes government = proletarian_dictatorship is_greater_power = yes }
+		RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 		
 		HUN = { exists = yes OR = { government = proletarian_dictatorship1 government = proletarian_dictatorship } }
 		
@@ -2460,7 +2460,7 @@ country_event = {
 			owner = { 
 				release = SUT 				
 				SUT = { 				
-					government = nationalist_dictatorship  
+					government = sectarian_dictatorship  
 					country_event = 800050 		
 					ruling_party_ideology = nationalist 
 				} 
@@ -2920,7 +2920,7 @@ country_event = {
 		EGY = { 
 			exists = yes
 			
-			OR = { government = presidential_dictatorship government = populist_dictatorship }
+			OR = { government = presidential_dictatorship government = nationalist_dictatorship }
 			is_vassal = no
 			war_with = ISR
 		}
@@ -2953,7 +2953,7 @@ country_event = {
 			limit = {
 				exists = yes
 				OR = { 
-					AND = { primary_culture = arab OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } is_vassal = no }
+					AND = { primary_culture = arab OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } is_vassal = no }
 					AND = { tag = JOR OR = { government = hms_government government = hms_government1 government = absolute_monarchy } is_vassal = no }
 					AND = { tag = LEB is_vassal = no primary_culture = arab }
 				}
@@ -2976,7 +2976,7 @@ country_event = {
 			limit = {
 				exists = yes
 				OR = { 
-					AND = { primary_culture = arab OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } is_vassal = no }
+					AND = { primary_culture = arab OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } is_vassal = no }
 					AND = { tag = JOR OR = { government = hms_government government = hms_government1 government = absolute_monarchy } is_vassal = no }
 					AND = { tag = LEB is_vassal = no primary_culture = arab }
 				}
@@ -4052,7 +4052,7 @@ country_event = {
   
 	option = {
 		name = EVT_8007760_B
-		social_reform = subsidised_higher_education
+		social_reform = competent_public_education
 		
 		any_pop = { 
 			limit = { strata = poor }
@@ -4225,7 +4225,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 0.8
-			NOT = { wage_and_work_hours = paid_sick_leave_hours }
+			NOT = { wage_reform = acceptable_minimum_wage }
 		}
 		modifier = {
 			factor = 0.8
@@ -4256,7 +4256,7 @@ country_event = {
 
 	option = {
 		name = "Pass the law"
-		social_reform = paid_sick_leave_hours 
+		social_reform = acceptable_minimum_wage 
 		political_reform = free_trade_unions
 		
 		any_pop = { 
@@ -4525,7 +4525,7 @@ country_event = {
 		
 		#Borghese escapes to Francoist Spain
 		random_country = {   
-			limit = { tag = SPA OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = SPA OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			relation = { who = THIS value = -15 }
 		}
 		
@@ -4542,7 +4542,7 @@ country_event = {
 		
 		badboy = 5
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		country_event = 800050
 		ruling_party_ideology = nationalist
 		
@@ -4590,19 +4590,19 @@ country_event = {
 		any_pop = { limit = { type = bureaucrats OR = { pop_majority_ideology = communist pop_majority_ideology = communist_social } } move_pop = 1008 } #Moscow
 		
 		random_country = {   
-			limit = { tag = SPA OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = SPA OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = POR OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = POR OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = FAG OR = { government = populist_dictatorship government = nationalist_dictatorship } is_vassal = no }
+			limit = { tag = FAG OR = { government = nationalist_dictatorship government = sectarian_dictatorship } is_vassal = no }
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = GRE OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = GRE OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
@@ -4610,11 +4610,11 @@ country_event = {
 			relation = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = SAF OR = { government = populist_dictatorship government = nationalist_dictatorship government = democracy } is_vassal = no }
+			limit = { tag = SAF OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = democracy } is_vassal = no }
 			relation = { who = THIS value = 25 }
 		}
 		random_country = {   
-			limit = { tag = RHO OR = { government = populist_dictatorship government = nationalist_dictatorship government = democracy } is_vassal = no }
+			limit = { tag = RHO OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = democracy } is_vassal = no }
 			relation = { who = THIS value = 25 }
 		}
 		random_country = {   
@@ -5261,7 +5261,7 @@ country_event = {
 		name = "The Chambers are dissolved, the Coup succeeds"		
 		badboy = 5
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		country_event = 800050
 		ruling_party_ideology = nationalist
 		
@@ -5285,7 +5285,7 @@ country_event = {
 			relation = { who = THIS value = 15 }
 		}
 		random_country = {   
-			limit = { tag = GRE OR = { government = populist_dictatorship government = nationalist_dictatorship government = absolute_monarchy } is_vassal = no }
+			limit = { tag = GRE OR = { government = nationalist_dictatorship government = sectarian_dictatorship government = absolute_monarchy } is_vassal = no }
 			relation = { who = THIS value = 15 }
 		}
 		random_country = {   
@@ -5298,7 +5298,7 @@ country_event = {
 			diplomatic_influence = { who = THIS value = 50 }
 		}
 		random_country = {   
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes } 
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes } 
 			relation = { who = THIS value = -100 }
 			diplomatic_influence = { who = THIS value = -100 }
 		}
@@ -5325,7 +5325,7 @@ country_event = {
 			diplomatic_influence = { who = THIS value = -100 }
 		}
 		random_country = {   
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes } 
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes } 
 			relation = { who = THIS value = 50 }
 			diplomatic_influence = { who = THIS value = 50 }
 		}
@@ -5399,7 +5399,7 @@ country_event = {
 		
 		RUS = { 
 			exists = yes 
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 			is_greater_power = yes 
 			war = no
 		}
@@ -5410,7 +5410,7 @@ country_event = {
 	option = {
 		name = "Congratulations Berlinguer"
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -25 }
 			diplomatic_influence = { who = THIS value = -25 }
 		}
@@ -5846,7 +5846,7 @@ country_event = {
 		#Gaddafi is in power, the US and France are Atlanticst
 		LBY = { 
 			exists = yes 
-			government = populist_dictatorship 
+			government = nationalist_dictatorship 
 			is_vassal = no
 			war = no
 			ruling_party_ideology = socialist 
@@ -5890,7 +5890,7 @@ country_event = {
 			diplomatic_influence = { who = THIS value = -5 }
 		}
 		random_country = {   
-			limit = { tag = LBY government = populist_dictatorship is_vassal = no } 
+			limit = { tag = LBY government = nationalist_dictatorship is_vassal = no } 
 			relation = { who = THIS value = -15 }
 		}
 		
@@ -7087,7 +7087,7 @@ country_event = {
 		ruling_party_ideology = socialist 
 		
 		#Workers' Statute has passed
-		OR = { wage_and_work_hours = paid_sick_leave_hours wage_and_work_hours = six_hours }
+		OR = { wage_reform = acceptable_minimum_wage wage_reform = good_minimum_wage }
 		
 		has_country_flag = parliamentary_system_republic
 		has_country_flag = 1983_ITA_Pentapartito
@@ -7102,7 +7102,7 @@ country_event = {
 		prestige = 50
 		
 		#The Worker Statute gets partially undone
-		social_reform = paid_vacation_hours  
+		social_reform = low_minimum_wage  
 		
 		any_pop = { 
 			scaled_militancy = { factor = 2 ideology = progressive }
@@ -7204,7 +7204,7 @@ country_event = {
 		election = no
 		
 		#Reform has been enacted
-		wage_and_work_hours = paid_vacation_hours  
+		wage_reform = low_minimum_wage  
 		
 		has_country_flag = parliamentary_system_republic
 		NOT = { has_country_flag = ITA_Tradeunions_Federation }
@@ -7239,7 +7239,7 @@ country_event = {
 		name = "The Referendum wins, the Law-Decree is rescinded"
 		prestige = -50
 		
-		social_reform = paid_sick_leave_hours   
+		social_reform = acceptable_minimum_wage   
 		
 		any_pop = { 
 			scaled_militancy = { factor = 1 ideology = socialist }

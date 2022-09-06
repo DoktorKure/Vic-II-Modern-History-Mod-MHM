@@ -895,13 +895,13 @@ country_event = {
 	
 		#More authoritarian reforms to consolidate Malay rule
 		political_reform = first_past_the_post
-		political_reform = registered_voting
-		political_reform = open_opinion
+		political_reform = harassed_voting
+		political_reform = semi_democratic_state_opinion
 		political_reform = limited_meetings
 		political_reform = elitist_service
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		political_reform = state_controlled_unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		
 		set_country_flag = MSY_pro_malay_path
 		
@@ -976,12 +976,12 @@ country_event = {
 		ruling_party_ideology = socialist
 		political_reform = minorities_oppression
 		
-		social_reform = generous_subsidies
+		social_reform = extended_subsidies
 		social_reform = limited_child_care
 		social_reform = low_pensions
 		social_reform = low_health_care 
-		social_reform = subsidised_higher_education
-		social_reform = social_abuse_protection
+		social_reform = competent_public_education
+		social_reform = low_public_housing
 		
 		#Drain money from the Chinese pops
 		any_pop = {
@@ -1218,14 +1218,14 @@ country_event = {
 		ruling_party_ideology = conservative
 		
 		#Authoritarian reforms
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = limited_meetings
 		political_reform = politicised_service
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = minorities_oppression
 		political_reform = ruling_party_opinion
 		
-		social_reform = security_clearance_for_gov_services
+		social_reform = good_security
 		
 		any_pop = {
 			limit = {
@@ -1886,12 +1886,12 @@ country_event = {
 		add_country_modifier = { name = leekuanyew duration = 9125 }
 		
 		#Enact authoritarian reforms
-		political_reform = universal_voting
-		political_reform = open_opinion
-		political_reform = firewall_publishing
+		political_reform = free_voting
+		political_reform = semi_democratic_state_opinion
+		political_reform = censored_publishing
 		political_reform = limited_meetings
 		political_reform = state_controlled_unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = professional_service
 		political_reform = promoted_immigration
 		political_reform = minorities_equal_rights

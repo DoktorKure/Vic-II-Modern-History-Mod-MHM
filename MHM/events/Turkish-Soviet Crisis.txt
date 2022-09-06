@@ -12,7 +12,7 @@ country_event = { # Pressure on Turkey
 		NOT = { has_global_flag = 1950_start_date_flag }
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		

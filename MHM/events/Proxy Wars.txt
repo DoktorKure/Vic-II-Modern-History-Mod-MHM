@@ -196,7 +196,7 @@ country_event = {
 		
 		#Communists
 		random_owned = { 
-			limit = { owner = { FROM = { government = proletarian_dictatorship } } }
+			limit = { owner = { FROM = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } }
 			owner = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist }
 		}
 
@@ -306,7 +306,7 @@ country_event = {
 		
 		#Communists
 		random_owned = { 
-			limit = { owner = { FROM = { government = proletarian_dictatorship } } }
+			limit = { owner = { FROM = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } }
 			owner = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist }
 		}
 
@@ -521,8 +521,8 @@ country_event = {
 				AND = { government = socialist_democracy THIS = { government = socialist_democracy } }
 				AND = { government = absolute_monarchy THIS = { government = absolute_monarchy } }
 				AND = { government = theocracy THIS = { government = theocracy } }
-				AND = { government = populist_dictatorship THIS = { government = populist_dictatorship } }
 				AND = { government = nationalist_dictatorship THIS = { government = nationalist_dictatorship } }
+				AND = { government = sectarian_dictatorship THIS = { government = sectarian_dictatorship } }
 			}
 		}
 	
@@ -545,8 +545,8 @@ country_event = {
 					AND = { government = socialist_democracy THIS = { government = socialist_democracy } }
 					AND = { government = absolute_monarchy THIS = { government = absolute_monarchy } }
 					AND = { government = theocracy THIS = { government = theocracy } }
-					AND = { government = populist_dictatorship THIS = { government = populist_dictatorship } }
 					AND = { government = nationalist_dictatorship THIS = { government = nationalist_dictatorship } }
+					AND = { government = sectarian_dictatorship THIS = { government = sectarian_dictatorship } }
 				}
 			}
 			annex_to = THIS

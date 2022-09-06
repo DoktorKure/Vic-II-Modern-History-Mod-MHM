@@ -3,7 +3,7 @@ primary_culture = portuguese
 culture = white_portuguese
 culture = chinese_macanese
 religion = secularism
-government = populist_dictatorship
+government = nationalist_dictatorship
 plurality = 8.0
 nationalvalue = nv_order
 literacy = 0.13
@@ -29,22 +29,22 @@ immigration_policy = quota_immigration
 civil_service = politicised_service
 political_parties = parties_not_allowed
 conscription_policy = two_year_draft
-publishing_rights = censored_publishing
+publishing_rights = state_publishing
 union_rights = no_trade_unions
 voting_system = jefferson_method
 vote_franschise = none_voting
 public_meetings = no_meetings penal_system = capital_punishment
 # Social Reforms
-safety_regulations = some_regulations
+safety_regulations = no_safety
 pensions = no_pensions
-education = self_financed_education
+education = private_education
 health_care = no_health_care
-security_reform = police
+security_reform = basic_security
 child_care = no_child_care
 unemployment_subsidies = no_subsidies
 pollution = no_controls
-wage_and_work_hours = unregulated_hours
-social_service_reform = no_social_service
+wage_reform = unregulated_hours
+public_housing_reform = no_public_housing
 # Technologies
 post_war_radar = 1
 infantry = 1
@@ -98,28 +98,28 @@ oob = "/POR_oob.txt"
 		communist = 5
 		}
 	# Political Reforms
-	political_opinions = regulated_opinion
+	political_opinions = appointed_opinion
 	minorities_reform = minorities_equal_rights
 	immigration_policy = naturalization
 	civil_service = elitist_service
-	political_parties = parties_allowed
+	political_parties = parties_fair
 	conscription_policy = no_draft
-	publishing_rights = firewall_publishing
+	publishing_rights = censored_publishing
 	union_rights = no_trade_unions
 	voting_system = jefferson_method
-	vote_franschise = universal_voting
+	vote_franschise = free_voting
 	public_meetings = free_meetings penal_system = capital_punishment
 	# Social Reforms
-	safety_regulations = some_regulations
+	safety_regulations = no_safety
 	pensions = no_pensions
-	education = self_financed_education
+	education = private_education
 	health_care = no_health_care
-	security_reform = police
+	security_reform = basic_security
 	child_care = no_child_care
 	unemployment_subsidies = no_subsidies
 	pollution = no_controls
-	wage_and_work_hours = unregulated_hours
-	social_service_reform = no_social_service
+	wage_reform = unregulated_hours
+	public_housing_reform = no_public_housing
 	# Technologies
 	post_war_radar = 1
 	strategic_bomber = 1

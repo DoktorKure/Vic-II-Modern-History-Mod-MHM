@@ -31,13 +31,13 @@ country_event = {
 		#Historic constitution based on the USSR's own 1936 constitution
 		government = proletarian_dictatorship
        
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = none_voting #No voting
 		political_reform = limited_meetings
 		political_reform = politicised_service #Politicized
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = open_immigration
 		political_reform = no_draft #no_draft
 		political_reform = minorities_affirmative_action
@@ -87,7 +87,7 @@ country_event = {
 			NOT = { has_global_flag = blocsenabled }
 		}
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		is_vassal = no
 		war = no
@@ -177,7 +177,7 @@ country_event = {
 		tag = ALB
 		year = 1985 
 		NOT = { year = 1990 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 	}
 
 	mean_time_to_happen = { months = 4 }
@@ -200,12 +200,12 @@ country_event = {
 
 	trigger = {
 		tag = ALB
-		government = proletarian_dictatorship
-		RUS = { is_our_vassal = ALB government = proletarian_dictatorship has_country_flag = nikita_khrushchev }
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+		RUS = { is_our_vassal = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } has_country_flag = nikita_khrushchev }
 		war = no
 		year = 1960
 		NOT = { year = 1990 }
-		CHI = { is_greater_power = yes government = proletarian_dictatorship }
+		CHI = { is_greater_power = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		has_global_flag = blocsenabled
 	}
 
@@ -244,7 +244,7 @@ country_event = {
 		tag = ALB
 		year = 1976
 		NOT = { year = 1990 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 	}
 
 	mean_time_to_happen = { months = 11 }

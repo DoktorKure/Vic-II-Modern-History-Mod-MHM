@@ -14,7 +14,7 @@ country_event = {
 		has_global_flag = arab_spring
 		NOT = { year = 2023 }
 		
-		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+		OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship }
 		is_vassal = no
 		war = no
 		
@@ -208,7 +208,7 @@ country_event = {
 		has_global_flag = arab_spring
 		NOT = { year = 2024 }
 		
-		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+		OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship }
 		is_vassal = no
 		
 		#Civil War ongoing
@@ -237,7 +237,7 @@ country_event = {
 		#Initialise ISIS
 		907 = { add_core = ISI }
 		
-		release = ISI
+		secede_province = ISI
 		ISI = {
 			government = theocracy
 			country_event = 800050
@@ -296,7 +296,7 @@ country_event = {
 		any_country = {
 			limit = { 
 				exists = yes 
-				NOT = { OR = { publishing_rights = censored_publishing publishing_rights = firewall_publishing } } 
+				NOT = { OR = { publishing_rights = state_publishing publishing_rights = censored_publishing } } 
 			}
 			any_pop = { 
 				limit = { strata = poor has_pop_religion = sunni } 
@@ -325,7 +325,7 @@ country_event = {
 		tag = SYR
 		has_global_flag = syrian_civil_war
 		
-		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship }
+		OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship }
 		is_vassal = no
 		war = no
 		
@@ -486,7 +486,7 @@ country_event = {
 		
 		ai_chance = { 
 			factor = 0.9 
-			modifier = { factor = 0 OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } }
+			modifier = { factor = 0 OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } }
 		}
 		
 	}

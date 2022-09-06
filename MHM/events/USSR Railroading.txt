@@ -45,7 +45,7 @@ country_event = {
 		year = 1989
 		NOT = { year = 2000 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		

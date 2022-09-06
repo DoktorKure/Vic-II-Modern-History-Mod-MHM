@@ -114,7 +114,7 @@ modifier = { factor = 0.50 has_country_modifier = massive_societal_corruption }
 	name = "Embrace it?"
 prestige = -25
 add_country_modifier = { name = mnc_corrupt_leadership duration = -1 }
-political_reform = regulated_opinion
+political_reform = appointed_opinion
 				}
 	}
 
@@ -292,8 +292,8 @@ modifier = { factor = 0.75 has_country_modifier = mnchigh }
 prestige = -10
 add_country_modifier = { name = unfair_lobbying duration = 3650 }
 
-political_reform = registered_voting
-political_reform = parties_only_nominated 
+political_reform = harassed_voting
+political_reform = parties_restricted 
 
 ai_chance = { factor = 0.99 }
 				}
@@ -333,7 +333,7 @@ modifier = { factor = 0.75 has_country_modifier = mnchigh }
 prestige = -10
 add_country_modifier = { name = unfair_privileges duration = 3650 }
 
-social_reform = some_regulations
+social_reform = no_safety
 
 ai_chance = { factor = 0.99 }
 				}

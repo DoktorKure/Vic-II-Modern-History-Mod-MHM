@@ -13,7 +13,7 @@ country_event = { # The Friendship Pipeline?
 		year = 1993
 		NOT = { year 2050 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		
@@ -28,7 +28,7 @@ country_event = { # The Friendship Pipeline?
 		}
 		
 		CHI = { 
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_greater_power = yes
 			war = no
 			
@@ -112,6 +112,7 @@ country_event = { # 100 years of the October Revolution
 		
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 	}
@@ -171,6 +172,7 @@ country_event = { # 100 years of the October Revolution
 			limit = {
 				OR = {
 					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
 					government = socialist_democracy
 				}
 			}
@@ -208,6 +210,7 @@ country_event = { # 100 years of the Soviet Union
 		
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 	}
@@ -283,6 +286,7 @@ country_event = { # 100 years of the Great Patriotic War
 		
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 	}
@@ -352,6 +356,7 @@ country_event = { # Referendum on the Sovereignty of Tartistan
 		
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 		is_vassal = no
@@ -607,6 +612,7 @@ country_event = { # Access to the Chinese economy - RUS
 		
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 		is_greater_power = yes
@@ -633,6 +639,7 @@ country_event = { # Access to the Chinese economy - RUS
 		CHI = { 
 			OR = {
 				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
 				government = socialist_democracy
 			}
 			is_greater_power = yes 
@@ -774,6 +781,7 @@ country_event = { # Religious Policy in the USS
 		
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 		
@@ -922,6 +930,7 @@ country_event = { # Spreading socialism?
 		
 		OR = {
 			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 			government = socialist_democracy
 		}
 		is_greater_power = yes

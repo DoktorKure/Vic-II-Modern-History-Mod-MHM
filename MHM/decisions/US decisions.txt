@@ -15,8 +15,8 @@ political_decisions = {
 				upper_house = { ideology = communist_social value = 0.66 }
 				upper_house = { ideology = liberal value = 0.66 }
 				AND = { government = presidential_dictatorship ruling_party_ideology = socialist }
-				AND = { government = populist_dictatorship ruling_party_ideology = socialist }
 				AND = { government = nationalist_dictatorship ruling_party_ideology = socialist }
+				AND = { government = sectarian_dictatorship ruling_party_ideology = socialist }
 				government = absolute_monarchy
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
@@ -83,8 +83,8 @@ political_decisions = {
 				upper_house = { ideology = populist value = 0.66 }
 				upper_house = { ideology = traditionalist value = 0.66 }
 				AND = { government = presidential_dictatorship NOT = { ruling_party_ideology = socialist } }
-				AND = { government = populist_dictatorship NOT = { ruling_party_ideology = socialist } }
 				AND = { government = nationalist_dictatorship NOT = { ruling_party_ideology = socialist } }
+				AND = { government = sectarian_dictatorship NOT = { ruling_party_ideology = socialist } }
 				government = theocracy
 			}
 		}

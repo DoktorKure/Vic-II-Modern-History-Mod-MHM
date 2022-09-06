@@ -707,7 +707,7 @@ country_event = {
 		
 		#USSR is unhappy
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			relation = { who = THIS value = -50 }
 		}
 		

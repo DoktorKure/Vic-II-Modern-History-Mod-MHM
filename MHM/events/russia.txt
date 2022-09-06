@@ -588,7 +588,7 @@ country_event = {
 		add_country_modifier = { name = changecentral duration = 1825 }
 	
 		#Historic, the coup fails
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = politicised_service #politicized, representative of consolidation of power
 		political_reform = state_controlled_unions 
 		political_reform = limited_meetings
@@ -646,13 +646,13 @@ country_event = {
 		government = socialist_democracy
 		ruling_party_ideology = communist_social
 		
-		political_reform = universal_voting
-		political_reform = open_opinion
+		political_reform = free_voting
+		political_reform = semi_democratic_state_opinion
 		political_reform = free_meetings
 		political_reform = professional_service
-		political_reform = unregulated_publishing
+		political_reform = free_publishing
 		political_reform = free_trade_unions #all unions
-		political_reform = parties_promote_democratic
+		political_reform = parties_short
 		political_reform = open_immigration
 		political_reform = no_draft #no_draft
 		political_reform = minorities_equal_rights
@@ -778,11 +778,11 @@ country_event = {
 		money = 100000
 		
 		#Undermine democracy
-		political_reform = registered_voting
-		political_reform = regulated_opinion
+		political_reform = harassed_voting
+		political_reform = appointed_opinion
 		political_reform = politicised_service
 		political_reform = state_controlled_unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		
 		#Rich men are happy
 		any_pop = {
@@ -878,7 +878,7 @@ country_event = {
 		money = 100000
 		
 		#Undermine democracy
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = ruling_party_opinion
 		
 		#Rich men are happy
@@ -975,8 +975,8 @@ country_event = {
 		
 		government = presidential_dictatorship
 		political_reform = none_voting
-		political_reform = regulated_opinion
-		political_reform = censored_publishing
+		political_reform = appointed_opinion
+		political_reform = state_publishing
 		political_reform = no_trade_unions
 		political_reform = parties_not_allowed
 		political_reform = nobody_gets_out

@@ -11,7 +11,7 @@ country_event = {
 		exists = GUI
 		any_neighbor_country = { tag = GUI }
 		war = no
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		is_vassal = no
 	}
 

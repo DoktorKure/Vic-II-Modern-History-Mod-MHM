@@ -63,8 +63,8 @@ DAI = { government = theocracy }
 
 AND = { 
 
-SVI = { OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship } }
-DAI = { OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship } } 
+SVI = { OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship } }
+DAI = { OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship } } 
 
 }
 

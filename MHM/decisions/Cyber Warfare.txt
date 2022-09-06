@@ -29,7 +29,7 @@ political_decisions = {
 		potential = {
 			has_country_modifier = spy_agency
 
-			OR = { government = presidential_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = populist_dictatorship government = nationalist_dictatorship government = theocracy government = absolute_monarchy }
+			OR = { government = presidential_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = nationalist_dictatorship government = sectarian_dictatorship government = theocracy government = absolute_monarchy }
 
 			social_networking = 1
 
@@ -67,7 +67,7 @@ political_decisions = {
 
 		allow = {
 
-			NOT = { OR = { government = presidential_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = populist_dictatorship government = nationalist_dictatorship government = theocracy government = absolute_monarchy } }
+			NOT = { OR = { government = presidential_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = nationalist_dictatorship government = sectarian_dictatorship government = theocracy government = absolute_monarchy } }
 
 			war = no
 

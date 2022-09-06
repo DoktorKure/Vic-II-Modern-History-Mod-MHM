@@ -38,8 +38,8 @@ political_decisions = {
 			NOT = {
 				OR = {
 					government = presidential_dictatorship
-					government = populist_dictatorship
 					government = nationalist_dictatorship
+					government = sectarian_dictatorship
 					government = theocracy
 					government = proletarian_dictatorship
 					government = proletarian_dictatorship1
@@ -96,8 +96,8 @@ political_decisions = {
 				
 				#Dictatorships are not neutral
 				government = presidential_dictatorship
-				government = populist_dictatorship
 				government = nationalist_dictatorship
+				government = sectarian_dictatorship
 				government = theocracy
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1

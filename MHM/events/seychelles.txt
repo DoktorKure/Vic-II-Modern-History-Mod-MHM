@@ -105,7 +105,7 @@ country_event = {
 	option = {
 		name = "Long live the Revolution! Long live Rene!"
 		any_pop = { militancy = 5 consciousness = 1 }
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		country_event = 800050
 		ruling_party_ideology = socialist
 		
@@ -137,7 +137,7 @@ country_event = {
 		year = 1981
 		NOT = { year = 1990 }
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		ruling_party_ideology = socialist
 		
 		is_vassal = no
@@ -180,7 +180,7 @@ country_event = {
 		tag = SEY
 		year = 1993
 		
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		ruling_party_ideology = socialist
 		
 		is_vassal = no

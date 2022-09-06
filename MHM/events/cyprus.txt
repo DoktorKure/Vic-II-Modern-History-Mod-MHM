@@ -57,7 +57,7 @@ country_event = {
 		
 		release = CYP
 		CYP = {
-			government = populist_dictatorship
+			government = nationalist_dictatorship
 			country_event = 800050
 			ruling_party_ideology = nationalist
 		}
@@ -166,7 +166,7 @@ country_event = {
 		#Option for Turkey to go to war
 		TUR = { country_event = 8004111 } 
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		country_event = 800050
 		ruling_party_ideology = nationalist
 	
@@ -370,7 +370,7 @@ country_event = {
 		TUR = { create_vassal = NCY }
 
 		NCY = { 
-			government = populist_dictatorship
+			government = nationalist_dictatorship
 			country_event = 800050 
 			ruling_party_ideology = nationalist
 		}

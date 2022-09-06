@@ -8,7 +8,7 @@ market_communist_ngo_focus_short;§YMarket Socialist§! NGOs;;;;;;;;;;;;;x,,,,
 centrist_ngo_focus;Support §YCentrist§!-oriented NGOs!;;;;;;;;;;;;;x,,,,
 centrist_ngo_focus_short;§YCentrist§! NGOs;;;;;;;;;;;;;x,,,,
 naturalization_l;Naturalisation;;;;;;;;x;;;;;;;;;;;;;
-public_education_l;Public Education;;;;;;;;x;;;;;;;;;;;;;
+weak_public_education_l;Public Education;;;;;;;;x;;;;;;;;;;;;;
 no_meetings_l;No Meetings;;;;;;;;x;;;;;;;;;;;;;
 limited_meetings_l;Regulated Meetings;;;;;;;;x;;;;;;;;;;;;;
 free_meetings_l;Unrestricted Meetings;;;;;;;;x;;;;;;;;;;;;;
@@ -89,8 +89,8 @@ liberal_stronghold_desc;This region is considered a stronghold of liberal suppor
 liberal_uh;Liberals want to enact further political reforms, but will also support social reform under conditions of high militancy.;Les libéraux veulent davantage de réformes politiques.;Liberale sind an zusätzlichen Politikreformen interessiert.;;Los liberales abogan por más reformas políticas, pero apoyarán también reformas sociales bajo condiciones de elevada militancia.;;;;;;;;;x;;;;;;;;;;;;;;;;
 nationalist;Nationalist;;;;;;;;;;;;;x,,,,
 nationalist_agitation;Nationalist Agitation;;;;;;;;;;;;x,;
-nationalist_dictatorship;Sectarian Regime;;;;;;;;;;;;;x,,,,
-nationalist_dictatorship_ruler;President;Président;Präsident;;Presidente;;;;;;;;;x;;;;;;;;;;;;;;;;
+sectarian_dictatorship;Sectarian Regime;;;;;;;;;;;;;x,,,,
+sectarian_dictatorship_ruler;President;Président;Präsident;;Presidente;;;;;;;;;x;;;;;;;;;;;;;;;;
 nationalist_focus;Party loyalty towards §YNationalists§!;;;;;;;;;;;;;x,,,,
 nationalist_focus_short;§YNationalist§! loyalty;;;;;;;;;;;;;x,,,,
 nationalist_rebels_army;$INDEP$ Nationalists;$INDEP$ - Nationalistes;$INDEP$-Nationalisten;;Nacionalistas de $INDEP$;;;;;;;;;x;;;;;;;;;;;;;;;;
@@ -103,8 +103,8 @@ nationalist_uh;Nationalists protect the rights of the primary culture, they will
 nogovernment;nogovernment;nogovernment;nogovernment;brak budynków;nogovernment;nobuilding;nobuilding;bez staveb;;;;;;x;;;;;;;;;;;;;;;;
 nogovernment_ruler;nogovernment_ruler;nogovernment_ruler;nogovernment_ruler;brakrz¹du;nogovernment_ruler;nogovernment;nogovernment;bez vlády;;;;;;x;;;;;;;;;;;;;;;;
 populist;Populists;;;;;;;;;;;;;x,,,,
-populist_dictatorship;Nationalist Dictatorship;;;;;;;;;;;;;x,,,,
-populist_dictatorship_ruler;Generalissimo;;;;;;;;;;;;;x,,,,
+nationalist_dictatorship;Nationalist Dictatorship;;;;;;;;;;;;;x,,,,
+nationalist_dictatorship_ruler;Generalissimo;;;;;;;;;;;;;x,,,,
 populist_focus;Party loyalty towards §YPopulists§!;;;;;;;;;;;;;x,,,,
 populist_focus_short;§YPopulist§! loyalty;;;;;;;;;;;;;x,,,,
 populist_rebels_army;$COUNTRY_ADJ$ Citizen Guard;;;;;;;;;;;;;x,,,,

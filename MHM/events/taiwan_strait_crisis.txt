@@ -13,8 +13,8 @@ country_event = {
     	has_global_flag = CHI_won_civil_war
 	war = no
 	is_vassal = no
-	government = proletarian_dictatorship
-KMT = { owns = 3342 is_vassal = no NOT = { government = proletarian_dictatorship } }
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+KMT = { owns = 3342 is_vassal = no NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
   }
 
   mean_time_to_happen = { months = 8 }
@@ -197,8 +197,8 @@ country_event = {
     	has_global_flag = CHI_won_civil_war
 	war = no
 	is_vassal = no
-	government = proletarian_dictatorship
-KMT = { owns = 3342 is_vassal = no NOT = { government = proletarian_dictatorship } }
+	OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+KMT = { owns = 3342 is_vassal = no NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
 	}
 
   mean_time_to_happen = { months = 8 }

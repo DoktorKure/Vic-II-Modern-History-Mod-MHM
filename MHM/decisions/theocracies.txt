@@ -79,7 +79,7 @@ any_country = { limit = { exists = yes war = no NOT = { truce_with = THIS } any_
 				# CBs against sponsor; democratically elected communists get both kinds
 				random_owned = { limit = { owner = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } } } owner = { casus_belli = { target = THIS type = install_communist_gov_cb months = 36 } } }
 				random_owned = { limit = { owner = { OR = { government = democracy government = hms_government government = hms_government1 government = socialist_democracy } } } owner = { casus_belli = { target = THIS type = install_democracy months = 36 } } }
-				#random_owned = { limit = { owner = { OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } } } owner = { casus_belli = { target = THIS type = install_authoritarian_regime months = 36 } } }
+				#random_owned = { limit = { owner = { OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } } } owner = { casus_belli = { target = THIS type = install_authoritarian_regime months = 36 } } }
 				#random_owned = { limit = { owner = { government = theocracy } } owner = { casus_belli = { target = THIS type = install_theocratic_regime months = 36 } } }
 			}
 			any_pop = {

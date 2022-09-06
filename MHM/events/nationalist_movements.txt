@@ -1,4 +1,4 @@
-province_event = { #Boy shot by police!
+province_event = { #Boy shot by basic_security!
 	id = 15000
 	title = "EVT_15000_NAME"
 	desc = "EVT_15000_DESC"
@@ -546,7 +546,7 @@ province_event = { # Underground Newspaper
 		owner = {
 			NOT = { 
 				citizenship_policy = full_citizenship
-				publishing_rights = unregulated_publishing
+				publishing_rights = free_publishing
 			}
 		}
 		controlled_by = owner
@@ -1150,7 +1150,7 @@ province_event = { #Annals of $PROVINCECULTURE$ History
 		owner = {
 			civilized = yes
 			NOT = {
-				publishing_rights = unregulated_publishing
+				publishing_rights = free_publishing
 			}
 		}
 		controlled_by = owner

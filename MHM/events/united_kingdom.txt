@@ -91,14 +91,14 @@ country_event = {
 		prestige_factor = 0.025
 
 		#Add social reforms
-		social_reform = eight_work_hours
-		social_reform = security_service
-		social_reform = balanced_regulations
-		social_reform = minimal_subsidies
+		social_reform = trinket_wage
+		social_reform = weak_security
+		social_reform = trinket_safety
+		social_reform = trinket_subsidies
 		social_reform = low_pensions
 		social_reform = trinket_health_care
-		social_reform = public_education
-		social_reform = social_services
+		social_reform = weak_public_education
+		social_reform = minimal_public_housing
 		
 		#Right wing fury
 		any_pop = { 
@@ -502,7 +502,7 @@ country_event = {
 		
 		#More conservative policies
 		political_reform = state_controlled_unions
-		social_reform = eight_work_hours
+		social_reform = trinket_wage
 		
 		all_core = {
 			any_pop = {
@@ -557,7 +557,7 @@ country_event = {
 		
 		#More socialist policies
 		political_reform = restricted_unions
-		social_reform = paid_vacation_hours
+		social_reform = low_minimum_wage
 		
 		all_core = {
 			any_pop = {
@@ -647,7 +647,7 @@ country_event = {
 		
 		#More socialist policies
 		political_reform = free_trade_unions
-		social_reform = six_hours
+		social_reform = good_minimum_wage
 		
 		#More Socialist support
 		all_core = {
@@ -741,8 +741,8 @@ country_event = {
 	
 		#More conservative policies
 		political_reform = state_controlled_unions
-		social_reform = eight_work_hours
-		social_reform = minimal_subsidies
+		social_reform = trinket_wage
+		social_reform = trinket_subsidies
 	
 		#More Socialist support
 		all_core = {
@@ -778,7 +778,7 @@ country_event = {
 		
 		#More socialist policies
 		political_reform = free_trade_unions
-		social_reform = six_hours
+		social_reform = good_minimum_wage
 
 		#Conservative and nationlists are pissed
 		all_core = {

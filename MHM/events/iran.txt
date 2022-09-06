@@ -32,7 +32,7 @@ country_event = {
 
 		set_country_flag = mohammed_mossadegh_in_power
 
-		any_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.2 } } }
+		any_state = { any_pop = { dominant_issue = { value = parties_fair factor = 0.2 } } }
 		any_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.05 } } }
 
 		ai_chance = { factor = 0.8 }
@@ -300,7 +300,7 @@ country_event = {
 		government = theocracy 
 		
 		#Semi-democratic system
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		
 		PER = { nationalvalue = nv_islamic }
 		
@@ -495,7 +495,7 @@ country_event = {
 		#Requires Ba'athist Iraq
 		IRQ = { 
 			exists = yes 
-			OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } 
+			OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } 
 			is_vassal = no
 			ruling_party_ideology = socialist 
 		}
@@ -560,7 +560,7 @@ country_event = {
 		has_global_flag = iran_iraq_war_flag
 		IRQ = { 
 			exists = yes 
-			OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } 
+			OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } 
 			is_vassal = no
 			ruling_party_ideology = socialist 
 		}
@@ -609,7 +609,7 @@ country_event = {
 		ruling_party_ideology = big_tent
 		
 		#Strengthen democracy
-		political_reform = open_opinion
+		political_reform = semi_democratic_state_opinion
 		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		
@@ -691,7 +691,7 @@ country_event = {
 		ruling_party_ideology = big_tent
 		
 		#Strengthen democracy
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		

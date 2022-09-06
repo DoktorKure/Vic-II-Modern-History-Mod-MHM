@@ -12,7 +12,7 @@ country_event = { # Unrest in Greece
 		OR = { tag = UGR tag = GRE }
 		year = 1985
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = { is_vassal = no vassal_of = RUS }
 		war = no
 		
@@ -117,7 +117,7 @@ country_event = { # Declaration of Independence of South Macedonia
 		OR = { tag = UGR tag = GRE }
 		year = 1989
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no 
 		
@@ -195,7 +195,7 @@ country_event = { # Abandon our principles?
 		OR = { tag = UGR tag = GRE }
 		year = 1986
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no 
 		is_vassal = no
 		
@@ -289,7 +289,7 @@ country_event = { # Beginning of protests
 		year = 1990
 		NOT = { year = 1996 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -374,7 +374,7 @@ country_event = { # $YEAR$ Greek Revolution
 		year = 1993
 		NOT = { year = 1999 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -471,7 +471,7 @@ country_event = { # Agitation at the Capital
 		year = 1985
 		NOT = { year = 1996 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -563,7 +563,7 @@ country_event = { # The Greek Spring
 		year = 1988
 		NOT = { year = 1996 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -730,7 +730,7 @@ country_event = { # The Reformers' Coup
 		year = 1986
 		NOT = { year = 1996 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		

@@ -142,8 +142,8 @@ political_decisions = {
 				}
 
 				AND = {
-					SKO = { OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship } }
-					NKO = { OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship } }
+					SKO = { OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship } }
+					NKO = { OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship } }
 				}
 
 			}
@@ -272,7 +272,7 @@ political_decisions = {
 			NOT = { has_global_flag = songjin_kimchaek }
 		}
 		allow = {
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no
 			war = no
 		

@@ -13,7 +13,7 @@ country_event = {
 		NOT = { has_global_flag = 1950_start_date_flag }
 		NOT = { year = 1992 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		
 		TIB = { exists = yes is_vassal = no }
@@ -171,7 +171,7 @@ country_event = {
 		tag = CHI
 		year = 1959
 		NOT = { year = 1990 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		is_our_vassal = TIB # Vassalized from the 17-point agreement
 	}

@@ -14,7 +14,7 @@ country_event = {
 		year = 1986
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes 
 		war = no
 		
@@ -168,7 +168,7 @@ country_event = {
 		year = 1986
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes 
 		war = no
 		
@@ -544,7 +544,7 @@ country_event = {
 		year = 1987
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		
 		war = no
 		

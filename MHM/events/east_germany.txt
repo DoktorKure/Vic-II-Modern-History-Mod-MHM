@@ -58,12 +58,12 @@ country_event = {
 		government = proletarian_dictatorship
 		
 		political_reform = none_voting #No voting
-		political_reform = open_opinion #Two Per State
+		political_reform = semi_democratic_state_opinion #Two Per State
 		political_reform = limited_meetings
 		political_reform = elitist_service #Elitist
-		political_reform = firewall_publishing #censored_press
+		political_reform = censored_publishing #censored_press
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated #Rigged Campaigning
+		political_reform = parties_restricted #Rigged Campaigning
 		political_reform = open_immigration
 		political_reform = no_draft #no_draft
 		political_reform = minorities_equal_rights
@@ -98,14 +98,14 @@ country_event = {
 		year = 1950
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		vassal_of = RUS
 
 		#Liberal regime
 		NOT = { political_opinions = ruling_party_opinion }
-		NOT = { political_opinions = regulated_opinion }
-		NOT = { political_opinions = open_opinion }
+		NOT = { political_opinions = appointed_opinion }
+		NOT = { political_opinions = semi_democratic_state_opinion }
 	}
 
 	mean_time_to_happen = { months = 6 }
@@ -117,7 +117,7 @@ country_event = {
 		ruling_party_ideology = communist
 		
 		political_reform = politicised_service #Politicized
-		political_reform = open_opinion
+		political_reform = semi_democratic_state_opinion
 		
 		ai_chance = {
 			factor = 0.95
@@ -150,13 +150,13 @@ country_event = {
 		year = 1968
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		vassal_of = RUS
 	
 		#Liberal regime
 		NOT = { political_opinions = ruling_party_opinion }
-		NOT = { political_opinions = regulated_opinion }
+		NOT = { political_opinions = appointed_opinion }
 	}
 
 	mean_time_to_happen = { months = 2 }
@@ -166,7 +166,7 @@ country_event = {
 		relation = { who = RUS value = 150 }
   
 		#UH
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		
 		#Closed border
 		political_reform = nobody_gets_out
@@ -175,7 +175,7 @@ country_event = {
 		political_reform = two_year_draft
 		
 		#Security state
-		social_reform = preemptive_security_actions
+		social_reform = excellent_security
 
 		ai_chance = {
 			factor = 0.95
@@ -219,7 +219,7 @@ country_event = {
 		OR = { year = 1950 has_country_modifier = spy_agency }
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		
 		money = 110000
@@ -265,7 +265,7 @@ country_event = {
 		year = 1953
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -395,7 +395,7 @@ country_event = {
 		year = 1963
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -445,7 +445,7 @@ country_event = {
 		year = 1968
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -500,14 +500,14 @@ country_event = {
 		year = 1950
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
 		ruling_party_ideology = communist
 		
 		#Poland
-		POL = { exists = yes government = proletarian_dictatorship vassal_of = RUS }
+		POL = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } vassal_of = RUS }
 		
 		#Cold War ongoing
 		has_global_flag = blocsenabled
@@ -539,7 +539,7 @@ country_event = {
 		year = 1958
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -592,7 +592,7 @@ country_event = {
 		year = 1989
 		has_global_flag = autumn_of_nations
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = { vassal_of = RUS is_vassal = no } 
 		war = no
 		
@@ -678,7 +678,7 @@ country_event = {
 		year = 1989
 		has_global_flag = autumn_of_nations
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = { vassal_of = RUS is_vassal = no } 
 		war = no
 		

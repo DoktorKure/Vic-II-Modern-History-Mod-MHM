@@ -866,6 +866,7 @@ RWA = { add_country_modifier = { name = nationalist_agitation duration = 730 } }
 }
 
 #Soviet Name Changes
+set_global_flag = breakup_of_ussr
 set_global_flag = stalinabad_dushanbe
 set_global_flag = stalino_donetsk
 set_global_flag = staliniri_tskhinvali

@@ -268,7 +268,7 @@ country_event = {
 	trigger = {
 has_country_modifier = chemical_nation
 NOT = { has_country_modifier = chemical_sanctions }
-OR = { government = theocracy government = populist_dictatorship government = nationalist_dictatorship government = presidential_dictatorship  }
+OR = { government = theocracy government = nationalist_dictatorship government = sectarian_dictatorship government = presidential_dictatorship  }
 war = no
 in_sphere = THIS
 is_vassal = no

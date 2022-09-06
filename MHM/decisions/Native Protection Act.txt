@@ -155,7 +155,7 @@ has_pop_culture = zulu
 			war = no
 
 			NOT = { citizenship_policy = residency }
-			NOT = { government = nationalist_dictatorship }
+			NOT = { government = sectarian_dictatorship }
 
 			election = no
 

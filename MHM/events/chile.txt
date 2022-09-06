@@ -22,7 +22,7 @@ country_event = {
 	government = presidential_dictatorship
 	ruling_party_ideology = nationalist
 	country_event = 800050
-	any_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15 } } }
+	any_state = { any_pop = { dominant_issue = { value = parties_fair factor = 0.15 } } }
 	any_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.10 } } }
 	define_general = { name = "Augusto Pinochet" personality = energetic background = war_college }
 	ai_chance = { factor = 0.9 }
@@ -31,9 +31,9 @@ country_event = {
   option = {
     name = EVT_8003006_B
 	government = socialist_democracy
-	political_reform = universal_voting
-	political_reform = democratic_opinion
-	political_reform = parties_restrict_non_democratic
+	political_reform = free_voting
+	political_reform = popular_opinion
+	political_reform = parties_rigged
 	add_country_modifier = { name = revolution_chaos duration = 3650 }
 	badboy = 10
 	random_state = { any_pop = { dominant_issue = { value = moralism factor = 0.1 } } }

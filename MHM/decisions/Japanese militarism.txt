@@ -74,7 +74,7 @@ political_decisions = {
 		picture = "jap_claim_korea"
 		potential = {
 			tag = JAP
-			OR = { government = absolute_monarchy government = nationalist_dictatorship government = populist_dictatorship ruling_party_ideology = nationalist }
+			OR = { government = absolute_monarchy government = sectarian_dictatorship government = nationalist_dictatorship ruling_party_ideology = nationalist }
 			is_vassal = no
 			NOT = { has_country_flag = jap_claim_korea }
 		}
@@ -106,7 +106,7 @@ political_decisions = {
 		picture = "jap_claim_korea"
 		potential = {
 			tag = JAP
-			NOT = { OR = { government = absolute_monarchy government = nationalist_dictatorship government = populist_dictatorship ruling_party_ideology = nationalist } }
+			NOT = { OR = { government = absolute_monarchy government = sectarian_dictatorship government = nationalist_dictatorship ruling_party_ideology = nationalist } }
 			is_vassal = no
 			has_country_flag = jap_claim_korea
 		}
@@ -137,7 +137,7 @@ political_decisions = {
 		picture = "jap_claim_taiwan"
 		potential = {
 			tag = JAP
-			OR = { government = absolute_monarchy government = nationalist_dictatorship government = populist_dictatorship ruling_party_ideology = nationalist }
+			OR = { government = absolute_monarchy government = sectarian_dictatorship government = nationalist_dictatorship ruling_party_ideology = nationalist }
 			is_vassal = no
 			NOT = { has_country_flag = jap_claim_taiwan }
 		}
@@ -171,7 +171,7 @@ political_decisions = {
 		picture = "jap_claim_taiwan"
 		potential = {
 			tag = JAP
-			NOT = { OR = { government = absolute_monarchy government = nationalist_dictatorship government = populist_dictatorship ruling_party_ideology = nationalist } }
+			NOT = { OR = { government = absolute_monarchy government = sectarian_dictatorship government = nationalist_dictatorship ruling_party_ideology = nationalist } }
 			is_vassal = no
 			has_country_flag = jap_claim_taiwan
 		}

@@ -132,7 +132,7 @@ country_event = {
 		#Release the Tamil Tigers
 		release = TAE
 		TAE = { 
-			government = nationalist_dictatorship 
+			government = sectarian_dictatorship 
 			country_event = 800050 
 			ruling_party_ideology = nationalist 
 			relation = { who = HND value = 200 }
@@ -159,7 +159,7 @@ country_event = {
 		
 		release = TAE 
 		TAE = { 
-			government = populist_dictatorship 
+			government = nationalist_dictatorship 
 			country_event = 800050 
 			ruling_party_ideology = nationalist 
 		}

@@ -146,7 +146,7 @@ has_country_modifier = nepomedium
 
 modifier = {
 factor = 2
-OR = { government = theocracy government = populist_dictatorship government = nationalist_dictatorship government = presidential_dictatorship }
+OR = { government = theocracy government = nationalist_dictatorship government = sectarian_dictatorship government = presidential_dictatorship }
 }
 
 modifier = {

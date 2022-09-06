@@ -9,11 +9,11 @@ political_decisions = {
 
 		allow = {
 
-			wage_and_work_hours = six_hours
-			unemployment_subsidies = citizen_salary
+			wage_reform = good_minimum_wage
+			unemployment_subsidies = universal_subsidies
 			pensions = good_pensions
 			health_care = good_health_care
-			education = unlimited_education
+			education = excellent_public_education
 
 			OR = { market_communism = 1 average_consciousness = 6 }
 

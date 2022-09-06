@@ -12,7 +12,7 @@ country_event = {
 	year = 1947
 	GRE = { 
 		war = no 
-		NOT = { government = proletarian_dictatorship }
+		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 	}
 	NOT = { exists = UGR }
 	owns = 846
@@ -170,7 +170,7 @@ country_event = {
 	option = {
 		name = "Remove all traces of the King"
 		prestige = -50
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		remove_country_modifier = regency_government
 		ai_chance = { factor = 0.8 }
 	}
@@ -197,7 +197,7 @@ country_event = {
     	tag = GRE
 		year = 1974 NOT = { year = 1990 }
 		
-		OR = { government = populist_dictatorship government = absolute_monarchy }
+		OR = { government = nationalist_dictatorship government = absolute_monarchy }
 		is_vassal = no
 		war = no
 		
@@ -246,7 +246,7 @@ country_event = {
 	trigger = {
     	tag = GRE
 		year = 1974 NOT = { year = 1990 }
-		OR = { government = populist_dictatorship government = absolute_monarchy }
+		OR = { government = nationalist_dictatorship government = absolute_monarchy }
 		is_vassal = no
 		war = no
 		

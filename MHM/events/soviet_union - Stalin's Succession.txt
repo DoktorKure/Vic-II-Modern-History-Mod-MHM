@@ -13,7 +13,7 @@ country_event = { # Liberalization under Beria
 		year = 1953
 		NOT = { year = 1955 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -51,7 +51,7 @@ country_event = { # East German Uprising of 1953 - DDR
 		year = 1953
 		NOT = { year = 1955 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -146,7 +146,7 @@ country_event = { # East German Uprising of 1953 - RUS
 			ruling_party_ideology = communist_social
 			political_reform = state_controlled_unions
 			political_reform = limited_meetings
-			social_reform = eight_work_hours
+			social_reform = trinket_wage
 		}
 		
 		ai_chance = { factor = 0.1 }
@@ -166,7 +166,7 @@ country_event = { # Liquidation of Beria
 		year = 1953
 		NOT = { year = 1956 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 
@@ -213,7 +213,7 @@ country_event = { # Beria is Eliminated
 		add_country_modifier = { name = economic_boom duration = 1825 }
 
 		political_reform = minorities_equal_rights
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		political_reform = limited_meetings
 		
 		ai_chance = { factor = 0.9 }
@@ -244,7 +244,7 @@ country_event = { # Unification of Germany
 		year = 1954
 		NOT = { year = 1957 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -297,7 +297,7 @@ country_event = { # The Conservatives are organizing
 		year = 1955
 		NOT = { year = 1958 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -353,7 +353,7 @@ country_event = { # New Civil War
 		year = 1956
 		NOT = { year = 1959 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -511,7 +511,9 @@ country_event = { # Who Support ?
 	option = {
 		name = "Let's fight for our Independence!"
 		
-		government = proletarian_dictatorship
+		government = democracy
+		ruling_party_ideology = nationalist
+		country_event = 800054
 		
 		#Start war of independence
 		RUS = { release_vassal = THIS }
@@ -543,7 +545,7 @@ country_event = { # End of the Civil War - Beria
 		tag = XEA
 		has_global_flag = soviet_civil_war_happening
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -578,7 +580,7 @@ country_event = { # End of the Civil War - Conservators
 		tag = RUS
 		has_global_flag = soviet_civil_war_happening
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -630,7 +632,7 @@ country_event = { # New Constitution of $YEAR$
 		year = 1957
 		NOT = { year = 1970 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -655,9 +657,9 @@ country_event = { # New Constitution of $YEAR$
 		country_event = 800054
 		ruling_party_ideology = communist_social
 		
-		political_reform = promoted_voting
-		political_reform = parties_restrict_non_democratic
-		political_reform = open_opinion
+		political_reform = gerrymandered_voting
+		political_reform = parties_rigged
+		political_reform = semi_democratic_state_opinion
 		political_reform = professional_service
 		political_reform = open_immigration
 		political_reform = restricted_unions
@@ -683,7 +685,7 @@ country_event = { # Beria's Trial
 		year = 1957
 		NOT = { year = 1970 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -719,7 +721,7 @@ country_event = { # Anti-Party Group - Khrushchev
 		tag = RUS
 		year = 1956
 		NOT = { year = 1959 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_global_flag = de_stalinization
 		has_country_flag = nikita_khrushchev
 	}
@@ -766,7 +768,7 @@ country_event = { # Introduction of Sovnarkhoz
 		year = 1957
 		NOT = { year = 1959 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		
@@ -808,7 +810,7 @@ country_event = { # A General too dangerous
 		tag = RUS
 		year = 1958
 		NOT = { year = 1960 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = nikita_khrushchev
 		
 		NOT = { has_country_flag = zhukov_is_dead }
@@ -856,7 +858,7 @@ country_event = { # Cultural Opening
 		year = 1959
 		NOT = { year = 1961 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		
@@ -893,7 +895,7 @@ country_event = { # Khrushchev's Corn
 		tag = RUS
 		year = 1959
 		NOT = { year = 1961 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = nikita_khrushchev
 	}
 
@@ -931,7 +933,7 @@ country_event = { # Khrushchyovka
 		tag = RUS
 		year = 1960
 		NOT = { year = 1963 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = nikita_khrushchev
 		has_country_flag = ussr_not_rebuild_moscow
 	}
@@ -943,7 +945,7 @@ country_event = { # Khrushchyovka
 		
 		any_pop = { consciousness = -3 militancy = -2 }
 		
-		social_reform = anti_terror_surveillance #Good public housing
+		social_reform = acceptable_public_housing #Good public housing
 	}
 }
 
@@ -959,7 +961,7 @@ country_event = { # Stalin's Body
 		tag = RUS
 		year = 1961
 		NOT = { year = 1964 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_global_flag = de_stalinization
 		has_country_flag = nikita_khrushchev
 	}
@@ -1002,7 +1004,7 @@ country_event = { # Elimination of Beria
 		tag = RUS
 		year = 1953
 		NOT = { year = 1955 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = ussr_stalinist_faction
 			has_country_flag = georgy_zhukov
@@ -1031,7 +1033,7 @@ country_event = { # Elimination of Khrushchev - Stalinist
 		tag = RUS
 		year = 1953
 		NOT = { year = 1956 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = ussr_stalinist_faction
 		has_country_flag = ussr_beria_out
 	}
@@ -1048,7 +1050,7 @@ country_event = { # Elimination of Khrushchev - Stalinist
 		add_country_modifier = { name = economic_boom duration = 1825 }
 
 		political_reform = minorities_equal_rights
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		political_reform = limited_meetings
 		
 		ai_chance = { factor = 0.7 }
@@ -1079,7 +1081,7 @@ country_event = { # The Stalinist Pretenders
 		tag = RUS
 		year = 1955
 		NOT = { year = 1957 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = ussr_stalinist_faction
 		has_country_flag = ussr_beria_out
 		has_country_flag = ussr_khrushchev_out
@@ -1133,7 +1135,7 @@ country_event = { # Tentative Coup
 		tag = RUS
 		year = 1957
 		NOT = { year = 1959 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = georgy_malenkov
 			has_country_flag = vyacheslav_molotov
@@ -1186,7 +1188,7 @@ country_event = { # Zhukov's Trial
 		tag = RUS
 		year = 1957
 		NOT = { year = 1959 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = georgy_malenkov
 			has_country_flag = vyacheslav_molotov
@@ -1279,7 +1281,7 @@ country_event = { # The Great Purge
 		tag = RUS
 		year = 1958
 		NOT = { year = 1959 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = georgy_malenkov
 			has_country_flag = vyacheslav_molotov
@@ -1340,7 +1342,7 @@ country_event = { # Lyssenko's Legacy
 		tag = RUS
 		year = 1956
 		NOT = { year = 1963 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			has_country_flag = georgy_malenkov
 			has_country_flag = vyacheslav_molotov
@@ -1392,7 +1394,7 @@ country_event = { # Stalin's Legacy
 		year = 1955
 		NOT = { year = 1957 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		
@@ -1504,7 +1506,7 @@ country_event = { # Reorientation of the Planned Economy
 		tag = RUS
 		year = 1954
 		NOT = { year = 1958 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_malenkov
 	}
 	
@@ -1548,7 +1550,7 @@ country_event = { # Agricultural Problem - Malenkov
 		tag = RUS
 		year = 1955
 		NOT = { year = 1959 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_malenkov
 	}
 	
@@ -1600,7 +1602,7 @@ country_event = { # More Autonomous Farms?
 		tag = RUS
 		year = 1955
 		NOT = { year = 1959 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_malenkov
 	}
 	
@@ -1641,7 +1643,7 @@ country_event = { # Effective Reorientation of the Economy
 		tag = RUS
 		year = 1960
 		NOT = { year = 1963 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_malenkov
 	}
 	
@@ -1667,7 +1669,7 @@ country_event = { # Bureaucratic Reforms
 		tag = RUS
 		year = 1960
 		NOT = { year = 1963 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_malenkov
 	}
 	
@@ -1742,7 +1744,7 @@ country_event = { # Resignation of Malenkov
 		tag = RUS
 		year = 1964
 		NOT = { year = 1966 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_malenkov
 	}
 	
@@ -1784,7 +1786,7 @@ country_event = { # Worship of Stalin
 		tag = RUS
 		year = 1955
 		NOT = { year = 1962 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = vyacheslav_molotov
 	}
 	
@@ -1874,7 +1876,7 @@ country_event = { # Malenkov's Advice
 		tag = RUS
 		year = 1956
 		NOT = { year = 1962 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = vyacheslav_molotov
 		
 		NOT = { has_country_flag = spcmedium }
@@ -1914,7 +1916,7 @@ country_event = { # Agricultural Problem - Molotov
 		tag = RUS
 		year = 1957
 		NOT = { year = 1959 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = vyacheslav_molotov
 	}
 	
@@ -1958,7 +1960,7 @@ country_event = { # Politicizing our Army
 		tag = RUS
 		year = 1960
 		NOT = { year = 1967 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = vyacheslav_molotov
 	}
 	
@@ -2011,12 +2013,12 @@ country_event = { # Tension with China
 		year = 1959
 		NOT = { year = 1966 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes 
 		war = no
 		
 		CHI = { 
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 			is_greater_power = yes 
 			war = no
 		}
@@ -2178,7 +2180,7 @@ country_event = { # Reintroduction of Cybernetics?
 		tag = RUS
 		year = 1964
 		NOT = { year = 1970 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = vyacheslav_molotov
 	}
 	
@@ -2208,7 +2210,7 @@ country_event = { # Reintroduction of Cybernetics?
 		any_country = {
 			limit = {
 				exists = yes
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				ruling_party_ideology = communist
 				capital_scope = { continent = europe }
 			}
@@ -2234,7 +2236,7 @@ country_event = { # Death of Molotov - Good Ending
 		tag = RUS
 		year = 1982
 		NOT = { year = 1988 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = vyacheslav_molotov
 		has_country_flag = ussr_good_molotov
 	}
@@ -2261,7 +2263,7 @@ country_event = { # Death of Molotov - Bad Ending
 		tag = RUS
 		year = 1982
 		NOT = { year = 1988 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = vyacheslav_molotov
 		has_country_flag = ussr_bad_molotov
 	}
@@ -2293,7 +2295,7 @@ country_event = { # Rewarded
 		tag = RUS
 		year = 1956
 		NOT = { year = 1957 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_zhukov
 	}
 	
@@ -2319,7 +2321,7 @@ country_event = { # Anti-Party Group - Zhukov
 		tag = RUS
 		year = 1957
 		NOT = { year = 1958 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_zhukov
 	}
 
@@ -2359,7 +2361,7 @@ country_event = { # Opening Speech of the XXIst Congress
 		tag = RUS
 		year = 1959
 		NOT = { year = 1960 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_zhukov
 	}
 
@@ -2423,7 +2425,7 @@ country_event = { # Great Military Reform
 		tag = RUS
 		year = 1960
 		NOT = { year = 1961 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_zhukov
 	}
 	
@@ -2448,7 +2450,7 @@ country_event = { # Reducing the Importance of the Navy?
 		tag = RUS
 		year = 1960
 		NOT = { year = 1962 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_zhukov
 		has_country_flag = ussr_great_military_reform
 	}
@@ -2488,7 +2490,7 @@ country_event = { # The Role of the Political Officer
 		tag = RUS
 		year = 1958
 		NOT = { year = 1962 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_zhukov
 		has_country_flag = ussr_great_military_reform
 		has_country_flag = ussr_novorossiysk_sinking
@@ -2598,7 +2600,7 @@ country_event = { # The Militsiya
 	id = 9001251
 	title = "The Militsiya"
 	desc = EVT_9001251_DESC
-	picture = "ussr_police_militsia"
+	picture = "ussr_basic_security_militsia"
 
 	is_triggered_only = yes
 
@@ -2639,7 +2641,7 @@ country_event = { # Revival of the Russian Nationalist
 		tag = RUS
 		year = 1960
 		NOT = { year = 1966 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_zhukov
 	}
 	
@@ -2702,7 +2704,7 @@ country_event = { # Elimination of Khrushchev - Zhukov
 		tag = RUS
 		year = 1963
 		NOT = { year = 1965 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_zhukov
 	}
 	
@@ -2766,7 +2768,7 @@ country_event = { # The Future of the Soviet Economy
 		year = 1958
 		NOT = { year = 1961 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -2821,7 +2823,7 @@ country_event = { # Agricultural Problem - Zhukov
 		year = 1960
 		NOT = { year = 1964 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -2877,7 +2879,7 @@ country_event = { # Comrade Secretary-Marshal
 		tag = RUS
 		year = 1964
 		NOT = { year = 1965 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_zhukov
 	}
 	
@@ -2915,7 +2917,7 @@ country_event = { # Resignation of Zhukov
 		tag = RUS
 		year = 1968
 		NOT = { year = 1971 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		has_country_flag = georgy_zhukov
 	}
 	

@@ -45,7 +45,7 @@ country_event = {
 		year = 1947 
 		NOT = { year = 1963 }
 		
-		OR = { government = proletarian_dictatorship government = socialist_democracy }
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 	}
 
 	option = {
@@ -609,7 +609,7 @@ country_event = {
 		year = 1948 
 		NOT = { year = 1955 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		DDR = { exists = no }
 		

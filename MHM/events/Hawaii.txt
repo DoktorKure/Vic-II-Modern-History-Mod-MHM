@@ -503,11 +503,11 @@ country_event = {
 		government = socialist_democracy
 		ruling_party_ideology = communist
 		
-		political_reform = universal_voting
+		political_reform = free_voting
 		political_reform = ruling_party_opinion
 		political_reform = limited_meetings
 		political_reform = politicised_service #Politicized
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions #State Unions
 		political_reform = parties_not_allowed
 		political_reform = no_draft #no_draft

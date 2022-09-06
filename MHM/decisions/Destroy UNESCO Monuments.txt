@@ -9,7 +9,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			OR = { ai = no government = nationalist_dictatorship government = populist_dictatorship government = theocracy }
+			OR = { ai = no government = sectarian_dictatorship government = nationalist_dictatorship government = theocracy }
 			war_countries = { any_owned_province = { controlled_by = THIS has_province_modifier = unesco_whs } }
 		}
 

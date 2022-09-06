@@ -798,7 +798,7 @@ political_decisions = {
 			is_core = 695
 			is_core = 697 
 			
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		}
 		allow = {
 			cold_war = 1
@@ -1127,7 +1127,7 @@ political_decisions = {
 			owns = 994
 			is_core = 994 
 			
-			NOT = { government = proletarian_dictatorship }
+			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		}
 		allow = {
 			is_vassal = no
@@ -1376,7 +1376,7 @@ political_decisions = {
 			is_vassal = no
 			war = no
 			
-			NOT = { OR = { government = populist_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
+			NOT = { OR = { government = nationalist_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
 		}
 		effect = {
 			set_global_flag = grozny_dzhokharghala

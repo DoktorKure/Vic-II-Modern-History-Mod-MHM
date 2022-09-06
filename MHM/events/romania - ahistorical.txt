@@ -248,7 +248,7 @@ country_event = {
 		name = "Ana Pauker will lead Romania into a bright Socialist Future!"
 		
 		#Limited liberalisation
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = limited_meetings
 		political_reform = restricted_unions
 		
@@ -306,7 +306,7 @@ country_event = {
 		}
 		
 		#Set social reforms
-		social_reform = preemptive_security_actions
+		social_reform = excellent_security
 		social_reform = limited_child_care
 		
 		clr_country_flag = gheorghiu_dej_romania
@@ -651,7 +651,7 @@ country_event = {
 		name = "Ion Illescu, a Reformist"
 		
 		#Limited reforms
-		political_reform = open_opinion
+		political_reform = semi_democratic_state_opinion
 		
 		any_pop = { militancy = 1 consciousness = 1 }
 		

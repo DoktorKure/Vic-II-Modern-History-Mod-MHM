@@ -15,7 +15,7 @@ country_event = { # South Macedonia - Communist
 		year = 1950
 		NOT = { year = 1958 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_country_flag = ugr_civil_war_victory
@@ -77,7 +77,7 @@ country_event = { # Economical Model
 		year = 1950
 		NOT = { year = 1953 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_country_flag = ugr_civil_war_victory
@@ -94,7 +94,7 @@ country_event = { # Economical Model
 		set_country_flag = ugr_soviet_economy
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			create_vassal = THIS
 			relation = { who = THIS value = 200 }
 			diplomatic_influence = { who = THIS value = 200 }
@@ -118,7 +118,7 @@ country_event = { # Economical Model
 		set_country_flag = ugr_semi_soviet_economy
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			create_vassal = THIS
 			relation = { who = THIS value = 50 }
 			diplomatic_influence = { who = THIS value = 75 }
@@ -144,7 +144,7 @@ country_event = { # The Discontented Peasantry
 		year = 1950
 		NOT = { year = 1955 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_country_flag = ugr_civil_war_victory
@@ -161,7 +161,7 @@ country_event = { # The Discontented Peasantry
 		
 		prestige_factor = -0.1
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 100 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 100 } }
 		
 		any_pop = { 
 			limit = { type = farmers }
@@ -178,7 +178,7 @@ country_event = { # The Discontented Peasantry
 		
 		prestige_factor = -0.05
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 50 } }
 		
 		any_pop = { 
 			limit = { type = farmers }
@@ -193,7 +193,7 @@ country_event = { # The Discontented Peasantry
 		
 		prestige_factor = 0.05
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -75 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -75 } }
 		
 		any_pop = { 
 			limit = { type = farmers }
@@ -284,7 +284,7 @@ country_event = { # The Secret Report of Khrushchev
 		year = 1956
 		NOT = { year = 1959 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -341,9 +341,9 @@ country_event = { # Change our political position
 		set_country_flag = ugr_anti_revisionist
 		clr_country_flag = ugr_marxist_leninism
 		
-		random_country = { limit = { tag = CHI government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 100 } }
-		random_country = { limit = { tag = ALB government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 50 } }
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -100 } }
+		random_country = { limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 100 } }
+		random_country = { limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -100 } }
 		
 		any_pop = { 
 			militancy = 5 consciousness = 5
@@ -357,10 +357,10 @@ country_event = { # Change our political position
 		
 		set_global_flag = ugr_and_yugoslavia_together
 		
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 100 } }
-		random_country = { limit = { tag = CHI government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -50 } }
-		random_country = { limit = { tag = ALB government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -50 } }
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -100 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 100 } }
+		random_country = { limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -50 } }
+		random_country = { limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -100 } }
 		
 		any_pop = { 
 			militancy = 5 consciousness = 5
@@ -384,7 +384,7 @@ country_event = { # The Fall of Zachariadis
 		year = 1956
 		NOT = { year = 1960 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -405,7 +405,7 @@ country_event = { # The Fall of Zachariadis
 		clr_country_flag = ugr_fall_zachariadis
 		clr_country_flag = ugr_marxist_leninism
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 50 } }
 		
 		any_pop = {
 			scaled_consciousness = {
@@ -452,7 +452,7 @@ country_event = { # New Economic Reforms?
 		year = 1956
 		NOT = { year = 1972 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_global_flag = de_stalinization
@@ -486,7 +486,7 @@ country_event = { # New Economic Reforms?
 	option = {
 		name = "Change nothing."
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -50 } }
 		
 		any_pop = {
 			limit = { strata = poor }
@@ -512,7 +512,7 @@ country_event = { # Cultural Thaw
 		year = 1960
 		NOT = { year = 1972 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_global_flag = de_stalinization
@@ -533,7 +533,7 @@ country_event = { # Cultural Thaw
 			ideology = { factor = 0.10 value = liberal } 
 		}
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 50 } }
 		random_country = { limit = { tag = USA OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = 50 } }
 	}
 	
@@ -552,7 +552,7 @@ country_event = { # Anti-Stalinism Purge
 		year = 1958
 		NOT = { year = 1972 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_global_flag = de_stalinization
@@ -625,7 +625,7 @@ country_event = { # Reopening to Yugoslavia?
 		year = 1962
 		NOT = { year = 1972 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_global_flag = de_stalinization
@@ -644,8 +644,8 @@ country_event = { # Reopening to Yugoslavia?
 		
 		add_country_modifier = { name = rgo_boom duration = 1095 }
 		
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 200 } }
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 100 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 200 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 100 } }
 		
 		ai_chance = { factor = 0.5 }
 	}
@@ -655,8 +655,8 @@ country_event = { # Reopening to Yugoslavia?
 		
 		set_country_flag = ugr_opening_to_yugoslavia
 		
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 100 } }
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 50 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 100 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 50 } }
 		
 		ai_chance = { factor = 0.4 }
 	}
@@ -664,7 +664,7 @@ country_event = { # Reopening to Yugoslavia?
 	option = {
 		name = "Do nothing."
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -75 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -75 } }
 		
 		any_pop = {
 			militancy = 2 consciousness = 2
@@ -688,7 +688,7 @@ country_event = { # Tension with the Macedonians
 		year = 1965
 		NOT = { year = 1972 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_global_flag = de_stalinization
@@ -767,7 +767,7 @@ country_event = { # The Rise of the Eurocommunists
 		year = 1968
 		NOT = { year = 1971 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_global_flag = de_stalinization
@@ -825,7 +825,7 @@ country_event = { # The Rise of the Eurocommunists
 		
 		ruling_party_ideology = communist_social
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -200 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -200 } }
 		
 		ai_chance = { factor = 0.1 }
 	}
@@ -845,7 +845,7 @@ country_event = { # The Communists strike back
 		year = 1972
 		NOT = { year = 1978 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -942,7 +942,7 @@ country_event = { # The Death of Koligiannis
 		year = 1978
 		NOT = { year = 1982 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_global_flag = de_stalinization
@@ -982,8 +982,8 @@ country_event = { # The Death of Koligiannis
 		clr_country_flag = ugr_opening_to_yugoslavia
 		clr_country_flag = ugr_eurocommunist_elimined
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 100 } }
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -100 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 100 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -100 } }
 		
 		any_pop = {
 			ideology = { factor = 0.1 value = communist }
@@ -1001,8 +1001,8 @@ country_event = { # The Death of Koligiannis
 		clr_country_flag = ugr_opening_to_yugoslavia
 		clr_country_flag = ugr_eurocommunist_elimined
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -100 } }
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 100 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -100 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 100 } }
 		
 		any_pop = {
 			ideology = { factor = 0.1 value = communist_social }
@@ -1063,7 +1063,7 @@ country_event = { # Start of Reconciliation with the Soviet Union
 		year = 1972
 		NOT = { year = 1986 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -1085,8 +1085,8 @@ country_event = { # Start of Reconciliation with the Soviet Union
 		
 		set_country_flag = reconciliation_greek_ussr
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 50 } diplomatic_influence = { who = THIS value = 50 } }
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -100 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 50 } diplomatic_influence = { who = THIS value = 50 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -100 } }
 		
 		ai_chance = { factor = 0.9 }
 	}
@@ -1098,8 +1098,8 @@ country_event = { # Start of Reconciliation with the Soviet Union
 		
 		RUS = { release_vassal = THIS }
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -100 } diplomatic_influence = { who = THIS value = -400 } }
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -100 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -100 } diplomatic_influence = { who = THIS value = -400 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -100 } }
 		
 		ai_chance = { factor = 0.1 }
 	}
@@ -1118,7 +1118,7 @@ country_event = { # Success of the Reconciliation
 		OR = { tag = UGR tag = GRE }
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -1184,7 +1184,7 @@ country_event = { # Failure of the Reconciliation
 		OR = { tag = UGR tag = GRE }
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -1274,7 +1274,7 @@ country_event = { # What to retain of Koligiannis?
 		year = 1972
 		NOT = { year = 1986 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			ruling_party_ideology = communist
 			ruling_party_ideology = communist_social
@@ -1294,7 +1294,7 @@ country_event = { # What to retain of Koligiannis?
 		
 		set_country_flag = rosios_soviet_model
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 25 } diplomatic_influence = { who = THIS value = 25 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 25 } diplomatic_influence = { who = THIS value = 25 } }
 		
 		any_pop = {
 			consciousness = 3.5
@@ -1308,7 +1308,7 @@ country_event = { # What to retain of Koligiannis?
 		
 		set_country_flag = rosios_koligiannis_model
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -25 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -25 } }
 		
 		any_pop = {
 			limit = { strata = rich }
@@ -1329,7 +1329,7 @@ country_event = { # What to retain of Koligiannis?
 		
 		set_country_flag = rosios_reformist_model
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -50 } diplomatic_influence = { who = THIS value = -25 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -50 } diplomatic_influence = { who = THIS value = -25 } }
 		
 		any_pop = {
 			limit = { strata = rich }
@@ -1361,7 +1361,7 @@ country_event = { # Purge and Alliance
 		year = 1973
 		NOT = { year = 1986 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_global_flag = de_stalinization
@@ -1439,7 +1439,7 @@ country_event = { # Continue the Cultural Thaw?
 		year = 1975
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			ruling_party_ideology = communist
 			ruling_party_ideology = communist_social
@@ -1522,7 +1522,7 @@ country_event = { # Staying close to Yugoslavia?
 		year = 1981
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = {
 			ruling_party_ideology = communist
 			ruling_party_ideology = communist_social
@@ -1542,8 +1542,8 @@ country_event = { # Staying close to Yugoslavia?
 	option = {
 		name = "Maintaining our diplomatic channels."
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -25 } }
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 25 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -25 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 25 } }
 		
 		any_pop = {
 			limit = { strata = rich }
@@ -1562,8 +1562,8 @@ country_event = { # Staying close to Yugoslavia?
 	option = {
 		name = "Maintain a trade relationship."
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -50 } }
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -50 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 50 } }
 		
 		any_pop = {
 			limit = { strata = rich }
@@ -1587,8 +1587,8 @@ country_event = { # Staying close to Yugoslavia?
 	option = {
 		name = "Cutting our ties with Yugoslavia."
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 50 } }
-		random_country = { limit = { tag = YUG government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 50 } }
+		random_country = { limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -50 } }
 		
 		any_pop = {
 			limit = { strata = rich }
@@ -1621,7 +1621,7 @@ country_event = { # Which economic model to choose?
 		year = 1972
 		NOT = { year = 1986 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_global_flag = de_stalinization
@@ -1638,7 +1638,7 @@ country_event = { # Which economic model to choose?
 		
 		set_country_flag = florakis_stalinist_model
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -50 } diplomatic_influence = { who = THIS value = -50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -50 } diplomatic_influence = { who = THIS value = -50 } }
 		
 		any_pop = {
 			limit = { strata = rich }
@@ -1657,7 +1657,7 @@ country_event = { # Which economic model to choose?
 		
 		set_country_flag = florakis_soviet_model
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 50 } diplomatic_influence = { who = THIS value = 50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 50 } diplomatic_influence = { who = THIS value = 50 } }
 		
 		any_pop = {
 			consciousness = 3
@@ -1681,7 +1681,7 @@ country_event = { # Back to Stalinism?
 		year = 1973
 		NOT = { year = 1986 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_global_flag = de_stalinization
@@ -1699,7 +1699,7 @@ country_event = { # Back to Stalinism?
 		
 		set_country_flag = florakis_is_conservator
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 25 } diplomatic_influence = { who = THIS value = 25 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 25 } diplomatic_influence = { who = THIS value = 25 } }
 		
 		any_pop = {
 			limit = { strata = rich }
@@ -1714,7 +1714,7 @@ country_event = { # Back to Stalinism?
 		
 		set_country_flag = florakis_is_stalinist
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -50 } }
 		
 		any_pop = {
 			limit = { strata = rich }
@@ -1743,7 +1743,7 @@ country_event = { # Rehabilitation of Stalin
 		year = 1973
 		NOT = { year = 1986 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_global_flag = de_stalinization
@@ -1761,7 +1761,7 @@ country_event = { # Rehabilitation of Stalin
 		
 		set_country_flag = florakis_stalin_return
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -150 } diplomatic_influence = { who = THIS value = -150 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -150 } diplomatic_influence = { who = THIS value = -150 } }
 		
 		any_pop = {
 			consciousness = 3
@@ -1775,7 +1775,7 @@ country_event = { # Rehabilitation of Stalin
 		
 		set_country_flag = florakis_stalin_not_return
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 50 } diplomatic_influence = { who = THIS value = 50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 50 } diplomatic_influence = { who = THIS value = 50 } }
 		
 		ai_chance = { factor = 0.1 }
 	}

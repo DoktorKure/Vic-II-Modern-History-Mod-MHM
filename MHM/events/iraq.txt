@@ -84,7 +84,7 @@ country_event = {
 
   option = {
     name = EVT_8007520_A
-	government = nationalist_dictatorship 
+	government = sectarian_dictatorship 
 	country_event = 800050
 	ruling_party_ideology = socialist
 	remove_accepted_culture = assyrian
@@ -351,7 +351,7 @@ country_event = {
 		tag = IRQ
 		year = 1980 NOT = { year = 1999 }
 		
-		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = populist_dictatorship } 
+		OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } 
 		war = no
 		is_vassal = no
 		
@@ -530,8 +530,8 @@ country_event = {
 
 		OR = { 
 			government = presidential_dictatorship 
-			government = populist_dictatorship 
 			government = nationalist_dictatorship 
+			government = sectarian_dictatorship 
 		}
 
 		war = no
@@ -645,7 +645,7 @@ country_event = {
 		NOT = { has_global_flag = 1992_start_date_flag }
 		is_vassal = no
 
-		OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship }
+		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
 
 		#Gulf War event accepted
 		has_global_flag = 1990_gulf_war_fired_flag
@@ -877,7 +877,7 @@ country_event = {
 		has_global_flag = war_on_terror
 
 		IRQ = { 
-			OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship government = theocracy }
+			OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship government = theocracy }
 			part_of_sphere = no
 			is_vassal = no
 		}

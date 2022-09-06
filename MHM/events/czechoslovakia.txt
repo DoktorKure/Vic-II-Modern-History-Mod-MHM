@@ -36,13 +36,13 @@ country_event = {
 
 		government = proletarian_dictatorship
   
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = none_voting #No voting
 		political_reform = limited_meetings
 		political_reform = elitist_service #Elitist
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = proportional_representation
 
 		RUS = { country_event = 120003 } #Vassalise
@@ -79,7 +79,7 @@ country_event = {
 		year = 1960
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		vassal_of = RUS
 
@@ -95,7 +95,7 @@ country_event = {
 
 		political_reform = ruling_party_opinion
 		political_reform = politicised_service #Politicized
-		political_reform = censored_publishing
+		political_reform = state_publishing
 
 		ai_chance = {
 			factor = 0.95
@@ -191,7 +191,7 @@ country_event = {
 		year = 1968 
 		NOT = { year = 1990 }
     
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 		war = no
 		
@@ -403,7 +403,7 @@ country_event = {
 		tag = CZH
 		year = 1968 
 		NOT = { year = 1969 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 	}
 
@@ -433,7 +433,7 @@ country_event = {
 		tag = CZH
 		year = 1948 
 		NOT = { year = 1952 }
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		vassal_of = RUS
 	}
 
@@ -464,7 +464,7 @@ country_event = {
 	trigger = {
 		tag = CZH
 		has_global_flag = autumn_of_nations
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = { 
 			vassal_of = RUS 
 			is_vassal = no 

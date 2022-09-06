@@ -85,7 +85,7 @@ country_event = {
 country_event = {
 	id = 1412003
 	title = "Mass Riots Across $COUNTRY$"
-	desc = "The police used tear gas and riot weapons against the protesters to suppress the protests, but it has only sparked more violent actions to end our rule."
+	desc = "The basic_security used tear gas and riot weapons against the protesters to suppress the protests, but it has only sparked more violent actions to end our rule."
 	picture = "violent_protests"
 
 	trigger = {
@@ -633,7 +633,7 @@ country_event = {
 				owner = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist } }
 			}
 			owner = {
-				government = populist_dictatorship
+				government = nationalist_dictatorship
 				ruling_party_ideology = nationalist
 				country_event = 800050
 			}
@@ -856,7 +856,7 @@ country_event = {
 	
 	option = {
 		name = "A victory for Patriotism!"
-		government = nationalist_dictatorship 
+		government = sectarian_dictatorship 
 		country_event = 800050
 		ruling_party_ideology = nationalist
 
@@ -876,7 +876,7 @@ country_event = {
 	
 	option = {
 		name = "A victory for the People!"
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		country_event = 800050
 		ruling_party_ideology = nationalist
 

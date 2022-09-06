@@ -847,7 +847,7 @@ country_event = {
 				political_reform = no_meetings
 				political_reform = capital_punishment
 				political_reform = politicised_service
-				political_reform = censored_publishing
+				political_reform = state_publishing
 				political_reform = no_trade_unions
 				political_reform = parties_not_allowed
 				political_reform = nobody_gets_out
@@ -860,11 +860,11 @@ country_event = {
 			owner = { 
 				government = absolute_monarchy
 				political_reform = none_voting
-				political_reform = regulated_opinion 
+				political_reform = appointed_opinion 
 				political_reform = no_meetings
 				political_reform = capital_punishment
 				political_reform = politicised_service
-				political_reform = censored_publishing
+				political_reform = state_publishing
 				political_reform = no_trade_unions
 				political_reform = parties_not_allowed
 				political_reform = nobody_gets_out
@@ -876,14 +876,14 @@ country_event = {
 			limit = { owner = { overlord = { OR = { government = hms_government government = hms_government1 } } } }
 			owner = { 
 				government = hms_government1
-				political_reform = registered_voting
-				political_reform = open_opinion
+				political_reform = harassed_voting
+				political_reform = semi_democratic_state_opinion
 				political_reform = limited_meetings
 				political_reform = capital_punishment
 				political_reform = elitist_service
 				political_reform = responsible_publishing
 				political_reform = restricted_unions
-				political_reform = parties_restrict_non_democratic
+				political_reform = parties_rigged
 				political_reform = quota_immigration
 				political_reform = no_draft
 				political_reform = minorities_oppression
@@ -894,14 +894,14 @@ country_event = {
 			limit = { owner = { overlord = { OR = { government = democracy government = democracy1 } } } }
 			owner = { 
 				government = democracy
-				political_reform = registered_voting
-				political_reform = open_opinion
+				political_reform = harassed_voting
+				political_reform = semi_democratic_state_opinion
 				political_reform = limited_meetings
 				political_reform = capital_punishment
 				political_reform = elitist_service
 				political_reform = responsible_publishing
 				political_reform = restricted_unions
-				political_reform = parties_restrict_non_democratic
+				political_reform = parties_rigged
 				political_reform = quota_immigration
 				political_reform = no_draft
 				political_reform = minorities_oppression
@@ -912,14 +912,14 @@ country_event = {
 			limit = { owner = { overlord = { government = socialist_democracy } } }
 			owner = { 
 				government = socialist_democracy
-				political_reform = registered_voting
-				political_reform = open_opinion
+				political_reform = harassed_voting
+				political_reform = semi_democratic_state_opinion
 				political_reform = limited_meetings
 				political_reform = capital_punishment
 				political_reform = politicised_service
-				political_reform = censored_publishing
+				political_reform = state_publishing
 				political_reform = state_controlled_unions
-				political_reform = parties_only_nominated
+				political_reform = parties_restricted
 				political_reform = quota_immigration
 				political_reform = one_year_draft
 				political_reform = minorities_equal_rights
@@ -935,7 +935,7 @@ country_event = {
 				political_reform = no_meetings
 				political_reform = capital_punishment
 				political_reform = politicised_service
-				political_reform = censored_publishing
+				political_reform = state_publishing
 				political_reform = state_controlled_unions
 				political_reform = parties_not_allowed
 				political_reform = nobody_gets_out
@@ -952,24 +952,7 @@ country_event = {
 				political_reform = no_meetings
 				political_reform = capital_punishment
 				political_reform = politicised_service
-				political_reform = censored_publishing
-				political_reform = no_trade_unions
-				political_reform = parties_not_allowed
-				political_reform = nobody_gets_out
-				political_reform = two_year_draft
-				political_reform = minorities_oppression
-			}
-		}
-		random_owned = {
-			limit = { owner = { overlord = { government = populist_dictatorship } } }
-			owner = { 
-				government = populist_dictatorship
-				political_reform = none_voting
-				political_reform = ruling_party_opinion
-				political_reform = no_meetings
-				political_reform = capital_punishment
-				political_reform = politicised_service
-				political_reform = censored_publishing
+				political_reform = state_publishing
 				political_reform = no_trade_unions
 				political_reform = parties_not_allowed
 				political_reform = nobody_gets_out
@@ -986,7 +969,24 @@ country_event = {
 				political_reform = no_meetings
 				political_reform = capital_punishment
 				political_reform = politicised_service
-				political_reform = censored_publishing
+				political_reform = state_publishing
+				political_reform = no_trade_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+		random_owned = {
+			limit = { owner = { overlord = { government = sectarian_dictatorship } } }
+			owner = { 
+				government = sectarian_dictatorship
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = state_publishing
 				political_reform = no_trade_unions
 				political_reform = parties_not_allowed
 				political_reform = nobody_gets_out
@@ -1162,7 +1162,7 @@ country_event = {
 		country_event = 1512206
 		government = democracy
 		ruling_party_ideology = liberal
-		political_reform = universal_weighted_voting
+		political_reform = rigged_voting
 		clr_country_flag = tory_election_win
 		clr_country_flag = socialist_election_win
 		set_country_flag = liberal_election_win
@@ -1272,12 +1272,12 @@ country_event = {
 			owner = { government = presidential_dictatorship country_event = 800050 }
 		}
 		random_owned = { 
-			limit = { FROM = { government = government = populist_dictatorship } }
-			owner = { government = populist_dictatorship country_event = 800050 }
+			limit = { FROM = { government = government = nationalist_dictatorship } }
+			owner = { government = nationalist_dictatorship country_event = 800050 }
 		}
 		random_owned = { 
-			limit = { FROM = { government = nationalist_dictatorship } }
-			owner = { government = nationalist_dictatorship country_event = 800050 }
+			limit = { FROM = { government = sectarian_dictatorship } }
+			owner = { government = sectarian_dictatorship country_event = 800050 }
 		}
 		
 		#Match ruling party

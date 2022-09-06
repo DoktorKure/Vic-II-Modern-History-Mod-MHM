@@ -38,8 +38,8 @@ country_event = {
 		NOT = {
 			government = absolute_monarchy
 			government = presidential_dictatorship
-			government = populist_dictatorship
 			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 		}
 		civilized = yes
 		vote_franschise = none_voting
@@ -65,7 +65,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA60010"
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 	}
 }
 
@@ -81,8 +81,8 @@ country_event = {
 
 		NOT = {
 			government = presidential_dictatorship
-			government = populist_dictatorship
 			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 		}
 		civilized = yes
 		vote_franschise = none_voting
@@ -94,7 +94,7 @@ country_event = {
 	
 	option = {
 		name = "EVTOPTA60020"
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 	}
 }
 
@@ -110,8 +110,8 @@ country_event = {
 
 		NOT = {
 			government = presidential_dictatorship
-			government = populist_dictatorship
 			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 			government = absolute_monarchy
 			government = theocracy
 			government = hms_government
@@ -273,8 +273,8 @@ country_event = {
 			government = proletarian_dictatorship
 			government = proletarian_dictatorship1
 			government = presidential_dictatorship
-			government = populist_dictatorship
 			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 			government = theocracy
 		}
 
@@ -305,9 +305,9 @@ country_event = {
 		government = socialist_democracy
 		civilized = yes
 		NOT = { has_country_flag = disable_demo_event }
-		political_parties = parties_allowed
-		vote_franschise = universal_voting
-		political_opinions = free_opinion
+		political_parties = parties_fair
+		vote_franschise = free_voting
+		political_opinions = democratic_state_opinion
 	}
 	
 	mean_time_to_happen = { days = 1 }
@@ -400,7 +400,7 @@ country_event = {
 
 	option = {
 		name = "EVTOPTA60080"
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 	}
 }
 
@@ -477,7 +477,7 @@ country_event = {
 			political_opinions = ruling_party_opinion
 			political_parties = parties_not_allowed
 			union_rights = no_trade_unions
-			publishing_rights = censored_publishing
+			publishing_rights = state_publishing
 			public_meetings = no_meetings
 			immigration_policy = nobody_gets_out
 			
@@ -504,19 +504,19 @@ country_event = {
 		#Restore some voting
 		random_owned = {
 			limit = { owner = { vote_franschise = none_voting } }
-			owner = { political_reform = registered_voting }
+			owner = { political_reform = harassed_voting }
 		}
 		
 		#Restore some UH - Limited State Assembly
 		random_owned = {
 			limit = { owner = { political_opinions = ruling_party_opinion } }
-			owner = { political_reform = open_opinion }
+			owner = { political_reform = semi_democratic_state_opinion }
 		}
 		
 		#Restore some political parties
 		random_owned = {
 			limit = { owner = { political_parties = parties_not_allowed } }
-			owner = { political_reform = parties_only_nominated }
+			owner = { political_reform = parties_restricted }
 		}
 		
 		#Restore some trade unions
@@ -527,8 +527,8 @@ country_event = {
 		
 		#Restore some press rights
 		random_owned = {
-			limit = { owner = { publishing_rights = censored_publishing } }
-			owner = { political_reform = firewall_publishing }
+			limit = { owner = { publishing_rights = state_publishing } }
+			owner = { political_reform = censored_publishing }
 		}
 		
 		#Restore some meeting rights

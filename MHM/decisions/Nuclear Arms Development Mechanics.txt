@@ -147,7 +147,7 @@ political_decisions = {
 				AND = {
 					tag = SPA
 					NOT = { second_cold_war = 1 }
-					government = populist_dictatorship
+					government = nationalist_dictatorship
 				}
 			}
 		}

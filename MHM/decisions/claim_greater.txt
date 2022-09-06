@@ -2137,8 +2137,8 @@ political_decisions = {
 			OR = {
 				AND = {
 					OR = { 
+						government = sectarian_dictatorship
 						government = nationalist_dictatorship
-						government = populist_dictatorship
 					}
 					OR = {
 						ruling_party_ideology = populist

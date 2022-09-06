@@ -24,7 +24,7 @@ country_event = {
 		#China
 		CHI = {
 			is_greater_power = yes
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			
 			#China owns East Turkestan
 			is_possible_vassal = ETS
@@ -78,7 +78,7 @@ country_event = {
 		year = 1949 
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no 
 		
 		ETS = { 

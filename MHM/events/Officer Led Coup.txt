@@ -193,7 +193,7 @@ country_event = {
 				owner = { OR = { pop_majority_ideology = nationalist pop_majority_ideology = populist } }
 			}
 			owner = {
-				government = populist_dictatorship
+				government = nationalist_dictatorship
 				ruling_party_ideology = nationalist
 				country_event = 800050
 			}

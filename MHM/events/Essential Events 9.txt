@@ -959,7 +959,7 @@ trigger = {
 tag = CHI
 has_country_flag = deng_xiaoping_selected
 year = 1997
-government = proletarian_dictatorship
+OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 ruling_party_ideology = communist_social
 }
 
@@ -988,7 +988,7 @@ tag = CHI
 has_country_flag = deng_xiaoping_selected
 year = 1989 
 NOT = { year = 1992 }
-government = proletarian_dictatorship
+OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 ruling_party_ideology = communist_social
 }
 
@@ -1005,9 +1005,9 @@ ai_chance = { factor = 0.8 }
 
 option = {
 name = "Select Zhao Ziyang"
-political_reform = open_opinion
+political_reform = semi_democratic_state_opinion
 political_reform = limited_meetings
-political_reform = firewall_publishing
+political_reform = censored_publishing
 political_reform = minorities_equal_rights
 ai_chance = { factor = 0.2 }
 		}
@@ -1027,7 +1027,7 @@ trigger = {
 tag = CHI
 has_country_flag = jiang_zemin_selected
 year = 2002
-government = proletarian_dictatorship
+OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 ruling_party_ideology = communist_social
 }
 
@@ -1046,10 +1046,10 @@ option = {
 name = "Select Wen Jiabao"
 social_reform = good_pensions
 social_reform = good_health_care
-social_reform = generous_subsidies
-social_reform = eight_work_hours
-social_reform = unlimited_education
-social_reform = the_safety_grid
+social_reform = extended_subsidies
+social_reform = trinket_wage
+social_reform = excellent_public_education
+social_reform = good_public_housing
 ai_chance = { factor = 0.2 }
 		}
 
@@ -1068,7 +1068,7 @@ trigger = {
 tag = CHI
 has_country_flag = hu_jingtao_selected
 year = 2012
-government = proletarian_dictatorship
+OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 ruling_party_ideology = communist_social
 }
 
@@ -1270,7 +1270,7 @@ money = 2000000
 
 NOT = { has_country_flag = neutrality }
 
-SAF = { exists = yes government = nationalist_dictatorship is_vassal = no war = no }
+SAF = { exists = yes government = sectarian_dictatorship is_vassal = no war = no }
 
 NOT = { war_policy = pacifism }
 
@@ -1318,7 +1318,7 @@ tag = SAF
 is_vassal = no
 war = no
 money = 2000000
-government = nationalist_dictatorship
+government = sectarian_dictatorship
 
 ISR = { has_country_flag = vela_incident }
 
@@ -1917,12 +1917,12 @@ random_owned = {
 
 random_owned = { 
 	limit = { owner = { has_country_flag = return_to_unregulated_publishing} }
-	owner = { political_reform = unregulated_publishing clr_country_flag = return_to_unregulated_publishing }
+	owner = { political_reform = free_publishing clr_country_flag = return_to_unregulated_publishing }
 	}
 
 random_owned = { 
 	limit = { owner = { has_country_flag = return_to_firewall_publishing } }
-	owner = { political_reform = firewall_publishing clr_country_flag = return_to_firewall_publishing }
+	owner = { political_reform = censored_publishing clr_country_flag = return_to_firewall_publishing }
 	}
 
 remove_country_modifier = martial_law
@@ -2084,12 +2084,12 @@ random_owned = {
 
 random_owned = { 
 	limit = { owner = { has_country_flag = return_to_unregulated_publishing} }
-	owner = { political_reform = unregulated_publishing clr_country_flag = return_to_unregulated_publishing }
+	owner = { political_reform = free_publishing clr_country_flag = return_to_unregulated_publishing }
 	}
 
 random_owned = { 
 	limit = { owner = { has_country_flag = return_to_firewall_publishing } }
-	owner = { political_reform = firewall_publishing clr_country_flag = return_to_firewall_publishing }
+	owner = { political_reform = censored_publishing clr_country_flag = return_to_firewall_publishing }
 	}
 
 remove_country_modifier = martial_law
@@ -2390,9 +2390,9 @@ modifier = { factor = 3 has_country_modifier = nepohigh }
 modifier = { factor = 2 has_country_modifier = nepomedium }
 modifier = { factor = 0.5 election = yes }
 
-modifier = { factor = 3 publishing_rights = censored_publishing }
+modifier = { factor = 3 publishing_rights = state_publishing }
 
-modifier = { factor = 2 publishing_rights = firewall_publishing }
+modifier = { factor = 2 publishing_rights = censored_publishing }
 
 modifier = { factor = 2 NOT = { average_militancy = 3 } }
 
@@ -3083,7 +3083,7 @@ NOT = { has_country_modifier = leader_cooldown }
 
 NOT = { has_country_flag = leader_refuses_to_leave }
 
-NOT = { AND = { has_global_flag = blocsenabled ai = yes government = proletarian_dictatorship } }
+NOT = { AND = { has_global_flag = blocsenabled ai = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
 
 average_militancy = 5
 
@@ -3111,7 +3111,7 @@ AND = { ruling_party_ideology = liberal NOT = { pop_majority_ideology = liberal 
 
 }
 
-OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = theocracy }
+OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = theocracy }
 
 war = no
 
@@ -3345,7 +3345,7 @@ tag = SPA
 OR = { is_greater_power = yes is_secondary_power = yes }
 ai = yes
 war = no
-government = populist_dictatorship
+government = nationalist_dictatorship
 has_global_flag = blocsenabled
 badboy = 0.5
 	}
@@ -4037,8 +4037,8 @@ invention = joint_chiefs_of_staff
 is_vassal = no
 war = no
 NOT = { military_spending = 0.25 }
+NOT = { publishing_rights = state_publishing }
 NOT = { publishing_rights = censored_publishing }
-NOT = { publishing_rights = firewall_publishing }
 OR = { average_militancy = 2 NOT = { OR = { has_country_modifier = low_government_corruption has_country_modifier = minimal_government_corruption } } }
 	}
 
@@ -4281,12 +4281,12 @@ owner = { political_reform = responsible_publishing clr_country_flag = return_to
 
 random_owned = { 
 limit = { owner = { has_country_flag = return_to_unregulated_publishing} }
-owner = { political_reform = unregulated_publishing clr_country_flag = return_to_unregulated_publishing }
+owner = { political_reform = free_publishing clr_country_flag = return_to_unregulated_publishing }
 			}
 
 random_owned = { 
 limit = { owner = { has_country_flag = return_to_firewall_publishing } }
-owner = { political_reform = firewall_publishing clr_country_flag = return_to_firewall_publishing }
+owner = { political_reform = censored_publishing clr_country_flag = return_to_firewall_publishing }
 			}
 
 remove_country_modifier = martial_law
@@ -4463,12 +4463,12 @@ owner = { political_reform = responsible_publishing clr_country_flag = return_to
 
 random_owned = { 
 limit = { owner = { has_country_flag = return_to_unregulated_publishing} }
-owner = { political_reform = unregulated_publishing clr_country_flag = return_to_unregulated_publishing }
+owner = { political_reform = free_publishing clr_country_flag = return_to_unregulated_publishing }
 			}
 
 random_owned = { 
 limit = { owner = { has_country_flag = return_to_firewall_publishing } }
-owner = { political_reform = firewall_publishing clr_country_flag = return_to_firewall_publishing }
+owner = { political_reform = censored_publishing clr_country_flag = return_to_firewall_publishing }
 			}
 
 remove_country_modifier = martial_law
@@ -4711,8 +4711,8 @@ country_event = {
 		NOT = { year = 1990 }
 		is_vassal = no
 		war = no
-		OR = { government = nationalist_dictatorship government = populist_dictatorship government = presidential_dictatorship }
-		CHA = { is_vassal = no war = no OR = { government = nationalist_dictatorship government = populist_dictatorship government = presidential_dictatorship } owns = 3282 }
+		OR = { government = sectarian_dictatorship government = nationalist_dictatorship government = presidential_dictatorship }
+		CHA = { is_vassal = no war = no OR = { government = sectarian_dictatorship government = nationalist_dictatorship government = presidential_dictatorship } owns = 3282 }
 	}
 
 	mean_time_to_happen = { 
@@ -5253,13 +5253,13 @@ NOT = { num_of_revolts = 1 }
 
 NOT = { has_country_modifier = political_strife }
 
-OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship }
+OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
 
 OR = { 
 NOT = { vote_franschise = none_voting } 
 NOT = { political_opinions = ruling_party_opinion } 
 NOT = { public_meetings = no_meetings } 
-NOT = { publishing_rights = censored_publishing }
+NOT = { publishing_rights = state_publishing }
 NOT = { political_parties = parties_not_allowed }
 }
 
@@ -5922,12 +5922,12 @@ owner = { political_reform = responsible_publishing clr_country_flag = return_to
 
 random_owned = { 
 limit = { owner = { has_country_flag = return_to_unregulated_publishing} }
-owner = { political_reform = unregulated_publishing clr_country_flag = return_to_unregulated_publishing }
+owner = { political_reform = free_publishing clr_country_flag = return_to_unregulated_publishing }
 }
 
 random_owned = { 
 limit = { owner = { has_country_flag = return_to_firewall_publishing } }
-owner = { political_reform = firewall_publishing clr_country_flag = return_to_firewall_publishing }
+owner = { political_reform = censored_publishing clr_country_flag = return_to_firewall_publishing }
 }
 
 random_owned = { 
@@ -6001,7 +6001,7 @@ owner = { any_pop = { ideology = { factor = -0.05 value = communist_social } } }
 		#Nationalist Dictatorship
 		random_owned = {
 			limit = { owner = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist } } }
-			owner = { government = populist_dictatorship country_event = 800050 }
+			owner = { government = nationalist_dictatorship country_event = 800050 }
 		}
 		
 		#Presidential Dictatorship
@@ -6432,7 +6432,7 @@ country_event = {
 		any_pop = { consciousness = 1 }
 		
 		random_owned = {
-			limit = { owner = { publishing_rights = censored_publishing } }
+			limit = { owner = { publishing_rights = state_publishing } }
 			owner = {
 				any_pop = {
 					dominant_issue = {
@@ -6444,7 +6444,7 @@ country_event = {
 		}
 		
 		random_owned = {
-			limit = { owner = { publishing_rights = firewall_publishing } }
+			limit = { owner = { publishing_rights = censored_publishing } }
 			owner = {
 				any_pop = {
 					dominant_issue = {
@@ -6459,8 +6459,8 @@ country_event = {
 			limit = { 
 				owner = { 
 					NOT = { 
+						publishing_rights = state_publishing 
 						publishing_rights = censored_publishing 
-						publishing_rights = firewall_publishing 
 					} 
 				} 
 			}
@@ -6593,7 +6593,7 @@ country_event = {
 		year = 1974
 		NOT = { year = 1980 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		
@@ -7154,7 +7154,7 @@ country_event = {
 		
 		}
 		
-		NOT = { publishing_rights = censored_publishing }
+		NOT = { publishing_rights = state_publishing }
 		
 		average_militancy = 5
 		average_consciousness = 4
@@ -7180,7 +7180,7 @@ country_event = {
 
 	mean_time_to_happen = {
 		months = 3
-		modifier = { factor = 3 publishing_rights = firewall_publishing }
+		modifier = { factor = 3 publishing_rights = censored_publishing }
 		modifier = { factor = 2 publishing_rights = responsible_publishing }
 	}
 
@@ -7325,7 +7325,7 @@ country_event = {
 		CHI = {
 			is_vassal = no
 			war = no
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		}
 		has_global_flag = HKG_SAR_option
 	}
@@ -7409,7 +7409,7 @@ country_event = {
 		CHI = {
 			is_vassal = no
 			war = no
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		}
 		has_global_flag = MCA_SAR_option
 	}
@@ -7561,8 +7561,8 @@ country_event = {
 		ai = no
 		OR = {
 			government = presidential_dictatorship
-			government = populist_dictatorship
 			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 			government = proletarian_dictatorship
 			government = proletarian_dictatorship1
 		}
@@ -7573,7 +7573,7 @@ country_event = {
 			NOT = { political_parties = parties_not_allowed }
 			NOT = { vote_franschise = none_voting }
 			
-			NOT = { OR = { publishing_rights = censored_publishing publishing_rights = firewall_publishing } }
+			NOT = { OR = { publishing_rights = state_publishing publishing_rights = censored_publishing } }
 			
 			NOT = { public_meetings = no_meetings }
 		}
@@ -7662,10 +7662,10 @@ country_event = {
 		random_owned = {
 			limit = { 
 				owner = { 
-					NOT = { OR = { publishing_rights = censored_publishing publishing_rights = firewall_publishing } }
+					NOT = { OR = { publishing_rights = state_publishing publishing_rights = censored_publishing } }
 				} 
 			}
-			owner = { political_reform = censored_publishing }
+			owner = { political_reform = state_publishing }
 		}
 		
 		random_owned = {
@@ -8225,7 +8225,7 @@ country_event = {
 	trigger = {
 		tag = RUS
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = yes
 		is_vassal = no
 		
@@ -8371,7 +8371,7 @@ country_event = {
 		political_reform = ruling_party_opinion
 		political_reform = no_meetings
 		political_reform = politicised_service
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = no_trade_unions
 		political_reform = parties_not_allowed
 		political_reform = open_immigration
@@ -8872,8 +8872,8 @@ country_event = {
 				owner = {  
 					OR = { 
 						government = presidential_dictatorship
-						government = populist_dictatorship
 						government = nationalist_dictatorship
+						government = sectarian_dictatorship
 					} 
 				} 
 			}

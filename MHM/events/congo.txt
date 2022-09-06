@@ -276,7 +276,7 @@ country_event = {
 
 	option = {
 		name = "Embrace the new Congo!"
-		government = populist_dictatorship
+		government = nationalist_dictatorship
 		ruling_party_ideology = traditionalist
 		ai_chance = { factor = 0.9 }
 	}
@@ -637,7 +637,7 @@ country_event = {
 		
 		release = KAT
 		KAT = { 
-			government = populist_dictatorship
+			government = nationalist_dictatorship
 			country_event = 800050
 			ruling_party_ideology = nationalist
 		}
@@ -719,7 +719,7 @@ country_event = {
 		
 		release = SKA
 		SKA = { 
-			government = populist_dictatorship
+			government = nationalist_dictatorship
 			country_event = 800050
 			ruling_party_ideology = populist
 		}
@@ -936,7 +936,7 @@ country_event = {
 		set_country_flag = presidential_system_republic
 			
 		political_reform = proportional_representation
-		political_reform = open_opinion
+		political_reform = semi_democratic_state_opinion
 		
 		ai_chance = { factor = 0.9 }
 	}

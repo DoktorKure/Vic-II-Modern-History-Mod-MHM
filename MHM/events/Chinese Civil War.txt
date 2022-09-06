@@ -30,7 +30,7 @@ country_event = {
 		CHI = { 
 			exists = yes
 			war_with = KMT
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		}
 		NOT = { has_country_flag = returned_manchuria }
 		
@@ -829,7 +829,7 @@ country_event = {
 			owner = { inherit = TAI }
 		}
 		
-		CHI = { government = populist_dictatorship } #So the tag switch will have the normal color instead of the communist color
+		CHI = { government = nationalist_dictatorship } #So the tag switch will have the normal color instead of the communist color
 		
 		#Become China
 		change_tag = CHI
@@ -1064,7 +1064,7 @@ country_event = {
 		KMT = { exists = no }
 		CHI = { 
 			exists = yes
-			NOT = { government = proletarian_dictatorship } 
+			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
 			is_vassal = no 
 			war = no
 		}
@@ -1129,7 +1129,7 @@ country_event = {
 		KMT = { exists = no }
 		CHI = { 
 			exists = yes
-			NOT = { government = proletarian_dictatorship } 
+			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
 			is_vassal = no 
 			war = no
 		}
@@ -1202,7 +1202,7 @@ country_event = {
 		
 		#KMT won the civil war
 		KMT = { exists = no }
-		NOT = { government = proletarian_dictatorship } 
+		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
 		
 		#USA owns Shanghai
 		USA = { is_our_vassal = SHG }

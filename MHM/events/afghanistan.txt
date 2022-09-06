@@ -21,14 +21,14 @@ country_event = {
   
  	option = {
     	name = EVT_8000109_A
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
 		country_event = 800050
 		ruling_party_ideology = nationalist
 		set_country_flag = afg_daoud_khan
 		#Trigger Afghan War later
 		set_global_flag = afghani_coup_1973
 		
-		any_state = { any_pop = { dominant_issue = { value = parties_allowed factor = 0.15 } } }
+		any_state = { any_pop = { dominant_issue = { value = parties_fair factor = 0.15 } } }
 		any_state = { any_pop = { dominant_issue = { value = planned_economy factor = 0.10 } } }
 		ai_chance = { factor = 0.9 }
 	}
@@ -90,7 +90,7 @@ country_event = {
 		year = 1996
 		NOT = { year = 2006 }
 		
-		OR = { government = democracy1 government = democracy government = nationalist_dictatorship }
+		OR = { government = democracy1 government = democracy government = sectarian_dictatorship }
 		NOT = { ruling_party_ideology = traditionalist }
 		is_vassal = no
 		war = no
@@ -155,7 +155,7 @@ country_event = {
     	year = 1978
 		NOT = { year = 1990 }
 		
-		government = populist_dictatorship 
+		government = nationalist_dictatorship 
     	is_vassal = no 
 		war = no
 		
@@ -275,7 +275,7 @@ country_event = {
     	year = 1979
 		NOT = { year = 2000 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no 
 		war = no
 		
@@ -339,7 +339,7 @@ country_event = {
 		AFG = {
 			exists = yes
 
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no 
 			war = no
 			
@@ -579,7 +579,7 @@ country_event = {
 		
 		#Add influence for USSR
 		random_owned = {
-			limit = { owner = { is_greater_power = yes government = proletarian_dictatorship } }
+			limit = { owner = { is_greater_power = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
 			owner = { diplomatic_influence = { who = AFG value = 200 } }
 		}
 		
@@ -636,7 +636,7 @@ country_event = {
 		
 		#USSR is unhappy
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			relation = { who = THIS value = -50 }
 		}
 		
@@ -690,13 +690,13 @@ country_event = {
 		}
 		
 		any_state = { any_pop = { dominant_issue = { value = moralism factor = 0.25 } } }
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		country_event = 800050
 		ruling_party_ideology = conservative
 		
 		#Soviet withdrawal
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			country_event = 8176114
 		}
   	}
@@ -739,7 +739,7 @@ country_event = {
 		#Gorbachev
 		RUS = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			OR = { 
 				ruling_party_ideology = communist_social 
 				has_country_flag = mikhail_gorbachev 

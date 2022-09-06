@@ -254,13 +254,13 @@ country_event = {
 		#Not a full Marxist state yet
 		government = democracy
 		
-		political_reform = registered_voting #Limited voting
-		political_reform = open_opinion #Two Per State
+		political_reform = harassed_voting #Limited voting
+		political_reform = semi_democratic_state_opinion #Two Per State
 		political_reform = limited_meetings
 		political_reform = elitist_service #Elitist
-		political_reform = firewall_publishing #censored_press
+		political_reform = censored_publishing #censored_press
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated #Rigged Campaigning
+		political_reform = parties_restricted #Rigged Campaigning
 		political_reform = no_draft #no_draft
 		political_reform = minorities_equal_rights
 		political_reform = proportional_representation
@@ -349,13 +349,13 @@ country_event = {
 
 		set_country_flag = rom_communist_path
       
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = none_voting #No voting
 		political_reform = limited_meetings
 		political_reform = politicised_service #Politicized
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		
 		set_country_flag = gheorghiu_dej_romania
 		
@@ -1071,7 +1071,7 @@ country_event = {
 		}
 		
 		#Set social reforms
-		social_reform = preemptive_security_actions
+		social_reform = excellent_security
 		social_reform = limited_child_care
 		
 		clr_country_flag = gheorghiu_dej_romania
@@ -1109,7 +1109,7 @@ country_event = {
 		relation = { who = RUS value = 50 }
 		
 		political_reform = no_meetings
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = parties_not_allowed #increased centralization
 		political_reform = nobody_gets_out
 		political_reform = minorities_oppression
@@ -1361,7 +1361,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 				ruling_party_ideology = communist
 				capital_scope = { continent = europe }
 			}
@@ -1636,7 +1636,7 @@ country_event = {
 		
 		NKO = { 
 			exists = yes 
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 			ruling_party_ideology = communist 
 			is_vassal = no 
 		}
@@ -1743,7 +1743,7 @@ country_event = {
 		has_country_flag = vrancea_earthquake
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		#is_vassal = no
 		war = no
 		
@@ -1984,7 +1984,7 @@ country_event = {
 		name = "Party Reformists use the chaos to organize a coup."
 
 		#Limited liberalisation
-		political_reform = open_opinion
+		political_reform = semi_democratic_state_opinion
 		political_reform = limited_meetings
 		political_reform = responsible_publishing
 

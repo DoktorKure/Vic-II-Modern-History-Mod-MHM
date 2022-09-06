@@ -145,7 +145,7 @@ country_event = {
 		year = 1980
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -221,7 +221,7 @@ country_event = {
 		year = 1994
 		NOT = { year = 2004 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -300,7 +300,7 @@ country_event = {
 		year = 1990
 		NOT = { year = 2000 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -373,7 +373,7 @@ country_event = {
 		year = 1990
 		NOT = { year = 2000 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		

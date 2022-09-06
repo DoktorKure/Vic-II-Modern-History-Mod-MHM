@@ -63,7 +63,7 @@ country_event = {
 				tag = USA 
 				is_greater_power = yes 
 				government = democracy 
-				ETH = { NOT = { government = proletarian_dictatorship } } 
+				ETH = { NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } 
 			}
 			relation = { who = THIS value = -50 }
 		}
@@ -479,7 +479,7 @@ country_event = {
 		has_country_flag = derg
 		NOT = { has_global_flag = 1992_start_date_flag }
 	
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 	
@@ -544,7 +544,7 @@ country_event = {
 		has_global_flag = autumn_of_nations
 		NOT = { has_global_flag = 1992_start_date_flag }
 	
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 	
@@ -761,11 +761,11 @@ country_event = {
 		
 		#Weak democracy
 		government = democracy
-		political_reform = regulated_opinion
-		political_reform = registered_voting
+		political_reform = appointed_opinion
+		political_reform = harassed_voting
 		political_reform = minorities_equal_rights
 		political_reform = elitist_service
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = responsible_publishing
 		political_reform = free_trade_unions
 		political_reform = limited_meetings
@@ -805,11 +805,11 @@ country_event = {
 		
 		#Strong democracy
 		government = democracy
-		political_reform = universal_weighted_voting
-		political_reform = free_opinion
+		political_reform = rigged_voting
+		political_reform = democratic_state_opinion
 		political_reform = minorities_equal_rights
 		political_reform = elitist_service
-		political_reform = parties_restrict_non_democratic
+		political_reform = parties_rigged
 		political_reform = responsible_publishing
 		political_reform = free_trade_unions
 		political_reform = free_meetings
@@ -914,7 +914,7 @@ country_event = {
 		#Begin the war!
 		release = TIG
 		TIG = {
-			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 			country_event = 800050
 			ruling_party_ideology = socialist
 			
@@ -940,7 +940,7 @@ country_event = {
 			secede_province = ORM 
 		}
 		ORM = {
-			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 			country_event = 800050
 			ruling_party_ideology = nationalist
 			

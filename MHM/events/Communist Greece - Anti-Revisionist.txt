@@ -13,7 +13,7 @@ country_event = { # Father of all Peoples
 		year = 1957
 		NOT = { year = 1962 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_global_flag = de_stalinization
@@ -82,7 +82,7 @@ country_event = { # Reforming the Stalinist Model?
 		year = 1960
 		NOT = { year = 1970 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_country_flag = ugr_civil_war_victory
@@ -145,7 +145,7 @@ country_event = { # Echoes of Cybernetics
 		year = 1965
 		NOT = { year = 1975 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_country_flag = ugr_civil_war_victory
@@ -211,7 +211,7 @@ country_event = { # Reconciliation with Albania?
 		year = 1971
 		NOT = { year = 1980 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -220,7 +220,7 @@ country_event = { # Reconciliation with Albania?
 		ALB = {
 			exists = yes
 			
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_vassal = no 
 			war = no
 			
@@ -246,7 +246,7 @@ country_event = { # Reconciliation with Albania?
 		prestige = 100
 		
 		create_alliance = ALB
-		random_country = { limit = { tag = ALB government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 300 } }
+		random_country = { limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 300 } }
 		
 		ai_chance = { factor = 0.7 }
 	}
@@ -254,7 +254,7 @@ country_event = { # Reconciliation with Albania?
 	option = {
 		name = "A little too fanatic, perhaps..."
 		
-		random_country = { limit = { tag = ALB government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -150 } }
+		random_country = { limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -150 } }
 		
 		ai_chance = { factor = 0.3 }
 	}
@@ -274,7 +274,7 @@ country_event = { # Death of Zachariadis - Automation
 		year = 1981
 		NOT = { year = 1986 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
 		
 		has_country_flag = ugr_civil_war_victory
@@ -327,7 +327,7 @@ country_event = { # Death of Zachariadis - Conservatives
 		year = 1981
 		NOT = { year = 1986 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		
@@ -419,7 +419,7 @@ country_event = { # Death of Zachariadis - Reformists
 		year = 1981
 		NOT = { year = 1986 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -562,7 +562,7 @@ country_event = { # Joining China?
 		year = 1957
 		NOT = { year = 1975 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -582,7 +582,7 @@ country_event = { # Joining China?
 		
 		#PRC
 		CHI = {
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_greater_power = yes
 			war = no
 			
@@ -599,8 +599,8 @@ country_event = { # Joining China?
 		clr_country_flag = ugr_marxist_leninism
 		clr_country_flag = ugr_anti_revisionist
 		
-		random_country = { limit = { tag = CHI government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 300 } create_alliance = CHI }
-		random_country = { limit = { tag = ALB government = proletarian_dictatorship is_vassal = no OR = { in_sphere = CHI alliance_with = CHI } } relation = { who = THIS value = 300 } create_alliance = ALB }
+		random_country = { limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 300 } create_alliance = CHI }
+		random_country = { limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no OR = { in_sphere = CHI alliance_with = CHI } } relation = { who = THIS value = 300 } create_alliance = ALB }
 		
 		ai_chance = { factor = 0.8 }
 	}
@@ -610,8 +610,8 @@ country_event = { # Joining China?
 		
 		prestige_factor = -0.5
 		
-		random_country = { limit = { tag = CHI government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -300 } }
-		random_country = { limit = { tag = ALB government = proletarian_dictatorship is_vassal = no OR = { in_sphere = CHI alliance_with = CHI } } relation = { who = THIS value = -300 } }
+		random_country = { limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -300 } }
+		random_country = { limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no OR = { in_sphere = CHI alliance_with = CHI } } relation = { who = THIS value = -300 } }
 		
 		ai_chance = { factor = 0.1 }
 	}
@@ -631,7 +631,7 @@ country_event = { # Spreading Mao's thought
 		year = 1960
 		NOT = { year = 1975 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		
@@ -646,7 +646,7 @@ country_event = { # Spreading Mao's thought
 		
 		#PRC
 		CHI = {
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_greater_power = yes
 			
 			ruling_party_ideology = communist
@@ -704,7 +704,7 @@ country_event = { # Greek Cultural Revolution?
 		year = 1970
 		NOT = { year = 1978 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		ruling_party_ideology = communist
@@ -719,7 +719,7 @@ country_event = { # Greek Cultural Revolution?
 		
 		#PRC
 		CHI = {
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_greater_power = yes
 			
 			ruling_party_ideology = communist
@@ -786,7 +786,7 @@ country_event = { # The Red Guards
 		year = 1971
 		NOT = { year = 1979 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		
@@ -841,7 +841,7 @@ country_event = { # Fight against Beliefs - South Macedonia not independent
 		year = 1973
 		NOT = { year = 1979 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		
@@ -887,7 +887,7 @@ country_event = { # Fight against Beliefs - South Macedonia independent
 		year = 1973
 		NOT = { year = 1979 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		
@@ -986,7 +986,7 @@ country_event = { # Ideological Purification
 		year = 1974
 		NOT = { year = 1981 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		
@@ -1029,7 +1029,7 @@ country_event = { # Ideological Purification
 			reduce_pop = 0.97
 		}
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -200 } diplomatic_influence = { who = THIS value = -50 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -200 } diplomatic_influence = { who = THIS value = -50 } }
 		
 		ai_chance = { factor = 0.4 }
 	}
@@ -1045,7 +1045,7 @@ country_event = { # Ideological Purification
 			reduce_pop = 0.98
 		}
 		
-		random_country = { limit = { tag = CHI government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 200 } diplomatic_influence = { who = THIS value = -50 } }
+		random_country = { limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 200 } diplomatic_influence = { who = THIS value = -50 } }
 		
 		ai_chance = { factor = 0.1 }
 	}
@@ -1065,7 +1065,7 @@ country_event = { # Death of Zachariadis - Maoist
 		year = 1981
 		NOT = { year = 1986 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		
@@ -1143,7 +1143,7 @@ country_event = { # Death of Zachariadis - Maoist Reformist
 		year = 1981
 		NOT = { year = 1986 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		
@@ -1221,7 +1221,7 @@ country_event = { # Continue the Cultural Revolution?
 		year = 1982
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		
@@ -1254,7 +1254,7 @@ country_event = { # Continue the Cultural Revolution?
 			militancy = 6 consciousness = 5
 		}
 		
-		random_country = { limit = { tag = CHI government = proletarian_dictatorship ruling_party_ideology = communist is_vassal = no } relation = { who = THIS value = 200 } }
+		random_country = { limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist is_vassal = no } relation = { who = THIS value = 200 } }
 		
 		ai_chance = {
 			factor = 0.8
@@ -1276,7 +1276,7 @@ country_event = { # Continue the Cultural Revolution?
 			militancy = -2 consciousness = -2
 		}
 		
-		random_country = { limit = { tag = CHI government = proletarian_dictatorship ruling_party_ideology = communist is_vassal = no } relation = { who = THIS value = -75 } }
+		random_country = { limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist is_vassal = no } relation = { who = THIS value = -75 } }
 		
 		ai_chance = { factor = 0.1 }
 	}
@@ -1294,7 +1294,7 @@ country_event = { # Continue the Cultural Revolution?
 			militancy = -5 consciousness = -5
 		}
 		
-		random_country = { limit = { tag = CHI government = proletarian_dictatorship ruling_party_ideology = communist is_vassal = no } relation = { who = THIS value = -200 } }
+		random_country = { limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist is_vassal = no } relation = { who = THIS value = -200 } }
 		
 		ai_chance = { factor = 0.1 }
 	}
@@ -1314,7 +1314,7 @@ country_event = { # Economic Committee
 		year = 1983
 		NOT = { year = 1991 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		
@@ -1351,8 +1351,8 @@ country_event = { # Economic Committee
 			consciousness = 3
 		}
 		
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = 200 } }
-		random_country = { limit = { tag = CHI government = proletarian_dictatorship ruling_party_ideology = communist is_vassal = no } relation = { who = THIS value = -200 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = 200 } }
+		random_country = { limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist is_vassal = no } relation = { who = THIS value = -200 } }
 		
 		ai_chance = {
 			factor = 0.7
@@ -1384,8 +1384,8 @@ country_event = { # Economic Committee
 		prestige = 50
 		
 		random_country = { limit = { tag = USA government = democracy is_vassal = no } relation = { who = THIS value = 75 } }
-		random_country = { limit = { tag = RUS government = proletarian_dictatorship is_vassal = no } relation = { who = THIS value = -300 } }
-		random_country = { limit = { tag = CHI government = proletarian_dictatorship ruling_party_ideology = communist is_vassal = no } relation = { who = THIS value = -300 } }
+		random_country = { limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no } relation = { who = THIS value = -300 } }
+		random_country = { limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist is_vassal = no } relation = { who = THIS value = -300 } }
 		
 		any_pop = {
 			militancy = -4 consciousness = -4
@@ -1415,7 +1415,7 @@ country_event = { # Victory of the Cultural Revolution
 		OR = { tag = UGR tag = GRE }
 		year = 1995
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		

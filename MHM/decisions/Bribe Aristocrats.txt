@@ -7,7 +7,7 @@ bribe_aristocrats = {
 
 		NOT = { has_country_modifier = bribed_aristocrats }
 
-		political_opinions = regulated_opinion
+		political_opinions = appointed_opinion
 
 	}
 

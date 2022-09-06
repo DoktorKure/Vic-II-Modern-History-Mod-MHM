@@ -4,7 +4,7 @@ country_event = {
   title = EVT_8023020_NAME
   # EVT_8023020_NAME;Transnistria War
   desc = EVT_8023020_DESC 
-  # EVT_8023020_DESC;The Transnistria War was a limited conflict that broke out in November 1990 at Dubari between pro-Transnistria forces, including the Transnistrian Republican Guard, militia and Cossack units, and supported by elements of the Russian 14th Army, and pro-Moldovan forces, including Moldovan troops and police. Fighting intensified on 1 March 1992 and, alternating with ad hoc ceasefires, lasted throughout the spring and early summer of 1992 until a ceasefire was declared on 21 July 1992, which has held. 
+  # EVT_8023020_DESC;The Transnistria War was a limited conflict that broke out in November 1990 at Dubari between pro-Transnistria forces, including the Transnistrian Republican Guard, militia and Cossack units, and supported by elements of the Russian 14th Army, and pro-Moldovan forces, including Moldovan troops and basic_security. Fighting intensified on 1 March 1992 and, alternating with ad hoc ceasefires, lasted throughout the spring and early summer of 1992 until a ceasefire was declared on 21 July 1992, which has held. 
   picture = "transnistria_war"
   
 	fire_only_once = yes

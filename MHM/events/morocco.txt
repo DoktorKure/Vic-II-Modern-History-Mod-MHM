@@ -120,7 +120,7 @@ ai_chance = { factor = 0.7 }
   option = {
 	name = EVT_8009925_A
 	1773 = { secede_province = WSA }
-WSA = { government = populist_dictatorship country_event = 800050 }
+WSA = { government = nationalist_dictatorship country_event = 800050 }
 
 war = {
 	target = WSA

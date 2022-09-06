@@ -939,7 +939,7 @@ country_event = {
 			union_rights = restricted_unions
 			union_rights = free_trade_unions
 		}
-		publishing_rights = unregulated_publishing
+		publishing_rights = free_publishing
 		NOT = {
 			ruling_party_ideology = socialist
 		}
@@ -1220,7 +1220,7 @@ country_event = {
 			government = hms_government1
 			government = absolute_monarchy
 		}
-		publishing_rights = unregulated_publishing
+		publishing_rights = free_publishing
 	}
 	
 	mean_time_to_happen = {
@@ -2082,7 +2082,7 @@ country_event = {
 	trigger = {
 		is_ideology_enabled = nationalist
 		civilized = yes
-		publishing_rights = unregulated_publishing
+		publishing_rights = free_publishing
 		OR = {
 			government = democracy
 			government = hms_government
@@ -3091,7 +3091,7 @@ country_event = {
 		modifier = {
 			factor = 0.8
 			any_neighbor_country = {
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			}
 		}
 	}
@@ -3204,8 +3204,8 @@ country_event = {
 		OR = {
 			government = absolute_monarchy
 			government = presidential_dictatorship
-			government = populist_dictatorship
 			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 		}
 	}
 
@@ -3307,7 +3307,7 @@ country_event = {
 		modifier = {
 			factor = 0.8
 			any_neighbor_country = {
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			}
 		}
 	}
@@ -3509,7 +3509,7 @@ country_event = {
 		modifier = {
 			factor = 0.8
 			any_neighbor_country = {
-				government = proletarian_dictatorship
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			}
 		}
 	}
@@ -3705,7 +3705,7 @@ province_event = {
 		modifier = {
 			factor = 0.8
 			any_neighbor_province = {
-				owner = { government = proletarian_dictatorship }
+				owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			}
 		}
 		modifier = {

@@ -36,7 +36,7 @@ political_decisions = {
 	construct_presidential_palace = {
 		picture = "presidential_palace"
 		potential = {
-			OR = { government = presidential_dictatorship government = theocracy government = nationalist_dictatorship government = populist_dictatorship }
+			OR = { government = presidential_dictatorship government = theocracy government = sectarian_dictatorship government = nationalist_dictatorship }
 			NOT = { capital_scope = { has_province_modifier = presidential_palace } }
 		}
 		allow = {

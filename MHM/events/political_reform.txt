@@ -8,14 +8,14 @@ country_event = {
 	trigger = {
 			ai = no
 			OR = {
+				publishing_rights = state_publishing
 				publishing_rights = censored_publishing
-				publishing_rights = firewall_publishing
 				}
 			consciousness = 5
 			literacy = 0.20
-			unregulated_publishing = 10
+			free_publishing = 10
 			any_neighbor_country = {
-				publishing_rights = unregulated_publishing
+				publishing_rights = free_publishing
 			}
 			NOT = {
 				OR = {
@@ -34,7 +34,7 @@ country_event = {
 		any_pop = {
 			dominant_issue = {
 				factor = 0.1
-				value = unregulated_publishing
+				value = free_publishing
 			}
 		}
 		set_country_flag = unregulated_publishing_promised
@@ -46,7 +46,7 @@ country_event = {
 	option = {
 		name = "EVTOPTB90100"
 		scaled_militancy = {
-				issue = unregulated_publishing
+				issue = free_publishing
 				factor = 2
 			}
 		set_country_flag = unregulated_publishing_noway
@@ -61,8 +61,8 @@ country_event = {
 
 	trigger = {
 			OR = {
+				publishing_rights = state_publishing
 				publishing_rights = censored_publishing
-				publishing_rights = firewall_publishing
 			}
 			consciousness = 5
 			literacy = 0.20
@@ -77,7 +77,7 @@ country_event = {
 	option = {
 		name = "EVTOPTA90101" 
 		scaled_militancy = {
-			issue = unregulated_publishing
+			issue = free_publishing
 			factor = 4
 		}
 	}

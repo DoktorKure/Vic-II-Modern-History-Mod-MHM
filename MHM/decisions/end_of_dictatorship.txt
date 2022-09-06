@@ -4,11 +4,11 @@ political_decisions = {
 	presidential_plebiscite = {
 		picture = "presidential_plebiscite"
 		# presidential_plebiscite_title;Presidential Plebiscite
-		# presidential_plebiscite_desc;According to the transitional provisions of the New Constitution, a plebiscite was scheduled to vote on a new eight-year presidential term. During the last years of dictatorship the commander in chiefs of the navy, air force and police disassociated themselves from the president expressing their wishes that a civilian should represent the regime in the upcomming elections. The fact the dictatorship respected the results is attributed to pressure from the big business, the international community and unease with extended junta-rule.
+		# presidential_plebiscite_desc;According to the transitional provisions of the New Constitution, a plebiscite was scheduled to vote on a new eight-year presidential term. During the last years of dictatorship the commander in chiefs of the navy, air force and basic_security disassociated themselves from the president expressing their wishes that a civilian should represent the regime in the upcomming elections. The fact the dictatorship respected the results is attributed to pressure from the big business, the international community and unease with extended junta-rule.
 		potential = {
 			has_country_flag = president_for_life
 			
-			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship government = theocracy }
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship government = theocracy }
 		}
 
 		allow = {
@@ -78,7 +78,7 @@ political_decisions = {
 	reform_dictatorship_parliament = {
 		picture = "reform_dictatorship_parliament"
 		potential = {
-			OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship government = theocracy }
+			OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship government = theocracy }
 			political_opinions = ruling_party_opinion
 		}
 
@@ -114,7 +114,7 @@ political_decisions = {
 		}
 
 		effect = {
-			political_reform = regulated_opinion
+			political_reform = appointed_opinion
 			
 			add_country_modifier = { name = transition_to_democracy duration = 730 }
 			
@@ -150,11 +150,11 @@ political_decisions = {
 		# new_constitution_title;New Constitution
 		# new_constitution_desc;Establishing a new constitution was a core issue for the dictatorship since it provided a mean of legitimization.[3] For this purpose the junta selected notable civilians willing to join the draft commission. Dissidents to the dictatorship were not represented in the commission. The new constitution was approved in a national plebiscite.
 		potential = {
-			political_opinions = regulated_opinion
+			political_opinions = appointed_opinion
 			
 			political_parties = parties_not_allowed
 			
-			OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship government = theocracy }
+			OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship government = theocracy }
 			NOT = { has_country_modifier = new_constitution_modifier }
 			
 			is_vassal = no
@@ -189,8 +189,8 @@ political_decisions = {
 
 		effect = {
 		
-			political_reform = open_opinion
-			political_reform = parties_only_nominated
+			political_reform = semi_democratic_state_opinion
+			political_reform = parties_restricted
 		
 			add_country_modifier = { name = new_constitution_modifier duration = 1825 }
 			add_country_modifier = { name = transition_to_democracy duration = 730 }

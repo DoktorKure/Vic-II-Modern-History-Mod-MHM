@@ -402,7 +402,7 @@ country_event = {
 	option = {
 		name = "We will use any means possible to stay independent"  	
         FROM = { country_event = 5079 }	
-        government = nationalist_dictatorship
+        government = sectarian_dictatorship
 		country_event = 800050
 		ruling_party_ideology = nationalist
 		

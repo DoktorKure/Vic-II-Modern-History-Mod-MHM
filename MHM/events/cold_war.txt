@@ -91,8 +91,9 @@ country_event = {
 		NOT = { has_country_modifier = unrecognized_government }
 		OR = { 
 			government = proletarian_dictatorship
-			government = populist_dictatorship
-			government = nationalist_dictatorship 
+			government = proletarian_dictatorship1
+			government = nationalist_dictatorship
+			government = sectarian_dictatorship 
 			government = theocracy 
 		}
 	}
@@ -315,8 +316,8 @@ country_event = {
 							government = theocracy
 							government = absolute_monarchy
 							AND = { government = presidential_dictatorship NOT = { ruling_party_ideology = socialist } }
-							AND = { government = populist_dictatorship NOT = { ruling_party_ideology = socialist } }
 							AND = { government = nationalist_dictatorship NOT = { ruling_party_ideology = socialist } }
+							AND = { government = sectarian_dictatorship NOT = { ruling_party_ideology = socialist } }
 						}
 					}
 					AND = {
@@ -549,8 +550,8 @@ country_event = {
 				government = theocracy
 				government = absolute_monarchy
 				AND = { government = presidential_dictatorship NOT = { ruling_party_ideology = socialist } }
-				AND = { government = populist_dictatorship NOT = { ruling_party_ideology = socialist } }
 				AND = { government = nationalist_dictatorship NOT = { ruling_party_ideology = socialist } }
+				AND = { government = sectarian_dictatorship NOT = { ruling_party_ideology = socialist } }
 			}
 		}
 

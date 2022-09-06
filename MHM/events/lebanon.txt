@@ -42,7 +42,7 @@ country_event = {
 	option = {
 		name = "Surrender to the rebels"
 		prestige_factor = -0.25
-		government = nationalist_dictatorship
+		government = sectarian_dictatorship
 		ruling_party_ideology = traditionalist
 		ISR = { country_event = 80087511 }
 
@@ -123,7 +123,7 @@ country_event = {
 	war = no
 	year = 1976 NOT = { year = 1990 }
 	neighbour = LEB
-OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship }
+OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
 	LEB = { exists = yes war = no is_vassal = no }
 	LEB = { owns = 912 owns = 914 }
 	PAL = { exists = no }

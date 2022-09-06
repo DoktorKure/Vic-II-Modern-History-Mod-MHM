@@ -30,8 +30,8 @@ overlord = { has_country_flag = liberal_revolution_in_progress }
 			has_country_flag = liberal_revolution_fired
 			has_country_flag = had_liberal_revolution
 			}
-			vote_franschise = promoted_voting
-			vote_franschise = universal_voting
+			vote_franschise = gerrymandered_voting
+			vote_franschise = free_voting
 OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = socialist_democracy }
 		}
 		NOT = {
@@ -71,11 +71,11 @@ OR = { government = democracy government = democracy1 government = hms_governmen
 		}
 		modifier = {
 			factor = 1.5
-			publishing_rights = censored_publishing
+			publishing_rights = state_publishing
 		}
 		modifier = {
 			factor = 1.25
-			publishing_rights = firewall_publishing
+			publishing_rights = censored_publishing
 		}
 		modifier = {
 			factor = 1.25
@@ -91,7 +91,7 @@ OR = { government = democracy government = democracy1 government = hms_governmen
 		}
 		modifier = {
 			factor = 0.8
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 	
@@ -135,8 +135,8 @@ country_event = {
 		}
 		NOT = {
 			OR = {
-				vote_franschise = promoted_voting
-				vote_franschise = universal_voting
+				vote_franschise = gerrymandered_voting
+				vote_franschise = free_voting
 			}
 		}
 	}
@@ -267,8 +267,8 @@ country_event = {
 			has_country_flag = liberal_revolution_fired
 		}
 		OR = {
-			vote_franschise = promoted_voting
-			vote_franschise = universal_voting
+			vote_franschise = gerrymandered_voting
+			vote_franschise = free_voting
 		}
 		NOT = { num_of_revolts = 1 }
 	}
@@ -277,7 +277,7 @@ country_event = {
 		months = 12
 		modifier = {
 			factor = 1.5
-			vote_franschise = promoted_voting
+			vote_franschise = gerrymandered_voting
 		}
 		modifier = {
 			factor = 1.5
@@ -285,27 +285,27 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-NOT = { OR = { publishing_rights = responsible_publishing publishing_rights = unregulated_publishing } }
+NOT = { OR = { publishing_rights = responsible_publishing publishing_rights = free_publishing } }
 		}
 		modifier = {
 			factor = 1.5
 			NOT = {
 				OR = {
-		political_parties = parties_restrict_non_democratic
-		political_parties = parties_promote_democratic
-		political_parties = parties_allowed
+		political_parties = parties_rigged
+		political_parties = parties_short
+		political_parties = parties_fair
 				}
 			}
 		}
 		modifier = {
 			factor = 0.1
-			vote_franschise = universal_voting
+			vote_franschise = free_voting
 			public_meetings = free_meetings
-OR = { publishing_rights = responsible_publishing publishing_rights = unregulated_publishing }
+OR = { publishing_rights = responsible_publishing publishing_rights = free_publishing }
 			OR = {
-		political_parties = parties_restrict_non_democratic
-		political_parties = parties_promote_democratic
-		political_parties = parties_allowed
+		political_parties = parties_rigged
+		political_parties = parties_short
+		political_parties = parties_fair
 			}
 		}		
 	}
@@ -337,8 +337,8 @@ OR = { publishing_rights = responsible_publishing publishing_rights = unregulate
 		any_neighbor_country = {
 			limit = {
 				NOT = {
-				vote_franschise = promoted_voting
-				vote_franschise = universal_voting
+				vote_franschise = gerrymandered_voting
+				vote_franschise = free_voting
 				}
 			}
 			scaled_militancy = {
@@ -480,7 +480,7 @@ country_event = {
 	trigger = {
 			has_country_flag = liberal_revolution_in_progress
 			NOT = {
-				publishing_rights = unregulated_publishing
+				publishing_rights = free_publishing
 			}
 		
 	}
@@ -1577,7 +1577,7 @@ country_event = {
 		civilized = yes
 		average_consciousness = 3
 		NOT = {
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 
@@ -1646,7 +1646,7 @@ country_event = {
 	trigger = {
 		NOT = {
 			economic_policy = laissez_faire
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		}
 		has_pop_type = capitalists
 		average_consciousness = 2
@@ -1720,7 +1720,7 @@ country_event = {
 		trust_busting = 1
 		civilized = yes
 		NOT = {
-			publishing_rights = censored_publishing
+			publishing_rights = state_publishing
 		}
 	}
 
@@ -1779,8 +1779,8 @@ country_event = {
 	trigger = {
 		NOT = {
 			OR = {
-				vote_franschise = universal_weighted_voting
-				vote_franschise = promoted_voting
+				vote_franschise = rigged_voting
+				vote_franschise = gerrymandered_voting
 			}
 		}
 		civilized = yes

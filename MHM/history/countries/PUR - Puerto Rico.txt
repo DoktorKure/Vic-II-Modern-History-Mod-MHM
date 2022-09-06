@@ -20,28 +20,28 @@ upper_house = {
 	communist = 5
 	}
 # Political Reforms
-political_opinions = regulated_opinion
+political_opinions = appointed_opinion
 minorities_reform = minorities_oppression
 immigration_policy = quota_immigration
 civil_service = politicised_service
-political_parties = parties_only_nominated
+political_parties = parties_restricted
 conscription_policy = no_draft
-publishing_rights = censored_publishing
+publishing_rights = state_publishing
 union_rights = no_trade_unions
 voting_system = proportional_representation
-vote_franschise = registered_voting
+vote_franschise = harassed_voting
 public_meetings = limited_meetings penal_system = capital_punishment
 # Social Reforms
-safety_regulations = some_regulations
+safety_regulations = no_safety
 pensions = no_pensions
-education = self_financed_education
+education = private_education
 health_care = no_health_care
-security_reform = police
+security_reform = basic_security
 child_care = no_child_care
 unemployment_subsidies = no_subsidies
 pollution = no_controls
-wage_and_work_hours = unregulated_hours
-social_service_reform = no_social_service
+wage_reform = unregulated_hours
+public_housing_reform = no_public_housing
 # Technologies
 gold_standard = 1
 radio_network = 1
@@ -73,28 +73,28 @@ schools = army_tech_school
 		communist = 5
 		}
 	# Political Reforms
-	political_opinions = regulated_opinion
+	political_opinions = appointed_opinion
 	minorities_reform = minorities_equal_rights
 	immigration_policy = quota_immigration
 	civil_service = politicised_service
-	political_parties = parties_allowed
+	political_parties = parties_fair
 	conscription_policy = three_year_draft
-	publishing_rights = firewall_publishing
+	publishing_rights = censored_publishing
 	union_rights = no_trade_unions
 	voting_system = proportional_representation
-	vote_franschise = universal_weighted_voting
+	vote_franschise = rigged_voting
 	public_meetings = free_meetings penal_system = capital_punishment
 	# Social Reforms
-	safety_regulations = balanced_regulations
+	safety_regulations = trinket_safety
 	pensions = trinket_pensions
-	education = public_education
+	education = weak_public_education
 	health_care = low_health_care
-	security_reform = security_service
+	security_reform = weak_security
 	child_care = limited_child_care
-	unemployment_subsidies = ghent_system
+	unemployment_subsidies = low_subsidies
 	pollution = low_envir
-	wage_and_work_hours = eight_work_hours
-	social_service_reform = social_services
+	wage_reform = trinket_wage
+	public_housing_reform = minimal_public_housing
 	# Technologies
 	post_war_radar = 1
 	strategic_bomber = 1

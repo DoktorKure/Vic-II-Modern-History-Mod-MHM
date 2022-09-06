@@ -60,7 +60,7 @@ country_event = {
 		diplomatic_influence = { who = TRE value = 200 }
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 25 }
 		}
 		

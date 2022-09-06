@@ -39,13 +39,13 @@ country_event = {
 		}
 		
 		government = democracy
-		political_reform = universal_voting
-		political_reform = open_opinion
+		political_reform = free_voting
+		political_reform = semi_democratic_state_opinion
 		political_reform = limited_meetings
 		political_reform = elitist_service #Elitist
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		political_reform = state_controlled_unions #State Unions
-		political_reform = parties_only_nominated
+		political_reform = parties_restricted
 		political_reform = open_immigration
 		political_reform = no_draft #no_draft
 		political_reform = minorities_affirmative_action
@@ -111,7 +111,7 @@ country_event = {
 
 		#Parties to the war
 		GRE = { government = hms_government }
-		UGR = { government = proletarian_dictatorship }
+		UGR = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		
 		#War is underway
 		GRE = { war_with = UGR }
@@ -1482,7 +1482,7 @@ country_event = {
 		
 		RUS = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			OR = { 
 				ruling_party_ideology = communist_social 
 				has_country_flag = mikhail_gorbachev 
@@ -1586,7 +1586,7 @@ country_event = {
 		
 		RUS = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			OR = { 
 				ruling_party_ideology = communist_social 
 				has_country_flag = mikhail_gorbachev 
@@ -1655,7 +1655,7 @@ country_event = {
 
 		RUS = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			OR = { 
 				ruling_party_ideology = communist_social 
 				has_country_flag = mikhail_gorbachev 

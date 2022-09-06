@@ -15,7 +15,7 @@ country_event = {
 		is_disarmed = no
 		ENG = { owns = 2131 }
 		ENG = { is_vassal = no }
-		OR = { government = presidential_dictatorship government = populist_dictatorship ruling_party_ideology = nationalist }
+		OR = { government = presidential_dictatorship government = nationalist_dictatorship ruling_party_ideology = nationalist }
 	}
 
 	mean_time_to_happen = { months = 4 }

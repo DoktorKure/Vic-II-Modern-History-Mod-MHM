@@ -29,13 +29,13 @@ country_event = {
 		
 		#International customary law
 		OR = {
-			any_neighbor_country = { vote_franschise = universal_voting }
-			any_greater_power = { vote_franschise = universal_voting }
+			any_neighbor_country = { vote_franschise = free_voting }
+			any_greater_power = { vote_franschise = free_voting }
 		}
 		
 		#Weak voting laws
 		NOT = {
-			vote_franschise = universal_voting
+			vote_franschise = free_voting
 		}
 	}
 
@@ -84,10 +84,10 @@ country_event = {
 		any_pop = { scaled_militancy = { factor = 5 ideology = conservative } scaled_militancy = { factor = 5 ideology = traditionalist } scaled_militancy = { factor = 5 ideology = nationalist } scaled_militancy = { factor = 5 ideology = populist } }
 		
 		#Increase reforms by one
-		random_owned = { limit = { owner = { vote_franschise = promoted_voting } } owner = { political_reform = universal_voting } }
-		random_owned = { limit = { owner = { vote_franschise = universal_weighted_voting } } owner = { political_reform = promoted_voting } }
-		random_owned = { limit = { owner = { vote_franschise = registered_voting } } owner = { political_reform = universal_weighted_voting } }
-		random_owned = { limit = { owner = { vote_franschise = none_voting } } owner = { political_reform = registered_voting } }
+		random_owned = { limit = { owner = { vote_franschise = gerrymandered_voting } } owner = { political_reform = free_voting } }
+		random_owned = { limit = { owner = { vote_franschise = rigged_voting } } owner = { political_reform = gerrymandered_voting } }
+		random_owned = { limit = { owner = { vote_franschise = harassed_voting } } owner = { political_reform = rigged_voting } }
+		random_owned = { limit = { owner = { vote_franschise = none_voting } } owner = { political_reform = harassed_voting } }
 		
 		ai_chance = { factor = 0.1 modifier = { factor = 0 OR = { ruling_party_ideology = conservative ruling_party_ideology = traditionalist ruling_party_ideology = nationalist ruling_party_ideology = populist } } }
 	}
@@ -295,13 +295,13 @@ country_event = {
 		
 		#International customary law
 		OR = {
-			any_neighbor_country = { publishing_rights = unregulated_publishing }
-			any_greater_power = { publishing_rights = unregulated_publishing }
+			any_neighbor_country = { publishing_rights = free_publishing }
+			any_greater_power = { publishing_rights = free_publishing }
 		}
 		
 		#Weak voting laws
 		NOT = {
-			publishing_rights = unregulated_publishing
+			publishing_rights = free_publishing
 		}
 	}
 
@@ -350,9 +350,9 @@ country_event = {
 		any_pop = { scaled_militancy = { factor = 5 ideology = conservative } scaled_militancy = { factor = 5 ideology = traditionalist } scaled_militancy = { factor = 5 ideology = nationalist } scaled_militancy = { factor = 5 ideology = populist } }
 		
 		#Increase reforms by one
-		random_owned = { limit = { owner = { publishing_rights = responsible_publishing } } owner = { political_reform = unregulated_publishing } }
-		random_owned = { limit = { owner = { publishing_rights = firewall_publishing } } owner = { political_reform = responsible_publishing } }
-		random_owned = { limit = { owner = { publishing_rights = censored_publishing } } owner = { political_reform = firewall_publishing } }
+		random_owned = { limit = { owner = { publishing_rights = responsible_publishing } } owner = { political_reform = free_publishing } }
+		random_owned = { limit = { owner = { publishing_rights = censored_publishing } } owner = { political_reform = responsible_publishing } }
+		random_owned = { limit = { owner = { publishing_rights = state_publishing } } owner = { political_reform = censored_publishing } }
 		
 		ai_chance = { factor = 0.1 modifier = { factor = 0 OR = { ruling_party_ideology = conservative ruling_party_ideology = traditionalist ruling_party_ideology = nationalist ruling_party_ideology = populist } } }
 	}
@@ -473,13 +473,13 @@ country_event = {
 		
 		#International customary law
 		OR = {
-			any_neighbor_country = { political_parties = parties_allowed }
-			any_greater_power = { political_parties = parties_allowed }
+			any_neighbor_country = { political_parties = parties_fair }
+			any_greater_power = { political_parties = parties_fair }
 		}
 		
 		#Weak voting laws
 		NOT = {
-			political_parties = parties_allowed
+			political_parties = parties_fair
 		}
 	}
 
@@ -528,10 +528,10 @@ country_event = {
 		any_pop = { scaled_militancy = { factor = 5 ideology = conservative } scaled_militancy = { factor = 5 ideology = traditionalist } scaled_militancy = { factor = 5 ideology = nationalist } scaled_militancy = { factor = 5 ideology = populist } }
 		
 		#Increase reforms by one
-		random_owned = { limit = { owner = { political_parties = parties_promote_democratic } } owner = { political_reform = parties_allowed } }
-		random_owned = { limit = { owner = { political_parties = parties_restrict_non_democratic } } owner = { political_reform = parties_promote_democratic } }
-		random_owned = { limit = { owner = { political_parties = parties_only_nominated } } owner = { political_reform = parties_restrict_non_democratic } }
-		random_owned = { limit = { owner = { political_parties = parties_not_allowed } } owner = { political_reform = parties_only_nominated } }
+		random_owned = { limit = { owner = { political_parties = parties_short } } owner = { political_reform = parties_fair } }
+		random_owned = { limit = { owner = { political_parties = parties_rigged } } owner = { political_reform = parties_short } }
+		random_owned = { limit = { owner = { political_parties = parties_restricted } } owner = { political_reform = parties_rigged } }
+		random_owned = { limit = { owner = { political_parties = parties_not_allowed } } owner = { political_reform = parties_restricted } }
 		
 		ai_chance = { factor = 0.1 modifier = { factor = 0 OR = { ruling_party_ideology = conservative ruling_party_ideology = traditionalist ruling_party_ideology = nationalist ruling_party_ideology = populist } } }
 	}
@@ -664,13 +664,13 @@ country_event = {
 		
 		#International customary law
 		OR = {
-			any_neighbor_country = { vote_franschise = registered_voting }
-			any_greater_power = { vote_franschise = registered_voting }
+			any_neighbor_country = { vote_franschise = harassed_voting }
+			any_greater_power = { vote_franschise = harassed_voting }
 		}
 		
 		#Weak voting laws
 		NOT = { vote_franschise = none_voting }
-		NOT = { vote_franschise = registered_voting }
+		NOT = { vote_franschise = harassed_voting }
 	}
 
 	mean_time_to_happen = { 
@@ -718,9 +718,9 @@ country_event = {
 		any_pop = { limit = { OR = { strata = rich strata = middle literacy = 0.15 } } consciousness = 3 militancy = 3 }
 		
 		#Decrease reforms by one
-		random_owned = { limit = { owner = { vote_franschise = universal_weighted_voting } } owner = { political_reform = registered_voting } }
-		random_owned = { limit = { owner = { vote_franschise = promoted_voting } } owner = { political_reform = universal_weighted_voting } }
-		random_owned = { limit = { owner = { vote_franschise = universal_voting } } owner = { political_reform = promoted_voting } }
+		random_owned = { limit = { owner = { vote_franschise = rigged_voting } } owner = { political_reform = harassed_voting } }
+		random_owned = { limit = { owner = { vote_franschise = gerrymandered_voting } } owner = { political_reform = rigged_voting } }
+		random_owned = { limit = { owner = { vote_franschise = free_voting } } owner = { political_reform = gerrymandered_voting } }
 		
 		ai_chance = { factor = 0.1 modifier = { factor = 0 OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = big_tent } } }
 	}
@@ -924,13 +924,13 @@ country_event = {
 		
 		#International customary law
 		OR = {
-			any_neighbor_country = { publishing_rights = firewall_publishing }
-			any_greater_power = { publishing_rights = firewall_publishing }
+			any_neighbor_country = { publishing_rights = censored_publishing }
+			any_greater_power = { publishing_rights = censored_publishing }
 		}
 		
 		#Weak voting laws
+		NOT = { publishing_rights = state_publishing }
 		NOT = { publishing_rights = censored_publishing }
-		NOT = { publishing_rights = firewall_publishing }
 	}
 
 	mean_time_to_happen = { 
@@ -978,8 +978,8 @@ country_event = {
 		any_pop = { limit = { OR = { strata = rich strata = middle literacy = 0.15 } } consciousness = 3 militancy = 3 }
 		
 		#Decrease reforms by one
-		random_owned = { limit = { owner = { publishing_rights = responsible_publishing } } owner = { political_reform = firewall_publishing } }
-		random_owned = { limit = { owner = { publishing_rights = unregulated_publishing } } owner = { political_reform = responsible_publishing } }
+		random_owned = { limit = { owner = { publishing_rights = responsible_publishing } } owner = { political_reform = censored_publishing } }
+		random_owned = { limit = { owner = { publishing_rights = free_publishing } } owner = { political_reform = responsible_publishing } }
 		
 		ai_chance = { factor = 0.1 modifier = { factor = 0 OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = big_tent } } }
 	}
@@ -1098,13 +1098,13 @@ country_event = {
 		
 		#International customary law
 		OR = {
-			any_neighbor_country = { political_parties = parties_only_nominated }
-			any_greater_power = { political_parties = parties_only_nominated }
+			any_neighbor_country = { political_parties = parties_restricted }
+			any_greater_power = { political_parties = parties_restricted }
 		}
 		
 		#Weak voting laws
 		NOT = { political_parties = parties_not_allowed }
-		NOT = { political_parties = parties_only_nominated }
+		NOT = { political_parties = parties_restricted }
 	}
 
 	mean_time_to_happen = { 
@@ -1152,9 +1152,9 @@ country_event = {
 		any_pop = { limit = { OR = { strata = rich strata = middle literacy = 0.15 } } consciousness = 3 militancy = 3 }
 		
 		#Decrease reforms by one
-		random_owned = { limit = { owner = { political_parties = parties_restrict_non_democratic } } owner = { political_reform = parties_only_nominated } }
-		random_owned = { limit = { owner = { political_parties = parties_promote_democratic } } owner = { political_reform = parties_restrict_non_democratic } }
-		random_owned = { limit = { owner = { political_parties = parties_allowed } } owner = { political_reform = parties_promote_democratic } }
+		random_owned = { limit = { owner = { political_parties = parties_rigged } } owner = { political_reform = parties_restricted } }
+		random_owned = { limit = { owner = { political_parties = parties_short } } owner = { political_reform = parties_rigged } }
+		random_owned = { limit = { owner = { political_parties = parties_fair } } owner = { political_reform = parties_short } }
 		
 		ai_chance = { factor = 0.1 modifier = { factor = 0 OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = big_tent } } }
 	}

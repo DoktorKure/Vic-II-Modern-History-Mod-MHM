@@ -114,7 +114,7 @@ country_event = {
 		OR = { 
 			AND = { 
 				exists = DDR 
-				DDR = { NOT = { government = proletarian_dictatorship } } 
+				DDR = { NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } 
 			} 
 			AND = { 
 				has_global_flag = depuppetize_warsaw_pact 
@@ -782,7 +782,7 @@ country_event = {
 
 trigger = {
 is_vassal = no
-NOT = { government = proletarian_dictatorship }
+NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 year = 1967
 tag = TOG
 NOT = { year = 1990 }
@@ -814,13 +814,13 @@ ai_chance = { factor = 0.1 }
 #Communist Congo
 country_event = {
 	id = 1412045
-	title = "Rally of the Togolese People"
+	title = "Rally of the Congolese People"
 	desc = EVTDESC1412045
 	picture = "communist_congo_pic"
 
 trigger = {
 is_vassal = no
-NOT = { government = proletarian_dictatorship }
+NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 year = 1969
 tag = ROC
 NOT = { year = 1990 }
@@ -1694,7 +1694,7 @@ random_owned = { limit = { owner = { overlord = { government = hms_government } 
 
 random_owned = { limit = { owner = { overlord = { government = absolute_monarchy } } } owner = { government = absolute_monarchy country_event = 800050 } }
 
-random_owned = { limit = { owner = { overlord = { government = proletarian_dictatorship } } } owner = { government = proletarian_dictatorship country_event = 800050 } }
+random_owned = { limit = { owner = { overlord = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { government = proletarian_dictatorship country_event = 800050 } }
 
 clr_country_flag = full_independance
 set_country_flag = former_colonial_nation
@@ -1718,7 +1718,7 @@ random_owned = { limit = { owner = { overlord = { government = hms_government } 
 
 random_owned = { limit = { owner = { overlord = { government = absolute_monarchy } } } owner = { government = hms_government country_event = 800054 } }
 
-random_owned = { limit = { owner = { overlord = { government = proletarian_dictatorship } } } owner = { government = proletarian_dictatorship country_event = 800050 } }
+random_owned = { limit = { owner = { overlord = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { government = proletarian_dictatorship country_event = 800050 } }
 
 
 overlord = { end_military_access = THIS }
@@ -1998,11 +1998,11 @@ country_event = {
 		NOT = { OR = { government = absolute_monarchy government = hms_government government = hms_government1 } }
 
 		#Historical
-		NOT = { AND = { tag = SPA government = populist_dictatorship NOT = { year = 1985 } } }
+		NOT = { AND = { tag = SPA government = nationalist_dictatorship NOT = { year = 1985 } } }
 
-		NOT = { AND = { tag = POR government = populist_dictatorship NOT = { year = 1975 } } }
+		NOT = { AND = { tag = POR government = nationalist_dictatorship NOT = { year = 1975 } } }
 
-		NOT = { AND = { tag = RUS government = proletarian_dictatorship NOT = { year = 1990 } } }
+		NOT = { AND = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } NOT = { year = 1990 } } }
 
 		NOT = { AND = { tag = CHI government = proletarian_dictatorship NOT = { year = 1975 } } }
 
@@ -2079,7 +2079,7 @@ country_event = {
 
 	trigger = {
 
-		OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = theocracy }
+		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = theocracy }
 
 		has_country_modifier = power_vacuum
 
@@ -2110,7 +2110,7 @@ country_event = {
 
 	trigger = {
 
-		OR = { government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = theocracy }
+		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship government = proletarian_dictatorship government = proletarian_dictatorship1 government = theocracy }
 
 		has_country_modifier = factionalism
 		has_country_modifier = power_vacuum
@@ -2149,8 +2149,8 @@ country_event = {
 		prestige_factor = -0.1
 		
 		#Enact democratic reforms
-		political_reform = parties_only_nominated
-		political_reform = open_opinion
+		political_reform = parties_restricted
+		political_reform = semi_democratic_state_opinion
 		
 		#Remove Power Vacuum
 		remove_country_modifier = power_vacuum
@@ -2287,7 +2287,7 @@ country_event = {
 	trigger = {
         OR = { tag = SPA tag = POR }
         NOT = { year = 1990 }
-        government = populist_dictatorship
+        government = nationalist_dictatorship
         ruling_party_ideology = nationalist
         NOT = { has_country_flag = franco_boost }
 	}
@@ -3217,10 +3217,10 @@ country_event = {
 
 	mean_time_to_happen = { 
 		months = 7300 
-		modifier = { factor = 0.4 vote_franschise = universal_voting }
-		modifier = { factor = 0.8 vote_franschise = promoted_voting }
-		modifier = { factor = 1.5 vote_franschise = universal_weighted_voting } 
-		modifier = { factor = 3 vote_franschise = registered_voting } 
+		modifier = { factor = 0.4 vote_franschise = free_voting }
+		modifier = { factor = 0.8 vote_franschise = gerrymandered_voting }
+		modifier = { factor = 1.5 vote_franschise = rigged_voting } 
+		modifier = { factor = 3 vote_franschise = harassed_voting } 
 	}
 
 	option = {

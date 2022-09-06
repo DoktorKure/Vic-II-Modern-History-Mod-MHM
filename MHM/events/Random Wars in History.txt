@@ -93,7 +93,7 @@ NOT = { year = 1990 }
 
 is_vassal = no
 
-OR = { government = populist_dictatorship government = nationalist_dictatorship }
+OR = { government = nationalist_dictatorship government = sectarian_dictatorship }
 
 tag = UGA #Attacker
 
@@ -361,7 +361,7 @@ fire_only_once = yes
 
 trigger = {
 
-ANG = { government = proletarian_dictatorship }
+ANG = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 
 SAF = { ruling_party_ideology = nationalist }
 
@@ -421,7 +421,7 @@ fire_only_once = yes
 
 trigger = {
 
-ETH = { government = proletarian_dictatorship }
+ETH = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 
 year = 1977
 NOT = { year = 1990 }
@@ -477,7 +477,7 @@ fire_only_once = yes
 
 trigger = {
 
-LBY = { government = nationalist_dictatorship }
+LBY = { government = sectarian_dictatorship }
 
 year = 1977
 NOT = { year = 1990 }

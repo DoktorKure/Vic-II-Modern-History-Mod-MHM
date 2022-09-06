@@ -163,7 +163,7 @@ country_event = {
 		year = 1978
 		NOT = { year = 1992 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		is_vassal = no
 		
@@ -398,7 +398,7 @@ country_event = {
 		CAM = {
 			has_country_flag = CAM_DAI_1978_war_flag
 		
-			government = proletarian_dictatorship
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			vassal_of = DAI
 			war = no
 		}

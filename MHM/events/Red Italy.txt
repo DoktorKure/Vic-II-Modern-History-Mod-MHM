@@ -778,7 +778,7 @@ country_event = {
 		political_reform = nobody_gets_out
 		political_reform = politicised_service
 		political_reform = parties_not_allowed
-		political_reform = censored_publishing
+		political_reform = state_publishing
 		political_reform = state_controlled_unions
 		political_reform = none_voting
 		political_reform = no_meetings 
@@ -810,7 +810,7 @@ country_event = {
 		add_country_modifier = { name = great_statesman duration = -1 }
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 100 }
 			diplomatic_influence = { who = THIS value = 200 }
 		}
@@ -834,7 +834,7 @@ country_event = {
 		prestige = -50
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -400 }
 			diplomatic_influence = { who = THIS value = -200 }
 		}
@@ -870,7 +870,7 @@ country_event = {
 		month = 2
 		NOT = { year = 1954 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -878,7 +878,7 @@ country_event = {
 		
 		RUS = { 
 			exists = yes 
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 			is_greater_power = yes 
 			war = no
 			
@@ -896,7 +896,7 @@ country_event = {
 		prestige = -5
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -15 }
 			diplomatic_influence = { who = THIS value = -10 }
 		}
@@ -909,7 +909,7 @@ country_event = {
 		prestige = 25
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 50 }
 			diplomatic_influence = { who = THIS value = 50 }
 		}
@@ -962,7 +962,7 @@ country_event = {
 		month = 9
 		NOT = { year = 1964 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -971,7 +971,7 @@ country_event = {
 		RUS = { 
 			exists = yes 
 			
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 			is_greater_power = yes 
 			war = no
 			
@@ -1003,7 +1003,7 @@ country_event = {
 		name = "Do nothing"
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -10 }
 			diplomatic_influence = { who = THIS value = -10 }
 		}
@@ -1030,7 +1030,7 @@ country_event = {
 		tag = ITA 
 		NOT = { year = 1964 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -1038,7 +1038,7 @@ country_event = {
 		
 		RUS = { 
 			exists = yes 
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 			is_greater_power = yes 
 			war = no
 		}
@@ -1068,7 +1068,7 @@ country_event = {
 		name = "What did they say about Comrade Stalin?"
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -25 }
 			diplomatic_influence = { who = THIS value = -10 }
 		}
@@ -1096,7 +1096,7 @@ country_event = {
 		month = 4
 		NOT = { year = 1964 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -1104,7 +1104,7 @@ country_event = {
 		
 		RUS = { 
 			exists = yes 
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 			is_greater_power = yes 
 			war = no
 		}
@@ -1188,13 +1188,13 @@ country_event = {
 		tag = ITA
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
 		ruling_party_ideology = communist 
 		
-		RUS = { exists = yes government = proletarian_dictatorship is_greater_power = yes }
+		RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 		
 		HUN = { exists = yes OR = { government = proletarian_dictatorship1 government = proletarian_dictatorship } }
 		
@@ -1253,20 +1253,20 @@ country_event = {
 		has_global_flag = sino_soviet_split
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
 		#PRC exists
 		CHI = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		}
 		
 		#USSR exists
 		RUS = { 
 			is_greater_power = yes 
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		}
 		
 		has_country_flag = ITA_Togliatti
@@ -1283,18 +1283,18 @@ country_event = {
 		prestige = 50
 		
 		random_country = {
-			limit = { tag = CHI government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 100 }
 			diplomatic_influence = { who = THIS value = 25 }
 		}
 		
 		random_country = {
-			limit = { tag = ALB government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = 100 }
 		}
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -25 }
 			diplomatic_influence = { who = THIS value = -10 }
 			#A Note from Togliatti
@@ -1309,13 +1309,13 @@ country_event = {
 		prestige = -25
 		
 		random_country = {
-			limit = { tag = CHI government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -100 }
 			diplomatic_influence = { who = THIS value = -50 }
 		}
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 100 }
 			diplomatic_influence = { who = THIS value = 25 }
 		}
@@ -1338,7 +1338,7 @@ country_event = {
 		name = "The decision has already been taken..."
 		
 		random_country = {
-			limit = { tag = ITA government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = ITA OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = -50 }
 			diplomatic_influence = { who = THIS value = 25 }
 			#Our Position in the International Communist Movement
@@ -1353,7 +1353,7 @@ country_event = {
 		prestige = -50
 		
 		random_country = {
-			limit = { tag = ITA government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = ITA OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = 25 }
 			diplomatic_influence = { who = THIS value = 5 }
 		}
@@ -1379,16 +1379,16 @@ country_event = {
 		name = "Stand with Mao and China"
 		
 		random_country = {
-			limit = { tag = CHI government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 100 }
 			diplomatic_influence = { who = THIS value = 100 }
 		}		
 		random_country = {
-			limit = { tag = ALB government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = 100 }
 		}		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -400 }
 			diplomatic_influence = { who = THIS value = -200 }
 		}
@@ -1407,12 +1407,12 @@ country_event = {
 		name = "Follow Moscow"
 		
 		random_country = {
-			limit = { tag = CHI government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -100 }
 			diplomatic_influence = { who = THIS value = -100 }
 		}		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 200 }
 			diplomatic_influence = { who = THIS value = 50 }
 		}
@@ -1424,17 +1424,17 @@ country_event = {
 		name = "Stand for Unity, take no side"
 		
 		random_country = {
-			limit = { tag = CHI government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -50 }
 			diplomatic_influence = { who = THIS value = -10 }
 		}		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -50 }
 			diplomatic_influence = { who = THIS value = -10 }
 		}
 		random_country = {
-			limit = { tag = YUG government = proletarian_dictatorship ruling_party_ideology = communist_social is_vassal = no }
+			limit = { tag = YUG OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist_social is_vassal = no }
 			relation = { who = THIS value = 100 }
 		}
 		
@@ -1458,7 +1458,7 @@ country_event = {
 		
 		money = 150000
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -1527,7 +1527,7 @@ country_event = {
 		year = 1958
 		NOT = { year = 1963 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -1590,7 +1590,7 @@ country_event = {
 		
 		money = 250000
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -1781,7 +1781,7 @@ country_event = {
 		month = 8
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -1817,7 +1817,7 @@ country_event = {
 		tag = ITA
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -1976,7 +1976,7 @@ country_event = {
 		tag = ITA
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -2092,7 +2092,7 @@ country_event = {
 		tag = ITA
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -2209,7 +2209,7 @@ country_event = {
 		month = 7
 		NOT = { year = 1957 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -2341,7 +2341,7 @@ country_event = {
 		tag = ITA 
 		NOT = { year = 1964 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -2433,7 +2433,7 @@ country_event = {
 		month = 6
 		NOT = { year = 1961 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -2500,7 +2500,7 @@ country_event = {
 		month = 11
 		NOT = { year = 1973 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -2544,7 +2544,7 @@ country_event = {
 		prestige = -10
 		
 		random_country = {
-			limit = { tag = CHI government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -50 }
 			diplomatic_influence = { who = ITA value = -10 }
 		}
@@ -2569,7 +2569,7 @@ country_event = {
 		month = 7
 		NOT = { year = 1973 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -2607,7 +2607,7 @@ country_event = {
 				
 				primary_culture = arab 
 				
-				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = populist_dictatorship government = nationalist_dictatorship } 
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship } 
 				is_vassal = no
 				
 				OR = { ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } 
@@ -2650,7 +2650,7 @@ country_event = {
 		month = 12
 		NOT = { year = 1973 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -2716,7 +2716,7 @@ country_event = {
 		month = 10
 		NOT = { year = 1973 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -2745,7 +2745,7 @@ country_event = {
 			limit = { 
 				OR = { tag = ETH tag = SOM tag = SUD }
 				
-				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = populist_dictatorship government = nationalist_dictatorship } 
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = nationalist_dictatorship government = sectarian_dictatorship } 
 				is_vassal = no 
 				
 				OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } 
@@ -2787,7 +2787,7 @@ country_event = {
 		month = 4
 		NOT = { year = 1973 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		
 		has_country_flag = ITA_Secchia		
@@ -2856,13 +2856,13 @@ country_event = {
 		month = 4
 		NOT = { year = 1973 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
-		CHI = { exists = yes government = proletarian_dictatorship is_greater_power = yes }
+		CHI = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 		
-		RUS = { exists = yes government = proletarian_dictatorship is_greater_power = yes NOT = { OR = { has_country_flag = georgy_malenkov has_country_flag = vyacheslav_molotov has_country_flag = alexender_shelepin } } }
+		RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes NOT = { OR = { has_country_flag = georgy_malenkov has_country_flag = vyacheslav_molotov has_country_flag = alexender_shelepin } } }
 		
 		has_country_flag = ITA_Secchia		
 		has_country_flag = ITA_Peoples_Republic
@@ -2878,16 +2878,16 @@ country_event = {
 		prestige = 50
 		
 		random_country = {
-			limit = { tag = CHI government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 400 }
 			diplomatic_influence = { who = THIS value = 100 }
 		}
 		random_country = {
-			limit = { tag = ALB government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = -100 }
 		}	
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 200 }
 			diplomatic_influence = { who = THIS value = 25 }
 		}
@@ -2901,17 +2901,17 @@ country_event = {
 		prestige = 75
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 400 }
 			diplomatic_influence = { who = THIS value = 100 }
 		}
 		random_country = {
-			limit = { tag = CHI government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -200 }
 			diplomatic_influence = { who = THIS value = -200 }
 		}
 		random_country = {
-			limit = { tag = ALB government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = -200 }
 		}
 		
@@ -2939,7 +2939,7 @@ country_event = {
 		month = 7
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		
 		war = no
 		
@@ -3059,11 +3059,11 @@ country_event = {
 		month = 11
 		NOT = { year = 1972 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
-		RUS = { exists = yes government = proletarian_dictatorship is_greater_power = yes }
+		RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 		
 		has_country_flag = ITA_China
 		has_country_flag = ITA_Longo		
@@ -3079,17 +3079,17 @@ country_event = {
 		prestige = 50
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 200 }
 			diplomatic_influence = { who = THIS value = 25 }
 		}
 		random_country = {
-			limit = { tag = CHI government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -100 }
 			diplomatic_influence = { who = THIS value = -100 }
 		}
 		random_country = {
-			limit = { tag = ALB government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = -100 }
 		}	
 		
@@ -3101,17 +3101,17 @@ country_event = {
 		prestige = 5
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 400 }
 			diplomatic_influence = { who = THIS value = 100 }
 		}
 		random_country = {
-			limit = { tag = CHI government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -200 }
 			diplomatic_influence = { who = THIS value = -200 }
 		}
 		random_country = {
-			limit = { tag = ALB government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = -200 }
 		}
 		
@@ -3139,7 +3139,7 @@ country_event = {
 		month = 2
 		NOT = { year = 1980 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -3207,7 +3207,7 @@ country_event = {
 		month = 8
 		NOT = { year = 1978 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -3237,7 +3237,7 @@ country_event = {
 		prestige = 25
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -25 }
 			diplomatic_influence = { who = THIS value = -10 }
 		}
@@ -3262,7 +3262,7 @@ country_event = {
 		name = "Hide the documents"
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 25 }
 			diplomatic_influence = { who = THIS value = 10 }
 		}
@@ -3293,7 +3293,7 @@ country_event = {
 		year = 1964
 		NOT = { year = 1980 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -3314,7 +3314,7 @@ country_event = {
 			relation = { who = THIS value = 100 }
 		}	
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -25 }
 			diplomatic_influence = { who = THIS value = -10 }
 		}
@@ -3377,7 +3377,7 @@ country_event = {
 		year = 1964
 		NOT = { year = 1980 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -3596,7 +3596,7 @@ country_event = {
 		month = 3
 		NOT = { year = 1980 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -3714,7 +3714,7 @@ country_event = {
 		month = 10
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -3876,7 +3876,7 @@ country_event = {
 		month = 2
 		NOT = { year = 1980 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -3944,7 +3944,7 @@ country_event = {
 		month = 6
 		NOT = { year = 1980 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -3966,7 +3966,7 @@ country_event = {
 		
 		#Relations with the USSR
 		random_country = {   
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			diplomatic_influence = { who = THIS value = -25 } 
 			relation = { who = THIS value = -50 }
 		}
@@ -4014,7 +4014,7 @@ country_event = {
 		
 		#Relations with the USSR
 		random_country = {   
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			diplomatic_influence = { who = THIS value = 25 } 
 			relation = { who = THIS value = 5 }
 		}
@@ -4044,14 +4044,14 @@ country_event = {
 		month = 6
 		NOT = { year = 1980 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
 		RUS = { 
 			exists = yes 
 			
-			government = proletarian_dictatorship 
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 			is_greater_power = yes 
 			war = no
 		}
@@ -4073,7 +4073,7 @@ country_event = {
 		
 		#Relations with the USSR
 		random_country = {   
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			diplomatic_influence = { who = THIS value = -50 } 
 			relation = { who = THIS value = -100 }
 			country_event = 8020544
@@ -4120,7 +4120,7 @@ country_event = {
 		
 		#Relations with the USSR
 		random_country = {   
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			diplomatic_influence = { who = THIS value = 50 } 
 			relation = { who = THIS value = 10 }
 		}
@@ -4270,7 +4270,7 @@ country_event = {
 	trigger = {
 		tag = ITA
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		vassal_of = RUS
 		war = no
 		
@@ -4373,7 +4373,7 @@ country_event = {
 		tag = ITA 
 		year = 1976 
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -4503,7 +4503,7 @@ country_event = {
 		month = 1
 		NOT = { year = 1980 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		
@@ -4519,10 +4519,10 @@ country_event = {
 		name = "Well done Giorgio"
 		prestige = 25
 		
-		political_reform = regulated_opinion
+		political_reform = appointed_opinion
 		political_reform = elitist_service
 		political_reform = one_year_draft
-		political_reform = firewall_publishing
+		political_reform = censored_publishing
 		political_reform = limited_meetings 
 		
 		any_pop = { 
@@ -4551,7 +4551,7 @@ country_event = {
 		month = 6
 		NOT = { year = 1990 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -4711,7 +4711,7 @@ country_event = {
 		has_country_flag = ITA_Ingrao_Secchia
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -4773,7 +4773,7 @@ country_event = {
 		has_country_flag = ITA_Gang_of_four_1
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -4868,7 +4868,7 @@ country_event = {
 		month = 3
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -4887,17 +4887,17 @@ country_event = {
 		prestige = 50
 		
 		random_country = {
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 200 }
 			diplomatic_influence = { who = THIS value = 25 }
 		}
 		random_country = {
-			limit = { tag = CHI government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -100 }
 			diplomatic_influence = { who = THIS value = -100 }
 		}
 		random_country = {
-			limit = { tag = ALB government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = -100 }
 		}	
 		
@@ -4910,12 +4910,12 @@ country_event = {
 		prestige = -5
 		
 		random_country = {
-			limit = { tag = CHI government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = CHI OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 50 }
 			diplomatic_influence = { who = THIS value = 25 }
 		}
 		random_country = {
-			limit = { tag = ALB government = proletarian_dictatorship is_vassal = no }
+			limit = { tag = ALB OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal = no }
 			relation = { who = THIS value = 50 }
 		}
 		
@@ -4943,7 +4943,7 @@ country_event = {
 		month = 2
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -5016,7 +5016,7 @@ country_event = {
 		
 		money = 150000
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		
@@ -5026,7 +5026,7 @@ country_event = {
 			AND = { HUN = { exists = yes ruling_party_ideology = communist } has_global_flag = hungarian_revolution_1956 }
 			AND = { CZH = { exists = yes ruling_party_ideology = communist } has_global_flag = CZH_prague_spring_USSR_flag }
 			AND = { CZH = { exists = yes ruling_party_ideology = communist_social } NOT = { has_global_flag = CZH_prague_spring_USSR_flag } }
-			RUS = { exists = yes government = proletarian_dictatorship is_greater_power = yes NOT = { OR = { has_country_flag = leonid_brezhnev has_country_flag = georgy_malenkov has_country_flag = vyacheslav_molotov has_country_flag = alexender_shelepin } } } 
+			RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes NOT = { OR = { has_country_flag = leonid_brezhnev has_country_flag = georgy_malenkov has_country_flag = vyacheslav_molotov has_country_flag = alexender_shelepin } } } 
 		}
 		
 		has_country_flag = ITA_Ingrao
@@ -5124,7 +5124,7 @@ country_event = {
 		tag = ITA
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -5175,13 +5175,13 @@ country_event = {
 		year = 1972
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
 		ruling_party_ideology = communist
 		
-		RUS = { exists = yes government = proletarian_dictatorship is_greater_power = yes OR = { has_country_flag = leonid_brezhnev has_country_flag = vyacheslav_molotov has_country_flag = alexender_shelepin } }
+		RUS = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes OR = { has_country_flag = leonid_brezhnev has_country_flag = vyacheslav_molotov has_country_flag = alexender_shelepin } }
 		
 		has_country_flag = ITA_Ingrao
 		has_country_flag = ITA_NEM
@@ -5195,7 +5195,7 @@ country_event = {
 		prestige = 5
 		
 		random_country = {   
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 15 }
 		}
 		
@@ -5216,7 +5216,7 @@ country_event = {
 	    	money = 100000
 
 		random_country = {   
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 50 }
 		}
 		
@@ -5240,7 +5240,7 @@ country_event = {
 		prestige = 25
 		
 		random_country = {   
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -25 }
 			country_event = 8020555
 		}
@@ -5309,12 +5309,12 @@ country_event = {
 		name = "Long live General Secretary Armando Cossutta (WIP)"
 		
 		random_country = {   
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 200 }
 		}
 		
 		random_country = {   
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = 200 }
 		}
 		
@@ -5362,7 +5362,7 @@ country_event = {
 		name = "Ingrao holds onto Power"
 		
 		random_country = {   
-			limit = { tag = RUS government = proletarian_dictatorship is_greater_power = yes }
+			limit = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_greater_power = yes }
 			relation = { who = THIS value = -50 }
 		}
 		
@@ -5393,7 +5393,7 @@ country_event = {
 		month = 11
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -5446,7 +5446,7 @@ country_event = {
 		month = 4
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -5503,7 +5503,7 @@ country_event = {
 		month = 3
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -5567,7 +5567,7 @@ country_event = {
 		month = 7
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		war = no
 		
@@ -5646,7 +5646,7 @@ country_event = {
 		month = 4
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -5662,8 +5662,8 @@ country_event = {
 		name = "Adopt the new Constitution!"
 		prestige = 100
 		
-		political_reform = regulated_opinion
-		political_reform = firewall_publishing
+		political_reform = appointed_opinion
+		political_reform = censored_publishing
 		political_reform = state_controlled_unions
 		political_reform = limited_meetings
 		
@@ -5704,7 +5704,7 @@ country_event = {
 		year = 1984
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -5746,7 +5746,7 @@ country_event = {
 		year = 1989
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -5825,7 +5825,7 @@ country_event = {
 		OR = { has_country_flag = ITA_Young_Miglioristi_meh has_country_flag = ITA_Young_Miglioristi_purge }
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -5891,7 +5891,7 @@ country_event = {
 		has_country_flag = ITA_Young_Miglioristi
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -5955,7 +5955,7 @@ country_event = {
 		year = 1996
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		
@@ -6025,7 +6025,7 @@ country_event = {
 		year = 1996
 		NOT = { year = 2015 }
 		
-		government = proletarian_dictatorship 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } 
 		is_vassal = no
 		war = no
 		

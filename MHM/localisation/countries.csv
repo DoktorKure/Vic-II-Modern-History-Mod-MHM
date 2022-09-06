@@ -9,16 +9,16 @@ BKF;The Balkan Federation;Fédération des Balkans;Balkan-Föderation;;Federación d
 BKF_ADJ;Balkan;;Balkanisch;Balkanski;Balcanico;;;;;;;;;x;;;;;;;;;;;;;;;;
 BKF_proletarian_dictatorship;The Balkan Union;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 BKF_hms_government;The Balkan Empire;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-BKF_populist_dictatorship;The Balkan Republic;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-BKF_nationalist_dictatorship;Republic of the Balkans;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+BKF_nationalist_dictatorship;The Balkan Republic;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+BKF_sectarian_dictatorship;Republic of the Balkans;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 ENL_ADJ;English;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 ENL;England;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 BNL;Benelux Union;;;;;;;;x;;;;;;;;;;;;;
-BNL_populist_dictatorship;United Netherlands;;;;;;;;x;;;;;;;;;;;;;
+BNL_nationalist_dictatorship;United Netherlands;;;;;;;;x;;;;;;;;;;;;;
 BNL_proletarian_dictatorship;Union of Low Countries;;;;;;;;x;;;;;;;;;;;;;
 BNL_absolute_monarchy;Kingdom of the Benelux;;;;;;;;x;;;;;;;;;;;;;
 BNL_ADJ;Beneluxian;;;;;;;;x;;;;;;;;;;;;;
-BNL_populist_dictatorship_ADJ;Dutch;;;;;;;;x;;;;;;;;;;;;;
+BNL_nationalist_dictatorship_ADJ;Dutch;;;;;;;;x;;;;;;;;;;;;;
 BRZ_ADJ;Brazilian;;;;;;;;x;;;;;;;;;;;;;
 CMR_mandate_government_ADJ;Camerounais;Camerounais;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
 CMR_mandate_government;Cameroun;Cameroun;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;
@@ -59,8 +59,8 @@ LEV;Semitic Federation;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 LEV_ADJ;Semitic;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 LOU;Louisiana;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 LOU_ADJ;Louisianian;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
-LOU_nationalist_dictatorship;Louisiane;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
-LOU_nationalist_dictatorship_ADJ;Louisianais;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
+LOU_sectarian_dictatorship;Louisiane;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
+LOU_sectarian_dictatorship_ADJ;Louisianais;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 LSK;Alaska;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 LSK_ADJ;Alaskan;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
 LSK_colonial_government;Alyaska;;;;;;;;;;;;x;;;;;;;;;;;;;;;;;
@@ -111,8 +111,8 @@ ICU_colonial_government;Indochinese Federation;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 ICU_hms_government;Indochinese Federation;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 ARF_proletarian_dictatorship;Arab People's Union;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 ARF_presidential_dictatorship;The Arab Republic;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-ARF_populist_dictatorship;The Arab Union;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
-ARF_nationalist_dictatorship;The Arab State;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+ARF_nationalist_dictatorship;The Arab Union;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+ARF_sectarian_dictatorship;The Arab State;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 ARF;The Arab Federation;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 ARF_ADJ;Arab;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 FMS;Malaya;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
@@ -259,7 +259,7 @@ OCC_ADJ;Occitan;;;;;;;;;;;;x
 UNO;The United Nations;;;;;;;;;;;;x
 UNO_ADJ;United Nations;;;;;;;;;;;;x
 QHA;Qinghai;;;;;;;;;;;;x
-QHA_populist_dictatorship;Ma Clique;;;;;;;;;;;;x
+QHA_nationalist_dictatorship;Ma Clique;;;;;;;;;;;;x
 QHA_ADJ;Qinghainese;;;;;;;;;;;;x
 CFD;The State of Muscovy;;;;;;;;;x
 CFD_ADJ;Central Russian;;;;;;;;;x
@@ -297,12 +297,12 @@ RIT_ADJ;Italian;;;;;;;;;x
 RIT_proletarian_dictatorship;Italian People's Republic;;;;;;;;;x
 RIT_proletarian_dictatorship1;Italian People's Republic;;;;;;;;;x
 RIT_socialist_democracy;Italian People's Republic;;;;;;;;;x
-YNN_populist_dictatorship;Yunnan Clique;;;;;;;;;x
-KWA_populist_dictatorship;Guangdong Clique;;;;;;;;;x
-GGX_populist_dictatorship;Guangxi Clique;;;;;;;;;x
+YNN_nationalist_dictatorship;Yunnan Clique;;;;;;;;;x
+KWA_nationalist_dictatorship;Guangdong Clique;;;;;;;;;x
+GGX_nationalist_dictatorship;Guangxi Clique;;;;;;;;;x
 SZC;Sichuan;;;;;;;;;x
 SZC_ADJ;Sichuan;;;;;;;;;x
-SZC_populist_dictatorship;Sichuan Clique;;;;;;;;;x
+SZC_nationalist_dictatorship;Sichuan Clique;;;;;;;;;x
 JAV_ADJ;Javan;Javan;Javan;;;;;;;;;;;x;
 JAV;Java;Java;Java;;;;;;;;;;;x;
 JAV_presidential_dictatorship;Java;Java;Java;;;;;;;;;;;x;
@@ -312,9 +312,9 @@ JAV_sar_government;Java;Java;Java;;;;;;;;;;;x;
 JAV_socialist_democracy;Java;Java;Java;;;;;;;;;;;x;
 JAV_proletarian_dictatorship;Java;Java;Java;;;;;;;;;;;x;
 JAV_proletarian_dictatorship1;Java;Java;Java;;;;;;;;;;;x;
-JAV_nationalist_dictatorship;Java;Java;Java;;;;;;;;;;;x;
+JAV_sectarian_dictatorship;Java;Java;Java;;;;;;;;;;;x;
 JAV_theocracy;Java;Java;Java;;;;;;;;;;;x;
-JAV_populist_dictatorship;Java;Java;Java;;;;;;;;;;;x;
+JAV_nationalist_dictatorship;Java;Java;Java;;;;;;;;;;;x;
 JAV_absolute_monarchy;Java;Java;Java;;;;;;;;;;;x;
 JAV_hms_government;Java;Java;Java;;;;;;;;;;;x;
 JAV_hms_government1;Java;Java;Java;;;;;;;;;;;x;
@@ -339,9 +339,9 @@ SUM_sar_government;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
 SUM_socialist_democracy;Sumatran People's Republic;Sumatran People's Republic;Sumatran People's Republic;;;;;;;;;;;x;
 SUM_proletarian_dictatorship;Sumatran People's Republic;Sumatran People's Republic;Sumatran People's Republic;;;;;;;;;;;x;
 SUM_proletarian_dictatorship1;Sumatran People's Republic;Sumatran People's Republic;Sumatran People's Republic;;;;;;;;;;;x;
-SUM_nationalist_dictatorship;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
+SUM_sectarian_dictatorship;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
 SUM_theocracy;Sumatran Islamic Republic;Sumatran Islamic Republic;Sumatran Islamic Republic;;;;;;;;;;;x;
-SUM_populist_dictatorship;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
+SUM_nationalist_dictatorship;Sumatra;Sumatra;Sumatra;;;;;;;;;;;x;
 SUM_absolute_monarchy;Sumatran Kingdom;Sumatran Kingdom;Sumatran Kingdom;;;;;;;;;;;x;
 SUM_hms_government;Sumatran Kingdom;Sumatran Kingdom;Sumatran Kingdom;;;;;;;;;;;x;
 SUM_hms_government1;Sumatran Kingdom;Sumatran Kingdom;Sumatran Kingdom;;;;;;;;;;;x;

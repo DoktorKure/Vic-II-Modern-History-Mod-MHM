@@ -7,7 +7,7 @@ political_decisions = {
 			
 			government = absolute_monarchy
 
-			political_opinions = regulated_opinion
+			political_opinions = appointed_opinion
 
 		NOT = { has_country_flag = dissolving_parliament }
 		}
@@ -38,7 +38,7 @@ add_country_modifier = { name = national_confusion duration = 1095 }
 				militancy = 3
 				consciousness = 6
 				dominant_issue = {
-					value = registered_voting
+					value = harassed_voting
 					factor = 0.25
 				}
 			}
@@ -50,8 +50,8 @@ add_country_modifier = { name = national_confusion duration = 1095 }
 		picture = propaganda_poster
 		potential = {
 			OR = {
+				government = sectarian_dictatorship
 				government = nationalist_dictatorship
-				government = populist_dictatorship
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
 				government = presidential_dictatorship
