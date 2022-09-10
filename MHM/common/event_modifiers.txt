@@ -1432,7 +1432,6 @@ mine_rgo_eff = -0.1
 immigrant_push = 0.20
 immigrant_attract = -0.4
 pop_consciousness_modifier = -0.10
-population_growth = 0.001
 icon = 14
 }
 
@@ -1446,13 +1445,12 @@ mine_rgo_eff = -0.05
 immigrant_push = 0.10
 immigrant_attract = -0.2
 pop_consciousness_modifier = -0.05
-population_growth = -0.001
 icon = 14
 }
 
 dev_5 = { #40% - 50% literacy
 icon = 13
-population_growth = -0.002
+population_growth = -0.001
 }
 
 dev_6 = { #50% - 60% literacy
@@ -1462,7 +1460,7 @@ local_RGO_throughput = 0.10
 farm_rgo_eff = 0.10
 mine_rgo_eff = 0.10
 pop_consciousness_modifier = 0.05
-population_growth = -0.005
+population_growth = -0.002
 icon = 13
 }
 
@@ -6947,12 +6945,12 @@ baby_boom = {
 }
 
 natalism_1 = {
-	population_growth = 0.005
+	population_growth = 0.001
 	icon = 19
 }
 
 natalism_2 = {
-	population_growth = 0.004
+	population_growth = 0.002
 	icon = 19
 }
 
@@ -6961,19 +6959,9 @@ natalism_3 = {
 	icon = 19
 }
 
-natalism_4 = {
-	population_growth = 0.002
-	icon = 19
-}
-
-natalism_5 = {
-	population_growth = 0.001
-	icon = 19
-}
-
 contraception_decay = {
 	tax_efficiency = -0.025
-	global_population_growth = 0.002
+	#global_population_growth = 0.002
 	#factory_throughput = -0.025
 	icon = 18
 }
