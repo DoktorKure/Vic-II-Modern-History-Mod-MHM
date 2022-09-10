@@ -80,6 +80,9 @@ random_country = {
 	set_country_flag = germania
 }
 
+#Occupation of Austria so event 1412134 doesn't fire and interfere with historical event chains
+AUS = { set_country_flag = special_communist_vassal }
+
 #Occupation of Germany
 USA = { 
 	remove_accepted_culture = german 

@@ -83,7 +83,7 @@ vassal = {
 	first = RUS
 	second = AUS
 	start_date = 1950.1.1
-	end_date = 1954.1.1
+	end_date = 1955.1.1
 }
 vassal = {
 	first = DEN
@@ -185,6 +185,20 @@ vassal = {
 	second = YNN
 	start_date = 1945.1.1
 	end_date = 1949.4.22
+}
+
+
+vassal = {
+	first = USA
+	second = ROA
+	start_date = 1945.4.27
+	end_date = 1955.1.1
+}
+vassal = {
+	first = RUS
+	second = AUS
+	start_date = 1945.4.27
+	end_date = 1955.1.1
 }
 
 substate = {

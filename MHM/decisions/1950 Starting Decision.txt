@@ -26,6 +26,9 @@ political_decisions = {
 			
 			#Finlandization
 			FIN = { set_country_flag = finlandization }
+			
+			#Occupation of Austria so event 1412134 doesn't fire and interfere with historical event chains
+			AUS = { set_country_flag = special_communist_vassal }
 
 			#Tripartite Agreement, 1947
 			HND = {
