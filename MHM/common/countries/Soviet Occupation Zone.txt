@@ -1,9 +1,10 @@
-#British Zone
+#Soviet zone
 graphical_culture = Generic
 color = { 154  132  126 }
-mandate_government = { 209  86  78 }
+mandate_government = { 255 0 0 }
+socialist_democracy = { 255 0 0 }
 party = {
-		name = "party_nationalist_0_R00"
+		name = "KPD"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = nationalist

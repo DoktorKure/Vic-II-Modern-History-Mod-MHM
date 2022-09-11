@@ -17,6 +17,9 @@ country_event = {
 		war = no
 		is_vassal = no
 		
+		#Must have already inherited the occupation zone so there's no fuckery with vassals of vassals
+		OG5 = { exists = no }
+		
 		in_sphere = RUS
 		
 		has_global_flag = blocsenabled
@@ -25,7 +28,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = { 
-		months = 1
+		months = 2
 		modifier = { factor = 0 year = 1948 }
 	}
 

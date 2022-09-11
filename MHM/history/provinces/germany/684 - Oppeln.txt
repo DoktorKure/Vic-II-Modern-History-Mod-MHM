@@ -1,6 +1,6 @@
-owner = POL
-controller = POL
-add_core = POL
+owner = OG5
+controller = OG5
+add_core = GER
 trade_goods = coal
 life_rating = 35
 terrain = forested_farmland
@@ -10,10 +10,22 @@ state_building = {
 	building = coal_fuel_factory
 	upgrade = yes
 }
+
+1950.1.1 = {
+owner = POL
+controller = POL
+add_core = POL
+remove_core = GER
+life_rating = 35
+railroad = 1
+colonial = 0
+}
+
 1992.1.1 = {
 owner = POL
 controller = POL
 add_core = POL
+remove_core = GER
 life_rating = 35
 railroad = 1
 colonial = 0

@@ -84,54 +84,71 @@ random_country = {
 AUS = { set_country_flag = special_communist_vassal }
 
 #Occupation of Germany
-USA = { 
-	remove_accepted_culture = german 
-	any_owned = { 
-		limit = { 
-			OR = { is_core = GER is_core = AUS }
-			NOT = { province_id = 533 } #Heligoland
+OG1 = {
+	any_owned = {
+		limit = {
 			owner = { NOT = { year = 1950 } }
 		}
 		add_province_modifier = { name = occupied_province duration = -1 } 
+	}
+
+	RUS = {
+		set_country_flag = occupation_zones_in_germany
+		military_access = OG1
 	}
 	
-	set_country_flag = occupation_zones_in_germany
 }
-FRA = { 
-	remove_accepted_culture = german 
-	any_owned = { 
-		limit = { 
-			OR = { is_core = GER is_core = AUS }
-			NOT = { province_id = 533 } #Heligoland
+OG2 = {
+	any_owned = {
+		limit = {
 			owner = { NOT = { year = 1950 } }
 		}
 		add_province_modifier = { name = occupied_province duration = -1 } 
 	}
-	set_country_flag = occupation_zones_in_germany
+
+	FRA = {
+		set_country_flag = occupation_zones_in_germany
+		military_access = OG2
+	}
 }
-ENG = { 
-	remove_accepted_culture = german 
-	any_owned = { 
-		limit = { 
-			OR = { is_core = GER is_core = AUS }
-			NOT = { province_id = 533 } #Heligoland
+OG3 = {
+	any_owned = {
+		limit = {
 			owner = { NOT = { year = 1950 } }
 		}
 		add_province_modifier = { name = occupied_province duration = -1 } 
 	}
-	set_country_flag = occupation_zones_in_germany
+
+	ENG = {
+		set_country_flag = occupation_zones_in_germany
+		military_access = OG3
+	}
 }
-RUS = { 
-	remove_accepted_culture = german 
-	any_owned = { 
-		limit = { 
-			OR = { is_core = GER is_core = AUS }
-			NOT = { province_id = 533 } #Heligoland
+OG4 = {
+	any_owned = {
+		limit = {
 			owner = { NOT = { year = 1950 } }
 		}
 		add_province_modifier = { name = occupied_province duration = -1 } 
 	}
-	set_country_flag = occupation_zones_in_germany
+
+	USA = {
+		set_country_flag = occupation_zones_in_germany
+		military_access = OG4
+	}
+}
+OG5 = {
+	any_owned = {
+		limit = {
+			owner = { NOT = { year = 1950 } }
+		}
+		add_province_modifier = { name = occupied_province duration = -1 } 
+	}
+
+	POL = {
+		set_country_flag = occupation_zones_in_germany
+		military_access = OG5
+	}
 }
 	
 #Starting resources - GP
