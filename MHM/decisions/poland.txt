@@ -6,7 +6,8 @@ political_decisions = {
 			tag = POL
 			year = 1947 NOT = { year = 1990 }
 			NOT = { has_country_flag = expulsion_of_germans }
-			AND = { owns = 546 owns = 692 owns = 682 }
+			has_country_flag = { policy_on_germany }
+			OR = { owns = 546 owns = 692 owns = 682 owns = 696 }
 		}
 
 		allow = {
