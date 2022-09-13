@@ -208,18 +208,10 @@ political_decisions = {
 			
 			NOT = { has_country_modifier = democratic_bloc_leader }
 			NOT = { has_country_modifier = communist_bloc_leader }
-			
-			OR = {
-				has_country_flag = neutrality
-				has_country_modifier = neutrality
-			}
 		}
 		
 		allow = {
 			NOT = { has_country_modifier = king_timer }
-
-			NOT = { has_country_flag = neutrality }
-			NOT = { has_country_modifier = neutrality }
 
 			OR = { 
 			
