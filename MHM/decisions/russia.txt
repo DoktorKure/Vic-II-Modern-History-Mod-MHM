@@ -160,6 +160,7 @@ political_decisions = {
 			tag = RUS
 			year = 1947 NOT = { year = 1990 }
 			NOT = { has_country_flag = deportation_of_germans }
+			OR = { has_country_flag = policy_on_germany has_global_flag = player_choice_GER_occupation }
 		}
 
 		allow = {

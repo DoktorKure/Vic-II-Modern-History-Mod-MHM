@@ -5245,59 +5245,66 @@ country_event = {
 	desc = EVTDESC1610091
 	picture = "angry_hardliners"
 
-trigger = {
-ai = no
-war = no
+	trigger = {
+		ai = no
+		war = no
 
-NOT = { num_of_revolts = 1 }
+		NOT = { num_of_revolts = 1 }
 
-NOT = { has_country_modifier = political_strife }
+		NOT = { has_country_modifier = political_strife }
 
-OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
 
-OR = { 
-NOT = { vote_franschise = none_voting } 
-NOT = { political_opinions = ruling_party_opinion } 
-NOT = { public_meetings = no_meetings } 
-NOT = { publishing_rights = state_publishing }
-NOT = { political_parties = parties_not_allowed }
-}
+		OR = { 
+			NOT = { vote_franschise = none_voting } 
+			NOT = { political_opinions = ruling_party_opinion } 
+			NOT = { public_meetings = no_meetings } 
+			NOT = { publishing_rights = state_publishing }
+			NOT = { political_parties = parties_not_allowed }
+		}
 
-#Angry officers or bureaucrats
-any_owned_province = {
-is_core = THIS
-any_pop = { OR = { type = officers type = bureaucrats } militancy = 8 }
-}
-
-}
-
-mean_time_to_happen = { 
-months = 12
-modifier = { factor = 3 has_country_modifier = nepohigh }
-modifier = { factor = 0.5 has_country_modifier = nepolow }
-}
-
-option = {
-name = "Tolerate their insolence"
-
-add_country_modifier = { name = political_strife duration = 730 }
-
-any_pop = { consciousness = 2 militancy = 1 }
-
-ai_chance = { factor = 1 }
+		#Angry officers or bureaucrats
+		any_owned_province = {
+			is_core = THIS
+			any_pop = { OR = { type = officers type = bureaucrats } militancy = 8 }
+		}
 	}
 
-option = {
-name = "Purge them"
-
-any_pop = { 
-limit = { OR = { type = officers type = bureaucrats } militancy = 8 }
-pop_type = clerks
+	mean_time_to_happen = { 
+		months = 12
+		modifier = { factor = 3 has_country_modifier = nepohigh }
+		modifier = { factor = 0.5 has_country_modifier = nepolow }
 	}
 
-any_pop = { militancy = -3 consciousness = -5 }
+	option = {
+		name = "Give in to their demands"
+		political_reform = none_voting
+		political_reform = ruling_party_opinion
+		political_reform = no_meetings
+		political_reform = state_publishing
+		political_reform = parties_not_allowed
+		any_pop = { consciousness = -2 militancy = -1 }
+		ai_chance = {
+			factor = 0.3
+			modifier = { factor = 1 militancy = 7 }
+		}
+	}
 
-ai_chance = { factor = 0 }
+	option = {
+		name = "Tolerate their insolence"
+		add_country_modifier = { name = political_strife duration = 730 }
+		any_pop = { consciousness = 2 militancy = 1 }
+		ai_chance = { factor = 0.5 }
+	}
+
+	option = {
+		name = "Purge them"
+		any_pop = { 
+			limit = { OR = { type = officers type = bureaucrats } militancy = 8 }
+			pop_type = clerks
+		}
+		any_pop = { militancy = -3 consciousness = -5 }
+		ai_chance = { factor = 0.2 }
 	}
 
 }

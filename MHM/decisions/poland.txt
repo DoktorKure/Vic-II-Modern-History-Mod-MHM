@@ -6,7 +6,7 @@ political_decisions = {
 			tag = POL
 			year = 1947 NOT = { year = 1990 }
 			NOT = { has_country_flag = expulsion_of_germans }
-			has_country_flag = { policy_on_germany }
+			OR = { has_country_flag = policy_on_germany has_global_flag = player_choice_GER_occupation }
 			OR = { owns = 546 owns = 692 owns = 682 owns = 696 }
 		}
 
