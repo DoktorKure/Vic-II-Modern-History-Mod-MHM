@@ -759,7 +759,7 @@ fabric_factory = {
 	input_goods = {    
 		cotton = 2
 		wool = 1
-		leather = 1.5
+		cattle = 1.5
 	}
 	output_goods = fabric 
 	value = 5
@@ -779,7 +779,7 @@ fabric_factory = {
 		value = 0.25
 	}
 	bonus = {
-		trigger = { trade_goods_in_state = leather }
+		trigger = { trade_goods_in_state = cattle }
 		value = 0.25
 	}
 }
