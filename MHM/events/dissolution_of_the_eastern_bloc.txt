@@ -31,7 +31,7 @@ country_event = { # Sinatra Doctrine
 			is_our_vassal = PCC
 			is_our_vassal = CZH
 			is_our_vassal = HUN
-			is_our_vassal = ROM
+			OR = { is_our_vassal = ROM ROM = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			is_our_vassal = BUL
 			is_our_vassal = AUS
 			is_our_vassal = DDR

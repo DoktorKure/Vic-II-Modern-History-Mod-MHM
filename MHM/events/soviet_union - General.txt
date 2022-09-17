@@ -1702,7 +1702,6 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		NOT = { has_country_flag = USSR_events_railroaded }
 		tag = RUS
 		year = 1989
 		has_global_flag = perestroika_intention_global_flag
