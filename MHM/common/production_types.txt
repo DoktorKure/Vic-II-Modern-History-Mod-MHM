@@ -703,8 +703,30 @@ petroleum_fuel_factory = {
 			OR = {
 				trade_goods_in_state = petroleum 
 				has_building = gas_fuel_factory 
+				has_building = coal_liquifaction_factory
 			}
 		}
+		value = 0.5
+	}
+}
+
+coal_liquifaction_factory = {
+	template = fuel_template
+	input_goods = {
+		coal = 4
+	} 
+	# Coal is turned into petroleum to reflect the added processing required
+	output_goods = petroleum
+	# Make this less profitable than other fuels to reflect the difficulty of making oil from coal compared to simply acquiring natural sources of oil
+	value = 1.5
+	bonus = {
+		trigger = { 
+			country = { has_country_flag = spclow }
+		}
+		value = 0.10
+	}
+	bonus = {
+		trigger = { trade_goods_in_state = coal }
 		value = 0.5
 	}
 }
@@ -735,9 +757,9 @@ gas_fuel_factory = {
 fabric_factory = {       
 	template = factory_template
 	input_goods = {    
-		cotton = 4
-		wool = 4
-		leather = 4
+		cotton = 2
+		wool = 1
+		leather = 1.5
 	}
 	output_goods = fabric 
 	value = 5
@@ -779,7 +801,8 @@ petroleum_fabric_factory = {
 		trigger = { 
 			OR = {
 				trade_goods_in_state = petroleum 
-				has_building = gas_fuel_factory 
+				has_building = gas_fuel_factory
+				has_building = coal_liquifaction_factory
 			}
 		}
 		value = 0.25
@@ -807,6 +830,7 @@ synthetic_rubber_factory = {
 			OR = {
 				trade_goods_in_state = petroleum 
 				has_building = gas_fuel_factory 
+				has_building = coal_liquifaction_factory
 			}
 		}
 		value = 0.25
@@ -818,8 +842,8 @@ synthetic_rubber_factory = {
 petroleum_plastics_factory = {       
 	template = advanced_factory_template
 	input_goods = {    
-		petroleum = 4
-		rubber = 1
+		petroleum = 1.5
+		rubber = 3.5
 	}
 	output_goods = plastics 
 	value = 8
@@ -835,6 +859,7 @@ petroleum_plastics_factory = {
 			OR = {
 				trade_goods_in_state = petroleum 
 				has_building = gas_fuel_factory 
+				has_building = coal_liquifaction_factory
 			}
 		}
 		value = 0.125
@@ -992,7 +1017,8 @@ weaponry_factory = {
 heating_electricity_factory = {       
 	template = power_plant_template
 	input_goods = {    
-		petroleum = 15
+		petroleum = 7.5
+		natural_gas = 7.5
 	}
 	output_goods = heating_electricity 
 	value = 12
@@ -1007,24 +1033,10 @@ heating_electricity_factory = {
 			OR = {
 				trade_goods_in_state = petroleum 
 				has_building = gas_fuel_factory 
+				has_building = coal_liquifaction_factory
 			}
 		}
 		value = 0.125
-	}
-}
-
-heating_electricity_gas_factory = {       
-	template = power_plant_template
-	input_goods = {    
-		natural_gas = 15
-	}
-	output_goods = heating_electricity 
-	value = 12
-	bonus = {
-		trigger = { 
-			country = { has_country_flag = spclow }
-		}
-		value = 0.10
 	}
 	bonus = {
 		trigger = { trade_goods_in_state = natural_gas }
@@ -1192,7 +1204,7 @@ furniture_factory = {
 pharmaceuticals_factory = {       
 	template = advanced_factory_template
 	input_goods = {    
-		plastics = 2
+		glass = 2
 		inorganic_chemicals = 3
 	}
 	output_goods = pharmaceuticals 
@@ -1206,6 +1218,10 @@ pharmaceuticals_factory = {
 	bonus = {
 		trigger = { has_building = glass_factory }
 		value = 0.125
+	}
+	bonus = {
+		trigger = { has_building = petroleum_plastics_factory }
+		value = 0.25
 	}
 	bonus = {
 		trigger = { has_building = inorganic_chemicals_factory }
@@ -1299,6 +1315,10 @@ automobiles_factory = {
 			}
 		}
 		value = 0.125
+	}
+	bonus = {
+		trigger = { has_building = petroleum_plastics_factory }
+		value = 0.25
 	}
 }
 
@@ -1454,6 +1474,10 @@ cold_beverages_factory = {
 		value = 0.125
 	}
 	bonus = {
+		trigger = { has_building = petroleum_plastics_factory }
+		value = 0.25
+	}
+	bonus = {
 		trigger = {
 			OR = {
 				trade_goods_in_state = fruit
@@ -1503,6 +1527,10 @@ hot_beverages_factory = {
 		trigger = { has_building = glass_factory }
 		value = 0.125
 	}
+	bonus = {
+		trigger = { has_building = petroleum_plastics_factory }
+		value = 0.25
+	}
 }
 
 alcoholic_beverages_factory = {       
@@ -1510,8 +1538,8 @@ alcoholic_beverages_factory = {
 	input_goods = {    
 		grain = 3
 		fruit = 1
-		sugar = 1
-		glass = 3
+		sugar = 3
+		glass = 1
 	}
 	output_goods = beverage_tobacco 
 	value = 3.5
@@ -1536,6 +1564,10 @@ alcoholic_beverages_factory = {
 	bonus = {
 		trigger = { has_building = glass_factory }
 		value = 0.125
+	}
+	bonus = {
+		trigger = { has_building = petroleum_plastics_factory }
+		value = 0.25
 	}
 	bonus = {
 		trigger = { has_building = sugar_factory }
@@ -1592,8 +1624,9 @@ transport_factory = {
 		trigger = { 
 			OR = {
 				has_building = petroleum_fuel_factory 
-				has_building = gas_fuel_factory 
 				has_building = coal_fuel_factory 
+				has_building = gas_fuel_factory 
+				has_building = coal_liquifaction_factory
 			}
 		}
 		value = 0.125

@@ -17,15 +17,6 @@ oil_power_plant = {
 		activate_building = heating_electricity_factory
 	}
 }
-gas_power_plant = {
-	limit = { oil_well = 1 }
-	chance = {
-		base = 4
-	}
-	effect = {
-		activate_building = electricity_gas_factory
-	}
-}
 nuclear_power_plant = {
 	limit = { nuclear_power = 1 }
 	chance = {
@@ -48,6 +39,19 @@ petroleum_processing = {
 	}
 	effect = {
 		activate_building = petroleum_fuel_factory
+	}
+}
+coal_liquifaction = {
+	limit = { oil_well = 1 }
+	chance = {
+		base = 4
+		modifier = {
+			factor = 2
+			average_consciousness = 2
+		}
+	}
+	effect = {
+		activate_building = coal_liquifaction_factory
 	}
 }
 natural_gas_processing = {
