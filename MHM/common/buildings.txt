@@ -608,7 +608,7 @@ petroleum_fuel_factory = {
 	pop_build_factory = yes
 }
 
-coal_liquifaction_factory = {
+coal_liquefaction_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -625,7 +625,7 @@ coal_liquifaction_factory = {
 	visibility = yes
 	onmap = yes
 	advanced_factory = yes
-	production_type = coal_liquifaction_factory
+	production_type = coal_liquefaction_factory
 	pop_build_factory = yes
 
 	#default_enabled = yes

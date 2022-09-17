@@ -51,7 +51,7 @@ coal_liquifaction = {
 		}
 	}
 	effect = {
-		activate_building = coal_liquifaction_factory
+		activate_building = coal_liquefaction_factory
 	}
 }
 natural_gas_processing = {

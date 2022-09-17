@@ -3203,13 +3203,15 @@ centralhigh = {
 
 #Pop effects
 global_assimilation_rate = 0.2
+core_pop_consciousness_modifier = -0.05
+core_pop_militancy_modifier = -0.05
 non_accepted_pop_consciousness_modifier = 0.05
 non_accepted_pop_militancy_modifier = 0.05
 
 #Government effects
 tax_efficiency = 0.05
-education_efficiency_modifier = 0.10
-administrative_efficiency_modifier = 0.10
+education_efficiency_modifier = -0.10
+administrative_efficiency_modifier = -0.10
 tariff_efficiency_modifier = 0.10
 suppression_points_modifier = 0.20
 
@@ -3220,13 +3222,13 @@ centralmedium = {
 
 #Pop effects
 global_assimilation_rate = 0.1
+core_pop_consciousness_modifier = -0.025
+core_pop_militancy_modifier = -0.025
 non_accepted_pop_consciousness_modifier = 0.025
 non_accepted_pop_militancy_modifier = 0.025
 
 #Government effects
 tax_efficiency = 0.025
-education_efficiency_modifier = 0.05
-administrative_efficiency_modifier = 0.05
 tariff_efficiency_modifier = 0.05
 suppression_points_modifier = 0.10
 
@@ -3236,8 +3238,14 @@ icon = 3
 centrallow = {
 
 #Pop effects
-core_pop_militancy_modifier = 0.02
-core_pop_consciousness_modifier = 0.02
+core_pop_consciousness_modifier = 0.025
+core_pop_militancy_modifier = 0.025
+non_accepted_pop_consciousness_modifier = -0.025
+non_accepted_pop_militancy_modifier = -0.025
+
+#Government effects
+education_efficiency_modifier = 0.10
+administrative_efficiency_modifier = 0.10
 
 icon = 3
 }

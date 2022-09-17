@@ -703,14 +703,14 @@ petroleum_fuel_factory = {
 			OR = {
 				trade_goods_in_state = petroleum 
 				has_building = gas_fuel_factory 
-				has_building = coal_liquifaction_factory
+				has_building = coal_liquefaction_factory
 			}
 		}
 		value = 0.5
 	}
 }
 
-coal_liquifaction_factory = {
+coal_liquefaction_factory = {
 	template = fuel_template
 	input_goods = {
 		coal = 4
@@ -802,7 +802,7 @@ petroleum_fabric_factory = {
 			OR = {
 				trade_goods_in_state = petroleum 
 				has_building = gas_fuel_factory
-				has_building = coal_liquifaction_factory
+				has_building = coal_liquefaction_factory
 			}
 		}
 		value = 0.25
@@ -830,7 +830,7 @@ synthetic_rubber_factory = {
 			OR = {
 				trade_goods_in_state = petroleum 
 				has_building = gas_fuel_factory 
-				has_building = coal_liquifaction_factory
+				has_building = coal_liquefaction_factory
 			}
 		}
 		value = 0.25
@@ -859,7 +859,7 @@ petroleum_plastics_factory = {
 			OR = {
 				trade_goods_in_state = petroleum 
 				has_building = gas_fuel_factory 
-				has_building = coal_liquifaction_factory
+				has_building = coal_liquefaction_factory
 			}
 		}
 		value = 0.125
@@ -1033,7 +1033,7 @@ heating_electricity_factory = {
 			OR = {
 				trade_goods_in_state = petroleum 
 				has_building = gas_fuel_factory 
-				has_building = coal_liquifaction_factory
+				has_building = coal_liquefaction_factory
 			}
 		}
 		value = 0.125
@@ -1626,7 +1626,7 @@ transport_factory = {
 				has_building = petroleum_fuel_factory 
 				has_building = coal_fuel_factory 
 				has_building = gas_fuel_factory 
-				has_building = coal_liquifaction_factory
+				has_building = coal_liquefaction_factory
 			}
 		}
 		value = 0.125
