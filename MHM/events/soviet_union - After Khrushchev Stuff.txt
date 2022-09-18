@@ -1141,7 +1141,7 @@ country_event = { # Disciplinary Committee
 	id = 9001171
 	title = "Disciplinary Committee"
 	desc = EVT_9001171_DESC
-	picture = "ussr_basic_security_militsia"
+	picture = "ussr_police_militsia"
   
 	fire_only_once = yes
 

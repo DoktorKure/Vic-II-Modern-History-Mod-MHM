@@ -921,7 +921,7 @@ province_event = {
 			communist = 50
 		}
 
-		#Reduce, province basic_security
+		#Reduce, province police
 		modifier = {
 			factor = 1.1
 			crime_fighting = 0.5
