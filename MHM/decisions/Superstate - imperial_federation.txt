@@ -1,5 +1,4 @@
 political_decisions = {
-
 	IMP_ambition = {
 		picture = "IMP_ambition"
 		potential = {
@@ -11,16 +10,38 @@ political_decisions = {
 				primary_culture = anglo_canadian
 				primary_culture = english
 				primary_culture = british
-				primary_culture = black_anglo
+				has_country_modifier = commonwealthmember
+				has_country_modifier = commonwealthmembereng
 			}
 			NOT = { tag = USA }
-			NOT = { has_country_flag = xeu_ambition }
+			NOT = { has_country_flag = xac_ambition } 
+			NOT = { has_country_flag = xal_ambition } 
+			NOT = { has_country_flag = xan_ambition } 
+			NOT = { has_country_flag = xau_ambition } 
+			NOT = { has_country_flag = xcc_ambition } 
+			NOT = { has_country_flag = xci_ambition } 
+			NOT = { has_country_flag = xea_ambition } 
+			NOT = { has_country_flag = xec_ambition } 
+			NOT = { has_country_flag = xef_ambition } 
+			NOT = { has_country_flag = xeu_ambition } 
+			NOT = { has_country_flag = xew_ambition } 
+			NOT = { has_country_flag = xgc_ambition } 
+			NOT = { has_country_flag = xio_ambition } 
+			NOT = { has_country_flag = xms_ambition } 
+			NOT = { has_country_flag = xmu_ambition } 
+			NOT = { has_country_flag = xna_ambition } 
+			NOT = { has_country_flag = xpi_ambition } 
+			NOT = { has_country_flag = xsa_ambition } 
+			NOT = { has_country_flag = xsu_ambition } 
+			NOT = { has_country_flag = xtc_ambition } 
+			NOT = { has_country_flag = xum_ambition }
 			NOT = { has_country_flag = imp_ambition }
-			NOT = { has_country_flag = xpi_ambition }
-			NOT = { has_country_flag = xna_ambition }
 		}
 		allow = {
-			OR = { new_synthesis = 1 has_country_flag = british_empire_choice ENG = { has_country_flag = british_empire_choice } }
+			OR = {
+				new_synthesis = 1
+				has_country_flag = british_empire_choice
+			}
 			OR = {
 				is_greater_power = yes
 				AND = {
@@ -30,15 +51,15 @@ political_decisions = {
 			} 
 			NOT = { has_country_modifier = in_bankrupcy } 
 
-			OR = { government = hms_government government = hms_government1 }
+			OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
 
 			OR = { has_country_modifier = commonwealthmember has_country_modifier = commonwealthmembereng }
 
 			war = no
 		}
 		effect = {
-			set_country_flag = trade_block_ambition
 			set_country_flag = imp_ambition
+			set_country_flag = trade_block_ambition
 			set_country_flag = in_trade_block
 			any_pop = {
 				scaled_militancy = {
@@ -65,10 +86,10 @@ political_decisions = {
 		}
 		allow = {
 			war = no
-			OR = { 
+			OR = {
 				AND = { part_of_sphere = yes sphere_owner = { has_country_flag = deny_superstate NOT = { has_country_flag = imp_ambition } } }
 
-				NOT = { OR = { government = hms_government government = hms_government1 } }
+				NOT = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
 
 				NOT = { OR = { has_country_modifier = commonwealthmember has_country_modifier = commonwealthmembereng } }
 
@@ -94,7 +115,7 @@ political_decisions = {
 			tech_school = traditional_academic
 			capital_scope = { 
 				remove_province_modifier = single_market			
-		remove_province_modifier = currency_union_province
+				remove_province_modifier = currency_union_province
 				remove_province_modifier = defence_union
 			}
 		}
@@ -113,7 +134,10 @@ political_decisions = {
 				primary_culture = anglo_canadian
 				primary_culture = english
 				primary_culture = british
-				primary_culture = black_anglo
+				vassal_of = ENG
+				vassal_of = END
+				has_country_modifier = commonwealthmember
+				has_country_modifier = commonwealthmembereng
 			}
 			has_country_flag = IMP_ambition
 			has_country_flag = trade_block_ambition 
@@ -126,9 +150,12 @@ political_decisions = {
 				primary_culture = anglo_canadian
 				primary_culture = english
 				primary_culture = british
-				primary_culture = black_anglo
+				vassal_of = ENG
+				vassal_of = END
+				has_country_modifier = commonwealthmember
+				has_country_modifier = commonwealthmembereng
 			}
-			OR = { government = hms_government government = hms_government1 }
+			OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
 			capitalism = 1
 			war = no
 		}
@@ -150,13 +177,15 @@ political_decisions = {
 				primary_culture = anglo_canadian
 				primary_culture = english
 				primary_culture = british
-				primary_culture = black_anglo
+				vassal_of = ENG
+				vassal_of = END
+				has_country_modifier = commonwealthmember
+				has_country_modifier = commonwealthmembereng
 			}
 			has_country_flag = IMP_ambition
-			capital_scope = { has_province_modifier = single_market }
 		}
 		allow = {
-			OR = { government = hms_government government = hms_government1 }
+			OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
 			economic_globalization = 1
 			election = no
 			war = no
@@ -179,13 +208,15 @@ political_decisions = {
 				primary_culture = anglo_canadian
 				primary_culture = english
 				primary_culture = british
-				primary_culture = black_anglo
+				vassal_of = ENG
+				vassal_of = END
+				has_country_modifier = commonwealthmember
+				has_country_modifier = commonwealthmembereng
 			}
 			has_country_flag = IMP_ambition
-			capital_scope = { has_province_modifier = currency_union_province }
 		}
 		allow = {
-			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+			OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
 			election = no
 
 			#has_unclaimed_cores = no
@@ -197,8 +228,9 @@ political_decisions = {
 		effect = {
 			all_core = { add_core = IMP }
 		}
-		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 } }
+		ai_will_do = { factor = 1 } # modifier = { factor = 1 consciousness = 2 }
 	}
+
 	IMP_defence_union = {
 		picture = "IMP_defence_union"
 		potential = {
@@ -211,13 +243,15 @@ political_decisions = {
 				primary_culture = anglo_canadian
 				primary_culture = english
 				primary_culture = british
-				primary_culture = black_anglo
+				vassal_of = ENG
+				vassal_of = END
+				has_country_modifier = commonwealthmember
+				has_country_modifier = commonwealthmembereng
 			}
 			has_country_flag = IMP_ambition
-			capital_scope = { is_core = IMP }
 		}
 		allow = {
-			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+			OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
 			election = no
 			war = no
 			age_of_protests = 1
@@ -244,13 +278,15 @@ political_decisions = {
 				primary_culture = anglo_canadian
 				primary_culture = english
 				primary_culture = british
-				primary_culture = black_anglo
+				vassal_of = ENG
+				vassal_of = END
+				has_country_modifier = commonwealthmember
+				has_country_modifier = commonwealthmembereng
 			}
 			has_country_flag = IMP_ambition
-			capital_scope = { has_province_modifier = defence_union } 
 		}
 		allow = {
-			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+			OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
 			election = no
 			is_greater_power = yes 
 			political_polarization = 1
@@ -275,13 +311,12 @@ political_decisions = {
 				add_core = IMP
 			}
 			change_tag = IMP
-				add_accepted_culture = white_anglo
-				add_accepted_culture = australian
-				add_accepted_culture = new_zealander
-				add_accepted_culture = anglo_canadian
-				add_accepted_culture = english
-				add_accepted_culture = british
-				add_accepted_culture = black_anglo
+			add_accepted_culture = white_anglo
+			add_accepted_culture = australian
+			add_accepted_culture = new_zealander
+			add_accepted_culture = anglo_canadian
+			add_accepted_culture = english
+			add_accepted_culture = british
 		}
 		ai_will_do = {
 			factor = 1
@@ -304,15 +339,16 @@ political_decisions = {
 
 				any_neighbor_country = { 
 					OR = { has_country_flag = IMP_ambition in_sphere = THIS vassal_of = THIS } 
-					OR = { 
+					OR = {
 						primary_culture = white_anglo
 						primary_culture = australian
 						primary_culture = new_zealander
 						primary_culture = anglo_canadian
 						primary_culture = english
 						primary_culture = british
-						primary_culture = black_anglo
-					} 
+						has_country_modifier = commonwealthmember
+						has_country_modifier = commonwealthmembereng
+					}
 				}
 
 			}
@@ -320,7 +356,7 @@ political_decisions = {
 		}
 
 		allow = {
-			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+			OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
 			election = no
 			is_greater_power = yes 
 			political_polarization = 1
@@ -328,8 +364,8 @@ political_decisions = {
 		}
 
 		effect = {
-			any_country = { 
-				limit = { 
+			any_country = {
+				limit = {
 					exists = yes
 
 					OR = {
@@ -339,14 +375,13 @@ political_decisions = {
 						primary_culture = anglo_canadian
 						primary_culture = english
 						primary_culture = british
-						primary_culture = black_anglo
-					} 
-
-					OR = { neighbour = THIS tag = CAN tag = NZL tag = AST }
+						has_country_modifier = commonwealthmember
+						has_country_modifier = commonwealthmembereng
+					}
 
 					OR = { has_country_flag = IMP_ambition vassal_of = THIS in_sphere = THIS } 
 
-				} 
+				}
 
 				country_event = 11106 
 			}
