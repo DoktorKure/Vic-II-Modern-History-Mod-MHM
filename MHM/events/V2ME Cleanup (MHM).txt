@@ -1,0 +1,258 @@
+#
+# V2ME Cleanup 1.0.3b by Bob Bobington and Dr, configured for MHM by Doktor Kure
+#
+# Features:
+#	
+#	-Nearly invisible cleanup tag
+#	-Zero performance degradation
+#	-Immersion will not be ruined, player interaction with cleanup is kept to an absolute minimum
+#	-Multiple stability improvements and bug fixes
+#	-Easy to customize for new content
+#	-Handles backend tasks (i.e. setting govflags, invention flags, etc) on a daily, monthly, or yearly tick, as needed
+#	-Handles vassal interactions with one decision instead of hundreds, improving performance
+#	
+# Notable bugs addressed:
+#
+#	-Ghost units and ships of non-existing nations cleaned monthly
+#	-Convert slave pops in newly-annexed provinces to farmers or labourers if the annexing country doesn't have concentration camps active
+#	-Prevents existing countries from having non-existing overlords
+#	-Prevents existing countries from having non-existing vassals (disabled by default, this is intended in some mods)
+#
+# Upcoming features (TBA):
+#	-Permanent fix to craftsmen exploit/bug, without player interaction
+#	-Dynamically adressing the liquidity crisis, effectively
+#
+
+country_event = {
+	id = 47777789
+	title = "AI: Cleanup Setup"
+	desc = "AI: Cleanup Setup"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Set up Cleanup"
+		CLN = {
+			country_event = 47777787
+			country_event = 47777790
+			country_event = 47777791
+			add_country_modifier = { name = neutrality duration = -1 }
+		}
+	}
+}
+
+country_event = {
+	id = 47777787
+	title = "AI: Daily Cleanup Check"
+	desc = "AI: Daily Cleanup Check"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Checking..."
+		
+		#Clean up UNO tag if it exists
+		any_country = {
+			limit = {
+				UNO = { exists = yes }
+				neighbour = UNO
+			}
+			inherit = UNO
+		}
+		
+		#freeing forced labourers
+		any_country = {
+            limit = {
+				exists = yes
+                any_owned_province = { has_pop_type = slaves }
+                NOT = { has_country_flag = death_camp_active }
+            }
+            any_owned = {
+                limit = {
+                    has_pop_type = slaves
+                    has_pop_type = labourers
+                }
+                any_pop = { limit = { type = slaves } pop_type = labourers money = 1000 }
+            }
+            any_owned = {
+                limit = {
+                    has_pop_type = slaves
+                    has_pop_type = farmers
+                }
+                any_pop = { limit = { type = slaves } pop_type = farmers money = 1000 }
+            }
+            any_owned = {
+                limit = {
+                    has_pop_type = slaves
+                    NOT = { has_pop_type = farmers has_pop_type = labourers }
+                }
+                any_pop = { limit = { type = slaves } pop_type = farmers money = 1000 }
+            }
+        }
+		
+		#updating missing flags
+		any_country = {
+			limit = {
+				exists = yes
+				NOT = {
+					has_country_flag = existing_country
+				}
+			}
+			set_country_flag = existing_country
+		}
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = existing_country
+			}
+			clr_country_flag = existing_country
+		}
+		
+		CLN = { country_event = { id = 47777787 days = 1 } }
+	}
+}
+
+country_event = {
+	id = 47777790
+	title = "AI: Monthly Cleanup Check"
+	desc = "AI: Monthly Cleanup Check"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Checking..."
+		
+		#cleanup vassals with nonexistent overlords
+		any_country = {
+			limit = {
+				is_vassal = yes
+				exists = yes
+				overlord = { exists = no }
+			}
+			country_event = 47777788
+		}
+		
+		#cleanup overlords with nonexistent vassals - disabled by default
+		#any_country = {
+		#	limit = {
+		#		is_vassal = yes
+		#		exists = no
+		#		overlord = { exists = yes }
+		#	}
+		#	country_event = 47777788
+		#}
+		
+		#ghost units monthly cleanup
+		any_country = {
+			limit = {
+				exists = no
+                is_greater_power = no
+                #has_country_flag = existing_country
+                capital_scope = { NOT = { province_control_days = 120 } }
+                OR = {
+                    is_mobilised = yes
+                    total_amount_of_ships = 1
+                }
+			}
+			annex_to = FROM
+		}
+		
+		#make CLN unable to be interacted with by ai
+		any_country = {
+			limit = {
+				exists = yes
+			}
+			relation = { who = THIS value = -400 }
+			diplomatic_influence = { who = THIS value = -400 }
+		}
+		
+		CLN = { country_event = { id = 47777790 days = 30 } }
+	}
+}
+
+country_event = {
+	id = 47777791
+	title = "AI: Yearly Cleanup Check"
+	desc = "AI: Yearly Cleanup Check"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Checking..."
+		
+		#upgrade rebels
+		random_owned = {
+			limit = {
+				owner = {
+					year = 1960
+					NOT = { has_global_flag = rebel_tech_1960 }
+				}
+			}
+			owner = {
+				REB = {
+					activate_technology = strategic_bomber
+					activate_technology = icbm
+					activate_technology = guerrilla
+					activate_technology = antitank_weapons
+					activate_technology = second_generation_jet_fighters
+					activate_technology = proxy_war
+				}
+				set_global_flag = rebel_tech_1960
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					year = 1980
+					NOT = { has_global_flag = rebel_tech_1980 }
+				}
+			}
+			owner = {
+				set_global_flag = rebel_tech_1980
+				REB = {
+					activate_technology = submarine_launched_ballistic_missile
+					activate_technology = mechanized_infantry
+					activate_technology = main_battle_tank
+					activate_technology = surface_to_air_missile
+					activate_technology = close_air_support
+					activate_technology = mutual_assured_destruction
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					year = 2000
+					NOT = { has_global_flag = rebel_tech_2000 }
+				}
+			}
+			owner = {
+				set_global_flag = rebel_tech_2000
+				REB = {
+					activate_technology = missile_launch_facility
+					activate_technology = special_forces
+					activate_technology = modern_rifles
+					activate_technology = assymetric_warfare
+					activate_technology = arms_race_doctrine
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					year = 2020
+					NOT = { has_global_flag = rebel_tech_2020 }
+				}
+			}
+			owner = {
+				set_global_flag = rebel_tech_2020
+				REB = {
+					activate_technology = military_gps_system
+					activate_technology = fourth_generation_warfare
+				}
+			}
+		}
+		
+		CLN = { country_event = { id = 47777791 days = 365 } }
+	}
+}

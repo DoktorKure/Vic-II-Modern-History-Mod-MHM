@@ -77,7 +77,7 @@ country_event = {
 country_event = {
 	id = 8023302
 	title = EVT_8023302_NAME # Monument Protests
-	desc = EVT_8023302_DESC # The figure stood, alone in front of a column of tanks. He had had enough: the nighttime raids, the disappearances, the control of thought and discourse. Undoubtedly necessary measures of state security. Recently, it is true, there had been some...extra measures taken against a new wave of agitators throughout $COUNTRY$. A swift response, more than they deserved. And yet, if this man feels strongly enough in his convictions to stop the tanks, and if so many have gathered in peaceful protest...\n\nThere is no time for idle thought. The police stand ready to put this man away forever. Just give the word.
+	desc = EVT_8023302_DESC # The figure stood, alone in front of a column of tanks. He had had enough: the nighttime raids, the disappearances, the control of thought and discourse. Undoubtedly necessary measures of state security. Recently, it is true, there had been some...extra measures taken against a new wave of agitators throughout $COUNTRY$. A swift response, more than they deserved. And yet, if this man feels strongly enough in his convictions to stop the tanks, and if so many have gathered in peaceful protest...\n\nThere is no time for idle thought. The basic_security stand ready to put this man away forever. Just give the word.
 	election = yes
 	issue_group = economic_policy
 

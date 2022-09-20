@@ -784,6 +784,30 @@ country_event = {
 	}
 }
 
+country_event = {
+    id = 19369
+    title = "Our New Puppet"
+    desc = "Our previous war has given us a new satellite!"
+    picture = "treaty"
+
+    is_triggered_only = yes
+	
+	immediate = {
+		any_country = {
+            limit = {
+                exists = yes
+                NOT = { has_country_flag = existing_country }
+                is_vassal = no
+            }
+            country_event = 19370
+        }
+	}
+
+    option = {
+        name = "Good"
+    }
+}
+
 #Event fires upon completion of the make_puppet CB for the defeated nation
 country_event = {
 	id = 19370

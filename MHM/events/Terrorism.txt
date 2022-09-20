@@ -563,7 +563,7 @@ province_event = {
 			has_crime = terrorist_cells #requires militancy 6
 		}
 
-		#Reduce, province police
+		#Reduce, province basic_security
 		modifier = {
 			factor = 1.1
 			crime_fighting = 0.5
@@ -1081,7 +1081,7 @@ province_event = {
 	}
 
 	option = {
-		name = "We need to step up police presence in the area"
+		name = "We need to step up basic_security presence in the area"
 		any_pop = {
 			limit = {
 				OR = {

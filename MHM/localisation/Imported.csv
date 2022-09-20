@@ -1,4 +1,8 @@
 CODE;ENGLISH;FRENCH;GERMAN;POLISH;SPANISH;HUNGARIAN;CZECH;HUNGARIAN;DUTCH;PORTUGUESE;RUSSIAN;FINNISH;;x;;;;;;;;;;;;;;;;
+liberate_puppet;Liberate and Puppet Country;;Befreit das Land;;;;;;;;;;;
+liberate_puppet_desc;Liberate an §Yentire country§W from its oppressors and puppet it\n\n§YNOTE: §RDo not use it with normal Free people or Liberate Country CBs for other non existent countries.§W;;Befreit ein §Yganzes Land§W von seinen Unterdrückern;;;;;;;;;;;
+liberate_puppet_short;$THIRD$ acquires $STATE$ and becomes our puppet;$THIRD$ prend $STATE$;$THIRD$ erwirbt $STATE$;;$THIRD$ adquiere $STATE$;;;;;;;;;
+liberate_puppet_setup;Return $STATE$ to $THIRD$ from $RECIPIENT$ and puppet it;Prendre $STATE$ à $RECIPIENT$ pour le rendre à $THIRD$;Gebt $STATE$ an $THIRD$ von $RECIPIENT$ zurück;;Arrebatar el estado de $STATE$ de manos de $RECIPIENT$ y devolvérselo a $THIRD$;;;;;;;;;
 vassal_interactions_title;Open Vassal Interactions Menu;;;;;;;;;;;;;
 vassal_interactions_desc;This decision fires an event which will allow you to free or return cores to your vassals provided those cores don't also belong to you.;;;;;;;;;;;;;
 homeland_productive_year;Bountiful Year;;;;;;;;;;;;;

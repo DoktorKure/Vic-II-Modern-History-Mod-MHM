@@ -2277,7 +2277,7 @@ country_event = {
 	mean_time_to_happen = { months = 1 }
 
 	option = {
-		name = "Military and police forces must respond to this threat!"
+		name = "Military and basic_security forces must respond to this threat!"
 		any_pop = {
 			limit = { strata = poor }
 			ideology = { factor = 0.15 value = traditionalist }

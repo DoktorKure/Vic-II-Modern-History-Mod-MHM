@@ -2600,7 +2600,7 @@ country_event = { # The Militsiya
 	id = 9001251
 	title = "The Militsiya"
 	desc = EVT_9001251_DESC
-	picture = "ussr_police_militsia"
+	picture = "ussr_basic_security_militsia"
 
 	is_triggered_only = yes
 

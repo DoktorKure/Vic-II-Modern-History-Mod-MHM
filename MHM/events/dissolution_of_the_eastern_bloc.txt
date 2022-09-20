@@ -1102,7 +1102,7 @@ country_event = {
 	id = 9001407
 	title = "Democratization in $COUNTRY$?"
 	desc = EVTDESC9001407
-	picture = "ussr_police_militsia"
+	picture = "ussr_basic_security_militsia"
 
 	trigger = {
 		capital_scope = { continent = europe }

@@ -8613,7 +8613,7 @@ months = 9
 	}
 
 option = {
-name = "Send in the police!"
+name = "Send in the basic_security!"
 badboy = 5
 HKG = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
 ai_chance = { factor = 0.9 }

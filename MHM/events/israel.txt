@@ -1478,7 +1478,7 @@ country_event = {
 country_event = {
 	id = 8008755
 	title = EVT_8008755_NAME # $FROMCOUNTRY$ agrees to a treaty
-	desc = EVT_8008755_DESC # For the first time since the Arab-Israeli war, $FROMCOUNTRY$ has agreed to make a formal peace with us if we withdraw our troops from South Lebanon. We only ask that they police the Palestinians in the area. If this treaty is successful, we can begin diplomacy with $FROMCOUNTRY$, starting with formalizing our borders.
+	desc = EVT_8008755_DESC # For the first time since the Arab-Israeli war, $FROMCOUNTRY$ has agreed to make a formal peace with us if we withdraw our troops from South Lebanon. We only ask that they basic_security the Palestinians in the area. If this treaty is successful, we can begin diplomacy with $FROMCOUNTRY$, starting with formalizing our borders.
 	picture = "taif_agreement"
 	is_triggered_only = yes # LEB, evt 8008754 lebanon.txt
 	
