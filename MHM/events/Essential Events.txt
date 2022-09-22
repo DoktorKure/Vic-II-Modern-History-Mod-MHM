@@ -183,48 +183,6 @@ country_event = {
 	}
 }
 
-#Export focus cleanup
-country_event = {
-	id = 123242
-	title = "Strengthen our economic policy's reach"
-	desc = "Some of our provinces are not benefitting from our current economic focus, we should rectify it immediately."
-	picture = "economicfocus"
-	
-	
-	trigger = {
-		year = 1946
-		has_country_flag = exportfocus
-		any_owned_province = { AND = { is_colonial = no NOT = { has_province_modifier = exportfocus } } }
-	}
-	
-	option = {
-		name = "Yes, do it"
-		treasury = -1000
-		any_owned = { limit = { AND = { is_colonial = no NOT = { has_province_modifier = exportfocus } } } add_province_modifier = { name = exportfocus duration = -1 } }
-		}
-}
-
-#Import focus cleanup
-country_event = {
-	id = 123243
-	title = "Strengthen our economic policy's reach"
-	desc = "Some of our provinces are not benefitting from our current economic focus, we should rectify it immediately."
-	picture = "economicfocus"
-	
-	
-	trigger = {
-		year = 1946
-		has_country_flag = importfocus
-		any_owned_province = { AND = { is_colonial = no NOT = { has_province_modifier = importsubstitutionfocus } } }
-	}
-	
-	option = {
-		name = "Yes, do it"
-		treasury = -1000
-		any_owned = { limit = { AND = { is_colonial = no NOT = { has_province_modifier = importsubstitutionfocus } } } add_province_modifier = { name = importsubstitutionfocus duration = -1 } }
-		}
-}
-
 #JAPAN population boom
 country_event = {
 	id = 1200234

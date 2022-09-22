@@ -60,6 +60,148 @@ country_event = {
 			inherit = UNO
 		}
 		
+		#########################################################
+		#														#
+		#				DEVELOPMENT LEVELS						#
+		#			Level 1 - below 10% literacy				#
+		#			Level 2 - 10% - 20% literacy				#
+		#			Level 3 - 20% - 30% literacy				#
+		#			Level 4 - 30% - 40% literacy				#
+		#			Level 5 - 40% - 50% literacy				#
+		#			Level 6 - 50% - 60% literacy				#
+		#			Level 7 - above 60% literacy				#
+		#														#
+		#########################################################
+		
+		any_country = {
+			any_owned = {
+				limit = { #Less than 10% or less than 30K pops
+					OR = { NOT = { total_pops = 30000 } NOT = { literacy = 0.10 } }
+					NOT = { has_province_modifier = dev_1 }
+				}
+				
+				remove_province_modifier = dev_2
+				remove_province_modifier = dev_3
+				remove_province_modifier = dev_4
+				remove_province_modifier = dev_5
+				remove_province_modifier = dev_6
+				remove_province_modifier = dev_7
+				add_province_modifier = { name = dev_1 duration = -1 } 
+			}
+		}
+		
+		any_country = {
+			any_owned = {
+				limit = { #Between 10% to 20%
+					total_pops = 30000
+					literacy = 0.10 NOT = { literacy = 0.20 }
+					NOT = { has_province_modifier = dev_2 }
+				} 
+				remove_province_modifier = dev_1
+				
+				remove_province_modifier = dev_3
+				remove_province_modifier = dev_4
+				remove_province_modifier = dev_5
+				remove_province_modifier = dev_6
+				remove_province_modifier = dev_7
+				add_province_modifier = { name = dev_2 duration = -1 } 
+			}
+		}
+		
+		any_country = {
+			any_owned = {
+				limit = { #Between 20% to 30%
+					total_pops = 30000
+					literacy = 0.20 NOT = { literacy = 0.30 }
+					NOT = { has_province_modifier = dev_3 }
+				}
+				remove_province_modifier = dev_1
+				remove_province_modifier = dev_2
+				
+				remove_province_modifier = dev_4
+				remove_province_modifier = dev_5
+				remove_province_modifier = dev_6
+				remove_province_modifier = dev_7
+				add_province_modifier = { name = dev_3 duration = -1 } 
+			}
+		}
+		
+		any_country = {
+			any_owned = {
+				limit = { #Between 30% to 40%
+					total_pops = 30000
+					literacy = 0.30 NOT = { literacy = 0.40 }
+					NOT = { has_province_modifier = dev_4 }
+				}
+				remove_province_modifier = dev_1
+				remove_province_modifier = dev_2
+				remove_province_modifier = dev_3
+				
+				remove_province_modifier = dev_5
+				remove_province_modifier = dev_6
+				remove_province_modifier = dev_7
+				add_province_modifier = { name = dev_4 duration = -1 } 
+			}
+		}
+		
+		any_country = {
+			any_owned = {
+				limit = { #Between 40% to 50%
+					total_pops = 30000
+					literacy = 0.40 NOT = { literacy = 0.50 }
+					NOT = { has_province_modifier = dev_5 }
+				}
+				remove_province_modifier = dev_1
+				remove_province_modifier = dev_2
+				remove_province_modifier = dev_3
+				remove_province_modifier = dev_4
+				
+				remove_province_modifier = dev_6
+				remove_province_modifier = dev_7
+				add_province_modifier = { name = dev_5 duration = -1 } 
+			}
+		}
+		
+		any_country = {
+			any_owned = {
+				limit = { #Between 50% to 60%
+					total_pops = 30000
+					literacy = 0.50 NOT = { literacy = 0.60 }
+					NOT = { has_province_modifier = dev_6 }
+				}
+				remove_province_modifier = dev_1
+				remove_province_modifier = dev_2
+				remove_province_modifier = dev_3
+				remove_province_modifier = dev_4
+				remove_province_modifier = dev_5
+				
+				remove_province_modifier = dev_7
+				add_province_modifier = { name = dev_6 duration = -1 } 
+			}
+		}
+		
+		any_country = {
+			any_owned = {
+				limit = { #Above 60%
+					total_pops = 30000
+					literacy = 0.60
+					NOT = { has_province_modifier = dev_7 }
+				}
+				remove_province_modifier = dev_1
+				remove_province_modifier = dev_2
+				remove_province_modifier = dev_3
+				remove_province_modifier = dev_4
+				remove_province_modifier = dev_5
+				remove_province_modifier = dev_6
+				
+				add_province_modifier = { name = dev_7 duration = -1 } 
+			}
+		}
+		
+		####################################
+		### END DEVELOPMENT LEVELS BLOCK ###
+		####################################
+		
 		#freeing forced labourers
 		any_country = {
             limit = {
@@ -107,6 +249,32 @@ country_event = {
 			}
 			clr_country_flag = existing_country
 		}
+	
+		#Economic focus cleanup
+		any_country	= {
+			limit = {
+				has_country_flag = existing_country
+				has_country_flag = exportfocus
+			}
+			any_owned = {
+				limit = {
+					AND = { is_colonial = no NOT = { has_province_modifier = exportfocus } }
+				}
+				add_province_modifier = { name = exportfocus duration = -1 }
+			}
+		}
+		any_country	= {
+			limit = {
+				has_country_flag = existing_country
+				has_country_flag = importfocus
+			}
+			any_owned = {
+				limit = {
+					AND = { is_colonial = no NOT = { has_province_modifier = importsubstitutionfocus } }
+				}
+				add_province_modifier = { name = importsubstitutionfocus duration = -1 }
+			}
+		}
 		
 		CLN = { country_event = { id = 47777787 days = 1 } }
 	}
@@ -121,6 +289,52 @@ country_event = {
 	
 	option = {
 		name = "Checking..."
+
+		#Add Stable Region
+		any_country = {
+			any_owned = { 
+				limit = { 
+					NOT = {
+						OR = { 
+							has_province_modifier = nuke_low 
+							has_province_modifier = nuke_medium 
+							has_province_modifier = nuke_high
+							has_province_modifier = tactical_nukes
+							controlled_by_rebels = yes  
+							NOT = { controlled_by = THIS }
+							is_blockaded = yes
+							average_militancy = 5
+							any_neighbor_province = { owner = { war = yes } }
+							any_neighbor_province = { controlled_by_rebels = yes }
+						} 
+					}
+				}
+				remove_province_modifier = unstable_region
+				add_province_modifier = { name = peace_region duration = -1 }
+			}
+		}
+		
+		#Add Unstable Region
+		any_country = {
+			any_owned = { 
+				limit = { 
+					OR = { 
+						has_province_modifier = nuke_low 
+						has_province_modifier = nuke_medium 
+						has_province_modifier = nuke_high
+						has_province_modifier = tactical_nuked
+						controlled_by_rebels = yes  
+						NOT = { controlled_by = THIS }
+						is_blockaded = yes
+						average_militancy = 5
+						any_neighbor_province = { owner = { war = yes } }
+						any_neighbor_province = { controlled_by_rebels = yes }
+					} 
+				}
+				remove_province_modifier = peace_region
+				add_province_modifier = { name = unstable_region duration = -1 }
+			}
+		}
 		
 		#cleanup vassals with nonexistent overlords
 		any_country = {
