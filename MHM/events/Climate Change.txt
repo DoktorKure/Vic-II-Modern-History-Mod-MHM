@@ -5,23 +5,21 @@ country_event = {
 	title = "Toggle Climate Change"
 	desc = "This event enables or disables climate change within the mod, including historical events related to climate change."
 	picture = "temperature_rise"
-	
 	fire_only_once = yes
-
-	trigger = {
-		ai = no
-		NOT = { has_global_flag = climate_change_toggled }
-	}
+	
+	is_triggered_only = yes
 
 	option = {
 		name = "Climate Change is an existential threat."
 		set_global_flag = climate_change_toggled
 		clr_global_flag = climate_change_disabled
+		country_event = 669966 #MHM Performance Mode
 	}
 	option = {
 		name = "I don't believe in climate change (disable climate change events and decisions)"
 		set_global_flag = climate_change_toggled
 		set_global_flag = climate_change_disabled
+		country_event = 669966 #MHM Performance Mode
 	}
 }
 

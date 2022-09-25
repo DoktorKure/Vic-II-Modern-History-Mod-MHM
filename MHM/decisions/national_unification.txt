@@ -9,7 +9,7 @@ has_country_flag = disabled
 				OR = {
 					cultural_union = { exists = yes }
 					is_culture_group = european
-					is_culture_group = east_asian
+					is_culture_group = chinese_cultures
 					is_culture_group = arabic
 				}
 			}

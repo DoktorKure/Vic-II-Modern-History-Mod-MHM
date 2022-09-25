@@ -921,7 +921,7 @@ province_event = {
 			communist = 50
 		}
 
-		#Reduce, province basic_security
+		#Reduce, province police
 		modifier = {
 			factor = 1.1
 			crime_fighting = 0.5
@@ -1532,7 +1532,7 @@ country_event = {
 
 	trigger = {
 		tag = CHI
-		OR = { government = democracy government = democracy1 government = hms_government government hms_government1 }
+		OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
 		has_global_flag = KMT_won_civil_war
 		is_vassal = no
 	}

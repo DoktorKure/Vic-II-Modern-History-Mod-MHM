@@ -1030,23 +1030,23 @@ quantum_gate = {
 	}
 }
 #intensive_farming
-i_juice_processing = {
-	limit = { intensive_farming = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = asphalt_paving
-		}
-		modifier = {
-			factor = 2
-			modern_roads = 1
-		}
-	}
-	effect = {
-		activate_building = beverages_factory
-	}
-}
+#i_juice_processing = {
+#	limit = { intensive_farming = 1 }
+#	chance = {
+#		base = 2
+#		modifier = {
+#			factor = 2
+#			invention = asphalt_paving
+#		}
+#		modifier = {
+#			factor = 2
+#			modern_roads = 1
+#		}
+#	}
+#	effect = {
+#		activate_building = beverages_factory
+#	}
+#}
 i_tea_processing = {
 	limit = { intensive_farming = 1 }
 	chance = {
@@ -1061,7 +1061,7 @@ i_tea_processing = {
 		}
 	}
 	effect = {
-		activate_building = beverages_tea_factory
+        rgo_goods_output = { tea = 1 }
 	}
 }
 i_sugar_processing = {
@@ -1078,7 +1078,7 @@ i_sugar_processing = {
 		}
 	}
 	effect = {
-		activate_building = beverages_sugar_factory
+        rgo_goods_output = { sugar = 1 }
 	}
 }
 i_coffee_processing = {
@@ -1095,7 +1095,7 @@ i_coffee_processing = {
 		}
 	}
 	effect = {
-		activate_building = beverages_coffee_factory
+        rgo_goods_output = { coffee = 1 }
 	}
 }
 intensive_fruit_crop_farming = {

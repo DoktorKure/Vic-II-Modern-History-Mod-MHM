@@ -7909,7 +7909,7 @@ country_event = {
 		GIB = { government = sar_government country_event = 800054 ruling_party_ideology = conservative }
 		diplomatic_influence = { who = GIB value = 200 }
 		
-		relation = { tag = SPA value = 50 }
+		relation = { who = SPA value = 50 }
 		
 		ai_chance = { factor = 0.8 }
 	}
@@ -7933,7 +7933,7 @@ country_event = {
 			}
 		}
 		
-		relation = { tag = SPA value = -50 }
+		relation = { who = SPA value = -50 }
 		
 		ai_chance = { factor = 0.2 }
 	}
@@ -9103,7 +9103,7 @@ country_event = {
 				prestige_factor = -0.01
 				remove_country_modifier = cento_member
 				
-				add_country_modifier = { name = leave_cento_member duration = 1825 }
+				add_country_modifier = { name = leave_alliance_cento duration = 1825 }
 				any_country = { limit = { has_country_modifier = cento_member } relation = { who = THIS value = -50 } leave_alliance = THIS }
 			}
 		}

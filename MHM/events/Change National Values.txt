@@ -184,12 +184,8 @@ country_event = {
 	title = "National Values in MHM"
 	desc = EVTDESC124156
 	picture = "national_values"
-
 	fire_only_once = yes
-
-	trigger = {
-		ai = no
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "Understood"

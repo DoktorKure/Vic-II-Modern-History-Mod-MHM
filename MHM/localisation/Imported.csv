@@ -1,13 +1,8 @@
 CODE;ENGLISH;FRENCH;GERMAN;POLISH;SPANISH;HUNGARIAN;CZECH;HUNGARIAN;DUTCH;PORTUGUESE;RUSSIAN;FINNISH;;x;;;;;;;;;;;;;;;;
-liberate_puppet;Liberate and Puppet Country;;Befreit das Land;;;;;;;;;;;
-liberate_puppet_desc;Liberate an §Yentire country§W from its oppressors and puppet it\n\n§YNOTE: §RDo not use it with normal Free people or Liberate Country CBs for other non existent countries.§W;;Befreit ein §Yganzes Land§W von seinen Unterdrückern;;;;;;;;;;;
-liberate_puppet_short;$THIRD$ acquires $STATE$ and becomes our puppet;$THIRD$ prend $STATE$;$THIRD$ erwirbt $STATE$;;$THIRD$ adquiere $STATE$;;;;;;;;;
-liberate_puppet_setup;Return $STATE$ to $THIRD$ from $RECIPIENT$ and puppet it;Prendre $STATE$ à $RECIPIENT$ pour le rendre à $THIRD$;Gebt $STATE$ an $THIRD$ von $RECIPIENT$ zurück;;Arrebatar el estado de $STATE$ de manos de $RECIPIENT$ y devolvérselo a $THIRD$;;;;;;;;;
 vassal_interactions_title;Open Vassal Interactions Menu;;;;;;;;;;;;;
 vassal_interactions_desc;This decision fires an event which will allow you to free or return cores to your vassals provided those cores don't also belong to you.;;;;;;;;;;;;;
 homeland_productive_year;Bountiful Year;;;;;;;;;;;;;
 homeland_productive_year_desc;This year has been especially good for our country.;;;;;;;;;;;;;
-global_setup;Global Setup;;;;;;;;;;;;;
 severe_homeland_drought;Severe Drought;;;;;;;;;;;;;
 severe_homeland_drought_desc;A severe drought is hitting this province.;;;;;;;;;;;;;
 homeland_drought;Drought;;;;;;;;;;;;;
@@ -81,8 +76,7 @@ EVTDESC8000600;An opportunity has arisen to fund the spread of communism in a ne
 EVTNAME8000610;The Spread of Populism;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,
 EVTDESC8000610;An opportunity has arisen to fund the spread of populism in a neighboring state. If discovered, this could start a diplomatic incident and gain us infamy... but if we do not act, we will be seen as shirking our duty to the populist cause. The populists in $CAPITAL$ are calling on us to aid the cause!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 EVTNAME8000620;The Spread of Fundamentalism;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
-EVTDESC8000620;An opportunity has arisen to fund the spread of 
-fundamentalism in a neighboring state. If discovered, this could start a diplomatic incident and gain us infamy... but if we do not act, we will be admitting that we cannot aid the spread of the religious revolution. The traditionalist clerics in $CAPITAL$ are calling on us to aid the cause!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
+EVTDESC8000620;An opportunity has arisen to fund the spread of fundamentalism in a neighboring state. If discovered, this could start a diplomatic incident and gain us infamy... but if we do not act, we will be admitting that we cannot aid the spread of the religious revolution. The traditionalist clerics in $CAPITAL$ are calling on us to aid the cause!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 EVTNAME8000630;The Cause of Freedom;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,
 EVTDESC8000630;An opportunity has arisen to fund the spread of democracy in a neighboring state. If discovered, this could start a diplomatic incident and gain us infamy... but if we do not act, we will be seen as abandoning those who live under the rule of tyrants. Liberals in $CAPITAL$ are calling on us to aid the cause of world freedom!;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,
 EVTNAME8000640;We Were Discovered;;;;;;;;;;;;x,,,,,,,,,,,,,,,,,,,,,,

@@ -44,6 +44,7 @@ country_event = {
 	
 	option = {
 		name = "There shall be no independence"
+		set_global_flag = no_independence_india
 		prestige_factor = -0.05
 		badboy = 10
 		RAJ = { 
@@ -76,6 +77,7 @@ country_event = {
 		exists = RAJ
 		NOT = { exists = HND }
 		war = no
+		NOT = { has_global_flag = no_independence_india }
 		NOT = { has_global_flag = partioned_india_option }
 		NOT = { has_global_flag = united_india_option }
 	}
@@ -131,6 +133,7 @@ country_event = {
 		government = hms_government
 		year = 1946
 		NOT = { year = 1990 }
+		NOT = { has_global_flag = no_independence_india }
 		is_our_vassal = RAJ
 		exists = RAJ
 		NOT = { exists = HND }
@@ -192,6 +195,7 @@ country_event = {
 		war = no
 		has_global_flag = partioned_india_option
 		NOT = { has_global_flag = united_india_option }
+		NOT = { has_global_flag = no_independence_india }
 	}
 
 	mean_time_to_happen = {

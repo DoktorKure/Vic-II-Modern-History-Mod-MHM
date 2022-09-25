@@ -378,7 +378,7 @@ country_event = {
 			modifier = {
 				factor = 0 
 				NOT = { any_owned_province = { is_colonial = yes } }
-				any_owned_province = { is_core = no }
+				any_owned_province = { NOT = { is_core = THIS } }
 			}
 		}
 	}
@@ -418,7 +418,7 @@ country_event = {
 			factor = 0.1 
 			modifier = {
 				factor = 1 
-				NOT = { any_owned_province = { is_colonial = yes is_core = no } }
+				NOT = { any_owned_province = { is_colonial = yes NOT = { is_core = THIS } } }
 			} 
 		}
 	}

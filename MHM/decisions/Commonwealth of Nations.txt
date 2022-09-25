@@ -11,7 +11,7 @@ political_decisions = {
 			
 			#NOT = { tech_school = commonwealth }
 
-			OR = { tag = MAL vassal_of = ENG vassal_of = END vassal_of = IMP vassal_of = FBU NOT = { capital_scope = { continent = europe } } }
+			OR = { tag = MAL vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU NOT = { capital_scope = { continent = europe } } }
 			is_greater_power = no
 
 			NOT = { has_country_modifier = francophonemember }
@@ -21,8 +21,8 @@ political_decisions = {
 		}
 		allow = {
 			war = no
-			OR = { vassal_of = ENG vassal_of = END vassal_of = IMP vassal_of = FBU in_sphere = ENG in_sphere = FBU }
-			OR = { tag = MAL vassal_of = ENG vassal_of = END vassal_of = IMP vassal_of = FBU NOT = { capital_scope = { continent = europe } } }
+			OR = { vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU in_sphere = ENG in_sphere = FBU }
+			OR = { tag = MAL vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU NOT = { capital_scope = { continent = europe } } }
 			NOT = { government = theocracy }
 			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			NOT = { government = sectarian_dictatorship }
@@ -86,7 +86,7 @@ political_decisions = {
 		allow = {
 
 			OR = { tag = MAL NOT = { capital_scope = { continent = europe } } }
-			NOT = { OR = { vassal_of = ENG vassal_of = END vassal_of = IMP vassal_of = FBU } }
+			NOT = { OR = { vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU } }
 
 			OR = { 
 				government = theocracy

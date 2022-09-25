@@ -16,6 +16,17 @@ political_decisions = {
 	}
 
 	effect = {
+			
+random_country = {
+	limit = {
+		exists = yes
+		ai = no
+	}
+	country_event = 669967
+}
+	
+#Indicate that this is the MHM mod
+set_global_flag = MHM_MOD_ACTIVE
 
 #Clear 1950 start marker
 clr_global_flag = 1950_start_date_flag

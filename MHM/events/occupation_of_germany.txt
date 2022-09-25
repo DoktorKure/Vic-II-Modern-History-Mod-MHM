@@ -760,16 +760,17 @@ country_event = {
 
 #German Occupation Economic Policy 
 country_event = {
-  id = 8204020
-  title = "Economic Policy of Occupied Germany"
-  desc = EVT_8204021_DESC
-  picture = "nwo2_soviet_occupation_of_germany"
+	id = 8204020
+	title = "Economic Policy of Occupied Germany"
+	desc = EVT_8204021_DESC
+	picture = "nwo2_soviet_occupation_of_germany"
+	
+	fire_only_once = yes
   
 	trigger = {
 		OR = { tag = USA tag = ENG tag = FRA tag = RUS }
 		year = 1946 NOT = { year = 1963 }
-		NOT = { has_country_flag = decide_german_economy_morgenthau }
-		NOT = { has_country_flag = decide_german_economy_monnet }
+		NOT = { has_country_flag = decide_german_economy_policy }
 		
 		#Germany is not already partitioned
 		NOT = { exists = DDR }

@@ -3254,7 +3254,7 @@ trigger = {
 option = {
 name = "We are no longer enjoying the splendid isolation"
 prestige = -50
-remove_country_modifier = declared_neutrality
+remove_country_modifier = neutrality
 clr_country_flag = renounced_war_rights
 clr_country_flag = neutrality		
 	}
@@ -5657,9 +5657,9 @@ tag = KMT
 
 is_vassal = no
 
-CHI = { government = proletarian_dictatorship government = proletarian_dictatorship1 ruling_party_ideology = communist exists = yes }
+CHI = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } exists = yes }
 
-KMT = { government = proletarian_dictatorship government = proletarian_dictatorship1 ruling_party_ideology = communist exists = yes }
+KMT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } exists = yes }
 
 }
 
@@ -8613,7 +8613,7 @@ months = 9
 	}
 
 option = {
-name = "Send in the basic_security!"
+name = "Send in the police!"
 badboy = 5
 HKG = { add_country_modifier = { name = revolution_chaos duration = 1825 } }
 ai_chance = { factor = 0.9 }
@@ -8861,7 +8861,7 @@ prestige = 50
 RUS = { diplomatic_influence = { who = THIS value = 200 } }
 government = democracy
 country_event = 800054
-country_event = { id = 1512137 days = 2 }
+country_event = { id = 1512136 days = 2 }
 ai_chance = { factor = 0.9 }
 		}
 
@@ -9165,7 +9165,7 @@ country_event = {
 		prestige = -25
 		any_owned = { 
 			limit = { is_core = SWK } 
-			add_province_modifier = { name = nationalist_agitation value = 3650 } 
+			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
 		}
 		ai_chance = { factor = 0.8 }
 	}

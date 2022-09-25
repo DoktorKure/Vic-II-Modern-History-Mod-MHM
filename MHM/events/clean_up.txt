@@ -141,7 +141,7 @@ country_event = {
 			#Higher chance for Indian nations
 			modifier = { 
 				factor = 1
-				OR = { pop_majority_religion = hindi capital_scope = { is_core = HND } }
+				OR = { pop_majority_religion = hindu capital_scope = { is_core = HND } }
 			}
 			
 			#Special case for Italy due to Italy having experienced both theocracy and monarchy in recent history
@@ -275,7 +275,7 @@ country_event = {
 		civilized = yes
 		NOT = { vote_franschise = none_voting }
 		NOT = { political_parties = parties_not_allowed }
-		NOT = { political_parties = ruling_party_opinion }
+		NOT = { political_opinions = ruling_party_opinion }
 	}
 	
 	mean_time_to_happen = { days = 1 }
@@ -320,7 +320,7 @@ country_event = {
 		government = absolute_monarchy
 		NOT = { vote_franschise = none_voting }
 		NOT = { political_parties = parties_not_allowed }
-		NOT = { political_parties = ruling_party_opinion }
+		NOT = { political_opinions = ruling_party_opinion }
 		civilized = yes	
 	}
 	

@@ -1431,7 +1431,7 @@ country_event = {
 		name = "Keep our territory"
 		relation = { who = CHI value = -200 }
 		set_country_flag = returnofportarthur
-		any_pop = { limit = { is_culture_group = east_asian } militancy = 10 consciousness = 10 }
+		any_pop = { limit = { is_culture_group = chinese_cultures } militancy = 10 consciousness = 10 }
 		ai_chance = { factor = 0.1 }
 	}
 
@@ -1790,7 +1790,7 @@ country_event = {
 	picture = "nationalisation"
 	
 trigger = { 
-NOT = { has_country_modifier = nap }
+NOT = { has_country_flag = nap }
 NOT = { has_country_modifier = nationalisation_of_industry }
 NOT = { has_country_modifier = privatisation_of_industry }
 NOT = { government = proletarian_dictatorship }
