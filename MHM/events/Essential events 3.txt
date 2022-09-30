@@ -381,46 +381,6 @@ country_event = {
 	}
 	
 }
-
-#UK Choice to go with Empire or the EEC
-country_event = {
-	id = 1300026
-	title = "Future of British Foreign Policy"
-	desc = EVTDESC1300026
-	picture = "indiaoffice"
-
-fire_only_once = yes
-	
-	trigger = { 
-		tag = ENG
-		NOT = { year = 1990 }
-		exists = HND
-		NOT = { exists = RAJ }
-		NOT = { is_our_vassal = RAJ }
-		has_country_modifier = commonwealthmembereng
-	}
-
-	option = {
-		name = "Pivot towards Europe"
-any_country = {
-limit = { is_vassal = no capital_scope = { continent = europe } }
-relation = { who = THIS value = 50 }
-}
-		set_country_flag = british_europe_choice
-		ai_chance = { factor = 0.9 }
-	}
-
-	option = {
-		name = "Keep ties with the Commonwealth"
-any_country = {
-limit = { is_vassal = no in_sphere = THIS }
-relation = { who = THIS value = 50 }
-}
-		set_country_flag = british_empire_choice
-		ai_chance = { factor = 0.1 }
-	}
-
-}
 #Decolonisation remove techschool
 country_event = {
 	id = 1300027

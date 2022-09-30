@@ -1,5 +1,31 @@
 political_decisions = {
 
+	formthecommonwealth = {
+		picture = "commonwealthofnations"
+		potential = {
+			OR = { tag = ENG tag = ENL }
+			OR = { exists = HND exists = RAJ wars_of_national_liberation = 1 }
+			NOT = { war_with = HND } 
+			NOT = { war_with = RAJ }
+
+			RAJ = { is_vassal = no war = no }
+			NOT = { has_country_modifier = commonwealthmembereng }
+			OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
+		}
+		allow = {
+			war = no
+			is_greater_power = yes
+		}
+		effect = {
+			prestige = 25
+			set_global_flag = commonwealthofnations
+			add_country_modifier = { name = commonwealthmembereng duration = -1 }
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
 	joincommonwealth = {
 		picture = "commonwealthofnations"
 		potential = {
@@ -23,11 +49,7 @@ political_decisions = {
 			war = no
 			OR = { vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU in_sphere = ENG in_sphere = FBU }
 			OR = { tag = MAL vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU NOT = { capital_scope = { continent = europe } } }
-			NOT = { government = theocracy }
-			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-			NOT = { government = sectarian_dictatorship }
-			NOT = { government = presidential_dictatorship }
-			NOT = { government = nationalist_dictatorship }
+			OR = { government = hms_government government = hms_government1 government = absolute_monarchy government = democracy government = democracy1 }
 		}
 		effect = {
 			prestige = 20
@@ -41,32 +63,6 @@ political_decisions = {
 			
 			add_country_modifier = { name = commonwealthmember duration = -1 }
 			relation = { who = ENG value = 100 }
-		}
-		ai_will_do = { 
-			factor = 1 
-		}
-	}
-
-	formthecommonwealth = {
-		picture = "commonwealthofnations"
-		potential = {
-			tag = ENG
-			OR = { exists = HND exists = RAJ wars_of_national_liberation = 1 }
-			NOT = { war_with = HND } 
-			NOT = { war_with = RAJ }
-
-			RAJ = { is_vassal = no war = no }
-			NOT = { has_country_modifier = commonwealthmembereng }
-			OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
-		}
-		allow = {
-			war = no
-			is_greater_power = yes
-		}
-		effect = {
-			prestige = 25
-			set_global_flag = commonwealthofnations
-			add_country_modifier = { name = commonwealthmembereng duration = -1 }
 		}
 		ai_will_do = { 
 			factor = 1 
@@ -89,12 +85,7 @@ political_decisions = {
 			NOT = { OR = { vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU } }
 
 			OR = { 
-				government = theocracy
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
-				government = sectarian_dictatorship
-				government = presidential_dictatorship
-				government = nationalist_dictatorship 
+				NOT = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy government = democracy government = democracy1 } }
 
 				AND = { ENG = { exists = yes } NOT = { in_sphere = ENG } NOT = { relation = { who = ENG value = 0 } } } 
 

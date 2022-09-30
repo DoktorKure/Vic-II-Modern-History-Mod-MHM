@@ -1,0 +1,102 @@
+#UK Choice to go with Empire or the EEC
+country_event = {
+	id = 1300026
+	title = "Future of British Foreign Policy"
+	desc = EVTDESC1300026
+	picture = "indiaoffice"
+
+	fire_only_once = yes
+	
+	trigger = { 
+		tag = ENG
+		NOT = { year = 1990 }
+		exists = HND
+		NOT = { exists = RAJ }
+		NOT = { is_our_vassal = RAJ }
+		has_country_modifier = commonwealthmembereng
+	}
+
+	option = {
+		name = "Pivot towards Europe"
+		any_country = {
+			limit = { is_vassal = no capital_scope = { continent = europe } }
+			relation = { who = THIS value = 50 }
+		}
+		set_country_flag = british_europe_choice
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Keep ties with the Commonwealth"
+		any_country = {
+			limit = { is_vassal = no in_sphere = THIS }
+			relation = { who = THIS value = 50 }
+		}
+		set_country_flag = british_empire_choice
+		country_event = 13000261
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Go Imperial Federation or stick with the current Commonwealth structure
+country_event = {
+	id = 13000261
+	title = "Adopt the Imperial Federation idea?"
+	desc = EVTDESC13000261
+	picture = "imperial_federation"
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Stick to the current Commonwealth structure"
+		any_country = {
+			limit = { is_vassal = no in_sphere = THIS }
+			relation = { who = THIS value = 50 }
+		}
+		ai_chance = { factor = 0.99 }
+	}
+
+	option = {
+		name = "We shall become the Commonwealth!"
+		prestige = 100
+		set_global_flag = imperial_federation
+		
+		#set superstate decisions
+		set_country_flag = imp_ambition
+		set_country_flag = trade_block_ambition
+		set_country_flag = in_trade_block
+		tech_school = IMP_tech_school
+		capital_scope = {
+			add_province_modifier = { name = single_market duration = -1 }
+			add_province_modifier = { name = currency_union_province duration = -1 }
+			add_province_modifier = { name = defence_union duration = -1 }
+		}
+		
+		random_owned = {
+			limit = { owner = { government = hms_government } }
+			owner = { government = hms_government1 } # So they get the normal commonwealth flag with a British stamp on it
+		}
+		all_core = { add_core = IMP }
+		change_tag = IMP
+		add_accepted_culture = white_anglo
+		add_accepted_culture = australian
+		add_accepted_culture = new_zealander
+		add_accepted_culture = anglo_canadian
+		add_accepted_culture = english
+		add_accepted_culture = british
+		any_country = {
+			limit = {
+				exists = yes
+				OR = { tag = AST tag = CAN tag = NZL tag = SAF tag = CAF tag = RHO }
+			}
+			country_event = 11106 
+		}
+		ai_chance = { factor = 0.01 }
+	}
+
+}
+
+#TO DO: add event for collapse of Imperial Federation

@@ -18,16 +18,31 @@ political_decisions = {
 
 	effect = {
 	
-#Indicate that this is the MHM mod
-set_global_flag = MHM_MOD_ACTIVE
+		#Indicate that this is the MHM mod
+		set_global_flag = MHM_MOD_ACTIVE
 
-random_country = {
-	limit = {
-		exists = yes
-		ai = no
-	}
-	country_event = 19804
-}
+		random_country = {
+			limit = {
+				exists = yes
+				ai = no
+			}
+			country_event = 19804
+		}
+
+		#UK is the head of the Commonwealth
+		ENG = {
+			set_global_flag = commonwealthofnations
+			add_country_modifier = { name = commonwealthmembereng duration = -1 }
+		}
+
+		#1946 Commonwealth Members
+		any_country = { 
+			limit = { OR = { tag = AST tag = CAN tag = NZL tag = SAF } }
+			set_country_flag = commonwealthmember
+			tech_school = commonwealth
+			add_country_modifier = { name = commonwealthmember duration = -1 }
+			relation = { who = ENG value = 200 }
+		}
 
 #Guatemalan Revolution
 random_country = {

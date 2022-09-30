@@ -210,23 +210,6 @@ country_event = {
 		
 		RAJ = { country_event = 8007205 }
 		
-		ai_chance = { factor = 1 }
-		
-	}
-	
-	option = {
-		name = "I've totally forgotten about independence!"
-		
-		prestige_factor = -0.05
-		badboy = 20
-		RAJ = {
-			any_pop = {
-				militancy = 10
-			}
-			add_country_modifier = { name = revolution_chaos duration = 3650 }
-		}
-
-		ai_chance = { factor = 0 }
 	}
 
 }

@@ -9,8 +9,6 @@ is_greater_power = no
 
 OR = {
 
-AND = { any_greater_power = { tech_school = ENG_1_tech_school } tech_school = ENG_1_tech_school }
-
 AND = { any_greater_power = { tech_school = XGC_tech_school } tech_school = XGC_tech_school }
 
 AND = { any_greater_power = { tech_school = XEF_tech_school } tech_school = XEF_tech_school }
@@ -79,8 +77,6 @@ limit = {
 is_greater_power = yes
 
 OR = {
-
-AND = { THIS = { tech_school = ENG_1_tech_school } tech_school = ENG_1_tech_school }
 
 AND = { THIS = { tech_school = XGC_tech_school } tech_school = XGC_tech_school }
 
