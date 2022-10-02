@@ -1568,33 +1568,6 @@ set_country_flag = xeu_chairmanship
 set_global_flag = eufirst
 		}
 }
-#Bretton Woods Reduce Gold Output
-country_event = {
-	id = 1400046
-	title = "Bretton Woods System Effects"
-	desc = EVTDESC1400046
-	picture = "bretton_woods_system_gold"
-	
-trigger = {
-NOT = { tag = USA }
-war = no
-has_country_modifier = bretton_system
-any_owned_province = { AND = { trade_goods = credit NOT = { has_province_modifier = bretton_woods_effect } } }
-any_owned_province = { trade_goods = credit }
-
-#NOT = { has_country_flag = bsystem }
-
-}
-
-option = {
-name = "OK"
-any_owned = { limit = { trade_goods = credit }
-add_province_modifier = { name = bretton_woods_effect duration = -1 } }
-
-#set_country_flag = bsystem
-
-		}
-}
 
 #UN Sanctions for high Infamy nations - Start
 country_event = {
@@ -3840,8 +3813,6 @@ FBU = {
 add_country_modifier = { name = commonwealthmembereng duration = -1 }
 
 primary_culture = british
-
-add_accepted_culture = english
 
 add_accepted_culture = french
 

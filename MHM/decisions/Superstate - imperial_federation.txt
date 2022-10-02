@@ -8,7 +8,6 @@ political_decisions = {
 				primary_culture = australian
 				primary_culture = new_zealander
 				primary_culture = anglo_canadian
-				primary_culture = english
 				primary_culture = british
 				has_country_modifier = commonwealthmember
 				has_country_modifier = commonwealthmembereng
@@ -58,7 +57,7 @@ political_decisions = {
 			# Must be compatible with superstate leader gov type
 			OR = {
 				AND = {
-					OR = { government = hms_government government = hms_government1 }
+					OR = { government = hms_government government = hms_government1 government = colonial_government }
 					OR = { 
 						ENG = { OR = { government = hms_government government = hms_government1 } }
 						ENL = { OR = { government = hms_government government = hms_government1 } }
@@ -66,7 +65,7 @@ political_decisions = {
 					}
 				}
 				AND = {
-					government = absolute_monarchy
+					OR = { government = absolute_monarchy government = hms_government government = hms_government1 government = colonial_government }
 					OR = { 
 						ENG = { government = absolute_monarchy }
 						ENL = { government = absolute_monarchy }
@@ -134,6 +133,7 @@ political_decisions = {
 			NOT = { has_country_flag = hide_superstate }
 			has_country_flag = imp_ambition
 			NOT = { tag = IMP }
+			NOT = { OR = { vassal_of = ENG vassal_of = ENL vassal_of = IMP } }
 		}
 		allow = {
 			war = no
@@ -141,25 +141,15 @@ political_decisions = {
 				AND = { part_of_sphere = yes sphere_owner = { has_country_flag = deny_superstate NOT = { has_country_flag = imp_ambition } } }
 
 				# Must be incompatible with superstate leader gov type
-				OR = {
-					AND = {
-						government = absolute_monarchy
-						OR = {
-							ENG = { OR = { government = hms_government government = hms_government1 } }
-							ENL = { OR = { government = hms_government government = hms_government1 } }
-							IMP = { OR = { government = hms_government government = hms_government1 } }
-						}
+				AND = {
+					government = absolute_monarchy
+					OR = {
+						ENG = { OR = { government = hms_government government = hms_government1 } }
+						ENL = { OR = { government = hms_government government = hms_government1 } }
+						IMP = { OR = { government = hms_government government = hms_government1 } }
 					}
-					AND = {
-						OR = { government = hms_government government = hms_government1 }
-						OR = {
-							ENG = { government = absolute_monarchy }
-							ENL = { government = absolute_monarchy }
-							IMP = { government = absolute_monarchy }
-						}
-					}
-					NOT = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
 				}
+				NOT = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy government = colonial_government } }
 
 				NOT = { OR = { has_country_modifier = commonwealthmember has_country_modifier = commonwealthmembereng } }
 
@@ -202,7 +192,6 @@ political_decisions = {
 				primary_culture = australian
 				primary_culture = new_zealander
 				primary_culture = anglo_canadian
-				primary_culture = english
 				primary_culture = british
 				vassal_of = ENG
 				vassal_of = ENL
@@ -219,7 +208,6 @@ political_decisions = {
 				primary_culture = australian
 				primary_culture = new_zealander
 				primary_culture = anglo_canadian
-				primary_culture = english
 				primary_culture = british
 				vassal_of = ENG
 				vassal_of = ENL
@@ -227,9 +215,10 @@ political_decisions = {
 				has_country_modifier = commonwealthmember
 				has_country_modifier = commonwealthmembereng
 			}
+			# Must be compatible with superstate leader gov type
 			OR = {
 				AND = {
-					OR = { government = hms_government government = hms_government1 }
+					OR = { government = hms_government government = hms_government1 government = colonial_government }
 					OR = { 
 						ENG = { OR = { government = hms_government government = hms_government1 } }
 						ENL = { OR = { government = hms_government government = hms_government1 } }
@@ -237,7 +226,7 @@ political_decisions = {
 					}
 				}
 				AND = {
-					government = absolute_monarchy
+					OR = { government = absolute_monarchy government = hms_government government = hms_government1 government = colonial_government }
 					OR = { 
 						ENG = { government = absolute_monarchy }
 						ENL = { government = absolute_monarchy }
@@ -265,7 +254,6 @@ political_decisions = {
 				primary_culture = australian
 				primary_culture = new_zealander
 				primary_culture = anglo_canadian
-				primary_culture = english
 				primary_culture = british
 				vassal_of = ENG
 				vassal_of = ENL
@@ -276,9 +264,10 @@ political_decisions = {
 			has_country_flag = imp_ambition
 		}
 		allow = {
+			# Must be compatible with superstate leader gov type
 			OR = {
 				AND = {
-					OR = { government = hms_government government = hms_government1 }
+					OR = { government = hms_government government = hms_government1 government = colonial_government }
 					OR = { 
 						ENG = { OR = { government = hms_government government = hms_government1 } }
 						ENL = { OR = { government = hms_government government = hms_government1 } }
@@ -286,7 +275,7 @@ political_decisions = {
 					}
 				}
 				AND = {
-					government = absolute_monarchy
+					OR = { government = absolute_monarchy government = hms_government government = hms_government1 government = colonial_government }
 					OR = { 
 						ENG = { government = absolute_monarchy }
 						ENL = { government = absolute_monarchy }
@@ -314,7 +303,6 @@ political_decisions = {
 				primary_culture = australian
 				primary_culture = new_zealander
 				primary_culture = anglo_canadian
-				primary_culture = english
 				primary_culture = british
 				vassal_of = ENG
 				vassal_of = ENL
@@ -325,9 +313,10 @@ political_decisions = {
 			has_country_flag = imp_ambition
 		}
 		allow = {
+			# Must be compatible with superstate leader gov type
 			OR = {
 				AND = {
-					OR = { government = hms_government government = hms_government1 }
+					OR = { government = hms_government government = hms_government1 government = colonial_government }
 					OR = { 
 						ENG = { OR = { government = hms_government government = hms_government1 } }
 						ENL = { OR = { government = hms_government government = hms_government1 } }
@@ -335,7 +324,7 @@ political_decisions = {
 					}
 				}
 				AND = {
-					government = absolute_monarchy
+					OR = { government = absolute_monarchy government = hms_government government = hms_government1 government = colonial_government }
 					OR = { 
 						ENG = { government = absolute_monarchy }
 						ENL = { government = absolute_monarchy }
@@ -367,7 +356,6 @@ political_decisions = {
 				primary_culture = australian
 				primary_culture = new_zealander
 				primary_culture = anglo_canadian
-				primary_culture = english
 				primary_culture = british
 				vassal_of = ENG
 				vassal_of = ENL
@@ -378,9 +366,10 @@ political_decisions = {
 			has_country_flag = imp_ambition
 		}
 		allow = {
+			# Must be compatible with superstate leader gov type
 			OR = {
 				AND = {
-					OR = { government = hms_government government = hms_government1 }
+					OR = { government = hms_government government = hms_government1 government = colonial_government }
 					OR = { 
 						ENG = { OR = { government = hms_government government = hms_government1 } }
 						ENL = { OR = { government = hms_government government = hms_government1 } }
@@ -388,7 +377,7 @@ political_decisions = {
 					}
 				}
 				AND = {
-					government = absolute_monarchy
+					OR = { government = absolute_monarchy government = hms_government government = hms_government1 government = colonial_government }
 					OR = { 
 						ENG = { government = absolute_monarchy }
 						ENL = { government = absolute_monarchy }
@@ -416,7 +405,6 @@ political_decisions = {
 			NOT = { has_country_flag = hide_superstate }
 			IMP = { exists = no }
 			OR = {
-				primary_culture = english
 				primary_culture = british
 				has_country_modifier = commonwealthmembereng
 			}
@@ -452,7 +440,6 @@ political_decisions = {
 			add_accepted_culture = australian
 			add_accepted_culture = new_zealander
 			add_accepted_culture = anglo_canadian
-			add_accepted_culture = english
 			add_accepted_culture = british
 		}
 		ai_will_do = {
@@ -491,7 +478,10 @@ political_decisions = {
 		}
 
 		allow = {
-			OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
+			OR = {
+				government = absolute_monarchy
+				AND = { OR = { government = hms_government government = hms_government1 } NOT = { has_country_flag = decentralized_IMP } }
+			}
 			election = no
 			is_greater_power = yes 
 			OR = { political_polarization = 1 has_global_flag = imperial_federation }

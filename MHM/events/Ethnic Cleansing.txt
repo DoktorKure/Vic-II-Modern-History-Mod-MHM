@@ -20,6 +20,15 @@ country_event = {
 		set_country_flag = genocide_101
 		clr_country_flag = war_genocide
 		
+		any_owned = {
+			limit = { is_core = THIS }
+			add_province_modifier = { name = ethnic_cleansing_province_modifier duration = -1 }
+		}
+		any_owned = {
+			limit = { NOT = { is_core = THIS } has_province_modifier = ethnic_cleansing_province_modifier }
+			remove_province_modifier = ethnic_cleansing_province_modifier
+		}
+		
 		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide
 		random_owned = { 
 			limit = { owner = { NOT = { cold_war_doctrine = 1 } } }
@@ -87,6 +96,15 @@ country_event = {
 		set_country_flag = genocide_101
 		clr_country_flag = war_genocide
 		
+		any_owned = {
+			limit = { is_colonial = yes }
+			add_province_modifier = { name = ethnic_cleansing_province_modifier duration = -1 }
+		}
+		any_owned = {
+			limit = { is_colonial = no has_province_modifier = ethnic_cleansing_province_modifier }
+			remove_province_modifier = ethnic_cleansing_province_modifier
+		}
+		
 		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide
 		random_owned = { 
 			limit = { owner = { NOT = { cold_war_doctrine = 1 } } }
@@ -151,6 +169,15 @@ country_event = {
 		name = "Cleanse the entire nation! (30% chance of discovery)"
 		set_country_flag = genocide_101
 		clr_country_flag = war_genocide
+		
+		any_owned = {
+			limit = { controlled_by = THIS }
+			add_province_modifier = { name = ethnic_cleansing_province_modifier duration = -1 }
+		}
+		any_owned = {
+			limit = { NOT = { controlled_by = THIS } has_province_modifier = ethnic_cleansing_province_modifier }
+			remove_province_modifier = ethnic_cleansing_province_modifier
+		}
 		
 		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide
 		random_owned = { 

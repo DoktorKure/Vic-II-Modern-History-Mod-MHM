@@ -58,7 +58,7 @@ country_event = {
 			add_accepted_culture = kikuyu #Kenya
 			add_accepted_culture = swahili #Tanganyika
 			add_accepted_culture = ganda #Uganda
-			add_accepted_culture = indian
+			add_accepted_culture = hindi
 		}
 		diplomatic_influence = { who = XEF value = 200 }
 		ai_chance = {

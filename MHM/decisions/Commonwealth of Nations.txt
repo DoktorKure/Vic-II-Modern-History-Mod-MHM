@@ -3,7 +3,7 @@ political_decisions = {
 	formthecommonwealth = {
 		picture = "commonwealthofnations"
 		potential = {
-			OR = { tag = ENG tag = ENL }
+			OR = { tag = ENG tag = ENL tag = IMP }
 			OR = { exists = HND exists = RAJ wars_of_national_liberation = 1 }
 			NOT = { war_with = HND } 
 			NOT = { war_with = RAJ }
@@ -29,7 +29,7 @@ political_decisions = {
 	joincommonwealth = {
 		picture = "commonwealthofnations"
 		potential = {
-			OR = { in_sphere = ENG in_sphere = FBU }
+			OR = { in_sphere = ENG in_sphere = FBU in_sphere = IMP }
 
 			#NOT = { tech_school = francophone }
 
@@ -49,7 +49,7 @@ political_decisions = {
 			war = no
 			OR = { vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU in_sphere = ENG in_sphere = FBU }
 			OR = { tag = MAL vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU NOT = { capital_scope = { continent = europe } } }
-			OR = { government = hms_government government = hms_government1 government = absolute_monarchy government = democracy government = democracy1 }
+			OR = { government = hms_government government = hms_government1 government = absolute_monarchy government = democracy government = democracy1 government = colonial_government }
 		}
 		effect = {
 			prestige = 20

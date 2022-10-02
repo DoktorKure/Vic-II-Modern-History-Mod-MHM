@@ -15,6 +15,8 @@ country_event = {
 		NOT = { is_our_vassal = RAJ }
 		has_country_modifier = commonwealthmembereng
 	}
+	
+	mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = "Pivot towards Europe"
@@ -85,18 +87,140 @@ country_event = {
 		add_accepted_culture = australian
 		add_accepted_culture = new_zealander
 		add_accepted_culture = anglo_canadian
-		add_accepted_culture = english
 		add_accepted_culture = british
 		any_country = {
 			limit = {
 				exists = yes
-				OR = { tag = AST tag = CAN tag = NZL tag = SAF tag = CAF tag = RHO }
+				OR = { tag = AST tag = CAN tag = NZL tag = SAF }
 			}
 			country_event = 11106 
 		}
+		country_event = 13000264
 		ai_chance = { factor = 0.01 }
 	}
 
+}
+
+country_event = {
+	id = 13000264
+	title = "Federal Structure of the Commonwealth"
+	picture = "imperial_federation"
+	desc = "Now that we have adopted the federation idea, we must figure out how exactly to set it up. Shall we set it up as a confederation of nations, or centralize power in Westminster?"
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Adopt a centralized federal structure, more power to Westminster."
+		prestige = 50
+		badboy = 10
+		add_country_modifier = { name = unhappy_natives duration = 7300 }
+		any_pop = {
+			limit = {
+				is_primary_culture = no
+				is_accepted_culture = no
+			}
+			militancy = 10
+		}
+		ai_chance = { factor = 0.3 }
+	}
+	
+	option = {
+		name = "Adopt a decentralized federation, grant everyone a voice."
+		set_country_flag = decentralized_IMP
+		any_country = { #Become a loose federation
+			limit = {
+				exists = no
+				capital_scope = { owned_by = IMP NOT = { OR = { is_core = IMP continent = europe continent = north_america } } }
+				NOT = { OR = { tag = CAN tag = AST tag = NZL tag = SAF tag = SNG } }
+			}
+			country_event = 13000262
+		}
+		ai_chance = { factor = 0.5 }
+	}
+	
+	option = {
+		name = "Adopt radical decentralization, divide and conquer."
+		set_country_flag = decentralized_IMP
+		badboy = 5
+		any_country = { #Become a loose federation
+			limit = {
+				exists = no
+				capital_scope = { owned_by = IMP NOT = { OR = { is_core = IMP continent = europe continent = north_america } } }
+				NOT = { OR = { tag = CAN tag = AST tag = NZL tag = SAF tag = SNG } }
+			}
+			country_event = 13000265
+		}
+		ai_chance = { factor = 0.2 }
+	}
+}
+
+#IMP releases THIS
+country_event = {
+	id = 13000262
+	title = "Limited Independence!"
+	desc = "As we do not exist but our overlord has decided to adopt a loose federation, we have gained nominal independence!"
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Three hurrahs for the British!"
+		FROM = { release_vassal = THIS }
+		THIS = { government = hms_government country_event = 800054 }
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = IMP
+				capital_scope = { is_core = THIS }
+				NOT = { tag = THIS }
+			}
+			country_event = 13000263
+		}
+	}
+}
+
+#Cleanup
+country_event = {
+	id = 13000263
+	title = "Cleanup"
+	desc = "As we have been released but another vassal of our overlord has cores on us, we are to be consolidated into them."
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "So be it."
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = IMP
+				capital_scope = { is_core = FROM }
+				NOT = { tag = FROM }
+			}
+			annex_to = FROM
+		}
+	}
+}
+
+#IMP releases THIS
+country_event = {
+	id = 13000265
+	title = "Limited Independence!"
+	desc = "As we do not exist but our overlord has decided to adopt a loose federation, we have gained nominal independence!"
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Three hurrahs for the British!"
+		FROM = { release_vassal = THIS }
+		THIS = { government = hms_government country_event = 800054 }
+	}
 }
 
 #TO DO: add event for collapse of Imperial Federation

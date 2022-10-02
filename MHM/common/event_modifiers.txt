@@ -1995,6 +1995,7 @@ local_artisan_output = -0.25
 pop_militancy_modifier = 0.05
 local_factory_throughput = -0.25
 social_reform_desire = 0.5
+population_growth = -0.001
 local_factory_input = 0.20
 icon = 18  
 }
@@ -6760,6 +6761,12 @@ pop_replacement_province_modifier = {
 	non_accepted_pop_consciousness_modifier = 0.1
 	non_accepted_pop_militancy_modifier = 0.1
 	immigrant_attract = 4.0
+	icon = 8
+}
+ethnic_cleansing_province_modifier = {
+	non_accepted_pop_consciousness_modifier = 0.5
+	non_accepted_pop_militancy_modifier = 0.5
+	immigrant_attract = -4.0
 	icon = 8
 }
 

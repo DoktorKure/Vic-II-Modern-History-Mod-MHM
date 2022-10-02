@@ -248,7 +248,6 @@ country_event = {
 		tag = RAJ
 		is_vassal = no
 		war = no
-		NOT = { has_country_flag = united_HND_PAK }
 		NOT = { has_country_flag = 8007205_fired }
 		RAJ = { owns = 1236 } # Delhi
 	}
@@ -256,7 +255,8 @@ country_event = {
 	option = {
 		name = "We are finally free!"
 		
-		primary_culture = indian
+		primary_culture = hindi
+		change_tag = HND
 		
 		prestige = 100
 	
@@ -287,7 +287,6 @@ country_event = {
 	
 		#New Indian Government
 		government = hms_government country_event = 800054
-		change_tag = HND
 	
 		#British influence on the princely states wanes
 		ENG = {
@@ -503,7 +502,7 @@ country_event = {
 	option = {
 		name = "The Indian people are now masters of their fate again!"
 		prestige = 50
-		primary_culture = indian
+		primary_culture = hindi
 	}
 
 }
@@ -534,17 +533,15 @@ country_event = {
 
 	option = {
 		name = "We have finally ended British rule!"
+		change_tag = HND
 		
-		primary_culture = indian
+		primary_culture = hindi
 		
 		overlord = { release_vassal = THIS }
 		prestige = 100
 		government = hms_government1 # So they don't get the union jack stamp flag
 		country_event = { id = 1412200 days = 10 }
-		HND = { all_core = { add_core = RAJ } }
-		PAK = { all_core = { add_core = RAJ } }
-		primary_culture = indian
-		remove_accepted_culture = indian_muslim
+		PAK = { all_core = { add_core = HND } }
 		add_accepted_culture = sikkim
 		add_accepted_culture = punjabi
 		add_accepted_culture = pashtun
@@ -568,8 +565,8 @@ country_event = {
 
 	option = {
 		name = "Join the Union fully"
-		any_owned = { add_core = RAJ }
-		RAJ = { inherit = THIS }
+		any_owned = { add_core = HND }
+		HND = { inherit = THIS }
 		ai_chance = { factor = 0.75 }
 	}
 
@@ -577,9 +574,9 @@ country_event = {
 		name = "Declare independence"
 		ENG = { release_vassal = THIS relation = { who = THIS value = -200 } diplomatic_influence = { who = THIS value = -200 } leave_alliance = THIS }
 
-		RAJ = { relation = { who = THIS value = -200 } }
+		HND = { relation = { who = THIS value = -200 } }
 
-		RAJ = { 
+		HND = { 
 			war = {
 				target = THIS
 				attacker_goal = { casus_belli = annex_core_country }
@@ -610,11 +607,32 @@ country_event = {
 	option = {
 		name = "Allow each Princely State self-autonomy"
 		any_country = { 
-			limit = { vassal_of = ENG OR = { tag = HYD tag = MNP tag = RAA tag = IND tag = GWA tag = BER tag = ORI tag = NAX tag = BOD tag = MYS tag = TRA tag = SIK tag = AZK tag = BLO tag = JAK tag = SIN } } 
+			limit = { vassal_of = ENG OR = { tag = HYD tag = MNP tag = RAA tag = IND tag = GWA tag = BER tag = ORI tag = NAX tag = BOD tag = MYS tag = TRA tag = SIK tag = AZK tag = BLO tag = JAK tag = SIN } }
+			any_owned = { remove_core = HND }
 			country_event = 1512064
 		}
 		
 		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+
+
+#RAJ allows self autonomy for the Princely States
+country_event = {
+	id = 1512064
+	title = "Princely State of $COUNTRY$ under India"
+	desc = EVTDESC1412198
+	picture = "union_of_india"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "This limited freedom must be cherished"
+		overlord = { release_vassal = THIS }
+		any_owned = { add_core = HND }
+		FROM = { create_vassal = THIS }
 	}
 
 }

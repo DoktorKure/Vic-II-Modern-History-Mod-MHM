@@ -296,53 +296,6 @@ is_triggered_only = yes
 		}
 }
 
-
-#Startup capital
-country_event = {
-	id = 889
-	title = "Start up capital"
-	desc = "Bankers laden with gold have mysteriously appeared in our country."
-	picture = "GOLD"
-	
-	
-	trigger = {
-		year = 1946
-		is_greater_power = no
-		ai = yes
-		NOT = { tag = BRZ }
-		NOT = { has_country_flag = moneyforall425 }
-
-	}
-	
-	option = {
-		name = "Money really does grows on trees!"
-		treasury = 10000
-		set_country_flag = moneyforall425
-		}
-}
-#Startup capital
-country_event = {
-	id = 890
-	title = "Start up capital"
-	desc = "Bankers laden with gold have mysteriously appeared in our country."
-	picture = "GOLD"
-	
-	
-	trigger = {
-		year = 1946
-		ai = yes
-		is_greater_power = yes
-		NOT = { has_country_flag = moneyforall536 }
-
-	}
-	
-	option = {
-		name = "Money really does grows on trees!"
-		treasury = 1000000
-		set_country_flag = moneyforall536
-		}
-}
-
 #Release KMT
 country_event = {
 	id = 444

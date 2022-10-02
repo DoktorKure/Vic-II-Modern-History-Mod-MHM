@@ -21,6 +21,7 @@ political_decisions = {
 				limit = {
 					exists = yes
 					ai = no
+					NOT = { year = 1991 }
 				}
 				country_event = 19804
 			}

@@ -163,7 +163,7 @@ country_event = {
 		is_our_vassal = CAF
 		CAF = { primary_culture = british }
 		OR = {
-			exists = XEF
+			AND = { exists = XEF XEF = { is_vassal = no } }
 			year = 1963
 		}
 	}
@@ -186,9 +186,9 @@ country_event = {
 		}
 	}
 	option = {
-		name = EVT_8012211_B # Stay with the current federation; Northern Rhodesia and Nyasaland secede
+		name = EVT_8012211_B # Stay with the current federation
 		prestige = -10
-		release_vassal = CAF
+		badboy = 5
 		CAF = { 
 			any_owned = {
 				limit = {
@@ -207,22 +207,6 @@ country_event = {
 				add_province_modifier = { name = nationalist_agitation duration = 1095 }
 			}
 		}
-		# Zambia and Malawi UDI
-		CAF = {
-			any_owned = { add_core = CAF }
-			release = ZAM
-			release = MLW
-			ZAM = { inherit = MLW }
-			add_casus_belli = { target = ZAM type = annex_core_country }
-		}
-		ZAM = {
-			government = democracy country_event = 800054
-			relation = { who = THIS value = -200 }
-			relation = { who = CAF value = -200 }
-			add_casus_belli = { target = THIS type = free_allied_cores months = 72 }
-		}
-		casus_belli = { target = ZAM type = free_allied_cores }
-		CAF = { war = { target = ZAM attacker_goal = { casus_belli = annex_core_country } defender_goal = { casus_belli = free_allied_cores } call_ally = no } }
 		ai_chance = {
 			factor = 0.2
 		}
@@ -241,7 +225,7 @@ country_event = {
 		name = EVT_8012212_A
 		badboy = 5
 		release = ZAM
-		ZAM = { government = democracy country_event = 800054 }
+		ZAM = { government = democracy country_event = 800054 relation = { who = THIS value = -200 } set_country_flag = former_colonial_nation }
 		FROM = { diplomatic_influence = { who = ZAM value = 200 } }
 		release = MLW
 		MLW = { government = hms_government1 country_event = 800054 relation = { who = THIS value = -200 } set_country_flag = former_colonial_nation }
@@ -277,13 +261,13 @@ country_event = {
 	}
 	option = {
 		name = EVT_8012212_B
-		badboy = 20
+		badboy = 10
 		release = MLW
 		MLW = { government = hms_government1 country_event = 800054 set_country_flag = former_colonial_nation }
 		FROM = { diplomatic_influence = { who = MLW value = 200 } }
 		any_owned = {
 			limit = { is_core = ZAM }
-			add_province_modifier = { name = nationalist_agitation duration = 180 }
+			add_province_modifier = { name = nationalist_agitation duration = 1750 }
 		}
 		any_pop = {
 			limit = {

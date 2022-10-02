@@ -2655,23 +2655,6 @@ prestige = -25
 
 }
 
-#RAJ allows self autonomy for the Princely States
-country_event = {
-	id = 1512064
-title = "Princely State of $COUNTRY$ under India"
-	desc = EVTDESC1412198
-	picture = "union_of_india"
-
-is_triggered_only = yes
-
-option = {
-name = "This limited freedom must be cherished"
-overlord = { release_vassal = THIS }
-FROM = { create_vassal = THIS }
-		}
-
-}
-
 #Terror support - receiver start
 country_event = {
 	id = 1512065
@@ -9176,7 +9159,7 @@ country_event = {
 		SWK = { 
 			government = hms_government1 
 			country_event = 800054 
-			primary_culture = english 
+			primary_culture = british 
 			add_accepted_culture = malay 
 			ruling_party_ideology = conservative 
 		}
@@ -9196,7 +9179,7 @@ country_event = {
 	trigger = {
 		tag = SWK
 		NOT = { OR = { government = absolute_monarchy government = hms_government government = hms_government1 government = colonial_government } }
-		primary_culture = english
+		primary_culture = british
 	}
 
 	option = {

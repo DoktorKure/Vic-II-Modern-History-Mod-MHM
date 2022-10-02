@@ -7,7 +7,7 @@ political_decisions = {
 	potential = {
 		ai = no
 		ai = yes
-		NOT = { year = 1991 }
+		NOT = { year = 1990 }
 	}
 
 	alert = no
@@ -25,6 +25,7 @@ political_decisions = {
 			limit = {
 				exists = yes
 				ai = no
+				NOT = { year = 1991 }
 			}
 			country_event = 19804
 		}
