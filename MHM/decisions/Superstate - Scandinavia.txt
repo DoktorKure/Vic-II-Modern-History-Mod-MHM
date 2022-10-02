@@ -4,8 +4,8 @@ political_decisions = {
 		picture = "jointhenordic"
 		potential = {
 			year = 1952
+			NOT = { has_country_flag = hide_superstate }
 			OR = {
-				NOT = { has_country_flag = hide_superstate }
 				tag = ICL # Iceland
 				tag = NOR # Norway
 				tag = FIN # Finland
@@ -15,6 +15,9 @@ political_decisions = {
 				tag = FAR # Faroe Islands
 				tag = GRN # Greenland
 				tag = SCO # Scotland
+				tag = FAR
+				tag = ALA
+				tag = GRN
 				AND = { tag = EST OR = { is_secondary_power = yes is_greater_power = yes } } # Estonia
 				AND = { tag = LAT OR = { is_secondary_power = yes is_greater_power = yes } } # Latvia
 				AND = { tag = LIT OR = { is_secondary_power = yes is_greater_power = yes } } # Lithuania
@@ -37,8 +40,6 @@ political_decisions = {
 					overlord = { has_country_modifier = nordic_council_member }
 				}
 			}
-			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 tag = FAR tag = ALA tag = GRN }
-			OR = { is_vassal = no tag = FAR tag = ALA tag = GRN }
 			NOT = { has_country_modifier = nordic_council_member }
 		}
 		allow = {
@@ -48,6 +49,7 @@ political_decisions = {
 				part_of_sphere = no 
 				sphere_owner = { OR = { has_country_flag = xeu_ambition NOT = { has_country_flag = deny_superstate } } }
 			}
+			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 tag = FAR tag = GRN tag = ALA }
 		}
 		effect = {
 			prestige = 20
