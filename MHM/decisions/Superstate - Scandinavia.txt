@@ -5,6 +5,7 @@ political_decisions = {
 		potential = {
 			year = 1952
 			OR = {
+				NOT = { has_country_flag = hide_superstate }
 				tag = ICL # Iceland
 				tag = NOR # Norway
 				tag = FIN # Finland
@@ -43,6 +44,10 @@ political_decisions = {
 		allow = {
 			war = no
 			election = no
+			OR = {
+				part_of_sphere = no 
+				sphere_owner = { OR = { has_country_flag = xeu_ambition NOT = { has_country_flag = deny_superstate } } }
+			}
 		}
 		effect = {
 			prestige = 20
