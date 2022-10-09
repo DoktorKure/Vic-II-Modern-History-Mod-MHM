@@ -1240,6 +1240,7 @@ country_event = {
 	
 	option = {
 		name = "Evacuate the French troops in Syria"
+		prestige = 10
 		set_global_flag = syr_no_split
 
 		SYR = { 
@@ -1255,14 +1256,31 @@ country_event = {
 		}
 
 		release_vassal = SYR
-		prestige = 10
 		consciousness = 2
 		ai_chance = { 
 			factor = 0.8
 		}
 	}
 	option = {
+		name = "Unite Lebanon with Syria as we leave"
+		badboy = 2.5
+		SYR = { 
+			prestige = 25
+			government = democracy
+			religion = secularism
+			tech_school = army_tech_school
+					
+			add_country_modifier = {
+				name = post_colonial_chaos
+				duration = 1480
+			}
+		}
+		LEB = { all_core = { add_core = SYR } country_event = 99978 }
+		ai_chance = { factor = 0.1 }
+	}
+	option = {
 		name = "Continue the occupation of Syria"
+		prestige = -80
 		badboy = 5
 		SYR = {
 			set_country_flag = syrindy  
@@ -1273,9 +1291,8 @@ country_event = {
 			} 
 		}
 
-		prestige = -80
 		consciousness = -2
-		ai_chance = { factor = 0.2 }
+		ai_chance = { factor = 0.1 }
 	}
 }
 

@@ -10623,41 +10623,6 @@ mean_time_to_happen = { months = 1 }
 
 }
 
-#Druze and Alawite State unites with Syria after independence
-country_event = {
-  id = 1512298
-  title = "Union with Syria?"
-  desc = EVTDESC1400027
-  picture = "syrindy"
-
-  trigger = {
-    	OR = { tag = DRZ tag = ALW }
-	war = no
-	SYR = { is_vassal = no }
-	OR = { is_vassal = no vassal_of = SYR }
-	NOT = { has_country_flag = decide_DRZ_and_ALW }
-  }
-
-mean_time_to_happen = { months = 1 }
-
-  option = {
-    name = "Unite with Syria!"
-	set_country_flag = decide_DRZ_and_ALW
-	SYR = { prestige = 50 }
-	SYR = { inherit = THIS }
-	ai_chance = { factor = 0.9 }
-  }
-
-  option = {
-    name = "Remain independent"
-	prestige = 50
-	relation = { who = SYR value = -100 }
-	set_country_flag = decide_DRZ_and_ALW
-	ai_chance = { factor = 0.1 }
-  }
-
-}
-
 #1969 Sino-Soviet Border Conflict
 country_event = {
   id = 1512299
@@ -11519,47 +11484,6 @@ is_triggered_only = yes
 
 }
 
-#War reparations from Germany
-country_event = {
-  id = 1512322
-  title = "War Reparations from Germany"
-  desc = EVTDESC1512322
-  picture = "war_reparation_delivery"
-
-  trigger = {
-	NOT = { year = 1980 }
-	OR = { tag = USA tag = RUS tag = ENG tag = FRA }
-	
-OR = { 
-AND = { any_owned_province = { is_core = GER } 
-GER = { exists = no } NGF = { exists = no } 
-SGF = { exists = no } HAN = { exists = no } } 
-GER = { vassal_of = THIS } 
-OG1 = { vassal_of = THIS }
-OG2 = { vassal_of = THIS }
-OG3 = { vassal_of = THIS }
-OG4 = { vassal_of = THIS } 
-}
-
-  }
-
-mean_time_to_happen = { months = 12 }
-
-  option = {
-	name = "This is right and just!"	
-	money = 100000
-	small_arms = 250
-	weaponry = 250
-	ships = 250
-	aeroplanes = 250
-	gold_silver = 100
-	cement = 100
-	machine_parts = 100
-	fuel = 100
-  }
-
-}
-
 #Anti-Corruption Drive Backlash
 country_event = {
   id = 1512323
@@ -11573,37 +11497,6 @@ is_triggered_only = yes
 	name = "We will drain the swamp!"	
 any_pop = { limit = { OR = { type = aristocrats type = officers type = bureaucrats } } militancy = 10 }
 		country_event = 100100
-  }
-
-}
-
-#London Agreement on German External Debts
-country_event = {
-  id = 1512324
-  title = "London Agreement on German External Debts"
-  desc = EVTDESC1512324
-  picture = "ger_debt_relief"
-
-fire_only_once = yes
-
-  trigger = {
-	tag = GER
-	government = democracy
-	year = 1953
-	exists = DDR
-	NOT = { year = 1990 }
-	NOT = { badboy = 0.5 }
-	war = no
-	is_vassal = no
-	has_global_flag = blocsenabled
-  }
-
-mean_time_to_happen = { months = 9 }
-
-  option = {
-	name = "Great!"	
-	prestige = 50
-add_country_modifier = { name = tax_boost_modifier duration = 3650 }
   }
 
 }

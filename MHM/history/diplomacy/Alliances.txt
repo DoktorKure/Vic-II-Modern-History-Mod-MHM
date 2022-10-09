@@ -38,6 +38,60 @@ alliance = {
 	start_date = 1945.1.1
 	end_date = 2000.1.1
 }
+alliance = {
+	first = USA
+	second = BEL
+	start_date = 1945.1.1
+	end_date = 2000.1.1
+}
+alliance = {
+	first = USA
+	second = NET
+	start_date = 1945.1.1
+	end_date = 2000.1.1
+}
+alliance = {
+	first = USA
+	second = LUX
+	start_date = 1945.1.1
+	end_date = 2000.1.1
+}
+alliance = {
+	first = ENG
+	second = BEL
+	start_date = 1945.1.1
+	end_date = 2000.1.1
+}
+alliance = {
+	first = ENG
+	second = NET
+	start_date = 1945.1.1
+	end_date = 2000.1.1
+}
+alliance = {
+	first = ENG
+	second = LUX
+	start_date = 1945.1.1
+	end_date = 2000.1.1
+}
+alliance = {
+	first = FRA
+	second = BEL
+	start_date = 1945.1.1
+	end_date = 2000.1.1
+}
+alliance = {
+	first = FRA
+	second = NET
+	start_date = 1945.1.1
+	end_date = 2000.1.1
+}
+alliance = {
+	first = FRA
+	second = LUX
+	start_date = 1945.1.1
+	end_date = 2000.1.1
+}
 
 alliance = {
 	first = ENG
@@ -432,4 +486,37 @@ alliance = {
 	second = QHA
 	start_date = 1945.1.1
 	end_date = 1975.1.1
+}
+
+# Occupation Zones
+
+alliance = {
+	first = RUS
+	second = OG1
+	start_date = 1945.5.8
+	end_date = 1949.10.7
+}
+alliance = {
+	first = FRA
+	second = OG2
+	start_date = 1945.5.8
+	end_date = 1949.5.23
+}
+alliance = {
+	first = ENG
+	second = OG3
+	start_date = 1945.5.8
+	end_date = 1949.5.23
+}
+alliance = {
+	first = USA
+	second = OG4
+	start_date = 1945.5.8
+	end_date = 1949.5.23
+}
+alliance = {
+	first = POL
+	second = OG5
+	start_date = 1945.5.8
+	end_date = 1948.1.1
 }

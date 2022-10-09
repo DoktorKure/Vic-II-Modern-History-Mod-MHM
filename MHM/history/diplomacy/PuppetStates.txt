@@ -220,6 +220,19 @@ vassal = {
 	end_date = 1949.4.22
 }
 
+vassal = {
+	first = RUS
+	second = NKO
+	start_date = 1945.1.1
+	end_date = 1950.1.1
+}
+
+vassal = {
+	first = USA
+	second = SKO
+	start_date = 1945.1.1
+	end_date = 1950.1.1
+}
 
 vassal = {
 	first = USA

@@ -114,6 +114,79 @@ country_event = {
 	}
 }
 
+#War reparations from Germany
+country_event = {
+	id = 1512322
+	title = "War Reparations from Germany"
+	desc = EVTDESC1512322
+	picture = "war_reparation_delivery"
+
+	trigger = {
+		NOT = { year = 1980 }
+		OR = { tag = USA tag = RUS tag = ENG tag = FRA tag = POL }
+	
+		OR = { 
+			AND = { any_owned_province = { is_core = GER } 
+			GER = { exists = no } NGF = { exists = no } 
+			SGF = { exists = no } HAN = { exists = no } } 
+			GER = { vassal_of = THIS } 
+			OG1 = { vassal_of = THIS }
+			OG2 = { vassal_of = THIS }
+			OG3 = { vassal_of = THIS }
+			OG4 = { vassal_of = THIS }
+			OG5 = { vassal_of = THIS }
+		}
+
+	}
+
+	mean_time_to_happen = { months = 12 }
+
+	option = {
+		name = "This is right and just!"	
+		money = 100000
+		small_arms = 250
+		weaponry = 250
+		ships = 250
+		aeroplanes = 250
+		gold_silver = 100
+		cement = 100
+		machine_parts = 100
+		fuel = 100
+	}
+
+}
+
+#London Agreement on German External Debts
+country_event = {
+	id = 1512324
+	title = "London Agreement on German External Debts"
+	desc = EVTDESC1512324
+	picture = "ger_debt_relief"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		government = democracy
+		year = 1953
+		exists = DDR
+		NOT = { year = 1990 }
+		NOT = { badboy = 0.5 }
+		war = no
+		is_vassal = no
+		has_global_flag = blocsenabled
+	}
+
+	mean_time_to_happen = { months = 9 }
+
+	option = {
+		name = "Great!"	
+		prestige = 50
+		add_country_modifier = { name = tax_boost_modifier duration = 3650 }
+	}
+
+}
+
 #Decide the Future of Germany - USA (Revise Potsdam)
 country_event = {
 	id = 82040100
@@ -149,18 +222,20 @@ country_event = {
 
 	option = {
 		name = EVT_8204185_A
-		set_country_flag = no_partition_of_west_germany
+		set_country_flag = no_partition_of_germany
 		relation = { who = POL value = -25 }
 		relation = { who = RUS value = -20 } 
 		relation = { who = ENG value = 25 } 
 		relation = { who = FRA value = -25 } # The US stays committed to a fully united Germany, displeasing France, the USSR and Poland.
 		GER = { all_core = { any_pop = { limit = { culture = german } consciousness = -3 militancy = -3 } } }
+		
+		ENG = { country_event = 82040101 }
 		ai_chance = { factor = 0.9 }
 	}
 	option = {
 		name = EVT_8204185_D
 		prestige = -100
-		set_country_flag = partition_of_west_germany
+		set_country_flag = partition_of_germany
 		relation = { who = POL value = 15 }
 		relation = { who = RUS value = 10 }
 		relation = { who = ENG value = 25 } 
@@ -202,6 +277,8 @@ country_event = {
 			limit = { is_core = GER }
 			secede_province = OG3
 		}
+		
+		ENG = { country_event = 82040101 }
 	
 		ai_chance = { factor = 0.1 }
 	}
@@ -216,16 +293,7 @@ country_event = {
   
 	fire_only_once = yes
 
-	trigger = {
-    	tag = ENG
-		year = 1946 
-		NOT = { year = 1990 }
-		
-		OG3 = { exists = yes }
-		NOT = { exists = GER }
-		has_country_flag = occupation_zones_in_germany
-		USA = { has_country_flag = policy_on_germany }
-	}
+	is_triggered_only = yes
 
 	immediate = { set_country_flag = policy_on_germany }
 
@@ -238,7 +306,7 @@ country_event = {
 
 	option = {
 		name = EVT_8204185_A
-		set_country_flag = no_partition_of_west_germany
+		set_country_flag = no_partition_of_germany
 		relation = { who = POL value = -25 }
 		relation = { who = RUS value = -20 } 
 		relation = { who = USA value = 50 } 
@@ -247,12 +315,14 @@ country_event = {
 		
 		#Become NGF if SGF exists as its existence is a fait accompli for partition
 		OG3 = { any_owned = { limit = { owner = { exists = SGF } } owner = { add_core = NGF change_tag = NGF } } }
+		
+		FRA = { country_event = 82040102 }
 		ai_chance = { factor = 0.8 }
 	}
 	
 	option = {
 		name = EVT_8204185_D
-		set_country_flag = partition_of_west_germany
+		set_country_flag = partition_of_germany
 		relation = { who = POL value = 15 }
 		relation = { who = RUS value = 10 }
 		relation = { who = USA value = -50 } 
@@ -298,6 +368,8 @@ country_event = {
 		
 		#Become SGF if NGF exists as its existence is a fait accompli for partition
 		OG4 = { any_owned = { limit = { owner = { exists = NGF } } owner = { change_tag = SGF } } }
+		
+		FRA = { country_event = 82040102 }
 
 		ai_chance = { 
 			factor = 0.1 
@@ -305,14 +377,14 @@ country_event = {
 			#UK follows the US
 			modifier = { 
 				factor = 0 
-				USA = { has_country_flag = no_partition_of_west_germany } 
+				USA = { has_country_flag = no_partition_of_germany } 
 			} 
 		}
 	}
 	
 	option = {
 		name = "Release a North German state with a restored Hanover"
-		set_country_flag = partition_of_west_germany
+		set_country_flag = partition_of_germany
 		prestige = -100
 		relation = { who = POL value = 15 }
 		relation = { who = RUS value = 10 }
@@ -391,6 +463,8 @@ country_event = {
 		
 		#Become SGF if NGF exists as its existence is a fait accompli for partition
 		OG4 = { any_owned = { limit = { owner = { exists = NGF } } owner = { change_tag = SGF } } }
+		
+		FRA = { country_event = 82040102 }
 
 		ai_chance = {
 			factor = 0.1 
@@ -398,7 +472,7 @@ country_event = {
 			#UK follows the US
 			modifier = { 
 				factor = 0 
-				USA = { has_country_flag = no_partition_of_west_germany } 
+				USA = { has_country_flag = no_partition_of_germany } 
 			} 
 		}
 	}
@@ -413,16 +487,7 @@ country_event = {
   
 	fire_only_once = yes
 
-	trigger = {
-    	tag = FRA
-		year = 1946 
-		NOT = { year = 1990 }
-		
-		OG2 = { exists = yes }
-		NOT = { exists = GER }
-		has_country_flag = occupation_zones_in_germany
-		ENG = { has_country_flag = policy_on_germany }
-	}
+	is_triggered_only = yes
 
 	immediate = { set_country_flag = policy_on_germany }
 
@@ -435,7 +500,7 @@ country_event = {
 
 	option = {
 		name = EVT_8204185_A
-		set_country_flag = no_partition_of_west_germany
+		set_country_flag = no_partition_of_germany
 		relation = { who = POL value = -25 }
 		relation = { who = RUS value = -20 } 
 		relation = { who = USA value = 50 } 
@@ -465,6 +530,8 @@ country_event = {
 		
 		any_owned = { limit = { owner = { exists = SGF } is_core = SGF } secede_province = SGF }
 		any_owned = { limit = { owner = { exists = NGF } is_core = NGF } secede_province = NGF }
+		
+		RUS = { country_event = 82040103 }
 
 		ai_chance = { factor = 0.05 }
 	}
@@ -501,12 +568,15 @@ country_event = {
 		
 		any_owned = { limit = { owner = { exists = SGF } is_core = SGF } secede_province = SGF }
 		any_owned = { limit = { owner = { exists = NGF } is_core = NGF NOT = { is_core = SAL } } secede_province = NGF }
+		
+		RUS = { country_event = 82040103 }
 
 		ai_chance = { factor = 0.8 }
 	}
 	option = {
 		name = EVT_8204185_C
 		set_country_flag = rhineland_option
+		set_country_flag = partition_of_germany
 		prestige = -100
 		badboy = 5
 		relation = { who = POL value = 10 }
@@ -577,6 +647,8 @@ country_event = {
 			593 = { secede_province = SGF }
 			594 = { secede_province = SGF }
 		}
+		
+		RUS = { country_event = 82040103 }
 
 		ai_chance = { factor = 0.15 }
 	}	
@@ -591,16 +663,7 @@ country_event = {
   
 	fire_only_once = yes
 
-	trigger = {
-    	tag = RUS
-		year = 1946 
-		NOT = { year = 1990 }
-		
-		OG1 = { exists = yes }
-		NOT = { exists = GER }
-		has_country_flag = occupation_zones_in_germany
-		FRA = { has_country_flag = policy_on_germany }
-	}
+	is_triggered_only = yes
 
 	mean_time_to_happen = { months = 1 }
 
@@ -609,7 +672,7 @@ country_event = {
 	option = {
 		name = EVT_8204185_A
 
-		set_country_flag = no_partition_of_west_germany
+		set_country_flag = no_partition_of_germany
 
 		prestige = -100
 		badboy = -5
@@ -640,12 +703,15 @@ country_event = {
 			limit = { tag = GER exists = yes }
 			GER = { inherit = OG1 }
 		}
+		
+		POL = { country_event = 82040104 }
 
 		ai_chance = { factor = 0.05 }
 	}
 	
 	option = {
 		name = EVT_8204185_D
+		set_country_flag = partition_of_germany
 		relation = { who = POL value = 15 }
 		relation = { who = USA value = -50 }
 		relation = { who = ENG value = -25 } 
@@ -664,6 +730,8 @@ country_event = {
 			ruling_party_ideology = communist 
 		}
 		RUS = { diplomatic_influence = { who = DDR value = 200 } }
+		
+		POL = { country_event = 82040104 }
 
 		ai_chance = { factor = 0.95 }
 	}
@@ -678,16 +746,7 @@ country_event = {
   
 	fire_only_once = yes
 
-	trigger = {
-    	tag = POL
-		year = 1946 
-		NOT = { year = 1990 }
-		
-		OG5 = { exists = yes }
-		NOT = { exists = GER }
-		has_country_flag = occupation_zones_in_germany
-		RUS = { has_country_flag = policy_on_germany }
-	}
+	is_triggered_only = yes
 
 	mean_time_to_happen = { months = 1 }
 
@@ -696,7 +755,7 @@ country_event = {
 	option = {
 		name = "Maintain Germany's territorial integrity but keep East Prussia"
 
-		set_country_flag = no_partition_of_west_germany
+		set_country_flag = no_partition_of_germany
 
 		prestige = -100
 		badboy = -5
@@ -721,14 +780,14 @@ country_event = {
 			owner = { DDR = { inherit = OG5 } }
 		}
 		
-		#GER inherits Polish Zone if neither DDR or OG1 exists
+		#GER inherits Polish Zone if neither DDR nor Soviet Zone exists
 		random_owned = {
 			limit = { owner = { exists = GER } AND = { OG1 = { exists = no } DDR = { exists = no } } }
 			OG5 = { change_tag_no_core_switch = GER }
 			owner = { GER = { inherit = OG5 } }
 		}
 		
-		#NGF inherits Polish Zone if neither DDR or OG1 exists
+		#NGF inherits Polish Zone if neither DDR nor Soviet Zone exists
 		random_owned = { 
 			limit = { owner = { exists = NGF } AND = { OG1 = { exists = no } DDR = { exists = no } } }
 			OG5 = { change_tag_no_core_switch = NGF }
@@ -739,6 +798,7 @@ country_event = {
 	}
 	option = {
 		name = EVT_8204185_D
+		set_country_flag = partition_of_germany
 		relation = { who = RUS value = 15 }
 		relation = { who = USA value = -50 }
 		relation = { who = ENG value = -25 } 
@@ -980,7 +1040,7 @@ country_event = {
 		}
 		
 		#Berlin is in the western zone
-		549 = { owned_by = OG4 }
+		549 = { OR = { owned_by = OG4 owned_by = GER } }
 	}
 
 	mean_time_to_happen = { months = 3 }
@@ -992,8 +1052,8 @@ country_event = {
 		
 		money = 200000
 		
-		#Trigger the Berlin Airlift
-		set_global_flag = deutsche_mark
+		#Begin the Berlin Blockade
+		RUS = { country_event = 8500601 }
 		
 		ai_chance = { factor = 0.9 }
 	}
@@ -1570,8 +1630,8 @@ country_event = {
 		GER = { exists = no }
 		OG4 = { exists = yes }
 		OG3 = { exists = yes }
-		has_country_flag = no_partition_of_west_germany
-		ENG = { has_country_flag = no_partition_of_west_germany }
+		has_country_flag = no_partition_of_germany
+		ENG = { has_country_flag = no_partition_of_germany }
 		RUS = { has_country_flag = policy_on_germany }
 		NOT = { year = 1990 }
 		NOT = { has_country_flag = form_bizonia }
@@ -1580,7 +1640,7 @@ country_event = {
 	mean_time_to_happen = { months = 1 }
 
 	option = {
-		name = "Propose the Bizone to the British (80% chance of success)"
+		name = "Propose the Bizone to the British (90% chance of success)"
 		prestige = 50
 		ENG = { country_event = 1512283 }
 		set_country_flag = form_bizonia
@@ -1643,7 +1703,7 @@ country_event = {
 		OG4 = { exists = yes }
 		OG3 = { exists = yes }
 		FRA = { has_country_flag = policy_on_germany }
-		has_country_flag = no_partition_of_west_germany
+		has_country_flag = no_partition_of_germany
 		FRA = { NOT = { has_country_flag = rhineland_option } }
 		NOT = { year = 1990 }
 	}
@@ -1651,7 +1711,7 @@ country_event = {
 	mean_time_to_happen = { months = 3 }
 
 	option = {
-		name = "Propose the Trizone to the French (80% chance of success)"
+		name = "Propose the Trizone to the French (90% chance of success)"
 		FRA = { country_event = 1512285 }
 		ai_chance = { factor = 0.9 }
 	}
@@ -1722,6 +1782,69 @@ country_event = {
 
 	}
 
+}
+
+#Independent Occupation Zone joins Germany - democratic 
+country_event = {
+	id = 1610005
+	title = "United Democratic Germany"
+	desc = "An Occupation Zone returns to German control"
+	picture = "treaty"
+
+	trigger = {
+		OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 tag = OG5 }
+		is_vassal = no
+		war = no
+		OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+		GER = { war = no exists = yes OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } }
+	}
+
+	option = {
+		name = "Join Germany"
+		GER = { inherit = THIS }
+		}
+	}
+
+#Independent Occupation Zone joins Germany - socialist 
+country_event = {
+	id = 1610006
+	title = "United Socialist Germany"
+	desc = "An Occupation Zone returns to German control"
+	picture = "treaty"
+
+	trigger = {
+		OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 tag = OG5 }
+		is_vassal = no
+		war = no
+		OR = { government = socialist_democracy government = proletarian_dictatorship1 government = proletarian_dictatorship }
+		GER = { war = no exists = yes OR = { government = socialist_democracy government = proletarian_dictatorship1 government = proletarian_dictatorship } }
+	}
+
+	option = {
+		name = "Join Germany"
+		GER = { inherit = THIS }
+	}
+}
+
+#Independent Occupation Zone joins East Germany - socialist 
+country_event = {
+	id = 1610007
+	title = "United Socialist East Germany"
+	desc = "An Occupation Zone returns to East German control"
+	picture = "treaty"
+
+	trigger = {
+		OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 tag = OG5 }
+		is_vassal = no
+		war = no
+		OR = { government = socialist_democracy government = proletarian_dictatorship1 government = proletarian_dictatorship }
+		DDR = { war = no exists = yes OR = { government = socialist_democracy government = proletarian_dictatorship1 government = proletarian_dictatorship } }
+	}
+
+	option = {
+		name = "Join East Germany"
+		DDR = { inherit = THIS }
+	}
 }
 
 #Treaty on the Final Settlement with Respect to Germany

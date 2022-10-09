@@ -53,6 +53,14 @@ country_event = {
 			militancy = -1
 			consciousness = -1
 		}
+		SYR = {
+			war = { 
+				target = LEB 
+				attacker_goal = { casus_belli = civil_war } 
+				defender_goal = { casus_belli = humiliate } 
+				call_ally = no
+			}
+		}
   	}
 }
 country_event = {

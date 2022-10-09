@@ -546,7 +546,7 @@ country_event = {
 
 	trigger = {
 		is_vassal = yes
-		NOT = { OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 } }
+		NOT = { OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 tag = OG5 } }
 		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 		NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } }
 		overlord = {

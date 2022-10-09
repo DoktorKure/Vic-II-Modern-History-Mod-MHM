@@ -19,8 +19,8 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		#Owns South Korea
-		is_possible_vassal = SKO
+		#Occupies SKO
+		is_our_vassal = SKO
 	}
 
 	mean_time_to_happen = {
@@ -66,7 +66,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Korea shall be the next state of the USA!"
+		name = "Settle for partition of the peninsula"
 		prestige_factor = -0.05
 		badboy = 5
 		
@@ -123,8 +123,8 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		#Owns North Korea
-		is_possible_vassal = NKO
+		#Occupies NKO
+		is_our_vassal = NKO
 	}
 
 	mean_time_to_happen = {
@@ -164,7 +164,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Korea shall be the next state of the USSR!"
+		name = "Settle for partition of the peninsula"
 		prestige_factor = -0.05
 		badboy = 5
 		
@@ -184,15 +184,15 @@ country_event = {
 				} 
 				any_pop = { 
 					limit = { strata = middle }
-					militancy = 8
-					consciousness = 8
-					ideology  = { factor = 0.20 value = liberal } 
+					militancy = 5
+					consciousness = 5
+					ideology  = { factor = 0.20 value = communist_social } 
 				} 
 				any_pop = { 
 					limit = { strata = poor }
-					militancy = 10
-					consciousness = 10
-					ideology  = { factor = 0.30 value = nationalist } 
+					militancy = 5
+					consciousness = 5
+					ideology  = { factor = 0.30 value = communist } 
 				} 
 			}
 		}
@@ -254,8 +254,8 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		#Owns NKO
-		is_possible_vassal = NKO
+		#Occupies NKO
+		is_our_vassal = NKO
 		
 		#Both elected to create an independent Korea
 		has_country_flag = KOR_indy_path_flag
@@ -273,16 +273,18 @@ country_event = {
 		
 		#US reaction
 		random_country = {
-			limit = { tag = USA government = democracy is_vassal = no is_possible_vassal = SKO }
+			limit = { tag = USA government = democracy is_vassal = no is_our_vassal = SKO }
 			country_event = 1209005
 		}
 		
 		#Increase Communist support
-		any_pop = { 
-			limit = { culture = korean } 
-			consciousness = 5 
-			militancy = -5
-			ideology = { factor = 0.1 value = communist } 
+		NKO = {
+			any_pop = { 
+				limit = { culture = korean } 
+				consciousness = 5 
+				militancy = -5
+				ideology = { factor = 0.1 value = communist } 
+			}
 		}
 		
 		#Trigger US reaction
@@ -298,19 +300,38 @@ country_event = {
 		set_global_flag = united_korea_path_flag
 		
 		#Korean socialists are angry
-		any_pop = {
-			limit = { culture = korean }
-			scaled_militancy = { 
-				factor = 10
-				ideology = communist
+		NKO = {
+			any_pop = {
+				limit = { culture = korean }
+				scaled_militancy = { 
+					factor = 10
+					ideology = communist
+				}
+				scaled_militancy = { 
+					factor = 10
+					ideology = communist_social
+				}
+				scaled_militancy = { 
+					factor = 5 
+					ideology = socialist
+				}
 			}
-			scaled_militancy = { 
-				factor = 10
-				ideology = communist_social
-			}
-			scaled_militancy = { 
-				factor = 5 
-				ideology = socialist
+		}
+		SKO = {
+			any_pop = {
+				limit = { culture = korean }
+				scaled_militancy = { 
+					factor = 10
+					ideology = communist
+				}
+				scaled_militancy = { 
+					factor = 10
+					ideology = communist_social
+				}
+				scaled_militancy = { 
+					factor = 5 
+					ideology = socialist
+				}
 			}
 		}
 
@@ -338,11 +359,11 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		#Owns South Korea
-		is_possible_vassal = SKO
+		#Occupies SKO
+		is_our_vassal = SKO
 		
-		#NKO is owned by the USSR
-		RUS = { is_possible_vassal = NKO }
+		#RUS occupies NKO
+		NKO = { vassal_of = RUS }
 	}
 
 	mean_time_to_happen = {
@@ -352,10 +373,12 @@ country_event = {
 	option = {
 		name = "Proceed with the division of the Peninsula"
 		badboy = 2
-		any_pop = { 
-			limit = { culture = korean } 
-			consciousness = 10 
-			militancy = 10 
+		SKO = {
+			any_pop = { 
+				limit = { culture = korean } 
+				consciousness = 10 
+				militancy = 10 
+			}
 		}
 		
 		set_global_flag = division_of_korea_flag
@@ -391,16 +414,40 @@ country_event = {
 		NKO = { all_core = { add_core = KOR remove_core = NKO } }
 		SKO = { all_core = { add_core = KOR remove_core = SKO } }
 		
-		#USA transfers all Korean cores to THIS
-		FROM = { 
-			any_owned = { 
-				limit = { is_core = KOR } 
-				secede_province = THIS
-			} 
+		#For player
+		random_owned = {
+			limit = { 
+				owner = { 
+					NKO = { 
+						exists = yes 
+						is_ai = no
+					} 
+				}
+			}
+			owner = {
+				NKO = {
+					inherit = SKO
+					change_tag = KOR
+				}
+			}
+		}
+		random_owned = {
+			limit = { 
+				owner = { 
+					SKO = { 
+						exists = yes 
+						is_ai = no
+					} 
+				}
+			}
+			owner = {
+				SKO = {
+					inherit = NKO
+					change_tag = KOR
+				}
+			}
 		}
 		
-		#Release Socialist Democracy Korea
-		release = KOR
 		KOR = { 
 			government = socialist_democracy
 			country_event = 800054
@@ -451,18 +498,21 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		#Owns South Korea
-		is_possible_vassal = SKO
+		#Occupies SKO
+		is_our_vassal = SKO
 	}
 
-	mean_time_to_happen = { months = 8 }
+	mean_time_to_happen = {
+		months = 8
+		modifier = { factor = 0.1 year = 1949 }
+	}
 
 	option = {
 		name = "Release South Korea as an independent state!"
 		prestige = 50
 		
 		#Release SKO
-		release = SKO
+		release_vassal = SKO
 		SKO = {
 			government = democracy
 			country_event = 800054
@@ -572,9 +622,7 @@ country_event = {
 	option = {
 		name = "Give South Korea nominal independence"
 		badboy = 5
-
-		#Release SKO
-		release_vassal = SKO
+		
 		SKO = {
 			government = democracy
 			country_event = 800054
@@ -702,8 +750,8 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		#Owns North Korea
-		is_possible_vassal = NKO
+		#Occupies NKO
+		is_our_vassal = NKO
 		
 		has_global_flag = SKO_released_flag
 	}
@@ -714,13 +762,11 @@ country_event = {
 		name = "Release them as a Soviet client state!"
 		badboy = 2
 		
-		#Release NKO
-		release_vassal = NKO
 		NKO = {
-			government = proletarian_dictatorship
-			country_event = 800052
-			ruling_party_ideology = communist
-			
+			activate_technology = post_war_radar
+			activate_technology = infantry
+			activate_technology = heavy_tanks
+			activate_technology = cold_war_doctrine
 			any_pop = { 
 				limit = { strata = rich }
 				consciousness = 10
@@ -735,6 +781,17 @@ country_event = {
 				limit = { strata = poor }
 				consciousness = 10
 				ideology  = { factor = 0.10 value = communist } 
+			}
+			
+			#Add soldiers
+			any_pop = {
+				limit = { type = soldiers }
+				reduce_pop = 1.25
+			}
+			#Add officers
+			any_pop = {
+				limit = { type = officers }
+				reduce_pop = 1.05
 			}
 		}
 
@@ -760,12 +817,12 @@ country_event = {
 		prestige = 50
 		
 		#Release NKO
-		release = NKO
+		release_vassal = NKO
 		NKO = {
-			government = proletarian_dictatorship
-			country_event = 800052
-			ruling_party_ideology = communist
-			
+			activate_technology = post_war_radar
+			activate_technology = infantry
+			activate_technology = heavy_tanks
+			activate_technology = cold_war_doctrine
 			any_pop = { 
 				limit = { strata = rich }
 				consciousness = 10
@@ -780,6 +837,17 @@ country_event = {
 				limit = { strata = poor }
 				consciousness = 10
 				ideology  = { factor = 0.10 value = socialist } 
+			}
+			
+			#Add soldiers
+			any_pop = {
+				limit = { type = soldiers }
+				reduce_pop = 1.10
+			}
+			#Add officers
+			any_pop = {
+				limit = { type = officers }
+				reduce_pop = 1.02
 			}
 		}
 
@@ -829,14 +897,18 @@ country_event = {
 			war = no
 		}
 		
-		is_possible_vassal = SKO
-		RUS = { is_possible_vassal = NKO }
+		#Occupies SKO
+		is_our_vassal = SKO
+		
+		#RUS occupies NKO
+		NKO = { vassal_of = RUS }
 		
 		has_global_flag = united_korea_path_flag
 	}
 
 	mean_time_to_happen = {
 		months = 8
+		modifier = { factor = 0.1 year = 1949 }
 	}
 
 	option = {
@@ -847,16 +919,40 @@ country_event = {
 		NKO = { all_core = { add_core = KOR remove_core = NKO } }
 		SKO = { all_core = { add_core = KOR remove_core = SKO } }
 		
-		#USSR transfers all Korean cores to THIS
-		RUS = { 
-			any_owned = { 
-				limit = { is_core = KOR } 
-				secede_province = THIS
-			} 
+		#For player
+		random_owned = {
+			limit = { 
+				owner = { 
+					NKO = { 
+						exists = yes 
+						is_ai = no
+					} 
+				}
+			}
+			owner = {
+				NKO = {
+					inherit = SKO
+					change_tag = KOR
+				}
+			}
+		}
+		random_owned = {
+			limit = { 
+				owner = { 
+					SKO = { 
+						exists = yes 
+						is_ai = no
+					} 
+				}
+			}
+			owner = {
+				SKO = {
+					inherit = NKO
+					change_tag = KOR
+				}
+			}
 		}
 		
-		#Release Democracy Korea
-		release = KOR
 		KOR = { 
 			government = democracy
 			country_event = 800054
