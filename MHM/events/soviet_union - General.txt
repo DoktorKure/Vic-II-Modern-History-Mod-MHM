@@ -2142,6 +2142,12 @@ country_event = {
 			}
 		
 		}
+		#Inherited Soviet nukes, resolved in 1994
+		UKR = {
+			add_country_modifier = { name = hydrogen_nation duration = -1 }
+			set_country_flag = air_bomb
+			set_country_flag = icbm_bomb
+		}
 		
 		#Tartarstan situation
 		random_owned = { limit = { owner = { is_possible_vassal = TAR } } owner = { release = TAR TAR = { government = socialist_democracy country_event = 800054 ruling_party_ideology = socialist set_country_flag = TAR_formed_by_event } } }

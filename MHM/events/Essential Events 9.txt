@@ -1641,40 +1641,6 @@ add_country_modifier = { name = revolution_chaos duration = 1825 }
 
 }
 
-#Use Tactical Nukes
-country_event = {
-	id = 1610031
-title = "Struck by $FROMCOUNTRY_ADJ$ Tactical Nuclear Weapons"
-	desc = EVTDESC1610031
-	picture = "disarm_tactical_nukes"
-
-is_triggered_only = yes
-
-option = {
-name = "We must retaliate!"
-prestige_factor = -0.025
-
-FROM = { set_country_flag = has_nuke_clouds }
-
-set_country_flag = has_nuke_clouds
-
-war_exhaustion = 10
-
-any_pop = { limit = { type = soldiers } reduce_pop = 0.99 }
-
-any_owned = { 
-limit = { units_in_province = 1 } 
-set_province_flag = disease
-add_province_modifier = { name = tactical_nuked duration = 1825 }
-any_pop = { reduce_pop = 0.95 }
-infrastructure = -2
-naval_base = -2
-fort = -2
-}
-		}
-
-}
-
 #Impeachment!
 country_event = {
 	id = 1610032

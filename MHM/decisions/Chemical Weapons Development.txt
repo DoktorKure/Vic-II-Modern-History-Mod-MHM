@@ -22,7 +22,7 @@ political_decisions = {
 		
 		allow = {
 
-			OR = { is_secondary_power = yes is_greater_power = yes military_score = 400 }
+			OR = { is_secondary_power = yes is_greater_power = yes military_score = 300 }
 
 			NOT = { has_country_modifier = wmd_removed }
 
@@ -52,7 +52,7 @@ political_decisions = {
 			add_country_modifier = { name = develop_chemical_bomb duration = 1460 }
 			set_country_flag = chemical_bomb_developed
 			prestige = 25
-			badboy = 10
+			badboy = 5
 			money = -500000
 		}
 		

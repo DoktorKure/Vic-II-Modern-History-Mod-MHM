@@ -28,6 +28,61 @@ political_decisions = {
 	
 			#Indicate that this is the MHM mod
 			set_global_flag = MHM_MOD_ACTIVE
+		
+			#Nuclear weapons nations
+			USA = {
+				add_country_modifier = { name = atomic_nation duration = -1 }
+				set_country_flag = air_bomb
+			}
+			RUS = {
+				add_country_modifier = { name = atomic_nation duration = -1 }
+				set_country_flag = air_bomb
+			}
+		
+			#Chemical weapons nations
+			USA = {
+				add_country_modifier = { name = chemical_nation duration = -1 }
+			}
+			ENG = {
+				add_country_modifier = { name = chemical_nation duration = -1 }
+			}
+			CAN = {
+				add_country_modifier = { name = chemical_nation duration = -1 }
+			}
+			FRA = {
+				add_country_modifier = { name = chemical_nation duration = -1 }
+			}
+			RUS = {
+				add_country_modifier = { name = chemical_nation duration = -1 }
+			}
+			SPA = {
+				add_country_modifier = { name = chemical_nation duration = -1 }
+			}
+
+			#Biological Weapons Nations
+			USA = {
+				add_country_modifier = { name = bio_nation duration = -1 }
+			}
+			RUS = {
+				add_country_modifier = { name = bio_nation duration = -1 }
+			}
+			ENG = {
+				add_country_modifier = { name = bio_nation duration = -1 }
+			}
+		
+			#Strategic bombardment-capable countries
+			USA = {
+				set_country_flag = aerial_bombardment_ability
+			}
+			ENG = {
+				set_country_flag = aerial_bombardment_ability
+			}
+			FRA = {
+				set_country_flag = aerial_bombardment_ability
+			}
+			RUS = {
+				set_country_flag = aerial_bombardment_ability
+			}
 			
 			HND = {
 				any_pop = {
