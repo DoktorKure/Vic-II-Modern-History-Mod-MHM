@@ -44,6 +44,12 @@ political_decisions = {
 			add_country_modifier = { name = commonwealthmember duration = -1 }
 			relation = { who = ENG value = 200 }
 		}
+		
+		#Soviet nuclear weapons development so they'll get the nuke in 1949 and not 1950
+		RUS = {
+			set_country_flag = atomic_bomb_developed
+			add_country_modifier = { name = develop_atomic_bomb duration = 1336 }
+		}
 
 #Guatemalan Revolution
 random_country = {
@@ -994,7 +1000,10 @@ limit = { OR = {
 	is_core = UZB 
 	is_core = KYR 
 	is_core = TAJ 
-	is_core = KAZ 
+	is_core = KAZ
+	is_core = EST
+	is_core = LAT
+	is_core = LIT
 } } 
 add_core = RUS
 	}

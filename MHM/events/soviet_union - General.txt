@@ -151,6 +151,9 @@ country_event = {
 		any_pop = { militancy = -1 consciousness = 5 }
 		add_country_modifier = { name = man_of_the_people duration = 3650 }
 		add_country_modifier = { name = economic_boom duration = 1825 }
+		
+		add_accepted_culture = ukrainian
+		add_accepted_culture = byelorussian
 
 		political_reform = minorities_equal_rights
 		political_reform = censored_publishing

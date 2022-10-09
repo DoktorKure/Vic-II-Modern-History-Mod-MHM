@@ -1974,7 +1974,7 @@ country_event = { # The Death of Kosygin
 	mean_time_to_happen = { months = 10 }
 	
 	option = {
-		name = "Select Yuri Andropov"
+		name = "Yuri Andropov becomes the next leader"
 		any_pop = { militancy = -3 consciousness = -3 }
 		add_country_modifier = { name = backroom_boy duration = 3650 }
 		
@@ -1984,17 +1984,6 @@ country_event = { # The Death of Kosygin
 		clr_country_flag = yuri_andropov_1
 
 		set_country_flag = yuri_andropov
-		ai_chance = { factor = 0.3 }
-	}
-	
-	option = {
-		name = "Select Kirill Mazurov"
-		
-		add_country_modifier = { name = landed_gentleman duration = 3650 }
-		set_country_flag = kirill_mazurov
-		clr_country_flag = alexei_kosygin
-		
-		ai_chance = { factor = 0.7 }
 	}
 }
 

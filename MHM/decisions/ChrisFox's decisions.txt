@@ -61,6 +61,7 @@ political_decisions = {
 			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 			
 			NOT = { has_global_flag = belarus_neo_soviet_decision_fired }
+			NOT = { has_country_flag = lavrentiy_beria }
 		}
 		
 		allow = { 
