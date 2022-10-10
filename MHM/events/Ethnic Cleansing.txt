@@ -29,46 +29,95 @@ country_event = {
 			remove_province_modifier = ethnic_cleansing_province_modifier
 		}
 		
-		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide
+		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide; concentration camps increase efficiency of genocides
 		random_owned = { 
-			limit = { owner = { NOT = { cold_war_doctrine = 1 } } }
+			limit = { owner = { NOT = { cold_war_doctrine = 1 } NOT = { has_country_flag = death_camp_active } } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.98 } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { cold_war_doctrine = 1 } has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { cold_war_doctrine = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
 		}
 		random_owned = { 
-			limit = { owner = { cold_war_doctrine = 1 } }
+			limit = { owner = { cold_war_doctrine = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { mutual_assured_destruction = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
 		}
 		random_owned = { 
-			limit = { owner = { mutual_assured_destruction = 1 } }
+			limit = { owner = { mutual_assured_destruction = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { assymetric_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
 		}
 		random_owned = { 
-			limit = { owner = { assymetric_warfare = 1 } }
+			limit = { owner = { assymetric_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { arms_race_doctrine = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
 		}
 		random_owned = { 
-			limit = { owner = { arms_race_doctrine = 1 } }
+			limit = { owner = { arms_race_doctrine = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.875 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { fourth_generation_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.875 } }
 		}
 		random_owned = { 
-			limit = { owner = { fourth_generation_warfare = 1 } }
+			limit = { owner = { fourth_generation_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { network_centric_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
 		}
 		random_owned = { 
-			limit = { owner = { network_centric_warfare = 1 } }
+			limit = { owner = { network_centric_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.825 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { modern_asymmetric_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.825 } }
 		}
 		random_owned = { 
-			limit = { owner = { modern_asymmetric_warfare = 1 } }
+			limit = { owner = { modern_asymmetric_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.80 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { full_spectrum_dominance = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.80 } }
 		}
 		random_owned = { 
-			limit = { owner = { full_spectrum_dominance = 1 } }
-			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.70 } }
+			limit = { owner = { full_spectrum_dominance = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.75 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { fifth_generation_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.75 } }
 		}
 		random_owned = { 
-			limit = { owner = { fifth_generation_warfare = 1 } }
-			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.50 } }
+			limit = { owner = { fifth_generation_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_core = THIS controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.60 } }
 		}
 
 		#Discovery Chance
@@ -105,46 +154,95 @@ country_event = {
 			remove_province_modifier = ethnic_cleansing_province_modifier
 		}
 		
-		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide
+		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide; concentration camps increase efficiency of genocides
 		random_owned = { 
-			limit = { owner = { NOT = { cold_war_doctrine = 1 } } }
+			limit = { owner = { NOT = { cold_war_doctrine = 1 has_country_flag = death_camp_active } } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.98 } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { cold_war_doctrine = 1 } has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { cold_war_doctrine = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
 		}
 		random_owned = { 
-			limit = { owner = { cold_war_doctrine = 1 } }
+			limit = { owner = { cold_war_doctrine = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { mutual_assured_destruction = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
 		}
 		random_owned = { 
-			limit = { owner = { mutual_assured_destruction = 1 } }
+			limit = { owner = { mutual_assured_destruction = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { assymetric_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
 		}
 		random_owned = { 
-			limit = { owner = { assymetric_warfare = 1 } }
+			limit = { owner = { assymetric_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { arms_race_doctrine = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
 		}
 		random_owned = { 
-			limit = { owner = { arms_race_doctrine = 1 } }
+			limit = { owner = { arms_race_doctrine = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.875 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { fourth_generation_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.875 } }
 		}
 		random_owned = { 
-			limit = { owner = { fourth_generation_warfare = 1 } }
+			limit = { owner = { fourth_generation_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { network_centric_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
 		}
 		random_owned = { 
-			limit = { owner = { network_centric_warfare = 1 } }
+			limit = { owner = { network_centric_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.825 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { modern_asymmetric_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.825 } }
 		}
 		random_owned = { 
-			limit = { owner = { modern_asymmetric_warfare = 1 } }
+			limit = { owner = { modern_asymmetric_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.80 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { full_spectrum_dominance = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.80 } }
 		}
 		random_owned = { 
-			limit = { owner = { full_spectrum_dominance = 1 } }
-			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.70 } }
+			limit = { owner = { full_spectrum_dominance = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.75 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { fifth_generation_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.75 } }
 		}
 		random_owned = { 
-			limit = { owner = { fifth_generation_warfare = 1 } }
-			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.50 } }
+			limit = { owner = { fifth_generation_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { is_colonial = yes controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.60 } }
 		}
 
 		#Discovery Chance
@@ -179,46 +277,95 @@ country_event = {
 			remove_province_modifier = ethnic_cleansing_province_modifier
 		}
 		
-		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide
+		#Killing rates dependent on technology - lower tech, less efficient genocide; higher tech, more efficient genocide; concentration camps increase efficiency of genocides
 		random_owned = { 
-			limit = { owner = { NOT = { cold_war_doctrine = 1 } } }
+			limit = { owner = { NOT = { cold_war_doctrine = 1 has_country_flag = death_camp_active } } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.98 } }
+		}
+		random_owned = { 
+			limit = { owner = { NOT = { cold_war_doctrine = 1 } has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { cold_war_doctrine = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.975 } }
 		}
 		random_owned = { 
-			limit = { owner = { cold_war_doctrine = 1 } }
+			limit = { owner = { cold_war_doctrine = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { mutual_assured_destruction = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.95 } }
 		}
 		random_owned = { 
-			limit = { owner = { mutual_assured_destruction = 1 } }
+			limit = { owner = { mutual_assured_destruction = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { assymetric_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.925 } }
 		}
 		random_owned = { 
-			limit = { owner = { assymetric_warfare = 1 } }
+			limit = { owner = { assymetric_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { arms_race_doctrine = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.90 } }
 		}
 		random_owned = { 
-			limit = { owner = { arms_race_doctrine = 1 } }
+			limit = { owner = { arms_race_doctrine = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.875 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { fourth_generation_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.875 } }
 		}
 		random_owned = { 
-			limit = { owner = { fourth_generation_warfare = 1 } }
+			limit = { owner = { fourth_generation_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { network_centric_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.85 } }
 		}
 		random_owned = { 
-			limit = { owner = { network_centric_warfare = 1 } }
+			limit = { owner = { network_centric_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.825 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { modern_asymmetric_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.825 } }
 		}
 		random_owned = { 
-			limit = { owner = { modern_asymmetric_warfare = 1 } }
+			limit = { owner = { modern_asymmetric_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.80 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { full_spectrum_dominance = 1 NOT = { has_country_flag = death_camp_active } } }
 			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.80 } }
 		}
 		random_owned = { 
-			limit = { owner = { full_spectrum_dominance = 1 } }
-			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.70 } }
+			limit = { owner = { full_spectrum_dominance = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.75 } }
+		}
+		
+		random_owned = { 
+			limit = { owner = { fifth_generation_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.75 } }
 		}
 		random_owned = { 
-			limit = { owner = { fifth_generation_warfare = 1 } }
-			owner = { any_pop = { limit = { location = { controlled_by = THIS } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.50 } }
+			limit = { owner = { fifth_generation_warfare = 1 has_country_flag = death_camp_active } }
+			owner = { any_pop = { limit = { location = { controlled_by = THIS has_province_modifier = death_camp } AND = { is_primary_culture = no is_accepted_culture = no } } reduce_pop = 0.60 } }
 		}
 
 		#Discovery Chance
