@@ -47,6 +47,7 @@ political_decisions = {
 		}
 		allow = {
 			war = no
+			OR = { is_vassal = no vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU }
 			OR = { vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU in_sphere = ENG in_sphere = FBU }
 			OR = { tag = MAL vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU NOT = { capital_scope = { continent = europe } } }
 			OR = { government = hms_government government = hms_government1 government = absolute_monarchy government = democracy government = democracy1 government = colonial_government }
@@ -83,6 +84,7 @@ political_decisions = {
 
 			OR = { tag = MAL NOT = { capital_scope = { continent = europe } } }
 			NOT = { OR = { vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU } }
+			AND = { is_vassal = yes NOT = { OR = { vassal_of = ENG vassal_of = ENL vassal_of = IMP vassal_of = FBU } } }
 
 			OR = { 
 				NOT = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy government = democracy government = democracy1 } }
