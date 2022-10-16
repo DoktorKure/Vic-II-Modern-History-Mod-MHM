@@ -102,6 +102,7 @@ country_event = {
 		create_vassal = FROM
 		create_alliance = FROM
 		military_access = FROM
+		diplomatic_influence = { who = FROM value = 300 }
 		ai_chance = { factor = 1 }
 	}
 	option = {

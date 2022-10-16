@@ -1066,6 +1066,14 @@ rich_everyday_needs = 0.4
 icon = 13
 }
 
+collectivisation_setup = {
+poor_everyday_needs = 0.2
+middle_everyday_needs = 0.3
+rich_everyday_needs = 0.5
+population_growth = -0.002
+icon = 14
+}
+
 ### Crisis Control ###
 
 unsc_vote_crisis = {

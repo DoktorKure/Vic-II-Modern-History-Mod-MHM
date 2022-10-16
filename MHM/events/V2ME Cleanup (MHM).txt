@@ -224,8 +224,35 @@ country_event = {
 					}
 				}
 				add_province_modifier = { name = collectivisation duration = -1 }
+				add_province_modifier = { name = collectivisation_setup duration = 1825 }
 			}
 
+		}
+		
+		#Remove all capitalists in fully planned economies (communist dictatorships)
+		any_country	= {
+			limit = {
+				OR = {
+					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
+				}
+				ruling_party_ideology = communist
+				economic_policy = planned_economy
+				
+				OR = { has_pop_type = capitalists has_pop_type = artisans }
+				
+				war = no
+			}
+			any_pop = {
+				limit = { type = capitalists }
+				militancy = 10
+				pop_type = clerks
+			}
+			any_pop = {
+				limit = { type = artisans }
+				militancy = 5
+				pop_type = craftsmen
+			}
 		}
 		
 		#Concentration Camps

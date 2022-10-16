@@ -77,6 +77,39 @@ political_decisions = {
 		RUS = {
 			set_country_flag = aerial_bombardment_ability
 		}
+		
+		#Agricultural collectivization for communist nations
+		any_country = {
+			limit = { 
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+				ruling_party_ideology = communist
+			}
+			set_country_flag = collectivise_farms
+		}
+		any_country = {
+			limit = { 
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+				ruling_party_ideology = communist
+			}
+			any_owned = {
+				limit = {
+					AND = {
+						OR = {
+							trade_goods = fruit
+							trade_goods = grain
+							trade_goods = oil_seeds
+							trade_goods = sugar
+							trade_goods = tea
+							trade_goods = tobacco
+							trade_goods = coffee
+							trade_goods = cotton
+						}
+						NOT = { has_province_modifier = collectivisation }
+					}
+				}
+				add_province_modifier = { name = collectivisation duration = -1 }
+			}
+		}
 
 		#UK is the head of the Commonwealth
 		ENG = {

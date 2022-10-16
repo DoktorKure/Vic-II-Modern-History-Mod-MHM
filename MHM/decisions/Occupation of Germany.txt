@@ -95,7 +95,6 @@ political_decisions = {
 			NGF = { exists = no }
 			SGF = { exists = no }
 			DDR = { exists = yes }
-			any_owned_province = { is_core = GER }
 			OR = { has_country_flag = no_partition_of_germany has_country_flag = saar_option }
 			OR = { 
 				AND = { 

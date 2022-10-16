@@ -44,6 +44,7 @@ clr_country_flag = collectivise_farms
 add_tax_relative_income = 25
 
 any_owned = { limit = { has_province_modifier = collectivisation } remove_province_modifier = collectivisation }
+any_owned = { limit = { has_province_modifier = collectivisation_setup } remove_province_modifier = collectivisation_setup }
 					}
 
 		ai_will_do = { 
