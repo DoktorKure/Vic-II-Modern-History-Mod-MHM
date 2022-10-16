@@ -121,7 +121,7 @@ objectTypes = {
 	
 	billboardType = {
 		name = "capital"
-		textureFile = "gfx\\mapitems\\building_capital.dds"
+		textureFile = "gfx\\interface\\building_capital.dds"
 		scale = 2.5
 	}
 	
