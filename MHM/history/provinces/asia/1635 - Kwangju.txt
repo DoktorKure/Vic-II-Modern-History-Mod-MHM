@@ -1,15 +1,13 @@
-owner = USA
-controller = USA
+owner = SKO
+controller = SKO
 add_core = SKO
 trade_goods = grain
 life_rating = 35
 terrain = hilly_farmland
-colonial = 2
 
 1950.1.1 = {
 owner = SKO
 controller = SKO
-colonial = 0
 }
 
 1992.1.1 = {
@@ -18,7 +16,6 @@ controller = SKO
 add_core = SKO
 life_rating = 35
 railroad = 1
-colonial = 0
 state_building = {
 	level = 2
 	building = heating_electricity_factory
@@ -26,7 +23,7 @@ state_building = {
 }
 state_building = {
 	level = 2
-	building = grain_canned_food_factory
+	building = canned_vegetables_factory
 	upgrade = yes
 }
 state_building = {

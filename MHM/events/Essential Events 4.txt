@@ -255,32 +255,7 @@ country_event = {
 	option = {
 		name = "We will get them next time!"
 		prestige = -50
-		}
 	}
-
-#Establishment of more concentration camps
-country_event = {
-	id = 1412027
-	title = "Concentration Camp Network Grows"
-	desc = "EVTDESC1412027"
-	picture = "death_camps"
-
-	trigger = {
-		any_owned_province = { total_pops = 500000 NOT = { has_province_modifier = death_camp } }
-		has_country_flag = death_camp_active
-	}
-
-	mean_time_to_happen = { months = 6 }
-
-	option = {
-		name = "Good work boys"
-		money = -10000
-		any_owned = { 
-			limit = { total_pops = 500000 NOT = { has_province_modifier = death_camp } } 
-			add_province_modifier = { name = death_camp duration = -1 } 
-		}
-	}
-	
 }
 
 #End concentration camps
@@ -1195,7 +1170,7 @@ modifier = { factor = 0 has_global_flag = raise_oil_prices }
 clr_global_flag = lower_oil_prices
 set_global_flag = raise_oil_prices
 
-any_owned = { remove_province_modifier = lower_oil_prices }
+any_owned = { remove_province_modifier = lower_oil_price }
 any_owned = { limit = { trade_goods = petroleum } add_province_modifier = { name = raise_oil_price duration = 1460 } }
 					}
 		}
@@ -1223,7 +1198,7 @@ modifier = { factor = 0 has_global_flag = lower_oil_prices }
 		name = "It looks like the oil prices will drop"
 clr_global_flag = raise_oil_prices
 set_global_flag = lower_oil_prices
-any_owned = { remove_province_modifier = raise_oil_prices }
+any_owned = { remove_province_modifier = raise_oil_price }
 any_owned = { limit = { trade_goods = petroleum } add_province_modifier = { name = lower_oil_price duration = 1460 } }
 					}
 		}
@@ -2012,8 +1987,6 @@ country_event = {
 
 		NOT = { has_country_modifier = power_vacuum }
 
-		NOT = { has_country_modifier = civil_war }
-
 		NOT = { has_country_modifier = government_consensus }
 
 	}
@@ -2084,8 +2057,6 @@ country_event = {
 		has_country_modifier = power_vacuum
 
 		NOT = { has_country_modifier = factionalism }
-
-		NOT = { has_country_modifier = civil_war }
 
 		NOT = { has_country_modifier = government_consensus }
 

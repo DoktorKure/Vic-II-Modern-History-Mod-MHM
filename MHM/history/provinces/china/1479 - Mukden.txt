@@ -6,7 +6,6 @@ add_core = MCK
 trade_goods = iron
 life_rating = 35
 terrain = good_farmland
-colonial = 2
 state_building = {
 	level = 1
 	building = weaponry_factory
@@ -26,7 +25,6 @@ state_building = {
 1950.1.1 = {
 owner = CHI
 controller = CHI
-colonial = 0
 }
 
 1992.1.1 = {
@@ -35,7 +33,6 @@ controller = CHI
 add_core = CHI
 add_core = MCK
 life_rating = 35
-colonial = 0
 state_building = {
 	level = 1
 	building = automobiles_factory
@@ -43,7 +40,7 @@ state_building = {
 }
 state_building = {
 	level = 1
-	building = grain_canned_food_factory
+	building = canned_vegetables_factory
 	upgrade = yes
 }
 state_building = {

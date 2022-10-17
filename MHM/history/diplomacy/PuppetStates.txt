@@ -83,7 +83,7 @@ vassal = {
 	first = RUS
 	second = AUS
 	start_date = 1950.1.1
-	end_date = 1954.1.1
+	end_date = 1955.1.1
 }
 vassal = {
 	first = DEN
@@ -155,6 +155,39 @@ substate = {
 
 ### 1946 Start Date ###
 
+# Occupation Zones
+
+vassal = {
+	first = RUS
+	second = OG1
+	start_date = 1945.5.8
+	end_date = 1949.10.7
+}
+vassal = {
+	first = FRA
+	second = OG2
+	start_date = 1945.5.8
+	end_date = 1949.5.23
+}
+vassal = {
+	first = ENG
+	second = OG3
+	start_date = 1945.5.8
+	end_date = 1949.5.23
+}
+vassal = {
+	first = USA
+	second = OG4
+	start_date = 1945.5.8
+	end_date = 1949.5.23
+}
+vassal = {
+	first = POL
+	second = OG5
+	start_date = 1945.5.8
+	end_date = 1948.1.1
+}
+
 # Chinese Warlords
 vassal = {
 	first = KMT
@@ -187,6 +220,33 @@ vassal = {
 	end_date = 1949.4.22
 }
 
+vassal = {
+	first = RUS
+	second = NKO
+	start_date = 1945.1.1
+	end_date = 1950.1.1
+}
+
+vassal = {
+	first = USA
+	second = SKO
+	start_date = 1945.1.1
+	end_date = 1950.1.1
+}
+
+vassal = {
+	first = USA
+	second = ROA
+	start_date = 1945.4.27
+	end_date = 1955.1.1
+}
+vassal = {
+	first = RUS
+	second = AUS
+	start_date = 1945.4.27
+	end_date = 1955.1.1
+}
+
 substate = {
 	first = ENG
 	second = IOM
@@ -204,18 +264,6 @@ vassal = {
 	second = ICL
 	start_date = 1945.1.1
 	end_date = 1947.1.1
-}
-substate = {
-	first = SYR
-	second = DRZ
-	start_date = 1900.1.1
-	end_date = 1949.1.1
-}
-substate = {
-	first = SYR
-	second = ALW
-	start_date = 1900.1.1
-	end_date = 1949.1.1
 }
 substate = {
 	first = FMS

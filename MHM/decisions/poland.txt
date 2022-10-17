@@ -6,10 +6,13 @@ political_decisions = {
 			tag = POL
 			year = 1947 NOT = { year = 1990 }
 			NOT = { has_country_flag = expulsion_of_germans }
+			OR = { has_country_flag = policy_on_germany has_global_flag = player_choice_GER_occupation }
+			OR = { owns = 546 owns = 692 owns = 682 owns = 696 }
 		}
 
 		allow = {
 			OR = { NOT = { exists = GER } NOT = { relation = { who = GER value = 100 } } }
+			NOT = { exists = OG5 }
 			marshall_plan = 1
 		}
 
@@ -30,6 +33,7 @@ political_decisions = {
 			any_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 683 }
 			any_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 679 }
 			any_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 680 }
+			any_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 692 }
 		}
 	}
 

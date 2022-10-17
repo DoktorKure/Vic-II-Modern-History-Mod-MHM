@@ -31,7 +31,7 @@ political_decisions = {
 				consciousness = 5
 			}
 
-			any_country = { limit = { tag = USA tag = RUS tag = SKO tag = NKO tag = KOR tag = KMT } relation = { who = THIS value = -200 } }
+			any_country = { limit = { OR = { tag = USA tag = RUS tag = SKO tag = NKO tag = KOR tag = KMT } } relation = { who = THIS value = -200 } }
 		}
 		ai_will_do = { 
 			factor = 1
@@ -63,7 +63,7 @@ political_decisions = {
 				consciousness = 5
 			}
 
-			any_country = { limit = { tag = USA tag = RUS tag = SKO tag = NKO tag = KOR tag = KMT } relation = { who = THIS value = -50 } }
+			any_country = { limit = { OR = { tag = USA tag = RUS tag = SKO tag = NKO tag = KOR tag = KMT } } relation = { who = THIS value = -50 } }
 		}
 		ai_will_do = { 
 			factor = 1 

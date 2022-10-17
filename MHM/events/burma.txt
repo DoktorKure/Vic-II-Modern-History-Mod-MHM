@@ -27,10 +27,6 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 1
-	}
-
 	option = {
 		name = "Release Burma as a republic!"
 		release = BUR
@@ -81,7 +77,7 @@ country_event = {
 		
 		diplomatic_influence = { who = BUR value = 200 }
 		
-		ai_chance = { factor = 0.2 }
+		ai_chance = { factor = 0.3 }
 	}
 	
 	option = {

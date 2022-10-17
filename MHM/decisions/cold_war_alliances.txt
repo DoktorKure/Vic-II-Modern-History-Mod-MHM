@@ -11,6 +11,10 @@ political_decisions = {
 			NOT = { has_country_flag = joincomm }
 			
 			has_global_flag = blocsenabled
+			
+			#THIS is not neutral
+			NOT = { has_country_flag = neutrality }
+			NOT = { has_country_modifier = neutrality }
 		}
 
 		allow = {
@@ -121,6 +125,10 @@ political_decisions = {
 			NOT = { has_country_flag = joindemo }
 			
 			has_global_flag = blocsenabled
+			
+			#THIS is not neutral
+			NOT = { has_country_flag = neutrality }
+			NOT = { has_country_modifier = neutrality }
 		}
 
 		allow = {
@@ -277,6 +285,12 @@ political_decisions = {
 						NOT = { is_sphere_leader_of = THIS }
 						NOT = { relation = { who = THIS value = 0 } }
 					}
+				}
+			
+				#THIS is neutral
+				OR = { 
+					has_country_flag = neutrality
+					has_country_modifier = neutrality
 				}
 				
 			}

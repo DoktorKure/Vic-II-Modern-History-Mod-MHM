@@ -381,46 +381,6 @@ country_event = {
 	}
 	
 }
-
-#UK Choice to go with Empire or the EEC
-country_event = {
-	id = 1300026
-	title = "Future of British Foreign Policy"
-	desc = EVTDESC1300026
-	picture = "indiaoffice"
-
-fire_only_once = yes
-	
-	trigger = { 
-		tag = ENG
-		NOT = { year = 1990 }
-		exists = HND
-		NOT = { exists = RAJ }
-		NOT = { is_our_vassal = RAJ }
-		has_country_modifier = commonwealthmembereng
-	}
-
-	option = {
-		name = "Pivot towards Europe"
-any_country = {
-limit = { is_vassal = no capital_scope = { continent = europe } }
-relation = { who = THIS value = 50 }
-}
-		set_country_flag = british_europe_choice
-		ai_chance = { factor = 0.9 }
-	}
-
-	option = {
-		name = "Keep ties with the Commonwealth"
-any_country = {
-limit = { is_vassal = no in_sphere = THIS }
-relation = { who = THIS value = 50 }
-}
-		set_country_flag = british_empire_choice
-		ai_chance = { factor = 0.1 }
-	}
-
-}
 #Decolonisation remove techschool
 country_event = {
 	id = 1300027
@@ -1280,6 +1240,7 @@ country_event = {
 	
 	option = {
 		name = "Evacuate the French troops in Syria"
+		prestige = 10
 		set_global_flag = syr_no_split
 
 		SYR = { 
@@ -1292,19 +1253,34 @@ country_event = {
 				name = post_colonial_chaos
 				duration = 1480
 			}
-			inherit = ALW
-			inherit = DRZ
 		}
 
 		release_vassal = SYR
-		prestige = 10
 		consciousness = 2
 		ai_chance = { 
 			factor = 0.8
 		}
 	}
 	option = {
+		name = "Unite Lebanon with Syria as we leave"
+		badboy = 2.5
+		SYR = { 
+			prestige = 25
+			government = democracy
+			religion = secularism
+			tech_school = army_tech_school
+					
+			add_country_modifier = {
+				name = post_colonial_chaos
+				duration = 1480
+			}
+		}
+		LEB = { all_core = { add_core = SYR } country_event = 99978 }
+		ai_chance = { factor = 0.1 }
+	}
+	option = {
 		name = "Continue the occupation of Syria"
+		prestige = -80
 		badboy = 5
 		SYR = {
 			set_country_flag = syrindy  
@@ -1315,12 +1291,8 @@ country_event = {
 			} 
 		}
 
-		ALW = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
-		DRZ = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
-
-		prestige = -80
 		consciousness = -2
-		ai_chance = { factor = 0.2 }
+		ai_chance = { factor = 0.1 }
 	}
 }
 
@@ -1431,7 +1403,7 @@ country_event = {
 		name = "Keep our territory"
 		relation = { who = CHI value = -200 }
 		set_country_flag = returnofportarthur
-		any_pop = { limit = { is_culture_group = east_asian } militancy = 10 consciousness = 10 }
+		any_pop = { limit = { is_culture_group = chinese_cultures } militancy = 10 consciousness = 10 }
 		ai_chance = { factor = 0.1 }
 	}
 
@@ -1608,33 +1580,6 @@ set_country_flag = xeu_chairmanship
 set_global_flag = eufirst
 		}
 }
-#Bretton Woods Reduce Gold Output
-country_event = {
-	id = 1400046
-	title = "Bretton Woods System Effects"
-	desc = EVTDESC1400046
-	picture = "bretton_woods_system_gold"
-	
-trigger = {
-NOT = { tag = USA }
-war = no
-has_country_modifier = bretton_system
-any_owned_province = { AND = { trade_goods = credit NOT = { has_province_modifier = bretton_woods_effect } } }
-any_owned_province = { trade_goods = credit }
-
-#NOT = { has_country_flag = bsystem }
-
-}
-
-option = {
-name = "OK"
-any_owned = { limit = { trade_goods = credit }
-add_province_modifier = { name = bretton_woods_effect duration = -1 } }
-
-#set_country_flag = bsystem
-
-		}
-}
 
 #UN Sanctions for high Infamy nations - Start
 country_event = {
@@ -1790,7 +1735,7 @@ country_event = {
 	picture = "nationalisation"
 	
 trigger = { 
-NOT = { has_country_modifier = nap }
+NOT = { has_country_flag = nap }
 NOT = { has_country_modifier = nationalisation_of_industry }
 NOT = { has_country_modifier = privatisation_of_industry }
 NOT = { government = proletarian_dictatorship }
@@ -3880,8 +3825,6 @@ FBU = {
 add_country_modifier = { name = commonwealthmembereng duration = -1 }
 
 primary_culture = british
-
-add_accepted_culture = english
 
 add_accepted_culture = french
 

@@ -16,11 +16,13 @@ country_event = { # Give back our land!
 		war = no
 		
 		#KUR cores are owned by these nations
-		any_core = { 
-			owned_by = TUR
-			owned_by = PER
-			owned_by = IRQ
-			owned_by = SYR
+		any_core = {
+			OR = {
+				owned_by = TUR
+				owned_by = PER
+				owned_by = IRQ
+				owned_by = SYR
+			}
 		}
 		
 		#Those nations exists

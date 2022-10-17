@@ -473,7 +473,7 @@ country_event = { # TODO trigger by chinese civil war
 		NOT = { has_country_flag = un_ccw }
 	}
 
-	mean_time_to_happen = { months = 0.1 }
+	mean_time_to_happen = { months = 1 }
 
 	immediate = { set_country_flag = un_ccw }
   
@@ -1229,7 +1229,7 @@ country_event = { # TODO Indonesian National Revolution
 		NOT = { has_country_flag = un_indonesia }
 	}
 
-	mean_time_to_happen = { months = 0.1 }
+	mean_time_to_happen = { months = 1 }
 
 	immediate = { set_country_flag = un_indonesia }
   

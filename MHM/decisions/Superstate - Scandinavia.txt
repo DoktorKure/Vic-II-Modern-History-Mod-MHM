@@ -1,0 +1,236 @@
+political_decisions = {
+
+	jointhenordic = {
+		picture = "jointhenordic"
+		potential = {
+			year = 1952
+			NOT = { has_country_flag = hide_superstate }
+			OR = {
+				tag = ICL # Iceland
+				tag = NOR # Norway
+				tag = FIN # Finland
+				tag = DEN # Denmark
+				tag = SWE # Sweden
+				tag = ALA # Aland
+				tag = FAR # Faroe Islands
+				tag = GRN # Greenland
+				tag = SCO # Scotland
+				tag = FAR
+				tag = ALA
+				tag = GRN
+				AND = { tag = EST OR = { is_secondary_power = yes is_greater_power = yes } } # Estonia
+				AND = { tag = LAT OR = { is_secondary_power = yes is_greater_power = yes } } # Latvia
+				AND = { tag = LIT OR = { is_secondary_power = yes is_greater_power = yes } } # Lithuania
+				AND = {
+					OR = { # Limit scope so SCA can't just war puppet everyone and create an absurdly OP superstate
+						tag = EST
+						tag = LAT
+						tag = LIT
+						tag = ICL
+						tag = NOR
+						tag = FIN
+						tag = DEN
+						tag = SWE
+						tag = ALA
+						tag = FAR
+						tag = GRN
+						tag = SCO
+					}
+					is_vassal = yes
+					overlord = { has_country_modifier = nordic_council_member }
+				}
+			}
+			NOT = { has_country_modifier = nordic_council_member }
+		}
+		allow = {
+			war = no
+			election = no
+			OR = {
+				part_of_sphere = no 
+				sphere_owner = { OR = { has_country_flag = xeu_ambition NOT = { has_country_flag = deny_superstate } } }
+			}
+			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 tag = FAR tag = GRN tag = ALA }
+		}
+		effect = {
+			prestige = 20
+			add_country_modifier = { name = nordic_council_member duration = -1 }
+
+			any_neighbor_country = { relation = { who = THIS value = 50 } }
+		}
+		ai_will_do = { 
+			factor = 100 
+		}
+	}
+	
+	leavethenordic = {
+		picture = "jointhenordic"
+		alert = no
+		potential = {
+			NOT = { has_country_flag = hide_superstate }
+			has_country_modifier = nordic_council_member
+			NOT = { tag = SCA }
+		}
+		
+		allow = {
+			OR = {
+				AND = {
+					part_of_sphere = yes 
+					sphere_owner = {
+						has_country_flag = deny_superstate
+						NOT = { has_country_modifier = nordic_council_member }
+					}
+				}
+				AND = {
+					is_vassal = yes
+					overlord = { NOT = { has_country_modifier = nordic_council_member } }
+				}
+				NOT = {
+					OR = {
+						government = sar_government
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+					}
+				}
+				ruling_party_ideology = populist
+				ruling_party_ideology = nationalist
+				ruling_party_ideology = traditionalist
+			}
+			war = no
+		}
+		
+		effect = {
+			remove_country_modifier = nordic_council_member
+			any_pop = {
+				scaled_militancy = {
+					issue = free_trade
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = free_trade
+					factor = 3
+				}
+			}
+			tech_school = traditional_academic
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	form_scandinavia = {
+		picture = "form_scandinavia"
+		potential = {
+			OR = { tag = FIN tag = SWE tag = NOR tag = DEN tag = ICL }
+			OR = { 
+				AND = { NOT = { tag = FIN } exists = FIN }
+				AND = { NOT = { tag = SWE } exists = SWE }
+				AND = { NOT = { tag = NOR } exists = NOR }
+				AND = { NOT = { tag = DEN } exists = DEN }
+				AND = { NOT = { tag = ICL } exists = ICL }
+			}
+			has_country_modifier = nordic_council_member
+			NOT = {
+				exists = SCA
+			}
+		}
+		
+		allow = {
+			is_secondary_power = yes
+			prestige = 150
+			new_growth_theory = 1 # 1962
+			NOT = { ruling_party_ideology = nationalist }
+			NOT = { ruling_party_ideology = traditionalist }
+
+			#Limit requirement to the big 5
+			FIN = { OR = { exists = no has_country_modifier = nordic_council_member } }
+			SWE = { OR = { exists = no has_country_modifier = nordic_council_member } }
+			NOR = { OR = { exists = no has_country_modifier = nordic_council_member } }
+			DEN = { OR = { exists = no has_country_modifier = nordic_council_member } }
+			ICL = { OR = { exists = no has_country_modifier = nordic_council_member } }
+			
+			OR = { tag = FIN NOT = { exists = FIN } AND = { NOT = { tag = FIN } OR = { is_sphere_leader_of = FIN is_our_vassal = FIN relation = { who = FIN value = 200 } } } }
+			OR = { tag = SWE NOT = { exists = SWE } AND = { NOT = { tag = SWE } OR = { is_sphere_leader_of = SWE is_our_vassal = SWE relation = { who = SWE value = 200 } } } }
+			OR = { tag = NOR NOT = { exists = NOR } AND = { NOT = { tag = NOR } OR = { is_sphere_leader_of = NOR is_our_vassal = NOR relation = { who = NOR value = 200 } } } }
+			OR = { tag = DEN NOT = { exists = DEN } AND = { NOT = { tag = DEN } OR = { is_sphere_leader_of = DEN is_our_vassal = DEN relation = { who = DEN value = 200 } } } }
+			OR = { tag = ICL NOT = { exists = ICL } AND = { NOT = { tag = ICL } OR = { is_sphere_leader_of = ICL is_our_vassal = ICL relation = { who = ICL value = 200 } } } }
+			
+			election = no
+			war = no
+		}
+		
+		effect = {
+			prestige = 100
+			FIN = { any_owned = { add_core = SCA } }
+			SWE = { any_owned = { add_core = SCA } }
+			NOR = { any_owned = { add_core = SCA } }
+			DEN = { any_owned = { add_core = SCA } }
+			FAR = { any_owned = { add_core = SCA } }
+			ICL = { any_owned = { add_core = SCA } }
+			ALA = { any_owned = { add_core = SCA } }
+			GRN = { any_owned = { add_core = SCA } }
+			change_tag = SCA
+			add_accepted_culture = danish
+			add_accepted_culture = finnish
+			add_accepted_culture = swedish
+			add_accepted_culture = norwegian
+			add_accepted_culture = icelandic
+			add_accepted_culture = faroe
+			add_accepted_culture = estonian
+			add_accepted_culture = latvian
+			add_accepted_culture = lithuanian
+			add_accepted_culture = scottish
+			any_country = {
+				limit = {
+					exists = yes
+					has_country_modifier = nordic_council_member
+				}
+				country_event = 11101
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	sca_enlarge_union = {
+		picture = "form_scandinavia"
+		potential = {
+			NOT = { has_country_flag = hide_superstate }
+			tag = SCA
+            SCA = {
+				any_core = { 
+					owner = { 
+						NOT = { tag = THIS }
+						NOT = { OR = { ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist } }
+						OR = { in_sphere = THIS vassal_of = THIS }
+						OR = { vassal_of = THIS is_vassal = no }
+						has_country_modifier = nordic_council_member
+						NOT = { has_country_modifier = rejected_union }
+					}
+				}
+			}
+		}
+
+		allow = {
+			election = no
+            war = no
+			is_greater_power = yes
+		}
+
+		effect = {
+			random_country = {
+				limit = {
+					has_country_modifier = nordic_council_member 
+					OR = { vassal_of = THIS in_sphere = THIS }
+					OR = { vassal_of = THIS is_vassal = no }
+					NOT = { OR = { ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist } }
+				} 
+				country_event = 11106
+			}
+		}
+
+		ai_will_do = { factor = 1 }
+
+	}
+
+}

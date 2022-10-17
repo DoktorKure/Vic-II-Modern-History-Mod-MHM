@@ -440,7 +440,7 @@ country_event = {
     mean_time_to_happen = { months = 6 }
   
 	option = {
-		name = "Send the basic_security to deal with these delinquents!"
+		name = "Send the police to deal with these delinquents!"
 		
 		#progressive gain popularity
 		any_pop = { 

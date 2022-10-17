@@ -62,7 +62,7 @@ malaysia_chinese_indian = {
        potential = {
 		OR = { tag = FMS tag = MSY }
 		NOT = { accepted_culture = chinese }
-		NOT = { accepted_culture = indian }
+		NOT = { accepted_culture = hindi }
                           } 
 
        allow = {
@@ -77,7 +77,7 @@ OR = { ruling_party_ideology = socialist ruling_party_ideology = communist rulin
        effect = {
            prestige = 25
 		add_accepted_culture = chinese
-		add_accepted_culture = indian
+		add_accepted_culture = hindi
                               }
      
        ai_will_do = {

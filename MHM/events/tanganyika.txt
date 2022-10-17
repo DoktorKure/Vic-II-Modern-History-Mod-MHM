@@ -53,12 +53,12 @@ country_event = {
 			country_event = 800054
 			ruling_party_ideology = conservative
 			capital = 2047 # Arusha
-			primary_culture = british
-			add_accepted_culture = black_anglo
+			primary_culture = black_anglo #To prevent the weird bug where East Africa becomes 90% British in 10 years
+			add_accepted_culture = british
 			add_accepted_culture = kikuyu #Kenya
 			add_accepted_culture = swahili #Tanganyika
 			add_accepted_culture = ganda #Uganda
-			add_accepted_culture = indian
+			add_accepted_culture = hindi
 		}
 		diplomatic_influence = { who = XEF value = 200 }
 		ai_chance = {

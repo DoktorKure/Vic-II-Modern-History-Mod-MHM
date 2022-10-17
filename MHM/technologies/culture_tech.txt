@@ -287,7 +287,6 @@ radio_network = {
 	cost = 3600
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.05
 	increase_research = 0.10
 	
 	plurality = 0.01
@@ -326,7 +325,6 @@ public_switched_telephone_network = {
 	cost = 3600
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.05
 	increase_research = 0.10
 	
 	plurality = 0.01
@@ -363,11 +361,8 @@ pstn_network = {
 	area = research_and_development
 	year = 1960
 	cost = 3600
-
-	activate_building = electric_telecommunications_factory
 	
 	administrative_efficiency = 0.025
-	education_efficiency = 0.05
 	increase_research = 0.10
 	
 	plurality = 0.01
@@ -406,7 +401,6 @@ telephone_exchange = {
 	cost = 7200
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.05
 	increase_research = 0.10
 	
 	plurality = 0.01
@@ -437,7 +431,7 @@ early_networks = {
 	cost = 12600
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.1
+	education_efficiency = 0.125
 	increase_research = 0.10
 	
 	plurality = 0.01
@@ -476,7 +470,7 @@ strd_internet = {
 	cost = 12600
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.25
+	education_efficiency = 0.125
 	increase_research = 0.10
 	
 	plurality = 0.01
@@ -552,7 +546,7 @@ uni_internet = {
 	factory_goods_output = { education_rnd = 0.1 }
 
 	administrative_efficiency = 0.025
-	education_efficiency = 0.50
+	education_efficiency = 1.0
 	increase_research = 0.10
 	
 	plurality = 0.01
@@ -581,7 +575,7 @@ distributed_computing_research = {
 	factory_goods_output = { education_rnd = 0.1 }
 
 	administrative_efficiency = 0.025
-	education_efficiency = 1.0
+	education_efficiency = 2.5
 	increase_research = 0.10
 	
 	plurality = 0.01
@@ -610,7 +604,7 @@ research_supercomputers = {
 	factory_goods_output = { education_rnd = 0.2 }
 
 	administrative_efficiency = 0.025
-	education_efficiency = 1.0
+	education_efficiency = 5.0
 	increase_research = 0.10
 	
 	plurality = 0.01
@@ -637,7 +631,7 @@ compulsory_primary_education = {
 	year = 1946
 	cost = 3600
 
-	education_efficiency = 0.25
+	education_efficiency = 0.125
 	
 	ai_chance = {
 		factor = 1.01
@@ -660,7 +654,7 @@ compulsory_secondary_education = {
 	year = 1950
 	cost = 3600
 
-	education_efficiency = 0.25
+	education_efficiency = 0.125
 	
 	ai_chance = {
 		factor = 1.01
@@ -683,7 +677,7 @@ tripartite_system = {
 	year = 1960
 	cost = 4800
 
-	education_efficiency = 0.25
+	education_efficiency = 0.125
 	
 	ai_chance = {
 		factor = 1.01
@@ -706,7 +700,7 @@ comprehensive_education = {
 	year = 1970
 	cost = 7200
 
-	education_efficiency = 0.5
+	education_efficiency = 0.25
 	
 	ai_chance = {
 		factor = 1.01
@@ -729,7 +723,7 @@ preschool_education = {
 	year = 1980
 	cost = 10800
 
-	education_efficiency = 0.5
+	education_efficiency = 0.25
 	
 	ai_chance = {
 		factor = 1.01
@@ -753,7 +747,7 @@ global_enrollment = {
 	year = 1990
 	cost = 12600
 
-	education_efficiency = 0.75
+	education_efficiency = 0.5
 	
 	ai_chance = {
 		factor = 1.01
@@ -813,7 +807,7 @@ blended_learning = {
 	year = 2050
 	cost = 21600
 
-	education_efficiency = 2.0
+	education_efficiency = 2.5
 	
 	ai_chance = {
 		factor = 1.01
@@ -833,7 +827,7 @@ virtual_learning = {
 	year = 2070
 	cost = 25200
 	
-	education_efficiency = 3.0
+	education_efficiency = 5.0
 	
 	ai_chance = {
 		factor = 1.01
@@ -1192,7 +1186,7 @@ wars_of_national_liberation = {
 	year = 1955
 	cost = 5400
 
-	colonial_migration = 0.05
+	colonial_migration = 0.10
 	diplomatic_points = 0.05
 	prestige = 0.025
 
@@ -1228,7 +1222,7 @@ seventies_subcultures = {
 	year = 1970
 	cost = 7200
 
-	colonial_migration = 0.05
+	colonial_migration = 0.15
 	diplomatic_points = 0.05
 	prestige = 0.025
 
@@ -1260,7 +1254,7 @@ neoliberalism = {
 	year = 1980
 	cost = 10800
 
-	colonial_migration = 0.05
+	colonial_migration = 0.20
 	diplomatic_points = 0.05
 	prestige = 0.025
 
@@ -1323,7 +1317,7 @@ cultural_imperialism = {
 	year = 2000
 	cost = 12600
 
-	colonial_migration = 0.05
+	colonial_migration = 0.25
 	diplomatic_points = 0.05
 	prestige = 0.025
 	
@@ -1446,7 +1440,7 @@ next_generation_subcultures = {
 	year = 2060
 	cost = 21600
 	
-	colonial_migration = 0.05
+	colonial_migration = 0.5
 	diplomatic_points = 0.05
 	prestige = 0.025
 

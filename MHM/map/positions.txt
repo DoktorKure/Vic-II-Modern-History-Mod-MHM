@@ -122029,4 +122029,51 @@
 
     }
 
+} # Cleanup
+
+3381 = {
+    text_position = {
+        x = 780.550000
+        y = 0.300000
+    }
+
+    text_scale = 2
+    unit = {
+        x = 780.550000
+        y = 0.500000
+    }
+
+    city = {
+        x = 780.550000
+        y = 0.600000
+    }
+
+    factory = {
+        x = 780.400000
+        y = 0.500000
+    }
+
+    building_construction = {
+        x = 780.500000
+        y = 0.600000
+    }
+
+    military_construction = {
+        x = 780.500000
+        y = 0.600000
+    }
+
+    building_position = {
+        fort = {
+            x = 780.550000
+            y = 0.650000
+        }
+
+        railroad = {
+            x = 780.550000
+            y = 0.600000
+        }
+
+    }
+
 }

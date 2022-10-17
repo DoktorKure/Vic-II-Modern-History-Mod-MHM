@@ -59,7 +59,7 @@ country_event = {
 		FMS = { 
 			government = hms_government 
 			add_accepted_culture = chinese 
-			add_accepted_culture = indian 
+			add_accepted_culture = hindi 
 		}
 		FMS = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
 		prestige = 50
@@ -307,7 +307,7 @@ country_event = {
 			government = hms_government1
 
 			remove_accepted_culture = chinese 
-			remove_accepted_culture = indian
+			remove_accepted_culture = hindi
 
 			any_pop = { 
 				limit = { culture = chinese } 

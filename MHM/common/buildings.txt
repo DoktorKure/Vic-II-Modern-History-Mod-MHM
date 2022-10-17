@@ -22,10 +22,10 @@
 #
 
 #
-# FOOD
+# MILITARY GOODS
 #
 
-nuclear_fuel_factory = {
+small_arms_factory = { 
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -33,20 +33,112 @@ nuclear_fuel_factory = {
 	cost = 0
 	goods_cost = 
 	{
-		cement = 50
-		steel = 50
-		machine_parts = 50
-		other_minerals = 50	
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
 	}
-	time = 365
+	time = 30
 	visibility = yes
 	onmap = yes
 
-	production_type = nuclear_fuel_factory
+	production_type = small_arms_factory
 	pop_build_factory = yes
+	strategic_factory = yes
 }
 
-grain_canned_food_factory = {
+ammunition_factory = { 	
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = ammunition_factory
+	pop_build_factory = yes
+	strategic_factory = yes
+}
+
+ships_factory = { 
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = ships_factory
+	pop_build_factory = yes
+	strategic_factory = yes
+}
+
+aeroplane_factory = { 	
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = aeroplane_factory
+	pop_build_factory = yes
+	strategic_factory = yes
+}
+
+weaponry_factory = { 	
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = weaponry_factory
+	pop_build_factory = yes
+	strategic_factory = yes
+}
+
+#
+# CANNED FOOD
+#
+canned_vegetables_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -63,15 +155,11 @@ grain_canned_food_factory = {
 	visibility = yes
 	onmap = yes
 
-	production_type = grain_canned_food_factory
+	production_type = canned_vegetables_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
-
-#
-# FOOTWEAR AND FOOD
-#
-cattle_canned_food_factory = {
+canned_meat_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -88,173 +176,15 @@ cattle_canned_food_factory = {
 	visibility = yes
 	onmap = yes
 
-	production_type = cattle_canned_food_factory
+	production_type = canned_meat_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
 
 #
-# TEXTILES AND FOOD
+# CONSUMER GOODS
 #
-fabric_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7 
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
 
-	production_type = fabric_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-wool_fabric_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7 
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = wool_fabric_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-leather_fabric_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = leather_fabric_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-footwear_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = footwear_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-#
-# BUILDING MATERIALS
-#
-cement_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		lumber = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = cement_factory
-	pop_build_factory = yes
-	#default_enabled = yes
-}
-
-machine_parts_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		lumber = 20 
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = machine_parts_factory
-	pop_build_factory = yes
-	#default_enabled = yes
-}
-
-coal_fuel_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7 
-	}
-	time = 100
-	visibility = yes
-	onmap = yes
-
-	production_type = coal_fuel_factory
-	pop_build_factory = yes
-	#default_enabled = yes
-}
-
-#
-# INITIAL CONSUMER GOODS
-#
 jewellery_factory = {
 	type = factory
 	on_completion = factory
@@ -278,10 +208,7 @@ jewellery_factory = {
 	default_enabled = yes
 }
 
-#
-# INITIAL INDUSTRIAL GOODS
-#
-lumber_factory = {
+glass_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -298,12 +225,33 @@ lumber_factory = {
 	visibility = yes
 	onmap = yes
 
-	production_type = lumber_factory
+	production_type = glass_factory
+	pop_build_factory = yes
+}
+
+sugar_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7		
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = sugar_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
 
-petroleum_fuel_factory = {
+alcoholic_beverages_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -320,35 +268,12 @@ petroleum_fuel_factory = {
 	visibility = yes
 	onmap = yes
 
-	production_type = petroleum_fuel_factory
+	production_type = alcoholic_beverages_factory
 	pop_build_factory = yes
-}
-
-bio_fuel_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
 	advanced_factory = yes
-	production_type = bio_fuel_factory
-	pop_build_factory = yes
-
-	#default_enabled = yes
-
 }
 
-gas_fuel_factory = {    # liquefied natural gas
+cold_beverages_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -365,11 +290,34 @@ gas_fuel_factory = {    # liquefied natural gas
 	visibility = yes
 	onmap = yes
 
-	production_type = gas_fuel_factory
+	production_type = cold_beverages_factory
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
-copper_wire_factory = {
+hot_beverages_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost =
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = hot_beverages_factory
+	pop_build_factory = yes
+	default_enabled = yes
+}
+
+pharmaceuticals_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -386,32 +334,14 @@ copper_wire_factory = {
 	visibility = yes
 	onmap = yes
 
-	production_type = copper_wire_factory
+	production_type = pharmaceuticals_factory
 	pop_build_factory = yes
 }
 
-steel_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		lumber = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = steel_factory
-	pop_build_factory = yes
-}
-
-inorganic_chemicals_factory = {
+#
+# TEXTILES
+#
+fabric_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -422,14 +352,15 @@ inorganic_chemicals_factory = {
 		electric_gear = 7
 		cement = 20
 		steel = 20
-		machine_parts = 7
+		machine_parts = 7 
 	}
 	time = 30
 	visibility = yes
 	onmap = yes
 
-	production_type = inorganic_chemicals_factory
+	production_type = fabric_factory
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
 petroleum_fabric_factory = {
@@ -454,7 +385,7 @@ petroleum_fabric_factory = {
 	default_enabled = no	
 }
 
-petroleum_plastics_factory = {
+footwear_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -471,12 +402,12 @@ petroleum_plastics_factory = {
 	visibility = yes
 	onmap = yes
 
-	production_type = petroleum_plastics_factory
+	production_type = footwear_factory
 	pop_build_factory = yes
-	default_enabled = no	
+	default_enabled = yes
 }
 
-rubber_plastics_factory = {
+clothes_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -493,11 +424,12 @@ rubber_plastics_factory = {
 	visibility = yes
 	onmap = yes
 
-	production_type = rubber_plastics_factory
+	production_type = clothes_factory
 	pop_build_factory = yes
+	default_enabled = yes
 }
 
-synthetic_rubber_factory = {
+clothes_footwear_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -514,8 +446,34 @@ synthetic_rubber_factory = {
 	visibility = yes
 	onmap = yes
 
-	production_type = synthetic_rubber_factory
+	production_type = clothes_footwear_factory
 	pop_build_factory = yes
+	advanced_factory = yes
+}
+
+#
+# LUMBER GOODS
+#
+lumber_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = lumber_factory
+	pop_build_factory = yes
+	default_enabled = yes
 }
 
 paper_factory = {
@@ -538,181 +496,6 @@ paper_factory = {
 	production_type = paper_factory
 	pop_build_factory = yes
 	default_enabled = yes	
-}
-
-glass_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = glass_factory
-	pop_build_factory = yes
-}
-
-aluminium_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = aluminium_factory
-	pop_build_factory = yes
-	default_enabled = no	
-}
-
-small_arms_factory = { 
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = small_arms_factory
-	pop_build_factory = yes
-	strategic_factory = yes
-}
-
-heating_electricity_factory = { 	
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 180
-	visibility = yes
-	onmap = yes
-
-	production_type = heating_electricity_factory
-	pop_build_factory = yes
-	#strategic_factory = yes
-	#default_enabled = yes
-}
-
-electricity_gas_factory = { 	
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 180
-	visibility = yes
-	onmap = yes
-
-	production_type = heating_electricity_gas_factory
-	pop_build_factory = yes
-	#strategic_factory = yes
-	#default_enabled = yes
-}
-
-integrated_circuits_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = integrated_circuits_factory
-	pop_build_factory = yes
-}
-
-clothes_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = clothes_factory
-	pop_build_factory = yes
-}
-
-optics_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = optics_factory
-	pop_build_factory = yes
-	strategic_factory = yes
 }
 
 cigarettes_factory = {
@@ -759,29 +542,7 @@ furniture_factory = {
 	default_enabled = yes
 }
 
-sugar_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7		
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = sugar_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-
-beverages_factory = {
+furniture_houseware_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -798,73 +559,350 @@ beverages_factory = {
 	visibility = yes
 	onmap = yes
 
-	production_type = beverages_factory
+	production_type = furniture_houseware_factory
+	pop_build_factory = yes
+	advanced_factory = yes
+}
+
+#
+# PETROL/FUEL GOODS
+#
+
+gas_fuel_factory = {    # liquefied natural gas
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = gas_fuel_factory
 	pop_build_factory = yes
 }
 
-beverages_sugar_factory = {
-    type = factory
-    on_completion = factory
-    completion_size = 0.2
-    max_level = 584
-    cost = 0
-    goods_cost =
-    {
+petroleum_fuel_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
 		electric_gear = 7
 		cement = 20
 		steel = 20
 		machine_parts = 7
-    }
-    time = 30
-    visibility = yes
-    onmap = yes
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
 
-    production_type = beverages_sugar_factory
-    pop_build_factory = yes
+	production_type = petroleum_fuel_factory
+	pop_build_factory = yes
 }
 
-beverages_coffee_factory = {
-        type = factory
-        on_completion = factory
-        completion_size = 0.2
-        max_level = 584
-        cost = 0
-        goods_cost =
-        {
+coal_liquefaction_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
 		electric_gear = 7
 		cement = 20
 		steel = 20
 		machine_parts = 7
-        }
-        time = 30
-        visibility = yes
-        onmap = yes
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+	advanced_factory = yes
+	production_type = coal_liquefaction_factory
+	pop_build_factory = yes
 
-        production_type = beverages_coffee_factory
-        pop_build_factory = yes
+	#default_enabled = yes
+
 }
 
-beverages_tea_factory = {
-        type = factory
-        on_completion = factory
-        completion_size = 0.2
-        max_level = 584
-        cost = 0
-        goods_cost =
-        {
+bio_fuel_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
 		electric_gear = 7
 		cement = 20
 		steel = 20
 		machine_parts = 7
-        }
-        time = 30
-        visibility = yes
-        onmap = yes
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+	advanced_factory = yes
+	production_type = bio_fuel_factory
+	pop_build_factory = yes
 
-        production_type = beverages_tea_factory
-        pop_build_factory = yes
+	#default_enabled = yes
+
 }
 
+petroleum_plastics_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = petroleum_plastics_factory
+	pop_build_factory = yes
+	default_enabled = no	
+}
+
+synthetic_rubber_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = synthetic_rubber_factory
+	pop_build_factory = yes
+}
+
+#
+# ELECTRICITY FACTORIES
+#
+
+nuclear_fuel_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		cement = 50
+		steel = 50
+		machine_parts = 50
+		other_minerals = 50	
+	}
+	time = 365
+	visibility = yes
+	onmap = yes
+
+	production_type = nuclear_fuel_factory
+	pop_build_factory = yes
+}
+
+coal_fuel_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7 
+	}
+	time = 100
+	visibility = yes
+	onmap = yes
+
+	production_type = coal_fuel_factory
+	pop_build_factory = yes
+	#default_enabled = yes
+}
+
+heating_electricity_factory = { 	
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 180
+	visibility = yes
+	onmap = yes
+
+	production_type = heating_electricity_factory
+	pop_build_factory = yes
+	#strategic_factory = yes
+	#default_enabled = yes
+}
+
+#
+# INDUSTRIAL GOODS
+#
+
+cement_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		lumber = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = cement_factory
+	pop_build_factory = yes
+	#default_enabled = yes
+}
+
+copper_wire_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = copper_wire_factory
+	pop_build_factory = yes
+}
+
+machine_parts_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		lumber = 20 
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = machine_parts_factory
+	pop_build_factory = yes
+	#default_enabled = yes
+}
+
+steel_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		lumber = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = steel_factory
+	pop_build_factory = yes
+}
+
+inorganic_chemicals_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = inorganic_chemicals_factory
+	pop_build_factory = yes
+}
+
+aluminium_factory = {
+	type = factory
+	on_completion = factory
+	completion_size = 0.2
+	max_level = 584
+	cost = 0
+	goods_cost = 
+	{
+		electric_gear = 7
+		cement = 20
+		steel = 20
+		machine_parts = 7
+	}
+	time = 30
+	visibility = yes
+	onmap = yes
+
+	production_type = aluminium_factory
+	pop_build_factory = yes
+	default_enabled = no	
+}
 
 electric_gear_factory = {
 	type = factory
@@ -888,7 +926,7 @@ electric_gear_factory = {
 	#default_enabled = yes
 }
 
-pharmaceuticals_factory = {
+automobiles_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -899,19 +937,24 @@ pharmaceuticals_factory = {
 		electric_gear = 7
 		cement = 20
 		steel = 20
-		machine_parts = 7
+		machine_parts = 50
 	}
 	time = 30
 	visibility = yes
 	onmap = yes
 
-	production_type = pharmaceuticals_factory
+	production_type = automobiles_factory
 	pop_build_factory = yes
+
 }
 
 # advanced_factory = yes
 
-ships_factory = { 
+#
+# COMPUTER GOODS
+#
+
+optics_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -928,12 +971,12 @@ ships_factory = {
 	visibility = yes
 	onmap = yes
 
-	production_type = ships_factory
+	production_type = optics_factory
 	pop_build_factory = yes
 	strategic_factory = yes
 }
 
-aeroplane_factory = { 	
+integrated_circuits_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -950,31 +993,8 @@ aeroplane_factory = {
 	visibility = yes
 	onmap = yes
 
-	production_type = aeroplane_factory
+	production_type = integrated_circuits_factory
 	pop_build_factory = yes
-	strategic_factory = yes
-}
-
-computers_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		optics = 20
-		integrated_circuits = 20
-		cement = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = computers_factory
-	pop_build_factory = yes
-	advanced_factory = yes
 }
 
 telecommunications_factory = {
@@ -1001,7 +1021,7 @@ telecommunications_factory = {
 	advanced_factory = yes
 }
 
-electric_telecommunications_factory = {
+computers_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -1009,63 +1029,23 @@ electric_telecommunications_factory = {
 	cost = 0
 	goods_cost = 
 	{
-		electric_gear = 7
+		optics = 20
+		integrated_circuits = 20
 		cement = 20
-		steel = 20
 		machine_parts = 7
 	}
 	time = 30
 	visibility = yes
 	onmap = yes
 
-	production_type = electric_telecommunications_factory
+	production_type = computers_factory
 	pop_build_factory = yes
 	advanced_factory = yes
 }
 
-automobiles_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 50
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = automobiles_factory
-	pop_build_factory = yes
-
-}
-
-beverage_tobacco_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = beverage_tobacco_factory
-	pop_build_factory = yes
-	advanced_factory = yes
-}
+#
+# SERVICES
+#
 
 health_factory = {
 	type = factory
@@ -1087,116 +1067,6 @@ health_factory = {
 	production_type = health_factory
 	pop_build_factory = yes
 	advanced_factory = yes
-}
-
-furniture_houseware_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = furniture_houseware_factory
-	pop_build_factory = yes
-	advanced_factory = yes
-}
-
-clothes_footwear_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = clothes_footwear_factory
-	pop_build_factory = yes
-	advanced_factory = yes
-}
-
-ammunition_factory = { 	
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = ammunition_factory
-	pop_build_factory = yes
-	strategic_factory = yes
-}
-
-weaponry_factory = { 	
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = weaponry_factory
-	pop_build_factory = yes
-	strategic_factory = yes
-}
-
-advanced_weaponry_factory = { 	
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 50
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = advanced_weaponry_factory
-	pop_build_factory = yes
-	strategic_factory = yes
 }
 
 transport_factory = {
@@ -1384,7 +1254,7 @@ naval_base = {
 	onmap = yes
 	port = yes
 	visibility = yes
-	max_level = 6
+	max_level = 7
 	colonial_points = { 50 100 150 200 250 300 } #points at levels 1-6
 	province = yes
 	one_per_state = yes

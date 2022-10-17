@@ -81,6 +81,7 @@ political_decisions = {
 					tag = OG2
 					tag = OG3
 					tag = OG4
+					tag = OG5
 				}
 			}
 		}
@@ -104,11 +105,14 @@ political_decisions = {
 				government = absolute_monarchy
 				
 			}
+			#Non-Democratic Germany
+			AND = { tag = GER NOT = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } } }
+			
 			NOT = { government = sar_government }
 		}
 		effect = {
 			prestige = -50
-			remove_country_modifier = declared_neutrality
+			remove_country_modifier = neutrality
 			clr_country_flag = renounced_war_rights
 			clr_country_flag = neutrality
 			country_event = 1512260

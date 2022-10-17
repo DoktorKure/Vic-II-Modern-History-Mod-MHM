@@ -33,14 +33,18 @@ political_decisions = {
 			OR = { 
 				is_greater_power = yes 
 				is_secondary_power = yes 
-				military_score = 600 
+				military_score = 600
+				AND = {
+					any_owned_province = { trade_goods = other_minerals } #Has uranium deposits
+					military_score = 300
+				}
 			}
 
 			OR = { war_policy = jingoism war_policy = pro_military }
 
 			OR = { 
 				#For the player
-				AND = { ai = no money = 2000000 }
+				AND = { ai = no money = 2500000 }
 				
 				#Historical nuclear powers
 				AND = { tag = RUS ai = yes year = 1945 }
@@ -118,7 +122,8 @@ political_decisions = {
 
 			set_country_flag = atomic_bomb_developed
 			prestige = 50
-			money = -2000000
+			random_owned = { limit = { owner = { tag = NKO } } owner = { money = -15000 } } #So Norks don't go bankrupt immediately
+			random_owned = { limit = { owner = { NOT = { tag = NKO } } } owner = { money = -2000000 } }
 		}
 
 		ai_will_do = {

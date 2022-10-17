@@ -267,7 +267,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Send in the basic_security!"
+		name = "Send in the police!"
 		
 		#Increase consciousness and militancy
 		any_pop = { limit = { NOT = { strata = rich } } consciousness = 1 militancy = 1 }

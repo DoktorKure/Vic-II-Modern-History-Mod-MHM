@@ -1,16 +1,17 @@
-capital = 232
-primary_culture = german
+#capital =
+primary_culture = white_anglo
 religion = secularism
-government = democracy
+government = sar_government
 plurality = 15.0
 nationalvalue = nv_equality
 literacy = 0.12
 non_state_culture_literacy = 0.0
 civilized = yes
-prestige = 6
 last_election = 1945.9.1
-is_releasable_vassal = no
-ruling_party = "party_conservative_0_R00"
+ruling_party = "UN_big_tent"
+
+#is_releasable_vassal = no
+
 upper_house = {
 	populist = 4
 	liberal = 21
@@ -56,18 +57,17 @@ schools = commerce_tech_school
 
 
 1992.1.1 = {
-	capital = 232
-primary_culture = german
-religion = secularism
-government = sar_government
-plurality = 15.0
-nationalvalue = nv_equality
-literacy = 0.12
-non_state_culture_literacy = 0.0
-civilized = yes
-prestige = 6
-last_election = 1945.9.1
-ruling_party = "party_conservative_0_R00"
+	#capital =
+	primary_culture = white_anglo
+	religion = secularism
+	government = sar_government
+	plurality = 15.0
+	nationalvalue = nv_equality
+	literacy = 0.12
+	non_state_culture_literacy = 0.0
+	civilized = yes
+	last_election = 1945.9.1
+	ruling_party = "UN_big_tent"
 upper_house = {
 	populist = 4
 	liberal = 21

@@ -16,12 +16,195 @@ political_decisions = {
 	}
 
 	effect = {
+			
+random_country = {
+	limit = {
+		exists = yes
+		ai = no
+	}
+	country_event = 669967
+}
+	
+#Indicate that this is the MHM mod
+set_global_flag = MHM_MOD_ACTIVE
 
 #Clear 1950 start marker
 clr_global_flag = 1950_start_date_flag
 
 #1992 start marker
 set_global_flag = 1992_start_date_flag
+		
+#Nuclear weapons nations
+USA = {
+	add_country_modifier = { name = hydrogen_nation duration = -1 }
+	add_country_modifier = { name = tactical_nukes duration = -1 }
+	set_country_flag = air_bomb
+	set_country_flag = sub_bomb
+	set_country_flag = icbm_bomb
+}
+RUS = {
+	add_country_modifier = { name = hydrogen_nation duration = -1 }
+	add_country_modifier = { name = tactical_nukes duration = -1 }
+	set_country_flag = air_bomb
+	set_country_flag = sub_bomb
+	set_country_flag = icbm_bomb
+}
+CHI = {
+	add_country_modifier = { name = hydrogen_nation duration = -1 }
+	add_country_modifier = { name = tactical_nukes duration = -1 }
+	set_country_flag = air_bomb
+	set_country_flag = sub_bomb
+	set_country_flag = icbm_bomb
+}
+ENG = {
+	add_country_modifier = { name = hydrogen_nation duration = -1 }
+	add_country_modifier = { name = tactical_nukes duration = -1 }
+	set_country_flag = air_bomb
+	set_country_flag = sub_bomb
+	set_country_flag = icbm_bomb
+}
+FRA = {
+	add_country_modifier = { name = hydrogen_nation duration = -1 }
+	add_country_modifier = { name = tactical_nukes duration = -1 }
+	set_country_flag = air_bomb
+	set_country_flag = sub_bomb
+	set_country_flag = icbm_bomb
+}
+ISR = {
+	add_country_modifier = { name = hydrogen_nation duration = -1 }
+	add_country_modifier = { name = tactical_nukes duration = -1 }
+	set_country_flag = air_bomb
+	set_country_flag = sub_bomb
+	set_country_flag = icbm_bomb
+}
+HND = {
+	add_country_modifier = { name = hydrogen_nation duration = -1 }
+	add_country_modifier = { name = tactical_nukes duration = -1 }
+	set_country_flag = air_bomb
+	set_country_flag = sub_bomb
+	set_country_flag = icbm_bomb
+}
+
+#Inherited Soviet nukes, resolved in 1994
+UKR = {
+	add_country_modifier = { name = hydrogen_nation duration = -1 }
+	set_country_flag = air_bomb
+	set_country_flag = icbm_bomb
+}
+		
+#Chemical weapons nations
+USA = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+ENG = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+RUS = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+CHI = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+JAP = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+HND = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+ISR = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+IRQ = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+PER = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+SYR = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+EGY = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+LBY = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+NKO = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+YUG = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+SAF = {
+	add_country_modifier = { name = chemical_nation duration = -1 }
+}
+
+#Biological Weapons Nations
+USA = {
+	add_country_modifier = { name = bio_nation duration = -1 }
+}
+RUS = {
+	add_country_modifier = { name = bio_nation duration = -1 }
+}
+CHI = {
+	add_country_modifier = { name = bio_nation duration = -1 }
+}
+IRQ = {
+	add_country_modifier = { name = bio_nation duration = -1 }
+}
+ISR = {
+	add_country_modifier = { name = bio_nation duration = -1 }
+}
+SAF = {
+	add_country_modifier = { name = bio_nation duration = -1 }
+}
+		
+#Strategic bombardment-capable countries
+USA = {
+	set_country_flag = aerial_bombardment_ability
+}
+ENG = {
+	set_country_flag = aerial_bombardment_ability
+}
+FRA = {
+	set_country_flag = aerial_bombardment_ability
+}
+RUS = {
+	set_country_flag = aerial_bombardment_ability
+}
+
+#Agricultural collectivization for communist nations
+any_country = {
+	limit = { 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+		ruling_party_ideology = communist
+	}
+	set_country_flag = collectivise_farms
+}
+any_country = {
+	limit = { 
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+		ruling_party_ideology = communist
+	}
+	any_owned = {
+		limit = {
+			AND = {
+				OR = {
+					trade_goods = fruit
+					trade_goods = grain
+					trade_goods = oil_seeds
+					trade_goods = sugar
+					trade_goods = tea
+					trade_goods = tobacco
+					trade_goods = coffee
+					trade_goods = cotton
+				}
+				NOT = { has_province_modifier = collectivisation }
+			}
+		}
+		add_province_modifier = { name = collectivisation duration = -1 }
+	}
+}
 
 #Set US cultures
 USA = { 
@@ -164,7 +347,7 @@ add_country_modifier = { name = non_proliferation_treaty duration = -1 }
 
 any_country = {
 limit = { 
-NOT = { OR = { tag = HND tag = ISR tag = NKO tag = PAK } } 
+NOT = { OR = { tag = HND tag = ISR tag = NKO tag = PAK tag = UKR } } 
 	}
 add_country_modifier = { name = non_proliferation_treaty duration = -1 }
 }

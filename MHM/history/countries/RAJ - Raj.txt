@@ -1,6 +1,6 @@
 capital = 1236
 primary_culture = british
-culture = indian
+culture = hindi
 culture = assamese
 culture = goan
 culture = avadhi
@@ -10,7 +10,6 @@ culture = rajput
 culture = tamil
 culture = kannada
 culture = telegu
-culture = hindi
 culture = marathi
 culture = gujarati
 culture = oriya
@@ -88,7 +87,7 @@ command_of_the_sea = 1
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0
-schools = ENG_1_tech_school
+schools = commonwealth
 oob = "/RAJ_oob.txt"
 
 1992.1.1 = {

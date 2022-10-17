@@ -1213,7 +1213,7 @@
     }
 
     artisans = {
-        culture = indian
+        culture = hindi
         religion = hindu
         size = 115200
     }
@@ -1237,13 +1237,13 @@
     }
 
     artisans = {
-        culture = indian
+        culture = hindi
         religion = hindu
         size = 32395
     }
 
     bureaucrats = {
-        culture = indian
+        culture = hindi
         religion = hindu
         size = 32395
     }
@@ -1315,7 +1315,7 @@
     }
 
     craftsmen = {
-        culture = indian
+        culture = hindi
         religion = sunni
         size = 124280
     }
@@ -1771,7 +1771,7 @@
     officers = {
         culture = hindi
         religion = secularism
-        size = 0
+        size = 2
     }
 
     soldiers = {
@@ -3527,7 +3527,7 @@
     officers = {
         culture = hindi
         religion = secularism
-        size = 0
+        size = 2
     }
 
     soldiers = {
@@ -4773,7 +4773,7 @@
     }
 
     artisans = {
-        culture = indian_muslim
+        culture = sindi
         religion = sunni
         size = 71280
     }
@@ -4809,7 +4809,7 @@
     }
 
     farmers = {
-        culture = indian_muslim
+        culture = sindi
         religion = shiite
         size = 800360
     }
@@ -6631,7 +6631,7 @@
     officers = {
         culture = kannada
         religion = secularism
-        size = 0
+        size = 2
     }
 
     soldiers = {
@@ -10071,7 +10071,7 @@
     officers = {
         culture = tripuri
         religion = secularism
-        size = 0
+        size = 2
     }
 
     soldiers = {

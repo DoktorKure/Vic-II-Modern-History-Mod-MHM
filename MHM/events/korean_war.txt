@@ -30,7 +30,7 @@ country_event = {
 
 	mean_time_to_happen = { 
 		months = 6 
-		modifier = { factor = 0.1 has_global_flag = 1950_start_date_flag }
+		modifier = { factor = 0.1 year = 1950 }
 	}
 
 	option = {
@@ -103,7 +103,7 @@ country_event = {
 
 	mean_time_to_happen = { 
 		months = 6 
-		modifier = { factor = 0.1 has_global_flag = 1950_start_date_flag }
+		modifier = { factor = 0.1 year = 1950 }
 	}
 
 	option = {
@@ -207,12 +207,12 @@ country_event = {
 			automobiles = 500
 		}
 		
-		#Knock out NKO military so SKO can just annex NKO by themselves
+		#USA to impose NKO unification with SKO
 		NKO = {
-			war = { 
+			war = {
 				target = USA
-				attacker_goal = { casus_belli = humiliate } 
-				defender_goal = { casus_belli = cut_down_to_size } 
+				attacker_goal = { casus_belli = humiliate }
+				defender_goal = { casus_belli = assisted_unification }
 				call_ally = no
 			}
 		}

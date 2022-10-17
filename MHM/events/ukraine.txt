@@ -1,3 +1,75 @@
+country_event = {
+	id = 1014198
+	title = "The Question of Ukrainian Nuclear Weapons"
+	desc = EVTDESC1014198
+	picture = "Ukrainian_Nukes"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = UKR
+		year = 1994
+		OR = { has_country_modifier = hydrogen_nation has_country_modifier = atomic_nation }
+		is_vassal = no
+		war = no
+		NOT = { has_global_flag = budapest_memorandum }
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+		modifier = { factor = 0.1 year = 1995 }
+	}
+	
+	option = {
+		"Dismantle the stockpiles in exchange for concessions and security guarantees"
+		set_global_flag = budapest_memorandum
+		badboy = -10
+		money = 1000000 #cancellation of some debts
+		
+		#Remove Nuke modifiers
+		remove_country_modifier = hydrogen_nation 
+		remove_country_modifier = atomic_nation
+		remove_country_modifier = develop_atomic_bomb 
+		remove_country_modifier = develop_hydrogen_bomb  
+		clr_country_flag = atomic_bomb_developed
+		clr_country_flag = hydrogen_bomb_developed
+		clr_country_flag = icbm_bomb
+		clr_country_flag = sub_bomb
+		clr_country_flag = air_bomb
+		remove_country_modifier = tactical_nukes
+		
+		#Sign the NPT
+		add_country_modifier = {
+			name = non_proliferation_treaty
+			duration = -1
+		}
+	}
+	
+	option = {
+		"We don't trust their promises, hold onto the stockpiles!"
+		
+		#High badboy because sets an ugly precedent
+		badboy = 25
+		any_country = {
+			limit = { has_country_modifier = unsc_permanent_member }
+			relation = { who = THIS value = -300 }
+			influence = { who = THIS value = -300 }
+			add_casus_belli = {
+				target = THIS
+				type = destroy_wmd
+				months = 120
+			}
+		}
+		any_pop = {
+			ideology = {
+				factor = 0.15
+				value = nationalist
+			}
+		} 
+		add_country_modifier = { name = nuke_sanctions duration = -1 }
+	}
+}
+
 #The 1993 Election
 country_event = {
   id = 1014199
