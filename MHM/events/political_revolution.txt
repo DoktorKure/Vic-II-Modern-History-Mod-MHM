@@ -946,15 +946,18 @@ country_event = { # The New Regime - Democracy
 		
 		# from rebel_types
 
-		#Set to mid-level democratic reforms to prevent easy and quick revert to dictatorship especially for AI
-		random_owned = { limit = { owner = { OR = { vote_franschise = none_voting vote_franschise = harassed_voting } } } owner = { political_reform = rigged_voting } }	
-		random_owned = { limit = { owner = { OR = { political_opinions = ruling_party_opinion political_opinions = appointed_opinion } } } owner = { political_reform = semi_democratic_state_opinion } }	
-		random_owned = { limit = { owner = { OR = { political_parties = parties_not_allowed political_parties = parties_restricted } } } owner = { political_reform = parties_rigged } }
-		random_owned = { limit = { owner = { OR = { publishing_rights = state_publishing publishing_rights = censored_publishing } } } owner = { political_reform = responsible_publishing } }
-		random_owned = { limit = { owner = { OR = { union_rights = no_trade_unions union_rights = state_controlled_unions } } } owner = { political_reform = restricted_unions } } 
-		
-		random_owned = { limit = { owner = { civil_service = politicised_service } } owner = { political_reform = elitist_service } } 
+		random_owned = { limit = { owner = { vote_franschise = none_voting } } owner = { political_reform = rigged_voting } }	
+
+		random_owned = { limit = { owner = { political_opinions = ruling_party_opinion } } owner = { political_reform = semi_democratic_state_opinion } }	
+
+
 		random_owned = { limit = { owner = { public_meetings = no_meetings } } owner = { political_reform = limited_meetings } }	
+
+		random_owned = { limit = { owner = { publishing_rights = state_publishing } } owner = { political_reform = responsible_publishing } }
+		
+		random_owned = { limit = { owner = { union_rights = no_trade_unions } } owner = { political_reform = restricted_unions } } 
+
+		random_owned = { limit = { owner = { political_parties = parties_not_allowed } } owner = { political_reform = parties_rigged } }
 
 		# end - from rebel_types	
 	}

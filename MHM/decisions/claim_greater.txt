@@ -1688,7 +1688,76 @@ political_decisions = {
 		}
 		
 	}
-	
+
+	claim_greater_czechoslovakia = {
+        picture = "claim_greater_czechoslovakia"
+        potential = {
+            OR = {
+                tag = CZH
+                tag = SLV
+            }
+            NOT = { has_country_flag = claim_greater_czechoslovakia }
+        }
+
+        allow = {
+            has_unclaimed_cores = no
+            NOT = {
+                ruling_party_ideology = socialist
+                ruling_party_ideology = progressive
+                ruling_party_ideology = liberal
+            }
+            OR = {
+                ruling_party_ideology = populist
+                ruling_party_ideology = nationalist
+                jingoism = 10
+            }
+        }
+
+        effect = {
+            badboy = 3
+            set_country_flag = claim_greater_czechoslovakia
+            950 = { add_core = THIS }
+        }
+    }
+
+    abandon_claim_czechoslovakia = {
+        picture = "claim_greater_czechoslovakia"
+        potential = {
+            has_country_flag = claim_czechoslovakia
+            OR = {
+                government = democracy
+                government = democracy1
+                government = hms_government
+                government = hms_government1
+            } 
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+            OR = {
+                ruling_party_ideology = socialist
+                ruling_party_ideology = progressive
+                ruling_party_ideology = liberal
+            }
+        }
+
+        effect = {
+            badboy = -2
+            prestige = 10
+            any_pop = { consciousness = 1 }
+            clr_country_flag = claim_greater_czechoslovakia
+            all_core = { 
+                limit = { 
+                    NOT = { owned_by = THIS } 
+                    province_id = 950
+                }
+                remove_core = THIS
+            }
+        }
+
+    }
+
 	claim_greater_denmark = {
 		picture = "claim_greater_denmark"
 		potential = {
@@ -4899,6 +4968,113 @@ political_decisions = {
 
 	}
 	
+
+	claim_greater_PCC = {
+		picture = "claim_greater_PCC"
+		potential = {
+			tag = PCC
+			NOT = { 
+				has_country_flag = claim_greater_PCC
+				has_country_flag = cores_returned 
+			}
+		}
+
+		allow = {
+			part_of_sphere = no
+			has_unclaimed_cores = no
+			NOT = {	
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = liberal 
+			}
+			is_vassal = no
+			prestige = 45
+			OR = {
+				ruling_party_ideology = populist
+				ruling_party_ideology = nationalist
+				ruling_party_ideology = communist
+				jingoism = 24
+			}
+		}
+
+		effect = {
+			badboy = 12
+			set_country_flag = claim_greater_PCC
+			936 = { add_core = POL add_core = PCC}
+			937 = { add_core = POL add_core = PCC }
+			938 = { add_core = POL add_core = PCC }
+			947 = { add_core = POL add_core = PCC }
+			939 = { add_core = POL add_core = PCC }
+			940 = { add_core = POL add_core = PCC } 
+			957 = { add_core = POL add_core = PCC }
+			956 = { add_core = POL add_core = PCC }
+			950 = { add_core = PCC add_core = CZH add_core = SLV } #Uzhgorod
+			952 = { add_core = POL add_core = PCC }
+			953 = { add_core = POL add_core = PCC }
+			951 = { add_core = POL add_core = PCC }
+			702 = { add_core = POL add_core = PCC }
+            360 = { add_core = POL add_core = PCC }
+		}
+
+	}
+
+	abandon_claim_greater_PCC = {
+		picture = "claim_greater_PCC"
+		potential = {
+			tag = PCC
+			has_country_flag = claim_greater_PCC
+			OR = {
+				government = democracy
+				government = democracy1
+				government = hms_government
+				government = hms_government1
+			}
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			OR = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = liberal
+			}
+		}
+
+		effect = {
+			badboy = -6
+			prestige = 10
+			any_pop = { consciousness = 1 }
+			clr_country_flag = claim_greater_PCC
+			all_core = {
+				limit = { 
+					NOT = { owned_by = THIS }
+					OR = {
+						province_id = 936
+						province_id = 937
+						province_id = 938
+						province_id = 947
+						province_id = 939
+						province_id = 940
+						province_id = 957
+						province_id = 956
+						province_id = 950
+						province_id = 952
+						province_id = 953
+						province_id = 951
+						province_id = 702
+                        province_id = 360
+					}
+				}
+				remove_core = SLV
+				remove_core = POL
+				remove_core = CZH
+				remove_core = PCC
+			}
+		}
+
+	}
+
 	claim_greater_poland = {
 		picture = "claim_greater_poland"
 		potential = {
@@ -4975,11 +5151,11 @@ political_decisions = {
 						province_id = 940
 						province_id = 957
 						province_id = 956
-						province_id = 955
 						province_id = 952
 						province_id = 953
 						province_id = 951
 						province_id = 702
+                                             province_id = 360
 					}
 				}
 				remove_core = THIS

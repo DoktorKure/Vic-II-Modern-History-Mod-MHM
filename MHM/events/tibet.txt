@@ -74,7 +74,6 @@ country_event = {
 
 	option = {
 		name = "Sign the 17-Point Agreement"
-		set_country_flag = special_communist_vassal
 		CHI = { any_owned = { remove_core = TIB } } # prevent excessive secession of provinces
 		CHI = { inherit = THIS }
 		CHI = { release_vassal = TIB }

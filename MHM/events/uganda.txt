@@ -226,7 +226,7 @@ country_event = {
 	
     option = {
 	  name = EVT_1027013_A
-	  any_pop = { limit = { culture = hindi } move_pop = 300 } # London
+	  any_pop = { limit = { culture = indian } move_pop = 300 } # London
 	  any_pop = { limit = { NOT = { culture = african_minor } } militancy = 5  consciousness = 5.0 } 
 	  badboy = 15
 	  add_country_modifier = { name = great_depression duration = 3500 }
@@ -235,7 +235,7 @@ country_event = {
 	
 	option = {
 	  name = EVT_1027013_B
-	  any_pop = { limit = { NOT = { culture = hindi } } militancy = 2 consciousness = 2 } 
+	  any_pop = { limit = { NOT = { culture = indian } } militancy = 2 consciousness = 2 } 
 	  ai_chance = { factor = 0 }
 	}
 	

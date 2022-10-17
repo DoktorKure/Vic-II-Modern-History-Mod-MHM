@@ -354,6 +354,69 @@ ai_chance = { factor = 0.2 }
 
 }
 
+#Independent Occupation Zone joins Germany - democratic 
+country_event = {
+	id = 1610005
+title = "United Democratic Germany"
+	desc = "An Occupation Zone returns to German control"
+	picture = "treaty"
+
+trigger = {
+OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 }
+is_vassal = no
+war = no
+OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+GER = { war = no exists = yes OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } }
+}
+
+option = {
+name = "Join Germany"
+GER = { inherit = THIS }
+		}
+}
+
+#Independent Occupation Zone joins Germany - socialist 
+country_event = {
+	id = 1610006
+title = "United Socialist Germany"
+	desc = "An Occupation Zone returns to German control"
+	picture = "treaty"
+
+trigger = {
+OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 }
+is_vassal = no
+war = no
+OR = { government = socialist_democracy government = proletarian_dictatorship1 government = proletarian_dictatorship }
+GER = { war = no exists = yes OR = { government = socialist_democracy government = proletarian_dictatorship1 government = proletarian_dictatorship } }
+}
+
+option = {
+name = "Join Germany"
+GER = { inherit = THIS }
+		}
+}
+
+#Independent Occupation Zone joins East Germany - socialist 
+country_event = {
+	id = 1610007
+title = "United Socialist East Germany"
+	desc = "An Occupation Zone returns to East German control"
+	picture = "treaty"
+
+trigger = {
+OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 }
+is_vassal = no
+war = no
+OR = { government = socialist_democracy government = proletarian_dictatorship1 government = proletarian_dictatorship }
+DDR = { war = no exists = yes OR = { government = socialist_democracy government = proletarian_dictatorship1 government = proletarian_dictatorship } }
+}
+
+option = {
+name = "Join East Germany"
+DDR = { inherit = THIS }
+		}
+}
+
 #Satellites destroyed
 country_event = {
 	id = 1610008
@@ -1637,6 +1700,40 @@ clr_country_flag = sub_bomb
 clr_country_flag = air_bomb
 
 add_country_modifier = { name = revolution_chaos duration = 1825 }
+		}
+
+}
+
+#Use Tactical Nukes
+country_event = {
+	id = 1610031
+title = "Struck by $FROMCOUNTRY_ADJ$ Tactical Nuclear Weapons"
+	desc = EVTDESC1610031
+	picture = "disarm_tactical_nukes"
+
+is_triggered_only = yes
+
+option = {
+name = "We must retaliate!"
+prestige_factor = -0.025
+
+FROM = { set_country_flag = has_nuke_clouds }
+
+set_country_flag = has_nuke_clouds
+
+war_exhaustion = 10
+
+any_pop = { limit = { type = soldiers } reduce_pop = 0.99 }
+
+any_owned = { 
+limit = { units_in_province = 1 } 
+set_province_flag = disease
+add_province_modifier = { name = tactical_nuked duration = 1825 }
+any_pop = { reduce_pop = 0.95 }
+infrastructure = -2
+naval_base = -2
+fort = -2
+}
 		}
 
 }
@@ -5148,66 +5245,59 @@ country_event = {
 	desc = EVTDESC1610091
 	picture = "angry_hardliners"
 
-	trigger = {
-		ai = no
-		war = no
+trigger = {
+ai = no
+war = no
 
-		NOT = { num_of_revolts = 1 }
+NOT = { num_of_revolts = 1 }
 
-		NOT = { has_country_modifier = political_strife }
+NOT = { has_country_modifier = political_strife }
 
-		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
+OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
 
-		OR = { 
-			NOT = { vote_franschise = none_voting } 
-			NOT = { political_opinions = ruling_party_opinion } 
-			NOT = { public_meetings = no_meetings } 
-			NOT = { publishing_rights = state_publishing }
-			NOT = { political_parties = parties_not_allowed }
-		}
+OR = { 
+NOT = { vote_franschise = none_voting } 
+NOT = { political_opinions = ruling_party_opinion } 
+NOT = { public_meetings = no_meetings } 
+NOT = { publishing_rights = state_publishing }
+NOT = { political_parties = parties_not_allowed }
+}
 
-		#Angry officers or bureaucrats
-		any_owned_province = {
-			is_core = THIS
-			any_pop = { OR = { type = officers type = bureaucrats } militancy = 8 }
-		}
+#Angry officers or bureaucrats
+any_owned_province = {
+is_core = THIS
+any_pop = { OR = { type = officers type = bureaucrats } militancy = 8 }
+}
+
+}
+
+mean_time_to_happen = { 
+months = 12
+modifier = { factor = 3 has_country_modifier = nepohigh }
+modifier = { factor = 0.5 has_country_modifier = nepolow }
+}
+
+option = {
+name = "Tolerate their insolence"
+
+add_country_modifier = { name = political_strife duration = 730 }
+
+any_pop = { consciousness = 2 militancy = 1 }
+
+ai_chance = { factor = 1 }
 	}
 
-	mean_time_to_happen = { 
-		months = 12
-		modifier = { factor = 3 has_country_modifier = nepohigh }
-		modifier = { factor = 0.5 has_country_modifier = nepolow }
+option = {
+name = "Purge them"
+
+any_pop = { 
+limit = { OR = { type = officers type = bureaucrats } militancy = 8 }
+pop_type = clerks
 	}
 
-	option = {
-		name = "Give in to their demands"
-		political_reform = none_voting
-		political_reform = ruling_party_opinion
-		political_reform = no_meetings
-		political_reform = state_publishing
-		political_reform = parties_not_allowed
-		any_pop = { consciousness = -2 militancy = -1 }
-		ai_chance = {
-			factor = 0.3
-			modifier = { factor = 1 militancy = 7 }
-		}
-	}
+any_pop = { militancy = -3 consciousness = -5 }
 
-	option = {
-		name = "Tolerate their insolence"
-		add_country_modifier = { name = political_strife duration = 730 }
-		any_pop = { consciousness = 2 militancy = 1 }
-		ai_chance = { factor = 0.5 }
-	}
-
-	option = {
-		name = "Purge them"
-		any_pop = { 
-			limit = { OR = { type = officers type = bureaucrats } militancy = 8 }
-			pop_type = clerks
-		}
-		any_pop = { militancy = -3 consciousness = -5 }
-		ai_chance = { factor = 0.2 }
+ai_chance = { factor = 0 }
 	}
 
 }
@@ -7812,7 +7902,7 @@ country_event = {
 		GIB = { government = sar_government country_event = 800054 ruling_party_ideology = conservative }
 		diplomatic_influence = { who = GIB value = 200 }
 		
-		relation = { who = SPA value = 50 }
+		relation = { tag = SPA value = 50 }
 		
 		ai_chance = { factor = 0.8 }
 	}
@@ -7836,7 +7926,7 @@ country_event = {
 			}
 		}
 		
-		relation = { who = SPA value = -50 }
+		relation = { tag = SPA value = -50 }
 		
 		ai_chance = { factor = 0.2 }
 	}
@@ -7924,69 +8014,69 @@ country_event = {
 }
 
 #Remove all capitalists in fully planned economies (communist dictatorships)
-#country_event = {
-#	id = 1610128
-#	title = "Purge of the $COUNTRY_ADJ$ Bourgeoisie"
-#	desc = EVTDESC1610128
-#	picture = "remove_all_bourgeoisie"
-#
-#	trigger = {
-#		OR = {
-#			government = proletarian_dictatorship
-#			government = proletarian_dictatorship1
-#		}
-#		ruling_party_ideology = communist
-#		economic_policy = planned_economy
-#		
-#		has_pop_type = capitalists
-#		
-#		war = no
-#	}
-#
-#	mean_time_to_happen = {
-#		months = 3
-#	}
-#
-#	option = {
-#		name = "Long live the revolution!"
-#		farmers = { money = 10 }
-#		labourers = { money = 10 }
-#		craftsmen = { money = 10 }
-#		clerks = { money = 10 }
-#		soldiers = { money = 10 }
-#		
-#		officers = { money = 20 }
-#		bureaucrats = { money = 30 }
-#		
-#		any_pop = {
-#			limit = { type = capitalists }
-#			militancy = 10
-#			pop_type = clerks
-#		}
-#		any_pop = {
-#			limit = { type = artisans }
-#			militancy = 5
-#			pop_type = craftsmen
-#		}
-#		
-#		any_pop = { 
-#			limit = { strata = poor }
-#			ideology = { 
-#				factor = 0.10 
-#				value = communist 
-#			} 
-#		}
-#		
-#		any_pop = { 
-#			limit = { strata = middle }
-#			ideology = { 
-#				factor = 0.05
-#				value = communist 
-#			} 
-#		}
-#	}
-#
-#}
+country_event = {
+	id = 1610128
+	title = "Purge of the $COUNTRY_ADJ$ Bourgeoisie"
+	desc = EVTDESC1610128
+	picture = "remove_all_bourgeoisie"
+
+	trigger = {
+		OR = {
+			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
+		}
+		ruling_party_ideology = communist
+		economic_policy = planned_economy
+		
+		has_pop_type = capitalists
+		
+		war = no
+	}
+
+	mean_time_to_happen = {
+		months = 3
+	}
+
+	option = {
+		name = "Long live the revolution!"
+		farmers = { money = 10 }
+		labourers = { money = 10 }
+		craftsmen = { money = 10 }
+		clerks = { money = 10 }
+		soldiers = { money = 10 }
+		
+		officers = { money = 20 }
+		bureaucrats = { money = 30 }
+		
+		any_pop = {
+			limit = { type = capitalists }
+			militancy = 10
+			pop_type = clerks
+		}
+		any_pop = {
+			limit = { type = artisans }
+			militancy = 5
+			pop_type = craftsmen
+		}
+		
+		any_pop = { 
+			limit = { strata = poor }
+			ideology = { 
+				factor = 0.10 
+				value = communist 
+			} 
+		}
+		
+		any_pop = { 
+			limit = { strata = middle }
+			ideology = { 
+				factor = 0.05
+				value = communist 
+			} 
+		}
+	}
+
+}
 
 #Rapid capitulation by the AI
 country_event = {
@@ -8541,7 +8631,7 @@ country_event = {
 			add_accepted_culture = bosniak
 			add_accepted_culture = slovene
 			add_accepted_culture = irish
-			add_accepted_culture = british
+			add_accepted_culture = english
 			add_accepted_culture = scottish
 			add_accepted_culture = welsh
 			add_accepted_culture = estonian
@@ -8862,13 +8952,14 @@ country_event = {
 		capital = 300
 		change_tag = ENL
 		
-		primary_culture = british
+		primary_culture = english
 		remove_accepted_culture = scottish
 		remove_accepted_culture = welsh
 		
 		#Clean up
 		ENG = {
 			primary_culture = british
+			add_accepted_culture = english
 			add_accepted_culture = scottish
 			add_accepted_culture = welsh
 		}
@@ -9005,7 +9096,7 @@ country_event = {
 				prestige_factor = -0.01
 				remove_country_modifier = cento_member
 				
-				add_country_modifier = { name = leave_alliance_cento duration = 1825 }
+				add_country_modifier = { name = leave_cento_member duration = 1825 }
 				any_country = { limit = { has_country_modifier = cento_member } relation = { who = THIS value = -50 } leave_alliance = THIS }
 			}
 		}

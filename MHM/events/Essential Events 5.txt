@@ -85,7 +85,7 @@ country_event = {
 country_event = {
 	id = 1412003
 	title = "Mass Riots Across $COUNTRY$"
-	desc = "The police used tear gas and riot weapons against the protesters to suppress the protests, but it has only sparked more violent actions to end our rule."
+	desc = "The basic_security used tear gas and riot weapons against the protesters to suppress the protests, but it has only sparked more violent actions to end our rule."
 	picture = "violent_protests"
 
 	trigger = {
@@ -388,6 +388,7 @@ country_event = {
 		remove_country_modifier = mass_riots
 		remove_country_modifier = military_crackdown
 		remove_country_modifier = army_defects
+		remove_country_modifier = civil_war
 		
 		remove_country_modifier = government_consensus
 		clr_country_flag = government_extends_peace_hand
@@ -451,6 +452,7 @@ country_event = {
 		remove_country_modifier = mass_riots
 		remove_country_modifier = military_crackdown
 		remove_country_modifier = army_defects
+		remove_country_modifier = civil_war
 		
 		remove_country_modifier = government_consensus
 		clr_country_flag = government_extends_peace_hand
@@ -579,6 +581,7 @@ country_event = {
 		remove_country_modifier = mass_riots
 		remove_country_modifier = military_crackdown
 		remove_country_modifier = army_defects
+		remove_country_modifier = civil_war
 		
 		remove_country_modifier = government_consensus
 		clr_country_flag = government_extends_peace_hand
@@ -781,6 +784,7 @@ country_event = {
 		remove_country_modifier = mass_riots
 		remove_country_modifier = military_crackdown
 		remove_country_modifier = army_defects
+		remove_country_modifier = civil_war
 		
 		remove_country_modifier = government_consensus
 		clr_country_flag = government_extends_peace_hand

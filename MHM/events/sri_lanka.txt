@@ -120,7 +120,7 @@ country_event = {
 		
 		#Sinhala only policy
 		NOT = { accepted_culture = tamil }
-		NOT = { accepted_culture = hindi }
+		NOT = { accepted_culture = indian }
 	}
 
 	mean_time_to_happen = { months = 2 }

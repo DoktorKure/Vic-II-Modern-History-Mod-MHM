@@ -831,7 +831,7 @@ country_event = {
 
 	option = {
 		name = "It is time to bring Xinjiang in line with the rest of China."
-		remove_accepted_culture = uighur
+		remove_accepted_culture = uigher
 
 		any_pop = {
 			limit = { OR = { culture = chinese culture = hui } }
@@ -957,7 +957,7 @@ country_event = {
 		is_vassal = no
 		war = no
 
-		NOT = { accepted_culture = uighur }
+		NOT = { accepted_culture = uigher }
 		
 		OR = {
 			owns = 1600
@@ -1167,7 +1167,7 @@ country_event = {
 		random_country = { limit = { OR = { tag = KMT tag = CHI } OR = { government = presidential_dictatorship government = nationalist_dictatorship } is_greater_power = yes } diplomatic_influence = { who = THIS value = -50 } relation = { who = THIS value = -50 } }
 		
 		any_pop = {
-			limit = { culture = kazak }
+			limit = { culture = kazakh }
 			militancy = -3
 			consciousness = -3
 		}

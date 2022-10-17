@@ -1,7 +1,6 @@
-owner = ROA
-controller = ROA
+owner = ENG
+controller = ENG
 add_core = AUS
-add_core = ROA
 trade_goods = copper
 life_rating = 35
 terrain = deciduous_forest_hills
@@ -28,7 +27,7 @@ state_building = {
 }
 state_building = {
 	level = 1
-	building = telecommunications_factory
+	building = electric_telecommunications_factory
 	upgrade = yes
 }
 state_building = {

@@ -4,6 +4,7 @@ culture = white_anglo
 culture = australian
 culture = new_zealander
 culture = anglo_canadian
+culture = english
 culture = black_anglo
 religion = secularism
 government = democracy
@@ -55,7 +56,7 @@ schools = army_tech_school
 
 1992.1.1 = {
 	capital = 300
-	culture = british
+	culture = english
 	religion = secularism
 	government = democracy
 	plurality = 59.0

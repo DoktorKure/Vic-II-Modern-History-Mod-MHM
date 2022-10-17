@@ -25,17 +25,6 @@ country_event = { # Trust Territory of Somaliland
 			}
 			secede_province = ITA
 		}
-		any_owned = {
-			limit = { is_core = ETH }
-			secede_province = ETH
-		}
-		ai_chance = { factor = 0.9 }
-	}
-	
-	option = {
-		name = "We do not trust the Italians"
-		relation = { who = ITA value = -25 }
-		ai_chance = { factor = 0.1 }
 	}
 }
 country_event = {

@@ -6,6 +6,8 @@ country_event = {
 	
 	trigger = {
 
+		is_vassal = no
+
 		NOT = {
 			government = proletarian_dictatorship
 			government = proletarian_dictatorship1
@@ -31,6 +33,8 @@ country_event = {
 	
 	trigger = {
 
+		is_vassal = no
+
 		NOT = {
 			government = absolute_monarchy
 			government = presidential_dictatorship
@@ -50,7 +54,7 @@ country_event = {
 				war_policy = jingoism
 			}
 		}
-		OR = { # good attitude towards minorities leads to nationalist dictatorship instead of sectarian regime
+		AND = { # good attitude towards minorities leads to nationalist dictatorship instead of sectarian regime
 			NOT = { minorities_reform = minorities_oppression }
 			NOT = { citizenship_policy = residency }
 		}
@@ -72,6 +76,8 @@ country_event = {
 	picture = "populist_cleanup"
 	
 	trigger = {
+
+		is_vassal = no
 
 		NOT = {
 			government = presidential_dictatorship
@@ -99,6 +105,8 @@ country_event = {
 	picture = "reactionary_cleanup"
 	
 	trigger = {
+
+		is_vassal = no
 
 		NOT = {
 			government = presidential_dictatorship
@@ -141,7 +149,7 @@ country_event = {
 			#Higher chance for Indian nations
 			modifier = { 
 				factor = 1
-				OR = { pop_majority_religion = hindu capital_scope = { is_core = HND } }
+				OR = { pop_majority_religion = hindi capital_scope = { is_core = HND } }
 			}
 			
 			#Special case for Italy due to Italy having experienced both theocracy and monarchy in recent history
@@ -275,7 +283,7 @@ country_event = {
 		civilized = yes
 		NOT = { vote_franschise = none_voting }
 		NOT = { political_parties = parties_not_allowed }
-		NOT = { political_opinions = ruling_party_opinion }
+		NOT = { political_parties = ruling_party_opinion }
 	}
 	
 	mean_time_to_happen = { days = 1 }
@@ -320,7 +328,7 @@ country_event = {
 		government = absolute_monarchy
 		NOT = { vote_franschise = none_voting }
 		NOT = { political_parties = parties_not_allowed }
-		NOT = { political_opinions = ruling_party_opinion }
+		NOT = { political_parties = ruling_party_opinion }
 		civilized = yes	
 	}
 	
@@ -339,6 +347,8 @@ country_event = {
 	picture = "populist_cleanup"
 	
 	trigger = {
+
+		is_vassal = no
 
 		OR = { government = democracy government = democracy1 }
 		civilized = yes
@@ -373,6 +383,8 @@ country_event = {
 	
 	trigger = {
 
+		is_vassal = no
+
 		OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 }
 		vote_franschise = none_voting
 		OR = { ruling_party_ideology = socialist ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = conservative }
@@ -400,6 +412,8 @@ country_event = {
 	
 	trigger = {
 
+		is_vassal = no
+
 		vote_franschise = none_voting
 		NOT = { government = proletarian_dictatorship }
 		NOT = { government = proletarian_dictatorship1 }
@@ -426,6 +440,8 @@ country_event = {
 	
 	trigger = {
 		has_country_flag = is_disabled_for_now #Keep disabled to prevent conflict with reactionary regime entry
+
+		is_vassal = no
 
 		OR = { government = democracy government = democracy1 }
 		vote_franschise = none_voting

@@ -31,7 +31,7 @@ country_event = { # Sinatra Doctrine
 			is_our_vassal = PCC
 			is_our_vassal = CZH
 			is_our_vassal = HUN
-			OR = { is_our_vassal = ROM ROM = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+			is_our_vassal = ROM
 			is_our_vassal = BUL
 			is_our_vassal = AUS
 			is_our_vassal = DDR
@@ -1102,7 +1102,7 @@ country_event = {
 	id = 9001407
 	title = "Democratization in $COUNTRY$?"
 	desc = EVTDESC9001407
-	picture = "ussr_police_militsia"
+	picture = "ussr_basic_security_militsia"
 
 	trigger = {
 		capital_scope = { continent = europe }

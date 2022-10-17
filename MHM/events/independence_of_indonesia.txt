@@ -281,7 +281,7 @@ country_event = {
   id = 8206015
   title = "Operation Kraai"
   desc = EVTDESC8206015
-  picture = "police_actions_ido_2"
+  picture = "basic_security_actions_ido_2"
   
 	fire_only_once = yes
 
@@ -303,7 +303,7 @@ country_event = {
 	mean_time_to_happen = { months = 11 }
 
 	option = {
-		name = "Begin the new police actions"
+		name = "Begin the new basic_security actions"
 		
 		set_global_flag = operation_kraai_historical_flag
 		

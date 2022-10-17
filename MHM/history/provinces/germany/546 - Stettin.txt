@@ -1,31 +1,19 @@
-owner = OG5
-controller = OG5
-add_core = GER
+owner = POL
+controller = POL
+add_core = POL
 trade_goods = fish
 life_rating = 35
 terrain = marginal_farmland
 colonial = 0
 state_building = {
 	level = 2
-	building = canned_meat_factory
+	building = cattle_canned_food_factory
 	upgrade = yes
 }
-
-1950.1.1 = {
-owner = POL
-controller = POL
-add_core = POL
-remove_core = GER
-life_rating = 35
-railroad = 1
-colonial = 0
-}
-
 1992.1.1 = {
 owner = POL
 controller = POL
 add_core = POL
-remove_core = GER
 life_rating = 35
 railroad = 1
 colonial = 0

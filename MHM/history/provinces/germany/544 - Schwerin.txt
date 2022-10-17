@@ -1,5 +1,5 @@
-owner = OG1
-controller = OG1
+owner = RUS
+controller = RUS
 add_core = GER
 add_core = DDR
 trade_goods = grain
@@ -28,7 +28,7 @@ colonial = 0
 naval_base = 4
 state_building = {
 	level = 1
-	building = alcoholic_beverages_factory
+	building = beverage_tobacco_factory
 	upgrade = yes
 }
 }

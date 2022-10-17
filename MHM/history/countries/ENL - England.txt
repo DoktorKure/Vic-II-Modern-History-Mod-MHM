@@ -1,5 +1,5 @@
 capital = 300
-primary_culture = british
+primary_culture = english
 culture = welsh
 religion = secularism
 government = hms_government
@@ -78,7 +78,7 @@ sea_denial_strategy = 1
 # Starting Consciousness
 consciousness = 1
 nonstate_consciousness = 1
-schools = commonwealth
+schools = ENG_tech_school
 
 
 1992.1.1 = {

@@ -1,19 +1,19 @@
-owner = OG3
-controller = OG3
+owner = ENG
+controller = ENG
 add_core = GER
-trade_goods = iron
+trade_goods = coal
 life_rating = 35
 terrain = marginal_farmland
 railroad = 1
 colonial = 0
 state_building = {
 	level = 3
-	building = steel_factory
+	building = cement_factory
 	upgrade = yes
 }
 state_building = {
 	level = 3
-	building = machine_parts_factory
+	building = coal_fuel_factory
 	upgrade = yes
 }
 

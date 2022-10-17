@@ -1,5 +1,7 @@
 capital = 1008
 primary_culture = russian
+culture = ukrainian
+culture = byelorussian
 religion = secularism
 government = proletarian_dictatorship
 plurality = 15.0
@@ -77,6 +79,7 @@ command_of_the_sea = 1
 consciousness = 1
 nonstate_consciousness = 1
 
+decision = develop_the_atomic_bomb
 decision = centralhigh
 decision = united_nations
 decision = jointheunga
@@ -86,11 +89,14 @@ schools = army_tech_school
 oob = "/RUS_oob.txt"
 
 1950.1.1 = {
+	remove_accepted_culture = german
 	oob = "1950/RUS_oob.txt"
 }
 
 1992.1.1 = {
 	capital = 1008
+	remove_accepted_culture = ukrainian
+	remove_accepted_culture = byelorussian
 	religion = secularism
 	government = democracy1
 	plurality = 59.0
@@ -238,5 +244,6 @@ oob = "/RUS_oob.txt"
 	power_projection = 1
 	green_blue_water_navies = 1
 	carrier_battle_groups = 1
+	decision = hydrogen_setup
 	oob = "1992/RUS_oob.txt"
 }

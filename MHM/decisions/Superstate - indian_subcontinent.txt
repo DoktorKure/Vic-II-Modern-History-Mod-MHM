@@ -232,7 +232,7 @@ political_decisions = {
 			prestige = 20
 			all_core = { add_core = XIO }
 			change_tag = XIO
-			add_accepted_culture = hindi
+			add_accepted_culture = indian
 		}
 		ai_will_do = { factor = 1 }
 	}

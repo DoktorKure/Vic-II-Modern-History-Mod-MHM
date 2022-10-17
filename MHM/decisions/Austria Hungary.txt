@@ -1,111 +1,109 @@
 political_decisions = {
 
-	#CLAIMING CZECHOSLOVAKIA
+#CLAIMING CZECHOSLOVAKIA
 
-	protect_czechoslovakia = {
-		picture = "kuk_union"
-		potential = {
-			tag = KUK
-			CZH = {
-				is_vassal = no
-				war = no
-				exists = yes
-				OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
-			}
-			has_global_flag = blocsenabled
-			NOT = { has_global_flag = protect_czechoslovakia }
-			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
-		}
-		
-		allow = {
-			war = no
+protect_czechoslovakia = {
+	picture = "kuk_union"
+	potential = {
+		tag = KUK
+		CZH = {
 			is_vassal = no
-			NOT = { militancy = 4 }
+			war = no
+			exists = yes
+OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+		}
+		has_global_flag = blocsenabled
+		NOT = { has_global_flag = protect_czechoslovakia }
+OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+			}
+	
+	allow = {
+		war = no
+		is_vassal = no
+		NOT = { militancy = 4 }
 		}
 
-		effect = {
-			prestige = 50
-			badboy = -5
-			relation = { who = RUS value = -200 }
-			set_global_flag = protect_czechoslovakia
-			CZH = { country_event = 132400 }
+	effect = {
+prestige = 50
+badboy = -5
+relation = { who = RUS value = -200 }
+set_global_flag = protect_czechoslovakia
+CZH = { country_event = 132400 }
+		}
+
+	}
+
+# CLAIMING THE BALKAN LANDS
+kuk_claim_balkan_territories = {
+	picture = "kuk_claim_balkan_territories"
+	potential = {
+		tag = KUK
+		NOT = { has_global_flag = retake_balkan_territory }
+	}
+
+	allow = {
+		war = no
+		is_vassal = no
+		OR = { ai = no NOT = { badboy = 0.5 } }
+		OR = { 
+			ruling_party_ideology = nationalist
+			ruling_party_ideology = populist
+			ruling_party_ideology = traditionalist 
 		}
 	}
 
-	# CLAIMING THE BALKAN LANDS
-	kuk_claim_balkan_territories = {
-		picture = "kuk_claim_balkan_territories"
-		potential = {
-			tag = KUK
-			NOT = { has_global_flag = retake_balkan_territory }
-		}
-
-		allow = {
-			war = no
-			is_vassal = no
-			OR = { ai = no NOT = { badboy = 0.5 } }
-			OR = { 
-				ruling_party_ideology = nationalist
-				ruling_party_ideology = populist
-				ruling_party_ideology = traditionalist 
-			}
-		}
-
-		effect = {
-			prestige = 70
-			set_country_flag = kuk_claim_balkans
-			badboy = 12
-			set_global_flag = retake_balkan_territory
-			CRO = { all_core = { add_core = KUK } }
-			SLO = { all_core = { add_core = KUK } }
-			BOS = { all_core = { add_core = KUK } }
-			AUS_2538 = { add_core = KUK } # Vojvodina
-			TRE_736 = { add_core = KUK } # Trieste
-		}
+	effect = {
+		prestige = 70
+		set_country_flag = kuk_claim_balkans
+		badboy = 12
+		set_global_flag = retake_balkan_territory
+		CRO = { all_core = { add_core = KUK } }
+		SLO = { all_core = { add_core = KUK } }
+		BOS = { all_core = { add_core = KUK } }
+		AUS_2538 = { add_core = KUK } # Vojvodina
+		TRE_736 = { add_core = KUK } # Trieste
 	}
 
-	kuk_crown_galicia = {
-		picture = "kuk_claim_galicia"
-		potential = {
-			tag = KUK
-			has_global_flag = protect_czechoslovakia
-			NOT = { has_country_flag = kuk_claim_galicia }
+}
+kuk_crown_galicia = {
+	picture = "kuk_claim_galicia"
+	potential = {
+		tag = KUK
+		has_global_flag = protect_czechoslovakia
+		NOT = { has_country_flag = kuk_claim_galicia }
 		}
-		allow = {
-			war = no
-			is_vassal = no
-			owns = 950
-			owns = 625
-			owns = 632
+	allow = {
+		war = no
+		is_vassal = no
+		owns = 950
+		owns = 625
+		owns = 632
 		}
-		effect = {
-			prestige = 20
-			badboy = 5
-			set_country_flag = kuk_claim_galicia
-			AUS_702 = { add_core = KUK }
-			703 = { add_core = KUK }
-			2584 = { add_core = KUK }
-		}
-	}
-
-	kuk_transylvania = {
-		picture = "kuk_claim_balkan_transylvania"
-		potential = {
-			tag = KUK
-			NOT = { has_country_flag = kuk_claim_transylvania }
-		allow = {
-			war = no
-			is_vassal = no
-			}
-		effect = {
-			prestige = 15
-			badboy = 10
-			set_country_flag = kuk_claim_transylvania
-			AUS_654 = { add_core = KUK }
-			AUS_652 = { add_core = KUK }
-			AUS_657 = { add_core = KUK }
-			}
+	effect = {
+		prestige = 20
+		badboy = 5
+		set_country_flag = kuk_claim_galicia
+		AUS_702 = { add_core = KUK }
+`		703 = { add_core = KUK }
+		2584 = { add_core = KUK }
 		}
 	}
-
+kuk_transylvania = {
+	picture = "kuk_claim_balkan_transylvania"
+	potential = {
+		tag = KUK
+		NOT = { has_country_flag = kuk_claim_transylvania }
+	allow = {
+		war = no
+		is_vassal = no
+		}
+	effect = {
+		prestige = 15
+		badboy = 10
+		set_country_flag = kuk_claim_transylvania
+		AUS_654 = { add_core = KUK }
+		AUS_652 = { add_core = KUK }
+		AUS_657 = { add_core = KUK }
+		}
+	}
 }

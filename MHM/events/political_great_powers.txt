@@ -784,30 +784,6 @@ country_event = {
 	}
 }
 
-country_event = {
-    id = 19369
-    title = "Our New Puppet"
-    desc = "Our previous war has given us a new satellite!"
-    picture = "treaty"
-
-    is_triggered_only = yes
-	
-	immediate = {
-		any_country = {
-            limit = {
-                exists = yes
-                NOT = { has_country_flag = existing_country }
-                is_vassal = no
-            }
-            country_event = 19370
-        }
-	}
-
-    option = {
-        name = "Good"
-    }
-}
-
 #Event fires upon completion of the make_puppet CB for the defeated nation
 country_event = {
 	id = 19370
@@ -1296,7 +1272,7 @@ country_event = {
 			owner = { government = presidential_dictatorship country_event = 800050 }
 		}
 		random_owned = { 
-			limit = { FROM = { government = nationalist_dictatorship } }
+			limit = { FROM = { government = government = nationalist_dictatorship } }
 			owner = { government = nationalist_dictatorship country_event = 800050 }
 		}
 		random_owned = { 

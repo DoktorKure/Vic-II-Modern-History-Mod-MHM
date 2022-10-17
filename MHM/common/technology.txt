@@ -113,7 +113,13 @@ schools = {
 		commerce_tech_research_bonus = 0.1
 		culture_tech_research_bonus = -0.2
 		industry_tech_research_bonus = 0.2
-		navy_tech_research_bonus = 0
+	}
+	ENG_tech_school = { # British Empire
+		army_tech_research_bonus = -0.1
+		commerce_tech_research_bonus = 0.1
+		culture_tech_research_bonus = 0.2
+		industry_tech_research_bonus = -0.2
+		navy_tech_research_bonus = 0.2
 	}
 	FRA_tech_school = { # French Empire
 		army_tech_research_bonus = -0.1
@@ -135,6 +141,13 @@ schools = {
 		culture_tech_research_bonus = 0.2
 		industry_tech_research_bonus = -0.2
 		navy_tech_research_bonus = 0.2
+	}
+	ENG_1_tech_school = { # Commonwealth of Nations
+		army_tech_research_bonus = -0.1
+		commerce_tech_research_bonus = 0.1
+		culture_tech_research_bonus = 0.1
+		industry_tech_research_bonus = 0.1
+		navy_tech_research_bonus = -0.2
 	}
 	XGC_tech_school = { # Gulf Cooperation Council
 		army_tech_research_bonus = -0.1
@@ -186,13 +199,6 @@ schools = {
 		navy_tech_research_bonus = 0
 	}
 	XEC_tech_school = { # ECCAS
-		army_tech_research_bonus = -0.1
-		commerce_tech_research_bonus = 0.1
-		culture_tech_research_bonus = 0.25
-		industry_tech_research_bonus = 0.05
-		navy_tech_research_bonus = 0
-	}
-	XIO_tech_school = { # SAARC
 		army_tech_research_bonus = -0.1
 		commerce_tech_research_bonus = 0.1
 		culture_tech_research_bonus = 0.25
@@ -283,7 +289,7 @@ schools = {
 		industry_tech_research_bonus = 0.05
 		navy_tech_research_bonus = 0
 	}
-	IMP_tech_school = { # Commonwealth Realm
+	IMP_tech_school = { # Commonwealth of Nations
 		army_tech_research_bonus = -0.1
 		commerce_tech_research_bonus = 0.15
 		culture_tech_research_bonus = 0.1

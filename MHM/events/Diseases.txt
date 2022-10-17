@@ -67,7 +67,8 @@ country_event = {
 		months = 800
 		modifier = {
 			factor = 0.9
-			OR = {  government = proletarian_dictatorship government = proletarian_dictatorship1 }
+			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
 		}
 		modifier = {
 			factor = 1.5

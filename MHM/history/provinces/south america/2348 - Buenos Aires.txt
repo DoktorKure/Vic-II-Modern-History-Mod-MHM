@@ -8,12 +8,12 @@ colonial = 0
 naval_base = 2
 state_building = {
 	level = 3
-	building = canned_meat_factory
+	building = cattle_canned_food_factory
 	upgrade = yes
 }
 state_building = {
 	level = 3
-	building = fabric_factory
+	building = wool_fabric_factory
 	upgrade = yes
 }
 state_building = {

@@ -67,7 +67,7 @@ country_event = {
 		
 		#Remove constricting trade
 		remove_country_modifier = constricting_international_trade
-		remove_country_modifier = constricted_international_trade
+		remove_country_modifier = constrict_international_trade_modifier
 		
 		#Jingoism grows based on gov type
 		random_owned = {
@@ -249,7 +249,7 @@ country_event = {
 		
 		#Remove constricting trade
 		remove_country_modifier = constricting_international_trade
-		remove_country_modifier = constricted_international_trade
+		remove_country_modifier = constrict_international_trade_modifier
 
 		#Pacifism grows based on gov type
 		random_owned = {
@@ -574,7 +574,7 @@ country_event = {
 		
 		#Remove constricting trade
 		remove_country_modifier = constricting_international_trade
-		remove_country_modifier = constricted_international_trade
+		remove_country_modifier = constrict_international_trade_modifier
 
 		
 
@@ -735,7 +735,7 @@ country_event = {
 		
 		#Remove constricting trade
 		remove_country_modifier = constricting_international_trade
-		remove_country_modifier = constricted_international_trade
+		remove_country_modifier = constrict_international_trade_modifier
 
 		#Slight ideology gain based on gov type
 		#Default increase

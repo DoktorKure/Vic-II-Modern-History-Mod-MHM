@@ -94,6 +94,137 @@ OR = { NOT = { year = 1955 } war = no }
 			}
 }
 
+#Startup capital
+country_event = {
+	id = 886
+	title = "Marshall Plan aid for $COUNTRY$"
+	desc = "US Monetary Aid for $COUNTRY$ has arrived."
+	picture = "GOLD"
+	
+	
+	trigger = {
+		year = 1950
+	OR = { tag = ENG tag = FRA tag = NET tag = BEL }
+		ai = yes
+		NOT = { has_country_flag = moneyforallfraeng }
+
+	}
+	
+	option = {
+		name = "Money really does grows on trees!"
+		treasury = 2000000
+		set_country_flag = moneyforallfraeng
+		}
+}
+
+#Startup capital - CHINA
+country_event = {
+	id = 887
+	title = "Financial Aid from the Communist Internationale"
+	desc = "The Internationale has raised some money for our cause."
+	picture = "GOLDCOMM"
+	
+	
+	trigger = {
+		year = 1946
+		NOT = { year = 1990 }
+		OR = { NOT = { year = 1955 } war = no }
+		tag = CHI
+		ai = yes
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+		war_with = KMT
+		NOT = { money = 1000000 }
+
+	}
+	
+	option = {
+		name = "We thank our Communist Brothers!"
+		treasury = 2000000
+				}
+}
+
+#Startup capital
+country_event = {
+	id = 888
+	title = "Start up capital"
+	desc = "Bankers laden with gold have mysteriously appeared in our country."
+	picture = "GOLD"
+	
+	
+	trigger = {
+		year = 1946
+		is_greater_power = yes
+		ai = yes
+		NOT = { has_country_flag = moneyforall }
+	}
+	
+	option = {
+		name = "Money really does grows on trees!"
+		treasury = 2000000
+		set_country_flag = moneyforall
+		}
+}
+
+#Startup capital
+country_event = {
+	id = 783
+	title = "Start up capital"
+	desc = "Bankers laden with gold have mysteriously appeared in our country."
+	picture = "GOLD"
+	
+	trigger = {
+		NOT = { has_country_flag = playermoneyboost }
+	}
+	
+	option = {
+		name = "Money really does grows on trees!"
+		any_owned = { owner = { money = 10000 } }
+		set_country_flag = playermoneyboost
+	}
+}
+
+#Export focus cleanup
+country_event = {
+	id = 123242
+	title = "Strengthen our economic policy's reach"
+	desc = "Some of our provinces are not benefitting from our current economic focus, we should rectify it immediately."
+	picture = "economicfocus"
+	
+	
+	trigger = {
+		year = 1946
+		has_country_flag = exportfocus
+		any_owned_province = { AND = { is_colonial = no NOT = { has_province_modifier = exportfocus } } }
+	}
+	
+	option = {
+		name = "Yes, do it"
+		treasury = -1000
+		any_owned = { limit = { AND = { is_colonial = no NOT = { has_province_modifier = exportfocus } } } add_province_modifier = { name = exportfocus duration = -1 } }
+		}
+}
+
+#Import focus cleanup
+country_event = {
+	id = 123243
+	title = "Strengthen our economic policy's reach"
+	desc = "Some of our provinces are not benefitting from our current economic focus, we should rectify it immediately."
+	picture = "economicfocus"
+	
+	
+	trigger = {
+		year = 1946
+		has_country_flag = importfocus
+		any_owned_province = { AND = { is_colonial = no NOT = { has_province_modifier = importsubstitutionfocus } } }
+	}
+	
+	option = {
+		name = "Yes, do it"
+		treasury = -1000
+		any_owned = { limit = { AND = { is_colonial = no NOT = { has_province_modifier = importsubstitutionfocus } } } add_province_modifier = { name = importsubstitutionfocus duration = -1 } }
+		}
+}
+
 #JAPAN population boom
 country_event = {
 	id = 1200234
@@ -293,6 +424,53 @@ is_triggered_only = yes
 		name = "We have to adapt to this changing environment"
 		activate_technology = decolonization		activate_technology = wars_of_national_liberation
 		set_country_flag = decoloniasation1
+		}
+}
+
+
+#Startup capital
+country_event = {
+	id = 889
+	title = "Start up capital"
+	desc = "Bankers laden with gold have mysteriously appeared in our country."
+	picture = "GOLD"
+	
+	
+	trigger = {
+		year = 1946
+		is_greater_power = no
+		ai = yes
+		NOT = { tag = BRZ }
+		NOT = { has_country_flag = moneyforall425 }
+
+	}
+	
+	option = {
+		name = "Money really does grows on trees!"
+		treasury = 10000
+		set_country_flag = moneyforall425
+		}
+}
+#Startup capital
+country_event = {
+	id = 890
+	title = "Start up capital"
+	desc = "Bankers laden with gold have mysteriously appeared in our country."
+	picture = "GOLD"
+	
+	
+	trigger = {
+		year = 1946
+		ai = yes
+		is_greater_power = yes
+		NOT = { has_country_flag = moneyforall536 }
+
+	}
+	
+	option = {
+		name = "Money really does grows on trees!"
+		treasury = 1000000
+		set_country_flag = moneyforall536
 		}
 }
 

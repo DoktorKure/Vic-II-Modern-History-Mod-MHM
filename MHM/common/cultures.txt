@@ -222,9 +222,15 @@ british_cultures = {
 	unit = BritishGC
 	british = {
 		#!religion = { protestant }
-		color = { 244 110 116 }
+		color = { 209  66  58 }
 		first_names = { Albert Anthony Alexander Alfred Archibald Arthur Augustus Benjamin Bernard Charles Colbert Colin Cyril David Donald Douglas Edmund Edwar Fairfax Ferdinand Francis Frederick Geoffrey George Graham Henrey Herbert Horatio Hubert Hugh Ian James Jeremy John Joseph Leopold Lester Louis Martin Nigel Oswald Percy Reginald Richard Robert Russell Stanley Thomas Wallace William Winston Zachary Brian Cathal Christopher Con Daniel Denis Desmond Éamon Edward Ernes Fionán Frank Harry Jack Kevin Liam Michael Patrick Peter Séan Alwyn Alastair Alban Alpin Caradog Angus Aulay Blane Boyd Calum Cynog Coll Derek Derwyn Dougal Duff Duncan Ewan Farquar Fingal Finlay Gavin Gillian Gillis Gordon Greer Hamish Ivar Kenneth Kentigern Kirk Kyle Lachlan Lorne Malcolm Mirren Mungo Neil Nevin Ranald Rory Ross Sholto Somerled Tavish Torquil }
 		last_names = { Allenby Battemberg Beatty Beresford Brown Buller Butler Cameron Campbell Cardigan Churchill Cochrane Cockburn "de Robeck" Dundas Fisher French Gough Grant Grenfell Haig Hamilton Hardinge Havelock Hope Jellicoe Kitchener Laurie Lyons Madden Major May Milne Montgomery Moresby Mundy Napier Odoni "of Hannover" "of Saxe-Coburg-Gotha" Plummer Ragland Roberts Seaton Seymour Smith Smith-Dorrien Snow Stewart Thesiger Tyron Tyrwhitt Williams Windsor Wolseley Wood Aiken Ashe Breen Brugha Collins Connolly Cosgrave Craig "de Valera" Donnelly FitzGerald Griffith Kelly Larkin Lynch Mallin McCartan McCullough McGarry McGuinness Mulcahy O'Brien O'Connor O'Doherty O'Higgins O'Leary O'Mara Pearse Plunket White Ace Adams Anwyl Baugh Benbow Brydon Cadwalader Clocker Craddock Faithfull Foulkes Gethin Griffiths Gwyther Hathaway Heilyn Humphreys Ithell Llewelyn Llywarch Phillips Salusbury Smout Trewent Wigley Yorath }
+	}
+	english = {
+		#!religion = { protestant }
+		color = { 220 100 220 }
+		first_names = { Albert Anthony Alexander Alfred Archibald Arthur Augustus Benjamin Bernard Charles Colbert Colin Cyril David Donald Douglas Edmund Edwar Fairfax Ferdinand Francis Frederick Geoffrey George Graham Henrey Herbert Horatio Hubert Hugh Ian James Jeremy John Joseph Leopold Lester Louis Martin Nigel Oswald Percy Reginald Richard Robert Russell Stanley Thomas Wallace William Winston Zachary }
+		last_names = { Allenby Battemberg Beatty Beresford Brown Buller Butler Cameron Campbell Cardigan Churchill Cochrane Cockburn "de Robeck" Dundas Fisher French Gough Grant Grenfell Haig Hamilton Hardinge Havelock Hope Jellicoe Kitchener Laurie Lyons Madden Major May Milne Montgomery Moresby Mundy Napier Odoni "of Hannover" "of Saxe-Coburg-Gotha" Plummer Ragland Roberts Seaton Seymour Smith Smith-Dorrien Snow Stewart Thesiger Tyron Tyrwhitt Williams Windsor Wolseley Wood }
 	}
 	scottish = {
 		#!religion = { protestant }
@@ -938,7 +944,7 @@ arabic = {
 		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
 	}
 	saudi = {
-		color = { 60 255 113 }
+		color = { 60 300 113 }
 		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
 		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
 	}
@@ -1513,9 +1519,15 @@ south_asian_indian = {
 		first_names = { Lokendra Raghuraj Vijay Vishvanath Pheran Jugal Parbhu Narayan Ishvari Udit Prasan Mahip }
 		last_names = { Singh }
 	}
-	hindi = {
+	indian = {
 		#!religion = { hindu }
 		color = { 255 140 0 }
+		first_names = { Ranjit Kharak Nau Nihal Chand Kaur Shir Dhalip Diwan Jassa Hari Bhuma Nawab Banda Baba Kapur }
+		last_names = { Singh Kunwar Bahadur Dhillon Nalwa Ahluwalia Ramgarhia Mal Mulraj }
+	}
+	hindi = {
+		#!religion = { hindu }
+		color = { 180 75 130 }
 		first_names = { Ranjit Kharak Nau Nihal Chand Kaur Shir Dhalip Diwan Jassa Hari Bhuma Nawab Banda Baba Kapur }
 		last_names = { Singh Kunwar Bahadur Dhillon Nalwa Ahluwalia Ramgarhia Mal Mulraj }
 	}
@@ -1540,6 +1552,11 @@ south_asian_indian = {
 		color = { 99 12 89 }
 		first_names = { Chetan Fakirbhai Jivraj Madhavsingh Khemchand Manubhai Bharatsingh Balwantry Chabildas Maniraj }
 		last_names = { Pansara Vaghela Solanki Modhvadia Mehta Baro Parmar }
+	}
+	punjabi = {
+		color = { 90 190 41 }
+		first_names = { Ranjit Kharak Nau Nihal Chand Kaur Shir Dhalip Diwan Jassa Hari Bhuma Nawab Banda Baba Kapur }
+		last_names = { Singh Kunwar Bahadur Dhillon Nalwa Ahluwalia Ramgarhia Mal Mulraj }
 	}
 	manupur = {
 		#!religion = { hindu }
@@ -1636,8 +1653,15 @@ dravidian_cultures = {
 south_asian_pakistani = {
 	leader = indian
 	unit = IndianGC
-	punjabi = {
-		color = { 90 190 41 }
+	indian_muslim = {
+		#!religion = { sunni }
+		color = { 0 100 0 }
+		first_names = { Ranjit Kharak Nau Nihal Chand Kaur Shir Dhalip Diwan Jassa Hari Bhuma Nawab Banda Baba Kapur }
+		last_names = { Singh Kunwar Bahadur Dhillon Nalwa Ahluwalia Ramgarhia Mal Mulraj }
+	}
+	indian_shia = {
+		#!religion = { shiite }
+		color = { 107 142 35 }
 		first_names = { Ranjit Kharak Nau Nihal Chand Kaur Shir Dhalip Diwan Jassa Hari Bhuma Nawab Banda Baba Kapur }
 		last_names = { Singh Kunwar Bahadur Dhillon Nalwa Ahluwalia Ramgarhia Mal Mulraj }
 	}

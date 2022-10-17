@@ -3,6 +3,7 @@ primary_culture = white_anglo
 culture = dixie
 culture = texan
 culture = jewish
+culture = german
 religion = secularism
 government = democracy
 plurality = 9.0
@@ -94,6 +95,7 @@ decision = jointheunsc
 
 decision = jointheimf
 
+decision = atomic_setup
 oob = "/USA_oob.txt"
 
 1950.1.1 = {
@@ -277,6 +279,7 @@ oob = "/USA_oob.txt"
 	green_blue_water_navies = 1
 	carrier_battle_groups = 1
 	
+	decision = hydrogen_setup
 	decision = 1992_start_decision
 	oob = "1992/USA_oob.txt"
 }

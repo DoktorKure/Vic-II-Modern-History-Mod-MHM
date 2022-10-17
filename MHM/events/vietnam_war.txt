@@ -619,7 +619,7 @@ country_event = {
 		
 		#More soldiers
 		any_pop = { 
-			limit = { type = soldiers }
+			limit = { type = soldier }
 			reduce_pop = 1.10
 			ideology = {
 				factor = 0.05

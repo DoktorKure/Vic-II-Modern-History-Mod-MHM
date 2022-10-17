@@ -1099,7 +1099,7 @@ assimilation_chance = { # 1
 			culture = japanese 
 			culture = korean 
 		}
-		country = { is_culture_group = chinese_cultures } #Chinese culture group
+		country = { is_culture_group = east_asian } #Chinese culture group
 	}
 
 	modifier = {

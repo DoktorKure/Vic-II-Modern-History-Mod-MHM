@@ -1,5 +1,5 @@
-owner = SYR
-controller = SYR
+owner = ALW
+controller = ALW
 add_core = SYR
 add_core = ALW
 trade_goods = cotton
@@ -8,7 +8,7 @@ terrain = marginal_farmland
 colonial = 0
 state_building = {
 	level = 1
-	building = canned_vegetables_factory
+	building = grain_canned_food_factory
 	upgrade = yes
 }
 state_building = {

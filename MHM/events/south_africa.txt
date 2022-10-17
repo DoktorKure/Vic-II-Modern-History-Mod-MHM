@@ -533,7 +533,7 @@ country_event = {
 		set_country_flag = bothas_reforms_flag
 		
 		add_accepted_culture = coloured
-		add_accepted_culture = hindi
+		add_accepted_culture = indian
 		
 		prestige_factor = -0.05
 		
@@ -1280,7 +1280,7 @@ country_event = {
 			add_accepted_culture = british
 			add_accepted_culture = afrikaaner
 			add_accepted_culture = coloured
-			add_accepted_culture = hindi
+			add_accepted_culture = indian
 		}
 		country_event = 800054
 		badboy = -100
@@ -1343,7 +1343,7 @@ country_event = {
 		add_accepted_culture = british
 		add_accepted_culture = black_anglo
 		add_accepted_culture = coloured
-		add_accepted_culture = hindi
+		add_accepted_culture = indian
 		
 		#Remove Bantustans
 		set_country_flag = bantustans_removed

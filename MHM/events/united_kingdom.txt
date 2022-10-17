@@ -151,11 +151,11 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = { tag = ENG tag = IMP }
+		tag = ENG
 		year = 1950
 		NOT = { year = 1990 }
 		
-		OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
+		government = hms_government
 		war = no
 		
 		is_disarmed = no
@@ -255,7 +255,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-		OR = { tag = ENG tag = IMP }
+		tag = ENG
 		year = 1952 
 		NOT = { year = 1963 }
 		
@@ -289,7 +289,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = { tag = ENG tag = IMP }
+		tag = ENG
 		year = 1953 
 		NOT = { year = 1963 }
 		has_country_flag = george_vi_funeral
@@ -410,7 +410,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = { tag = ENG tag = IMP }
+		tag = ENG
 		year = 1965
 		NOT = { year = 1970 }
 		OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
@@ -1236,7 +1236,7 @@ country_event = {
 		#English pops are more conservative and populist
 		any_pop = {
 			limit = {
-				culture = british
+				culture = english
 			}
 			ideology = { factor = 0.10 value = conservative }
 			ideology = { factor = 0.05 value = populist }
@@ -1321,7 +1321,7 @@ country_event = {
 		#English pops are not happy
 		any_pop = {
 			limit = {
-				culture = british
+				culture = english
 			}
 			scaled_militancy = {
 				factor = 5
@@ -1408,7 +1408,7 @@ country_event = {
 		#English pops are more conservative and populist
 		any_pop = {
 			limit = {
-				culture = british
+				culture = english
 			}
 			ideology = { factor = 0.10 value = conservative }
 			ideology = { factor = 0.05 value = populist }
@@ -1454,7 +1454,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = { tag = ENG tag = IMP }
+		tag = ENG
 		year = 2021
 		NOT = { year = 2023 }
 		

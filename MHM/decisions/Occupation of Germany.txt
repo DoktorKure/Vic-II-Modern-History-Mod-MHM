@@ -1,60 +1,5 @@
 political_decisions = {
 
-	monnet_plan = {
-		picture = "monnet_plan"
-		potential = {
-			owns = 574
-			574 = { NOT = { is_core = THIS } }
-			NOT = { has_country_flag = monnet_plan }
-		}
-
-		allow = {
-			marshall_plan = 1
-		}
-
-		effect = {
-			set_country_flag = monnet_plan
-			any_owned = { 
-				limit = { is_core = GER NOT = { province_id = 573 } }
-				add_province_modifier = { name = colonial_exploitation duration = 700 }
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}		
-	}
-	
-	saar_protectorate = {
-		picture = "saar_protectorate"
-		potential = {
-			tag = FRA
-			year = 1947
-			owns = 573
-			573 = { NOT = { is_core = THIS } }
-			NOT = { has_country_flag = saar_protectorate }
-			has_country_flag = saar_option
-		}
-
-		allow = {
-			marshall_plan = 1
-		}
-
-		effect = {
-			prestige = 25
-			set_country_flag = saar_protectorate
-			release_vassal = SAL
-			SAL = { 
-				government = sar_government 
-				country_event = 800054 
-				ruling_party_ideology = conservative
-			}
-			diplomatic_influence = { who = SAL value = 200 }
-		}
-		ai_will_do = {
-			factor = 1
-		}		
-	}
-
 	#Alternate Route from trizonia
 	form_west_germany = {
 		picture = "establish_west_germany"
@@ -63,7 +8,7 @@ political_decisions = {
 			NGF = { exists = no }
 			is_our_vassal = OG4
 			OR = { has_country_flag = trizone_formed exists = DDR }
-			OR = { has_country_flag = no_partition_of_germany has_country_flag = saar_option }
+			OR = { has_country_flag = no_partition_of_west_germany has_country_flag = saar_option }
 			NOT = { has_country_flag = establish_west_germany }
 		}
 
@@ -86,116 +31,6 @@ political_decisions = {
 			factor = 1
 		}
 	}
-	
-	#Non-trizonia route
-	establish_west_germany = {
-		picture = "establish_west_germany"
-		potential = {
-			GER = { exists = no }
-			NGF = { exists = no }
-			SGF = { exists = no }
-			DDR = { exists = yes }
-			OR = { has_country_flag = no_partition_of_germany has_country_flag = saar_option }
-			OR = { 
-				AND = { 
-					tag = FRA 
-					572 = { owned_by = OG2 } 
-				}
-				AND = { 
-					tag = ENG
-					369 = { owned_by = OG3 }
-				}
-				AND = { 
-					tag = USA 
-					564 = { owned_by = OG4 } 
-				}
-			}
-			NOT = { has_country_flag = establish_west_germany }
-		}
-
-		allow = {
-			NOT = { has_country_flag = establish_west_germany }
-			OR = { 
-				AND = { 
-					tag = FRA 
-					572 = { owned_by = OG2 } 
-				}
-				AND = { 
-					tag = ENG
-					369 = { owned_by = OG3 }
-				}
-				AND = { 
-					tag = USA 
-					564 = { owned_by = OG4 } 
-				}
-			}
-			OR = {
-				AND = {
-					year = 1950
-					ai = yes
-				}
-				AND = {
-					relation = { who = FRA value = 0 }
-					ai = no
-				}
-			}
-			war = no
-		}
-
-		effect = {
-			set_country_flag = establish_west_germany
-			random_owned = { limit = { owner = { tag = USA has_country_flag = establish_west_germany } } owner = { OG4 = { change_tag = GER } } }
-			random_owned = { limit = { owner = { tag = ENG has_country_flag = establish_west_germany } } owner = { OG3 = { change_tag = GER } } }
-			random_owned = { limit = { owner = { tag = FRA has_country_flag = establish_west_germany } } owner = { OG2 = { change_tag = GER } } }
-			FRA = { diplomatic_influence = { who = GER value = 200 } }
-			prestige = 25
-			relation = { who = GER value = 200 }
-		}
-		ai_will_do = {
-			factor = 1
-		}		
-	}
-	
-	#Old way
-	establish_east_germany = {
-		picture = "establish_east_germany"
-		potential = {
-			tag = RUS
-			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
-			OG1 = { exists = no }
-			DDR = { exists = no }
-			NOT = { has_country_flag = no_partition_of_germany }
-			owns = 551
-			OR = { 
-				year = 1952
-				GER = { exists = yes }
-			}
-			NOT = { has_country_flag = establish_east_germany }
-		}
-
-		allow = {
-			DDR = { exists = no }
-			OR = { 
-				year = 1952
-				GER = { exists = yes }
-			}
-			NOT = { has_country_flag = establish_east_germany }
-			war = no
-		}
-
-		effect = {
-			set_country_flag = establish_east_germany
-			any_owned = { limit = { is_core = GER } add_core = DDR }
-			any_owned = { limit = { is_core = DDR } add_core = GER }
-			release_vassal = DDR
-			diplomatic_influence = { who = DDR value = 200 }
-			military_access = RUS
-			prestige = 50
-		}
-		ai_will_do = {
-			factor = 1
-		}		
-	}
 
 	#Via occupation zone mechanic
 	form_east_germany = {
@@ -205,7 +40,7 @@ political_decisions = {
 			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			is_our_vassal = OG1
 			DDR = { exists = no }
-			NOT = { has_country_flag = no_partition_of_germany }
+			NOT = { has_country_flag = no_partition_of_west_germany }
 			OR = { 
 				year = 1952
 				GER = { exists = yes }
@@ -238,7 +73,7 @@ political_decisions = {
 			}
 			OG1 = { change_tag = DDR }
 			diplomatic_influence = { who = DDR value = 200 }
-			RUS = { military_access = DDR }
+			DDR = { military_access = RUS }
 			DDR = { primary_culture = german country_event = 1600 }
 			prestige = 50
 		}
@@ -247,44 +82,11 @@ political_decisions = {
 		}		
 	}
 
-	end_occupation_of_germany = {
-		picture = "establish_west_germany"
-		potential = {
-			GER = { exists = yes }
-			OR = { is_our_vassal = OG1 is_our_vassal = OG2 is_our_vassal = OG3 is_our_vassal = OG4 is_our_vassal = OG5 }
-			NOT = { has_country_flag = end_occupation_of_germany }
-			OR = { has_country_flag = no_partition_of_germany has_country_flag = saar_option has_country_flag = accept_united_germany }
-		}
-
-		allow = {
-			NOT = { has_country_flag = end_occupation_of_germany }
-			GER = { exists = yes }
-		}
-
-		effect = {
-			set_country_flag = end_occupation_of_germany
-			random_owned = { limit = { owner = { is_our_vassal = OG1 } } owner = { GER = { prestige = 50 inherit = OG1 } } }
-			random_owned = { limit = { owner = { is_our_vassal = OG2 } } owner = { GER = { prestige = 50 inherit = OG2 } } }
-			random_owned = { limit = { owner = { is_our_vassal = OG3 } } owner = { GER = { prestige = 50 inherit = OG3 } } }
-			random_owned = { limit = { owner = { is_our_vassal = OG4 } } owner = { GER = { prestige = 50 inherit = OG4 } } }
-			random_owned = { limit = { owner = { is_our_vassal = OG5 } } owner = { GER = { prestige = 50 inherit = OG5 } } }
-			diplomatic_influence = { who = GER value = 100 }
-			relation = { who = GER value = 200 }
-
-			#If DDR exists and USSR accepts united germany through airlift
-			random_owned = { limit = { owner = { is_our_vassal = DDR } } owner = { GER = { inherit = DDR } } }
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
 	form_occupation_zone_ger = {
 		picture = "form_occupation_zone_ger"
 		potential = {
 			has_country_flag = occupation_zone_potential
 			any_owned_province = { has_province_modifier = occupied_province is_core = GER }
-			NOT = { has_country_flag = policy_on_germany }
 		}
 
 		allow = {
@@ -320,12 +122,6 @@ political_decisions = {
 				owner = { any_owned = { limit = { is_core = GER } secede_province = OG1 } create_vassal = OG1 OG1 = { civilized = yes government = mandate_government country_event = 800054 ruling_party_ideology = socialist primary_culture = german } RUS = { diplomatic_influence = { who = OG1 value = 200 } } }
 			}
 
-			#POL occupied zone
-			random_owned = {
-				limit = { owner = { tag = POL } }
-				owner = { any_owned = { limit = { is_core = GER } secede_province = OG5 } create_vassal = OG5 OG1 = { civilized = yes government = mandate_government country_event = 800054 ruling_party_ideology = socialist primary_culture = german } POL = { diplomatic_influence = { who = OG5 value = 200 } } }
-			}
-
 		}
 		ai_will_do = {
 			factor = 1
@@ -335,9 +131,8 @@ political_decisions = {
 	return_ger_zones = {
 		picture = "return_ger_zones"
 		potential = {
-			OR = { is_our_vassal = OG1 is_our_vassal = OG2 is_our_vassal = OG3 is_our_vassal = OG4 is_our_vassal = OG5 }
+			OR = { is_our_vassal = OG1 is_our_vassal = OG2 is_our_vassal = OG3 is_our_vassal = OG4 }
 			GER = { exists = yes }
-			NOT = { has_global_flag = player_choice_GER_occupation }
 		}
 
 		allow = {
@@ -359,8 +154,6 @@ political_decisions = {
 			random_owned = { limit = { owner = { is_our_vassal = OG3 } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG3 } } }
 
 			random_owned = { limit = { owner = { is_our_vassal = OG4 } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG4 } } }
-
-			random_owned = { limit = { owner = { is_our_vassal = OG5 } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG5 } } }
 		}
 		ai_will_do = {
 			factor = 1

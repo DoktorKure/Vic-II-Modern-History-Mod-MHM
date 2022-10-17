@@ -30,7 +30,7 @@ country_event = {
 			modifier = {
 				factor = 0
 				badboy = 0.8
-				NOT = { OR = { government = nationalist_dictatorship government = sectarian_dictatorship } }
+				NOT = { OR = { government = nationalist_dictatorship government = sectarian_dictatorship }
 				NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			}
 			modifier = {

@@ -50,7 +50,7 @@ state_building = {
 }
 state_building = {
 	level = 2
-	building = telecommunications_factory
+	building = electric_telecommunications_factory
 	upgrade = yes
 }
 }

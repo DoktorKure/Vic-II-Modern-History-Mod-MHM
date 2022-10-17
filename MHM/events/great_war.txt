@@ -1509,7 +1509,7 @@ country_event = {
 			modifier = {
 				factor = 0.5
 				NOT = { is_culture_group = FROM }
-				NOT = { is_culture_group = afrikaaner }
+				NOT = { is_culture_group = neo_european_cultures }
 			}
 			modifier = {
 				factor = 1.25

@@ -1066,14 +1066,6 @@ rich_everyday_needs = 0.4
 icon = 13
 }
 
-collectivisation_setup = {
-poor_everyday_needs = 0.2
-middle_everyday_needs = 0.3
-rich_everyday_needs = 0.5
-population_growth = -0.002
-icon = 14
-}
-
 ### Crisis Control ###
 
 unsc_vote_crisis = {
@@ -1440,6 +1432,7 @@ mine_rgo_eff = -0.1
 immigrant_push = 0.20
 immigrant_attract = -0.4
 pop_consciousness_modifier = -0.10
+population_growth = 0.001
 icon = 14
 }
 
@@ -1453,12 +1446,13 @@ mine_rgo_eff = -0.05
 immigrant_push = 0.10
 immigrant_attract = -0.2
 pop_consciousness_modifier = -0.05
+population_growth = -0.001
 icon = 14
 }
 
 dev_5 = { #40% - 50% literacy
 icon = 13
-population_growth = -0.001
+population_growth = -0.002
 }
 
 dev_6 = { #50% - 60% literacy
@@ -1468,7 +1462,7 @@ local_RGO_throughput = 0.10
 farm_rgo_eff = 0.10
 mine_rgo_eff = 0.10
 pop_consciousness_modifier = 0.05
-population_growth = -0.002
+population_growth = -0.005
 icon = 13
 }
 
@@ -2003,7 +1997,6 @@ local_artisan_output = -0.25
 pop_militancy_modifier = 0.05
 local_factory_throughput = -0.25
 social_reform_desire = 0.5
-population_growth = -0.001
 local_factory_input = 0.20
 icon = 18  
 }
@@ -3212,15 +3205,13 @@ centralhigh = {
 
 #Pop effects
 global_assimilation_rate = 0.2
-core_pop_consciousness_modifier = -0.05
-core_pop_militancy_modifier = -0.05
 non_accepted_pop_consciousness_modifier = 0.05
 non_accepted_pop_militancy_modifier = 0.05
 
 #Government effects
 tax_efficiency = 0.05
-education_efficiency_modifier = -0.10
-administrative_efficiency_modifier = -0.10
+education_efficiency_modifier = 0.10
+administrative_efficiency_modifier = 0.10
 tariff_efficiency_modifier = 0.10
 suppression_points_modifier = 0.20
 
@@ -3231,13 +3222,13 @@ centralmedium = {
 
 #Pop effects
 global_assimilation_rate = 0.1
-core_pop_consciousness_modifier = -0.025
-core_pop_militancy_modifier = -0.025
 non_accepted_pop_consciousness_modifier = 0.025
 non_accepted_pop_militancy_modifier = 0.025
 
 #Government effects
 tax_efficiency = 0.025
+education_efficiency_modifier = 0.05
+administrative_efficiency_modifier = 0.05
 tariff_efficiency_modifier = 0.05
 suppression_points_modifier = 0.10
 
@@ -3247,14 +3238,8 @@ icon = 3
 centrallow = {
 
 #Pop effects
-core_pop_consciousness_modifier = 0.025
-core_pop_militancy_modifier = 0.025
-non_accepted_pop_consciousness_modifier = -0.025
-non_accepted_pop_militancy_modifier = -0.025
-
-#Government effects
-education_efficiency_modifier = 0.10
-administrative_efficiency_modifier = 0.10
+core_pop_militancy_modifier = 0.02
+core_pop_consciousness_modifier = 0.02
 
 icon = 3
 }
@@ -6771,12 +6756,6 @@ pop_replacement_province_modifier = {
 	immigrant_attract = 4.0
 	icon = 8
 }
-ethnic_cleansing_province_modifier = {
-	non_accepted_pop_consciousness_modifier = 0.5
-	non_accepted_pop_militancy_modifier = 0.5
-	immigrant_attract = -4.0
-	icon = 8
-}
 
 ##### POLITICAL EVENTS ######
 government_sanitarium = {
@@ -6968,12 +6947,12 @@ baby_boom = {
 }
 
 natalism_1 = {
-	population_growth = 0.001
+	population_growth = 0.005
 	icon = 19
 }
 
 natalism_2 = {
-	population_growth = 0.002
+	population_growth = 0.004
 	icon = 19
 }
 
@@ -6982,9 +6961,19 @@ natalism_3 = {
 	icon = 19
 }
 
+natalism_4 = {
+	population_growth = 0.002
+	icon = 19
+}
+
+natalism_5 = {
+	population_growth = 0.001
+	icon = 19
+}
+
 contraception_decay = {
 	tax_efficiency = -0.025
-	#global_population_growth = 0.002
+	global_population_growth = 0.002
 	#factory_throughput = -0.025
 	icon = 18
 }

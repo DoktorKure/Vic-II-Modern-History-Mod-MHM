@@ -1,9 +1,10 @@
 capital = 1288
-primary_culture = punjabi
+primary_culture = indian_muslim
 culture = baluchi
 culture = pashtun
 culture = sindi
 culture = kashmiri
+culture = punjabi
 religion = secularism
 government = democracy
 plurality = 1.0
@@ -181,5 +182,6 @@ schools = army_tech_school
 	anti_submarine_warfare = 1
 	command_of_the_sea = 1
 	sea_denial_strategy = 1
+decision = atomic_setup
 oob = "1992/PAK_oob.txt"
 }

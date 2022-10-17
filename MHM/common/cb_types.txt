@@ -114,9 +114,6 @@ gunboat = {
 	good_relation_militancy_factor = 1
 	
 	can_use = {
-	
-		NOT = { tag = CLN }
-		
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 		NOT = { is_our_vassal = THIS }
 		OR = {
@@ -172,32 +169,23 @@ acquire_substate_region = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-	
-		NOT = { tag = CLN }
 
-		#MHM conditions
-		THIS = { NOT = { has_country_flag = renounced_war_rights } }
-		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 
-		THIS = {
-			OR = { 
+#MHM conditions
+THIS = { NOT = { has_country_flag = renounced_war_rights } }
+NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 
-				government = theocracy
-				government = absolute_monarchy
-				government = nationalist_dictatorship
-				government = sectarian_dictatorship
-				government = presidential_dictatorship
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
+THIS = { OR = { 
 
-				war_policy = jingoism
-				war = yes
-				has_country_flag = world_medium
-				has_country_flag = world_high
-				has_country_flag = cold_war_high
-				has_country_modifier = cold_war_hot
-			} 
-		}
+government = theocracy
+government = absolute_monarchy
+government = nationalist_dictatorship
+government = sectarian_dictatorship
+government = presidential_dictatorship
+government = proletarian_dictatorship
+government = proletarian_dictatorship1
+
+war_policy = jingoism war = yes has_country_flag = world_medium has_country_flag = world_high has_country_flag = cold_war_high has_country_modifier = cold_war_hot } }
 
 
 		NOT = { is_our_vassal = THIS }
@@ -277,32 +265,23 @@ dismantle_forts = {
 	
 	
 	can_use = {
-	
-		NOT = { tag = CLN }
 
-		#MHM conditions
-		THIS = { NOT = { has_country_flag = renounced_war_rights } }
-		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 
-		THIS = {
-			OR = { 
+#MHM conditions
+THIS = { NOT = { has_country_flag = renounced_war_rights } }
+NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 
-				government = theocracy
-				government = absolute_monarchy
-				government = nationalist_dictatorship
-				government = sectarian_dictatorship
-				government = presidential_dictatorship
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
+THIS = { OR = { 
 
-				NOT = { war_policy = pacifism }
-				war = yes
-				has_country_flag = world_medium
-				has_country_flag = world_high
-				has_country_flag = cold_war_high
-				has_country_modifier = cold_war_hot
-			}
-		}
+government = theocracy
+government = absolute_monarchy
+government = nationalist_dictatorship
+government = sectarian_dictatorship
+government = presidential_dictatorship
+government = proletarian_dictatorship
+government = proletarian_dictatorship1
+
+NOT = { war_policy = pacifism } war = yes has_country_flag = world_medium has_country_flag = world_high has_country_flag = cold_war_high has_country_modifier = cold_war_hot } }
 
 
 		NOT = {
@@ -476,8 +455,6 @@ conquest = {
 	crisis = no
 	
 	can_use = {
-	
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -744,24 +721,22 @@ assert_hegemony = {
 	po_remove_prestige = yes
 
 	can_use = {
-	
-		NOT = { tag = CLN }
 
-		THIS = { NOT = { has_country_modifier = no_more_war } }
+THIS = { NOT = { has_country_modifier = no_more_war } }
 
-		THIS = { NOT = { has_country_flag = renounced_war_rights } }
+THIS = { NOT = { has_country_flag = renounced_war_rights } }
 
-		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
+NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 
-		#AI won't initate the war
-		THIS = { OR = { ai = no war = yes } }
+#AI won't initate the war
+THIS = { OR = { ai = no war = yes } }
 
-		#Superpower attacker
-		THIS = { is_greater_power = yes OR = { has_country_modifier = un_king1 has_country_modifier = un_king2 } is_disarmed = no NOT = { war_policy = pacifism } }
+#Superpower attacker
+THIS = { is_greater_power = yes OR = { has_country_modifier = un_king1 has_country_modifier = un_king2 } is_disarmed = no NOT = { war_policy = pacifism } }
 
-		#Superpower defender
-		is_greater_power = yes
-		OR = { has_country_modifier = un_king1 has_country_modifier = un_king2 }
+#Superpower defender
+is_greater_power = yes
+OR = { has_country_modifier = un_king1 has_country_modifier = un_king2 }
 
 	}
 	
@@ -810,34 +785,24 @@ add_to_sphere = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-	
-		NOT = { tag = CLN }
 
-		THIS = { NOT = { has_country_modifier = no_more_war } }
+THIS = { NOT = { has_country_modifier = no_more_war } }
 
-		THIS = { NOT = { has_country_flag = renounced_war_rights } }
-		THIS = { is_greater_power = yes }
-		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
+THIS = { NOT = { has_country_flag = renounced_war_rights } }
+THIS = { is_greater_power = yes }
+NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 
-		THIS = {
-			OR = { 
+THIS = { OR = { 
 
-				government = theocracy
-				government = absolute_monarchy
-				government = nationalist_dictatorship
-				government = sectarian_dictatorship
-				government = presidential_dictatorship
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
+government = theocracy
+government = absolute_monarchy
+government = nationalist_dictatorship
+government = sectarian_dictatorship
+government = presidential_dictatorship
+government = proletarian_dictatorship
+government = proletarian_dictatorship1
 
-				NOT = { war_policy = pacifism }
-				war = yes
-				has_country_flag = world_medium
-				has_country_flag = world_high
-				has_country_flag = cold_war_high
-				has_country_modifier = cold_war_hot
-			}
-		}
+NOT = { war_policy = pacifism } war = yes has_country_flag = world_medium has_country_flag = world_high has_country_flag = cold_war_high has_country_modifier = cold_war_hot } }
 
 
 		is_greater_power = no
@@ -893,34 +858,24 @@ take_from_sphere = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-	
-		NOT = { tag = CLN }
 
-		THIS = { NOT = { has_country_modifier = no_more_war } }
+THIS = { NOT = { has_country_modifier = no_more_war } }
 
-		THIS = { NOT = { has_country_flag = renounced_war_rights } }
-		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
-		NOT = { is_our_vassal = THIS }
+THIS = { NOT = { has_country_flag = renounced_war_rights } }
+NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
+NOT = { is_our_vassal = THIS }
 
-		THIS = {
-			OR = { 
+THIS = { OR = { 
 
-				government = theocracy
-				government = absolute_monarchy
-				government = nationalist_dictatorship
-				government = sectarian_dictatorship
-				government = presidential_dictatorship
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
+government = theocracy
+government = absolute_monarchy
+government = nationalist_dictatorship
+government = sectarian_dictatorship
+government = presidential_dictatorship
+government = proletarian_dictatorship
+government = proletarian_dictatorship1
 
-				NOT = { war_policy = pacifism }
-				war = yes
-				has_country_flag = world_medium
-				has_country_flag = world_high
-				has_country_flag = cold_war_high
-				has_country_modifier = cold_war_hot
-			}
-		}
+NOT = { war_policy = pacifism } war = yes has_country_flag = world_medium has_country_flag = world_high has_country_flag = cold_war_high has_country_modifier = cold_war_hot } }
 
 
 		THIS = { is_greater_power = yes }
@@ -981,9 +936,6 @@ acquire_core_state = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-	
-		NOT = { tag = CLN }
-		
 		NOT = { is_our_vassal = THIS }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
@@ -993,7 +945,7 @@ acquire_core_state = {
 
 		OR = { THIS = { ai = no } AND = { THIS = { ai = yes } NOT = { relation = { who = THIS value = -100 } } } }
 
-		THIS = {
+		THIS = { 
 			OR = { 
 
 				government = theocracy
@@ -1004,13 +956,9 @@ acquire_core_state = {
 				government = proletarian_dictatorship
 				government = proletarian_dictatorship1
 
-				NOT = { war_policy = pacifism }
-				war = yes
-				has_country_flag = world_medium
-				has_country_flag = world_high
-				has_country_flag = cold_war_high
-				has_country_modifier = cold_war_hot
-			}
+				NOT = { war_policy = pacifism } war = yes has_country_flag = world_medium has_country_flag = world_high has_country_flag = cold_war_high has_country_modifier = cold_war_hot 
+			
+			} 
 		}
 
 		OR = {
@@ -1090,8 +1038,6 @@ annex_core_country = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
@@ -1205,37 +1151,27 @@ acquire_state = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
-		THIS = { NOT = { has_country_modifier = no_more_war } }
+THIS = { NOT = { has_country_modifier = no_more_war } }
 
 		NOT = { is_our_vassal = THIS }
 
-		THIS = { NOT = { has_country_flag = renounced_war_rights } }
-		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
+THIS = { NOT = { has_country_flag = renounced_war_rights } }
+NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 	
-		number_of_states = 2 # annex if you want their last state
+number_of_states = 2 # annex if you want their last state
 
-		THIS = {
-			OR = { 
+THIS = { OR = { 
 
-				government = theocracy
-				government = absolute_monarchy
-				government = nationalist_dictatorship
-				government = sectarian_dictatorship
-				government = presidential_dictatorship
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
+government = theocracy
+government = absolute_monarchy
+government = nationalist_dictatorship
+government = sectarian_dictatorship
+government = presidential_dictatorship
+government = proletarian_dictatorship
+government = proletarian_dictatorship1
 
-				NOT = { war_policy = pacifism }
-				war = yes
-				has_country_flag = world_medium
-				has_country_flag = world_high
-				has_country_flag = cold_war_high
-				has_country_modifier = cold_war_hot
-			}
-		}
+war_policy = jingoism war = yes has_country_flag = world_medium has_country_flag = world_high has_country_flag = cold_war_high has_country_modifier = cold_war_hot } }
 		
 		any_owned_province = {
 			NOT = { is_core = THIS }
@@ -1325,37 +1261,27 @@ acquire_colonial_state = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
+
+THIS = { NOT = { has_country_modifier = no_more_war } }
+
+NOT = { is_our_vassal = THIS }
+
+THIS = { NOT = { has_country_flag = renounced_war_rights } }
+NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 	
-		NOT = { tag = CLN }
+number_of_states = 2 # annex if you want their last state
 
-		THIS = { NOT = { has_country_modifier = no_more_war } }
+THIS = { OR = { 
 
-		NOT = { is_our_vassal = THIS }
+government = theocracy
+government = absolute_monarchy
+government = nationalist_dictatorship
+government = sectarian_dictatorship
+government = presidential_dictatorship
+government = proletarian_dictatorship
+government = proletarian_dictatorship1
 
-		THIS = { NOT = { has_country_flag = renounced_war_rights } }
-		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
-	
-		number_of_states = 2 # annex if you want their last state
-
-		THIS = {
-			OR = { 
-
-				government = theocracy
-				government = absolute_monarchy
-				government = nationalist_dictatorship
-				government = sectarian_dictatorship
-				government = presidential_dictatorship
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
-
-				NOT = { war_policy = pacifism }
-				war = yes
-				has_country_flag = world_medium
-				has_country_flag = world_high
-				has_country_flag = cold_war_high
-				has_country_modifier = cold_war_hot
-			}
-		}
+war_policy = jingoism war = yes has_country_flag = world_medium has_country_flag = world_high has_country_flag = cold_war_high has_country_modifier = cold_war_hot } }
 		
 		any_owned_province = {
 			NOT = { is_core = THIS }
@@ -1440,37 +1366,29 @@ acquire_naval_base = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
+
+THIS = { NOT = { has_country_modifier = no_more_war } }
+
+NOT = { is_our_vassal = THIS }
+
+THIS = { NOT = { has_country_flag = renounced_war_rights } }
+NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 	
-		NOT = { tag = CLN }
+number_of_states = 2 # annex if you want their last state
 
-		THIS = { NOT = { has_country_modifier = no_more_war } }
+THIS = { OR = { 
 
-		NOT = { is_our_vassal = THIS }
+government = theocracy
+government = absolute_monarchy
+government = nationalist_dictatorship
+government = sectarian_dictatorship
+government = presidential_dictatorship
+government = proletarian_dictatorship
+government = proletarian_dictatorship1
 
-		THIS = { NOT = { has_country_flag = renounced_war_rights } }
-		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
-	
-		number_of_states = 2 # annex if you want their last state
+war_policy = jingoism war = yes has_country_flag = world_medium has_country_flag = world_high has_country_flag = cold_war_high has_country_modifier = cold_war_hot 
 
-		THIS = {
-			OR = { 
-
-				government = theocracy
-				government = absolute_monarchy
-				government = nationalist_dictatorship
-				government = sectarian_dictatorship
-				government = presidential_dictatorship
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
-
-				NOT = { war_policy = pacifism }
-				war = yes
-				has_country_flag = world_medium
-				has_country_flag = world_high
-				has_country_flag = cold_war_high
-				has_country_modifier = cold_war_hot
-			}
-		}
+} }
 		
 		any_owned_province = {
 			NOT = { is_core = THIS }
@@ -1545,8 +1463,6 @@ cut_down_to_size = {
 	war_name = WAR_CUT_DOWN_TO_SIZE_NAME
 	
 	can_use = {
-	
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -1679,8 +1595,6 @@ annex_all_colonial_cores = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -1826,8 +1740,6 @@ annex_all_cores = { # acquire all core states in target's own hands
 	good_relation_militancy_factor = 1
 
 	can_use = {
-	
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -1973,8 +1885,6 @@ annex_un_occupied_territories = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-	
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -2091,34 +2001,24 @@ free_allied_cores = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-	
-		NOT = { tag = CLN }
 
-		THIS = { NOT = { has_country_modifier = no_more_war } }
+THIS = { NOT = { has_country_modifier = no_more_war } }
 
-		#MHM conditions
-		THIS = { NOT = { has_country_flag = renounced_war_rights } }
+#MHM conditions
+THIS = { NOT = { has_country_flag = renounced_war_rights } }
+NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 
-		THIS = { 
-		
-			OR = { 
+THIS = { OR = { 
 
-				government = theocracy
-				government = absolute_monarchy
-				government = nationalist_dictatorship
-				government = sectarian_dictatorship
-				government = presidential_dictatorship
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
+government = theocracy
+government = absolute_monarchy
+government = nationalist_dictatorship
+government = sectarian_dictatorship
+government = presidential_dictatorship
+government = proletarian_dictatorship
+government = proletarian_dictatorship1
 
-				NOT = { war_policy = pacifism }
-				war = yes 
-				has_country_flag = world_high 
-				has_country_flag = cold_war_high 
-				has_country_modifier = cold_war_hot 
-			}
-			
-		}
+NOT = { war_policy = pacifism } war = yes has_country_flag = world_medium has_country_flag = world_high has_country_flag = cold_war_high has_country_modifier = cold_war_hot } }
 
 
 		NOT = { is_our_vassal = THIS }
@@ -2223,39 +2123,28 @@ free_peoples = {
 	
 	
 	can_use = {
-	
-		NOT = { tag = CLN }
 
-		THIS = { NOT = { has_country_modifier = no_more_war } }
+THIS = { NOT = { has_country_modifier = no_more_war } }
 
-		THIS = { NOT = { has_country_flag = liberate_country_cb_puppet } }
-
-		NOT = { is_our_vassal = THIS }
-		THIS = { NOT = { has_country_flag = renounced_war_rights } }
-		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
+NOT = { is_our_vassal = THIS }
+THIS = { NOT = { has_country_flag = renounced_war_rights } }
+NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 
 
-		THIS = {
-			OR = { 
-				government = theocracy
-				government = absolute_monarchy
-				government = nationalist_dictatorship
-				government = sectarian_dictatorship
-				government = presidential_dictatorship
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
+THIS = { OR = { 
 
-				NOT = { war_policy = pacifism }
-				war = yes
-				has_country_flag = world_medium
-				has_country_flag = world_high
-				has_country_flag = cold_war_high
-				has_country_modifier = cold_war_hot
-			}
-		}
+government = theocracy
+government = absolute_monarchy
+government = nationalist_dictatorship
+government = sectarian_dictatorship
+government = presidential_dictatorship
+government = proletarian_dictatorship
+government = proletarian_dictatorship1
+
+NOT = { war_policy = pacifism } war = yes has_country_flag = world_medium has_country_flag = world_high has_country_flag = cold_war_high has_country_modifier = cold_war_hot } }
 
 
-		OR = {
+		OR = { 
 			ai = no
 			part_of_sphere = no # if we are part of spher the spher ruler guides policies - not us.
 		}
@@ -2299,7 +2188,6 @@ free_peoples = {
 	on_add = {
 	
 		set_country_flag = this_is_aggressor
-		set_country_flag = liberate_country_cb_normal
 	
 		move_issue_percentage = { 
 			from = jingoism 
@@ -2309,12 +2197,12 @@ free_peoples = {
 	}
 	
 	on_po_accepted = {
-		country_event =	2651 # Territorial Loss event
+		country_event =	2651	# Territorial Loss event
 		
-		THIS = { set_country_flag = this_won_CB clr_country_flag = liberate_country_cb_normal }
+		THIS = { set_country_flag = this_won_CB }
 		set_country_flag = this_lost_CB
 		
-	}
+	}	
 }
 
 # Liberate country
@@ -2339,12 +2227,8 @@ liberate_country = {
 	
 	
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
-		
-		THIS = { NOT = { has_country_flag = liberate_country_cb_puppet } }
 
 		NOT = { is_our_vassal = THIS }
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
@@ -2457,7 +2341,6 @@ liberate_country = {
 	
 	on_add = {
 		set_country_flag = this_is_aggressor
-		set_country_flag = liberate_country_cb_normal
 	
 		move_issue_percentage = { 
 			from = jingoism 
@@ -2467,164 +2350,8 @@ liberate_country = {
 	}
 	
 	on_po_accepted = {
-		THIS = { set_country_flag = this_won_CB clr_country_flag = liberate_country_cb_normal }
+		THIS = { set_country_flag = this_won_CB }
 		set_country_flag = this_lost_CB
-	}
-}
-
-# Liberate country and then make it a puppet
-liberate_puppet = {
-	sprite_index = 15
-	is_triggered_only = yes
-	months = 12
-
-	badboy_factor = 2.8
-	prestige_factor = 1
-	peace_cost_factor = 1
-	penalty_factor = 1
-
-	break_truce_prestige_factor = 1
-	break_truce_infamy_factor = 1
-	break_truce_militancy_factor = 1
-	truce_months = 48
-	
-	good_relation_prestige_factor = 1
-	good_relation_infamy_factor = 1
-	good_relation_militancy_factor = 1
-	
-	
-	can_use = {
-		
-		NOT = { tag = CLN }
-
-		THIS = { NOT = { has_country_modifier = no_more_war } }
-		
-		THIS = { NOT = { has_country_flag = liberate_country_cb_normal } }
-
-		NOT = { is_our_vassal = THIS }
-		THIS = { NOT = { has_country_flag = renounced_war_rights } }
-		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
-
-		THIS = { 
-			OR = { 
-				government = theocracy
-				government = absolute_monarchy
-				government = nationalist_dictatorship
-				government = sectarian_dictatorship
-				government = presidential_dictatorship
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
-
-				NOT = { war_policy = pacifism } 
-				war = yes 
-				has_country_flag = world_medium 
-				has_country_flag = world_high 
-				has_country_flag = cold_war_high 
-				has_country_modifier = cold_war_hot 
-			}
-		}
-		
-		OR = { number_of_states = 2 war = yes }
-
-	}
-
-	# THIS - us
-	# FROM - country scope is possible match?
-	# war target country of goal is scope
-	allowed_countries = {
-		NOT = {
-			tag = FROM
-			this_culture_union = FROM	
-		}
-		#Cannot liberate superstates
-		FROM = {
-			NOT = { 
-				OR = {
-					tag = XGC
-					tag = XEF
-					tag = XEU
-					tag = XCC
-					tag = XAU
-					tag = XEW
-					tag = XEC
-					tag = XSA
-					tag = XSU
-					tag = XMS
-					tag = XAC
-					tag = XAL
-					tag = XMU
-					tag = XAN
-					tag = XCI
-					tag = XNA
-					tag = XPI
-					tag = XEA
-					tag = XTC
-					tag = XUM
-					tag = XIO
-					tag = UAR
-					tag = FBU
-					tag = YUG
-					tag = IBU
-					tag = KLM
-					tag = PBC
-					tag = GCL
-					tag = XME
-					
-					#Do not release special countries
-					tag = ICB
-					tag = JRU
-					tag = SCS
-					tag = DZG
-					
-					tag = SHG
-					tag = QGD
-					tag = WEI
-					tag = GAZ
-					tag = UNO
-					tag = BKF
-				}
-			}
-		}
-		
-		#Target does not exist
-		FROM = { exists = no }
-		any_owned_province = {
-			is_core = FROM
-			NOT = { is_core = THIS }
-		}
-		is_releasable_vassal = FROM
-	}
-
-	# THIS - us
-	# FROM - country scope is possible match?
-	# war target country of goal's state
-	allowed_states = {
-		any_owned_province = {
-			is_core = FROM
-		}
-	}
-	all_allowed_states = yes
-	po_transfer_provinces = yes
-	
-	#po_remove_cores = yes
-
-	war_name = WAR_LIBERATE_PUPPET_NAME
-	
-	on_add = {
-		set_country_flag = this_is_aggressor
-		set_country_flag = liberate_country_cb_puppet
-	
-		move_issue_percentage = { 
-			from = jingoism 
-			to = pro_military
-			value = 0.25
-		}
-	}
-	
-	on_po_accepted = {
-		country_event = 2651 # Territorial Loss event
-		set_country_flag = this_lost_CB
-		THIS = { set_country_flag = this_won_CB clr_country_flag = liberate_country_cb_puppet country_event = 19369 } # Starts puppeting event chain
 	}
 }
 
@@ -2655,8 +2382,6 @@ assisted_unification = {
 	war_name = WAR_ASSISTED_UNIFICATION_NAME
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
@@ -2799,8 +2524,6 @@ release_puppet = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -2881,8 +2604,6 @@ steal_puppet = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
@@ -3004,8 +2725,6 @@ make_puppet = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
@@ -3098,8 +2817,6 @@ become_independent = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -3219,8 +2936,6 @@ humiliate = {
 	war_name = WAR_HUMILIATE_NAME
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 	
 		#Reduce AI trigger happiness
 		THIS = { OR = { ai = no war = yes } }
@@ -3305,8 +3020,6 @@ destroy_wmd = {
 	war_name = WAR_DISARM_WMD_NAME
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -3389,8 +3102,6 @@ territorial_dispute = {
 	war_name = WAR_HUMILIATE_NAME
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -3608,9 +3319,6 @@ war_reparations = {
 	good_relation_militancy_factor = 1
 	
 	can_use = {
-		
-		NOT = { tag = CLN }
-		
 		war_with = THIS
 		NOT = {
 			is_our_vassal = THIS
@@ -3665,16 +3373,14 @@ support_insurgency = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
-		THIS = { NOT = { has_country_modifier = no_more_war } }
-		THIS = { NOT = { has_country_flag = renounced_war_rights } }
-		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
+THIS = { NOT = { has_country_modifier = no_more_war } }
+THIS = { NOT = { has_country_flag = renounced_war_rights } }
+NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 
-		THIS = { OR = { war_policy = jingoism ai = no } NOT = { war_policy = pacifism } war = no }
+THIS = { OR = { war_policy = jingoism ai = no } NOT = { war_policy = pacifism } war = no }
 
-		NOT = { in_sphere = THIS }
+NOT = { in_sphere = THIS }
 
 		revolt_percentage = 0.25
 		war = no
@@ -3731,8 +3437,6 @@ install_democracy = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -3832,8 +3536,6 @@ install_authoritarian_regime = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -3905,8 +3607,6 @@ install_absolute_monarchy = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -3976,8 +3676,6 @@ install_socialist_democracy = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -4072,8 +3770,6 @@ install_theocratic_regime = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -4146,8 +3842,6 @@ install_communist_gov_cb = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 	
 		NOT = { tag = UNT }
 
@@ -4251,8 +3945,6 @@ uninstall_communist_gov_cb = {
 	good_relation_militancy_factor = 1
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -4436,8 +4128,6 @@ dismantle_cb = {
 	good_relation_militancy_factor = 0
 	
 	can_use = {
-		
-		NOT = { tag = CLN }
 
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
 		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
@@ -4602,9 +4292,6 @@ dismantle_cb_add = {
 	good_relation_militancy_factor = 0
 	
 	can_use = {
-		
-		NOT = { tag = CLN }
-		
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
 		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 		NOT = { is_our_vassal = THIS }
@@ -4724,9 +4411,6 @@ dismantle_cb_add_new = {
 	good_relation_militancy_factor = 0
 	
 	can_use = {
-		
-		NOT = { tag = CLN }
-		
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
 		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 
@@ -4840,7 +4524,6 @@ call_allies_cb = {
 	good_relation_militancy_factor = 0
 	
 	can_use = {
-		NOT = { tag = CLN }
 		THIS = { ai = yes }
 		always = no
 	}
@@ -4878,8 +4561,6 @@ rude_boy = {
 	always = yes
 
 	can_use = {
-		
-		NOT = { tag = CLN }
 	
 		#Attacker
 		THIS = { NOT = { has_country_modifier = no_more_war } }

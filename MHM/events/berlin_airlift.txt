@@ -16,7 +16,22 @@ country_event = {
   
 	fire_only_once = yes
 
-	is_triggered_only = yes
+	trigger = {
+    	tag = RUS
+    	year = 1948
+		NOT = { year = 1990 } 
+		
+		war = no
+		
+		#Cold War
+		has_global_flag = blocsenabled
+		
+		#Deutsche mark
+		has_global_flag = deutsche_mark
+		
+		#Berlin is in the western zone
+		549 = { owned_by = OG4 }
+	}
 
 	mean_time_to_happen = { months = 1 }
 
@@ -70,7 +85,7 @@ country_event = {
 		relation = { who = FRA value = 50 }
 		
 		#Surrender Berlin
-		any_country = { limit = { owns = 549 } release = ICB }
+		OG4 = { release = ICB }
 
 		random_owned = { 
 			limit = { owner = { exists = OG1 } }

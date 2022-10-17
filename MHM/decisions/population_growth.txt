@@ -9,6 +9,8 @@ political_decisions = {
 						has_province_modifier = natalism_1
 						has_province_modifier = natalism_2
 						has_province_modifier = natalism_3
+						has_province_modifier = natalism_4
+						has_province_modifier = natalism_5
 					}
 				}
 			}
@@ -51,48 +53,72 @@ political_decisions = {
 				limit = {
 					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
 					NOT = { literacy = 0.20 }
-					NOT = { has_province_modifier = natalism_1 }
+					NOT = { has_province_modifier = natalism_5 }
 				}
+				remove_province_modifier = natalism_1
 				remove_province_modifier = natalism_2
 				remove_province_modifier = natalism_3
-				add_province_modifier = { name = natalism_1 duration = 1825 } 
+				remove_province_modifier = natalism_4
+				add_province_modifier = { name = natalism_5 duration = 1825 } 
 			}
 			
-			#20-40% higher education
+			#20-30% higher education
 			any_owned = {
 				limit = {
 					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
 					literacy = 0.20
-					NOT = { literacy = 0.40 }
-					NOT = { has_province_modifier = natalism_2 }
+					NOT = { literacy = 0.30 }
+					NOT = { has_province_modifier = natalism_4 }
 				}
 				remove_province_modifier = natalism_1
+				remove_province_modifier = natalism_2
 				remove_province_modifier = natalism_3
-				add_province_modifier = { name = natalism_2 duration = 1825 } 
+				remove_province_modifier = natalism_5
+				add_province_modifier = { name = natalism_4 duration = 1825 } 
 			}
 			
-			#40-60% higher education
+			#30-40% higher education
 			any_owned = {
 				limit = {
 					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
-					literacy = 0.40
-					NOT = { literacy = 0.60 }
+					literacy = 0.30
+					NOT = { literacy = 0.40 }
 					NOT = { has_province_modifier = natalism_3 }
 				}
 				remove_province_modifier = natalism_1
 				remove_province_modifier = natalism_2
+				remove_province_modifier = natalism_4
+				remove_province_modifier = natalism_5
 				add_province_modifier = { name = natalism_3 duration = 1825 } 
 			}
 			
-			#60% higher and higher education gets weak natalism
+			#40-50% higher education
 			any_owned = {
 				limit = {
 					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
-					literacy = 0.60
+					literacy = 0.40
+					NOT = { literacy = 0.50 }
+					NOT = { has_province_modifier = natalism_2 }
+				}
+				remove_province_modifier = natalism_1
+				remove_province_modifier = natalism_3
+				remove_province_modifier = natalism_4
+				remove_province_modifier = natalism_5
+				add_province_modifier = { name = natalism_2 duration = 1825 } 
+			}
+			
+			#50-60% higher education
+			any_owned = {
+				limit = {
+					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
+					literacy = 0.50
+					NOT = { literacy = 0.60 } # 60% or higher provinces will get no natalism as they will have already stabilized
 					NOT = { has_province_modifier = natalism_1 }
 				}
 				remove_province_modifier = natalism_2
 				remove_province_modifier = natalism_3
+				remove_province_modifier = natalism_4
+				remove_province_modifier = natalism_5
 				add_province_modifier = { name = natalism_1 duration = 1825 } 
 			}
 

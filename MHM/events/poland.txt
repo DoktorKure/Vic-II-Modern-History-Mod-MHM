@@ -17,9 +17,6 @@ country_event = {
 		war = no
 		is_vassal = no
 		
-		#Must have already inherited the occupation zone so there's no fuckery with vassals of vassals
-		OG5 = { exists = no }
-		
 		in_sphere = RUS
 		
 		has_global_flag = blocsenabled
@@ -28,7 +25,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = { 
-		months = 2
+		months = 1
 		modifier = { factor = 0 year = 1948 }
 	}
 
@@ -932,10 +929,10 @@ country_event = { #"Poland is free"
 	940 = { add_core =  THIS }
 	957 = { add_core =  THIS }
 	956 = { add_core =  THIS }
-	955 = { add_core =  THIS }
 	952 = { add_core =  THIS }
 	953 = { add_core =  THIS }
 	951 = { add_core =  THIS }
 	702 = { add_core =  THIS }
+	360 = { add_core =  THIS } 
   }
 }

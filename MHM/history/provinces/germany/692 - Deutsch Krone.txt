@@ -1,26 +1,14 @@
-owner = OG5
-controller = OG5
-add_core = GER
+owner = POL
+controller = POL
+add_core = POL
 trade_goods = cattle
 life_rating = 35
 terrain = deciduous_forest
 colonial = 0
-
-1950.1.1 = {
-owner = POL
-controller = POL
-add_core = POL
-remove_core = GER
-life_rating = 35
-railroad = 1
-colonial = 0
-}
-
 1992.1.1 = {
 owner = POL
 controller = POL
 add_core = POL
-remove_core = GER
 life_rating = 35
 railroad = 1
 colonial = 0

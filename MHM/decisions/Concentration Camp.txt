@@ -26,7 +26,7 @@ political_decisions = {
 			prestige = -10
 			set_country_flag = death_camp_active
 			any_owned = { 
-				limit = { total_pops = 30000 } 
+				limit = { total_pops = 500000 } 
 				add_province_modifier = { name = death_camp duration = -1 } 
 			}
 			add_country_modifier = { name = law_changed_by_force duration = 730 }

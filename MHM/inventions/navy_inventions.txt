@@ -2323,6 +2323,11 @@ defensive_attitude = {
 			factor = 2
 OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
 		}
+
+		modifier = {
+			factor = 2
+			invention = protected_cruisers
+		}
 		modifier = {
 			factor = 2
 			invention = armour_piercing_projectiles
@@ -3569,6 +3574,11 @@ night_training = {
 			factor = 2
 OR = { has_country_modifier = spcno has_country_modifier = military_tech_cooperation }
 		}
+
+		modifier = {
+			factor = 2
+			invention = transistor_transistor_logic
+		}
 		modifier = {
 			factor = 2
 			aegis_defense = 1
@@ -4027,6 +4037,10 @@ OR = { has_country_modifier = spcno has_country_modifier = military_tech_coopera
 		modifier = {
 			factor = 1
 			is_greater_power = yes
+		}
+		modifier = {
+			factor = 2
+			invention = pragmatism
 		}
 	}
 	effect = {

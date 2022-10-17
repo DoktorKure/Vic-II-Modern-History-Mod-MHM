@@ -139,24 +139,24 @@ political_decisions = {
 
 			#Meetings
             random_owned = {
-                limit = { owner = { public_meetings = no_meetings } }
+                limit = { owner = { public_meetings = no_meeting } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = no_meetings
+                    political_reform = no_slavery
                 }
             }
             random_owned = {
                 limit = { owner = { public_meetings = limited_meetings } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = limited_meetings
+                    political_reform = no_meeting
                 }
             }
             random_owned = {
                 limit = { owner = { public_meetings = free_meetings } }
                 any_country = {
                     limit = { exists = no capital_scope = { owned_by = THIS } }
-                    political_reform = free_meetings
+                    political_reform = yes_meeting
                 }
             }
 

@@ -1,7 +1,9 @@
 capital = 300
 primary_culture = british
+culture = english
 culture = scottish
 culture = welsh
+culture = german
 
 #culture = irish
 
@@ -83,7 +85,7 @@ sea_denial_strategy = 1
 # Starting Consciousness
 consciousness = 1
 nonstate_consciousness = 1
-schools = commonwealth
+schools = ENG_tech_school
 decision = united_nations
 decision = jointheunga
 decision = jointheunsc
@@ -259,6 +261,7 @@ oob = "/ENG_oob.txt"
 	green_blue_water_navies = 1
 	carrier_battle_groups = 1
 schools = industrial_tech_school
+decision = hydrogen_setup
 
 decision = formthecommonwealth
 oob = "1992/ENG_oob.txt"
