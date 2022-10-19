@@ -623,10 +623,11 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 12
+			badboy = 9
 			set_country_flag = claim_greater_peru
 			2307 = { add_core = PEU }
 			2308 = { add_core = PEU }
+			2549 = { add_core = PEU }
 		}
 
 	}
@@ -654,7 +655,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -6
+			badboy = -5
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_peru
@@ -664,6 +665,7 @@ political_decisions = {
 					OR = {
 						province_id = 2307
 						province_id = 2308
+						province_id = 2549
 					}
 				}
 				remove_core = THIS
@@ -866,7 +868,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 12
+			badboy = 6
 			set_country_flag = claim_greater_cambodia
 			1382 = { add_core = CAM }
 			1383 = { add_core = CAM }
@@ -897,7 +899,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -6
+			badboy = -3
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_cambodia
@@ -1086,7 +1088,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 12
+			badboy = 3
 			set_country_flag = claim_greater_comoros
 			2124 = { add_core = COM }
 		}
@@ -1116,7 +1118,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -6
+			badboy = -2
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_comoros
@@ -1226,6 +1228,75 @@ political_decisions = {
 		}
 
 	}
+
+	claim_greater_czechoslovakia = {
+        picture = "claim_greater_czechoslovakia"
+        potential = {
+            OR = {
+                tag = CZH
+                tag = SLV
+            }
+            NOT = { has_country_flag = claim_greater_czechoslovakia }
+        }
+
+        allow = {
+            has_unclaimed_cores = no
+            NOT = {
+                ruling_party_ideology = socialist
+                ruling_party_ideology = progressive
+                ruling_party_ideology = liberal
+            }
+            OR = {
+                ruling_party_ideology = populist
+                ruling_party_ideology = nationalist
+                jingoism = 10
+            }
+        }
+
+        effect = {
+            badboy = 3
+            set_country_flag = claim_greater_czechoslovakia
+            950 = { add_core = THIS }
+        }
+    }
+
+    abandon_claim_czechoslovakia = {
+        picture = "claim_greater_czechoslovakia"
+        potential = {
+            has_country_flag = claim_czechoslovakia
+            OR = {
+                government = democracy
+                government = democracy1
+                government = hms_government
+                government = hms_government1
+            } 
+        }
+
+        allow = {
+            war = no
+            is_vassal = no
+            OR = {
+                ruling_party_ideology = socialist
+                ruling_party_ideology = progressive
+                ruling_party_ideology = liberal
+            }
+        }
+
+        effect = {
+            badboy = -2
+            prestige = 10
+            any_pop = { consciousness = 1 }
+            clr_country_flag = claim_greater_czechoslovakia
+            all_core = { 
+                limit = { 
+                    NOT = { owned_by = THIS } 
+                    province_id = 950
+                }
+                remove_core = THIS
+            }
+        }
+
+    }
 
 	claim_greater_south = {
 		picture = "claim_greater_south"
@@ -1960,7 +2031,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 10
+			badboy = 12
 			set_country_flag = claim_greater_karelia
 			339 = { add_core = KRL }
 			982 = { add_core = KRL }
@@ -1993,7 +2064,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -5
+			badboy = -6
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_karelia
@@ -2196,7 +2267,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -24
+			badboy = -12
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_germany
@@ -2616,7 +2687,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 12
+			badboy = 3
 			set_country_flag = claim_greater_ingushetia
 			1054 = { add_core = IGU }
 		}
@@ -2646,7 +2717,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -6
+			badboy = -2
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_ingushetia
@@ -2689,7 +2760,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 12
+			badboy = 9
 			set_country_flag = claim_greater_chechnya
 			1054 = { add_core = CHC }
 			1054 = { add_core = IGU }
@@ -2722,7 +2793,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -6
+			badboy = -5
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_chechnya
@@ -2965,7 +3036,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 12
+			badboy = 9
 			set_country_flag = claim_greater_ireland
 			254 = { add_core = IRE }
 			255 = { add_core = IRE }
@@ -2997,7 +3068,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -6
+			badboy = -5
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_ireland
@@ -3580,7 +3651,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 12
+			badboy = 3
 			set_country_flag = claim_greater_northern_mariana
 			2517 = { add_core = NMI }
 		}
@@ -3610,7 +3681,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -6
+			badboy = -2
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_northern_mariana
@@ -4183,7 +4254,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 12
+			badboy = 3
 			set_country_flag = claim_greater_samoa
 			2544 = { add_core = SAM }
 		}
@@ -4213,7 +4284,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -6
+			badboy = -2
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_samoa
@@ -4518,7 +4589,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 12
+			badboy = 9
 			set_country_flag = claim_greater_texas
 			105 = { add_core = THIS } # Las Cruces
 			103 = { add_core = THIS } # Santa Fe
@@ -4551,7 +4622,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -6
+			badboy = -5
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_texas
@@ -4595,7 +4666,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 12
+			badboy = 3
 			set_country_flag = claim_greater_guatemala
 			2190 = { add_core = GUA }
 		}
@@ -4625,7 +4696,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -6
+			badboy = -2
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_guatemala
@@ -4664,7 +4735,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 2
+			badboy = 6
 			set_country_flag = claim_greater_venezuela
 			2242 = { add_core = VNZ }
 			2243 = { add_core = VNZ }
@@ -4700,7 +4771,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -1
+			badboy = -3
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_venezuela
@@ -4899,6 +4970,112 @@ political_decisions = {
 
 	}
 	
+	claim_greater_PCC = {
+		picture = "claim_greater_PCC"
+		potential = {
+			tag = PCC
+			NOT = { 
+				has_country_flag = claim_greater_PCC
+				has_country_flag = cores_returned 
+			}
+		}
+
+		allow = {
+			part_of_sphere = no
+			has_unclaimed_cores = no
+			NOT = {	
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = liberal 
+			}
+			is_vassal = no
+			prestige = 45
+			OR = {
+				ruling_party_ideology = populist
+				ruling_party_ideology = nationalist
+				ruling_party_ideology = communist
+				jingoism = 24
+			}
+		}
+
+		effect = {
+			badboy = 12
+			set_country_flag = claim_greater_PCC
+			936 = { add_core = POL add_core = PCC}
+			937 = { add_core = POL add_core = PCC }
+			938 = { add_core = POL add_core = PCC }
+			947 = { add_core = POL add_core = PCC }
+			939 = { add_core = POL add_core = PCC }
+			940 = { add_core = POL add_core = PCC } 
+			957 = { add_core = POL add_core = PCC }
+			956 = { add_core = POL add_core = PCC }
+			950 = { add_core = SLV add_core = CZH add_core = PCC } #Uzhgorod
+			952 = { add_core = POL add_core = PCC }
+			953 = { add_core = POL add_core = PCC }
+			951 = { add_core = POL add_core = PCC }
+			702 = { add_core = POL add_core = PCC }
+            360 = { add_core = POL add_core = PCC }
+		}
+
+	}
+
+	abandon_claim_greater_PCC = {
+		picture = "claim_greater_PCC"
+		potential = {
+			tag = PCC
+			has_country_flag = claim_greater_PCC
+			OR = {
+				government = democracy
+				government = democracy1
+				government = hms_government
+				government = hms_government1
+			}
+		}
+
+		allow = {
+			war = no
+			is_vassal = no
+			OR = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = liberal
+			}
+		}
+
+		effect = {
+			badboy = -6
+			prestige = 10
+			any_pop = { consciousness = 1 }
+			clr_country_flag = claim_greater_PCC
+			all_core = {
+				limit = { 
+					NOT = { owned_by = THIS }
+					OR = {
+						province_id = 936
+						province_id = 937
+						province_id = 938
+						province_id = 947
+						province_id = 939
+						province_id = 940
+						province_id = 957
+						province_id = 956
+						province_id = 950
+						province_id = 952
+						province_id = 953
+						province_id = 951
+						province_id = 702
+                        province_id = 360
+					}
+				}
+				remove_core = SLV
+				remove_core = POL
+				remove_core = CZH
+				remove_core = PCC
+			}
+		}
+
+	}
+
 	claim_greater_poland = {
 		picture = "claim_greater_poland"
 		potential = {
@@ -4975,7 +5152,7 @@ political_decisions = {
 						province_id = 940
 						province_id = 957
 						province_id = 956
-						province_id = 955
+						province_id = 360
 						province_id = 952
 						province_id = 953
 						province_id = 951
@@ -5295,7 +5472,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 12
+			badboy = 6
 			set_country_flag = claim_greater_togo
 			1915 = { add_core = TOG }
 			1916 = { add_core = TOG }
@@ -5327,7 +5504,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -6
+			badboy = -3
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_togo
@@ -5370,7 +5547,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = 12
+			badboy = 9
 			set_country_flag = claim_greater_lithuania
 			707 = { add_core = LIT } # Suwalki
 			936 = { add_core = LIT } # Grodno
@@ -5401,7 +5578,7 @@ political_decisions = {
 		}
 
 		effect = {
-			badboy = -6
+			badboy = -5
 			prestige = 10
 			any_pop = { consciousness = 1 }
 			clr_country_flag = claim_greater_lithuania
