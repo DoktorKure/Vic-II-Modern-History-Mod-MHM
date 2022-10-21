@@ -55,6 +55,11 @@ consciousness = 1
 nonstate_consciousness = 1
 schools = commerce_tech_school
 
+decision = 1946_start_decision
+
+1950.1.1 = {
+	decision = 1950_start_decision
+}
 
 1992.1.1 = {
 	#capital =
@@ -110,4 +115,6 @@ decolonization = 1
 consciousness = 1
 nonstate_consciousness = 1
 schools = commerce_tech_school
+
+decision = 1992_start_decision
 }

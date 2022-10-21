@@ -86,7 +86,6 @@ sea_denial_strategy = 1
 consciousness = 0
 nonstate_consciousness = 0
 schools = industrial_tech_school
-decision = 1946_start_decision
 decision = auto_decision_selector
 decision = united_nations
 decision = jointheunga
@@ -104,8 +103,6 @@ oob = "/USA_oob.txt"
 	ruling_party = "Democratic Party (Truman)"
 	
 	union_rights = restricted_unions
-	
-	decision = 1950_start_decision
 	
 	decision = jointheibrd
 	
@@ -277,6 +274,5 @@ oob = "/USA_oob.txt"
 	green_blue_water_navies = 1
 	carrier_battle_groups = 1
 	
-	decision = 1992_start_decision
 	oob = "1992/USA_oob.txt"
 }
