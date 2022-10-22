@@ -10,8 +10,20 @@ political_decisions = {
 				is_our_vassal = AUS
 				is_sphere_leader_of = AUS
 			}
-			OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist }
-			AUS = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist } }
+			OR = {
+				AND = {
+					OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist }
+					AUS = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist } }
+				}
+				AND = {
+					government = absolute_monarchy
+					AUS = { government = absolute_monarchy }
+				}
+				AND = {
+					OR = { government = nationalist_dictatorship government = sectarian_dictatorship }
+					AUS = { OR = { government = nationalist_dictatorship government = sectarian_dictatorship } }
+				}
+			}
 		}
 		allow = {
 			war = no
@@ -19,6 +31,7 @@ political_decisions = {
 			relation = { who = AUS value = 100 }
 		}
 		effect = {
+			set_country_flag = Anschluss_GER
 			AUS = { all_core = { add_core = GER } }
 			inherit = AUS
 			any_neighbor_country = { relation = { who = THIS value = -100 } }
@@ -36,8 +49,20 @@ political_decisions = {
 				is_our_vassal = GER
 				is_sphere_leader_of = GER
 			}
-			OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist }
-			GER = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist } }
+			OR = {
+				AND = {
+					OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist }
+					GER = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist } }
+				}
+				AND = {
+					government = absolute_monarchy
+					GER = { government = absolute_monarchy }
+				}
+				AND = {
+					OR = { government = nationalist_dictatorship government = sectarian_dictatorship }
+					GER = { OR = { government = nationalist_dictatorship government = sectarian_dictatorship } }
+				}
+			}
 		}
 		allow = {
 			war = no
@@ -45,6 +70,9 @@ political_decisions = {
 			relation = { who = GER value = 100 }
 		}
 		effect = {
+			set_country_flag = Anschluss_AUS
+			add_accepted_culture = german
+			GER = { all_core = { add_core = AUS } }
 			inherit = GER
 			any_neighbor_country = { relation = { who = THIS value = -100 } }
 		}
