@@ -1627,12 +1627,12 @@ country_event = {
 
 	trigger = {
 		tag = USA
+		year = 1947
 		GER = { exists = no }
 		OG4 = { exists = yes }
 		OG3 = { exists = yes }
 		has_country_flag = no_partition_of_germany
 		ENG = { has_country_flag = no_partition_of_germany }
-		RUS = { has_country_flag = policy_on_germany }
 		NOT = { year = 1990 }
 		NOT = { has_country_flag = form_bizonia }
 	}
@@ -1698,17 +1698,19 @@ country_event = {
 
 	trigger = {
 		tag = USA
-		year = 1949
+		year = 1948
+		has_country_flag = no_partition_of_germany
 		GER = { exists = no }
 		OG4 = { exists = yes }
-		OG3 = { exists = yes }
-		FRA = { has_country_flag = policy_on_germany }
-		has_country_flag = no_partition_of_germany
+		OG2 = { exists = yes }
 		FRA = { NOT = { has_country_flag = rhineland_option } }
 		NOT = { year = 1990 }
 	}
 
-	mean_time_to_happen = { months = 3 }
+	mean_time_to_happen = {
+		months = 8
+		modifier = { factor = 0.1 year = 1949 }
+	}
 
 	option = {
 		name = "Propose the Trizone to the French (90% chance of success)"
