@@ -28,6 +28,9 @@ political_decisions = {
 	
 			#Indicate that this is the MHM mod
 			set_global_flag = MHM_MOD_ACTIVE
+
+			#1950 start marker
+			set_global_flag = 1950_start_date_flag
 		
 			#Nuclear weapons nations
 			USA = {
@@ -151,7 +154,7 @@ political_decisions = {
 			}
 		
 			#US politics
-			set_country_flag = mc_carthy_politics
+			USA = { set_country_flag = mc_carthy_politics }
 
 			#Faroe Islands SAR
 			FAR = { set_country_flag = former_devolved_nation }
@@ -186,16 +189,15 @@ political_decisions = {
 				remove_country_modifier = develop_atomic_bomb 
 				add_country_modifier = { name = atomic_nation duration = -1 }
 			}
-
-			#1950 start marker
-			set_global_flag = 1950_start_date_flag
 		
 			#NATO
-			add_country_modifier = { name = nato_leader duration = -1 }
-			set_country_flag = nato_leader
-			set_country_flag = nato_flag_member
-			set_global_flag = form_nato
-			add_country_modifier = { name = alliance_nato duration = 1825 }
+			USA = {
+				set_global_flag = form_nato
+				set_country_flag = nato_leader
+				set_country_flag = nato_flag_member
+				add_country_modifier = { name = nato_leader duration = -1 }
+				add_country_modifier = { name = alliance_nato duration = 1825 }
+			}
 
 			any_country = {
 				limit = { OR = { tag = BEL tag = CAN tag = DEN tag = FRA tag = ICL tag = ITA tag = LUX tag = NET tag = NOR tag = POR tag = ENG tag = GRE tag = TUR tag = GER tag = SPA } }
@@ -359,6 +361,26 @@ political_decisions = {
 				}
 				create_alliance = USA
 				add_country_modifier = { name = rio_pact duration = 1825 }
+			}
+			
+			#Soviet construction project - Moscow
+			random_country = { 
+				limit = { 
+					tag = RUS 
+					NOT = { year = 1960 } 
+				} 
+				add_country_modifier = { name = germania duration = 7665 }
+				set_country_flag = germania
+			}
+			
+			#USSR war exhaustion
+			random_country = {
+				limit = { 
+					tag = RUS 
+					year = 1950
+					NOT = { year = 1990 } 
+				}
+				war_exhaustion = 25
 			}
 
 		}

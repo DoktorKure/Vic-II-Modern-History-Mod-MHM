@@ -128,7 +128,7 @@ political_decisions = {
 					ideology = communist_social
 				}
 			}
-			add_country_flag = has_gun_rights
+			set_country_flag = has_gun_rights
 		}
 		ai_will_do = { factor = 1 }
 	}
