@@ -2719,6 +2719,9 @@ assisted_unification = {
 			AND = { tag = GRE exists = UGR THIS = { NOT = { tag = UGR } } }
 			AND = { tag = UGR exists = GRE THIS = { NOT = { tag = GRE } } }
 			
+			AND = { tag = CYP exists = NCY THIS = { NOT = { tag = NCY } } }
+			AND = { tag = NCY exists = CYP THIS = { NOT = { tag = CYP } } }
+			
 		}
 		
 		#Target does not share the same ruling party ideology
