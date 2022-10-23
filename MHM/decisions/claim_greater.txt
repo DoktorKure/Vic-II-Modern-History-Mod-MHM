@@ -2316,8 +2316,7 @@ political_decisions = {
 			
 		allow = {
 			war = no
-			ruling_party_ideology = traditionalist
-			ruling_party_ideology = nationalist
+			OR = { ruling_party_ideology = traditionalist ruling_party_ideology = nationalist }
 			OR = { ai = no NOT = { badboy = 0.5 } }
 		}
 			
