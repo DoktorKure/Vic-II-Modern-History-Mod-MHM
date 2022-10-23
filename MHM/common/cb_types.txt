@@ -2777,6 +2777,9 @@ assisted_unification = {
 		
 		random_owned = { limit = { owner = { tag = GRE } } owner = { UGR = { inherit = GRE relation = { who = THIS value = 200 } } } }
 		random_owned = { limit = { owner = { tag = UGR } } owner = { GRE = { inherit = UGR relation = { who = THIS value = 200 } } } }
+		
+		random_owned = { limit = { owner = { tag = CYP } } owner = { NCY = { inherit = CYP relation = { who = THIS value = 200 } } } }
+		random_owned = { limit = { owner = { tag = NCY } } owner = { CYP = { inherit = NCY relation = { who = THIS value = 200 } } } }
 	}
 	
 }
