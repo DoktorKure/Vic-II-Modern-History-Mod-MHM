@@ -10,6 +10,11 @@ political_decisions = {
 				is_our_vassal = AUS
 				is_sphere_leader_of = AUS
 			}
+		}
+		allow = {
+			war = no
+			election = no
+			relation = { who = AUS value = 100 }
 			OR = {
 				AND = {
 					OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist }
@@ -24,11 +29,6 @@ political_decisions = {
 					AUS = { OR = { government = nationalist_dictatorship government = sectarian_dictatorship } }
 				}
 			}
-		}
-		allow = {
-			war = no
-			election = no
-			relation = { who = AUS value = 100 }
 		}
 		effect = {
 			set_country_flag = Anschluss_GER
@@ -49,6 +49,11 @@ political_decisions = {
 				is_our_vassal = GER
 				is_sphere_leader_of = GER
 			}
+		}
+		allow = {
+			war = no
+			election = no
+			relation = { who = GER value = 100 }
 			OR = {
 				AND = {
 					OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist }
@@ -63,11 +68,6 @@ political_decisions = {
 					GER = { OR = { government = nationalist_dictatorship government = sectarian_dictatorship } }
 				}
 			}
-		}
-		allow = {
-			war = no
-			election = no
-			relation = { who = GER value = 100 }
 		}
 		effect = {
 			set_country_flag = Anschluss_AUS

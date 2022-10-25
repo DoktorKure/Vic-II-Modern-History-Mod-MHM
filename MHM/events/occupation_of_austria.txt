@@ -149,6 +149,7 @@ country_event = {
 
 	option = {
 		name = "We are one step closer to becoming a soverign nation once more!"
+		set_global_flag = second_control_agreement_passed
 		prestige = 50
 	}
 	
@@ -552,7 +553,7 @@ country_event = {
 		war = no
 		
 		RUS = {
-			has_country_flag = nikita_khrushchev
+			OR = { has_country_flag = nikita_khrushchev has_global_flag = second_control_agreement_passed }
 			is_vassal = no 
 			war = no
 			
@@ -579,6 +580,20 @@ country_event = {
 		
 		#Release West Austria as an independent nation
 		release_vassal = ROA
+		
+		#If East Austria was already democratic but Soviet-occupied, turns East Austria into a Soviet satellite state
+		random_owned = {
+			limit = { owner = { exists = AUS AUS = { government = democracy1 } } }
+			AUS = {
+				government = proletarian_dictatorship1
+				country_event = 800052
+				ruling_party_ideology = communist
+			}
+			RUS = {
+				create_alliance = AUS
+				military_access = AUS
+			}
+		}
 		ai_chance = { factor = 0.1 }
 	}
 }
