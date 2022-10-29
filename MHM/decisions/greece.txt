@@ -76,10 +76,9 @@ political_decisions = {
 		effect = {
 			badboy = 11
 			set_country_flag = turkish_cypriots_expelled 
-			
-			857 = { change_province_name = "Ammochosto" }
-			
 			857 = { 
+				change_province_name = "Ammochosto" 
+				remove_core = NCY
 				add_province_modifier = {
 					name = greek_colonization
 					duration = 7300
