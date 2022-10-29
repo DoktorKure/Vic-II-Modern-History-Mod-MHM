@@ -16,7 +16,7 @@ country_event = {
 		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
 		
-		TIB = { exists = yes is_vassal = no }
+		TIB = { exists = yes is_vassal = no neighbour = THIS }
 
 		#PRC won the Civil War
 		has_global_flag = CHI_won_civil_war
