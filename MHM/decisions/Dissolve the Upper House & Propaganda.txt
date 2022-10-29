@@ -50,11 +50,11 @@ add_country_modifier = { name = national_confusion duration = 1095 }
 		picture = propaganda_poster
 		potential = {
 			OR = {
-				government = sectarian_dictatorship
-				government = nationalist_dictatorship
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
-				government = presidential_dictatorship
+				#Dictatorship, at war, or sufficiently curtailed press rights
+				vote_franschise = none_voting
+				publishing_rights = state_publishing
+				publishing_rights = censored_publishing
+				war = yes
 				wars_of_national_liberation = 1
 			}
 			NOT = { has_country_flag = propaganda_program }
