@@ -15,30 +15,12 @@ political_decisions = {
 				tag = FAR # Faroe Islands
 				tag = GRN # Greenland
 				tag = SCO # Scotland
-				tag = FAR
-				tag = ALA
-				tag = GRN
-				AND = { tag = EST OR = { is_secondary_power = yes is_greater_power = yes } } # Estonia
-				AND = { tag = LAT OR = { is_secondary_power = yes is_greater_power = yes } } # Latvia
-				AND = { tag = LIT OR = { is_secondary_power = yes is_greater_power = yes } } # Lithuania
-				AND = {
-					OR = { # Limit scope so SCA can't just war puppet everyone and create an absurdly OP superstate
-						tag = EST
-						tag = LAT
-						tag = LIT
-						tag = ICL
-						tag = NOR
-						tag = FIN
-						tag = DEN
-						tag = SWE
-						tag = ALA
-						tag = FAR
-						tag = GRN
-						tag = SCO
-					}
-					is_vassal = yes
-					overlord = { has_country_modifier = nordic_council_member }
-				}
+				tag = FAR # Faroe Islands
+				tag = ALA # Aland Islands
+				tag = GRN # Greenland
+				AND = { tag = EST is_vassal = yes overlord = { has_country_modifier = nordic_council_member } } # Estonia
+				AND = { tag = LAT is_vassal = yes overlord = { has_country_modifier = nordic_council_member } } # Latvia
+				AND = { tag = LIT is_vassal = yes overlord = { has_country_modifier = nordic_council_member } } # Lithuania
 			}
 			NOT = { has_country_modifier = nordic_council_member }
 		}
@@ -46,10 +28,19 @@ political_decisions = {
 			war = no
 			election = no
 			OR = {
-				part_of_sphere = no 
-				sphere_owner = { OR = { has_country_flag = xeu_ambition NOT = { has_country_flag = deny_superstate } } }
+				part_of_sphere = no
+				AND = {
+					is_vassal = no
+					part_of_sphere = yes
+					sphere_owner = { OR = { has_country_modifier = nordic_council_member NOT = { has_country_flag = deny_superstate } } }
+				}
+				AND = {
+					is_vassal = yes
+					overlord = { has_country_modifier = nordic_council_member }
+				}
 			}
-			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 tag = FAR tag = GRN tag = ALA }
+			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = sar_government }
+			NOT = { OR = { ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = communist } }
 		}
 		effect = {
 			prestige = 20
@@ -74,6 +65,7 @@ political_decisions = {
 		allow = {
 			OR = {
 				AND = {
+					is_vassal = no
 					part_of_sphere = yes 
 					sphere_owner = {
 						has_country_flag = deny_superstate
@@ -96,6 +88,7 @@ political_decisions = {
 				ruling_party_ideology = populist
 				ruling_party_ideology = nationalist
 				ruling_party_ideology = traditionalist
+				ruling_party_ideology = communist
 			}
 			war = no
 		}
