@@ -3,7 +3,7 @@ political_decisions = {
 	restore_german_monarchy = {
 		picture = "german_monarchy"
 		potential = {
-			tag = GER
+			OR = { tag = GER tag = FRG }
 			OR = { government = democracy government = democracy1 }
 			is_vassal = no
 			NOT = { has_country_flag = german_monarchy_fired_already }
@@ -44,7 +44,7 @@ political_decisions = {
 	restore_german_monarchy_USA = {
 		picture = "german_monarchy"
 		potential = {
-			tag = GER
+			OR = { tag = GER tag = FRG }
 			OR = { government = democracy government = democracy1 }
 			vassal_of = USA
 			NOT = { has_country_flag = german_monarchy_fired_USA }

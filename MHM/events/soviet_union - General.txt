@@ -1325,15 +1325,10 @@ country_event = {
             }
             
             #Berlin is still under allied hands despite demanding it during the CMC
-            GER = { 
+            AND = {
+				has_global_flag = divided_berlin
                 has_country_flag = RUS_CMC_berlin_demand_flag
-                NOT = { 
-                    OR = { 
-                        ruling_party_ideology = communist 
-                        ruling_party_ideology = communist_social 
-                    } 
-                }     
-                owns = 549 
+                DDR = { NOT = { owns = 549 } }
             }
         }
         
@@ -2284,7 +2279,18 @@ country_event = {
 		random_owned = { 
 			limit = { 
 				owner = { 
-					GER = { exists = no } 
+					FRG = { exists = yes }
+					GER = { exists = no }
+					owns = 549 
+				} 
+			} 
+			owner = { 549 = { secede_province = FRG } } 
+		}
+		random_owned = { 
+			limit = { 
+				owner = { 
+					GER = { exists = no }
+					FRG = { exists = no }
 					DDR = { exists = yes }
 					owns = 549 
 				} 
@@ -2292,11 +2298,12 @@ country_event = {
 			owner = { 549 = { secede_province = DDR } } 
 		}
 		
-		#Release IC Berlin if GER or DDR does not exist
+		#Release IC Berlin if GER, FRG, or DDR does not exist
 		random_owned = { 
 			limit = { 
 				owner = { 
-					owns = 549 
+					owns = 549
+					FRG = { exists = no }
 					GER = { exists = no } 
 					DDR = { exists = no } 
 				} 
@@ -2323,6 +2330,16 @@ country_event = {
 				tag = ICB 
 				OR = { is_vassal = no vassal_of = THIS } 
 				GER = { exists = no }
+				FRG = { exists = yes }
+			}
+			FRG = { inherit = ICB }
+		}
+		random_country = { 
+			limit = { 
+				tag = ICB 
+				OR = { is_vassal = no vassal_of = THIS } 
+				GER = { exists = no }
+				FRG = { exists = no }
 				DDR = { exists = yes }
 			}
 			DDR = { inherit = ICB }
@@ -2477,4 +2494,67 @@ country_event = {
 		}
 	}
 
+}
+
+#The Kaliningrad Question
+country_event = {
+	id = 1512341
+	title = "The Kaliningrad Question"
+	desc = EVTDESC1512341
+	picture = "PRU_question"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		NOT = { has_global_flag = blocsenabled }
+		is_vassal = no
+		war = no
+		owns = 695
+		AND = { exists = LIT NOT = { is_our_vassal = THIS } }
+		AND = { exists = GER NOT = { is_our_vassal = THIS } }
+		PRU = { exists = no }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Keep the Kaliningrad Oblast"
+		ai_chance = { factor = 0.7 }
+	}
+
+	option = {
+		name = "Cede Kaliningrad to Lithuania"
+		695 = { add_core = LIT remove_core = RUS }
+		697 = { add_core = LIT remove_core = RUS }
+		695 = { secede_province = LIT }
+		697 = { secede_province = LIT }
+		relation = { who = LIT value = 200 }
+		badboy = -5
+		ai_chance = { factor = 0.1 }
+	}
+
+	option = {
+		name = "Return Kaliningrad to Germany"
+		695 = { add_core = GER add_core = PRU remove_core = RUS }
+		697 = { add_core = GER add_core = PRU remove_core = RUS }
+		PRU = { civilized = yes }
+		695 = { secede_province = GER }
+		697 = { secede_province = GER }
+		relation = { who = GER value = 200 }
+		badboy = -5
+		ai_chance = { factor = 0.1 }
+	}
+
+	option = {
+		name = "Grant Kaliningrad independence"
+		badboy = -5
+		695 = { add_core = PRU remove_core = RUS }
+		697 = { add_core = PRU remove_core = RUS }
+		PRU = { civilized = yes }
+		release = PRU
+		PRU = { government = democracy country_event = 800054 ruling_party_ideology = conservative }
+		diplomatic_influence = { who = PRU value = 200 }
+		ai_chance = { factor = 0.1 }
+	}
 }

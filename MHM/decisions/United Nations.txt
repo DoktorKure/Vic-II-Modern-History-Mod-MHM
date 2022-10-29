@@ -110,8 +110,8 @@ political_decisions = {
 				OR = {
 				
 					#East and West Germany
-					AND = { tag = GER DDR = { exists = yes } NOT = { has_country_modifier = cold_war_low } has_global_flag = blocsenabled }
-					AND = { tag = DDR GER = { exists = yes } NOT = { has_country_modifier = cold_war_low } has_global_flag = blocsenabled }
+					AND = { tag = FRG DDR = { exists = yes } NOT = { has_country_modifier = cold_war_low } has_global_flag = blocsenabled }
+					AND = { tag = DDR FRG = { exists = yes } NOT = { has_country_modifier = cold_war_low } has_global_flag = blocsenabled }
 					
 					#North and South Korea
 					AND = { tag = NKO SKO = { exists = yes } NOT = { has_country_modifier = cold_war_low } has_global_flag = blocsenabled }

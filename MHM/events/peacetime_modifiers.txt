@@ -8,7 +8,7 @@ country_event = {
 	trigger = {
 	
 		#WW2 powers
-		OR = { tag = ENG tag = FRA tag = RUS tag = USA tag = JAP tag = ITA tag = GER }
+		OR = { tag = ENG tag = FRA tag = RUS tag = USA tag = JAP tag = ITA tag = GER tag = NGF tag = SGF tag = FRG }
 		
 		NOT = { year = 1950 }
 	

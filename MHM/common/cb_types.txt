@@ -2707,8 +2707,8 @@ assisted_unification = {
 			AND = { tag = YEM exists = SYE THIS = { NOT = { tag = SYE } } }
 			AND = { tag = SYE exists = YEM THIS = { NOT = { tag = YEM } } }
 			
-			AND = { tag = GER exists = DDR THIS = { NOT = { tag = DDR } } }
-			AND = { tag = DDR exists = GER THIS = { NOT = { tag = GER } } }
+			AND = { tag = FRG exists = DDR THIS = { NOT = { tag = DDR } } }
+			AND = { tag = DDR exists = FRG THIS = { NOT = { tag = FRG } } }
 			
 			AND = { tag = ALG exists = FAG THIS = { NOT = { tag = FAG } } }
 			AND = { tag = FAG exists = ALG THIS = { NOT = { tag = ALG } } }
@@ -2766,8 +2766,8 @@ assisted_unification = {
 		random_owned = { limit = { owner = { tag = YEM } } owner = { SYE = { inherit = YEM relation = { who = THIS value = 200 } } } }
 		random_owned = { limit = { owner = { tag = SYE } } owner = { YEM = { inherit = SYE relation = { who = THIS value = 200 } } } }
 		
-		random_owned = { limit = { owner = { tag = GER } } owner = { DDR = { inherit = GER relation = { who = THIS value = 200 } } } }
-		random_owned = { limit = { owner = { tag = DDR } } owner = { GER = { inherit = DDR relation = { who = THIS value = 200 } } } }
+		random_owned = { limit = { owner = { tag = FRG } } owner = { DDR = { inherit = FRG change_tag = GER relation = { who = THIS value = 200 } } } }
+		random_owned = { limit = { owner = { tag = DDR } } owner = { FRG = { inherit = DDR change_tag = GER relation = { who = THIS value = 200 } } } }
 		
 		random_owned = { limit = { owner = { tag = ALG } } owner = { FAG = { inherit = ALG relation = { who = THIS value = 200 } } } }
 		random_owned = { limit = { owner = { tag = FAG } } owner = { ALG = { inherit = FAG relation = { who = THIS value = 200 } } } }
@@ -2777,9 +2777,6 @@ assisted_unification = {
 		
 		random_owned = { limit = { owner = { tag = GRE } } owner = { UGR = { inherit = GRE relation = { who = THIS value = 200 } } } }
 		random_owned = { limit = { owner = { tag = UGR } } owner = { GRE = { inherit = UGR relation = { who = THIS value = 200 } } } }
-		
-		random_owned = { limit = { owner = { tag = CYP } } owner = { NCY = { inherit = CYP relation = { who = THIS value = 200 } } } }
-		random_owned = { limit = { owner = { tag = NCY } } owner = { CYP = { inherit = NCY relation = { who = THIS value = 200 } } } }
 	}
 	
 }

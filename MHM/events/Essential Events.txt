@@ -31,6 +31,7 @@ country_event = {
 
 			#Historical Economic Great Powers
 			AND = { tag = GER is_vassal = no OR = { has_country_modifier = germaneconomy year = 1990 } }
+			AND = { tag = FRG is_vassal = no OR = { has_country_modifier = germaneconomy year = 1990 } }
 			AND = { tag = JAP is_vassal = no OR = { has_country_modifier = japaneseeconomy year = 1990 } }
   
 		}
@@ -182,7 +183,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = GER
+		OR = { tag = GER tag = NGF tag = SGF tag = RHL tag = DDR tag = FRG }
 		year = 1946
 		NOT = { year = 1989 }
 		war = no

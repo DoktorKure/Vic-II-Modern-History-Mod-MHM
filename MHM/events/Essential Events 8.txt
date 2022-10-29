@@ -2765,73 +2765,6 @@ country_event = {
 
 }
 
-#European Defence Community
-country_event = {
-	id = 1512070
-title = "The European Defence Community"
-	desc = EVTDESC1512070
-	picture = "edc_proposal"
-
-fire_only_once = yes
-
-trigger = {
-year = 1952
-war = no
-NOT = { year = 1990 }
-tag = FRA
-is_greater_power = yes
-GER = { exists = yes }
-}
-
-mean_time_to_happen = { 
-months = 5
-	}
-
-option = {
-name = "Propose the EDC Treaty"
-prestige = 25
-relation = { who = USA value = -200 }
-any_country = { limit = { exists = yes OR = { tag = GER tag = ITA tag = NET tag = BEL tag = LUX } } country_event = 1512071 }
-ai_chance = { factor = 0.1 }
-		}
-
-option = {
-name = "Leave defence to NATO"
-prestige = -25
-relation = { who = USA value = 200 }
-relation = { who = ENG value = 200 }
-ai_chance = { factor = 0.9 }
-		}
-
-}
-
-#European Defence Community - receiver
-country_event = {
-	id = 1512071
-title = "The European Defence Community"
-	desc = EVTDESC1512070
-	picture = "edc_proposal"
-
-is_triggered_only = yes
-
-option = {
-name = "Ratify the EDC Treaty"
-create_alliance = FROM
-relation = { who = FROM value = 200 }
-FROM = { diplomatic_influence = { who = THIS value = 300 } }
-ai_chance = { factor = 0.9 }
-		}
-
-option = {
-name = "Leave defence to NATO"
-prestige = 25
-relation = { who = USA value = 200 }
-USA = { diplomatic_influence = { who = THIS value = 50 } }
-ai_chance = { factor = 0.1 }
-		}
-
-}
-
 #Madagascar End of Communism
 country_event = {
 	id = 1512072
@@ -5176,50 +5109,6 @@ ai_chance = { factor = 0.2 }
 
 }
 
-#EEC countries join the French Sphere during the cold war
-country_event = {
-	id = 1512134
-title = "The European Economic Community"
-	desc = EVTDESC1512134
-	picture = "eec_join"
-
-trigger = {
-OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
-NOT = { has_country_flag = eec_choice_made }
-capital_scope = { continent = europe }
-is_greater_power = no
-year = 1958
-part_of_sphere = no
-is_vassal = no
-war = no
-has_global_flag = european_coal_and_steel_community
-has_global_flag = blocsenabled
-GER = { exists = yes government = democracy tech_school = XEU_tech_school }
-FRA = { exists = yes government = democracy is_greater_power = yes tech_school = XEU_tech_school }
-tech_school = XEU_tech_school
-}
-
-mean_time_to_happen = { 
-months = 1
-	}
-
-option = {
-name = "Join the EEC fully!"
-prestige = 50
-FRA = { diplomatic_influence = { who = THIS value = 200 } prestige = 50 }
-set_country_flag = eec_choice_made
-ai_chance = { factor = 1 }
-		}
-
-option = {
-name = "Delay integration"
-prestige = -50
-set_country_flag = eec_choice_made
-ai_chance = { factor = 0 }
-		}
-
-}
-
 #Iranian Claims over Bahrain
 country_event = {
 	id = 1512135
@@ -5337,10 +5226,13 @@ country_event = {
 		tag = USA
 		NOT = { has_global_flag = 1992_start_date_flag }
 		rank = 2
-		government = democracy
+		OR = { government = democracy government = democracy1 }
 		capitalism = 1
-		JAP = { exists = yes is_greater_power = yes war = no OR = { government = hms_government government = hms_government1 government = democracy } }
-		GER = { exists = yes is_greater_power = yes war = no OR = { government = hms_government government = hms_government1 government = democracy } }
+		JAP = { exists = yes is_greater_power = yes war = no OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } }
+		OR = {
+			GER = { exists = yes is_greater_power = yes war = no OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } }
+			FRG = { exists = yes is_greater_power = yes war = no OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } }
+		}
 	}
 
 	mean_time_to_happen = { 
@@ -5350,7 +5242,9 @@ country_event = {
 	option = {
 		name = "Propose it to Germany and Japan"
 		JAP = { country_event = 1512142 }
-		GER = { country_event = 1512143 }
+		random_owned = { limit = { owner = { exists = GER } } owner = { GER = { country_event = 1512143 } } }
+		random_owned = { limit = { owner = { exists = FRG NOT = { exists = GER } } } owner = { FRG = { country_event = 1512143 } } }
+		
 		ai_chance = { factor = 0.9 }
 	}
 
@@ -5521,47 +5415,6 @@ country_event = {
 		name = "Rejoice!"
 		set_country_flag = demographic_transition_stage_2_flag
 		add_country_modifier = { name = industrial_pop_boom duration = 5475 }
-	}
-
-}
-
-#German Welfare State
-country_event = {
-	id = 1512149
-title = "The Welfare State"
-	desc = EVTDESC1512149
-	picture = "german_welfare_state"
-
-fire_only_once = yes
-
-trigger = {
-tag = GER
-year = 1960
-ruling_party_ideology = socialist
-NOT = { year = 1990 }
-government = democracy
-}
-
-mean_time_to_happen = { 
-months = 2
-	}
-
-option = {
-name = "Yes!"
-social_reform = good_public_housing
-social_reform = excellent_public_education
-social_reform = low_health_care
-social_reform = low_pensions
-social_reform = excellent_security
-social_reform = low_minimum_wage
-social_reform = extended_subsidies
-ai_chance = { factor = 0.9 }
-	}
-
-option = {
-name = "No need"
-prestige = -25
-ai_chance = { factor = 0.1 }
 	}
 
 }
@@ -9355,42 +9208,6 @@ country_event = {
 	
 }
 
-#Bavaria Joins Germany
-country_event = {
-	id = 1512263
-title = "Founding Treaty of the FRG"
-	desc = EVTDESC1512263
-	picture = "founding_treaty"
-
-fire_only_once = yes
-
-trigger = {
-tag = BAV
-GER = { OR = { government = democracy government = hms_government } exists = yes war = no }
-NOT = { year = 1990 }
-war = no
-is_vassal = no
-}
-
-mean_time_to_happen = { 
-months = 1
-	}
-
-option = {
-name = "Join the Federal Republic of Germany"
-GER = { prestige = 25 inherit = BAV }
-ai_chance = { factor = 0.9 }
-		}
-
-option = {
-name = "Remain independent!"
-prestige = 25
-relation = { who = GER value = -200 }
-ai_chance = { factor = 0.1 }
-		}
-
-}
-
 #Communist Burkina Faso
 country_event = {
 	id = 1512264
@@ -9558,196 +9375,6 @@ ai_chance = { factor = 0.4 }
 
 }
 
-#Merger of South and North Germany
-country_event = {
-	id = 1512268
-title = "West Germany"
-	desc = EVTDESC1512268
-	picture = "founding_treaty"
-
-fire_only_once = yes
-
-trigger = {
-tag = USA
-year = 1950
-NGF = { exists = yes }
-any_owned_province = { is_core = GER }
-has_country_flag = policy_on_germany
-}
-
-mean_time_to_happen = { 
-months = 5
-	}
-
-option = {
-name = "Unite Germany"
-relation = { who = NGF value = 100 }
-any_owned = { limit = { is_core = GER } secede_province = NGF }
-NGF = { change_tag = GER }
-ai_chance = { factor = 0.9 }
-		}
-
-option = {
-name = "Form a rival South German state instead"
-prestige = -50
-
-564 = { secede_province = NGF } 
-565 = { secede_province = NGF } 
-566 = { secede_province = NGF } 
-567 = { secede_province = NGF } 
-568 = { secede_province = NGF } 
-2560 = { secede_province = NGF } 
-
-release_vassal = ICB
-
-ICB = { government = sar_government country_event = 800054 }
-
-539 = { secede_province = NGF }
-
-any_owned = { limit = { is_core = SGF } secede_province = SGF }
-SGF = { civilized = yes government = democracy country_event = 800054 }
-diplomatic_influence = { who = SGF value = 200 }
-
-diplomatic_influence = { who = ICB value = 200 }
-
-SGF = { capital = 595 }
-
-ai_chance = { factor = 0.1 }
-		}
-
-}
-
-#Return of the Hohenzollern monarchy in Germany
-country_event = {
-	id = 1512269
-title = "Return of the Hohenzollerns in Germany?"
-	desc = EVTDESC1512269
-	picture = "kaiser_returns"
-
-fire_only_once = yes
-
-trigger = {
-tag = ENG
-year = 1946
-NOT = { year = 1990 }
-government = hms_government
-has_country_flag = policy_on_germany
-NGF = { exists = yes }
-is_sphere_leader_of = NGF
-is_vassal = no
-}
-
-mean_time_to_happen = { 
-months = 5
-	}
-
-option = {
-name = "We will keep Germany a republic"
-prestige = 25
-ai_chance = { factor = 0.6 }
-		}
-
-option = {
-name = "A German monarchy with British ties can be a stabiliser"
-NGF = { government = hms_government add_country_modifier = { name = revolution_chaos duration = 1825 } }
-badboy = 5
-relation = { who = FRA value = -50 }
-relation = { who = USA value = -100 }
-relation = { who = RUS value = -100 }
-relation = { who = POL value = -50 }
-relation = { who = BEL value = -50 }
-relation = { who = NET value = -50 }
-ai_chance = { factor = 0.4 }
-		}
-}
-
-#Dutch annexation of German lands
-country_event = {
-	id = 1512270
-	title = "Bakker-Schut Plan"
-	desc = EVTDESC1512270
-	picture = "kaiser_returns"
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = NET
-		year = 1947
-		NOT = { has_global_flag = 1950_start_date_flag }
-		NOT = { year = 1990 }
-		
-		is_vassal = no
-		
-		NGF = { exists = no }
-		GER = { exists = no }
-		
-		ENG = { 
-			is_vassal = no
-			owns = 575
-			owns = 576
-			owns = 577
-			owns = 581
-			owns = 542
-			owns = 543
-		}
-	}
-
-	mean_time_to_happen = { 
-		months = 1
-	}
-
-	option = {
-		name = "Request for German lands as reparations"
-		prestige = 25
-		badboy = 5
-		ENG = { country_event = 1512271 }
-		ai_chance = { factor = 0.9 }
-	}
-
-	option = {
-		name = "Keep Germany's territorial borders"
-		money = 500000
-		ai_chance = { factor = 0.1 }
-	}
-}
-
-#Dutch annexation of German lands - ENG
-country_event = {
-	id = 1512271
-	title = "Bakker-Schut Plan"
-	desc = EVTDESC1512270
-	picture = "dutch_annexation_ger"
-
-	is_triggered_only = yes
-
-	option = {
-		name = "Reject their attempts at land grab!"
-		prestige = 25
-		relation = { who = NET value = -50 }
-		relation = { who = USA value = 50 }
-		ai_chance = { factor = 0.9 }
-	}
-
-	option = {
-		name = "Accept the Dutch request"
-		
-		#Get a bribe
-		money = 500000
-		
-		relation = { who = NET value = 200 }
-		
-		#Cede German lands
-		575 = { secede_province = NET }
-		576 = { secede_province = NET }
-		577 = { secede_province = NET }
-		581 = { secede_province = NET }
-		542 = { secede_province = NET }
-		543 = { secede_province = NET }
-		ai_chance = { factor = 0.1 }
-	}
-
-}
-
 #New Economic Mechanism - Hungary
 country_event = {
 	id = 1512272
@@ -9792,76 +9419,6 @@ country_event = {
 		ai_chance = { factor = 0.1 }
 	}
 	
-}
-
-#Germany seeks return of Heligoland
-country_event = {
-	id = 1512273
-title = "Return of Heligoland"
-	desc = EVTDESC1512273
-	picture = "heligoland_1952"
-
-fire_only_once = yes
-
-trigger = {
-OR = { tag = GER tag = NGF }
-war = no
-year = 1952
-NOT = { owns = 533 }
-NOT = { year = 1990 }
-}
-
-mean_time_to_happen = { 
-months = 3
-	}
-
-option = {
-name = "Demand the return of the island"
-random_country = { 
-limit = { owns = 533 }
-country_event = 1512274
-}
-ai_chance = { factor = 0.8 }
-		}
-
-option = {
-name = "Abandon our claims"
-prestige = -25
-badboy = -5
-random_country = { 
-limit = { owns = 533 }
-relation = { who = THIS value = 100 }
-}
-ai_chance = { factor = 0.2 }
-		}
-}
-
-#Germany seeks return of Heligoland - receiver
-country_event = {
-	id = 1512274
-title = "Return of Heligoland to $FROMCOUNTRY$"
-	desc = EVTDESC1512273
-	picture = "heligoland_1952"
-
-is_triggered_only = yes
-
-option = {
-name = "Return the tiny island"
-FROM = { prestige = 50 }
-random_owned = { limit = { owner = { exists = NGF } } owner = { 533 = { add_core = NGF } } }
-533 = { remove_core = THIS add_core = GER secede_province = FROM }
-relation = { who = THIS value = 50 }
-ai_chance = { factor = 0.7 }
-		}
-
-option = {
-name = "Hold onto it"
-badboy = 2.5
-relation = { who = FROM value = -100 }
-533 = { add_core = GER }
-ai_chance = { factor = 0.3 }
-		}
-
 }
 
 #Change leader of NATO
@@ -11007,41 +10564,6 @@ mean_time_to_happen = { months = 11 }
 	prestige = -25
 add_country_modifier = { name = revolution_chaos duration = 365 }
 	ai_chance = { factor = 0.4 }	
-  }
-
-}
-
-#West Austria becomes Austria
-country_event = {
-  id = 1512313
-  title = "$YEAR$ Austrian State Treaty"
-  desc = EVT_8203010_DESC
-  picture = "nwo2_austrian_state_treaty"
-
-fire_only_once = yes
-
-  trigger = {
-	tag = ROA
-	war = no
-	AUS = { exists = no }
-	owns = 619
-  }
-
-  option = {
-	name = "Begin our path as an independent nation"
-all_core = { remove_core = ROA remove_core = GER add_core = AUS }
-		change_tag = AUS
-		primary_culture = south_german
-		all_core = { assimilate = yes }
-		ai_chance = { factor = 0.9 }
-  }
-
-  option = {
-	name = "Express our desire to reunite with Germany someday"
-all_core = { remove_core = ROA add_core = AUS add_core = GER }
-		change_tag = AUS	
-		badboy = 10
-		ai_chance = { factor = 0.1 }
   }
 
 }
@@ -12573,72 +12095,6 @@ clr_country_flag = superstate_common_tariffs
 remove_country_modifier = cmthigh
 remove_country_modifier = cmtmedium
 remove_country_modifier = cmtlow
-		}
-
-}
-
-#The Kaliningrad Question
-country_event = {
-	id = 1512341
-title = "The Kaliningrad Question"
-	desc = EVTDESC1512341
-	picture = "PRU_question"
-
-fire_only_once = yes
-
-trigger = {
-tag = RUS
-NOT = { has_global_flag = blocsenabled }
-is_vassal = no
-war = no
-owns = 695
-AND = { exists = LIT NOT = { is_our_vassal = THIS } }
-AND = { exists = GER NOT = { is_our_vassal = THIS } }
-PRU = { exists = no }
-}
-
-mean_time_to_happen = { months = 6 }
-
-option = {
-name = "Keep the Kaliningrad Oblast"
-695 = { add_core = PRU }
-697 = { add_core = PRU }
-PRU = { civilized = yes }
-ai_chance = { factor = 0.7 }
-		}
-
-option = {
-name = "Cede Kaliningrad to Lithuania"
-695 = { add_core = LIT remove_core = RUS }
-697 = { add_core = LIT remove_core = RUS }
-695 = { secede_province = LIT }
-697 = { secede_province = LIT }
-relation = { who = LIT value = 200 }
-badboy = -5
-ai_chance = { factor = 0.1 }
-		}
-
-option = {
-name = "Return Kaliningrad to Germany"
-695 = { add_core = GER remove_core = RUS }
-697 = { add_core = GER remove_core = RUS }
-695 = { secede_province = GER }
-697 = { secede_province = GER }
-relation = { who = GER value = 200 }
-badboy = -5
-ai_chance = { factor = 0.1 }
-		}
-
-option = {
-name = "Grant Kaliningrad independence"
-badboy = -5
-695 = { add_core = PRU remove_core = RUS }
-697 = { add_core = PRU remove_core = RUS }
-PRU = { civilized = yes }
-release = PRU
-PRU = { government = democracy country_event = 800054 ruling_party_ideology = conservative }
-diplomatic_influence = { who = PRU value = 200 }
-ai_chance = { factor = 0.1 }
 		}
 
 }

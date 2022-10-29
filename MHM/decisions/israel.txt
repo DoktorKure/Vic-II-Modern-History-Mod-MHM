@@ -122,9 +122,9 @@ political_decisions = {
 		picture = "claims_conference"
 
 		potential = {
-            	tag = ISR
-			exists = GER
-			GER = { money = 300000 }
+            tag = ISR
+			OR = { exists = GER exists = FRG }
+			OR = { GER = { money = 300000 } FRG = { money = 300000 } }
 			NOT = { has_country_flag = claims_conference }			
         }
       
@@ -134,7 +134,8 @@ political_decisions = {
       
         effect = {
 			prestige = 10
-			GER = { country_event = 8004326 }
+			random_owned = { limit = { owner = { exists = GER } } owner = { GER = { country_event = 8004326 } } }
+			random_owned = { limit = { owner = { exists = FRG NOT = { exists = GER } } } owner = { FRG = { country_event = 8004326 } } }
 			set_country_flag = claims_conference        
 		}
           

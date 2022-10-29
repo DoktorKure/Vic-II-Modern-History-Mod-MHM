@@ -1,6 +1,7 @@
 owner = OG4
 controller = OG4
 add_core = GER
+add_core = FRG
 trade_goods = cattle
 life_rating = 35
 terrain = forested_farmland
@@ -8,8 +9,8 @@ railroad = 1
 colonial = 0
 
 1950.1.1 = {
-owner = GER
-controller = GER
+owner = FRG
+controller = FRG
 }
 
 1992.1.1 = {

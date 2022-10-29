@@ -458,9 +458,8 @@ country_event = {
 		
 		has_global_flag = blocsenabled
 		
-		#Germany exists
-		is_our_vassal = GER
-		GER = { is_possible_vassal = BAV }
+		#Germany or South Germany exists
+		OR = { is_our_vassal = GER is_our_vassal = FRG is_our_vassal = SGF }
 		
 		#West Austria exists
 		is_our_vassal = ROA
@@ -480,23 +479,57 @@ country_event = {
 	}
 	
 	option = {
-		name = "Form a South German Federation"
+		name = "South Germans will be united"
 		relation = { who = RUS value = -50 }
 		relation = { who = ENG value = -50 }
 		relation = { who = FRA value = -50 }
 		relation = { who = ITA value = -50 }
 
 		#Release SGF
-		GER = { release = BAV }
-		BAV = { inherit = ROA }
-		BAV = { change_tag = SGF }
-		create_vassal = SGF
-		
-		SGF = {
-			government = democracy
-			country_event = 800054
-			ruling_party_ideology = conservative
+		random_owned = {
+			limit = {
+				owner = {
+					exists = GER
+					NOT = { exists = SGF }
+				}
+			}
+			owner = {
+				GER = { release = SGF }
+				SGF = {
+					government = democracy
+					country_event = 800054
+					ruling_party_ideology = conservative
+					inherit = ROA
+				}
+			}
 		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FRG
+					NOT = { exists = GER }
+					NOT = { exists = SGF }
+				}
+			}
+			owner = {
+				FRG = { release = SGF }
+				SGF = {
+					government = democracy
+					country_event = 800054
+					ruling_party_ideology = conservative
+					inherit = ROA
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SGF
+				}
+			}
+			owner = { SGF = { inherit = ROA } }
+		}
+		create_vassal = SGF
 		
 		relation = { who = SGF value = 200 }
 		diplomatic_influence = { who = SGF value = 200 }
@@ -509,7 +542,10 @@ country_event = {
 			} 
 		}
 		
-		ai_chance = { factor = 0.2 }
+		relation = { who = SGF value = 200 }
+		diplomatic_influence = { who = SGF value = 200 }
+		
+		ai_chance = { factor = 0.3 }
 	}
 	
 	option = {
@@ -518,9 +554,26 @@ country_event = {
 		relation = { who = ENG value = -100 }
 		relation = { who = FRA value = -200 }
 		relation = { who = ITA value = -200 }
+		badboy = 5
 		
 		#Germany inherits Austria
-		GER = { inherit = ROA }
+		random_owned = {
+			limit = {
+				owner = {
+					exists = GER
+				}
+			}
+			owner = { GER = { inherit = ROA } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FRG
+					NOT = { exists = GER }
+				}
+			}
+			owner = { FRG = { inherit = ROA } }
+		}
 		
 		#Germany gets claims over Austria
 		AUS = { 
@@ -679,6 +732,47 @@ country_event = {
 		set_country_flag = renounced_war_rights
 		neutrality = yes
 	}
+}
+
+
+
+#West Austria becomes Austria
+country_event = {
+	id = 1512313
+	title = "$YEAR$ Austrian State Treaty"
+	desc = EVT_8203010_DESC
+	picture = "nwo2_austrian_state_treaty"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ROA
+		war = no
+		AUS = { exists = no }
+		owns = 619
+	}
+
+	option = {
+		name = "Begin our path as an independent nation"
+		all_core = { remove_core = ROA remove_core = GER add_core = AUS }
+		change_tag = AUS
+		ai_chance = {
+			factor = 0.9
+			modifier = { factor = 0 NOT = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist } } }
+		}
+	}
+
+	option = {
+		name = "Express our desire to reunite with Germany someday"
+		all_core = { remove_core = ROA add_core = AUS add_core = GER }
+		change_tag = AUS	
+		badboy = 10
+		ai_chance = {
+			factor = 0.1
+			modifier = { factor = 1 OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist } }
+		}
+	}
+
 }
 
 #Economic Boom for Austria

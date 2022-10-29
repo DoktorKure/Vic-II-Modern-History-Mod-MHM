@@ -249,10 +249,17 @@ country_event = { # Unification of Germany
 		war = no
 		
 		is_our_vassal = DDR
-		GER = { 
-			exists = yes 
-			is_vassal = no 
-			war = no 
+		OR = {
+			GER = { 
+				exists = yes 
+				is_vassal = no 
+				war = no 
+			}
+			FRG = { 
+				exists = yes 
+				is_vassal = no 
+				war = no 
+			}
 		}
 		
 		has_country_flag = lavrentiy_beria
@@ -265,8 +272,23 @@ country_event = { # Unification of Germany
 		name = "The German people have already suffered too much."
 		
 		prestige = 250
-		GER = { inherit = DDR }
-		relation = { who = GER value = 150 }
+		random_owned = {
+			limit = {
+				owner = {
+					exists = GER
+				}
+			}
+			owner = { GER = { inherit = DDR relation = { who = THIS value = 150 } } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FRG
+					NOT = { exists = GER }
+				}
+			}
+			owner = { FRG = { inherit = DDR relation = { who = THIS value = 150 } } }
+		}
 		random_country = {
 			limit = {
 				tag = USA

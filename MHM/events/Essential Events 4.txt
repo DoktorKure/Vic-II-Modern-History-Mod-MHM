@@ -106,7 +106,7 @@ country_event = {
 	picture = "berlin_wall_fall"
 
 	trigger = {
-		tag = GER
+		OR = { tag = GER tag = FRG }
 		OR = { 
 			549 = { has_province_modifier = berlin_wall } 
 			551 = { has_province_modifier = berlin_wall } 
@@ -3140,7 +3140,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = GER
+		OR = { tag = GER tag = FRG }
 		NOT = { year = 1991 }
 	}
 

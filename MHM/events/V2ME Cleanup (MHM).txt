@@ -372,6 +372,32 @@ country_event = {
             any_state  = { flashpoint_tension = -100 }
         }
 		
+		#Clean up SARs without overlords unless UN tag
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = sar_government
+					is_vassal = no
+					NOT = { tag = UNT }
+					NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } }
+				}
+			}
+			government = republic
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = sar_government
+					is_vassal = no
+					NOT = { tag = UNT }
+					OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+				}
+			}
+			government = proletarian_dictatorship
+		}
+		
 		CLN = { country_event = { id = 47777787 days = 1 } }
 	}
 }

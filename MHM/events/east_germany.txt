@@ -521,7 +521,7 @@ country_event = {
 		any_pop = { limit = { is_primary_culture = yes } militancy = 2 consciousness = 2 }
 		relation = { who = RUS value = 50 } 
 		relation = { who = POL value = 50 } 
-		relation = { who = GER value = -50 }
+		relation = { who = FRG value = -50 }
 	}
 }
 
@@ -554,7 +554,7 @@ country_event = {
 		}
 		
 		#West Germany exists
-		GER = {
+		FRG = {
 			exists = yes
 			neighbour = THIS
 			OR = { government = democracy government = democracy1 }
@@ -569,7 +569,7 @@ country_event = {
 	option = {
 		name = EVT_8004317_A
 		prestige = -50
-		relation = { who = GER value = -50 }
+		relation = { who = FRG value = -50 }
 		any_pop = { 
 			limit = { is_primary_culture = yes } 
 			consciousness = 3 
@@ -597,7 +597,7 @@ country_event = {
 		war = no
 		
 		#West Germany exists
-		GER = {
+		FRG = {
 			exists = yes
 			is_vassal = no
 			neighbour = THIS
@@ -629,7 +629,7 @@ country_event = {
 		}
 		
 		#Boost relations with West Germany
-		relation = { who = GER value = 100 } 
+		relation = { who = FRG value = 100 } 
 	
 		#East German government collapses
 		set_country_flag = DDR_to_collapse_flag
@@ -683,7 +683,7 @@ country_event = {
 		war = no
 		
 		#West Germany exists
-		GER = {
+		FRG = {
 			exists = yes
 			neighbour = THIS
 			
@@ -701,7 +701,7 @@ country_event = {
 		name = "It is the end of East Germany"
 
 		#West Germany to annex East Germany
-		GER = { country_event = 8004325 }
+		FRG = { country_event = 8004325 }
 		
 		ai_chance = { factor = 0.9 }
 	}
@@ -709,7 +709,7 @@ country_event = {
 	option = {
 		name = "The GDR shall never fall!"
 		
-		relation = { who = GER value = -100 } 
+		relation = { who = FRG value = -100 } 
 		
 		#Liberalism grows
 		any_pop = { 
