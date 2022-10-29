@@ -96,7 +96,7 @@ political_decisions = {
 				add_province_modifier = { name = natalism_1 duration = 1825 } 
 			}
 
-			add_country_modifier = { name = fertility_timer duration = 1825 } # to prevent decision spam
+			add_country_modifier = { name = fertility_timer duration = 3650 } # to prevent decision spam
 		
 			#Accepted pops are happy
 			any_pop = { 
