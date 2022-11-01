@@ -11,7 +11,7 @@ country_event = {
 		has_global_flag = cold_warusa
 		
 		OR = {
-overlord = { has_country_flag = liberal_revolution_in_progress }
+			overlord = { has_country_flag = liberal_revolution_in_progress }
 			is_vassal = no
 			AND = {
 				culture_has_union_tag = yes
@@ -26,16 +26,16 @@ overlord = { has_country_flag = liberal_revolution_in_progress }
 
 		NOT = {
 			OR = {
-			has_country_flag = liberal_revolution_in_progress
-			has_country_flag = liberal_revolution_fired
-			has_country_flag = had_liberal_revolution
+				has_country_flag = liberal_revolution_in_progress
+				has_country_flag = liberal_revolution_fired
+				has_country_flag = had_liberal_revolution
 			}
 			vote_franschise = gerrymandered_voting
 			vote_franschise = free_voting
-OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = socialist_democracy }
+			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = socialist_democracy }
 		}
 		NOT = {
-		has_global_flag = liberal_revolution_should_now_fire
+			has_global_flag = liberal_revolution_should_now_fire
 		}
 	}
 
@@ -285,15 +285,15 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.5
-NOT = { OR = { publishing_rights = responsible_publishing publishing_rights = free_publishing } }
+			NOT = { OR = { publishing_rights = responsible_publishing publishing_rights = free_publishing } }
 		}
 		modifier = {
 			factor = 1.5
 			NOT = {
 				OR = {
-		political_parties = parties_rigged
-		political_parties = parties_short
-		political_parties = parties_fair
+					political_parties = parties_rigged
+					political_parties = parties_short
+					political_parties = parties_fair
 				}
 			}
 		}
@@ -301,11 +301,11 @@ NOT = { OR = { publishing_rights = responsible_publishing publishing_rights = fr
 			factor = 0.1
 			vote_franschise = free_voting
 			public_meetings = free_meetings
-OR = { publishing_rights = responsible_publishing publishing_rights = free_publishing }
+			OR = { publishing_rights = responsible_publishing publishing_rights = free_publishing }
 			OR = {
-		political_parties = parties_rigged
-		political_parties = parties_short
-		political_parties = parties_fair
+				political_parties = parties_rigged
+				political_parties = parties_short
+				political_parties = parties_fair
 			}
 		}		
 	}
@@ -455,6 +455,12 @@ country_event = {
 					duration = 730
 				}
 			}
+			any_pop = {
+				ideology = {
+					value = liberal
+					factor = 0.03
+				}
+			}
 		}
 	}
 
@@ -463,7 +469,7 @@ country_event = {
 		any_pop = {
 			ideology = {
 				value = liberal
-				factor = 0.03
+				factor = 0.05
 			}
 			militancy = 1
 		}
@@ -513,47 +519,65 @@ country_event = {
 	option = {
 		name = "EVTOPTA10120"
 		random_owned = { 
-				limit = {
-					is_colonial = no
-					liberal = 5
-					NOT = {
-						has_province_modifier = liberal_agitation
-					}
+			limit = {
+				is_colonial = no
+				liberal = 5
+				NOT = {
+					has_province_modifier = liberal_agitation
 				}
+			}
 		
-		add_province_modifier = {
-			name = liberal_agitation
-			duration = 730
+			add_province_modifier = {
+				name = liberal_agitation
+				duration = 730
+			}
+			any_pop = {
+				ideology = {
+					value = liberal
+					factor = 0.15
+				}
 			}
 		}
 		
 		random_owned = { 
-				limit = {
-					is_colonial = no
-					liberal = 5
-					NOT = {
-						has_province_modifier = liberal_agitation
-					}
+			limit = {
+				is_colonial = no
+				liberal = 5
+				NOT = {
+					has_province_modifier = liberal_agitation
 				}
+			}
 		
-		add_province_modifier = {
-			name = liberal_agitation
-			duration = 730
+			add_province_modifier = {
+				name = liberal_agitation
+				duration = 730
+			}
+			any_pop = {
+				ideology = {
+					value = liberal
+					factor = 0.15
+				}
 			}
 		}
 		
 		random_owned = { 
-				limit = {
-					is_colonial = no
-					liberal = 5
-					NOT = {
-						has_province_modifier = liberal_agitation
-					}
+			limit = {
+				is_colonial = no
+				liberal = 5
+				NOT = {
+					has_province_modifier = liberal_agitation
 				}
+			}
 		
-		add_province_modifier = {
-			name = liberal_agitation
-			duration = 730
+			add_province_modifier = {
+				name = liberal_agitation
+				duration = 730
+			}
+			any_pop = {
+				ideology = {
+					value = liberal
+					factor = 0.15
+				}
 			}
 		}
 	}
@@ -657,6 +681,12 @@ province_event = {
 		add_province_modifier = {
 			name = liberal_agitation
 			duration = 730
+			any_pop = {
+				ideology = {
+					value = liberal
+					factor = 0.02
+				}
+			}
 		}
 	}
 	option = {
@@ -759,6 +789,12 @@ province_event = {
 			name = liberal_agitation
 			duration = 730
 		}
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.15
+			}
+		}
 	}
 
 	option = {
@@ -819,8 +855,11 @@ province_event = {
 	}
 	option = {
 		name = "EVTOPTA10150"
-		poor_strata = {
-			militancy = 6
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.3
+			}
 		}
 	}
 	option = {
@@ -828,6 +867,12 @@ province_event = {
 		add_province_modifier = {
 			name = liberal_agitation
 			duration = 730
+		}
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.15
+			}
 		}
 	}
 }
@@ -915,13 +960,19 @@ country_event = {
 			limit = {
 				is_colonial = no
 				any_owned_province = {
-		NOT = { has_province_modifier = liberal_agitation }
+					NOT = { has_province_modifier = liberal_agitation }
 				}
 			}
 			any_owned = {
 				add_province_modifier = {
 					name = liberal_agitation
 					duration = 730
+				}
+				any_pop = {
+					ideology = {
+						value = liberal
+						factor = 0.15
+					}
 				}
 			}
 		}
@@ -990,7 +1041,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 1.2
-OR = { government = hms_government government = hms_government1 }
+				OR = { government = hms_government government = hms_government1 }
 			}
 			modifier = {
 				factor = 0.8
@@ -1110,6 +1161,12 @@ province_event = {
 		add_province_modifier = {
 			name = liberal_agitation
 			duration = 730
+		}
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.05
+			}
 		}
 	}
 }
@@ -1372,6 +1429,12 @@ country_event = {
 					duration = 730
 				}
 			}
+			any_pop = {
+				ideology = {
+					value = liberal
+					factor = 0.03
+				}
+			}
 		}
 	}
 
@@ -1476,6 +1539,12 @@ country_event = {
 				add_province_modifier = {
 					name = liberal_agitation
 					duration = 730
+				}
+			}
+			any_pop = {
+				ideology = {
+					value = liberal
+					factor = 0.03
 				}
 			}
 		}
@@ -1849,6 +1918,12 @@ country_event = {
 			any_pop = {
 				reduce_pop = 0.99
 				militancy = 4
+			}
+			any_pop = {
+				ideology = {
+					value = liberal
+					factor = 0.05
+				}
 			}
 		}
 	}

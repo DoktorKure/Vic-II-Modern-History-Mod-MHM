@@ -25,7 +25,7 @@ political_decisions = {
 			prestige = -5
 			country_event = 201901
 
-add_country_modifier = { name = national_confusion duration = 1095 }
+			add_country_modifier = { name = national_confusion duration = 1095 }
 			set_country_flag = dissolving_parliament
 			any_pop = {
 				limit = {
@@ -70,6 +70,13 @@ add_country_modifier = { name = national_confusion duration = 1095 }
 				publishing_rights = state_publishing
 				publishing_rights = censored_publishing
 				war = yes
+			}
+			NOT = { # Propaganda would not have the desired effect during a liberal revolution
+				OR = {
+					has_country_flag = liberal_revolution_in_progress
+					has_country_flag = liberal_revolution_fired
+					
+				}
 			}
 		}
 		
