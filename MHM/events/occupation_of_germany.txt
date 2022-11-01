@@ -806,6 +806,9 @@ country_event = {
 		relation = { who = FRA value = -25 } 	 
 
 		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } consciousness = -3 militancy = -3 } } }
+		
+		#East Germany gains cores on OG5
+		OG5 = { any_owned = { add_core = DDR } }
 
 		#Polish Zone merges with Soviet Zone if DDR doesn't exist
 		random_owned = {
