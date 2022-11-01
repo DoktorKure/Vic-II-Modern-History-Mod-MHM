@@ -128,6 +128,7 @@ country_event = {
 		#End the Warsaw Pact alliances
 		set_global_flag = depuppetize_warsaw_pact 
 		set_global_flag = dissolve_warsaw_pact
+		set_global_flag = german_reunification_allowed
 		any_country = {
 			limit = { has_country_modifier = warsaw_pact }
 			remove_country_modifier = warsaw_pact
