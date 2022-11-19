@@ -189,6 +189,7 @@ country_event = {
 
 	option = {
 		name = "Understood"
+		country_event = 1266623 # Seasonal Effects
 	}
 
 }
