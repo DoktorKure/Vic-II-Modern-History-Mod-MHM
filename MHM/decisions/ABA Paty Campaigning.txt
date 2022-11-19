@@ -60,24 +60,25 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			election = yes
 		}
 		effect = {
 		
 			#Timer
-			add_country_modifier = { name = party_campaigning_timer duration = 180 }
+			add_country_modifier = { name = party_campaigning_timer duration = 31 }
 			
 			#Reduce pop militancy and consciousness in the middle and poor
 			any_pop = { 
 				limit = { OR = { strata = middle strata = poor } }
-				militancy = -3 
-				consciousness = -3 
+				militancy = -1
+				consciousness = -1
 			}
 			
 			#Upper strata can see through the ploy
 			any_pop = { 
 				limit = { strata = rich }
-				militancy = 3
-				consciousness = 3
+				militancy = 1
+				consciousness = 1
 			}
 			
 		}
@@ -100,18 +101,12 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			election = yes
 		}
 		effect = {
 		
 			#Timer
-			random_owned = {
-				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
-			}
-			random_owned = {
-				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 90 } }
-			}
+			add_country_modifier = { name = party_campaigning_timer duration = 31 }
 			
 			#Trade policy event
 			country_event = 7000100
@@ -136,18 +131,12 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			election = yes
 		}
 		effect = {
 		
 			#Timer
-			random_owned = {
-				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
-			}
-			random_owned = {
-				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 90 } }
-			}
+			add_country_modifier = { name = party_campaigning_timer duration = 31 }
 			
 			#Trade policy event
 			country_event = 7000101
@@ -172,18 +161,12 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			election = yes
 		}
 		effect = {
 		
 			#Timer
-			random_owned = {
-				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
-			}
-			random_owned = {
-				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 90 } }
-			}
+			add_country_modifier = { name = party_campaigning_timer duration = 31 }
 			
 			#Trade policy event
 			country_event = 7000102
@@ -208,18 +191,12 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			election = yes
 		}
 		effect = {
 		
 			#Timer
-			random_owned = {
-				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
-			}
-			random_owned = {
-				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 90 } }
-			}
+			add_country_modifier = { name = party_campaigning_timer duration = 31 }
 			
 			#Trade policy event
 			country_event = 7000103
@@ -244,18 +221,12 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			election = yes
 		}
 		effect = {
 		
 			#Timer
-			random_owned = {
-				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
-			}
-			random_owned = {
-				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 90 } }
-			}
+			add_country_modifier = { name = party_campaigning_timer duration = 31 }
 			
 			#Trade policy event
 			country_event = 7000104
@@ -266,71 +237,8 @@ political_decisions = {
 		}
 	}
 
-	#Campaign for farmer interests
-	campaigning_farmer = {
-		picture = "campaigning_farmer"
-
-		potential = {
-			has_country_flag = show_campaigning_decision
-			ai = no
-			
-			#Democracies only
-			OR = { government = socialist_democracy government = democracy government = democracy1 government = hms_government government = hms_government1 government = sar_government government = colonial_government government = mandate_government }
-			
-			#Has the required pop type
-			has_pop_type = farmers
-		}
-		allow = {
-			NOT = { has_country_modifier = party_campaigning_timer }
-		}
-		effect = {
-		
-			#Timer
-			random_owned = {
-				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
-			}
-			random_owned = {
-				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
-			}
-			
-			#Socialists get angry with protecting the land owning class
-			any_pop = {
-				limit = { OR = { type = labourers type = craftsmen } }
-				scaled_militancy = {
-					factor = 1
-					ideology = socialist
-				}
-				scaled_militancy = {
-					factor = 3
-					ideology = communist
-				}
-				scaled_militancy = {
-					factor = 2
-					ideology = communist_social
-				}
-			}
-			
-			#Boost ideology support
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { type = farmers } ideology = { factor = 0.04 value = communist_social } } } }
-		}
-		ai_will_do = { 
-			factor = 1 
-		}
-	}
-
-	#Campaign for labourers's interests
-	campaigning_labourers = {
+	#Campaign for poor class's interests
+	campaigning_poor_class = {
 		picture = "campaigning_labourers"
 
 		potential = {
@@ -345,88 +253,57 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			election = yes
 		}
 		effect = {
-		
-			#Timer
-			random_owned = {
-				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
-			}
-			random_owned = {
-				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
-			}
+			add_country_modifier = { name = party_campaigning_timer duration = 31 }
 			
-			#Rich get angry
+			#rich and middle get angry
 			rich_strata = {
 				militancy = 1
 				consciousness = 1
 			}
-			
-			#Boost ideology support
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { type = labourers } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { type = labourers } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { type = labourers } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { type = labourers } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { type = labourers } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { type = labourers } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { type = labourers } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { type = labourers } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { type = labourers } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { type = labourers } ideology = { factor = 0.04 value = communist_social } } } }
-		}
-		ai_will_do = { 
-			factor = 1 
-		}
-	}
-	
-	#Campaign for craftsmen's interests
-	campaigning_craftsmen = {
-		picture = "campaigning_craftsmen"
-
-		potential = {
-			has_country_flag = show_campaigning_decision
-			ai = no
-			
-			#Democracies only
-			OR = { government = socialist_democracy government = democracy government = democracy1 government = hms_government government = hms_government1 government = sar_government government = colonial_government government = mandate_government }
-			
-			#Has the required pop type
-			has_pop_type = craftsmen
-		}
-		allow = {
-			NOT = { has_country_modifier = party_campaigning_timer }
-		}
-		effect = {
-		
-			#Timer
-			random_owned = {
-				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
-			}
-			random_owned = {
-				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
-			}
-			
-			#Rich get angry
-			rich_strata = {
+			middle_strata = {
 				militancy = 1
 				consciousness = 1
 			}
 			
-			#Boost ideology support
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { type = craftsmen } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { type = craftsmen } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { type = craftsmen } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { type = craftsmen } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { type = craftsmen } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { type = craftsmen } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { type = craftsmen } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { type = craftsmen } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { type = craftsmen } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { type = craftsmen } ideology = { factor = 0.04 value = communist_social } } } }
+			#Boost ideology support for the poor
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = communist_social } } } }
+			
+			#Reduce ideology support for the middle
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = communist_social } } } }
+			
+			#Reduce ideology support for the rich
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = communist_social } } } }
+			
 		}
 		ai_will_do = { 
 			factor = 1 
@@ -452,18 +329,12 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			election = yes
 		}
 		effect = {
 		
 			#Timer
-			random_owned = {
-				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
-			}
-			random_owned = {
-				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
-			}
+			add_country_modifier = { name = party_campaigning_timer duration = 31 }
 			
 			#Socialists get angry
 			any_pop = {
@@ -482,16 +353,16 @@ political_decisions = {
 			}
 			
 			#Boost ideology support
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { OR = { type = capitalists type = artisans type = aristocrats } } ideology = { factor = 0.10 value = communist_social } } } }
 		}
 		ai_will_do = { 
 			factor = 1 
@@ -517,42 +388,36 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			election = yes
 		}
 		effect = {
 		
 			#Timer
-			random_owned = {
-				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
-			}
-			random_owned = {
-				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
-			}
+			add_country_modifier = { name = party_campaigning_timer duration = 31 }
 			
 			#Boost ideology support for the middle class
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = communist_social } } } }
 			
 			#Reduce ideology support for the lower class
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = communist_social } } } }
 		}
 		ai_will_do = { 
 			factor = 1 
@@ -574,17 +439,44 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			OR = { # Available only during elections for democratic govs
+				AND = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+					election = yes
+				}
+				NOT = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+				}
+			}
 		}
 		effect = {
 		
 			#Timer
 			random_owned = {
 				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 365 } }
 			}
 			random_owned = {
 				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 31 } }
 			}
 			
 			#Pacifists gain consciousness
@@ -599,21 +491,21 @@ political_decisions = {
 			any_pop = {
 				dominant_issue = {
 					value = jingoism
-					factor = 0.02
+					factor = 0.05
 				}
 			}
 			
 			#Boost ideology support
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { OR = { type = officers type = soldiers } } ideology = { factor = 0.10 value = communist_social } } } }
 		}
 		ai_will_do = { 
 			factor = 1 
@@ -636,42 +528,69 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			OR = { # Available only during elections for democratic govs
+				AND = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+					election = yes
+				}
+				NOT = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+				}
+			}
 		}
 		effect = {
 		
 			#Timer
 			random_owned = {
 				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 365 } }
 			}
 			random_owned = {
 				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 31 } }
 			}
 			
 			#Boost ideology support in cities
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = 0.10 value = communist_social } } } }
 			
 			#Reduce ideology support in rural towns
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = -0.10 value = communist_social } } } }
 			
 		}
 		ai_will_do = { 
@@ -695,42 +614,69 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			OR = { # Available only during elections for democratic govs
+				AND = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+					election = yes
+				}
+				NOT = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+				}
+			}
 		}
 		effect = {
 		
 			#Timer
 			random_owned = {
 				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 365 } }
 			}
 			random_owned = {
 				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 31 } }
 			}
 			
 			#Boost ideology support in cities
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { location = { is_state_capital = no } } ideology = { factor = 0.10 value = communist_social } } } }
 			
 			#Reduce ideology support in rural towns
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { location = {is_state_capital = yes } } ideology = { factor = -0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { location = {is_state_capital = yes } } ideology = { factor = -0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { location = { is_state_capital = yes } } ideology = { factor = -0.10 value = communist_social } } } }
 			
 		}
 		ai_will_do = { 
@@ -753,17 +699,44 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			OR = { # Available only during elections for democratic govs
+				AND = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+					election = yes
+				}
+				NOT = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+				}
+			}
 		}
 		effect = {
 		
 			#Timer
 			random_owned = {
 				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 365 } }
 			}
 			random_owned = {
 				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 31 } }
 			}
 			
 			#Majority races are pleased
@@ -799,28 +772,28 @@ political_decisions = {
 			}
 			
 			#Boost ideology support from culture group
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = 0.10 value = communist_social } } } }
 			
 			#Reduce ideology support for non culture groups
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = -0.10 value = communist_social } } } }
 			
 		}
 		ai_will_do = { 
@@ -843,17 +816,44 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			OR = { # Available only during elections for democratic govs
+				AND = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+					election = yes
+				}
+				NOT = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+				}
+			}
 		}
 		effect = {
 		
 			#Timer
 			random_owned = {
 				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 365 } }
 			}
 			random_owned = {
 				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 31 } }
 			}
 			
 			#Majority races are angry
@@ -889,28 +889,28 @@ political_decisions = {
 			}
 			
 			#Reduce ideology support from culture group
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { is_culture_group = THIS } ideology = { factor = -0.10 value = communist_social } } } }
 			
 			#Boost ideology support for non culture groups
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { NOT = { is_culture_group = THIS } } ideology = { factor = 0.10 value = communist_social } } } }
 			
 		}
 		ai_will_do = { 
@@ -936,17 +936,44 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			OR = { # Available only during elections for democratic govs
+				AND = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+					election = yes
+				}
+				NOT = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+				}
+			}
 		}
 		effect = {
 		
 			#Timer
 			random_owned = {
 				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 365 } }
 			}
 			random_owned = {
 				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 31 } }
 			}
 			
 			#State religion pops are happy
@@ -1003,28 +1030,28 @@ political_decisions = {
 			}
 			
 			#Boost ideology support from culture group
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { is_state_religion = yes } ideology = { factor = 0.10 value = communist_social } } } }
 			
 			#Reduce ideology support for non culture groups
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { is_state_religion = no } ideology = { factor = -0.10 value = communist_social } } } }
 			
 		}
 		ai_will_do = { 
@@ -1053,17 +1080,44 @@ political_decisions = {
 		}
 		allow = {
 			NOT = { has_country_modifier = party_campaigning_timer }
+			OR = { # Available only during elections for democratic govs
+				AND = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+					election = yes
+				}
+				NOT = {
+					OR = {
+						government = socialist_democracy
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = sar_government
+						government = colonial_government
+						government = mandate_government
+					}
+				}
+			}
 		}
 		effect = {
 		
 			#Timer
 			random_owned = {
 				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 365 } }
 			}
 			random_owned = {
 				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 31 } }
 			}
 			
 			#State religion pops are happy (Secularism)
@@ -1114,28 +1168,28 @@ political_decisions = {
 			}
 			
 			#Boost ideology support from culture group
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.02 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.02 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.02 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.02 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.02 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.02 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.02 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.02 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.02 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.02 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.05 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.05 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.05 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.05 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.05 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.05 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.05 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.05 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.05 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { has_pop_religion = secularism } ideology = { factor = 0.05 value = communist_social } } } }
 			
 			#Reduce ideology support for non culture groups
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { NOT = { has_pop_religion = secularism } } ideology = { factor = -0.10 value = communist_social } } } }
 			
 		}
 		ai_will_do = { 
@@ -1162,11 +1216,11 @@ political_decisions = {
 			#Timer
 			random_owned = {
 				limit = { owner = { election = no } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 182 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 365 } }
 			}
 			random_owned = {
 				limit = { owner = { election = yes } }
-				owner = { add_country_modifier = { name = party_campaigning_timer duration = 50 } }
+				owner = { add_country_modifier = { name = party_campaigning_timer duration = 31 } }
 			}
 			
 			#Nationalist, populist and communist are happy
@@ -1195,23 +1249,23 @@ political_decisions = {
 			}
 			
 			#Increase nationalist support amongst primary culture
-			random_owned = { limit = { owner = { NOT = { ruling_party_ideology = nationalist } } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.02 value = nationalist } } } }
-			random_owned = { limit = { owner = { NOT = { ruling_party_ideology = populist } } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.02 value = populist } } } }
+			random_owned = { limit = { owner = { NOT = { ruling_party_ideology = nationalist } } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = nationalist } } } }
+			random_owned = { limit = { owner = { NOT = { ruling_party_ideology = populist } } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = populist } } } }
 			
-			random_owned = { limit = { owner = { has_global_flag = blocsenabled NOT = { ruling_party_ideology = communist } } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.02 value = communist } } } }
-			random_owned = { limit = { owner = { has_global_flag = blocsenabled NOT = { ruling_party_ideology = communist_social } } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.02 value = communist_social } } } }
+			random_owned = { limit = { owner = { has_global_flag = blocsenabled NOT = { ruling_party_ideology = communist } } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = communist } } } }
+			random_owned = { limit = { owner = { has_global_flag = blocsenabled NOT = { ruling_party_ideology = communist_social } } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.05 value = communist_social } } } }
 			
 			#Boost ideology support for non culture groups
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } } ideology = { factor = 0.10 value = communist_social } } } }
 			
 		}
 		ai_will_do = { 
@@ -1237,7 +1291,7 @@ political_decisions = {
 			NOT = { has_country_modifier = party_campaigning_timer }
 		}
 		effect = {
-			add_country_modifier = { name = party_campaigning_timer duration = 182 }
+			add_country_modifier = { name = party_campaigning_timer duration = 365 }
 			
 			#Poor and middle get angry
 			middle_strata = {
@@ -1250,28 +1304,28 @@ political_decisions = {
 			}
 			
 			#Boost ideology support for the rich
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = 0.10 value = communist_social } } } }
 			
 			#Reduce ideology support for the poor
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.10 value = communist_social } } } }
 			
 		}
 		ai_will_do = { 
@@ -1295,7 +1349,7 @@ political_decisions = {
 			NOT = { has_country_modifier = party_campaigning_timer }
 		}
 		effect = {
-			add_country_modifier = { name = party_campaigning_timer duration = 182 }
+			add_country_modifier = { name = party_campaigning_timer duration = 365 }
 			
 			#Poor and middle get angry
 			rich_strata = {
@@ -1308,40 +1362,40 @@ political_decisions = {
 			}
 			
 			#Boost ideology support for the middle
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = 0.10 value = communist_social } } } }
 			
 			#Reduce ideology support for the poor
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.02 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = -0.05 value = communist_social } } } }
 			
 			#Reduce ideology support for the rich
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.02 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.02 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.02 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.02 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.02 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.02 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.02 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.02 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.02 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.02 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.05 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.05 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.05 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.05 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.05 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.05 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.05 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.05 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.05 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.05 value = communist_social } } } }
 			
 		}
 		ai_will_do = { 
@@ -1365,9 +1419,9 @@ political_decisions = {
 			NOT = { has_country_modifier = party_campaigning_timer }
 		}
 		effect = {
-			add_country_modifier = { name = party_campaigning_timer duration = 182 }
+			add_country_modifier = { name = party_campaigning_timer duration = 365 }
 			
-			#Poor and middle get angry
+			#rich and middle get angry
 			rich_strata = {
 				militancy = 1
 				consciousness = 1
@@ -1378,40 +1432,40 @@ political_decisions = {
 			}
 			
 			#Boost ideology support for the poor
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = poor } ideology = { factor = 0.10 value = communist_social } } } }
 			
 			#Reduce ideology support for the middle
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.02 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.02 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.02 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.02 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.02 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.02 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.02 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.02 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.02 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.02 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = middle } ideology = { factor = -0.05 value = communist_social } } } }
 			
 			#Reduce ideology support for the rich
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { strata = rich } ideology = { factor = -0.10 value = communist_social } } } }
 			
 		}
 		ai_will_do = { 
@@ -1435,7 +1489,7 @@ political_decisions = {
 			NOT = { has_country_modifier = party_campaigning_timer }
 		}
 		effect = {
-			add_country_modifier = { name = party_campaigning_timer duration = 182 }
+			add_country_modifier = { name = party_campaigning_timer duration = 365 }
 			
 			#Hardliners get angry
 			any_pop = {
@@ -1464,18 +1518,18 @@ political_decisions = {
 			}
 
 			#Boost liberal support amongst the elites
-			any_pop = { limit = { OR = { type = bureaucrats type = aristocrats } } ideology = { factor = 0.04 value = liberal } }
-			any_pop = { limit = { OR = { type = bureaucrats type = aristocrats } } ideology = { factor = 0.04 value = progressive } }
+			any_pop = { limit = { OR = { type = bureaucrats type = aristocrats } } ideology = { factor = 0.10 value = liberal } }
+			any_pop = { limit = { OR = { type = bureaucrats type = aristocrats } } ideology = { factor = 0.10 value = progressive } }
 			
 			#Increase reactionary support amongst the military
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.04 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.10 value = conservative } } } }
 
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { type = officers } ideology = { factor = 0.10 value = communist_social } } } }
 			
 			#Reformers are happy
 			any_pop = {
@@ -1511,7 +1565,7 @@ political_decisions = {
 			NOT = { has_country_modifier = party_campaigning_timer }
 		}
 		effect = {
-			add_country_modifier = { name = party_campaigning_timer duration = 182 }
+			add_country_modifier = { name = party_campaigning_timer duration = 365 }
 			
 			#Hardliners are happy
 			any_pop = {
@@ -1530,16 +1584,16 @@ political_decisions = {
 			}
 
 			#Boost party support amongst the bureaucrats and officers
-			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.04 value = populist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.04 value = nationalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.04 value = traditionalist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.04 value = conservative } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.04 value = liberal } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.04 value = big_tent } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.04 value = progressive } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.04 value = socialist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.04 value = communist } } } }
-			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.04 value = communist_social } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = populist } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.10 value = populist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = nationalist } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.10 value = nationalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = traditionalist } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.10 value = traditionalist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = conservative } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.10 value = conservative } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = liberal } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.10 value = liberal } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = big_tent } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.10 value = big_tent } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = progressive } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.10 value = progressive } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = socialist } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.10 value = socialist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.10 value = communist } } } }
+			random_owned = { limit = { owner = { ruling_party_ideology = communist_social } } owner = { any_pop = { limit = { OR = { type = officers type = bureaucrats type = aristocrats } } ideology = { factor = 0.10 value = communist_social } } } }
 			
 			#Reformers are angry
 			any_pop = {

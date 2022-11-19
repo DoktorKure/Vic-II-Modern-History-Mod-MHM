@@ -638,7 +638,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = { 
-		months = 72
+		months = 120
 	}
 
 	option = {
@@ -710,6 +710,11 @@ country_event = {
 		random_owned = {
 			limit = { owner = { civil_service = professional_service } }
 			owner = { political_reform = elitist_service }
+		}
+		
+		random_owned = {
+			limit = { owner = { civil_service = independent_service } }
+			owner = { political_reform = professional_service }
 		}
 
 		#Increase the ideology lean of bureaucrats
@@ -6051,6 +6056,16 @@ country_event = {
 	option = {
 		name = "Send a military force to aid the $FROMCOUNTRY_ADJ$ war effort!"
 		war_exhaustion = 5
+		#Subtract soldiers
+		any_pop = {
+			limit = { type = soldiers }
+			reduce_pop = 0.95
+		}
+		#Subtract officers
+		any_pop = {
+			limit = { type = officers }
+			reduce_pop = 0.99
+		}
 		diplomatic_influence = { who = FROM value = 25 }
 		relation = { who = FROM value = 50 }
 		FROM = {
@@ -8297,7 +8312,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = { 
-		months = 12
+		months = 24 #roughly coincide with midterms for democracies
 	}
 
 	option = {
@@ -8364,7 +8379,11 @@ country_event = {
 	}
 
 	mean_time_to_happen = { 
-		months = 12
+		months = 24
+		modifier = {
+			factor = 0.1
+			NOT = { government = democracy government = democracy1 government = socialist_democracy }
+		}
 	}
 
 	option = {
