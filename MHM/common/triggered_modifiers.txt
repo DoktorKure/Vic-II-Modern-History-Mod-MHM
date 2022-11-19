@@ -12,7 +12,7 @@ winter_season = {
         exists = yes
         month = 0
         NOT = {
-            month = 3
+            month = 2
         }
     }
     org_regain = -0.3
@@ -21,7 +21,7 @@ winter_season = {
 winter1_season = {
     trigger = {
         exists = yes
-        month = 12
+        month = 11
     }
     org_regain = -0.3
     RGO_throughput = -0.06
@@ -29,9 +29,9 @@ winter1_season = {
 spring_season = {
     trigger = {
         exists = yes
-        month = 3
+        month = 2
         NOT = {
-            month = 6
+            month = 5
         }
     }
     org_regain = 0.15
@@ -40,9 +40,9 @@ spring_season = {
 summer_season = {
     trigger = {
         exists = yes
-        month = 6
+        month = 5
         NOT = {
-            month = 9
+            month = 8
         }
     }
     org_regain = 0.3
@@ -51,9 +51,9 @@ summer_season = {
 autumn_season = {
     trigger = {
         exists = yes
-        month = 9
+        month = 8
         NOT = {
-            month = 12
+            month = 11
         }
     }
     org_regain = -0.15
