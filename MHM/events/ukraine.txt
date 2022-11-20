@@ -21,7 +21,7 @@ country_event = {
 	}
 	
 	option = {
-		"Dismantle the stockpiles in exchange for concessions and security guarantees"
+		name = "Dismantle the stockpiles in exchange for concessions and security guarantees"
 		set_global_flag = budapest_memorandum
 		badboy = -10
 		money = 1000000 #cancellation of some debts
@@ -46,7 +46,7 @@ country_event = {
 	}
 	
 	option = {
-		"We don't trust their promises, hold onto the stockpiles!"
+		name = "We don't trust their promises, hold onto the stockpiles!"
 		
 		#High badboy because sets an ugly precedent
 		badboy = 25

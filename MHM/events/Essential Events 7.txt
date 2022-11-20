@@ -2564,6 +2564,7 @@ country_event = {
 		OR = { 
 			has_country_flag = pop_displacement_system_active 
 			has_country_flag = promote_colonial_migration_active
+			has_country_flag = population_replacement_underway
 		}
 	
 		is_vassal = no

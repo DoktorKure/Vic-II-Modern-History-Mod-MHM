@@ -54,7 +54,6 @@ country_event = {
 			NOT = { minorities_reform = minorities_oppression }
 			NOT = { citizenship_policy = residency }
 		}
-		NOT = { religious_policy = moralism } # must be secular or they get reactionary regime instead
 	}
 	
 	mean_time_to_happen = { days = 1 }
@@ -115,6 +114,7 @@ country_event = {
 			NOT = { has_country_flag = pre_existing_monarchy }
 			OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = populist }
 			religious_policy = moralism
+			NOT = { AND = { minorities_reform = minorities_oppression citizenship_policy = residency } } # Not focused on promoting the primary culture
 		}
 	}
 	
@@ -380,7 +380,6 @@ country_event = {
 			minorities_reform = minorities_oppression
 			NOT = { citizenship_policy = full_citizenship }
 		}
-		NOT = { religious_policy = moralism } # must be secular or they get reactionary regime instead
 		civilized = yes
 	}
 	
