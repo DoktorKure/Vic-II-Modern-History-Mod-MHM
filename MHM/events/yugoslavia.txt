@@ -652,7 +652,7 @@ country_event = {
 		
 		war = {
 			target = SLO
-			attacker_goal = { casus_belli = make_puppet }
+			attacker_goal = { casus_belli = annex_core_country }
 			defender_goal = { casus_belli = status_quo }
 			call_ally = no
 		}
@@ -762,7 +762,7 @@ country_event = {
 		
 		war = {
 			target = CRO
-			attacker_goal = { casus_belli = make_puppet }
+			attacker_goal = { casus_belli = annex_core_country }
 			defender_goal = { casus_belli = status_quo }
 			call_ally = no
 		}
@@ -810,13 +810,13 @@ country_event = {
 		
 		set_global_flag = vance_plan_YUG
 
-		ai_chance = { factor = 1 }
+		ai_chance = { factor = 0.9 }
 	}
 
 	option = {
 		name = "The war continues!"
 		badboy = 5
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 0.1 }
 	}
 
 }
