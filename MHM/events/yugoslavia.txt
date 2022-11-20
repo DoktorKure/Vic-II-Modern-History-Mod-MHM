@@ -652,7 +652,7 @@ country_event = {
 		
 		war = {
 			target = SLO
-			attacker_goal = { casus_belli = annex_core_country }
+			attacker_goal = { casus_belli = make_puppet }
 			defender_goal = { casus_belli = status_quo }
 			call_ally = no
 		}
@@ -689,7 +689,7 @@ country_event = {
 		is_vassal = no
 	}
 
-	mean_time_to_happen = { months = 7 }
+	mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = "Accept Slovenian independence!"
@@ -697,13 +697,13 @@ country_event = {
 		
 		end_war = SLO
 
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "The war continues!"
 		badboy = 5
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 
 }
@@ -762,7 +762,7 @@ country_event = {
 		
 		war = {
 			target = CRO
-			attacker_goal = { casus_belli = annex_core_country }
+			attacker_goal = { casus_belli = make_puppet }
 			defender_goal = { casus_belli = status_quo }
 			call_ally = no
 		}
@@ -810,13 +810,13 @@ country_event = {
 		
 		set_global_flag = vance_plan_YUG
 
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = "The war continues!"
 		badboy = 5
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 
 }
@@ -968,21 +968,12 @@ country_event = {
 				government = sectarian_dictatorship
 				ruling_party_ideology = nationalist
 				country_event = 800050
+				create_alliance = YUG
 			}
+			casus_belli = { target = RSR type = annex_core_country months = 12 }
 		}
 		
-		create_alliance = RSR
 		relation = { who = RSR value = 200 }
-
-		#Start Bosnian Wars
-		BOS = { 
-			war = { 
-				target = RSR 
-				attacker_goal = { casus_belli = annex_core_country } 
-				defender_goal = { casus_belli = humiliate } 
-			} 
-
-		}
 		
 		ai_chance = { factor = 0.7 }
 	}
@@ -1047,11 +1038,6 @@ country_event = {
 				country_event = 800050
 			}
 			casus_belli = { target = RSR type = annex_core_country months = 12 }
-			war = { 
-				target = RSR 
-				attacker_goal = { casus_belli = annex_core_country } 
-				defender_goal = { casus_belli = humiliate } 
-			}
 		}
 		
 		ai_chance = { factor = 0.1 }
@@ -1518,7 +1504,7 @@ country_event = {
 			ruling_party_ideology = nationalist
 		}
 		relation = { who = MAC value = 100 }
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -1540,7 +1526,7 @@ country_event = {
 			call_ally = no
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -1769,7 +1755,7 @@ country_event = {
 		release_vassal = MON
 		war = {
 			target = MON
-			attacker_goal = { casus_belli = make_puppet }
+			attacker_goal = { casus_belli = annex_core_country }
 			defender_goal = { casus_belli = become_independent }
 			call_ally = no
 		}
@@ -1789,6 +1775,13 @@ country_event = {
 
 	trigger = {
 		tag = MON
+		exists = yes
+		NOT = {
+			OR = {
+				vassal_of = YUG
+				vassal_of = SER
+			}
+		}
 	}
 
 	option = {

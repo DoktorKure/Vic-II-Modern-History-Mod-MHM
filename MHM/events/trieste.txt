@@ -766,13 +766,23 @@ country_event = {
 		YUG = { inherit = TRB }
 		
 		#Distribute TRB provinces to any federal YUG state
-		random_country = {
-			limit = { tag = YUG is_our_vassal = SLO }
-			3345 = { secede_province = SLO }
+		random_owned = {
+			limit = { owner = { SLO = { exists = yes vassal_of = YUG } } }
+			owner = {
+				random_country = {
+					limit = { tag = YUG is_our_vassal = SLO }
+					3345 = { secede_province = SLO }
+				}
+			}
 		}
-		random_country = {
-			limit = { tag = YUG is_our_vassal = CRO }
-			3378 = { secede_province = CRO }
+		random_owned = {
+			limit = { owner = { CRO = { exists = yes vassal_of = YUG } } }
+			owner = {
+				random_country = {
+					limit = { tag = YUG is_our_vassal = CRO }
+					3378 = { secede_province = CRO }
+				}
+			}
 		}
 		
 		any_pop = { 
