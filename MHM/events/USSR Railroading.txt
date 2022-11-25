@@ -11,16 +11,12 @@ country_event = {
 
 	option = {
 		name = "Railroad the USSR event chains towards collapse."
-		set_global_flag = USSR_railroading_toggled
 		RUS = { set_country_flag = USSR_events_railroaded }
-		country_event = 669967 #Toggle Superstates
 	}
 
 	option = {
 		name = "Allow alternate history content to happen normally."
-		set_global_flag = USSR_railroading_toggled
 		RUS = { clr_country_flag = USSR_events_railroaded }
-		country_event = 669967 #Toggle Superstates
 	}
 
 }

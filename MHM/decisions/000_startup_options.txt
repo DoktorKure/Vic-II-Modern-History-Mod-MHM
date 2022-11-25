@@ -1,0 +1,131 @@
+political_decisions = {
+	#Toggle Setup
+	show_startup_decisions = {
+		picture = "starting_options"
+		alert = yes
+		potential = {
+			NOT = { has_country_flag = show_startup_decisions }
+			ai = no
+			NOT = { year = 1947 }
+		}
+		
+		allow = { }
+		
+		effect = {
+			set_country_flag = show_startup_decisions
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+	}
+	
+	hide_startup_decisions = {
+		picture = "starting_options"
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = show_startup_decisions
+			NOT = { year = 1947 }
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			clr_country_flag = show_startup_decisions
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+	}
+	
+	toggle_ussr_railroading = {
+		picture = "glasnost_intention"
+		alert = no
+		potential = {
+			has_country_flag = show_startup_decisions
+			NOT = { year = 1947 }
+			NOT = { tag = RUS }
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 669968
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+	}
+	
+	toggle_superstates = {
+		picture = "hide_superstate"
+		potential = {
+			has_country_flag = show_startup_decisions
+			NOT = { year = 1947 }
+		}
+		
+		alert = no
+		
+		allow = { }
+		
+		effect = {
+			country_event = 669967
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+	}
+	
+	toggle_climate_change = {
+		picture = "paris_climate_deal"
+		potential = {
+			has_country_flag = show_startup_decisions
+			NOT = { year = 1947 }
+		}
+		
+		alert = no
+		
+		allow = { }
+		
+		effect = {
+			country_event = 14111000
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+	}
+	
+	toggle_performance = {
+		picture = "performance_mode"
+		potential = {
+			has_country_flag = show_startup_decisions
+			NOT = { year = 1947 }
+			NOT = { has_global_flag = performance_mode_set }
+		}
+		
+		alert = no
+		
+		allow = { }
+		
+		effect = {
+			country_event = 669966
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+	}
+	
+}

@@ -11,18 +11,14 @@ country_event = {
 
 	option = {
 		name = "Enable the formation of superstates"
-		set_global_flag = superstates_toggled
 		any_country = { clr_country_flag = hide_superstate }
 		clr_country_flag = hide_superstate #unhides superstate decisions for the player too
-		country_event = 14111000 #Toggle Climate Change
 	}
 
 	option = {
 		name = "Disable the formation of superstates"
-		set_global_flag = superstates_toggled
 		any_country = { set_country_flag = hide_superstate }
 		set_country_flag = hide_superstate #hides superstate decisions for the player too
-		country_event = 14111000 #Toggle Climate Change
 	}
 
 }
