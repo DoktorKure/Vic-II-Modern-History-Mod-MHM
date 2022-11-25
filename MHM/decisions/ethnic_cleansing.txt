@@ -106,6 +106,7 @@ political_decisions = {
 			remove_country_modifier = ethnic_cleansing
 			clr_country_flag = discovered_genocide 
 			clr_country_flag = discovered_genocide1
+			any_owned = { remove_province_modifier = ethnic_cleansing_province_modifier }
 		}
 		ai_will_do = { factor = 1 }
 	}
