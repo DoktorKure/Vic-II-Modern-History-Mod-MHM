@@ -7,6 +7,15 @@ country_event = {
 	title = "Massive Corruption in the Government"
 	desc = "EVTDESC1410082"
 
+	trigger = {
+
+		NOT = { has_country_modifier = reducing_corruption }
+
+		NOT = { has_country_modifier = massive_government_corruption }
+		has_country_modifier = massive_societal_corruption
+		
+	}
+
 	mean_time_to_happen = { 
 		months = 60
 		modifier = { 
@@ -20,16 +29,13 @@ country_event = {
 			}
 		}
 	}
-
-	trigger = {
-
-		NOT = { has_country_modifier = reducing_corruption }
-		
-		NOT = { crime_fighting = 0.60 }
-
-		NOT = { has_country_modifier = massive_government_corruption }
-		has_country_modifier = massive_societal_corruption
-		
+	
+	immediate = {
+		set_country_flag = massive_government_corruption_flag
+		clr_country_flag = large_government_corruption_flag
+		clr_country_flag = medium_government_corruption_flag
+		clr_country_flag = low_government_corruption_flag
+		clr_country_flag = minimal_government_corruption_flag
 	}
 
 	option = {
@@ -39,12 +45,6 @@ country_event = {
 		remove_country_modifier = medium_government_corruption
 		remove_country_modifier = low_government_corruption
 		remove_country_modifier = minimal_government_corruption
-		
-		set_country_flag = massive_government_corruption
-		clr_country_flag = large_government_corruption
-		clr_country_flag = medium_government_corruption
-		clr_country_flag = low_government_corruption
-		clr_country_flag = minimal_government_corruption
 	}
 	
 }
@@ -56,6 +56,15 @@ country_event = {
 	title = "Large Corruption in the Government"
 	desc = "EVTDESC1410082"
 
+	trigger = {
+
+		NOT = { has_country_modifier = reducing_corruption }
+
+		NOT = { has_country_modifier = large_government_corruption }
+		has_country_modifier = large_societal_corruption
+		
+	}
+
 	mean_time_to_happen = { 
 		months = 60
 		modifier = { 
@@ -69,16 +78,13 @@ country_event = {
 			}
 		}
 	}
-
-	trigger = {
-
-		NOT = { has_country_modifier = reducing_corruption }
-
-		AND = { NOT = { crime_fighting = 0.70 } crime_fighting = 0.60 }
-
-		NOT = { has_country_modifier = large_government_corruption }
-		has_country_modifier = large_societal_corruption
-		
+	
+	immediate = {
+		set_country_flag = large_government_corruption_flag
+		clr_country_flag = massive_government_corruption_flag
+		clr_country_flag = medium_government_corruption_flag
+		clr_country_flag = low_government_corruption_flag
+		clr_country_flag = minimal_government_corruption_flag
 	}
 
 	option = {
@@ -88,12 +94,6 @@ country_event = {
 		remove_country_modifier = medium_government_corruption
 		remove_country_modifier = low_government_corruption
 		remove_country_modifier = minimal_government_corruption
-		
-		set_country_flag = large_government_corruption
-		clr_country_flag = massive_government_corruption
-		clr_country_flag = medium_government_corruption
-		clr_country_flag = low_government_corruption
-		clr_country_flag = minimal_government_corruption
 	}
 	
 }
@@ -105,6 +105,15 @@ country_event = {
 	title = "Moderate Corruption in the Government"
 	desc = "EVTDESC1410082"
 
+	trigger = {
+
+		NOT = { has_country_modifier = reducing_corruption }
+
+		NOT = { has_country_modifier = medium_government_corruption }
+		has_country_modifier = medium_societal_corruption
+		
+	}
+
 	mean_time_to_happen = { 
 		months = 60
 		modifier = { 
@@ -118,16 +127,13 @@ country_event = {
 			}
 		}
 	}
-
-	trigger = {
-
-		NOT = { has_country_modifier = reducing_corruption }
-
-		AND = { NOT = { crime_fighting = 0.80 } crime_fighting = 0.70 }
-
-		NOT = { has_country_modifier = medium_government_corruption }
-		has_country_modifier = medium_societal_corruption
-		
+	
+	immediate = {
+		set_country_flag = medium_government_corruption_flag
+		clr_country_flag = massive_government_corruption_flag
+		clr_country_flag = large_government_corruption_flag
+		clr_country_flag = low_government_corruption_flag
+		clr_country_flag = minimal_government_corruption_flag
 	}
 
 	option = {
@@ -137,12 +143,6 @@ country_event = {
 		remove_country_modifier = massive_government_corruption
 		remove_country_modifier = low_government_corruption
 		remove_country_modifier = minimal_government_corruption
-		
-		set_country_flag = medium_government_corruption
-		clr_country_flag = massive_government_corruption
-		clr_country_flag = large_government_corruption
-		clr_country_flag = low_government_corruption
-		clr_country_flag = minimal_government_corruption
 	}
 	
 }
@@ -154,6 +154,15 @@ country_event = {
 	title = "Low Corruption in the Government"
 	desc = "EVTDESC1410082"
 
+	trigger = {
+
+		NOT = { has_country_modifier = reducing_corruption }
+
+		NOT = { has_country_modifier = low_government_corruption }
+		has_country_modifier = low_societal_corruption
+		
+	}
+
 	mean_time_to_happen = { 
 		months = 60
 		modifier = { 
@@ -167,32 +176,22 @@ country_event = {
 			}
 		}
 	}
-
-	trigger = {
-
-		NOT = { has_country_modifier = reducing_corruption }
-
-		AND = { NOT = { crime_fighting = 0.90 } crime_fighting = 0.80 }
-
-		NOT = { has_country_modifier = low_government_corruption }
-		has_country_modifier = low_societal_corruption
-		
+	
+	immediate = {
+		set_country_flag = low_government_corruption_flag
+		clr_country_flag = massive_government_corruption_flag
+		clr_country_flag = large_government_corruption_flag
+		clr_country_flag = medium_government_corruption_flag
+		clr_country_flag = minimal_government_corruption_flag
 	}
 
 	option = {
 		name = "Hello bankers!"
 		add_country_modifier = { name = low_government_corruption duration = -1 }
-
+		remove_country_modifier = massive_government_corruption
 		remove_country_modifier = large_government_corruption
 		remove_country_modifier = medium_government_corruption
-		remove_country_modifier = massive_government_corruption
 		remove_country_modifier = minimal_government_corruption
-		
-		set_country_flag = low_government_corruption
-		clr_country_flag = massive_government_corruption
-		clr_country_flag = large_government_corruption
-		clr_country_flag = medium_government_corruption
-		clr_country_flag = minimal_government_corruption
 	}
 	
 }
@@ -204,6 +203,15 @@ country_event = {
 	title = "Minimal Corruption in the Government"
 	desc = "EVTDESC1410082"
 
+	trigger = {
+	
+		NOT = { has_country_modifier = reducing_corruption }
+		
+		NOT = { has_country_modifier = minimal_government_corruption }
+		has_country_modifier = minimal_societal_corruption
+		
+	}
+
 	mean_time_to_happen = { 
 		months = 60
 		modifier = { 
@@ -217,32 +225,22 @@ country_event = {
 			}
 		}
 	}
-
-	trigger = {
 	
-		NOT = { has_country_modifier = reducing_corruption }
-
-		crime_fighting = 0.90
-		
-		NOT = { has_country_modifier = minimal_government_corruption }
-		has_country_modifier = minimal_societal_corruption
-		
+	immediate = {
+		set_country_flag = minimal_government_corruption_flag
+		clr_country_flag = massive_government_corruption_flag
+		clr_country_flag = large_government_corruption_flag
+		clr_country_flag = medium_government_corruption_flag
+		clr_country_flag = low_government_corruption_flag
 	}
 
 	option = {
 		name = "We're a clean government!"
 		add_country_modifier = { name = minimal_government_corruption duration = -1 }
-
+		remove_country_modifier = massive_government_corruption
 		remove_country_modifier = large_government_corruption
 		remove_country_modifier = medium_government_corruption
 		remove_country_modifier = low_government_corruption
-		remove_country_modifier = massive_government_corruption
-		
-		set_country_flag = minimal_government_corruption
-		clr_country_flag = massive_government_corruption
-		clr_country_flag = large_government_corruption
-		clr_country_flag = medium_government_corruption
-		clr_country_flag = low_government_corruption
 	}
 	
 }

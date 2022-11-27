@@ -253,7 +253,7 @@ political_reforms = {
 			administrative_multiplier = 1
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		rigged_voting = { # Vote Rigging
@@ -268,8 +268,8 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -286,9 +286,9 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -305,10 +305,10 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -334,7 +334,7 @@ political_reforms = {
 			global_immigrant_attract = -0.125
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		semi_democratic_state_opinion = { # state_equal_weight
@@ -346,8 +346,8 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -361,9 +361,9 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -377,10 +377,10 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -400,7 +400,7 @@ political_reforms = {
 			administrative_multiplier = 3
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		limited_meetings = {
@@ -412,14 +412,14 @@ political_reforms = {
 			administrative_multiplier = 2
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		free_meetings = {
 			suppression_points_modifier = -0.25
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 	}
@@ -433,7 +433,7 @@ political_reforms = {
 			suppression_points_modifier = 0.25
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		incarceration = {
@@ -442,7 +442,7 @@ political_reforms = {
 			administrative_multiplier = 1
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		rehabilitation = {
@@ -452,7 +452,7 @@ political_reforms = {
 			administrative_multiplier = 2
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 	}
@@ -483,8 +483,8 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -500,9 +500,9 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -517,10 +517,10 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -542,7 +542,7 @@ political_reforms = {
 			administrative_multiplier = 4
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		censored_publishing = { # censored_press
@@ -559,8 +559,8 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -573,9 +573,9 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -594,10 +594,10 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -613,7 +613,7 @@ political_reforms = {
 			administrative_multiplier = 3
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		state_controlled_unions = { # state_controlled
@@ -627,8 +627,8 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -643,9 +643,9 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -660,10 +660,10 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -677,7 +677,7 @@ political_reforms = {
 			global_immigrant_attract = -0.3
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		parties_restricted = { # Restricted Campaigning
@@ -686,7 +686,7 @@ political_reforms = {
 			global_immigrant_attract = -0.2
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		parties_rigged = { # Rigged Campaigning
@@ -695,8 +695,8 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -709,9 +709,9 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -723,10 +723,10 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -741,7 +741,7 @@ political_reforms = {
 			administrative_multiplier = 3
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		quota_immigration = {
@@ -749,7 +749,7 @@ political_reforms = {
 			administrative_multiplier = 2
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		naturalization = {
@@ -757,7 +757,7 @@ political_reforms = {
 			administrative_multiplier = 1
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		open_immigration = {
@@ -765,7 +765,7 @@ political_reforms = {
 			global_pop_consciousness_modifier = 0.02
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		promoted_immigration = { #
@@ -774,7 +774,7 @@ political_reforms = {
 			administrative_multiplier = 2
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 
@@ -794,7 +794,7 @@ political_reforms = {
 			administrative_multiplier = 4
 			allow = { 
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 				NOT = { war_policy = pacifism }
 			}
 		}
@@ -811,7 +811,7 @@ political_reforms = {
 			administrative_multiplier = 3
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		two_year_draft = {
@@ -826,7 +826,7 @@ political_reforms = {
 			administrative_multiplier = 2
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		one_year_draft = {
@@ -841,13 +841,13 @@ political_reforms = {
 			administrative_multiplier = 1
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		no_draft = {
 			allow = { 
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 				NOT = { war_policy = jingoism }
 			}
 		}
@@ -864,7 +864,7 @@ political_reforms = {
 			allow = { 
 				citizenship_policy = residency
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		minorities_equal_rights = { # limited
@@ -875,7 +875,7 @@ political_reforms = {
 			allow = { 
 				NOT = { citizenship_policy = residency } 
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		minorities_affirmative_action = { # protected
@@ -887,7 +887,7 @@ political_reforms = {
 			allow = { 
 				citizenship_policy = full_citizenship 
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 	}
@@ -898,7 +898,7 @@ political_reforms = {
 			administrative_multiplier = 1
 			allow = { 
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 				NOT = { vote_franschise = none_voting }
 			}
 		}
@@ -909,8 +909,8 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 				NOT = { vote_franschise = none_voting }
@@ -923,9 +923,9 @@ political_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 				NOT = { vote_franschise = none_voting }
@@ -947,7 +947,7 @@ social_reforms = {
 			global_population_growth = -0.002
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		trinket_wage = { # trinket_wage
@@ -960,7 +960,7 @@ social_reforms = {
 			administrative_multiplier = 1
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		low_minimum_wage = { # low_minimum_wage
@@ -974,8 +974,8 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -992,9 +992,9 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -1012,10 +1012,10 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -1027,7 +1027,7 @@ social_reforms = {
 		basic_security = { # basic security
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		weak_security = { # weak security
@@ -1036,7 +1036,7 @@ social_reforms = {
 			suppression_points_modifier = 0.10
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		acceptable_security = { # acceptable security
@@ -1046,7 +1046,7 @@ social_reforms = {
 			global_pop_consciousness_modifier = -0.01
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		good_security = { # good security
@@ -1056,7 +1056,7 @@ social_reforms = {
 			global_pop_militancy_modifier = -0.06
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		excellent_security = { # excellent security
@@ -1066,7 +1066,7 @@ social_reforms = {
 			global_pop_militancy_modifier = -0.08
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 	}
@@ -1077,7 +1077,7 @@ social_reforms = {
 			factory_throughput = 0.25
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		trinket_safety = { # trinket_safety
@@ -1088,7 +1088,7 @@ social_reforms = {
 			global_pop_militancy_modifier = -0.01
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		low_safety = { # low_safety
@@ -1100,8 +1100,8 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -1116,9 +1116,9 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -1133,10 +1133,10 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -1147,7 +1147,7 @@ social_reforms = {
 		no_subsidies = {
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		trinket_subsidies = { # trinket_subsidies
@@ -1156,7 +1156,7 @@ social_reforms = {
 			global_pop_consciousness_modifier = -0.01
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		low_subsidies = { # low_subsidies
@@ -1167,8 +1167,8 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -1181,9 +1181,9 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -1196,10 +1196,10 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -1213,7 +1213,7 @@ social_reforms = {
 			factory_throughput = 0.05
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		limited_child_care = {
@@ -1224,7 +1224,7 @@ social_reforms = {
 			administrative_multiplier = 1
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		adequate_child_care = {
@@ -1238,8 +1238,8 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -1255,9 +1255,9 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -1273,10 +1273,10 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -1289,14 +1289,14 @@ social_reforms = {
 			global_population_growth = -0.001
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		trinket_pensions = {
 			pension_level = 1
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		low_pensions = {
@@ -1306,8 +1306,8 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -1320,9 +1320,9 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -1336,9 +1336,9 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -1352,7 +1352,7 @@ social_reforms = {
 			global_immigrant_attract = -0.1
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		trinket_health_care = {
@@ -1360,7 +1360,7 @@ social_reforms = {
 			administrative_multiplier = 1
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		low_health_care = {
@@ -1371,8 +1371,8 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -1386,9 +1386,9 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -1402,10 +1402,10 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -1419,7 +1419,7 @@ social_reforms = {
 			factory_throughput = 0.25
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		trinket_envir = {
@@ -1429,7 +1429,7 @@ social_reforms = {
 			administrative_multiplier = 1
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		low_envir = {
@@ -1442,8 +1442,8 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -1458,9 +1458,9 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -1476,10 +1476,10 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -1492,7 +1492,7 @@ social_reforms = {
 			global_population_growth = 0.001 # less time in school means more time reproducing
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		weak_public_education = {
@@ -1502,7 +1502,7 @@ social_reforms = {
 			administrative_multiplier = 1
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		competent_public_education = {
@@ -1515,8 +1515,8 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -1531,9 +1531,9 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -1549,10 +1549,10 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}
@@ -1565,7 +1565,7 @@ social_reforms = {
 			global_population_growth = -0.001
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		minimal_public_housing = { 
@@ -1577,7 +1577,7 @@ social_reforms = {
 			global_immigrant_attract = 0.1
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
-				NOT = { has_country_flag = massive_government_corruption }
+				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
 		}
 		low_public_housing = { 
@@ -1591,8 +1591,8 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 			}
@@ -1608,9 +1608,9 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 			}
@@ -1627,10 +1627,10 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
 					OR = {
-						has_country_flag = massive_government_corruption
-						has_country_flag = large_government_corruption
-						has_country_flag = medium_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = massive_government_corruption_flag
+						has_country_flag = large_government_corruption_flag
+						has_country_flag = medium_government_corruption_flag
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 			}

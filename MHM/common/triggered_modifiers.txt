@@ -5,61 +5,6 @@
 
 #######
 
-# Seasonal effects
-
-winter_season = {
-    trigger = {
-        exists = yes
-        month = 0
-        NOT = {
-            month = 2
-        }
-    }
-    org_regain = -0.3
-    RGO_throughput = -0.06
-}
-winter1_season = {
-    trigger = {
-        exists = yes
-        month = 11
-    }
-    org_regain = -0.3
-    RGO_throughput = -0.06
-}
-spring_season = {
-    trigger = {
-        exists = yes
-        month = 2
-        NOT = {
-            month = 5
-        }
-    }
-    org_regain = 0.15
-    RGO_throughput = 0.02
-}
-summer_season = {
-    trigger = {
-        exists = yes
-        month = 5
-        NOT = {
-            month = 8
-        }
-    }
-    org_regain = 0.3
-    RGO_throughput = 0.06
-}
-autumn_season = {
-    trigger = {
-        exists = yes
-        month = 8
-        NOT = {
-            month = 11
-        }
-    }
-    org_regain = -0.15
-    RGO_throughput = -0.02
-}
-
 #Pop displacement system
 
 pop_displacement_system = {

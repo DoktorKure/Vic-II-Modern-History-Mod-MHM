@@ -1,13 +1,25 @@
 #Gas attack capability
 
-#mutual_assured_destruction, 1960
+#cold_war_doctrine, 1946
 modern_gas_weaponry = {
-	limit = { mutual_assured_destruction = 1 }
+	limit = { cold_war_doctrine = 1 }
 	chance = {
 		base = 0
 		modifier = {
 			factor = -10
 			NOT = { has_country_modifier = chemical_nation }
+		}
+		modifier = {
+			factor = 4
+			has_country_flag = choking_bomb
+		}
+		modifier = {
+			factor = 4
+			has_country_flag = blister_bomb
+		}
+		modifier = {
+			factor = 4
+			has_country_flag = nerve_bomb
 		}
 		modifier = {
 			factor = 2

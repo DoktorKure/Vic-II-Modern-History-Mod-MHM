@@ -14,36 +14,188 @@ country_event = {
 		any_country = {
 			limit = { exists = yes is_greater_power = no is_secondary_power = no }
 			any_owned = { owner = { money = 10000 } }
+			
+			#Add money to pops
+			
+			#Rich class
+			capitalists = { money = 500 }
+			aristocrats = { money = 250 }
+			officers = { money = 250 }
+			
+			#Middle Class
+			artisans = { money = 100 }
+			bureaucrats = { money = 100 }
+			clergymen = { money = 75 }
+			clerks = { money = 75 }
+			
+			#Poor Class
+			craftsmen = { money = 50 }
+			farmers = { money = 50 }
+			laborers = { money = 50 }
+			soldiers = { money = 65 }
 		}
 		any_country = {
 			limit = { exists = yes is_secondary_power = yes }
 			any_owned = { owner = { money = 20000 } }
+			
+			#Add money to pops
+			
+			#Rich class
+			capitalists = { money = 750 }
+			aristocrats = { money = 500 }
+			officers = { money = 500 }
+			
+			#Middle Class
+			artisans = { money = 250 }
+			bureaucrats = { money = 250 }
+			clergymen = { money = 150 }
+			clerks = { money = 150 }
+			
+			#Poor Class
+			craftsmen = { money = 100 }
+			farmers = { money = 100 }
+			laborers = { money = 100 }
+			soldiers = { money = 75 }
 		}
 		any_country = {
 			limit = { exists = yes is_greater_power = yes NOT = { tag = RUS } }
 			any_owned = { owner = { money = 30000 } }
+			
+			#Add money to pops
+			
+			#Rich class
+			capitalists = { money = 1000 }
+			aristocrats = { money = 750 }
+			officers = { money = 750 }
+			
+			#Middle Class
+			artisans = { money = 500 }
+			bureaucrats = { money = 500 }
+			clergymen = { money = 250 }
+			clerks = { money = 250 }
+			
+			#Poor Class
+			craftsmen = { money = 150 }
+			farmers = { money = 150 }
+			laborers = { money = 150 }
+			soldiers = { money = 200 }
 		}
 		any_country = { # Balance for USSR having the most provinces
 			limit = { exists = yes is_greater_power = yes tag = RUS }
 			any_owned = { owner = { money = 10000 } }
+			
+			#Add money to pops
+			
+			#Rich class
+			capitalists = { money = 500 }
+			aristocrats = { money = 250 }
+			officers = { money = 250 }
+			
+			#Middle Class
+			artisans = { money = 100 }
+			bureaucrats = { money = 100 }
+			clergymen = { money = 75 }
+			clerks = { money = 75 }
+			
+			#Poor Class
+			craftsmen = { money = 50 }
+			farmers = { money = 50 }
+			laborers = { money = 50 }
+			soldiers = { money = 65 }
 		}
 		
 		#Player country since the above doesn't work for THIS for some reason
 		any_owned = {
 			limit = { owner = { is_greater_power = no is_secondary_power = no } }
 			owner = { money = 10000 }
+			
+			#Add money to pops
+			
+			#Rich class
+			capitalists = { money = 500 }
+			aristocrats = { money = 250 }
+			officers = { money = 250 }
+			
+			#Middle Class
+			artisans = { money = 100 }
+			bureaucrats = { money = 100 }
+			clergymen = { money = 75 }
+			clerks = { money = 75 }
+			
+			#Poor Class
+			craftsmen = { money = 50 }
+			farmers = { money = 50 }
+			laborers = { money = 50 }
+			soldiers = { money = 65 }
 		}
 		any_owned = {
 			limit = { owner = { is_secondary_power = yes } }
 			owner = { money = 20000 }
+			
+			#Add money to pops
+			
+			#Rich class
+			capitalists = { money = 750 }
+			aristocrats = { money = 500 }
+			officers = { money = 500 }
+			
+			#Middle Class
+			artisans = { money = 250 }
+			bureaucrats = { money = 250 }
+			clergymen = { money = 150 }
+			clerks = { money = 150 }
+			
+			#Poor Class
+			craftsmen = { money = 100 }
+			farmers = { money = 100 }
+			laborers = { money = 100 }
+			soldiers = { money = 75 }
 		}
 		any_owned = {
 			limit = { owner = { is_greater_power = yes NOT = { tag = RUS } } }
 			owner = { money = 30000 }
+			
+			#Add money to pops
+			
+			#Rich class
+			capitalists = { money = 1000 }
+			aristocrats = { money = 750 }
+			officers = { money = 750 }
+			
+			#Middle Class
+			artisans = { money = 500 }
+			bureaucrats = { money = 500 }
+			clergymen = { money = 250 }
+			clerks = { money = 250 }
+			
+			#Poor Class
+			craftsmen = { money = 150 }
+			farmers = { money = 150 }
+			laborers = { money = 150 }
+			soldiers = { money = 200 }
 		}
 		any_owned = { # Balance for USSR having the most provinces
 			limit = { owner = { is_greater_power = yes tag = RUS } }
 			owner = { money = 10000 }
+			
+			#Add money to pops
+			
+			#Rich class
+			capitalists = { money = 500 }
+			aristocrats = { money = 250 }
+			officers = { money = 250 }
+			
+			#Middle Class
+			artisans = { money = 100 }
+			bureaucrats = { money = 100 }
+			clergymen = { money = 75 }
+			clerks = { money = 75 }
+			
+			#Poor Class
+			craftsmen = { money = 50 }
+			farmers = { money = 50 }
+			laborers = { money = 50 }
+			soldiers = { money = 65 }
 		}
 		country_event = 124156 #MHM National Values
 	}
