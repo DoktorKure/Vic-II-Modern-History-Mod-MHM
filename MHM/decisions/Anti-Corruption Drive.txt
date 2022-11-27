@@ -47,56 +47,56 @@ political_decisions = {
 				limit = {
 					owner = {
 						has_country_modifier = low_government_corruption
-						has_country_flag = low_government_corruption
+						has_country_flag = low_government_corruption_flag
 					}
 				}
 				owner = {
 					remove_country_modifier = low_government_corruption
-					clr_country_flag = low_government_corruption
+					clr_country_flag = low_government_corruption_flag
 					add_country_modifier = { name = minimal_government_corruption duration = -1 }
-					set_country_flag = minimal_government_corruption
+					set_country_flag = minimal_government_corruption_flag
 				}
 			}
 			random_owned = {
 				limit = {
 					owner = {
 						has_country_modifier = medium_government_corruption
-						has_country_flag = medium_government_corruption
+						has_country_flag = medium_government_corruption_flag
 					}
 				}
 				owner = {
 					remove_country_modifier = medium_government_corruption
-					clr_country_flag = medium_government_corruption
+					clr_country_flag = medium_government_corruption_flag
 					add_country_modifier = { name = low_government_corruption duration = -1 }
-					set_country_flag = low_government_corruption
+					set_country_flag = low_government_corruption_flag
 				}
 			}
 			random_owned = {
 				limit = {
 					owner = {
 						has_country_modifier = large_government_corruption
-						has_country_flag = large_government_corruption
+						has_country_flag = large_government_corruption_flag
 					}
 				}
 				owner = {
 					remove_country_modifier = large_government_corruption
-					clr_country_flag = large_government_corruption
+					clr_country_flag = large_government_corruption_flag
 					add_country_modifier = { name = medium_government_corruption duration = -1 }
-					set_country_flag = medium_government_corruption
+					set_country_flag = medium_government_corruption_flag
 				}
 			}
 			random_owned = {
 				limit = {
 					owner = {
 						has_country_modifier = massive_government_corruption
-						has_country_flag = massive_government_corruption
+						has_country_flag = massive_government_corruption_flag
 					}
 				}
 				owner = {
 					remove_country_modifier = massive_government_corruption
-					clr_country_flag = massive_government_corruption
+					clr_country_flag = massive_government_corruption_flag
 					add_country_modifier = { name = large_government_corruption duration = -1 }
-					set_country_flag = large_government_corruption
+					set_country_flag = large_government_corruption_flag
 				}
 			}
 
