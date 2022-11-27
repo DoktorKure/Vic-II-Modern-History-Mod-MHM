@@ -76,6 +76,18 @@ HUN = {
 	influence_value = 25
 	military_access = yes
 }
+ENG = {
+	level = 3
+	value = 200
+	influence_value = 0
+	military_access = yes
+}
+FRA = {
+	level = 3
+	value = 200
+	influence_value = 0
+	military_access = yes
+}
 ROM = {
 	level = 4
 	value = 160

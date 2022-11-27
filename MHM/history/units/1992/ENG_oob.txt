@@ -16,6 +16,12 @@ GRN = {
 	influence_value = 25
 	military_access = yes
 }
+GER = {
+	level = 4
+	value = 200
+	influence_value = 25
+	military_access = yes
+}
 JER = {
 	level = 5
 	value = 200
