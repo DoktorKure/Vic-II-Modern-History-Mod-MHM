@@ -36,7 +36,7 @@ political_decisions = {
 				}
 			}
 			random_owned = { 
-				limit = { owner = { has_country_modifier = space_public television = 1 NOT = { television = 1 } } } #1950s tech
+				limit = { owner = { has_country_modifier = space_public television = 1 NOT = { semiconductor = 1 } } } #1950s tech
 				owner = {
 					random_list = {
 						45 = { country_event = 1400055 } #Rocket Successful
@@ -45,7 +45,7 @@ political_decisions = {
 				}
 			}
 			random_owned = { 
-				limit = { owner = { has_country_modifier = space_public semiconductor = 1 NOT = { television = 1 } } } #1960s tech
+				limit = { owner = { has_country_modifier = space_public semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
 				owner = {
 					random_list = {
 						55 = { country_event = 1400055 } #Rocket Successful
@@ -54,7 +54,7 @@ political_decisions = {
 				}
 			}
 			random_owned = { 
-				limit = { owner = { has_country_modifier = space_public microprocessor = 1 NOT = { television = 1 } } } #1970s tech
+				limit = { owner = { has_country_modifier = space_public microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
 				owner = {
 					random_list = {
 						65 = { country_event = 1400055 } #Rocket Successful
@@ -63,7 +63,7 @@ political_decisions = {
 				}
 			}
 			random_owned = { 
-				limit = { owner = { has_country_modifier = space_public microcomputer = 1 NOT = { television = 1 } } } #1980s tech
+				limit = { owner = { has_country_modifier = space_public microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
 				owner = {
 					random_list = {
 						75 = { country_event = 1400055 } #Rocket Successful
@@ -72,7 +72,7 @@ political_decisions = {
 				}
 			}
 			random_owned = { 
-				limit = { owner = { has_country_modifier = space_public personal_computer = 1 NOT = { television = 1 } } } #1990s tech
+				limit = { owner = { has_country_modifier = space_public personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
 				owner = {
 					random_list = {
 						85 = { country_event = 1400055 } #Rocket Successful
@@ -81,7 +81,7 @@ political_decisions = {
 				}
 			}
 			random_owned = { 
-				limit = { owner = { has_country_modifier = space_public handheld_devices = 1 NOT = { television = 1 } } } #2000s tech
+				limit = { owner = { has_country_modifier = space_public handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
 				owner = {
 					random_list = {
 						95 = { country_event = 1400055 } #Rocket Successful
