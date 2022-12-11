@@ -7688,6 +7688,16 @@ family_values1 = {
 	icon = 19
 }
 
+family_values2 = {
+	population_growth = 0.002
+	icon = 19
+}
+
+family_values3 = {
+	population_growth = 0.003
+	icon = 19
+}
+
 total_fertility_rate = {
 	population_growth = 0.001
 	icon = 19

@@ -200,6 +200,92 @@ country_event = {
 	}
 }
 
+#INDIAN population boom
+country_event = {
+	id = 1200237
+	title = "Indian Population Boom"
+	desc = "With the end of the British Raj and the calm after the events of the late 1940s, many people are starting to feel that it is ok to have larger families."
+	picture = "indianpopulationboom"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HND
+		year = 1950
+		NOT = { year = 1965 }
+		is_vassal = no
+		war = no
+		NOT = { has_country_flag = hndpopboom_stage_1 }
+
+	}
+	
+	option = {
+		name = "A higher birthrate is always good!"
+		any_owned = {
+			add_province_modifier = { name = family_values1 duration = 3650 }
+		}
+		set_country_flag = hndpopboom_stage_1
+	}
+}
+
+#INDIAN population boom stage 2
+country_event = {
+	id = 1200238
+	title = "Indian Population Boom"
+	desc = "Despite already being considered overpopulated, the Nehru government of India took the stance that simply increasing food production would offset any ill effects of its massive population."
+	picture = "indianpopulationboom"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HND
+		year = 1960
+		NOT = { year = 1970 }
+		is_vassal = no
+		war = no
+		has_country_flag = hndpopboom_stage_1
+		NOT = { has_country_flag = hndpopboom_stage_2 }
+
+	}
+	
+	option = {
+		name = "A higher birthrate is always good!"
+		any_owned = {
+			add_province_modifier = { name = family_values2 duration = 3650 }
+		}
+		set_country_flag = hndpopboom_stage_2
+	}
+}
+
+#INDIAN population boom stage 3
+country_event = {
+	id = 1200238
+	title = "Indian Population Boom"
+	desc = "The efforts of the Nehru government to increase agricultural production to match India's growing population meant that India's population will continue to grow at an exponential pace."
+	picture = "indianpopulationboom"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HND
+		year = 1970
+		NOT = { year = 1991 }
+		is_vassal = no
+		war = no
+		has_country_flag = hndpopboom_stage_2
+		NOT = { has_country_flag = hndpopboom_stage_3 }
+
+	}
+	
+	option = {
+		name = "A higher birthrate is always good!"
+		any_owned = {
+			add_province_modifier = { name = family_values3 duration = 7300 }
+		}
+		set_country_flag = hndpopboom_stage_3
+	}
+}
+
 #Event for RAJ at war with ENG
 country_event = {
 	id = 19474747
