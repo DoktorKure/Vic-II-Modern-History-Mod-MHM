@@ -664,10 +664,11 @@ country_event = {
 		
 		money = -250000
 
-		#Better defense
+		#Better defense and infrastructure
 		any_owned = {
-			fort = 2
+			infrastructure = 1
 		}
+		any_owned = { limit = { has_building = fort } fort = 2 }
 		
 		#More soldiers
 		any_pop = { 
