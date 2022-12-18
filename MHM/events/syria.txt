@@ -58,7 +58,7 @@ country_event = {
 			}
 		}
 		LEB = { all_core = { add_core = SYR } country_event = 99978 }
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.2 }
 	}
 	option = {
 		name = "Continue the occupation of Syria"
@@ -74,7 +74,7 @@ country_event = {
 		}
 
 		consciousness = -2
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -107,7 +107,7 @@ country_event = {
 
   	option = {
     	name = EVT_99978_A
-		ai_chance = { factor = 0.18 }
+		ai_chance = { factor = 0.2 }
 		SYR = { 
 			inherit = THIS
 			add_accepted_culture = lebanese
@@ -115,7 +115,7 @@ country_event = {
   	}
  	option = {
     	name = EVT_99978_B
-		ai_chance = { factor = 0.82 }
+		ai_chance = { factor = 0.8 }
 		badboy = 1
 		prestige = 4
 		any_pop = {
