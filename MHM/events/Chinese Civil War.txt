@@ -437,7 +437,13 @@ country_event = {
 	option = {
 		name = "Reach out to Mao for negotiations"
 		CHI = { country_event = 90916 }
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				CHI = { national_provinces_occupied = 0.35 } #KMT is winning the war
+			}
+		}
 	}
 	
 	option = {
@@ -462,7 +468,13 @@ country_event = {
 		name = "Make peace and regroup."
 		end_war = KMT
 		set_global_flag = 1949_truce_fired
-		ai_chance = { factor = 0.9 }
+		ai_chance = {
+			factor = 0.9
+			modifier = {
+				factor = 0
+				KMT = { national_provinces_occupied = 0.35 } #CHI is winning the war
+			}
+		}
 	}
 	
 	option = {
