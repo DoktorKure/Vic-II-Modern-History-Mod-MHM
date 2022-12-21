@@ -76,11 +76,11 @@ political_decisions = {
 		effect = {
 			prestige = 100
 			set_country_flag = establish_west_germany
-			OG4 = { change_tag = GER }
-			GER = { release = BAV government = democracy country_event = 800054 ruling_party_ideology = conservative }
-			FRA = { diplomatic_influence = { who = GER value = 200 } }
+			OG4 = { change_tag = FRG }
+			FRG = { release = BAV government = democracy country_event = 800054 ruling_party_ideology = conservative }
+			FRA = { diplomatic_influence = { who = FRG value = 200 } }
 			prestige = 50
-			relation = { who = GER value = 200 }
+			relation = { who = FRG value = 200 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -92,6 +92,7 @@ political_decisions = {
 		picture = "establish_west_germany"
 		potential = {
 			GER = { exists = no }
+			FRG = { exists = no }
 			NGF = { exists = no }
 			SGF = { exists = no }
 			DDR = { exists = yes }
@@ -144,12 +145,19 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = establish_west_germany
-			random_owned = { limit = { owner = { tag = USA has_country_flag = establish_west_germany } } owner = { OG4 = { change_tag = GER } } }
-			random_owned = { limit = { owner = { tag = ENG has_country_flag = establish_west_germany } } owner = { OG3 = { change_tag = GER } } }
-			random_owned = { limit = { owner = { tag = FRA has_country_flag = establish_west_germany } } owner = { OG2 = { change_tag = GER } } }
-			FRA = { diplomatic_influence = { who = GER value = 200 } }
+			#Release vassal and have USA vassalize FRG to prevent interference with historical event chains
+			random_owned = { limit = { owner = { tag = USA has_country_flag = establish_west_germany } } owner = { USA = { release_vassal = OG4 } OG4 = { change_tag = FRG } } }
+			random_owned = { limit = { owner = { tag = ENG has_country_flag = establish_west_germany } } owner = { ENG = { release_vassal = OG3 } OG3 = { change_tag = FRG } } }
+			random_owned = { limit = { owner = { tag = FRA has_country_flag = establish_west_germany } } owner = { FRA = { release_vassal = OG2 } OG2 = { change_tag = FRG } } }
+			USA = { create_vassal = FRG }
+			FRG = {
+				government = democracy
+				country_event = 800054
+				ruling_party_ideology = conservative
+			}
+			FRA = { diplomatic_influence = { who = FRG value = 200 } }
 			prestige = 25
-			relation = { who = GER value = 200 }
+			relation = { who = FRG value = 200 }
 		}
 		ai_will_do = {
 			factor = 1
@@ -169,6 +177,7 @@ political_decisions = {
 			OR = { 
 				year = 1952
 				GER = { exists = yes }
+				FRG = { exists = yes }
 			}
 			NOT = { has_country_flag = establish_east_germany }
 		}
@@ -178,6 +187,7 @@ political_decisions = {
 			OR = { 
 				year = 1952
 				GER = { exists = yes }
+				FRG = { exists = yes }
 			}
 			NOT = { has_country_flag = establish_east_germany }
 			war = no
@@ -209,6 +219,7 @@ political_decisions = {
 			OR = { 
 				year = 1952
 				GER = { exists = yes }
+				FRG = { exists = yes }
 			}
 			NOT = { has_country_flag = establish_east_germany }
 		}
@@ -217,6 +228,7 @@ political_decisions = {
 			OR = { 
 				year = 1952
 				GER = { exists = yes }
+				FRG = { exists = yes }
 			}
 			NOT = { has_country_flag = establish_east_germany }
 			war = no
@@ -250,7 +262,7 @@ political_decisions = {
 	end_occupation_of_germany = {
 		picture = "establish_west_germany"
 		potential = {
-			GER = { exists = yes }
+			OR = { GER = { exists = yes } FRG = { exists = yes } }
 			OR = { is_our_vassal = OG1 is_our_vassal = OG2 is_our_vassal = OG3 is_our_vassal = OG4 is_our_vassal = OG5 }
 			NOT = { has_country_flag = end_occupation_of_germany }
 			OR = { has_country_flag = no_partition_of_germany has_country_flag = saar_option has_country_flag = accept_united_germany }
@@ -263,16 +275,24 @@ political_decisions = {
 
 		effect = {
 			set_country_flag = end_occupation_of_germany
-			random_owned = { limit = { owner = { is_our_vassal = OG1 } } owner = { GER = { prestige = 50 inherit = OG1 } } }
-			random_owned = { limit = { owner = { is_our_vassal = OG2 } } owner = { GER = { prestige = 50 inherit = OG2 } } }
-			random_owned = { limit = { owner = { is_our_vassal = OG3 } } owner = { GER = { prestige = 50 inherit = OG3 } } }
-			random_owned = { limit = { owner = { is_our_vassal = OG4 } } owner = { GER = { prestige = 50 inherit = OG4 } } }
-			random_owned = { limit = { owner = { is_our_vassal = OG5 } } owner = { GER = { prestige = 50 inherit = OG5 } } }
-			diplomatic_influence = { who = GER value = 100 }
-			relation = { who = GER value = 200 }
+			
+			#If Germany exists
+			random_owned = { limit = { owner = { exists = GER is_our_vassal = OG1 } } owner = { diplomatic_influence = { who = GER value = 100 } relation = { who = GER value = 200 } GER = { prestige = 50 inherit = OG1 } } }
+			random_owned = { limit = { owner = { exists = GER is_our_vassal = OG2 } } owner = { diplomatic_influence = { who = GER value = 100 } relation = { who = GER value = 200 } GER = { prestige = 50 inherit = OG2 } } }
+			random_owned = { limit = { owner = { exists = GER is_our_vassal = OG3 } } owner = { diplomatic_influence = { who = GER value = 100 } relation = { who = GER value = 200 } GER = { prestige = 50 inherit = OG3 } } }
+			random_owned = { limit = { owner = { exists = GER is_our_vassal = OG4 } } owner = { diplomatic_influence = { who = GER value = 100 } relation = { who = GER value = 200 } GER = { prestige = 50 inherit = OG4 } } }
+			random_owned = { limit = { owner = { exists = GER is_our_vassal = OG5 } } owner = { diplomatic_influence = { who = GER value = 100 } relation = { who = GER value = 200 } GER = { prestige = 50 inherit = OG5 } } }
+			
+			#If West Germany exists
+			random_owned = { limit = { owner = { exists = FRG is_our_vassal = OG1 } } owner = { diplomatic_influence = { who = FRG value = 100 } relation = { who = FRG value = 200 } FRG = { prestige = 50 inherit = OG1 } } }
+			random_owned = { limit = { owner = { exists = FRG is_our_vassal = OG2 } } owner = { diplomatic_influence = { who = FRG value = 100 } relation = { who = FRG value = 200 } FRG = { prestige = 50 inherit = OG2 } } }
+			random_owned = { limit = { owner = { exists = FRG is_our_vassal = OG3 } } owner = { diplomatic_influence = { who = FRG value = 100 } relation = { who = FRG value = 200 } FRG = { prestige = 50 inherit = OG3 } } }
+			random_owned = { limit = { owner = { exists = FRG is_our_vassal = OG4 } } owner = { diplomatic_influence = { who = FRG value = 100 } relation = { who = FRG value = 200 } FRG = { prestige = 50 inherit = OG4 } } }
+			random_owned = { limit = { owner = { exists = FRG is_our_vassal = OG5 } } owner = { diplomatic_influence = { who = FRG value = 100 } relation = { who = FRG value = 200 } FRG = { prestige = 50 inherit = OG5 } } }
 
 			#If DDR exists and USSR accepts united germany through airlift
-			random_owned = { limit = { owner = { is_our_vassal = DDR } } owner = { GER = { inherit = DDR } } }
+			random_owned = { limit = { owner = { is_our_vassal = DDR exists = GER } } owner = { GER = { inherit = DDR } } }
+			random_owned = { limit = { owner = { is_our_vassal = DDR exists = FRG } } owner = { FRG = { inherit = DDR } } }
 		}
 		ai_will_do = {
 			factor = 1
@@ -336,7 +356,7 @@ political_decisions = {
 		picture = "return_ger_zones"
 		potential = {
 			OR = { is_our_vassal = OG1 is_our_vassal = OG2 is_our_vassal = OG3 is_our_vassal = OG4 is_our_vassal = OG5 }
-			GER = { exists = yes }
+			OR = { GER = { exists = yes } FRG = { exists = yes } }
 			NOT = { has_global_flag = player_choice_GER_occupation }
 		}
 
@@ -350,17 +370,19 @@ political_decisions = {
 		effect = {
 			prestige = 25
 
-			relation = { who = GER value = 50 }
+			#If Germany exists
+			random_owned = { limit = { owner = { is_our_vassal = OG1 exists = GER } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG1 } } }
+			random_owned = { limit = { owner = { is_our_vassal = OG2 exists = GER } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG2 } } }
+			random_owned = { limit = { owner = { is_our_vassal = OG3 exists = GER } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG3 } } }
+			random_owned = { limit = { owner = { is_our_vassal = OG4 exists = GER } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG4 } } }
+			random_owned = { limit = { owner = { is_our_vassal = OG5 exists = GER } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG5 } } }
 
-			random_owned = { limit = { owner = { is_our_vassal = OG1 } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG1 } } }
-
-			random_owned = { limit = { owner = { is_our_vassal = OG2 } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG2 } } }
-
-			random_owned = { limit = { owner = { is_our_vassal = OG3 } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG3 } } }
-
-			random_owned = { limit = { owner = { is_our_vassal = OG4 } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG4 } } }
-
-			random_owned = { limit = { owner = { is_our_vassal = OG5 } } owner = { badboy = -10 GER = { prestige = 50 inherit = OG5 } } }
+			#If FRG exists
+			random_owned = { limit = { owner = { is_our_vassal = OG1 exists = FRG } } owner = { badboy = -10 FRG = { prestige = 50 inherit = OG1 } } }
+			random_owned = { limit = { owner = { is_our_vassal = OG2 exists = FRG } } owner = { badboy = -10 FRG = { prestige = 50 inherit = OG2 } } }
+			random_owned = { limit = { owner = { is_our_vassal = OG3 exists = FRG } } owner = { badboy = -10 FRG = { prestige = 50 inherit = OG3 } } }
+			random_owned = { limit = { owner = { is_our_vassal = OG4 exists = FRG } } owner = { badboy = -10 FRG = { prestige = 50 inherit = OG4 } } }
+			random_owned = { limit = { owner = { is_our_vassal = OG5 exists = FRG } } owner = { badboy = -10 FRG = { prestige = 50 inherit = OG5 } } }
 		}
 		ai_will_do = {
 			factor = 1

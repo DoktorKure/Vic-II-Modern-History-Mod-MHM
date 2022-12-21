@@ -120,6 +120,11 @@ political_decisions = {
 				}
 			}
 			
+			#Truman Doctrine
+			USA = {
+				set_country_flag = truman_doctrine
+			}
+			
 			HND = {
 				any_pop = {
 					ideology = {

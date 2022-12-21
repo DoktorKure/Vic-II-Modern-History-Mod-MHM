@@ -1,9 +1,49 @@
+#German Welfare State
+country_event = {
+	id = 1512149
+	title = "The Welfare State"
+	desc = EVTDESC1512149
+	picture = "german_welfare_state"
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = GER tag = FRG }
+		year = 1960
+		ruling_party_ideology = socialist
+		NOT = { year = 1990 }
+		OR = { government = democracy government = democracy1 }
+	}
+
+	mean_time_to_happen = { 
+		months = 2
+	}
+
+	option = {
+		name = "Yes!"
+		social_reform = good_public_housing
+		social_reform = excellent_public_education
+		social_reform = low_health_care
+		social_reform = low_pensions
+		social_reform = excellent_security
+		social_reform = low_minimum_wage
+		social_reform = extended_subsidies
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "No need"
+		prestige = -25
+		ai_chance = { factor = 0.1 }
+	}
+}
+
 # Reparations Israel and West Germany
 country_event = {
-  id = 8004326
-  title = EVT_8004326_NAME
-  desc = EVT_8004326_DESC
-  picture = "reparations_agreement"
+	id = 8004326
+	title = EVT_8004326_NAME
+	desc = EVT_8004326_DESC
+	picture = "reparations_agreement"
   
 	is_triggered_only = yes # ISR
 	
@@ -25,14 +65,14 @@ country_event = {
 
 #The Spiegel Affair
 country_event = {
-  id = 8004522
-  title = "The Spiegel Affair"
-  desc = EVT_8004522_DESC
-  picture = "nwo2_spiegel_affair"
-  fire_only_once = yes
+	id = 8004522
+	title = "The Spiegel Affair"
+	desc = EVT_8004522_DESC
+	picture = "nwo2_spiegel_affair"
+	fire_only_once = yes
 
 	trigger = {
-		tag = GER
+		OR = { tag = GER tag = FRG }
 		year = 1962
 		NOT = { year = 1967 }
 		
@@ -81,15 +121,15 @@ country_event = {
 
 #The Fall of Konrad Adenauer, 1963
 country_event = {
-  id = 8004506
-  title = "The Fall of Konrad Adenauer"
-  desc = "EVT_8004506_DESC"
-  picture = "nwo2_old_adenauer"
+	id = 8004506
+	title = "The Fall of Konrad Adenauer"
+	desc = "EVT_8004506_DESC"
+	picture = "nwo2_old_adenauer"
   
 	fire_only_once = yes
 
 	trigger = {
-		tag = GER
+		OR = { tag = GER tag = FRG }
 		year = 1963 
 		NOT = { year = 1967 }
 		
@@ -121,15 +161,15 @@ country_event = {
 
 #The Fall of Willy Brandt 
 country_event = {
-  id = 8004514
-  title = "The Fall of Willy Brandt"
-  desc = EVT_8004514_DESC
-  picture = "nwo2_willy_brandt"
+	id = 8004514
+	title = "The Fall of Willy Brandt"
+	desc = EVT_8004514_DESC
+	picture = "nwo2_willy_brandt"
   
 	fire_only_once = yes
 
 	trigger = {
-		tag = GER
+		OR = { tag = GER tag = FRG }
 		year = 1974 
 		NOT = { year = 1990 }
 		
@@ -161,15 +201,15 @@ country_event = {
 
 #F84 Thunderstreak Incident - GER start
 country_event = {
-  id = 8004523
-  title = "The F-84 Thunderstreak Incident"
-  desc = EVT_8004523_DESC
-  picture = "nwo2_f_84_thunderstreak"
+	id = 8004523
+	title = "The F-84 Thunderstreak Incident"
+	desc = EVT_8004523_DESC
+	picture = "nwo2_f_84_thunderstreak"
   
 	fire_only_once = yes
 
 	trigger = {
-		tag = GER
+		OR = { tag = GER tag = FRG }
 		year = 1961
 		NOT = { year = 1990 }
 		
@@ -198,7 +238,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Our airforce can go where it wants!"
+		name = "Our airforce can go where it wants! (10% chance of war)"
 		RUS = { country_event = 8004524 }
 		relation = { who = RUS value = -50 }
 		ai_chance= { factor = 0.1 }
@@ -207,10 +247,10 @@ country_event = {
 
 #F84 Thunderstreak Incident - RUS reaction
 country_event = {
-  id = 8004524
-  title = "The F-84 Thunderstreak Incident"
-  desc = EVT_8004523_DESC
-  picture = "nwo2_f_84_thunderstreak"
+	id = 8004524
+	title = "The F-84 Thunderstreak Incident"
+	desc = EVT_8004523_DESC
+	picture = "nwo2_f_84_thunderstreak"
   
 	is_triggered_only = yes
 
@@ -219,7 +259,7 @@ country_event = {
 		prestige_factor = -0.02
 		
 		any_pop = { consciousness = 2 }
-		relation = { who = GER value = -50 }
+		relation = { who = FROM value = -50 }
 		ai_chance = { factor = 0.9 }
 	}
 
@@ -227,7 +267,7 @@ country_event = {
 		name = "It's WAR!"
 		
 		war = {
-			target = GER
+			target = FROM
 			attacker_goal = { casus_belli = cut_down_to_size }
 			defender_goal = { casus_belli = status_quo }
 			call_ally = yes
@@ -239,15 +279,15 @@ country_event = {
 
 #Ostpolitik
 country_event = {
-  id = 8004526
-  title = "Ostpolitik"
-  desc = EVT_8004526_DESC
-  picture = "nwo2_ostpolitik"
+	id = 8004526
+	title = "Ostpolitik"
+	desc = EVT_8004526_DESC
+	picture = "nwo2_ostpolitik"
   
 	fire_only_once = yes
 
 	trigger = {
-		tag = GER
+		OR = { tag = GER tag = FRG }
 		year = 1969
 		NOT = { year = 1990 }
 		
@@ -315,15 +355,15 @@ country_event = {
 
 #The Treaty of Warsaw
 country_event = {
-  id = 8004527
-  title = "The Treaty of Warsaw"
-  desc = EVT_8004527_DESC
-  picture = "nwo2_GER_treaty_of_warsaw"
+	id = 8004527
+	title = "The Treaty of Warsaw"
+	desc = EVT_8004527_DESC
+	picture = "nwo2_GER_treaty_of_warsaw"
   
 	fire_only_once = yes
 
 	trigger = {
-		tag = GER
+		OR = { tag = GER tag = FRG }
 		year = 1970
 		NOT = { year = 1990 }
 	
@@ -344,7 +384,7 @@ country_event = {
 		ruling_party_ideology = socialist
 		
 		#Oder-Neisse line claims by Germany
-		any_core = { owned_by = POL }
+		GER = { any_core = { owned_by = POL } }
 	}
 
 	mean_time_to_happen = { months = 11 }
@@ -384,7 +424,7 @@ country_event = {
 		relation = { who = RUS value = 50 } 
 		
 		#Remove German claims in Poland
-		all_core = { limit = { owned_by = POL } remove_core = GER }
+		GER = { all_core = { limit = { owned_by = POL } remove_core = GER } }
 		
 		ai_chance = { factor = 0.9 }
 	}
@@ -398,13 +438,15 @@ country_event = {
 		relation = { who = RUS value = -50 } 
 		
 		#Any Germans in occupied cores become more nationalistic
-		all_core = { 
-			limit = { NOT = { owned_by = THIS } }
-			any_pop = { 
-				limit = { culture = german } 
-				militancy = 10
-				ideology = { factor = 0.30 value = nationalist } 
-			} 
+		GER = {
+			all_core = { 
+				limit = { NOT = { owned_by = THIS } }
+				any_pop = { 
+					limit = { culture = german } 
+					militancy = 10
+					ideology = { factor = 0.30 value = nationalist } 
+				} 
+			}
 		}
 
 		set_country_flag = reject_oder_neisse 
@@ -414,15 +456,15 @@ country_event = {
 
 #Protests of 1967
 country_event = {
-  id = 8004329
-  title = "The Student Protests of $YEAR$"
-  desc = EVT_8004329_DESC
-  picture = "germany_1968"
+	id = 8004329
+	title = "The Student Protests of $YEAR$"
+	desc = EVT_8004329_DESC
+	picture = "germany_1968"
   
 	fire_only_once = yes
  
 	trigger = {
-		OR = { tag = GER tag = NGF tag = SGF }
+		OR = { tag = GER tag = FRG tag = NGF tag = SGF }
 		year = 1967
 		NOT = { year = 1990 }
 		
@@ -537,15 +579,15 @@ country_event = {
 
 #Frankfurt bombings of 1968
 country_event = {
-  id = 8004330
-  title = "The Frankfurt Bombings of $YEAR$"
-  desc = EVT_8004330_DESC
-  picture = "kaufhaus_frankfurt_bombing"
+	id = 8004330
+	title = "The Frankfurt Bombings of $YEAR$"
+	desc = EVT_8004330_DESC
+	picture = "kaufhaus_frankfurt_bombing"
   
 	fire_only_once = yes
 
 	trigger = {
-		OR = { tag = GER tag = NGF tag = SGF }
+		OR = { tag = GER tag = FRG tag = NGF tag = SGF }
 		year = 1968 
 		month = 4
 		NOT = { year = 1990 }
@@ -576,15 +618,15 @@ country_event = {
 
 #Munich Massacre ( special event for West Germany if Olympics host )
 country_event = {
-  id = 8004331
-  title = EVT_8004331_NAME
-  desc = EVT_8004331_DESC
-  picture = "munich_massacre"
+	id = 8004331
+	title = EVT_8004331_NAME
+	desc = EVT_8004331_DESC
+	picture = "munich_massacre"
   
 	fire_only_once = yes
 
 	trigger = {
-		OR = { tag = GER tag = NGF tag = SGF }
+		OR = { tag = GER tag = FRG tag = NGF tag = SGF }
 		has_country_modifier = years_of_lead
 		NOT = { year = 1990 }
 		
@@ -612,15 +654,15 @@ country_event = {
 
 #The German Autumn
 country_event = { 
-  id = 8004332
-  title = "The German Autumn"
-  desc = EVT_8004332_DESC
-  picture = "german_autumn"
+	id = 8004332
+	title = "The German Autumn"
+	desc = EVT_8004332_DESC
+	picture = "german_autumn"
   
 	fire_only_once = yes
 
 	trigger = {
-		OR = { tag = GER tag = NGF tag = SGF }
+		OR = { tag = GER tag = FRG tag = NGF tag = SGF }
 		year = 1977
 		NOT = { year = 1990 }
 	
@@ -644,15 +686,15 @@ country_event = {
 
 #Oktoberfest bombing
 country_event = {
-  id = 8004333
-  title = EVT_8004333_NAME
-  desc = EVT_8004333_DESC
-  picture = "oktoberfest_bombing"
+	id = 8004333
+	title = EVT_8004333_NAME
+	desc = EVT_8004333_DESC
+	picture = "oktoberfest_bombing"
   
 	fire_only_once = yes
 
 	trigger = {
-		OR = { tag = GER tag = NGF tag = SGF }
+		OR = { tag = GER tag = FRG tag = NGF tag = SGF }
 		year = 1980 
 		month = 9
 		NOT = { year = 1990 }
@@ -677,15 +719,15 @@ country_event = {
 
 #West Berlin discotheque bombing
 country_event = {
-  id = 8004334
-  title = EVT_8004334_NAME
-  desc = EVT_8004334_DESC
-  picture = "west_berlin_bombing"
+	id = 8004334
+	title = EVT_8004334_NAME
+	desc = EVT_8004334_DESC
+	picture = "west_berlin_bombing"
   
 	fire_only_once = yes
 
 	trigger = {
-		OR = { tag = GER tag = NGF tag = SGF }
+		OR = { tag = GER tag = FRG tag = NGF tag = SGF }
 		year = 1986
 		NOT = { year = 1990 }
 		
@@ -727,10 +769,10 @@ country_event = {
 
 #West Berlin discotheque bombing - USA response
 country_event = {
-  id = 8004335
-  title = EVT_8004335_NAME
-  desc = EVT_8004335_DESC
-  picture = "west_berlin_bombing"
+	id = 8004335
+	title = EVT_8004335_NAME
+	desc = EVT_8004335_DESC
+	picture = "west_berlin_bombing"
   
 	is_triggered_only = yes
 
@@ -751,15 +793,15 @@ country_event = {
 
 #Weiterstadt Prison bombing / End of the years of lead
 country_event = {
-  id = 8004336
-  title = EVT_8004336_NAME
-  desc = EVT_8004336_DESC
-  picture = "weiterstadt_prison_bombing"
+	id = 8004336
+	title = EVT_8004336_NAME
+	desc = EVT_8004336_DESC
+	picture = "weiterstadt_prison_bombing"
   
 	fire_only_once = yes
 
 	trigger = {
-		OR = { tag = GER tag = NGF tag = SGF }
+		OR = { tag = GER tag = FRG tag = NGF tag = SGF }
 		year = 1993
 		has_country_modifier = years_of_lead
 		
@@ -794,7 +836,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = GER
+		OR = { tag = GER tag = FRG }
 		year = 1946
 		NOT = { year = 1951 }
 		
@@ -866,7 +908,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = GER
+		OR = { tag = GER tag = FRG }
 		year = 1946
 		NOT = { year = 1951 }
 		
@@ -924,5 +966,136 @@ country_event = {
 			}
 		}
 		ai_chance = { factor = 0.30 }
+	}
+}
+
+#Restore German monarchy decision - Plebscite yes
+country_event = {
+	id = 1610055
+	title = "Referendum to Restore the Monarchy Accepted"
+	desc = EVTDESC1610055
+	picture = "restore_the_german_monarchy_vote_yes"
+
+	trigger = {
+		OR = { tag = GER tag = FRG }
+		OR = { government = democracy government = democracy1 }
+		has_country_flag = restore_german_monarchy
+		is_vassal = no
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = {
+		name = "We welcome our new Kaiser!"
+		government = hms_government
+		clr_country_flag = restore_german_monarchy
+	}
+
+}
+
+#Restore German monarchy decision - Plebscite no
+country_event = {
+	id = 1610056
+	title = "Referendum to Restore the Monarchy Rejected"
+	desc = EVTDESC1610056
+	picture = "restore_the_german_monarchy_vote"
+
+	trigger = {
+		OR = { tag = GER tag = FRG }
+		OR = { government = democracy government = democracy1 }
+		has_country_flag = restore_german_monarchy
+		is_vassal = no
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = {
+		name = "Republicanism is the way forward!"
+		clr_country_flag = restore_german_monarchy
+	}
+
+}
+
+#Restore German monarchy decision - USA Overlord
+country_event = {
+	id = 1610057
+	title = "Restoration of the German Monarchy?"
+	desc = EVTDESC1610057
+	picture = "restore_the_german_monarchy_vote"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "If he is an anti-communist then why not?"
+		release_vassal = FROM
+		FROM = { government = hms_government }
+		ai_chance = { factor = 0.6 }
+	}
+
+	option = {
+		name = "We dislike kings!"
+		relation = { who = FROM value = -50 }
+		ai_chance = { factor = 0.4 }
+	}
+
+}
+
+#Restore German monarchy decision - notice of rejection
+country_event = {
+	id = 1610058
+	title = "German Monarchy Request Rejected"
+	desc = EVTDESC1610058
+	picture = "restore_the_german_monarchy_vote"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We can try again once we are independent"
+		prestige = -50
+	}
+
+}
+
+# This event is mainly just for flag choice
+country_event = {
+	id = 8004328
+	title = "The Return of German Nationalism"
+	desc = EVTDESC8004328
+	picture = "Wilhelm_III"
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+		year = 1946
+		
+		OR = { government = sectarian_dictatorship government = nationalist_dictatorship }
+		war = no
+		is_vassal = no
+		NOT = { has_country_flag = far_right_path_choice }
+	}
+
+	option = {
+		name = "We will continue the legacy of Hitler!"
+		government = nationalist_dictatorship
+		ruling_party_ideology = nationalist
+		prestige = 25
+		badboy = 50
+		country_event = 96130 # Price of Infamy event
+		
+		ai_chance = { factor = 0.50 }
+	}
+
+	option = {
+		name = "We will forge our own path!"
+		government = sectarian_dictatorship
+		ruling_party_ideology = nationalist
+		prestige = 25
+		badboy = 15
+		ai_chance = { factor = 0.50 }
 	}
 }

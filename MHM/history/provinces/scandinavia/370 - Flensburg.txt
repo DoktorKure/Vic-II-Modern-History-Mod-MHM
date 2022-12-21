@@ -1,6 +1,7 @@
 owner = OG3
 controller = OG3
 add_core = GER
+add_core = FRG
 trade_goods = cattle
 life_rating = 35
 terrain = marginal_farmland
@@ -13,8 +14,8 @@ state_building = {
 }
 
 1950.1.1 = {
-owner = GER
-controller = GER
+owner = FRG
+controller = FRG
 }
 
 1992.1.1 = {

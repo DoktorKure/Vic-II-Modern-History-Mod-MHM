@@ -2,6 +2,28 @@
 # scriptable and usable for event-system below.
 ##################################################################################################
 
+### Seasonal Effects ###
+
+winter_province_modifier = {
+	local_RGO_throughput = -0.06
+	icon = 4
+}
+
+spring_province_modifier = {
+	local_RGO_throughput = 0.02
+	icon = 3
+}
+
+summer_province_modifier = {
+	local_RGO_throughput = 0.04
+	icon = 3
+}
+
+autumn_province_modifier = {
+	local_RGO_throughput = 0.06
+	icon = 4
+}
+
 ### Generic Development Aid ###
 
 development_aid_modifier = {
@@ -4561,21 +4583,21 @@ icon = 17
 
 cdhigh = {
 	tax_efficiency = -0.05
-	war_exhaustion = -10
+	war_exhaustion = -5
 	leadership_modifier = 0.50
 	icon = 17
 }
 
 cdmedium = {
 	tax_efficiency = -0.03
-	war_exhaustion = -5
+	war_exhaustion = -3.5
 	leadership_modifier = 0.25
 	icon = 17
 }
 
 cdlow = {
 	tax_efficiency = -0.01
-	war_exhaustion = -2.5
+	war_exhaustion = -2
 	icon = 17
 }
 
@@ -6044,7 +6066,7 @@ international_pariah = {
 	diplomatic_points_modifier = -0.25
 	non_accepted_pop_militancy_modifier = 0.2
 	prestige = -0.02
-	supply_consumption = -0.75 # So AI nations will declare war on THIS
+	supply_consumption = -0.90 # So AI nations will declare war on THIS
 	icon = 8
 }
 
@@ -7663,6 +7685,16 @@ family_values = {
 
 family_values1 = {
 	population_growth = 0.001
+	icon = 19
+}
+
+family_values2 = {
+	population_growth = 0.002
+	icon = 19
+}
+
+family_values3 = {
+	population_growth = 0.003
 	icon = 19
 }
 

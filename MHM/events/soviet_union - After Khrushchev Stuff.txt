@@ -328,6 +328,7 @@ country_event = { # Expulsion of Solzhenitsyn?
 		
 		random_country = { limit = { tag = USA OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = -75 } }
 		random_country = { limit = { tag = GER OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = -100 } }
+		random_country = { limit = { tag = FRG OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = -100 } }
 		
 		any_pop = { consciousness = 3 militancy = 2 }
 		prestige = -250
@@ -1430,6 +1431,7 @@ country_event = { # Opening to the West?
 		random_country = { limit = { tag = USA OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = 75 } }
 		random_country = { limit = { tag = FRA OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = 50 } }
 		random_country = { limit = { tag = GER OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = 50 } }
+		random_country = { limit = { tag = FRG OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = 50 } }
 		
 		any_pop = { consciousness = 2 militancy = 2 }
 		any_pop = { 
@@ -1863,6 +1865,7 @@ country_event = { # Request for Independance in the Baltic States
 		random_country = { limit = { tag = USA OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = 150 } }
 		random_country = { limit = { tag = FRA OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = 100 } }
 		random_country = { limit = { tag = GER OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = 100 } }
+		random_country = { limit = { tag = FRG OR = { government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = 100 } }
 		random_country = { limit = { tag = ENG OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } is_vassal = no } relation = { who = THIS value = 75 } }
 		
 		release = LIT

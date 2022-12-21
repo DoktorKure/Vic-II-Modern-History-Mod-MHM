@@ -443,10 +443,10 @@ country_event = { # FROM = GER THIS = FRA
 	option = {
 		name = EVT_1005702_A 
 		ai_chance = { factor = 0.90 }
-		GER = { inherit = IAR }
+		FROM = { inherit = IAR }
 		prestige = 5
-		relation = { who = GER value = 50 }
-		diplomatic_influence = { who = GER value = 50 }
+		relation = { who = FROM value = 50 }
+		diplomatic_influence = { who = FROM value = 50 }
 	}
 	
 	option = {
@@ -459,7 +459,7 @@ country_event = { # FROM = GER THIS = FRA
 			consciousness = 2
 			militancy = 8
 		}		
-		GER = {
+		FROM = {
 			casus_belli = {
 				target = FRA
 				type = acquire_core_state
@@ -467,7 +467,7 @@ country_event = { # FROM = GER THIS = FRA
 			}
 			relation = { who = FRA value = -100 }
 		}
-		diplomatic_influence = { who = GER value = -50 }
+		diplomatic_influence = { who = FROM value = -50 }
 		badboy = 5
 	}
 }

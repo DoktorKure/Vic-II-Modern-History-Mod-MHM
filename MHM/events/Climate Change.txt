@@ -11,15 +11,11 @@ country_event = {
 
 	option = {
 		name = "Climate Change is an existential threat."
-		set_global_flag = climate_change_toggled
 		clr_global_flag = climate_change_disabled
-		country_event = 669966 #MHM Performance Mode
 	}
 	option = {
 		name = "I don't believe in climate change (disable climate change events and decisions)"
-		set_global_flag = climate_change_toggled
 		set_global_flag = climate_change_disabled
-		country_event = 669966 #MHM Performance Mode
 	}
 }
 

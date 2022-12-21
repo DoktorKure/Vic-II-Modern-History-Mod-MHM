@@ -25,7 +25,7 @@ country_event = {
 		name = "A glorious day for $COUNTRY_ADJ$ Science!"
 		set_global_flag = RUS_satellite_first
 		
-		years_of_research = 1
+		research_points = 5000
 		
 		prestige = 250
 		any_pop = { militancy = -2 consciousness = -5 }
@@ -66,7 +66,7 @@ country_event = {
 		name = "A glorious day for $COUNTRY_ADJ$ Science!"
 		set_global_flag = USA_satellite_first
 		
-		years_of_research = 1
+		research_points = 5000
 		
 		prestige = 250
 		any_pop = { militancy = -2 consciousness = -5 }
@@ -107,7 +107,7 @@ country_event = {
 		name = "Another glorious day for $COUNTRY_ADJ$ Science!"
 		set_global_flag = RUS_space_man_first
 		
-		years_of_research = 1
+		research_points = 7500
 		
 		prestige = 250
 		any_pop = { militancy = -2 consciousness = -5 }
@@ -148,7 +148,7 @@ country_event = {
 		name = "Another glorious day for $COUNTRY_ADJ$ Science!"
 		set_global_flag = USA_space_man_first
 		
-		years_of_research = 1
+		research_points = 7500
 		
 		prestige = 250
 		any_pop = { militancy = -2 consciousness = -5 }
@@ -242,65 +242,4 @@ country_event = {
 		
 	}
 	
-}
-
-#Mikhail Tikhonravov invents multi-stage rockets
-country_event = {
-	id = 8211025
-	title = "A Multi-Stage Rocket"
-	desc = EVTDESC8211025
-	picture = "sov_rocket_man"
-  
-	fire_only_once = yes
-
-	trigger = {
-		tag = RUS
-		year = 1956
-		NOT = { year = 1990 }
-		
-		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
-		
-		has_country_modifier = space_agency
-	}
-
-	mean_time_to_happen = { months = 6 }
-
-	option = {
-		name = "An accomplishment of Soviet science!"
-		prestige = 20
-		research_points = 250
-	}
-
-}
-
-#Kupriyanovich invents one of the first mobile phones
-country_event = {
-	id = 8211026
-	title = "Leonid Kupriyanovich"
-	desc = EVTDESC8211026
-	picture = "sov_kupriyanovich"
-  
-	fire_only_once = yes
-
-	trigger = {
-		tag = RUS
-		year = 1961
-		NOT = { year = 1990 }
-		
-		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
-		
-		NOT = { has_country_flag = kupriyanovich }
-		
-		semiconductor = 1
-	}
-
-	mean_time_to_happen = { months = 6 }
-
-	option = {
-		name = "An accomplishment of Soviet science!"
-		set_country_flag = kupriyanovich
-		prestige = 50
-		research_points = 500
-	}
-
 }

@@ -1,3 +1,83 @@
+#Independence of Syria
+country_event = {
+	id = 1400027
+	title = "Independence of the Syrian Republic"
+	desc = EVTDESC1400027
+	picture = "syrindy"
+	fire_only_once = yes
+	
+	trigger = {
+		tag = FRA
+		year = 1946
+		FRA = { is_our_vassal = SYR }
+		SYR = { NOT = { has_country_flag = syrindy } }
+		NOT = { year = 1949 }
+		NOT = { has_global_flag = syr_no_split }
+	}
+	
+	mean_time_to_happen = { months = 4 }
+	
+	option = {
+		name = "Evacuate the French troops in Syria"
+		prestige = 10
+		set_global_flag = syr_no_split
+
+		release_vassal = SYR
+
+		SYR = { 
+			prestige = 10
+			government = democracy
+			religion = secularism
+			tech_school = army_tech_school
+					
+			add_country_modifier = {
+				name = post_colonial_chaos
+				duration = 1480
+			}
+		}
+		consciousness = 2
+		ai_chance = { 
+			factor = 0.8
+		}
+	}
+	option = {
+		name = "Unite Lebanon with Syria as we leave"
+		badboy = 2.5
+
+		release_vassal = SYR
+		
+		SYR = { 
+			prestige = 25
+			government = democracy
+			religion = secularism
+			tech_school = army_tech_school
+					
+			add_country_modifier = {
+				name = post_colonial_chaos
+				duration = 1480
+			}
+		}
+		LEB = { all_core = { add_core = SYR } country_event = 99978 }
+		ai_chance = { factor = 0.2 }
+	}
+	option = {
+		name = "Continue the occupation of Syria"
+		prestige = -80
+		badboy = 5
+		SYR = {
+			set_country_flag = syrindy  
+			militancy = 8
+			add_country_modifier = { 
+				name = revolution_chaos 
+				duration = 3650
+			} 
+		}
+
+		consciousness = -2
+		ai_chance = { factor = 0 }
+	}
+}
+
 country_event = {
 	id = 99977
 	title = EVT_99977_NAME
@@ -27,7 +107,7 @@ country_event = {
 
   	option = {
     	name = EVT_99978_A
-		ai_chance = { factor = 0.18 }
+		ai_chance = { factor = 0.2 }
 		SYR = { 
 			inherit = THIS
 			add_accepted_culture = lebanese
@@ -35,7 +115,7 @@ country_event = {
   	}
  	option = {
     	name = EVT_99978_B
-		ai_chance = { factor = 0.82 }
+		ai_chance = { factor = 0.8 }
 		badboy = 1
 		prestige = 4
 		any_pop = {

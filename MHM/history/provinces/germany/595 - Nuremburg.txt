@@ -1,6 +1,7 @@
 owner = OG4
 controller = OG4
 add_core = GER
+add_core = FRG
 add_core = SGF
 add_core = BAV
 trade_goods = grain
@@ -15,8 +16,8 @@ state_building = {
 }
 
 1950.1.1 = {
-owner = GER
-controller = GER
+owner = FRG
+controller = FRG
 }
 
 1992.1.1 = {

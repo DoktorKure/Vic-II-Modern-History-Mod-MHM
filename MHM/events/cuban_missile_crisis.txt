@@ -44,8 +44,7 @@ country_event = {
 		}
 		
 		#Berlin is divided
-		GER = { government = democracy is_vassal = no owns = 549 }
-		DDR = { vassal_of = RUS owns = 551 }
+		DDR = { vassal_of = RUS owns = 551 NOT = { owns = 549 } }
 		
 		#Khruschev and Kennedy
 		has_country_flag = nikita_khrushchev
@@ -467,13 +466,10 @@ country_event = {
 		
 		prestige_factor = -0.1
 		
-		clr_global_flag = divided_berlin 
 		clr_global_flag = missiles_in_cuba 
 		
 		#Germany transfers West Berlin to East Germany
-		GER = { country_event = 8500216 }
-		
-		relation = { who = GER value = -100 }
+		random_country = { limit = { owns = 549 } country_event = 8500216 relation = { who = THIS value = -100 } }
 		
 		ai_chance = { factor = 0.7 }
 	}
@@ -676,7 +672,8 @@ country_event = {
 		prestige = -50
 		
 		#Germany transfers West Berlin to East Germany
-		GER = { 549 = { secede_province = DDR } }
+		clr_global_flag = divided_berlin 
+		549 = { secede_province = DDR }
 		
 		ai_chance = { factor = 0.9 }
 	}
@@ -684,12 +681,14 @@ country_event = {
 	option = {
 		name = "We will not comply!"
 
-		#Start a war against the USSR
-		war = {
-			target = RUS
-			attacker_goal = { casus_belli = install_democracy }
-			defender_goal = { casus_belli = install_communist_gov_cb }
-			call_ally = yes
+		#USSR moves to unite Germany under one banner
+		RUS = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = assisted_unification }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
 		}
 		
 		ai_chance = { factor = 0.1 }

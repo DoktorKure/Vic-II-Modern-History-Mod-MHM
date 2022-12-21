@@ -1313,7 +1313,8 @@ country_event = { # The Fate of the COMECON
 		random_country = { limit = { tag = USA government = democracy is_greater_power = yes } relation = { who = THIS value = -125 } }
 		random_country = { limit = { tag = FRA government = democracy is_greater_power = yes } relation = { who = THIS value = -100 } }
 		random_country = { limit = { tag = ENG government = hms_government is_greater_power = yes } relation = { who = THIS value = -100 } }
-		random_country = { limit = { tag = GER government = democracy is_vassal = no } relation = { who = THIS value = -100 } }
+		random_country = { limit = { tag = GER exists = yes government = democracy is_vassal = no } relation = { who = THIS value = -100 } }
+		random_country = { limit = { tag = FRG exists = yes government = democracy is_vassal = no } relation = { who = THIS value = -100 } }
 		
 		set_country_flag = new_economic_management_done
 		clr_country_flag = new_economic_management

@@ -17,14 +17,17 @@ country_event = {
 		has_country_flag = nikita_khrushchev
 		
 		is_our_vassal = DDR
-		GER = { is_vassal = no }
+		OR = {
+			GER = { exists = yes is_vassal = no }
+			FRG = { exists = yes is_vassal = no }
+		}
 		
 		#Cold War
 		has_global_flag = blocsenabled
 		
 		#Divided Berlin
 		DDR = { owns = 551 }
-		GER = { owns = 549 }
+		OR = { GER = { owns = 549 } FRG = { owns = 549 } }
 	}
 
 	mean_time_to_happen = { months = 6 }
@@ -74,7 +77,7 @@ country_event = {
 		relation = { who = RUS value = 50 }
 		
 		#German choice to hand over Berlin
-		GER = { country_event = 8500702 }
+		random_country = { limit = { owns = 549 } country_event = 8500702 }
 		
 		ai_chance = { factor = 0.1 }
 	}
@@ -104,7 +107,7 @@ country_event = {
 		549 = { secede_province = DDR }
 		war = { 
 			target = DDR 
-			defender_goal = { casus_belli = install_communist_gov_cb }
+			defender_goal = { casus_belli = assisted_unification }
 			attacker_goal = { casus_belli = acquire_any_state state_province_id = 549 }
 			call_ally = yes 
 		}
@@ -115,10 +118,10 @@ country_event = {
 
 #Berlin Wall - RUS
 country_event = {
-  id = 8500703
-  title = "The Berlin Wall"
-  desc = EVTDESC8204301
-  picture = "nwo2_berlin_wall"
+	id = 8500703
+	title = "The Berlin Wall"
+	desc = EVTDESC8204301
+	picture = "nwo2_berlin_wall"
   
 	is_triggered_only = yes
 
@@ -133,15 +136,43 @@ country_event = {
 	}
 	
 	option = {
-		name = "We will take Berlin by force!"
+		name = "We will take Berlin by force! (95% chance of war)"
 		
-		war = { 
-			target = GER
-			attacker_goal = { casus_belli = install_communist_gov_cb }
-			defender_goal = { casus_belli = status_quo }
-			call_ally = yes 
-		}
+		#German response to Soviet use of force
+		random_country = { limit = { owns = 549 } country_event = 8500704 }
 		
 		ai_chance = { factor = 0.1 }
+	}
+}
+
+#German response to Soviet use of force
+country_event = {
+	id = 8500704
+	title = "The Soviet Union crosses into West Berlin!"
+	desc = "Dissatisfied with negotiations, the Soviets have crossed into Berlin with their military! We can respond in kind and start WWIII or we can back down and spare ourselves a major war."
+	picture = "nwo2_berlin_wall"
+  
+	is_triggered_only = yes
+	
+	option = {
+		name = "War! Retaliate with everything we've got!"
+		RUS = {
+			war = { 
+				target = THIS
+				attacker_goal = { casus_belli = assisted_unification }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes 
+			}
+		}
+		
+		ai_chance = { factor = 0.95 }
+	}
+
+	option = {
+		name = "Let the Soviets have West Berlin"
+		prestige_factor = -0.25
+		549 = { secede_province = DDR }
+		
+		ai_chance = { factor = 0.05 }
 	}
 }

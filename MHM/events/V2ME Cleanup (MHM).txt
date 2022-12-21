@@ -60,6 +60,230 @@ country_event = {
 			inherit = UNO
 		}
 		
+		########################
+		###					 ###
+		### Seasonal Effects ###
+		###					 ###
+		########################
+		
+		# December - February
+		north_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					OR = {
+						month = 11
+						AND = {
+							month = 0
+							NOT = { month = 2 }
+						}
+					}
+				}
+				AND = {
+					OR = {
+						trade_goods = fruit
+						trade_goods = grain
+						trade_goods = oil_seeds
+						trade_goods = sugar
+						trade_goods = tea
+						trade_goods = tobacco
+						trade_goods = coffee
+						trade_goods = cotton
+					}
+				}
+				NOT = { has_province_modifier = winter_province_modifier }
+			}
+			remove_province_modifier = spring_province_modifier
+			remove_province_modifier = summer_province_modifier
+			remove_province_modifier = autumn_province_modifier
+			add_province_modifier = { name = winter_province_modifier duration = -1 }
+		}
+		south_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					OR = {
+						month = 11
+						AND = {
+							month = 0
+							NOT = { month = 2 }
+						}
+					}
+				}
+				AND = {
+					OR = {
+						trade_goods = fruit
+						trade_goods = grain
+						trade_goods = oil_seeds
+						trade_goods = sugar
+						trade_goods = tea
+						trade_goods = tobacco
+						trade_goods = coffee
+						trade_goods = cotton
+					}
+				}
+				NOT = { has_province_modifier = summer_province_modifier }
+			}
+			remove_province_modifier = spring_province_modifier
+			add_province_modifier = { name = summer_province_modifier duration = -1 }
+			remove_province_modifier = autumn_province_modifier
+			remove_province_modifier = winter_province_modifier
+		}
+		
+		# March - May
+		north_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					month = 2
+					NOT = { month = 5 }
+				}
+				AND = {
+					OR = {
+						trade_goods = fruit
+						trade_goods = grain
+						trade_goods = oil_seeds
+						trade_goods = sugar
+						trade_goods = tea
+						trade_goods = tobacco
+						trade_goods = coffee
+						trade_goods = cotton
+					}
+				}
+				NOT = { has_province_modifier = spring_province_modifier }
+			}
+			add_province_modifier = { name = spring_province_modifier duration = -1 }
+			remove_province_modifier = summer_province_modifier
+			remove_province_modifier = autumn_province_modifier
+			remove_province_modifier = winter_province_modifier
+		}
+		south_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					month = 2
+					NOT = { month = 5 }
+				}
+				AND = {
+					OR = {
+						trade_goods = fruit
+						trade_goods = grain
+						trade_goods = oil_seeds
+						trade_goods = sugar
+						trade_goods = tea
+						trade_goods = tobacco
+						trade_goods = coffee
+						trade_goods = cotton
+					}
+				}
+				NOT = { has_province_modifier = autumn_province_modifier }
+			}
+			remove_province_modifier = spring_province_modifier
+			remove_province_modifier = summer_province_modifier
+			add_province_modifier = { name = autumn_province_modifier duration = -1 }
+			remove_province_modifier = winter_province_modifier
+		}
+		
+		# June - August
+		north_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					month = 5
+					NOT = { month = 8 }
+				}
+				AND = {
+					OR = {
+						trade_goods = fruit
+						trade_goods = grain
+						trade_goods = oil_seeds
+						trade_goods = sugar
+						trade_goods = tea
+						trade_goods = tobacco
+						trade_goods = coffee
+						trade_goods = cotton
+					}
+				}
+				NOT = { has_province_modifier = summer_province_modifier }
+			}
+			remove_province_modifier = spring_province_modifier
+			add_province_modifier = { name = summer_province_modifier duration = -1 }
+			remove_province_modifier = autumn_province_modifier
+			remove_province_modifier = winter_province_modifier
+		}
+		south_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					month = 5
+					NOT = { month = 8 }
+				}
+				AND = {
+					OR = {
+						trade_goods = fruit
+						trade_goods = grain
+						trade_goods = oil_seeds
+						trade_goods = sugar
+						trade_goods = tea
+						trade_goods = tobacco
+						trade_goods = coffee
+						trade_goods = cotton
+					}
+				}
+				NOT = { has_province_modifier = winter_province_modifier }
+			}
+			remove_province_modifier = spring_province_modifier
+			remove_province_modifier = summer_province_modifier
+			remove_province_modifier = autumn_province_modifier
+			add_province_modifier = { name = winter_province_modifier duration = -1 }
+		}
+		
+		# September - November
+		north_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					month = 8
+					NOT = { month = 11 }
+				}
+				AND = {
+					OR = {
+						trade_goods = fruit
+						trade_goods = grain
+						trade_goods = oil_seeds
+						trade_goods = sugar
+						trade_goods = tea
+						trade_goods = tobacco
+						trade_goods = coffee
+						trade_goods = cotton
+					}
+				}
+				NOT = { has_province_modifier = autumn_province_modifier }
+			}
+			remove_province_modifier = spring_province_modifier
+			remove_province_modifier = summer_province_modifier
+			add_province_modifier = { name = autumn_province_modifier duration = -1 }
+			remove_province_modifier = winter_province_modifier
+		}
+		south_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					month = 8
+					NOT = { month = 11 }
+				}
+				AND = {
+					OR = {
+						trade_goods = fruit
+						trade_goods = grain
+						trade_goods = oil_seeds
+						trade_goods = sugar
+						trade_goods = tea
+						trade_goods = tobacco
+						trade_goods = coffee
+						trade_goods = cotton
+					}
+				}
+				NOT = { has_province_modifier = spring_province_modifier }
+			}
+			add_province_modifier = { name = spring_province_modifier duration = -1 }
+			remove_province_modifier = summer_province_modifier
+			remove_province_modifier = autumn_province_modifier
+			remove_province_modifier = winter_province_modifier
+		}
+		
 		#########################################################
 		#														#
 		#				DEVELOPMENT LEVELS						#
@@ -371,6 +595,32 @@ country_event = {
             }
             any_state  = { flashpoint_tension = -100 }
         }
+		
+		#Clean up SARs without overlords unless UN tag
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = sar_government
+					is_vassal = no
+					NOT = { tag = UNT }
+					NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } }
+				}
+			}
+			government = republic
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = sar_government
+					is_vassal = no
+					NOT = { tag = UNT }
+					OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+				}
+			}
+			government = proletarian_dictatorship
+		}
 		
 		CLN = { country_event = { id = 47777787 days = 1 } }
 	}

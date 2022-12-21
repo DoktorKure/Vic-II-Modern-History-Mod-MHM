@@ -1,0 +1,1363 @@
+political_decisions = {
+#Generic space attempt chances for nations that aren't the US or USSR
+
+# Space Rocket attempt
+	space_rocket_attempt_public = {
+		picture = "space_rocket_attempt"
+		potential = {
+			NOT = {
+				OR = { tag = USA tag = RUS }
+			}
+			NOT = { has_country_flag = space_rocket }
+			has_country_modifier = space_agency
+			
+			OR = { has_country_modifier = space_public has_country_modifier = space_private }
+			
+			has_country_modifier = develop_space_rocket
+			
+			NOT = { has_country_modifier = space_project_attempted }
+			NOT = { has_country_flag = space_attempt_fired }
+		}
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = space_attempt_fired
+			
+			#Gov-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400055 } #Rocket Successful
+						65 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						45 = { country_event = 1400055 } #Rocket Successful
+						55 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400055 } #Rocket Successful
+						45 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						65 = { country_event = 1400055 } #Rocket Successful
+						35 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						75 = { country_event = 1400055 } #Rocket Successful
+						25 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						85 = { country_event = 1400055 } #Rocket Successful
+						15 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
+				owner = {
+					random_list = {
+						95 = { country_event = 1400055 } #Rocket Successful
+						5 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public cloud_computing = 1 } } #2020s tech
+				owner = { 
+					country_event = 1400055 #Rocket Successful
+				}
+			}
+			
+			#Privately-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						15 = { country_event = 1400055 } #Rocket Successful
+						85 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						20 = { country_event = 1400055 } #Rocket Successful
+						80 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						25 = { country_event = 1400055 } #Rocket Successful
+						75 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						30 = { country_event = 1400055 } #Rocket Successful
+						70 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400055 } #Rocket Successful
+						65 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						40 = { country_event = 1400055 } #Rocket Successful
+						60 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
+				owner = {
+					random_list = {
+						45 = { country_event = 1400055 } #Rocket Successful
+						55 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private cloud_computing = 1 NOT = { cloud_computing = 1 } } } #2020s tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400055 } #Rocket Successful
+						45 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private cloud_computing = 1 NOT = { artificial_intelligence = 1 } } } #2020s tech
+				owner = {
+					random_list = {
+						75 = { country_event = 1400055 } #Rocket Successful
+						25 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private artificial_intelligence = 1 NOT = { quantum_computer = 1 } } } #2040s tech
+				owner = {
+					random_list = {
+						95 = { country_event = 1400055 } #Rocket Successful
+						5 = { country_event = 1400054 } #Rocket Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private quantum_computer = 1 } } #2060s+ tech
+				owner = {
+					country_event = 1400055 #Rocket Successful
+				}
+			}
+			
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# Space Satellite attempt 
+	space_satellite_attempt_public = {
+		picture = "space_satellite_attempt"
+		potential = {
+			NOT = {
+				OR = { tag = USA tag = RUS }
+			}
+			NOT = { has_country_flag = space_satellite }
+			has_country_modifier = space_agency
+			
+			OR = { has_country_modifier = space_public has_country_modifier = space_private }
+			
+			has_country_modifier = develop_space_satellite
+			
+			NOT = { has_country_modifier = space_project_attempted }
+			NOT = { has_country_flag = space_attempt_fired }
+		}
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = space_attempt_fired
+			
+			#Gov-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400056 } #Satellite Successful
+						65 = { country_event = 1400057 } #Satellite Failure
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_public television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400056 } #Satellite Successful
+						45 = { country_event = 1400057 } #Satellite Failure
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_public semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						65 = { country_event = 1400056 } #Satellite Successful
+						35 = { country_event = 1400057 } #Satellite Failure
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_public microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						75 = { country_event = 1400056 } #Satellite Successful
+						25 = { country_event = 1400057 } #Satellite Failure
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_public microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						85 = { country_event = 1400056 } #Satellite Successful
+						15 = { country_event = 1400057 } #Satellite Failure
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_public personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						95 = { country_event = 1400056 } #Satellite Successful
+						5 = { country_event = 1400057 } #Satellite Failure
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_public handheld_devices = 1 } } #2000s tech
+				owner = {
+					country_event = 1400056 #Satellite Successful
+				}
+			}
+			
+			#Privately-funded space agency
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_private NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						25 = { country_event = 1400056 } #Satellite Successful
+						75 = { country_event = 1400057 } #Satellite Failure
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_private television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400056 } #Satellite Successful
+						65 = { country_event = 1400057 } #Satellite Failure
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_private semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						45 = { country_event = 1400056 } #Satellite Successful
+						55 = { country_event = 1400057 } #Satellite Failure
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_private microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400056 } #Satellite Successful
+						45 = { country_event = 1400057 } #Satellite Failure
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_private microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						75 = { country_event = 1400056 } #Satellite Successful
+						25 = { country_event = 1400057 } #Satellite Failure
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_private personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						90 = { country_event = 1400056 } #Satellite Successful
+						10 = { country_event = 1400057 } #Satellite Failure
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { has_country_modifier = space_private handheld_devices = 1 } } #2000s tech
+				owner = {
+					country_event = 1400056 #Satellite Successful
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# Space man attempt
+	space_man_attempt_public = {
+		picture = "space_man_attempt"
+		potential = {
+			NOT = {
+				OR = { tag = USA tag = RUS }
+			}
+			NOT = { has_country_flag = space_man }
+			has_country_modifier = space_agency
+			
+			OR = { has_country_modifier = space_public has_country_modifier = space_private }
+			
+			has_country_modifier = develop_space_man
+			
+			NOT = { has_country_modifier = space_project_attempted }
+			NOT = { has_country_flag = space_attempt_fired }
+		}
+		allow = {
+			war = no
+		}
+
+		effect = {
+			set_country_flag = space_attempt_fired
+			
+			#Gov-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						15 = { country_event = 1400058 } #Space man Successful
+						85 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						25 = { country_event = 1400058 } #Space man Successful
+						75 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400058 } #Space man Successful
+						65 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						45 = { country_event = 1400058 } #Space man Successful
+						55 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400058 } #Space man Successful
+						45 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						65 = { country_event = 1400058 } #Space man Successful
+						35 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
+				owner = {
+					random_list = {
+						75 = { country_event = 1400058 } #Space man Successful
+						25 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public cloud_computing = 1 NOT = { artificial_intelligence = 1 } } } #2020s tech
+				owner = {
+					random_list = {
+						85 = { country_event = 1400058 } #Space man Successful
+						15 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public artificial_intelligence = 1 NOT = { quantum_computer = 1 } } } #2040s tech
+				owner = {
+					random_list = {
+						95 = { country_event = 1400058 } #Space man Successful
+						5 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public quantum_computer = 1 } } #2040s tech
+				owner = {
+					country_event = 1400058 #Space man Successful
+				}
+			}
+			
+			#Privately-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						15 = { country_event = 1400058 } #Space man Successful
+						85 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						20 = { country_event = 1400058 } #Space man Successful
+						80 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						25 = { country_event = 1400058 } #Space man Successful
+						75 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						30 = { country_event = 1400058 } #Space man Successful
+						70 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400058 } #Space man Successful
+						65 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						40 = { country_event = 1400058 } #Space man Successful
+						60 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
+				owner = {
+					random_list = {
+						45 = { country_event = 1400058 } #Space man Successful
+						55 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private cloud_computing = 1 NOT = { artificial_intelligence = 1 } } } #2020s tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400058 } #Space man Successful
+						45 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private artificial_intelligence = 1 NOT = { quantum_computer = 1 } } } #2040s tech
+				owner = {
+					random_list = {
+						75 = { country_event = 1400058 } #Space man Successful
+						25 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private quantum_computer = 1 } } #2060s+ tech
+				owner = {
+					random_list = {
+						95 = { country_event = 1400058 } #Space man Successful
+						5 = { country_event = 1400059 } #Space man Failure
+					}
+				}
+			}
+
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# Space station attempt
+	space_station_attempt_public = {
+		picture = "space_station_attempt"
+		potential = {
+			NOT = {
+				OR = { tag = USA tag = RUS }
+			}
+			NOT = { has_country_flag = space_station }
+			has_country_modifier = space_agency
+			
+			OR = { has_country_modifier = space_public has_country_modifier = space_private }
+			
+			has_country_modifier = develop_space_station
+			
+			NOT = { has_country_modifier = space_project_attempted }
+			NOT = { has_country_flag = space_attempt_fired }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = space_attempt_fired
+			
+			#Gov-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						5 = { country_event = 1400062 } #Station Successful
+						95 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						15 = { country_event = 1400062 } #Station Successful
+						85 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						25 = { country_event = 1400062 } #Station Successful
+						75 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400062 } #Station Successful
+						65 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						45 = { country_event = 1400062 } #Station Successful
+						55 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400062 } #Station Successful
+						45 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
+				owner = {
+					random_list = {
+						65 = { country_event = 1400062 } #Station Successful
+						35 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public cloud_computing = 1 NOT = { artificial_intelligence = 1 } } } #2020s tech
+				owner = {
+					random_list = {
+						85 = { country_event = 1400062 } #Station Successful
+						15 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public artificial_intelligence = 1 } } #2040s+ tech
+				owner = {
+					country_event = 1400062 #Station Successful 
+				}
+			}
+			
+			#Privately-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						15 = { country_event = 1400062 } #Station Successful
+						85 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						20 = { country_event = 1400062 } #Station Successful
+						80 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						25 = { country_event = 1400062 } #Station Successful
+						75 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						30 = { country_event = 1400062 } #Station Successful
+						70 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400062 } #Station Successful
+						65 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						40 = { country_event = 1400062 } #Station Successful
+						60 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
+				owner = {
+					random_list = {
+						45 = { country_event = 1400062 } #Station Successful
+						55 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private cloud_computing = 1 NOT = { artificial_intelligence = 1 } } } #2020s tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400062 } #Station Successful
+						45 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private artificial_intelligence = 1 NOT = { quantum_computer = 1 } } } #2040s tech
+				owner = {
+					random_list = {
+						75 = { country_event = 1400062 } #Station Successful
+						25 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private quantum_computer = 1 } } #2060s+ tech
+				owner = {
+					random_list = {
+						95 = { country_event = 1400062 } #Station Successful
+						5 = { country_event = 1400063 } #Station Failure
+					}
+				}
+			}
+
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# Space probe attempt
+	space_probe_attempt_public = {
+		picture = "space_probe_attempt"
+		potential = {
+			NOT = {
+				OR = { tag = USA tag = RUS }
+			}
+			NOT = { has_country_flag = space_probe }
+			has_country_modifier = space_agency
+			
+			OR = { has_country_modifier = space_public has_country_modifier = space_private }
+			
+			has_country_modifier = develop_space_probe
+			
+			NOT = { has_country_modifier = space_project_attempted }
+			NOT = { has_country_flag = space_attempt_fired }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = space_attempt_fired
+			
+			#Gov-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						5 = { country_event = 1400060 } #Space probe Successful
+						95 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						10 = { country_event = 1400060 } #Space probe Successful
+						90 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						15 = { country_event = 1400060 } #Space probe Successful
+						85 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						25 = { country_event = 1400060 } #Space probe Successful
+						75 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400060 } #Space probe Successful
+						65 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400060 } #Space probe Successful
+						45 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
+				owner = {
+					random_list = {
+						65 = { country_event = 1400060 } #Space probe Successful
+						35 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public cloud_computing = 1 NOT = { artificial_intelligence = 1 } } } #2020s tech
+				owner = {
+					random_list = {
+						85 = { country_event = 1400060 } #Space probe Successful
+						15 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public artificial_intelligence = 1 } } #2040s+ tech
+				owner = {
+					country_event = 1400060 #Space probe Successful 
+				}
+			}
+			
+			#Privately-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						5 = { country_event = 1400060 } #Space probe Successful
+						95 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						10 = { country_event = 1400060 } #Space probe Successful
+						90 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						15 = { country_event = 1400060 } #Space probe Successful
+						85 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						20 = { country_event = 1400060 } #Space probe Successful
+						80 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						25 = { country_event = 1400060 } #Space probe Successful
+						75 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400060 } #Space probe Successful
+						65 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
+				owner = {
+					random_list = {
+						45 = { country_event = 1400060 } #Space probe Successful
+						55 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private cloud_computing = 1 NOT = { artificial_intelligence = 1 } } } #2020s tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400060 } #Space probe Successful
+						45 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private artificial_intelligence = 1 NOT = { quantum_computer = 1 } } } #2040s tech
+				owner = {
+					random_list = {
+						75 = { country_event = 1400060 } #Space probe Successful
+						25 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private quantum_computer = 1 } } #2060s+ tech
+				owner = {
+					random_list = {
+						95 = { country_event = 1400060 } #Space probe Successful
+						5 = { country_event = 1400061 } #Space probe Failure
+					}
+				}
+			}
+
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# Moon Mission attempt Public Funding
+	moon_mission_attempt_public = {
+		picture = "moon_mission_attempt"
+		potential = {
+			NOT = {
+				OR = { tag = USA tag = RUS }
+			}
+			NOT = { has_country_flag = space_moon }
+			has_country_modifier = space_agency
+			
+			OR = { has_country_modifier = space_public has_country_modifier = space_private }
+			
+			has_country_modifier = develop_moon_mission
+			
+			NOT = { has_country_modifier = space_project_attempted }
+			NOT = { has_country_flag = space_attempt_fired }
+		}
+		allow = {
+			war = no
+			year = 1962
+		}
+		effect = {
+			set_country_flag = space_attempt_fired
+			
+			#Gov-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						5 = { country_event = 1400064 } #Moon Mission Successful
+						95 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						15 = { country_event = 1400064 } #Moon Mission Successful
+						85 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						25 = { country_event = 1400064 } #Moon Mission Successful
+						75 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400064 } #Moon Mission Successful
+						65 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						45 = { country_event = 1400064 } #Moon Mission Successful
+						55 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400064 } #Moon Mission Successful
+						45 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
+				owner = {
+					random_list = {
+						65 = { country_event = 1400064 } #Moon Mission Successful
+						35 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public cloud_computing = 1 NOT = { artificial_intelligence = 1 } } } #2020s tech
+				owner = {
+					random_list = {
+						85 = { country_event = 1400064 } #Moon Mission Successful
+						15 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public artificial_intelligence = 1 } } #2040s+ tech
+				owner = {
+					country_event = 1400064 #Moon Mission Successful 
+				}
+			}
+			
+			#Privately-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						5 = { country_event = 1400064 } #Moon Mission Successful
+						95 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						10 = { country_event = 1400064 } #Moon Mission Successful
+						90 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						15 = { country_event = 1400064 } #Moon Mission Successful
+						85 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						20 = { country_event = 1400064 } #Moon Mission Successful
+						80 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						25 = { country_event = 1400064 } #Moon Mission Successful
+						75 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						30 = { country_event = 1400064 } #Moon Mission Successful
+						70 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400064 } #Moon Mission Successful
+						65 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private cloud_computing = 1 NOT = { artificial_intelligence = 1 } } } #2020s tech
+				owner = {
+					random_list = {
+						40 = { country_event = 1400064 } #Moon Mission Successful
+						60 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private artificial_intelligence = 1 NOT = { quantum_computer = 1 } } } #2040s tech
+				owner = {
+					random_list = {
+						60 = { country_event = 1400064 } #Moon Mission Successful
+						40 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private quantum_computer = 1 } } #2060s+ tech
+				owner = {
+					random_list = {
+						80 = { country_event = 1400064 } #Moon Mission Successful
+						20 = { country_event = 1400065 } #Moon Mission Failure
+					}
+				}
+			}
+
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+	# Mars Mission attempt
+	mars_mission_attempt_public = {
+		picture = "mars_mission_attempt"
+		potential = {
+			NOT = {
+				OR = { tag = USA tag = RUS }
+			}
+			NOT = { has_country_flag = space_mars }
+			has_country_modifier = space_agency
+			
+			OR = { has_country_modifier = space_public has_country_modifier = space_private }
+			
+			has_country_modifier = develop_mars_mission
+			
+			NOT = { has_country_modifier = space_project_attempted }
+			NOT = { has_country_flag = space_attempt_fired }
+		}
+		allow = {
+			war = no
+		}
+		effect = {
+			set_country_flag = space_attempt_fired
+			
+			#Gov-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					random_list = {
+						5 = { country_event = 1400066 } #Mars Mission Successful
+						95 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					random_list = {
+						10 = { country_event = 1400066 } #Mars Mission Successful
+						90 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						15 = { country_event = 1400066 } #Mars Mission Successful
+						85 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						20 = { country_event = 1400066 } #Mars Mission Successful
+						80 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						25 = { country_event = 1400066 } #Mars Mission Successful
+						75 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						30 = { country_event = 1400066 } #Mars Mission Successful
+						70 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400066 } #Mars Mission Successful
+						65 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public cloud_computing = 1 NOT = { artificial_intelligence = 1 } } } #2020s tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400066 } #Mars Mission Successful
+						45 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public artificial_intelligence = 1 NOT = { quantum_computer = 1 } } } #2040s+ tech
+				owner = {
+					random_list = {
+						75 = { country_event = 1400066 } #Mars Mission Successful
+						25 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_public quantum_computer = 1 } } #2060s+ tech
+				owner = {
+					random_list = {
+						95 = { country_event = 1400066 } #Mars Mission Successful
+						5 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			
+			#Privately-funded space agency
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private NOT = { television = 1 } } } #pre-1950s tech
+				owner = {
+					country_event = 1400067 #Mars Mission Failure
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private television = 1 NOT = { semiconductor = 1 } } } #1950s tech
+				owner = {
+					country_event = 1400067 #Mars Mission Failure
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private semiconductor = 1 NOT = { microprocessor = 1 } } } #1960s tech
+				owner = {
+					random_list = {
+						5 = { country_event = 1400066 } #Mars Mission Successful
+						95 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private microprocessor = 1 NOT = { microcomputer = 1 } } } #1970s tech
+				owner = {
+					random_list = {
+						10 = { country_event = 1400066 } #Mars Mission Successful
+						90 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private microcomputer = 1 NOT = { personal_computer = 1 } } } #1980s tech
+				owner = {
+					random_list = {
+						15 = { country_event = 1400066 } #Mars Mission Successful
+						85 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private personal_computer = 1 NOT = { handheld_devices = 1 } } } #1990s tech
+				owner = {
+					random_list = {
+						20 = { country_event = 1400066 } #Mars Mission Successful
+						80 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private handheld_devices = 1 NOT = { cloud_computing = 1 } } } #2000s tech
+				owner = {
+					random_list = {
+						25 = { country_event = 1400066 } #Mars Mission Successful
+						75 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private cloud_computing = 1 NOT = { artificial_intelligence = 1 } } } #2020s tech
+				owner = {
+					random_list = {
+						35 = { country_event = 1400066 } #Mars Mission Successful
+						65 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private artificial_intelligence = 1 NOT = { quantum_computer = 1 } } } #2040s tech
+				owner = {
+					random_list = {
+						45 = { country_event = 1400066 } #Mars Mission Successful
+						55 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+			random_owned = { 
+				limit = { owner = { has_country_modifier = space_private quantum_computer = 1 } } #2060s+ tech
+				owner = {
+					random_list = {
+						55 = { country_event = 1400066 } #Mars Mission Successful
+						45 = { country_event = 1400067 } #Mars Mission Failure
+					}
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+
+}

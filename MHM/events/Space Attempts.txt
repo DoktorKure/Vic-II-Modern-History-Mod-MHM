@@ -45,7 +45,7 @@ country_event = {
 		set_country_flag = space_rocket
 		remove_country_modifier = develop_space_rocket
 		
-		years_of_research = 1
+		research_points = 5000
 	}
 	
 }
@@ -79,7 +79,7 @@ country_event = {
 		set_country_flag = space_satellite
 		remove_country_modifier = develop_space_satellite
 		
-		years_of_research = 1
+		research_points = 5000
 	}
 	
 }
@@ -131,7 +131,7 @@ country_event = {
 		set_country_flag = space_man
 		remove_country_modifier = develop_space_man
 		
-		years_of_research = 1
+		research_points = 7500
 	}
 	
 }
@@ -182,7 +182,7 @@ country_event = {
 		set_country_flag = space_probe
 		remove_country_modifier = develop_space_probe
 		
-		years_of_research = 1
+		research_points = 10000
 	}
 	
 }
@@ -234,7 +234,7 @@ country_event = {
 		set_country_flag = space_station
 		remove_country_modifier = develop_space_station
 		
-		years_of_research = 1
+		research_points = 10000
 	}
 	
 }
@@ -343,7 +343,7 @@ country_event = {
 		set_country_flag = space_mars
 		remove_country_modifier = develop_mars_mission
 		
-		years_of_research = 1
+		years_of_research = 2
 	}
 	
 }

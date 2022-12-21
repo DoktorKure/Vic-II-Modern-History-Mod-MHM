@@ -54,7 +54,6 @@ country_event = {
 			NOT = { minorities_reform = minorities_oppression }
 			NOT = { citizenship_policy = residency }
 		}
-		NOT = { religious_policy = moralism } # must be secular or they get reactionary regime instead
 	}
 	
 	mean_time_to_happen = { days = 1 }
@@ -115,6 +114,7 @@ country_event = {
 			NOT = { has_country_flag = pre_existing_monarchy }
 			OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative ruling_party_ideology = populist }
 			religious_policy = moralism
+			NOT = { AND = { minorities_reform = minorities_oppression citizenship_policy = residency } } # Not focused on promoting the primary culture
 		}
 	}
 	
@@ -380,7 +380,6 @@ country_event = {
 			minorities_reform = minorities_oppression
 			NOT = { citizenship_policy = full_citizenship }
 		}
-		NOT = { religious_policy = moralism } # must be secular or they get reactionary regime instead
 		civilized = yes
 	}
 	
@@ -550,25 +549,6 @@ country_event = {
 	option = {
 		name = "We welcome the winds of change"
 		government = socialist_democracy
-	}
-
-}
-
-#Clean up German flag because sectarian regime and democracy1 uses the same flag
-country_event = {
-	id = 60142
-	title = "Federal Republic of Germany"
-	desc = EVT_8204100_DESC
-	picture = "founding_treaty"
-	
-	trigger = {
-		tag = GER
-		government = democracy1
-	}
-	
-	option = {
-		name = "We welcome this new republic!"
-		government = democracy
 	}
 
 }

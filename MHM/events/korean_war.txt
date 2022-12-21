@@ -54,9 +54,7 @@ country_event = {
 			automobiles = 500
 			
 			#Bolster defences
-			any_owned = {
-				fort = 1
-			}
+			any_owned = { limit = { has_building = fort } fort = 1 }
 			
 		}
 

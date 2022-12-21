@@ -1,0 +1,217 @@
+political_decisions = {
+	#Toggle Setup
+	show_startup_decisions = {
+		picture = "starting_options"
+		alert = yes
+		potential = {
+			NOT = { has_country_flag = show_startup_decisions }
+			ai = no
+			OR = {
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { year = 1947 }
+				}
+				AND = {
+					has_global_flag = 1950_start_date_flag
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { year = 1951 }
+				}
+				AND = {
+					has_global_flag = 1992_start_date_flag
+					NOT = { year = 1993 }
+				}
+			}
+		}
+		
+		allow = { }
+		
+		effect = {
+			set_country_flag = show_startup_decisions
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+		
+	}
+	
+	hide_startup_decisions = {
+		picture = "starting_options"
+		alert = no
+		potential = {
+			ai = no
+			has_country_flag = show_startup_decisions
+			OR = {
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { year = 1947 }
+				}
+				AND = {
+					has_global_flag = 1950_start_date_flag
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { year = 1951 }
+				}
+				AND = {
+					has_global_flag = 1992_start_date_flag
+					NOT = { year = 1993 }
+				}
+			}
+		}
+		
+		allow = {
+		}
+		
+		effect = {
+			clr_country_flag = show_startup_decisions
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+	}
+	
+	toggle_ussr_railroading = {
+		picture = "glasnost_intention"
+		alert = no
+		potential = {
+			has_country_flag = show_startup_decisions
+			OR = {
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { year = 1947 }
+				}
+				AND = {
+					has_global_flag = 1950_start_date_flag
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { year = 1951 }
+				}
+			}
+			NOT = { tag = RUS }
+		}
+		
+		allow = { }
+		
+		effect = {
+			country_event = 669968
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+		
+	}
+	
+	toggle_superstates = {
+		picture = "hide_superstate"
+		potential = {
+			has_country_flag = show_startup_decisions
+			OR = {
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { year = 1947 }
+				}
+				AND = {
+					has_global_flag = 1950_start_date_flag
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { year = 1951 }
+				}
+				AND = {
+					has_global_flag = 1992_start_date_flag
+					NOT = { year = 1993 }
+				}
+			}
+		}
+		
+		alert = no
+		
+		allow = { }
+		
+		effect = {
+			country_event = 669967
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+		
+	}
+	
+	toggle_climate_change = {
+		picture = "paris_climate_deal"
+		potential = {
+			has_country_flag = show_startup_decisions
+			OR = {
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { year = 1947 }
+				}
+				AND = {
+					has_global_flag = 1950_start_date_flag
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { year = 1951 }
+				}
+				AND = {
+					has_global_flag = 1992_start_date_flag
+					NOT = { year = 1993 }
+				}
+			}
+		}
+		
+		alert = no
+		
+		allow = { }
+		
+		effect = {
+			country_event = 14111000
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+		
+	}
+	
+	toggle_performance = {
+		picture = "performance_mode"
+		potential = {
+			has_country_flag = show_startup_decisions
+			NOT = { has_global_flag = performance_mode_set }
+			OR = {
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { year = 1947 }
+				}
+				AND = {
+					has_global_flag = 1950_start_date_flag
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { year = 1951 }
+				}
+				AND = {
+					has_global_flag = 1992_start_date_flag
+					NOT = { year = 1993 }
+				}
+			}
+		}
+		
+		alert = no
+		
+		allow = { }
+		
+		effect = {
+			country_event = 669966
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+		
+	}
+	
+}

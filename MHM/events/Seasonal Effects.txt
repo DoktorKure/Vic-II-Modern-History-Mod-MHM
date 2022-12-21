@@ -1,0 +1,14 @@
+#Seasonal Effects in MHM
+country_event = {
+	id = 1266623
+	title = "Seasonal Effects in MHM"
+	desc = EVTDESC1266623
+	picture = "seasons"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Neat!"
+	}
+
+}

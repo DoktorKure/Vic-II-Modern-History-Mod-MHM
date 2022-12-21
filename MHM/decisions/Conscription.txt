@@ -15,8 +15,9 @@ political_decisions = {
 		}
 		effect = {
 			war_exhaustion = 5
-			any_pop = { limit = { type = soldiers } reduce_pop = 1.05 }
-			add_country_modifier = { name = emergency_draft_timer duration = 183 }
+			any_pop = { limit = { type = soldiers } reduce_pop = 1.25 }
+			any_pop = { limit = { type = farmers } reduce_pop = 0.95 }
+			add_country_modifier = { name = emergency_draft_timer duration = 1825 }
 		}
 		ai_will_do = { 
 			factor = 1 
