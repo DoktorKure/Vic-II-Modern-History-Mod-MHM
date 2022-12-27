@@ -1,5 +1,10 @@
 graphical_culture = EuropeanGC
 color = { 222 163 97 }
+colonial_government = { 43 175 43 }
+proletarian_dictatorship = { 178 66 67 }
+proletarian_dictatorship1 = { 178 66 67 }
+socialist_democracy = { 178 66 67 }
+
 party = {
 		name = "National Union"
 		citizenship_policy = limited_citizenship

@@ -664,3 +664,82 @@ country_event = {
 		ai_chance = { factor = 0.2 }
     }
 }
+
+#Formation of the Territory of Papua and New Guinea
+country_event = {
+	id = 1412106
+	title = "Establishment of Papua and New Guinea?"
+	desc = EVTDESC1412106
+	picture = "tppng_start"
+	fire_only_once = yes
+
+	trigger = {
+		tag = AST
+		year = 1963
+		war = no
+		OR = {
+			government = hms_government
+			government = hms_government1
+			government = democracy
+			government = democracy1
+		}
+		#Owns Papua New Guinea
+		OR = {
+			is_possible_vassal = PPN
+			is_our_vassal = PPN
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 24
+		modifier = {
+			factor = 0.5
+			year = 1964
+		}
+	}
+
+	option = {
+		name = "Form the state!"
+		prestige = 10
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = PPN }
+				}
+			}
+			owner = {
+				release_vassal = PPN
+			}
+		}
+		PPN = { government = mandate_government ruling_party_ideology = conservative }
+		sphere_owner = { diplomatic_influence = { who = PPN value = 200 } }
+		ai_chance = {
+			factor = 0.75
+			modifier = {
+				factor = 0
+				ruling_party_ideology = populist
+			}
+		}
+	}
+	option = {
+		name = "Refuse!"
+		prestige_factor = -0.1
+		badboy = 10
+		PPN = { all_core = { add_province_modifier = { name = nationalist_agitation duration = 1095 } } }
+		ai_chance = {
+			factor = 0.25
+			modifier = {
+				factor = 0
+				badboy = 0.6
+			}
+			modifier = {
+				factor = 0.5
+				OR = {
+					ruling_party_ideology = liberal
+					ruling_party_ideology = progressive
+					ruling_party_ideology = socialist
+				}
+			}
+		}
+	}
+}

@@ -24,20 +24,59 @@ country_event = {
 		prestige = 50
 		badboy = -2.5
 		
-		release = MLW
-		release = ZAM
-		
-		RHO = {
-			inherit = MLW
-			inherit = ZAM
-			change_tag = CAF
+		#New System
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ZAM
+					is_our_vassal = ZAM
+				}
+			}
+			owner = {
+				release_vassal = ZAM
+				RHO = { inherit = ZAM }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = MLW
+					is_our_vassal = MLW
+				}
+			}
+			owner = {
+				release_vassal = MLW
+				RHO = {	inherit = MLW }
+			}
 		}
 		
-		CAF = { 
-			country_event = 8012201 # Explain to the player what happened
+		#Old system
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = ZAM
+				}
+			}
+			owner = {
+				release = ZAM
+				RHO = { inherit = ZAM }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = MLW
+				}
+			}
+			owner = {
+				release = MLW
+				RHO = { inherit = MLW }
+			}
 		}
 		
-		diplomatic_influence = { who = CAF value = 200 }
+		RHO = { country_event = 8012201 } # Explain to the player what happened
+		
+		diplomatic_influence = { who = RHO value = 200 }
 		
 		ai_chance = { factor = 0.9 }
 	}
@@ -60,6 +99,7 @@ country_event = { # Federation of Rhodesia and Nyasaland
 
 	option = {
 		name = EVT_8012200_A
+		change_tag = CAF
 		prestige = 100
 		badboy = -2
 		capital = 2068 # Salisbury
@@ -83,11 +123,11 @@ country_event = {
 
 	trigger = {
 		capital_scope = { continent = europe } # ENG or FBU
-		owns = 2067 # Lilongwe
-		owns = 2012 # Lusaka
+		OR = { is_our_vassal = ZAM is_possible_vassal = ZAM }
+		OR = { is_our_vassal = ZIM is_possible_vassal = ZIM }
 		OR = {
-			exists = TAN
-			exists = XEF
+			TAN = { exists = yes is_vassal = no }
+			XEF = { exists = yes is_vassal = no }
 			year = 1963
 		}
 	}
@@ -107,13 +147,79 @@ country_event = {
 				}
 			}
 		}
+		modifier = {
+			factor = 0.1
+			OR = {
+				ZAM = {
+					exists = yes
+					any_owned_province = {
+						OR = {
+							has_province_modifier = nationalist_agitation
+							controlled_by_rebels = yes
+						}
+					}
+				}
+				MLW = {
+					exists = yes
+					any_owned_province = {
+						OR = {
+							has_province_modifier = nationalist_agitation
+							controlled_by_rebels = yes
+						}
+					}
+				}
+			}
+		}
 	}
 
 	option = {
 		name = EVT_8012210_A
 		prestige = 10
-		release = ZAM
-		release = MLW
+		#New System
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ZAM
+					is_our_vassal = ZAM
+				}
+			}
+			owner = {
+				release_vassal = ZAM
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = MLW
+					is_our_vassal = MLW
+				}
+			}
+			owner = {
+				release_vassal = MLW
+			}
+		}
+		
+		#Old system
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = ZAM
+				}
+			}
+			owner = {
+				release = ZAM
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = MLW
+				}
+			}
+			owner = {
+				release = MLW
+			}
+		}
 		diplomatic_influence = { who = ZAM value = 200 }
 		diplomatic_influence = { who = MLW value = 200 }
 		ai_chance = {
@@ -128,20 +234,84 @@ country_event = {
 	option = {
 		name = EVT_8012210_B
 		prestige = -10
-		any_owned = {
+		
+		#Malawi
+		random_owned = {
 			limit = {
-				OR = {
-					is_core = ZAM
-					is_core = MLW
+				owner = {
+					exists = MLW
+					MLW = { vassal_of = THIS }
 				}
 			}
-			add_province_modifier = { name = nationalist_agitation duration = 1095 }
-			any_pop = {
-				limit = {
-					NOT = { culture = british }
+			owner = {
+				MLW = {
+					any_pop = {
+						limit = { NOT = { culture = british } }
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.25 value = nationalist }
+					}
+					add_country_modifier = { name = revolution_chaos duration = 3650 } 
 				}
-				militancy = 8
-				consciousness = 5
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = MLW }
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { is_core = MLW } 
+					any_pop = {
+						limit = { NOT = { culture = british } }
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.15 value = nationalist }
+					} 
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
+		}
+		
+		#Zambia
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ZAM
+					ZAM = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				ZAM = {
+					any_pop = {
+						limit = { NOT = { culture = british } }
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.25 value = nationalist }
+					}
+					add_country_modifier = { name = revolution_chaos duration = 3650 } 
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ZAM }
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { is_core = ZAM } 
+					any_pop = {
+						limit = { NOT = { culture = british } }
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.15 value = nationalist }
+					} 
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
 			}
 		}
 		# TODO ZAM and MLW UDI
@@ -219,7 +389,12 @@ country_event = {
 	title = EVT_8012212_NAME
 	desc = EVT_8012212_DESC
 	picture = "nwo2_rhodesian_udi"
+	
 	is_triggered_only = yes # CAF
+	
+	immediate = {
+		CAF = { all_core = { remove_core = CAF } } #So CAF pan-nationalist rebels don't randomly pop up
+	}
 
 	option = {
 		name = EVT_8012212_A
@@ -254,9 +429,15 @@ country_event = {
 			militancy = -10
 			ideology = { factor = 0.25 value = nationalist }
 		}
+		#Blacks become more communist
+		any_pop = { 
+			limit = { NOT = { culture = british } }
+			militancy = -10
+			ideology = { factor = 0.25 value = communist }
+		}
 		
 		ai_chance = {
-			factor = 0.8
+			factor = 0.7
 		}
 	}
 	option = {
@@ -267,6 +448,7 @@ country_event = {
 		FROM = { diplomatic_influence = { who = MLW value = 200 } }
 		any_owned = {
 			limit = { is_core = ZAM }
+			add_core = RHO
 			add_province_modifier = { name = nationalist_agitation duration = 1750 }
 		}
 		any_pop = {
@@ -290,6 +472,12 @@ country_event = {
 			militancy = -10
 			ideology = { factor = 0.25 value = nationalist }
 		}
+		#Blacks become more communist
+		any_pop = { 
+			limit = { NOT = { culture = british } }
+			militancy = -10
+			ideology = { factor = 0.25 value = communist }
+		}
 		
 		ai_chance = {
 			factor = 0.1
@@ -297,6 +485,45 @@ country_event = {
 	}
 	option = {
 		name = EVT_8012212_C
+		badboy = 15
+		any_owned = {
+			limit = { is_core = ZAM is_core = MLW }
+			add_core = RHO
+			add_province_modifier = { name = nationalist_agitation duration = 1750 }
+		}
+		any_pop = {
+			limit = {
+				NOT = { culture = british }
+			}
+			militancy = 6
+			consciousness = 6
+			dominant_issue = {
+				value = minorities_equal_rights
+				factor = 0.65
+			}
+		}
+		change_tag = RHO
+		government = hms_government
+		ruling_party_ideology = nationalist
+		
+		#Whites become more nationalist
+		any_pop = { 
+			limit = { culture = british } 
+			militancy = -10
+			ideology = { factor = 0.25 value = nationalist }
+		}
+		#Blacks become more communist
+		any_pop = { 
+			limit = { NOT = { culture = british } }
+			militancy = -10
+			ideology = { factor = 0.25 value = communist }
+		}
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+	option = {
+		name = EVT_8012212_D
 		any_pop = { militancy = 0.5 }
 		release = ZAM ZAM = { government = hms_government1 country_event = 800054 set_country_flag = former_colonial_nation }
 		release = MLW MLW = { government = hms_government1 country_event = 800054 set_country_flag = former_colonial_nation }
@@ -368,6 +595,9 @@ country_event = {
 				sphere_owner = { diplomatic_influence = { who = MLW value = 200 } } 
 			}
 		}
+		
+		#Remove CAF cores so CAF pan-nationalist rebels don't randomly pop up
+		CAF = { all_core = { remove_core = CAF } }
 		
 		change_tag = ZIM
 		government = democracy1
@@ -776,6 +1006,48 @@ country_event = {
 	
 	option = {
 		name = "Spend the money elsewhere"
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Rhodesian Republic
+country_event = {
+	id = 1512244
+	title = "Republic of Rhodesia"
+	desc = EVTDESC1512244
+	picture = "rep_of_rho"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = RHO
+		is_vassal = no
+		war = no
+		government = hms_government
+		year = 1970
+		NOT = { year = 1990 }
+		ENG = { government = hms_government }
+	}
+
+	mean_time_to_happen = { 
+		months = 3
+	}
+
+	option = {
+		name = "Become a Republic!"
+		prestige = 50
+		government = democracy
+		relation = { who = ENG value = -200 }
+		ENG = { diplomatic_influence = { who = RHO value = -200 } }
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Stay as the Autonomous Realm of Rhodesia"
+		badboy = -2
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		government = hms_government1
 		ai_chance = { factor = 0.1 }
 	}
 

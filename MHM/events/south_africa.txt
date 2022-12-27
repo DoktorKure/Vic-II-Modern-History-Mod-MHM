@@ -311,11 +311,17 @@ country_event = {
 			exists = yes 
 			is_vassal = no
 			ruling_party_ideology = communist
-			neighbour = SAF
+			OR = {
+				neighbour = SAF
+				neighbour = NAM
+			}
 		}
 		
 		#SAF owns NAM
-		is_possible_vassal = NAM
+		OR = {
+			is_possible_vassal = NAM
+			is_our_vassal = NAM
+		}
 	}
 
 	mean_time_to_happen = { months = 1 }
@@ -325,26 +331,106 @@ country_event = {
 		
 		badboy = 5
 		
-		#SWAPO support
-		any_pop = { 
-			limit = { 
-				is_primary_culture = no 
-				is_accepted_culture = no
-				location = { is_core = NAM } 
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = NAM }
+				}
 			}
-			ideology = { factor = 0.30 value = socialist }
+			owner = {
+				#SWAPO support
+				any_pop = { 
+					limit = { 
+						is_primary_culture = no 
+						is_accepted_culture = no
+						location = { is_core = NAM } 
+					}
+					ideology = { factor = 0.30 value = socialist }
+				}
+				any_pop = { 
+					limit = { 
+						is_primary_culture = no 
+						is_accepted_culture = no
+						location = { is_core = NAM } 
+					}
+					ideology = { factor = 0.30 value = communist }
+				}
+				
+				#Release truncated Namibia and capital to avoid capital shifting
+				2078 = { secede_province = NAM } #Capital
+				2082 = { secede_province = NAM }
+				
+				any_owned = {
+					limit = {
+						is_core = NAM
+						any_neighbor_province = { is_core = ANG }
+					}
+					secede_province = NAM
+				}
+		
+				war = {
+					target = NAM
+					attacker_goal = { casus_belli = colonial_war }
+					defender_goal = { casus_belli = annex_all_cores }
+					call_ally = no
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = NAM
+					is_our_vassal = NAM
+				}
+			}
+			owner = {
+				NAM = {
+					#SWAPO support
+					any_pop = { 
+						limit = { 
+							is_primary_culture = no 
+							is_accepted_culture = no
+							location = { is_core = NAM } 
+						}
+						ideology = { factor = 0.30 value = socialist }
+					}
+					any_pop = { 
+						limit = { 
+							is_primary_culture = no 
+							is_accepted_culture = no
+							location = { is_core = NAM } 
+						}
+						ideology = { factor = 0.30 value = communist }
+					}
+					any_owned = {
+						limit = {
+							NOT = {
+								OR = {
+									province_id = 2078
+									province_id = 2082
+									any_neighbor_province = { is_core = ANG }
+								}
+							}
+						}
+						change_controller = SAF
+					}
+				}
+				release_vassal = NAM
+		
+				war = {
+					target = NAM
+					attacker_goal = { casus_belli = colonial_war }
+					defender_goal = { casus_belli = become_independent_colony }
+					call_ally = no
+				}
+			}
 		}
 		
-		#Release truncated Namibia and capital to avoid capital shifting
-		2078 = { secede_province = NAM } #Capital
-		2082 = { secede_province = NAM }
-		
-		any_owned = {
-			limit = {
-				is_core = NAM
-				any_neighbor_province = { is_core = ANG }
-			}
-			secede_province = NAM
+		NAM = {
+			government = proletarian_dictatorship
+			ruling_party_ideology = communist
+			country_event = 800052
+			primary_culture = ovambo
 		}
 		
 		ANG = { 
@@ -356,19 +442,6 @@ country_event = {
 				defender_goal = { casus_belli = humiliate }
 				call_ally = no
 			}
-		}
-		
-		NAM = {
-			government = proletarian_dictatorship
-			ruling_party_ideology = communist
-			country_event = 800052
-		}
-		
-		war = {
-			target = NAM
-			attacker_goal = { casus_belli = colonial_war }
-			defender_goal = { casus_belli = annex_all_cores }
-			call_ally = no
 		}
 		
 		#Call for communist support
@@ -404,12 +477,33 @@ country_event = {
 			ideology = { factor = 0.30 value = socialist }
 		}
 		
-		release = NAM
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = NAM }
+				}
+			}
+			owner = {
+				release = NAM
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = NAM
+					is_our_vassal = NAM
+				}
+			}
+			owner = {
+				release_vassal = NAM
+			}
+		}
 		
 		NAM = {
 			government = proletarian_dictatorship
 			ruling_party_ideology = communist
 			country_event = 800052
+			primary_culture = ovambo
 		}
 		
 		#NAM incorporates East Capriv and the Bantustans
@@ -957,7 +1051,10 @@ country_event = {
 		has_country_flag = bantustans_formed_flag
 		
 		#Owns Namibia
-		is_possible_vassal = NAM
+		OR = {
+			is_possible_vassal = NAM
+			is_our_vassal = NAM
+		}
 	}
 
 	mean_time_to_happen = { months = 3 }
@@ -970,16 +1067,41 @@ country_event = {
 		badboy = 5
 		
 		#Form the Bantustans
-		any_country = {
-			limit = { 
-				exists = no 
-				OR = {
-					AND = { THIS = { is_possible_vassal = ECA } tag = ECA }
-					AND = { THIS = { is_possible_vassal = KAV } tag = KAV }
-					AND = { THIS = { is_possible_vassal = OVA } tag = OVA }
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = NAM } }
+			}
+			owner = {
+				any_country = {
+					limit = { 
+						exists = no 
+						OR = {
+							AND = { THIS = { is_possible_vassal = ECA } tag = ECA }
+							AND = { THIS = { is_possible_vassal = KAV } tag = KAV }
+							AND = { THIS = { is_possible_vassal = OVA } tag = OVA }
+						}
+					}
+					country_event = 8012623
 				}
 			}
-			country_event = 8012623
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = NAM
+					is_our_vassal = NAM
+				}
+			}
+			owner = {
+				NAM = {
+					2081 = { secede_province = ECA }
+					3350 = { secede_province = KAV }
+					3351 = { secede_province = OVA }
+				}
+				create_vassal = ECA
+				create_vassal = KAV
+				create_vassal = OVA
+			}
 		}
 		
 		ai_chance = { factor = 0.9 }
@@ -1022,9 +1144,7 @@ country_event = {
 	trigger = {
 		tag = SAF
 		
-		#1990s onwards
-    	cultural_imperialism = 1
-		
+		year = 1973
 		NOT = { has_global_flag = 1992_start_date_flag }
 		
 		primary_culture = afrikaaner
@@ -1040,7 +1160,10 @@ country_event = {
 		has_country_flag = bantustans_formed_flag
 		
 		#Owns Namibia
-		is_possible_vassal = NAM
+		OR = {
+			is_possible_vassal = NAM
+			is_our_vassal = NAM
+		}
 	}
 
 	mean_time_to_happen = { months = 3 }
@@ -1053,19 +1176,53 @@ country_event = {
 		badboy = 5
 		
 		#Form the Bantustans
-		any_country = {
-			limit = { 
-				exists = no 
-				OR = {
-					AND = { THIS = { is_possible_vassal = KAO } tag = KAO }
-					AND = { THIS = { is_possible_vassal = HRO } tag = HRO }
-					AND = { THIS = { is_possible_vassal = SAN } tag = SAN }
-					AND = { THIS = { is_possible_vassal = DAM } tag = DAM }
-					AND = { THIS = { is_possible_vassal = BST } tag = BST }
-					AND = { THIS = { is_possible_vassal = NML } tag = NML }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = NAM }
 				}
 			}
-			country_event = 8012623
+			owner = {
+				any_country = {
+					limit = { 
+						exists = no 
+						OR = {
+							AND = { THIS = { is_possible_vassal = KAO } tag = KAO }
+							AND = { THIS = { is_possible_vassal = HRO } tag = HRO }
+							AND = { THIS = { is_possible_vassal = SAN } tag = SAN }
+							AND = { THIS = { is_possible_vassal = DAM } tag = DAM }
+							AND = { THIS = { is_possible_vassal = BST } tag = BST }
+							AND = { THIS = { is_possible_vassal = NML } tag = NML }
+						}
+					}
+					country_event = 8012623
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = NAM
+					is_our_vassal = NAM
+				}
+			}
+			owner = {
+				NAM = {
+					3352 = { secede_province = KAO }
+					2082 = { secede_province = HRO }
+					3354 = { secede_province = SAN }
+					3353 = { secede_province = DAM }
+					2078 = { secede_province = BST }
+					3355 = { secede_province = NML }
+					capital = 2080
+				}
+				create_vassal = KAO
+				create_vassal = HRO
+				create_vassal = SAN
+				create_vassal = DAM
+				create_vassal = BST
+				create_vassal = NML
+			}
 		}
 		
 		ai_chance = { factor = 0.9 }
@@ -1108,7 +1265,10 @@ country_event = {
 	trigger = {
 		OR = { tag = SAF tag = RSA }
 		NOT = { has_global_flag = 1992_start_date_flag }
-		is_possible_vassal = NAM
+		OR = {
+			is_possible_vassal = NAM
+			is_our_vassal = NAM
+		}
 		is_vassal = no
 		war = no
 		OR = { has_country_flag = bothas_reforms_flag tag = RSA }
@@ -1121,10 +1281,31 @@ country_event = {
 		
 		badboy = -5
 		
-		release = NAM
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = NAM }
+				}
+			}
+			owner = {
+				release = NAM
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = NAM
+					is_our_vassal = NAM
+				}
+			}
+			owner = {
+				release_vassal = NAM
+			}
+		}
 		relation = { who = NAM value = 100 }
 		
 		NAM = { 
+			primary_culture = ovambo
 			government = democracy 
 			ruling_party_ideology = socialist 
 			country_event = 800054
@@ -1146,7 +1327,7 @@ country_event = {
 					tag = NML
 				}
 			}
-			country_event = 8012624
+			annex_to = NAM
 		}
 		
 		#Wavis Bay
@@ -1175,10 +1356,31 @@ country_event = {
     option = {
 		name = "Namibia belongs to South Africa"
 		badboy = 5
-		
-		any_owned = {
-			limit = { is_core = NAM }
-			add_province_modifier = { name = nationalist_agitation duration = 3650 }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = NAM }
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = { is_core = NAM }
+					add_province_modifier = { name = nationalist_agitation duration = 3650 }
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = NAM
+					is_our_vassal = NAM
+				}
+			}
+			owner = {
+				NAM = {
+					add_country_modifier = { name = revolution_chaos duration = 3650 }
+				}
+			}
 		}
 		
 		ai_chance = { factor = 0.1 }
@@ -1331,6 +1533,76 @@ country_event = {
 			country_event = 5076
 		}
 		
+		#If the greater federation was formed
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = BOT
+				}
+			}
+			owner = {
+				release_vassal = BOT
+				BOT = { ruling_party_ideology = socialist government = democracy country_event = 800054 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = BOT
+				}
+			}
+			owner = {
+				release = BOT
+				BOT = { ruling_party_ideology = socialist government = democracy country_event = 800054 }
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = LES
+				}
+			}
+			owner = {
+				release_vassal = LES
+				LES = { ruling_party_ideology = socialist government = democracy country_event = 800054 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = LES
+				}
+			}
+			owner = {
+				release = LES
+				LES = { ruling_party_ideology = socialist government = democracy country_event = 800054 }
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = SWA
+				}
+			}
+			owner = {
+				release_vassal = SWA
+				SWA = { ruling_party_ideology = socialist government = democracy country_event = 800054 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = SWA
+				}
+			}
+			owner = {
+				release = SWA
+				SWA = { ruling_party_ideology = socialist government = democracy country_event = 800054 }
+			}
+		}
+		
 		all_core = { remove_core = SAF }
 		
 		ai_chance = { factor = 0.9 }
@@ -1391,6 +1663,76 @@ country_event = {
 			country_event = 5076
 		}
 		
+		#If the greater federation was formed
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = BOT
+				}
+			}
+			owner = {
+				release_vassal = BOT
+				BOT = { ruling_party_ideology = socialist government = democracy country_event = 800054 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = BOT
+				}
+			}
+			owner = {
+				release = BOT
+				BOT = { ruling_party_ideology = socialist government = democracy country_event = 800054 }
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = LES
+				}
+			}
+			owner = {
+				release_vassal = LES
+				LES = { ruling_party_ideology = socialist government = democracy country_event = 800054 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = LES
+				}
+			}
+			owner = {
+				release = LES
+				LES = { ruling_party_ideology = socialist government = democracy country_event = 800054 }
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = SWA
+				}
+			}
+			owner = {
+				release_vassal = SWA
+				SWA = { ruling_party_ideology = socialist government = democracy country_event = 800054 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = SWA
+				}
+			}
+			owner = {
+				release = SWA
+				SWA = { ruling_party_ideology = socialist government = democracy country_event = 800054 }
+			}
+		}
+		
 		ai_chance = { factor = 0.1 }
 	}
 
@@ -1416,7 +1758,10 @@ country_event = { # Botswana Independence
 		is_vassal = no
 		
 		#Owns Botswana
-		is_possible_vassal = BOT
+		OR = {
+			is_possible_vassal = BOT
+			is_our_vassal = BOT
+		}
 		
 		OR = {
 			AND = { exists = ZAM is_vassal = no }
@@ -1436,12 +1781,43 @@ country_event = { # Botswana Independence
 				}
 			}
 		}
+		modifier = {
+			factor = 0.1
+			BOT = {
+				any_owned_province = {
+					OR = {
+						has_province_modifier = nationalist_agitation
+						controlled_by_rebels = yes
+					}
+				}
+			}
+		}
 	}
 	
 	option = {
 		name = EVT_8012670_A
 		prestige = 10
-		release = BOT
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = BOT }
+				}
+			}
+			owner = {
+				release = BOT
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = BOT
+					is_our_vassal = BOT
+				}
+			}
+			owner = {
+				release_vassal = BOT
+			}
+		}
 		diplomatic_influence = { who = BOT value = 200 }
 		create_alliance = BOT
 		BOT = { 
@@ -1455,29 +1831,81 @@ country_event = { # Botswana Independence
 	option = {
 		name = "Delay independence via the Dominion system"
 		prestige = -50
-		release_vassal = BOT
-		BOT = { 
-			government = colonial_government 
-			country_event = 800054 
-			ruling_party_ideology = nationalist 
-			
-			add_country_modifier = { name = revolution_chaos duration = 3650 }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = BOT }
+				}
+			}
+			owner = {
+				release_vassal = BOT
+				BOT = { 
+					government = colonial_government 
+					country_event = 800054 
+					ruling_party_ideology = nationalist 
+					
+					add_country_modifier = { name = revolution_chaos duration = 3650 }
+				}
+				diplomatic_influence = { who = BOT value = 200 }
+			}
 		}
-		diplomatic_influence = { who = BOT value = 200 }
+		random_owned = {
+			limit = {
+				owner = {
+					exists = BOT
+					is_our_vassal = BOT
+				}
+			}
+			owner = {
+				BOT = { 
+					government = mandate_government 
+					country_event = 800054 
+					ruling_party_ideology = conservative 
+					
+					add_country_modifier = { name = revolution_chaos duration = 3650 }
+				}
+			}
+		}
 		ai_chance = { factor = 0.1 }
 	}
   
     option = {
 		name = EVT_8012670_B
 		prestige = -100
-		any_owned = {
+		random_owned = {
 			limit = {
-				is_core = BOT
+				owner = {
+					exists = BOT
+					BOT = { vassal_of = THIS }
+				}
 			}
-			add_province_modifier = { name = nationalist_agitation duration = 3650 }
-			any_pop = {
-				militancy = 8
-				consciousness = 5
+			owner = {
+				BOT = {
+					any_pop = {
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.25 value = nationalist }
+					}
+					add_country_modifier = { name = revolution_chaos duration = 3650 } 
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = BOT }
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { is_core = BOT } 
+					any_pop = { 
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.15 value = nationalist }
+					} 
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
 			}
 		}
 		ai_chance = { factor = 0 }
@@ -1503,7 +1931,10 @@ country_event = { # Lesotho Independence
 		war = no
 		
 		#Owns Lesotho
-		is_possible_vassal = LES
+		OR = {
+			is_possible_vassal = LES
+			is_our_vassal = LES
+		}
 	}
 
 	mean_time_to_happen = { months = 10 }
@@ -1511,8 +1942,27 @@ country_event = { # Lesotho Independence
     option = {
 		name = "Grant independence!"
 		prestige = 10
-		
-		release = LES
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = BOT }
+				}
+			}
+			owner = {
+				release = LES
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = LES
+					is_our_vassal = LES
+				}
+			}
+			owner = {
+				release_vassal = LES
+			}
+		}
 		LES = { 
 			government = hms_government 
 			country_event = 800054 
@@ -1520,14 +1970,91 @@ country_event = { # Lesotho Independence
 		}
 		diplomatic_influence = { who = LES value = 200 } 
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.8 }
     }
+	
+	option = {
+		name = "Delay independence via the dominion system"
+		prestige = -10
+		badboy = 3
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = LES }
+				}
+			}
+			owner = {
+				release_vassal = LES
+				LES = { 
+					government = colonial_government 
+					country_event = 800054 
+					ruling_party_ideology = nationalist 
+					
+					add_country_modifier = { name = revolution_chaos duration = 3650 }
+				}
+				diplomatic_influence = { who = BOT value = 200 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = LES
+					is_our_vassal = LES
+				}
+			}
+			owner = {
+				LES = { 
+					government = mandate_government 
+					country_event = 800054 
+					ruling_party_ideology = conservative 
+					
+					add_country_modifier = { name = revolution_chaos duration = 3650 }
+				}
+			}
+		}
+		ai_chance = { factor = 0.1 }
+	}
   
     option = {
 		name = "They shall remain under our rule"
-		prestige = -10
-		badboy = 3
-		LES = { all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } } }
+		prestige = -25
+		badboy = 5
+		random_owned = {
+			limit = {
+				owner = {
+					exists = LES
+					LES = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				LES = {
+					any_pop = {
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.25 value = nationalist }
+					}
+					add_country_modifier = { name = revolution_chaos duration = 3650 } 
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = LES }
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { is_core = LES } 
+					any_pop = { 
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.15 value = nationalist }
+					} 
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
+		}
 		ai_chance = { factor = 0.1 }
     }
 }
@@ -1618,7 +2145,10 @@ country_event = { # Swaziland Independence
 		war = no
 		
 		#Owns Swaziland
-		is_possible_vassal = SWA
+		OR = {
+			is_possible_vassal = SWA
+			is_our_vassal = SWA
+		}
 	}
 
 	mean_time_to_happen = { months = 9 }
@@ -1626,8 +2156,28 @@ country_event = { # Swaziland Independence
     option = {
 		name = "Grant them independence!"
 		prestige = 10
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SWA }
+				}
+			}
+			owner = {
+				release = SWA
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SWA
+					is_our_vassal = SWA
+				}
+			}
+			owner = {
+				release_vassal = SWA
+			}
+		}
 		
-		release = SWA
 		SWA = { 
 			government = hms_government 
 			country_event = 800054 
@@ -1635,14 +2185,91 @@ country_event = { # Swaziland Independence
 		}
 		diplomatic_influence = { who = SWA value = 200 } 
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.8 }
     }
+	
+	option = {
+		name = "Delay independence via the dominion system"
+		prestige = -10
+		badboy = 3
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SWA }
+				}
+			}
+			owner = {
+				release_vassal = SWA
+				SWA = { 
+					government = colonial_government 
+					country_event = 800054 
+					ruling_party_ideology = nationalist 
+					
+					add_country_modifier = { name = revolution_chaos duration = 3650 }
+				}
+				diplomatic_influence = { who = BOT value = 200 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SWA
+					is_our_vassal = SWA
+				}
+			}
+			owner = {
+				SWA = { 
+					government = mandate_government 
+					country_event = 800054 
+					ruling_party_ideology = conservative 
+					
+					add_country_modifier = { name = revolution_chaos duration = 3650 }
+				}
+			}
+		}
+		ai_chance = { factor = 0.1 }
+	}
   
     option = {
 		name = "The natives cannot rule by themselves"
-		prestige = -10
-		badboy = 3
-		SWA = { all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } } }
+		prestige = -25
+		badboy = 5
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SWA
+					SWA = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				SWA = {
+					any_pop = {
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.25 value = nationalist }
+					}
+					add_country_modifier = { name = revolution_chaos duration = 3650 } 
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SWA }
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { is_core = SWA } 
+					any_pop = { 
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.15 value = nationalist }
+					} 
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
+		}
 		ai_chance = { factor = 0.1 }
     }
 	
@@ -1675,10 +2302,18 @@ country_event = {
 			war = no 
 			is_vassal = no 
 		}
-		
-		is_possible_vassal = BOT
-		is_possible_vassal = LES
-		is_possible_vassal = SWA
+		OR = {
+			is_possible_vassal = BOT
+			is_our_vassal = BOT
+		}
+		OR = {
+			is_possible_vassal = LES
+			is_our_vassal = LES
+		}
+		OR = {
+			is_possible_vassal = SWA
+			is_our_vassal = SWA
+		}
 	}
 
 	mean_time_to_happen = { months = 3 }
@@ -1694,6 +2329,33 @@ country_event = {
 	  	prestige = -10
 		badboy = 5
 		relation = { who = SAF value = 200 }
+		random_owned = {
+			limit = {
+				owner = {
+					exists = BOT
+					is_our_vassal = BOT
+				}
+			}
+			owner = { release_vassal = BOT }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = LES
+					is_our_vassal = LES
+				}
+			}
+			owner = { release_vassal = LES }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SWA
+					is_our_vassal = SWA
+				}
+			}
+			owner = { release_vassal = SWA }
+		}
 		SAF = { country_event = 8012692 }
 		ai_chance = { factor = 0.1 }
     }
@@ -1711,11 +2373,76 @@ country_event = {
 	
     option = {
 		name = "Adopt a unitary structure"
-		FROM = { 
-			any_owned = { 
-			limit = { OR = { is_core = BOT is_core = LES is_core = SWA } }
-			secede_province = THIS
-			} 
+		random_owned = {
+			limit = {
+				owner = {
+					exists = BOT
+				}
+			}
+			owner = { inherit = BOT }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = BOT }
+				}
+			}
+			owner = {
+				FROM = { 
+					any_owned = { 
+						limit = { is_core = BOT }
+						secede_province = THIS
+					} 
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SWA
+				}
+			}
+			owner = { inherit = SWA }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SWA }
+				}
+			}
+			owner = {
+				FROM = { 
+					any_owned = { 
+						limit = { is_core = SWA }
+						secede_province = THIS
+					} 
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = LES
+				}
+			}
+			owner = { inherit = LES }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = LES }
+				}
+			}
+			owner = {
+				FROM = { 
+					any_owned = { 
+						limit = { is_core = LES }
+						secede_province = THIS
+					} 
+				}
+			}
 		}
 
 		any_owned = { 
@@ -1727,23 +2454,83 @@ country_event = {
   
     option = {
 		name = "Form a loose federation"
-
-		FROM = { 
-			any_owned = { 
-				limit = { OR = { is_core = BOT is_core = LES is_core = SWA } }
-				secede_province = THIS
-			} 
+		
+		#Botswana
+		random_owned = {
+			limit = {
+				owner = {
+					exists = BOT
+				}
+			}
+			owner = { create_vassal = BOT }
 		}
-
-		FROM = { release = SWA release = LES }
-
-		inherit = SWA
-		inherit = LES
-
-		SAF = {
-			release_vassal = BOT
-			release_vassal = LES
-			release_vassal = SWA
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = BOT }
+				}
+			}
+			owner = {
+				FROM = { 
+					any_owned = { 
+						limit = { is_core = BOT }
+						secede_province = THIS
+					} 
+				}
+				release_vassal = BOT
+			}
+		}
+		
+		#Swaziland
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SWA
+				}
+			}
+			owner = { create_vassal = SWA }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SWA }
+				}
+			}
+			owner = {
+				FROM = { 
+					any_owned = { 
+						limit = { is_core = SWA }
+						secede_province = THIS
+					} 
+				}
+				release_vassal = SWA
+			}
+		}
+		
+		#Lesotho
+		random_owned = {
+			limit = {
+				owner = {
+					exists = LES
+				}
+			}
+			owner = { create_vassal = LES }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = LES }
+				}
+			}
+			owner = {
+				FROM = { 
+					any_owned = { 
+						limit = { is_core = LES }
+						secede_province = THIS
+					} 
+				}
+				release_vassal = LES
+			}
 		}
 
 		BOT = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative }

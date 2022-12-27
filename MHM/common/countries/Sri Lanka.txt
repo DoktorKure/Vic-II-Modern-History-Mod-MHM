@@ -1,5 +1,7 @@
 graphical_culture = IndianGC
 color = { 255 140 0 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "Ceylon National Congress"
 		citizenship_policy = limited_citizenship

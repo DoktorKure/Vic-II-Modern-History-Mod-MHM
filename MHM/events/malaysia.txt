@@ -69,6 +69,8 @@ country_event = {
 	
 	option = {
 		name = "Form the Malayan Federation instead"
+		1388 = { secede_province = FMS }
+		1386 = { secede_province = FMS }
 		relation = { who = FMS value = 100 }
 		FMS = { 
 			any_country = {
@@ -130,7 +132,11 @@ country_event = {
 		tag = ENG
 		year = 1959
 		NOT = { year = 1990 }
-		is_possible_vassal = SNG
+		
+		OR = {
+			is_possible_vassal = SNG
+			is_our_vassal = SNG
+		}
 
 		is_vassal = no
 	}
@@ -139,15 +145,22 @@ country_event = {
 
 	option = {
 		name = "Grant full internal self-governance"
-		release_vassal = SNG
-		
-		SNG = { 
-			government = colonial_government 
-			country_event = 800054 
-			ruling_party_ideology = nationalist
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SRL }
+				}
+			}
+			owner = {
+				release_vassal = SRL
+				SRL = {
+					government = colonial_government
+					country_event = 800054
+					ruling_party_ideology = nationalist
+				}
+				diplomatic_influence = { who = SNG value = 200 }
+			}
 		}
-		
-		diplomatic_influence = { who = SNG value = 200 }
 		prestige = 25
 		badboy = -2
 		ai_chance = { factor = 0.9 }
@@ -463,6 +476,78 @@ country_event = {
 	
 }
 
+#Sarawak joins malaysia
+country_event = {
+	id = 1281423
+	title = "Federation with Malaysia?"
+	desc = "Now that Sarawak is an independent country, should we join Malaysia who shares a similar culture to us?"
+	picture = "sarawakjoinsmalaysia"
+	
+	
+	trigger = {
+		year = 1946
+		tag = SWK
+		MSY = { exists = yes }
+		NOT = { is_vassal = yes }
+		NOT = { has_country_flag = sarawkjoin }
+
+	}
+	mean_time_to_happen = {
+		months = 1
+	}
+	option = {
+		name = "Sign the Act of Union"
+		MSY = { inherit = SWK }
+		set_country_flag = sarawkjoin
+		ai_chance = { 
+		factor = 0.9 
+		modifier = { factor = 0 primary_culture = british }
+			}
+		}
+	option = {
+		name = "Retain our independence"
+		prestige = 10
+		MSY = { relation = { who = SWK value = -200 } }
+		set_country_flag = sarawkjoin
+		ai_chance = { factor = 0.1 }
+		}
+
+}
+#Sabah joins malaysia
+country_event = {
+	id = 1281424
+	title = "Federation with Malaysia?"
+	desc = "Now that Sabah is an independent country, should we join Malaysia who shares a similar culture to us?"
+	picture = "sarawakjoinsmalaysia"
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	trigger = {
+		year = 1946
+		tag = SAB
+		MSY = { exists = yes }
+		NOT = { is_vassal = yes }
+		NOT = { has_country_flag = sabahjoin }
+
+	}
+	
+	option = {
+		name = "Sign the Act of Union"
+		MSY = { inherit = SAB }
+		set_country_flag = sabahjoin
+		ai_chance = { factor = 0.9 }
+		}
+	option = {
+		name = "Retain our independence"
+		prestige = 10
+		MSY = { relation = { who = SAB value = -200 } }
+		set_country_flag = sabahjoin
+		ai_chance = { factor = 0.1 }
+		}
+
+}
+
 #MSY annexes East Malaysia - ENG
 country_event = {
   id = 8009722
@@ -527,15 +612,120 @@ country_event = {
 		
 		relation = { who = IDO value = 100 } 
 		
-		any_pop = { 
-			limit = { culture = malay } 
-			militancy = 6 
-			consciousness = 5 
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SWK
+					SWK = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				SWK = {
+					any_pop = { 
+						limit = { culture = malay } 
+						militancy = 6 
+						consciousness = 5
+						ideology = { factor = 0.15 value = communist }
+					}
+					add_country_modifier = { name = revolution_chaos duration = 3650 } 
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = BRU
+					BRU = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				BRU = {
+					any_pop = { 
+						limit = { culture = malay } 
+						militancy = 6 
+						consciousness = 5
+						ideology = { factor = 0.15 value = communist }
+					}
+					add_country_modifier = { name = revolution_chaos duration = 3650 } 
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SAB
+					SAB = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				SAB = {
+					any_pop = { 
+						limit = { culture = malay } 
+						militancy = 6 
+						consciousness = 5
+						ideology = { factor = 0.15 value = communist }
+					}
+					add_country_modifier = { name = revolution_chaos duration = 3650 } 
+				}
+			}
 		}
 		
-		any_owned = {
-			limit = { OR = { is_core = SAB is_core = SWK } }
-			add_province_modifier = { name = nationalist_agitation duration = 3650 }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SWK }
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { is_core = SWK } 
+					any_pop = { 
+						limit = { culture = malay } 
+						militancy = 6 
+						consciousness = 5
+						ideology = { factor = 0.15 value = communist }
+					}
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = BRU }
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { is_core = BRU } 
+					any_pop = { 
+						limit = { culture = malay } 
+						militancy = 6 
+						consciousness = 5
+						ideology = { factor = 0.15 value = communist }
+					}
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SAB }
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { is_core = SAB } 
+					any_pop = { 
+						limit = { culture = malay } 
+						militancy = 6 
+						consciousness = 5
+						ideology = { factor = 0.15 value = communist }
+					}
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
 		}
 		
 		ai_chance = { factor = 0.1 }
@@ -2142,6 +2332,178 @@ country_event = {
 		}
 		
 		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Malayan Emergency - Begin
+country_event = {
+	id = 1400020
+	title = "The Malayan Emergency"
+	desc = EVTDESC1400020
+	picture = "malayan_emergency"
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = MSY tag = FMS }
+		year = 1948
+		is_vassal = yes
+
+		NOT = { year = 1990 }
+		NOT = { has_country_flag = malayanemergency }
+		NOT = { has_country_modifier = malayan_emergency }
+	}
+
+	mean_time_to_happen = { months = 3 }
+	
+	option = {
+		name = "Fight the Communists"
+
+		any_pop = {
+			limit = { culture = chinese }
+			ideology = { factor = 0.30 value = communist }
+		}
+
+		set_country_flag = malayanemergency
+		add_country_modifier = { name = malayan_emergency duration = -1 }
+	}
+}
+
+#Malayan Emergency - End
+country_event = {
+	id = 1400021
+	title = "End of the Malayan Emergency"
+	desc = EVTDESC1400020
+	picture = "malayan_emergency"
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = MSY tag = FMS }
+
+		OR = { 
+			NOT = { has_global_flag = blocsenabled }
+			has_country_flag = malaya_baling_talks
+			AND = { pop_majority_ideology = socialist ruling_party_ideology = socialist }
+			pop_majority_ideology = communist
+			pop_majority_ideology = communist_social
+			ruling_party_ideology = communist
+
+			AND = { accepted_culture = chinese is_vassal = no }
+		}
+
+		has_country_flag = malayanemergency
+		has_country_modifier = malayan_emergency
+
+	}
+
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "Mission Success"
+		prestige = 10
+		any_pop = { militancy = -4 }
+
+		any_pop = {
+			limit = { culture = chinese }
+			ideology = { factor = -0.15 value = communist }
+		}
+
+		remove_country_modifier = malayan_emergency
+	}
+}
+
+#Kingdom of Sarawak
+country_event = {
+	id = 1512249
+	title = "Annexation of the Kingdom of Sarawak"
+	desc = EVTDESC1512249
+	picture = "annex_swk_kingdom"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		year = 1946
+		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { year = 1990 }
+		
+		government = hms_government
+		is_vassal = no
+		
+		is_our_vassal = SWK
+	}
+
+	mean_time_to_happen = { 
+		months = 4
+	}
+
+	option = {
+		name = "Incorporate Sarawak as a Crown Colony"
+		prestige = -25
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = old_colonial_system
+				}
+			}
+			owner = {
+				inherit = SWK
+				1394 = { add_province_modifier = { name = nationalist_agitation duration = 3650 } } 
+				1395 = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = new_colonial_system
+				}
+			}
+			owner = {
+				SWK = {
+					government = colonial_government
+					any_owned = {
+						add_province_modifier = { name = nationalist_agitation duration = 3650 }
+					}
+				}
+			}
+		}
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Restore the rule of the White Rajahs"
+		SWK = { 
+			government = hms_government1 
+			country_event = 800054 
+			primary_culture = british 
+			add_accepted_culture = malay 
+			ruling_party_ideology = conservative 
+		}
+		diplomatic_influence = { who = SWK value = 200 }
+		ai_chance = { factor = 0.2 }
+	}
+
+}
+
+#Kingdom of Sarawak
+country_event = {
+	id = 1512250
+	title = "End of the White Rajah Dynasty"
+	desc = EVTDESC1512250
+	picture = "white_rajahs"
+
+	trigger = {
+		tag = SWK
+		NOT = { OR = { government = absolute_monarchy government = hms_government government = hms_government1 government = colonial_government } }
+		primary_culture = british
+	}
+
+	option = {
+		name = "Malay rule returns!"
+		prestige = 50
+		primary_culture = malay
 	}
 
 }

@@ -1,6 +1,8 @@
 graphical_culture = AsianGC
 color = { 222 184 135 }
 proletarian_dictatorship = { 255 105 180 }
+colonial_government = { 65 105 225 }
+
 party = {
 		name = "National Progressive Party"
 		citizenship_policy = limited_citizenship

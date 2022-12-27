@@ -18,7 +18,15 @@ country_event = {
 		war = no
 		
 		#Owns Libya
-		is_possible_vassal = LBY
+		OR = {
+			OR = {
+				is_possible_vassal = LBY
+				is_our_vassal = LBY
+			}
+			OR = {
+				is_possible_vassal = TRI
+				is_our_vassal = TRI
+			
 	}
 
 	mean_time_to_happen = {
@@ -49,28 +57,73 @@ country_event = {
 		name = "Libya shall be an independent republic!"
 		prestige = 50
 		
-		#Traditionalist Arab pops are not happy
-		any_pop = {
+		random_owned = {
 			limit = {
-				OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
-				location = { is_core = LBY }
+				owner = {
+					NOT = { OR = { exists = LBY exists = TRI } }
+				}
 			}
-			scaled_consciousness = { 
-				factor = 5 
-				ideology = conservative
+			owner = {
+				#Traditionalist Arab pops are not happy
+				any_pop = {
+					limit = {
+						OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
+						location = { is_core = LBY }
+					}
+					scaled_consciousness = { 
+						factor = 5 
+						ideology = conservative
+					}
+					scaled_militancy = { 
+						factor = 5 
+						ideology = conservative
+					}
+					
+					scaled_consciousness = { 
+						factor = 10
+						ideology = traditionalist
+					}
+					scaled_militancy = { 
+						factor = 10
+						ideology = traditionalist
+					}
+				}
 			}
-			scaled_militancy = { 
-				factor = 5 
-				ideology = conservative
+		}		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = TRI
+					is_our_vassal = TRI
+				}
 			}
-			
-			scaled_consciousness = { 
-				factor = 10
-				ideology = traditionalist
-			}
-			scaled_militancy = { 
-				factor = 10
-				ideology = traditionalist
+			owner = {
+				TRI = {
+					#Traditionalist Arab pops are not happy
+					any_pop = {
+						limit = {
+							OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
+							location = { is_core = LBY }
+						}
+						scaled_consciousness = { 
+							factor = 5 
+							ideology = conservative
+						}
+						scaled_militancy = { 
+							factor = 5 
+							ideology = conservative
+						}
+						
+						scaled_consciousness = { 
+							factor = 10
+							ideology = traditionalist
+						}
+						scaled_militancy = { 
+							factor = 10
+							ideology = traditionalist
+						}
+					}
+				}
 			}
 		}
 		
@@ -94,18 +147,53 @@ country_event = {
 		badboy = 5
 		
 		#Arab pops are not happy
-		any_pop = {
+		random_owned = {
 			limit = {
-				OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
-				location = { is_core = LBY }
+				owner = {
+					NOT = { OR = { exists = LBY exists = TRI } }
+				}
 			}
-			
-			add_province_modifier = { name = occupied_province duration = -1 }
-			
-			militancy = 10
-			consciousness = 10
-			
-			ideology  = { factor = 0.10 value = nationalist }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = LBY
+					}
+					add_province_modifier = { name = occupied_province duration = -1 }
+				}
+				any_pop = {
+					limit = {
+						OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
+						location = { is_core = LBY }
+					}
+					militancy = 10
+					consciousness = 10
+					ideology  = { factor = 0.10 value = nationalist }
+				}
+			}
+		}		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = TRI
+					is_our_vassal = TRI
+				}
+			}
+			owner = {
+				TRI = {
+					any_owned = {
+						add_province_modifier = { name = occupied_province duration = -1 }
+					}
+					any_pop = {
+						limit = {
+							OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
+							location = { is_core = LBY }
+						}
+						militancy = 10
+						consciousness = 10
+						ideology  = { factor = 0.10 value = nationalist }
+					}
+				}
+			}
 		}
 
 		#Arab countries hate this move
@@ -144,8 +232,16 @@ country_event = {
 		war = no
 		
 		#Owns Libya
-		is_possible_vassal = LBY
-		is_possible_vassal = TRI
+		OR = {
+			OR = {
+				is_possible_vassal = LBY
+				is_our_vassal = LBY
+			}
+			OR = {
+				is_possible_vassal = TRI
+				is_our_vassal = TRI
+			}
+		}
 		
 		#Italy exists and is a democracy
 		ITA = {
@@ -169,14 +265,35 @@ country_event = {
 		prestige = 50
 
 		#Form the Mandate of Tripoli
-		any_owned = { limit = { is_core = TRI } secede_province = ITA }
-		ITA = { release_vassal = TRI }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { OR = { exists = TRI exists = LBY } }
+				}
+			}
+			owner = {
+				any_owned = { limit = { is_core = TRI } secede_province = ITA }
+				ITA = { release_vassal = TRI }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = TRI
+					is_our_vassal = TRI
+				}
+			}
+			owner = {
+				release_vassal = TRI
+				ITA = { create_vassal = TRI }
+			}
+		}
+		
 		TRI = {
 			government = mandate_government
 			country_event = 800054
 			ruling_party_ideology = big_tent
 		}
-		
 		#TRI is in the British sphere
 		diplomatic_influence = { who = TRI value = 200 }
 		
@@ -192,18 +309,53 @@ country_event = {
 		badboy = 5
 		
 		#Arab pops are not happy
-		any_pop = {
+		random_owned = {
 			limit = {
-				OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
-				location = { is_core = LBY }
+				owner = {
+					NOT = { OR = { exists = LBY exists = TRI } }
+				}
 			}
-			
-			add_province_modifier = { name = occupied_province duration = -1 }
-			
-			militancy = 10
-			consciousness = 10
-			
-			ideology  = { factor = 0.10 value = nationalist }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = LBY
+					}
+					add_province_modifier = { name = occupied_province duration = -1 }
+				}
+				any_pop = {
+					limit = {
+						OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
+						location = { is_core = LBY }
+					}
+					militancy = 10
+					consciousness = 10
+					ideology  = { factor = 0.10 value = nationalist }
+				}
+			}
+		}		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = TRI
+					is_our_vassal = TRI
+				}
+			}
+			owner = {
+				TRI = {
+					any_owned = {
+						add_province_modifier = { name = occupied_province duration = -1 }
+					}
+					any_pop = {
+						limit = {
+							OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
+							location = { is_core = LBY }
+						}
+						militancy = 10
+						consciousness = 10
+						ideology  = { factor = 0.10 value = nationalist }
+					}
+				}
+			}
 		}
 
 		#Arab countries hate this move
@@ -233,6 +385,7 @@ country_event = {
 		tag = FRA
 		year = 1947 
 		NOT = { has_global_flag = 1950_start_date_flag }
+		NOT = { has_country_flag = FRA_indepedent_libya_agree_flag }
 		NOT = { year = 1990 }
 		
 		government = democracy
@@ -240,7 +393,10 @@ country_event = {
 		#war = no
 		
 		#Owns Fezzan
-		is_possible_vassal = FEZ
+		OR = {
+			is_possible_vassal = FEZ
+			is_our_vassal = FEZ
+		}
 		
 		#UK opted to free Libya
 		ENG = {
@@ -277,7 +433,7 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_country_flag = republican_libya_flag } }
 			owner = {
-				#Arab monarchies welcome this move
+				#Arab republics welcome this move
 				any_country = {
 					limit = { 
 						exists = yes
@@ -298,14 +454,23 @@ country_event = {
 		name = "Create a separate Fezzan state instead"
 		prestige = 25
 		
-		#Release Fezzan
-		release_vassal = FEZ
-		FEZ = {
-			government = mandate_government
-			country_event = 800054
-			ruling_party_ideology = conservative
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = FEZ }
+				}
+			}
+			owner = {
+				#Release Fezzan
+				release_vassal = FEZ
+				FEZ = {
+					government = mandate_government
+					country_event = 800054
+					ruling_party_ideology = conservative
+				}
+				diplomatic_influence = { who = FEZ value = 200 }
+			}
 		}
-		diplomatic_influence = { who = FEZ value = 200 }
 
 		ai_chance = { factor = 0.1 }
 	}
@@ -316,18 +481,53 @@ country_event = {
 		badboy = 10
 		
 		#Arab pops are not happy
-		any_pop = {
+		random_owned = {
 			limit = {
-				OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
-				location = { is_core = LBY }
+				owner = {
+					NOT = { exists = FEZ }
+				}
 			}
-			
-			add_province_modifier = { name = occupied_province duration = -1 }
-			
-			militancy = 10
-			consciousness = 10
-			
-			ideology  = { factor = 0.10 value = nationalist }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = LBY
+					}
+					add_province_modifier = { name = occupied_province duration = -1 }
+				}
+				any_pop = {
+					limit = {
+						OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
+						location = { is_core = LBY }
+					}
+					militancy = 10
+					consciousness = 10
+					ideology  = { factor = 0.10 value = nationalist }
+				}
+			}
+		}		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FEZ
+					is_our_vassal = FEZ
+				}
+			}
+			owner = {
+				FEZ = {
+					any_owned = {
+						add_province_modifier = { name = occupied_province duration = -1 }
+					}
+					any_pop = {
+						limit = {
+							OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
+							location = { is_core = LBY }
+						}
+						militancy = 10
+						consciousness = 10
+						ideology  = { factor = 0.10 value = nationalist }
+					}
+				}
+			}
 		}
 
 		#Arab countries hate this move
@@ -364,7 +564,10 @@ country_event = {
 		war = no
 		
 		#Owns Cyrenaica
-		is_possible_vassal = CYR
+		OR = {
+			is_possible_vassal = CYR
+			is_our_vassal = TRI
+		}
 		
 		#Libya is still occupied
 		LBY = { exists = no }
@@ -382,7 +585,30 @@ country_event = {
 		prestige = 20
 		
 		#Release CYR
-		release = CYR
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = TRI }
+				}
+			}
+			owner = {
+				release = CYR
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = TRI
+					is_our_vassal = TRI
+				}
+			}
+			owner = {
+				TRI = {
+					release = CYR
+				}
+			}
+		}
+		
 		CYR = {
 			government = absolute_monarchy
 			country_event = 800050
@@ -395,8 +621,11 @@ country_event = {
 		random_country = {
 			limit = { 
 				tag = FRA 
-				is_vassal = no 
-				is_possible_vassal = FEZ 
+				is_vassal = no
+				OR = {
+					is_possible_vassal = FEZ 
+					is_our_vassal = FEZ
+				}
 			}
 			country_event = 1412173
 		}
@@ -409,16 +638,50 @@ country_event = {
 		badboy = 3
 		
 		#Arab pops are not happy
-		any_pop = {
+		random_owned = {
 			limit = {
-				OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
-				location = { is_core = CYR }
+				owner = {
+					NOT = { exists = TRI }
+				}
 			}
-			
-			militancy = 10
-			consciousness = 10
-			
-			ideology  = { factor = 0.10 value = nationalist }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = LBY
+					}
+					add_province_modifier = { name = occupied_province duration = -1 }
+				}
+				any_pop = {
+					limit = {
+						OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
+						location = { is_core = CYR }
+					}
+					militancy = 10
+					consciousness = 10
+					ideology  = { factor = 0.10 value = nationalist }
+				}
+			}
+		}		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = TRI
+					is_our_vassal = TRI
+				}
+			}
+			owner = {
+				TRI = {
+					any_pop = {
+						limit = {
+							OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
+							location = { is_core = CYR }
+						}
+						militancy = 10
+						consciousness = 10
+						ideology  = { factor = 0.10 value = nationalist }
+					}
+				}
+			}
 		}
 		
 		ai_chance = { factor = 0.1 }
@@ -439,16 +702,53 @@ country_event = {
 		name = "Aim for a united Libya"
 		
 		#Arab pops are not happy
-		any_pop = {
+		random_owned = {
 			limit = {
-				OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
-				location = { is_core = FEZ }
+				owner = {
+					NOT = { exists = FEZ }
+				}
 			}
-			
-			militancy = 10
-			consciousness = 10
-			
-			ideology  = { factor = 0.10 value = nationalist }
+			owner = {
+				any_owned = {
+					limit = {
+						is_core = LBY
+					}
+					add_province_modifier = { name = occupied_province duration = -1 }
+				}
+				any_pop = {
+					limit = {
+						OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
+						location = { is_core = LBY }
+					}
+					militancy = 10
+					consciousness = 10
+					ideology  = { factor = 0.10 value = nationalist }
+				}
+			}
+		}		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FEZ
+					is_our_vassal = FEZ
+				}
+			}
+			owner = {
+				FEZ = {
+					any_owned = {
+						add_province_modifier = { name = occupied_province duration = -1 }
+					}
+					any_pop = {
+						limit = {
+							OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 }
+							location = { is_core = LBY }
+						}
+						militancy = 10
+						consciousness = 10
+						ideology  = { factor = 0.10 value = nationalist }
+					}
+				}
+			}
 		}
 		
 		set_country_flag = FRA_indepedent_libya_agree_flag
@@ -462,7 +762,28 @@ country_event = {
 		badboy = 5
 		
 		#Release Fezzan
-		release = FEZ
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = FEZ }
+				}
+			}
+			owner = {
+				release = FEZ
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FEZ
+					is_our_vassal = FEZ
+				}
+			}
+			owner = {
+				release_vassal = FEZ
+			}
+		}
+		
 		FEZ = {
 			government = absolute_monarchy
 			country_event = 800050
@@ -493,7 +814,15 @@ country_event = {
 		war = no
 		
 		#Owns Libya
-		is_possible_vassal = LBY
+		OR = {
+			OR = {
+				is_possible_vassal = LBY
+				is_our_vassal = LBY
+			}
+			OR = {
+				is_possible_vassal = TRI
+				is_our_vassal = TRI
+			
 		
 		
 		#UK opted to make Libya independent
@@ -512,7 +841,31 @@ country_event = {
 		prestige = 50
 		
 		#Release Libya
-		release = LBY
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = TRI }
+					NOT = { exists = LBY }
+				}
+			}
+			owner = {
+				release = LBY
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = TRI
+					is_our_vassal = TRI
+				}
+			}
+			owner = {
+				release_vassal = TRI
+				TRI = { change_tag = LBY }
+			}
+		}
+		
+		#Change based on whether or not they opted for monarchist or republican Libya
 		random_owned = {
 			limit = { owner = { has_country_flag = king_idris_of_libya } }
 			owner = {
@@ -555,6 +908,16 @@ country_event = {
 		}
 		random_country = {
 			limit = { 
+				tag = FRA 
+				is_vassal = no
+				is_our_vassal = FEZ 
+				has_country_flag = FRA_indepedent_libya_agree_flag
+			}
+			release_vassal = FEZ
+			LBY = { inherit = FEZ }
+		}
+		random_country = {
+			limit = { 
 				tag = CYR
 				is_vassal = no
 				war = no
@@ -584,7 +947,7 @@ country_event = {
 		random_owned = {
 			limit = { owner = { has_country_flag = republican_libya_flag } }
 			owner = {
-				#Arab monarchies welcome this move
+				#Arab republics welcome this move
 				any_country = {
 					limit = { 
 						exists = yes
@@ -604,7 +967,17 @@ country_event = {
 		badboy = 5
 
 		#Release Libya as a vassal
-		release_vassal = LBY
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = TRI }
+					NOT = { exists = LBY }
+				}
+			}
+			owner = {
+				release_vassal = LBY
+			}
+		}
 		random_owned = {
 			limit = { owner = { has_country_flag = king_idris_of_libya } }
 			owner = {
@@ -643,6 +1016,16 @@ country_event = {
 				has_country_flag = FRA_indepedent_libya_agree_flag
 			}
 			release = FEZ
+			LBY = { inherit = FEZ }
+		}
+		random_country = {
+			limit = { 
+				tag = FRA 
+				is_vassal = no
+				is_our_vassal = FEZ 
+				has_country_flag = FRA_indepedent_libya_agree_flag
+			}
+			release_vassal = FEZ
 			LBY = { inherit = FEZ }
 		}
 		random_country = {

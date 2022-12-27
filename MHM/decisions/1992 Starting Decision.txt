@@ -21,7 +21,7 @@ political_decisions = {
 					exists = yes
 					ai = no
 				}
-				country_event = 669967
+				country_event = 5000000
 			}
 		
 			#Indicate that this is the MHM mod
@@ -32,6 +32,9 @@ political_decisions = {
 
 			#1992 start marker
 			set_global_flag = 1992_start_date_flag
+			
+			#New colonial system - can be toggled via starting decision
+			set_global_flag = new_colonial_system
 			
 			#Nuclear weapons nations
 			USA = {
@@ -862,7 +865,7 @@ political_decisions = {
 			#Organisation of Ibero American States
 			any_country = {
 				limit = {
-					OR = { is_culture_group = portuguese_cultures is_culture_group = lusophone_cultures is_culture_group = european_spanish is_culture_group = latin_american_cultures is_culture_group = meso_american_cultures }
+					OR = { is_culture_group = portuguese_cultures is_culture_group = lusophone_cultures is_culture_group = european_spanish is_culture_group = latin_american_cultures }
 					NOT = { OR = { government = theocracy government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 					is_vassal = no
 				}

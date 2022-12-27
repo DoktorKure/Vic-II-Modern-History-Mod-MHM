@@ -16,16 +16,15 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		is_possible_vassal = SRL
+		OR = {
+			is_possible_vassal = SRL
+			is_our_vassal = SRL
+		}
 		
-		#Dominion of India
+		#India is independent
 		HND = { 
 			exists = yes 
-			is_vassal = no 
-			OR = { 
-				government = hms_government 
-				government = hms_government1 
-			} 
+			is_vassal = no
 		}
 	}
 
@@ -34,7 +33,23 @@ country_event = {
 	option = {
 		name = "Set them free!"
 		prestige = 25
-		release = SRL 
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SRL
+					SRL = { vassal_of = THIS }
+				}
+			}
+			owner = { release_vassal = SRL }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SRL }
+				}
+			}
+			owner = { release = SRL }
+		}
 		SRL = { 
 			set_country_flag = full_independance
 			set_country_flag = former_colonial_nation
@@ -59,13 +74,22 @@ country_event = {
 		name = "Delay independence"
 		prestige = -50
 		badboy = 2
-		release_vassal = SRL 
-		SRL = { 
-			government = colonial_government
-			country_event = 800054
-			ruling_party_ideology = big_tent
-			add_country_modifier = { name = revolution_chaos duration = 3650 } 
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SRL }
+				}
+			}
+			owner = {
+				release_vassal = SRL
+				SRL = {
+					government = colonial_government
+					country_event = 800054
+					ruling_party_ideology = big_tent
+				}
+			}
 		}
+		SRL = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
 		diplomatic_influence = { who = SRL value = 200 }
 		ai_chance = { factor = 0.2 }
 	}
@@ -73,9 +97,29 @@ country_event = {
   	option = {
 		name = "Hand Ceylon to India"
 		relation = { who = HND value = 200 }
-		any_owned = { 
-			limit = { is_core = SRL } 
-			secede_province = HND 
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SRL
+					SRL = { vassal_of = THIS }
+				}
+			}
+			owner = { HND = { inherit = SRL } }
+			SRL = { any_core = { add_core = HND } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SRL }
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { is_core = SRL }
+					add_core = HND
+					secede_province = HND 
+				}
+			}
 		} 
 		ai_chance = { factor = 0.1 }
 	}
@@ -84,17 +128,84 @@ country_event = {
 		name = "Ceylon shall remain British Ceylon!"
 		prestige = -50
 		badboy = 3
-	
-		any_owned = { 
-			limit = { is_core = SRL } 
-			any_pop = { 
-				militancy = 10
-				consciousness = 10
-				ideology = { factor = 0.15 value = nationalist }
-			} 
-			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SRL
+					SRL = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				SRL = {
+					any_pop = {
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.25 value = nationalist }
+					}
+					add_country_modifier = { name = revolution_chaos duration = 3650 } 
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SRL }
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { is_core = SRL } 
+					any_pop = { 
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.15 value = nationalist }
+					} 
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
 		}
 		ai_chance = { factor = 0 }
+	}
+}
+
+#1971 JVP insurrection
+country_event = {
+	id = 1512109
+	title = "$YEAR$ JVP insurrection"
+	desc = EVTDESC1512109
+	picture = "sri_comm"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SRL
+		NOT = { ruling_party_ideology = communist }
+		NOT = { ruling_party_ideology = communist_social }
+		NOT = { ruling_party_ideology = socialist }
+		is_vassal = no
+		year = 1971
+		war = no
+		NOT = { year = 1990 }
+	}
+
+	mean_time_to_happen = { 
+		months = 4
+	}
+
+	option = {
+		name = "Crush the communists!"
+		prestige = 25
+		money = -250000
+		add_country_modifier = { name = revolution_chaos duration = 365 }
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Embrace communism!"
+		government = proletarian_dictatorship
+		country_event = 800052
+		sphere_owner = { diplomatic_influence = { who = THIS value = -200 } }
+		ai_chance = { factor = 0.2 }
 	}
 }
 

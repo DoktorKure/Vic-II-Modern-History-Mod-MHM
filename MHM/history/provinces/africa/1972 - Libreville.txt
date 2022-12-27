@@ -1,19 +1,16 @@
-owner = FRA
-controller = FRA
+owner = AEF
+controller = AEF
 add_core = GAB
 trade_goods = petroleum
 life_rating = 15
 terrain = jungle
+naval_base = 1
 colonial = 2
-1992.1.1 = {
-owner = GAB
-controller = GAB
-add_core = GAB
-life_rating = 15
-colonial = 0
-state_building = {
-	level = 1
-	building = petroleum_plastics_factory
-	upgrade = yes
-}
+1992.1.1 = { 
+    owner = GAB
+    controller = GAB
+    add_core = GAB
+    life_rating = 15
+    colonial = 0
+    state_building = { level = 1 building = petroleum_plastics_factory upgrade = yes } 
 }

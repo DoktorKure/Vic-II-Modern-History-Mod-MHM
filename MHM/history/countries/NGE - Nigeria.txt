@@ -1,7 +1,7 @@
 capital = 1941
 primary_culture = black_anglo
 religion = secularism
-government = democracy
+government = colonial_government
 plurality = 5.0
 nationalvalue = nv_equality
 literacy = 0.01
@@ -43,6 +43,9 @@ pollution = no_controls
 wage_reform = unregulated_hours
 public_housing_reform = no_public_housing
 # Technologies
+infantry = 1
+radio_network = 1
+containment = 1
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0

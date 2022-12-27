@@ -1,5 +1,7 @@
 graphical_culture = AsianGC
 color = { 255 140 0 }
+colonial_government = { 65 105 225 }
+
 party = {
 		name = "party_big_tent"
 		citizenship_policy = full_citizenship

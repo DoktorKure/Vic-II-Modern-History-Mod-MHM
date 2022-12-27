@@ -1,5 +1,7 @@
 graphical_culture = Generic
 color = { 153 50 204 }
+mandate_government = { 108 175 249 }
+colonial_government = { 108 175 249 }
 party = {
 		name = "party_nationalist"
 		citizenship_policy = limited_citizenship

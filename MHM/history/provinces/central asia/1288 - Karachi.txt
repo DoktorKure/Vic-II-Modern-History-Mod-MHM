@@ -1,38 +1,22 @@
-owner = RAJ
-controller = RAJ
+owner = PAK
+controller = PAK
 add_core = PAK
 add_core = SIN
 trade_goods = coal
 life_rating = 35
 terrain = urban_karachi
-colonial = 0
-
-1950.1.1 = {
-owner = PAK
-controller = PAK
-}
-
-1992.1.1 = {
-owner = PAK
-controller = PAK
-add_core = PAK
-add_core = SIN
-life_rating = 35
-colonial = 0
 naval_base = 1
-state_building = {
-	level = 1
-	building = canned_vegetables_factory
-	upgrade = yes
-}
-state_building = {
-	level = 1
-	building = fabric_factory
-	upgrade = yes
-}
-state_building = {
-	level = 1
-	building = clothes_factory
-	upgrade = yes
-}
+colonial = 0
+1950.1.1 = { owner = PAK controller = PAK } 
+1992.1.1 = { 
+    owner = PAK
+    controller = PAK
+    add_core = PAK
+    add_core = SIN
+    life_rating = 35
+    colonial = 0
+    naval_base = 1
+    state_building = { level = 1 building = canned_vegetables_factory upgrade = yes } 
+    state_building = { level = 1 building = fabric_factory upgrade = yes } 
+    state_building = { level = 1 building = clothes_factory upgrade = yes } 
 }

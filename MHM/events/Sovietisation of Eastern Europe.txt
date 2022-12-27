@@ -108,11 +108,8 @@ country_event = {
 	option = {
 		name = "Integrate $FROMCOUNTRY$ as an SSR!"
 		prestige_factor = -0.05
-		war = { 
-			target = FROM 
-			attacker_goal = { casus_belli = conquest } 
-			defender_goal = { casus_belli = status_quo } 
-		}
+		badboy = 5
+		inherit = FROM
 		ai_chance = { factor = 0 }
 	}
 	option = {

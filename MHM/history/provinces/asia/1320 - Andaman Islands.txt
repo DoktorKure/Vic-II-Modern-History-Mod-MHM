@@ -1,6 +1,7 @@
 owner = RAJ
 controller = RAJ
 add_core = HND
+add_core = SNT
 trade_goods = grain
 life_rating = 30
 terrain = seasonal_jungle_hills
@@ -14,7 +15,6 @@ controller = HND
 1992.1.1 = {
 owner = HND
 controller = HND
-add_core = HND
 life_rating = 30
 colonial = 0
 }

@@ -1,6 +1,43 @@
 # End of Colonialism
-# Basline is militanyc and conciousness caused by nationalist_movments.txt events
+# Basline is militancy and consciousness caused by nationalist_movments.txt events
 # Once it becommes high enough it triggers demand for autonomy and unrest.
+
+#Post Colonial Political fragmentation
+country_event = {
+	id = 1512094
+	title = "Post Colonial Politics"
+	desc = EVTDESC1512094
+	picture = "post_colonial_politics"
+
+	trigger = {
+		is_vassal = no
+		war = no
+		pop_majority_ideology = nationalist
+		has_country_flag = former_colonial_nation
+		has_country_modifier = newly_independent_country
+		NOT = { has_country_flag = post_colonial_politics }
+		OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 government = socialist_democracy } # must be a democracy of some kind
+	}
+
+	mean_time_to_happen = { months = 1 }
+
+	option = {
+		name = "The political scene of $COUNTRY$ will diversify"
+		election = yes
+		set_country_flag = post_colonial_politics
+		add_country_modifier = { name = post_colonial_chaos duration = 1825 }
+		any_pop = {
+			limit = { OR = { is_accepted_culture = yes is_primary_culture = yes } }
+			ideology = {
+				factor = -0.75
+				value = nationalist
+			}
+
+		}
+	}
+}
+
+### OLD COLONIAL SYSTEM - FIRES ONLY FOR NATIONS THAT DIRECTLY OWN COLONIES ###
 
 # Demand Autonomy
 province_event = {
@@ -26,7 +63,7 @@ province_event = {
 		owner = { NOT = { has_country_flag = decolonise_yes } }
 		
 		#Has some militancy
-		average_militancy = 1
+		average_militancy = 4
 
 		### Provinces that do not seek independence ###
 		
@@ -98,6 +135,7 @@ province_event = {
 				minorities_reform = minorities_oppression
 			}
 		}
+		owner = { NOT = { has_country_flag = colonial_province } } #So it won't fire for colonial provinces in the new colonial system
 		
 		#Not a core of the owner
 		NOT = { is_core = THIS }
@@ -408,7 +446,7 @@ province_event = {
 		
 		#Something to be angry about
 		OR = { 
-			average_militancy = 2
+			average_militancy = 5
 			any_neighbor_province = { has_province_modifier = colonial_unrest } 
 		}
 		
@@ -894,7 +932,128 @@ country_event = { # Demand Immediate Repay 1mil of WW2 War Dept!
   }
   
 }
-# If as a consequence of 15503 we are bancryot we have to give all countrie we previously denied independance independance.
+# If as a consequence of 15503 we are bankrupt we have to give all countrie we previously denied independance independance.
 
+#Return colonial cores - receiver
+country_event = {
+	id = 1512319
+	title = "$FROMCOUNTRY$ Demands Decolonisation!"
+	desc = EVTDESC1512319
+	picture = "demand_decolonisation"
 
+	is_triggered_only = yes
+
+	option = {
+		name = "Return the colonies to $FROMCOUNTRY$"	
+	
+		relation = { who = FROM value = 100 }
+
+		FROM = { country_event = 1512320 } #Acceptance
+
+		any_owned = { limit = { is_core = FROM is_colonial = yes } remove_core = THIS secede_province = FROM }
+
+		ai_chance = { 
+			factor = 1 
+			modifier = { factor = 0 NOT = { badboy = 0.6 } } 
+		}	
+	}
+
+	option = {
+		name = "It's an integral part of $COUNTRY$!"
+		prestige_factor = -0.02
+		badboy = 2.5
+		relation = { who = FROM value = -100 }
+		FROM = { country_event = 1512321 } #Rejection
+
+		ai_chance = { factor = 1 
+			modifier = { factor = 0 badboy = 0.6 } 
+		}
+
+	}
+
+}
+
+#Return colonial cores - originator, accept
+country_event = {
+	id = 1512320
+	title = "$FROMCOUNTRY$ Returns $COUNTRY_ADJ$ Lands!"
+	desc = EVTDESC1512320
+	picture = "demand_decolonisation_win"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A momentous day in $COUNTRY_ADJ$ history!"	
+		prestige = 100
+
+		random_owned = { 
+			limit = { owner = { ruling_party_ideology = conservative } }
+			owner = { any_pop = { ideology = { factor = 0.25 value = conservative } } }
+		}
+
+		random_owned = { 
+			limit = { owner = { ruling_party_ideology = big_tent } }
+			owner = { any_pop = { ideology = { factor = 0.25 value = big_tent } } }
+		}
+
+		random_owned = { 
+			limit = { owner = { ruling_party_ideology = socialist } }
+			owner = { any_pop = { ideology = { factor = 0.25 value = socialist } } }
+		}
+
+		random_owned = { 
+			limit = { owner = { ruling_party_ideology = traditionalist } }
+			owner = { any_pop = { ideology = { factor = 0.25 value = traditionalist } } }
+		}
+
+		random_owned = { 
+			limit = { owner = { ruling_party_ideology = populist } }
+			owner = { any_pop = { ideology = { factor = 0.25 value = populist } } }
+		}
+
+		random_owned = { 
+			limit = { owner = { ruling_party_ideology = nationalist } }
+			owner = { any_pop = { ideology = { factor = 0.25 value = nationalist } } }
+		}
+
+		random_owned = { 
+			limit = { owner = { ruling_party_ideology = progressive } }
+			owner = { any_pop = { ideology = { factor = 0.25 value = progressive } } }
+		}
+
+		random_owned = { 
+			limit = { owner = { ruling_party_ideology = liberal } }
+			owner = { any_pop = { ideology = { factor = 0.25 value = liberal } } }
+		}
+
+		random_owned = { 
+			limit = { owner = { ruling_party_ideology = communist } }
+			owner = { any_pop = { ideology = { factor = 0.25 value = communist } } }
+		}
+
+		random_owned = { 
+			limit = { owner = { ruling_party_ideology = communist_social } }
+			owner = { any_pop = { ideology = { factor = 0.25 value = communist_social } } }
+		}
+
+	}
+
+}
+
+#Return colonial cores - originator, reject
+country_event = {
+	id = 1512321
+	title = "$FROMCOUNTRY$ Refuses $COUNTRY_ADJ$ Demand!"
+	desc = EVTDESC1512321
+	picture = "demand_decolonisation_refuse"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "History will be against them!"	
+		prestige = -10
+	}
+}
+
+### NEW COLONIAL SYSTEM - FIRES ONLY FOR COUNTRIES WITH COLONIAL PUPPETS ###
 

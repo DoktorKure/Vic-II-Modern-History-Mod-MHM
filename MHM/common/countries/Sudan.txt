@@ -1,6 +1,7 @@
 graphical_culture = MiddleEasternGC
 color = { 120 77 119 }
-colonial_government = { 180 87 104 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "Military Junta"
 		citizenship_policy = limited_citizenship

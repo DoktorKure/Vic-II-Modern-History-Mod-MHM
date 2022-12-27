@@ -71,7 +71,7 @@ country_event = {
 		NOT = { has_global_flag = player_choice_GER_occupation }
 	}
 	
-	mean_time_to_happen = { months = 1 }
+	mean_time_to_happen = { days = 2 }
 
 	option = {
 		name = "Deutschland, Deutschland über alles..."
@@ -92,7 +92,9 @@ country_event = {
 			leave_alliance = THIS 
 		}
 		set_country_flag = renounced_war_rights
-		country_event = 1512259
+		country_event = { id = 1512259 days = 1 }
+		country_event = { id = 8204004 days = 1 }
+		country_event = { id = 8204102 days = 1 }
 		
 		#Become parliamentary republic
 		clr_country_flag = presidential_system_republic
@@ -126,6 +128,7 @@ country_event = {
 		government = democracy
 		ruling_party_ideology = conservative
 		country_event = 800054
+		country_event = { id = 8204004 days = 1 }
 		prestige = 150
 		
 		#Become parliamentary republic

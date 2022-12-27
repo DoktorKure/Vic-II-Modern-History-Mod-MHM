@@ -5,6 +5,7 @@ trade_goods = oil_seeds
 life_rating = 35
 terrain = dry_forest_hills
 colonial = 0
+naval_base = 1
 state_building = {
 	level = 2
 	building = fabric_factory

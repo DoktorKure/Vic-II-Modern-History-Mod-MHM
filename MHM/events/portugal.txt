@@ -14,7 +14,10 @@ country_event = {
 		
 		is_vassal = no
 		
-		is_possible_vassal = ANG
+		OR = {
+			is_possible_vassal = ANG
+			is_our_vassal = ANG
+		}
 	}
 
 	mean_time_to_happen = { months = 2 }
@@ -22,17 +25,48 @@ country_event = {
 	option = {
 		name = EVT_8011700_A
 		
-		release = ANG
-		ANG = {
-			government = proletarian_dictatorship
-			country_event = 800052
-			ruling_party_ideology = communist
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = ANG } }
+			}
+			owner = {
+				release = ANG
+				ANG = {
+					government = proletarian_dictatorship
+					country_event = 800052
+					ruling_party_ideology = communist
+				}
+				POR = {
+					war = {
+						target = ANG
+						attacker_goal = { casus_belli = colonial_war }
+						defender_goal = { casus_belli = status_quo }
+						call_ally = no
+					}
+				}
+			}
 		}
-		war = {
-			target = ANG
-			attacker_goal = { casus_belli = colonial_war }
-			defender_goal = { casus_belli = status_quo }
-			call_ally = no
+		
+		random_owned = {
+			limit = {
+				owner = { is_our_vassal = ANG }
+			}
+			owner = {
+				release_vassal = ANG
+				ANG = {
+					government = proletarian_dictatorship
+					country_event = 800052
+					ruling_party_ideology = communist
+				}
+				POR = {
+					war = {
+						target = ANG
+						attacker_goal = { casus_belli = colonial_war }
+						defender_goal = { casus_belli = status_quo }
+						call_ally = no
+					}
+				}
+			}
 		}
 		
 		any_pop = { consciousness = 3 }
@@ -44,17 +78,34 @@ country_event = {
 		name = "Give Angola some self-rule"
 		prestige_factor = -0.05
 		
-		release_vassal = ANG
-		ANG = {
-			government = colonial_government
-			country_event = 800054
-			ruling_party_ideology = conservative
-			all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = ANG } }
+			}
+			owner = {
+				release_vassal = ANG
+				ANG = {
+					government = colonial_government
+					country_event = 800054
+					ruling_party_ideology = conservative
+					all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+				}
+				relation = { who = ANG value = 200 }
+				diplomatic_influence = { who = ANG value = 200 }
+				sphere_owner = { diplomatic_influence = { who = ANG value = 200 } }
+			}
 		}
-		
-		relation = { who = ANG value = 200 }
-		diplomatic_influence = { who = ANG value = 200 }
-		sphere_owner = { diplomatic_influence = { who = ANG value = 200 } }
+		random_owned = {
+			limit = {
+				owner = { is_our_vassal = ANG }
+			}
+			owner = {
+				ANG = {
+					government = mandate_government
+					all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+				}
+			}
+		}
 		
 		any_pop = { militancy = 3 consciousness = 3 }
 		ai_chance = { factor = 0.1 }
@@ -64,11 +115,31 @@ country_event = {
 		name = EVT_8011700_B
 		prestige_factor = -0.1
 		
-		release = ANG
-		ANG = {
-			government = democracy
-			country_event = 800054
-			ruling_party_ideology = communist
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = ANG } }
+			}
+			owner = {
+				release = ANG
+				ANG = {
+					government = democracy
+					country_event = 800054
+					ruling_party_ideology = communist
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { is_our_vassal = ANG }
+			}
+			owner = {
+				release_vassal = ANG
+				ANG = {
+					government = democracy
+					country_event = 800054
+					ruling_party_ideology = communist
+				}
+			}
 		}
 		
 		relation = { who = ANG value = 200 }
@@ -96,7 +167,10 @@ country_event = {
 		
 		is_vassal = no
 		
-		is_possible_vassal = MOZ
+		OR = {
+			is_our_vassal = MOZ
+			is_possible_vassal = MOZ
+		}
 	}
 
 	mean_time_to_happen = { months = 9 }
@@ -104,17 +178,47 @@ country_event = {
 	option = {
 		name = EVT_8011701_A
 		
-		release = MOZ
-		MOZ = {
-			government = proletarian_dictatorship
-			country_event = 800052
-			ruling_party_ideology = communist
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = MOZ } }
+			}
+			owner = {
+				release = MOZ
+				MOZ = {
+					government = proletarian_dictatorship
+					country_event = 800052
+					ruling_party_ideology = communist
+				}
+				POR = {
+					war = {
+						target = MOZ
+						attacker_goal = { casus_belli = colonial_war }
+						defender_goal = { casus_belli = status_quo }
+						call_ally = no
+					}
+				}
+			}
 		}
-		war = {
-			target = MOZ
-			attacker_goal = { casus_belli = colonial_war }
-			defender_goal = { casus_belli = status_quo }
-			call_ally = no
+		random_owned = {
+			limit = {
+				owner = { exists = MOZ is_our_vassal = MOZ }
+			}
+			owner = {
+				release_vassal = MOZ
+				MOZ = {
+					government = proletarian_dictatorship
+					country_event = 800052
+					ruling_party_ideology = communist
+				}
+				POR = {
+					war = {
+						target = MOZ
+						attacker_goal = { casus_belli = colonial_war }
+						defender_goal = { casus_belli = status_quo }
+						call_ally = no
+					}
+				}
+			}
 		}
 		
 		any_pop = { consciousness = 3 }
@@ -126,17 +230,35 @@ country_event = {
 		name = "Give Mozambique some self-rule"
 		prestige_factor = -0.05
 		
-		release_vassal = MOZ
-		MOZ = {
-			government = colonial_government
-			country_event = 800054
-			ruling_party_ideology = conservative
-			all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = MOZ } }
+			}
+			owner = {
+				release_vassal = MOZ
+				MOZ = {
+					government = colonial_government
+					country_event = 800054
+					ruling_party_ideology = conservative
+					all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+				}
+				
+				relation = { who = MOZ value = 200 }
+				diplomatic_influence = { who = MOZ value = 200 }
+				sphere_owner = { diplomatic_influence = { who = MOZ value = 200 } }
+			}
 		}
-		
-		relation = { who = MOZ value = 200 }
-		diplomatic_influence = { who = MOZ value = 200 }
-		sphere_owner = { diplomatic_influence = { who = MOZ value = 200 } }
+		random_owned = {
+			limit = {
+				owner = { is_our_vassal = MOZ }
+			}
+			owner = {
+				MOZ = {
+					government = mandate_government
+					all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+				}
+			}
+		}
 		
 		any_pop = { militancy = 3 consciousness = 3 }
 		ai_chance = { factor = 0.1 }
@@ -145,8 +267,24 @@ country_event = {
 	option = {
 		name = EVT_8011701_B
 		prestige_factor = -0.1
+
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = MOZ } }
+			}
+			owner = {
+				release = MOZ
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { is_our_vassal = MOZ }
+			}
+			owner = {
+				release_vassal = MOZ
+			}
+		}
 		
-		release = MOZ
 		MOZ = {
 			government = democracy
 			country_event = 800054
@@ -187,17 +325,47 @@ country_event = {
 	option = {
 		name = EVT_8011702_A
 		
-		release = GUB
-		GUB = {
-			government = proletarian_dictatorship
-			country_event = 800052
-			ruling_party_ideology = communist
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = GUB } }
+			}
+			owner = {
+				release = GUB
+				GUB = {
+					government = proletarian_dictatorship
+					country_event = 800052
+					ruling_party_ideology = communist
+				}
+				POR = {
+					war = {
+						target = GUB
+						attacker_goal = { casus_belli = colonial_war }
+						defender_goal = { casus_belli = status_quo }
+						call_ally = no
+					}
+				}
+			}
 		}
-		war = {
-			target = GUB
-			attacker_goal = { casus_belli = colonial_war }
-			defender_goal = { casus_belli = status_quo }
-			call_ally = no
+		random_owned = {
+			limit = {
+				owner = { exists = GUB is_our_vassal = GUB }
+			}
+			owner = {
+				release_vassal = GUB
+				GUB = {
+					government = proletarian_dictatorship
+					country_event = 800052
+					ruling_party_ideology = communist
+				}
+				POR = {
+					war = {
+						target = GUB
+						attacker_goal = { casus_belli = colonial_war }
+						defender_goal = { casus_belli = status_quo }
+						call_ally = no
+					}
+				}
+			}
 		}
 		
 		any_pop = { consciousness = 3 }
@@ -209,17 +377,34 @@ country_event = {
 		name = "Give Guinea Bissau some self-rule"
 		prestige_factor = -0.05
 		
-		release_vassal = GUB
-		GUB = {
-			government = colonial_government
-			country_event = 800054
-			ruling_party_ideology = conservative
-			all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = GUB } }
+			}
+			owner = {
+				release_vassal = GUB
+				GUB = {
+					government = colonial_government
+					country_event = 800054
+					ruling_party_ideology = conservative
+					all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+				}
+				relation = { who = GUB value = 200 }
+				diplomatic_influence = { who = GUB value = 200 }
+				sphere_owner = { diplomatic_influence = { who = GUB value = 200 } }
+			}
 		}
-		
-		relation = { who = GUB value = 200 }
-		diplomatic_influence = { who = GUB value = 200 }
-		sphere_owner = { diplomatic_influence = { who = GUB value = 200 } }
+		random_owned = {
+			limit = {
+				owner = { is_our_vassal = GUB }
+			}
+			owner = {
+				GUB = {
+					government = mandate_government
+					all_core = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+				}
+			}
+		}
 		
 		any_pop = { militancy = 3 consciousness = 3 }
 		ai_chance = { factor = 0.1 }
@@ -229,7 +414,24 @@ country_event = {
 		name = EVT_8011702_B
 		prestige_factor = -0.1
 		
-		release = GUB
+		
+
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = GUB } }
+			}
+			owner = {
+				release = GUB
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { is_our_vassal = GUB }
+			}
+			owner = {
+				release_vassal = GUB
+			}
+		}
 		GUB = {
 			government = democracy
 			country_event = 800054
@@ -736,10 +938,19 @@ country_event = {
 		
 		# African colonies release unconditionally
 		random_owned = { limit = { owner = { is_possible_vassal = ANG } } owner = { release = ANG ANG = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		random_owned = { limit = { owner = { is_our_vassal = ANG } } owner = { release_vassal = ANG ANG = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		
 		random_owned = { limit = { owner = { is_possible_vassal = MOZ } } owner = { release = MOZ MOZ = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		random_owned = { limit = { owner = { is_our_vassal = MOZ } } owner = { release_vassal = MOZ MOZ = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		
 		random_owned = { limit = { owner = { is_possible_vassal = GUB } } owner = { release = GUB GUB = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		random_owned = { limit = { owner = { is_our_vassal = GUB } } owner = { release_vassal = GUB GUB = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		
 		random_owned = { limit = { owner = { is_possible_vassal = STP } } owner = { release = STP STP = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		random_owned = { limit = { owner = { is_our_vassal = STP } } owner = { release_vassal = STP STP = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		
 		random_owned = { limit = { owner = { is_possible_vassal = CPV } } owner = { country_event = 8011714 } }
+		random_owned = { limit = { owner = { is_our_vassal = CPV } } owner = { country_event = 8011714 } }
 		# Timor -> indonesia.txt events
 		
 		#Set social reforms
@@ -804,7 +1015,27 @@ country_event = {
 		prestige = 25
 		
 		#Release CPV as a communist country
-		release = CPV
+		random_owned = {
+			limit = {
+				owner = {
+					exists = CPV
+					is_our_vassal = CPV
+				}
+			}
+			owner = {
+				release_vassal = CPV
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = CPV }
+				}
+			}
+			owner = {
+				release = CPV
+			}
+		}
 		CPV = { 
 			government = proletarian_dictatorship
 			country_event = 800052 
@@ -826,7 +1057,28 @@ country_event = {
 		badboy = 5
 		
 		#Release Cape Verde
-		release = CPV
+		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = CPV
+					is_our_vassal = CPV
+				}
+			}
+			owner = {
+				release_vassal = CPV
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = CPV }
+				}
+			}
+			owner = {
+				release = CPV
+			}
+		}
 		CPV = { 
 			government = proletarian_dictatorship 
 			country_event = 800052
@@ -1069,7 +1321,7 @@ country_event = {
 
 }
 
-# if Portugal become democratic earlier than the Canation Revolution they still should release there empire.
+# if Portugal become democratic earlier than the Canation Revolution they still should release their empire.
 country_event = {
 	id = 8011706
 	title = EVT_8011705_NAME
@@ -1098,11 +1350,23 @@ country_event = {
 		
 		# African colonies released unconditionally
 		random_owned = { limit = { owner = { is_possible_vassal = ANG } } owner = { release = ANG ANG = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		random_owned = { limit = { owner = { is_our_vassal = ANG } } owner = { release_vassal = ANG ANG = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		
 		random_owned = { limit = { owner = { is_possible_vassal = MOZ } } owner = { release = MOZ MOZ = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		random_owned = { limit = { owner = { is_our_vassal = MOZ } } owner = { release_vassal = MOZ MOZ = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		
 		random_owned = { limit = { owner = { is_possible_vassal = GUB } } owner = { release = GUB GUB = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		random_owned = { limit = { owner = { is_our_vassal = GUB } } owner = { release_vassal = GUB GUB = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		
 		random_owned = { limit = { owner = { is_possible_vassal = STP } } owner = { release = STP STP = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		random_owned = { limit = { owner = { is_our_vassal = STP } } owner = { release_vassal = STP STP = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		
 		random_owned = { limit = { owner = { is_possible_vassal = CPV } } owner = { release = CPV CPV = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		random_owned = { limit = { owner = { is_our_vassal = CPV } } owner = { release_vassal = CPV CPV = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist } } }
+		
 		# Timor -> indonesia.txt events
+		
+		
 
 		ai_chance = { factor = 0.9 }
 	}
@@ -1116,13 +1380,80 @@ country_event = {
 			consciousness = 5
 		}
 		
-		any_owned = { 
-			limit = { NOT = { is_core = POR } } 
-			militancy = 10
-			consciousness = 10
-			ideology = { factor = 0.2 value = communist }
-			ideology = { factor = 0.2 value = nationalist }
-			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+		#New System
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ANG
+					is_our_vassal = ANG
+				}
+			}
+			owner = {
+				ANG = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = MOZ
+					is_our_vassal = MOZ
+				}
+			}
+			owner = {
+				MOZ = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = GUB
+					is_our_vassal = GUB
+				}
+			}
+			owner = {
+				GUB = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = STP
+					is_our_vassal = STP
+				}
+			}
+			owner = {
+				STP = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = CPV
+					is_our_vassal = CPV
+				}
+			}
+			owner = {
+				CPV = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+			}
+		}
+		
+		#Old System
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = old_colonial_system
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { NOT = { is_core = POR } } 
+					militancy = 10
+					consciousness = 10
+					ideology = { factor = 0.2 value = communist }
+					ideology = { factor = 0.2 value = nationalist }
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
 		}
 		
 		ai_chance = { factor = 0.1 }
@@ -1280,13 +1611,26 @@ country_event = {
 		war = no
 		
 		#Empire is intact
-		is_possible_vassal = ANG
-		is_possible_vassal = MOZ
-		is_possible_vassal = GUB
-		is_possible_vassal = MCA
-		is_possible_vassal = TIM
-		is_possible_vassal = STP
-		is_possible_vassal = CPV
+		OR = {
+			AND = {
+				is_possible_vassal = ANG
+				is_possible_vassal = MOZ
+				is_possible_vassal = GUB
+				is_possible_vassal = MCA
+				is_possible_vassal = TIM
+				is_possible_vassal = STP
+				is_possible_vassal = CPV
+			}
+			AND = {
+				is_our_vassal = ANG
+				is_our_vassal = MOZ
+				is_our_vassal = GUB
+				is_our_vassal = MCA
+				is_our_vassal = TIM
+				is_our_vassal = STP
+				is_our_vassal = CPV
+			}
+		}
 		
 		#Not on the road to the Carnation revolt
 		NOT = { has_country_flag = carnation_revolution }
@@ -1299,13 +1643,55 @@ country_event = {
 		prestige = 50
 		
 		#Release the colonies as dominions
-		release_vassal = ANG ANG = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
-		release_vassal = MOZ MOZ = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
-		release_vassal = GUB GUB = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
-		release_vassal = MCA MCA = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
-		release_vassal = TIM TIM = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
-		release_vassal = STP STP = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
-		release_vassal = CPV CPV = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
+		random_owned = {
+			limit = {
+				owner = {
+					AND = {
+						is_our_vassal = ANG
+						is_our_vassal = MOZ
+						is_our_vassal = GUB
+						is_our_vassal = MCA
+						is_our_vassal = TIM
+						is_our_vassal = STP
+						is_our_vassal = CPV
+					}
+				}
+			}
+			owner = {
+				ANG = { add_accepted_culture = portuguese }
+				MOZ = { add_accepted_culture = portuguese }
+				GUB = { add_accepted_culture = portuguese }
+				MCA = { add_accepted_culture = portuguese }
+				TIM = { add_accepted_culture = portuguese }
+				STP = { add_accepted_culture = portuguese }
+				CPV = { add_accepted_culture = portuguese }
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					AND = {
+						is_possible_vassal = ANG
+						is_possible_vassal = MOZ
+						is_possible_vassal = GUB
+						is_possible_vassal = MCA
+						is_possible_vassal = TIM
+						is_possible_vassal = STP
+						is_possible_vassal = CPV
+					}
+				}
+			}
+			owner = {
+				release_vassal = ANG ANG = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
+				release_vassal = MOZ MOZ = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
+				release_vassal = GUB GUB = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
+				release_vassal = MCA MCA = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
+				release_vassal = TIM TIM = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
+				release_vassal = STP STP = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
+				release_vassal = CPV CPV = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative add_accepted_culture = portuguese }
+			}
+		}
 
 		ai_chance = { factor = 0.8 }
 	}
@@ -1313,13 +1699,67 @@ country_event = {
 	option = {
 		name = "We will maintain direct rule"
 		
-		any_owned = { 
-			limit = { NOT = { is_core = POR } } 
-			militancy = 10
-			consciousness = 10
-			ideology = { factor = 0.2 value = communist }
-			ideology = { factor = 0.2 value = nationalist }
-			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ANG
+					is_our_vassal = ANG
+					
+					exists = MOZ
+					is_our_vassal = MOZ
+					
+					exists = STP
+					is_our_vassal = STP
+					
+					exists = GUB
+					is_our_vassal = GUB
+					
+					exists = CPV
+					is_our_vassal = CPV
+					
+					exists = STP
+					is_our_vassal = STP
+					
+					exists = MCA
+					is_our_vassal = MCA
+					
+					exists = TIM
+					is_our_vassal = TIM
+				}
+			}
+			owner = {
+				ANG = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+				MOZ = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+				GUB = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+				CPV = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+				STP = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+				MCA = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+				TIM = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = ANG
+					is_possible_vassal = MOZ
+					is_possible_vassal = STP
+					is_possible_vassal = GUB
+					is_possible_vassal = CPV
+					is_possible_vassal = MCA
+					is_possible_vassal = TIM
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { NOT = { is_core = POR } } 
+					militancy = 10
+					consciousness = 10
+					ideology = { factor = 0.25 value = communist }
+					ideology = { factor = 0.25 value = nationalist }
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
 		}
 		
 		ai_chance = { factor = 0.2 }
@@ -1389,6 +1829,47 @@ country_event = {
 		relation = { who = CHI value = -100 }
 		
 		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#12-3 incident Macau
+country_event = {
+	id = 1512214
+	title = "12-3 Incident in Macau"
+	desc = EVTDESC1512214
+	picture = "mca_riots"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = POR
+		is_vassal = no
+		OR = { owns = 1498 is_our_vassal = MCA }
+		CHI = { exists = yes OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+		year = 1966
+		NOT = { year = 1990 }
+	}
+
+	mean_time_to_happen = { 
+		months = 11
+	}
+
+	option = {
+		name = "Crush the uprising!"
+		badboy = 5
+		1498 = { add_province_modifier = { name = instigating_rebels duration = 3650 } }
+		relation = { who = CHI value = -200 }
+		1498 = { add_core = CHI }
+		ai_chance = { factor = 0.2 }
+	}
+
+	option = {
+		name = "Give up sovereignty over Macau!"
+		prestige = 25
+		relation = { who = CHI value = 100 }
+		1498 = { add_core = CHI remove_core = POR }
+		ai_chance = { factor = 0.8 }
 	}
 
 }

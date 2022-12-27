@@ -1,19 +1,16 @@
-owner = ENG
-controller = ENG
+owner = CYP
+controller = CYP
 add_core = CYP
 trade_goods = fruit
 life_rating = 35
 terrain = urban_nicosia
+naval_base = 1
 colonial = 2
-1992.1.1 = {
-owner = CYP
-controller = CYP
-add_core = CYP
-life_rating = 35
-colonial = 0
-state_building = {
-	level = 1
-	building = canned_vegetables_factory
-	upgrade = yes
-}
+1992.1.1 = { 
+    owner = CYP
+    controller = CYP
+    add_core = CYP
+    life_rating = 35
+    colonial = 0
+    state_building = { level = 1 building = canned_vegetables_factory upgrade = yes } 
 }

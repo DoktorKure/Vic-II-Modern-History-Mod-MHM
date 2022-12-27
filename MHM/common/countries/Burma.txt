@@ -1,5 +1,7 @@
 graphical_culture = AsianGC
 color = { 255 127 80 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "Tatmadaw"
 		citizenship_policy = limited_citizenship

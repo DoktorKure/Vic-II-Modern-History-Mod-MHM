@@ -376,6 +376,8 @@ political_decisions = {
 			
 			is_vassal = no
 			
+			ai = no
+			
 			#THIS owns colonial provinces
 			colonial_nation = yes
 			

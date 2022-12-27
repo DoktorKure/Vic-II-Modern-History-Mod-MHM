@@ -1,46 +1,112 @@
 country_event = { # Independence of Ghana
-  id = 8010700
-  title = EVT_8010700_NAME
-  desc = EVT_8010700_DESC
-  picture = "independence_ghana"
-  fire_only_once = yes
+	id = 8010700
+	title = EVT_8010700_NAME
+	desc = EVT_8010700_DESC
+	picture = "independence_ghana"
+	fire_only_once = yes
 
-  trigger = {
-    tag = ENG
-    year = 1957 NOT = { year = 1990 }
-	owns = 1907 # Accra
-	NOT = { exists = GHA }
-  }
+	trigger = {
+		tag = ENG
+		year = 1957 NOT = { year = 1990 }
+		OR = {
+			is_possible_vassal = GHA
+			is_our_vassal = GHA
+		}
+	}
 
-  mean_time_to_happen = { months = 5 }
+	mean_time_to_happen = { months = 5 }
 
-  option = {
-    name = EVT_8010700_A
-	prestige = 10
-	release = GHA
-GHA = { government = hms_government1 country_event = 800054 }
-	ENG = { diplomatic_influence = { who = GHA value = 200 } }
-	create_alliance = GHA
-	ai_chance = { factor = 0.9 }
-  }
+	option = {
+		name = EVT_8010700_A
+		prestige = 10
+		random_owned = {
+			limit = {
+				owner = {
+					exists = GHA
+					GHA = { vassal_of = THIS }
+				}
+			}
+			owner = { release_vassal = GHA }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = GHA }
+				}
+			}
+			owner = { release = GHA }
+		}
+		GHA = { government = hms_government1 country_event = 800054 }
+		ENG = { diplomatic_influence = { who = GHA value = 200 } }
+		create_alliance = GHA
+		ai_chance = { factor = 0.9 }
+	}
   
-  option = {
-    name = EVT_8010700_B
-	release_vassal = GHA
-GHA = { government = colonial_government country_event = 800054 }
-	ENG = { diplomatic_influence = { who = GHA value = 200 } }
-	any_pop = { limit = { OR = { culture = ewe culture = african_minor } } militancy = 2 consciousness = 2 }
-	create_alliance = GHA
-	ai_chance = { factor = 0.1 }
-  }  
+	option = {
+		name = EVT_8010700_B
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = GHA }
+				}
+			}
+			owner = {
+				release_vassal = GHA
+				GHA = {
+					government = colonial_government
+					country_event = 800054
+					ruling_party_ideology = big_tent
+				}
+				diplomatic_influence = { who = GHA value = 200 }
+				create_alliance = GHA
+			}
+		}
+		GHA = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+		ai_chance = { factor = 0.1 }
+	}  
 
-  option = {
-    name = "Keep Ghana as our territory!"
-	prestige = -10
-	any_pop = { limit = { OR = { culture = ewe culture = african_minor } } militancy = 7 consciousness = 5 }
-	# TODO GHA UDI
-	ai_chance = { factor = 0 }
-  }
+	option = {
+		name = "Keep Ghana as our territory!"
+		prestige = -10
+		random_owned = {
+			limit = {
+				owner = {
+					exists = GHA
+					GHA = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				GHA = {
+					any_pop = {
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.25 value = nationalist }
+					}
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = GHA }
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { is_core = GHA } 
+					any_pop = { 
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.15 value = nationalist }
+					} 
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
+		}
+		# TODO GHA UDI
+		ai_chance = { factor = 0 }
+	}
   
 }
 
@@ -74,4 +140,121 @@ ENG = { diplomatic_influence = { who = GHA value = -10 } }
 	ai_chance = { factor = 0.1 }
   }
   
+}
+
+#British Togoland Plebiscite
+country_event = {
+	id = 1412237
+	title = "British Togoland Plebiscite"
+	desc = EVTDESC1412237
+	picture = "british_togoland"
+
+	fire_only_once = yes
+
+	trigger = {
+		year = 1956
+		tag = ENG
+		TOG = { exists = yes }
+		OR = { GHA = { exists = no vassal_of = THIS } }
+		NOT = { year = 1991 }
+		OR = {
+			THIS = { owns = 1914 owns = 1915 owns = 1916 owns = 1917 owns = 1918 }
+			GHA = { owns = 1914 owns = 1915 owns = 1916 owns = 1917 owns = 1918 }
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 5
+	}
+
+	option = {
+		name = "Integrate with the Gold Coast Colony"
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = GHA }
+				}
+			}
+			owner = {
+				any_pop = { limit = { culture = ewe location = { OR = { province_id = 1915 province_id = 1916 } } } militancy = 5 consciousness = 4 }
+				any_pop = { limit = { culture = ga_adangbe location = { OR = { province_id = 1915 province_id = 1916 } } } militancy = -5 consciousness = -4 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = GHA
+					is_our_vassal = GHA
+				}
+			}
+			owner = {
+				GHA = {
+					any_pop = { limit = { culture = ewe location = { OR = { province_id = 1915 province_id = 1916 } } } militancy = 5 consciousness = 4 }
+					any_pop = { limit = { culture = ga_adangbe location = { OR = { province_id = 1915 province_id = 1916 } } } militancy = -5 consciousness = -4 }
+				}
+			}
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Unite with Togoland"
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = GHA }
+				}
+			}
+			owner = {
+				any_pop = { limit = { culture = ewe location = { OR = { province_id = 1915 province_id = 1916 } } } militancy = -5 consciousness = -4 }
+				any_pop = { limit = { culture = ga_adangbe location = { OR = { province_id = 1915 province_id = 1916 } } } militancy = 5 consciousness = 4 }
+				any_owned = {
+					limit = {
+						OR = {
+						province_id = 1914 
+						province_id = 1915
+						province_id = 1916
+						province_id = 1917
+						province_id = 1918
+						}
+					}
+					add_core = TOG
+					secede_province = TOG
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = GHA
+					is_our_vassal = GHA
+				}
+			}
+			owner = {
+				GHA = {
+					any_pop = { limit = { culture = ewe location = { OR = { province_id = 1915 province_id = 1916 } } } militancy = -5 consciousness = -4 }
+					any_pop = { limit = { culture = ga_adangbe location = { OR = { province_id = 1915 province_id = 1916 } } } militancy = 5 consciousness = 4 }
+					any_owned = {
+						limit = {
+							OR = {
+							province_id = 1914 
+							province_id = 1915
+							province_id = 1916
+							province_id = 1917
+							province_id = 1918
+							}
+						}
+						add_core = TOG
+						secede_province = TOG
+					}
+				}
+			}
+		}
+
+		ai_chance = { factor = 0.2 }
+	}
+
 }

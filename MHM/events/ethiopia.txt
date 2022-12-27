@@ -44,6 +44,43 @@ country_event = {
 			} 
 		}
 		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SML
+					NOT = { exists = SOM }
+				}
+			}
+			owner = {
+				any_owned = { limit = { is_core = SOM }
+				secede_province = SML
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SOM
+					NOT = { exists = SML }
+				}
+			}
+			owner = {
+				any_owned = { limit = { is_core = SOM }
+				secede_province = SOM
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SML
+					exists = SOM
+				}
+			}
+			owner = {
+				any_owned = { limit = { is_core = SOM }
+				secede_province = SML
+			}
+		}
+		
 		#Relationship with ETH sours
 		relation = { who = ETH value = -200 }
 		diplomatic_influence = { who = ETH value = -200 }
@@ -97,7 +134,10 @@ country_event = {
 		}
 		
 		#Owns Eritrea
-		is_possible_vassal = ERI
+		OR = {
+			is_possible_vassal = ERI
+			is_our_vassal = ERI
+		}
 	}
 
 	mean_time_to_happen = {
@@ -119,16 +159,41 @@ country_event = {
 		relation = { who = ETH value = 100 }
 		diplomatic_influence = { who = ETH value = 100 }
 		
-		#Transfer all ERI cores to ETH
-		any_owned = {
-			limit = { is_core = ERI }
-			secede_province = ETH
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ERI }
+				}
+			}
+			owner = {
+				#Transfer all ERI cores to ETH
+				any_owned = {
+					limit = { is_core = ERI }
+					secede_province = ETH
+				}
+				
+				#Ethiopia releases Eritrea
+				ETH = {
+					release_vassal = ERI
+					sphere_owner = { diplomatic_influence = { who = ERI value = 200 } }
+				}
+			}
 		}
-		
-		#Ethiopia releases Eritrea
-		ETH = {
-			release_vassal = ERI
-			sphere_owner = { diplomatic_influence = { who = ERI value = 200 } }
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ERI
+					is_our_vassal = ERI
+				}
+			}
+			owner = {
+				#Transfer vassal to ETH
+				release_vassal = ERI
+				ETH = {
+					create_vassal = ERI
+					sphere_owner = { diplomatic_influence = { who = ERI value = 200 } }
+				}
+			}
 		}
 		
 		#Set Eritrean Government
@@ -151,15 +216,24 @@ country_event = {
 		relation = { who = ETH value = -100 }
 		diplomatic_influence = { who = ETH value = -100 }
 		
-		#Release ERI as a colony
-		release_vassal = ERI
-		ERI = {
-			government = colonial_government
-			country_event = 800054
-			ruling_party_ideology = conservative
+		#Release ERI as a mandate if it didn't exist
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ERI }
+				}
+			}
+			owner = {
+				release_vassal = ERI
+				ERI = {
+					government = mandate_government
+					country_event = 800054
+					ruling_party_ideology = conservative
+				}
+				
+				diplomatic_influence = { who = ERI value = 200 }
+			}
 		}
-		
-		diplomatic_influence = { who = ERI value = 200 }
 		ai_chance = {
 			factor = 0.05
 		}
@@ -168,25 +242,62 @@ country_event = {
 	option = {
 		name = EVT_1005301_C #Reject UN Resolution 390A(V)
 		badboy = 10
-		any_owned = {
-			limit = { is_core = ERI }
-			add_province_modifier = {
-				name = nationalist_agitation
-				duration = 3650
-			}
-			add_province_modifier = {
-				name = occupied_province
-				duration = -1
-			}
-			any_pop = {
-				limit = {
-					OR = { culture = tigre culture = afar }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ERI }
 				}
-				consciousness = 5
-				militancy = 8
-				ideology  = { factor = 0.10 value = nationalist }
+			}
+			owner = {
+				any_owned = {
+					limit = { is_core = ERI }
+					add_province_modifier = {
+						name = nationalist_agitation
+						duration = 3650
+					}
+					add_province_modifier = {
+						name = occupied_province
+						duration = -1
+					}
+					any_pop = {
+						limit = {
+							OR = { culture = tigre culture = afar }
+						}
+						consciousness = 5
+						militancy = 8
+						ideology  = { factor = 0.10 value = nationalist }
+					}
+				}
 			}
 		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ERI
+					is_our_vassal = ERI
+				}
+			}
+			owner = {
+				ERI = {
+					any_owned = {
+						add_province_modifier = {
+							name = nationalist_agitation
+							duration = 3650
+						}
+						any_pop = {
+							limit = {
+								OR = { culture = tigre culture = afar }
+							}
+							consciousness = 5
+							militancy = 8
+							ideology  = { factor = 0.10 value = nationalist }
+						}
+					}
+					add_country_modifier = { name = revolution_chaos duration = 3650 }
+				}
+			}
+		}
+		
 		ai_chance = {
 			factor = 0.05
 		}

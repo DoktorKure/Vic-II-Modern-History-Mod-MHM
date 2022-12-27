@@ -1,3 +1,44 @@
+#Independence of Sudan
+country_event = {
+	id = 1512211
+	title = "Independence of Sudan"
+	desc = EVTDESC1512211
+	picture = "sud_indy"
+
+	fire_only_once = yes
+
+	trigger = {
+		war = no
+		tag = ENG
+		is_vassal = no
+		government = hms_government
+		is_our_vassal = SUD
+		SUD = { government = colonial_government }
+		year = 1960
+		NOT = { year = 1990 }
+	}
+
+	mean_time_to_happen = { 
+		months = 10
+	}
+
+	option = {
+		name = "Withdraw from Sudan"
+		release_vassal = SUD
+		SUD = { government = democracy country_event = 800054 ruling_party_ideology = big_tent }
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Refuse independence!"
+		prestige = -50
+		badboy = 5
+		SUD = { ruling_party_ideology = nationalist add_country_modifier = { name = revolution_chaos duration = 3650 } }
+		ai_chance = { factor = 0.2 }
+	}
+
+}
+
 #Initiate Sudanese independence
 country_event = {
 	id = 1004902
@@ -7,7 +48,10 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		NOT = { exists = SUD }
+		OR = {
+			NOT = { exists = SUD }
+			SUD = { vassal_of = ENG government = colonial_government }
+		}
 		NOT = { year = 1990 }
 		OR = { tag = EGY tag = UAR }
 		1827 = { owner = { capital_scope = { continent = europe } } } # Khartoum
@@ -20,13 +64,13 @@ country_event = {
 
 	option = {
 		name = "EVT_1004902_A"
-		random_country = { limit = { owns = 1827 } country_event = 1004903 }
+		random_country = { limit = { owns = 1827 NOT = { tag = SUD } } country_event = 1004903 }
 		prestige = 25
 		ai_chance = {
 			factor = 0.8
 			modifier = {
 				factor = 0
-		any_neighbor_country = { owns = 1827 war_with = THIS }
+				any_neighbor_country = { owns = 1827 war_with = THIS }
 			}
 		}
 	}
@@ -36,7 +80,7 @@ country_event = {
 		badboy = 5
 		set_country_flag = claim_the_sudan
 		SUD = { all_core = { add_core = EGY } }
-any_pop = { limit = { culture = sunni_arab } consciousness = 2 }
+		any_pop = { limit = { culture = sunni_arab } consciousness = 2 }
 		ai_chance = { factor = 0.2 }
 	}
 	
@@ -51,12 +95,36 @@ country_event = {
 	is_triggered_only = yes # ENG
 
 	option = {
-		name = "Prepare Sudan for independence" 
-		release_vassal = SUD
-		SUD = {
-			government = colonial_government
-			ruling_party_ideology = conservative
-			country_event = 800054
+		name = "Prepare Sudan for independence"
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SUD }
+				}
+			}
+			owner = {
+				release_vassal = SUD
+				SUD = {
+					government = colonial_government
+					ruling_party_ideology = conservative
+					country_event = 800054
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SUD
+					is_our_vassal = SUD
+				}
+			}
+			owner = {
+				SUD = {
+					government = mandate_government
+					ruling_party_ideology = conservative
+					country_event = 800054
+				}
+			}
 		}
 		prestige = 10
 		diplomatic_influence = { who = SUD value = 200 }
@@ -69,7 +137,32 @@ country_event = {
 		badboy = 4.0
 		SUD = { any_core = { limit = { is_primary_culture = SUD } add_province_modifier = { name = nationalist_agitation duration = 3650 } } }
 		relation = { who = FROM value = -200 }
-		any_pop = { limit = { culture = sunni_arab } militancy = 6  consciousness = 5.0 }
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SUD }
+				}
+			}
+			owner = {
+				any_pop = { limit = { culture = sunni_arab } militancy = 6  consciousness = 5.0 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SUD
+					is_our_vassal = SUD
+				}
+			}
+			owner = {
+				SUD = {
+					any_pop = { limit = { culture = sunni_arab } militancy = 6  consciousness = 5.0 }
+					add_country_modifier = { name = revolution_chaos duration = 3650 }
+				}
+			}
+		}
+		
 	}
 
 }
@@ -135,12 +228,12 @@ country_event = {
 		OR = {
 			EGY = {
 				exists = yes
-		NOT = { has_country_flag = claim_the_sudan }
+				NOT = { has_country_flag = claim_the_sudan }
 				NOT = { OR = { government = hms_government government = absolute_monarchy government = democracy } }
 			}
 			UAR = {
 				exists = yes
-		NOT = { has_country_flag = claim_the_sudan }
+				NOT = { has_country_flag = claim_the_sudan }
 				NOT = { OR = { government = hms_government government = absolute_monarchy government = democracy } }
 			}
 		}

@@ -1,5 +1,7 @@
 graphical_culture = AfricanGC
 color = { 0 153 0 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "NCNC"
 		citizenship_policy = limited_citizenship

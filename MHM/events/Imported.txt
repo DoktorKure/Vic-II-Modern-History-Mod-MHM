@@ -25,10 +25,20 @@ country_event = {
 		FROM = {
 			country_event = 47777788
 		}
+		random_country = {
+			limit = {
+				vassal_of = THIS
+				exists = yes
+				NOT = { has_country_flag = interacted_with }
+			}
+			country_event = 47777793
+			THIS = { set_country_flag = possible_interactions }
+		}
 		any_country = {
 			limit = {
-				exists = yes
 				vassal_of = THIS
+				exists = yes
+				THIS = { NOT = { has_country_flag = possible_interactions } }
 			}
 			clr_country_flag = interacted_with
 		}
@@ -43,10 +53,20 @@ country_event = {
 			}
 			secede_province = FROM
 		}
+		random_country = {
+			limit = {
+				vassal_of = THIS
+				exists = yes
+				NOT = { has_country_flag = interacted_with }
+			}
+			country_event = 47777793
+			THIS = { set_country_flag = possible_interactions }
+		}
 		any_country = {
 			limit = {
-				exists = yes
 				vassal_of = THIS
+				exists = yes
+				THIS = { NOT = { has_country_flag = possible_interactions } }
 			}
 			clr_country_flag = interacted_with
 		}
@@ -87,7 +107,7 @@ country_event = {
 
 country_event = {
 	id = 47777793
-	title = "AI: Vassal Interactions"
+	title = "Vassal Interactions"
 	desc = "This event lets your overlord interact with you. If you are a player, just close this."
 	
 	is_triggered_only = yes

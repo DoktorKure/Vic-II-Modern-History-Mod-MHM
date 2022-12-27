@@ -1,8 +1,12 @@
 # GENERATED 
+
+#Blacklisted Tags = LOG, MIL, MIN, NAP, OOB, PAN, PHI, RED, ROW, WIN, AIR, ANY, CON, COT, DAY, DIR, END, GUI, HOT, HRE, KEY, LAW, NOT, AND
+
 # Special countries...
 CLN = "countries/Cleanup.txt"
 
 REB = "countries/rebels.txt"
+SNT = "countries/Andaman Islands.txt"
 NNG = "countries/Northern Nigeria.txt"
 MRH = "countries/Maharashtra.txt"
 XIJ = "countries/Xinjiang.txt"

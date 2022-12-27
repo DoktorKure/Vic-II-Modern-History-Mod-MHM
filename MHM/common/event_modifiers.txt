@@ -2,6 +2,29 @@
 # scriptable and usable for event-system below.
 ##################################################################################################
 
+### Overpopulated provinces ###
+
+overpopulated_province1 = {
+	immigrant_push = 1
+	icon = 20
+}
+overpopulated_province2 = {
+	immigrant_push = 2
+	icon = 20
+}
+overpopulated_province3 = {
+	immigrant_push = 3
+	icon = 20
+}
+overpopulated_province4 = {
+	immigrant_push = 4
+	icon = 20
+}
+overpopulated_province5 = {
+	immigrant_push = 5
+	icon = 20
+}
+
 ### Seasonal Effects ###
 
 winter_province_modifier = {

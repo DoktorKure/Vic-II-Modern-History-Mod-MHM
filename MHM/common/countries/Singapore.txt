@@ -1,5 +1,7 @@
 graphical_culture = AsianGC
 color = { 186 79 63 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "People's Action Party"
 		citizenship_policy = full_citizenship

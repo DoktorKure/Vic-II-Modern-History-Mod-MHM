@@ -1,5 +1,7 @@
 graphical_culture = AfricanGC
 color = { 216 221 135 }
+colonial_government = { 255 215 75 }
+
 party = {
 		name = "Sahrawi National Union Party"
 		citizenship_policy = full_citizenship

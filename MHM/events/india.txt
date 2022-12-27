@@ -842,6 +842,7 @@ country_event = {
 			defender_goal = { casus_belli = acquire_any_state state_province_id = 3281 } 
 			defender_goal = { casus_belli = acquire_any_state state_province_id = 1224 }
 			defender_goal = { casus_belli = humiliate }
+			call_ally = no
 		}
 		
 		#INC support surges in India

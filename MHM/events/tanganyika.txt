@@ -30,28 +30,126 @@ country_event = {
 
 	option = {
 		name = "Form the federation"
-
-		inherit = KEN
-		inherit = TAN
-		inherit = UGA
-		any_owned = {
+		
+		#Annex countries without gameovering the player in case KEN, TAN, or UGA is controlled by a player
+		random_owned = {
 			limit = {
-				OR = {
-					is_core = KEN
-					is_core = TAN
-					is_core = UGA
-					is_core = RWA
-					is_core = BRN
-					AND = { is_core = SSU NOT = { is_core = SUD } }
+				owner = {
+					has_global_flag = new_colonial_system
 				}
 			}
-			add_core = XEF
+			owner = {
+				any_country = {
+					limit = {
+						tag = KEN
+						ai = no
+					}
+					KEN = {
+						inherit = TAN
+						inherit = UGA
+						any_owned = {
+							add_core = XEF
+						}
+						change_tag = XEF
+					}
+				}
+			}
 		}
-		release_vassal = XEF
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = new_colonial_system
+				}
+			}
+			owner = {
+				any_country = {
+					limit = {
+						tag = UGA
+						ai = no
+					}
+					UGA = {
+						inherit = KEN
+						inherit = TAN
+						any_owned = {
+							add_core = XEF
+						}
+						change_tag = XEF
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = new_colonial_system
+				}
+			}
+			owner = {
+				any_country = {
+					limit = {
+						tag = TAN
+						ai = no
+					}
+					TAN = {
+						inherit = KEN
+						inherit = UGA
+						any_owned = {
+							add_core = XEF
+						}
+						change_tag = XEF
+					}
+				}
+			}
+		}
+		
+		#Cleanup in the event of new colonial system and all countries involved are AI
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = new_colonial_system
+					KEN = { ai = yes }
+					TAN = { ai = yes }
+					UGA = { ai = yes }
+				}
+			}
+			owner = {
+				any_country = {
+					TAN = {
+						inherit = KEN
+						inherit = UGA
+						any_owned = {
+							add_core = XEF
+						}
+						change_tag = XEF
+					}
+				}
+			}
+		}
+		
+		#Cleanup using the old system
+		any_owned = {
+			limit = {
+				owner = { has_global_flag = old_colonial_system }
+			}
+			owner = {
+				inherit = KEN
+				inherit = TAN
+				inherit = UGA
+				KEN = { all_core = { add_core = XEF } }
+				TAN = { all_core = { add_core = XEF } }
+				UGA = { all_core = { add_core = XEF } }
+				release_vassal = XEF
+				XEF = {
+					government = colonial_government
+					country_event = 800054
+					ruling_party_ideology = conservative
+				}
+				diplomatic_influence = { who = XEF value = 200 }
+			}
+		}
+		
+		#Set cultures and capital for XEF no matter what
 		XEF = {
-			government = colonial_government
-			country_event = 800054
-			ruling_party_ideology = conservative
 			capital = 2047 # Arusha
 			primary_culture = black_anglo #To prevent the weird bug where East Africa becomes 90% British in 10 years
 			add_accepted_culture = british
@@ -60,7 +158,6 @@ country_event = {
 			add_accepted_culture = ganda #Uganda
 			add_accepted_culture = hindi
 		}
-		diplomatic_influence = { who = XEF value = 200 }
 		ai_chance = {
 			factor = 0.05
 		}
@@ -87,18 +184,22 @@ country_event = {
 		war = no
 		
 		#Owns Tanzania
-		is_possible_vassal = TAN
+		OR = {
+			is_possible_vassal = TAN
+			is_our_vassal = TAN
+		}
 	}
 
 	mean_time_to_happen = {
 		months = 12
 		modifier = {
 			factor = 0.1
-			any_owned_province = {
-				is_core = TAN
-				OR = {
-					has_province_modifier = nationalist_agitation
-					controlled_by_rebels = yes
+			TAN = {
+				any_core = {
+					OR = {
+						has_province_modifier = nationalist_agitation
+						controlled_by_rebels = yes
+					}
 				}
 			}
 		}
@@ -107,11 +208,29 @@ country_event = {
 	option = {
 		name = EVT_8029700_A
 		prestige = 10
-		release_vassal = TAN
-		TAN = {
-			government = mandate_government
-			country_event = 800054
-			ruling_party_ideology = conservative
+		random_owned = {
+			limit = {
+				owner = {
+					exists = TAN
+					TAN = { vassal_of = THIS }
+				}
+			}
+			owner = { TAN = { government = mandate_government } }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = TAN }
+				}
+			}
+			owner = {
+				release = TAN
+				TAN = {
+					government = mandate_government
+					country_event = 800054
+					ruling_party_ideology = conservative
+				}
+			}
 		}
 		diplomatic_influence = { who = TAN value = 200 }
 		create_alliance = TAN

@@ -2,7 +2,7 @@ capital = 1735
 primary_culture = berber
 culture = arab
 religion = secularism
-government = absolute_monarchy
+government = mandate_government
 plurality = 3.0
 nationalvalue = nv_order
 literacy = 0.12
@@ -44,10 +44,17 @@ pollution = no_controls
 wage_reform = unregulated_hours
 public_housing_reform = no_public_housing
 # Technologies
+infantry = 1
+radio_network = 1
+containment = 1
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0
 schools = army_tech_school
+
+1950.1.1 = {
+	government = absolute_monarchy
+}
 
 1992.1.1 = {
 	capital = 1735

@@ -1,3 +1,47 @@
+#Colonies/Mandates
+CPV = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+GUB = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+STP = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+ANG = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+MOZ = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+MCA = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+TIM = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+
 army = {
 	name = "Portugal Lisbon Army"
 	location = 521

@@ -1,0 +1,632 @@
+#Industrious Nation
+country_event = {
+	id = 576
+	title = "Industrious Nation"
+	desc = EVTDEESC576
+	picture = "industrious_nation"
+	
+	
+	trigger = {
+		NOT = { has_country_flag = industrious_nation }
+		OR = { 
+			#Higher Education rate is high
+			literacy = 0.30
+
+			#Western European Economies
+			AND = { tag = ENG austrian_school = 1 } 
+			AND = { tag = FRA has_country_modifier = dirigisme } 
+			AND = { tag = ITA has_country_modifier = dirigisme }
+
+			#4 asian tigers
+			AND = { tag = KMT capital = 1485 } tag = SKO tag = HKG tag = SNG tag = MSY
+
+			#Balance for incompetent AI
+			tag = BRU tag = SAA tag = IRQ tag = YUG tag = SAF tag = RHO 
+			tag = CAF tag = KUW tag = UAE tag = QAT tag = BHR tag = AST 
+			tag = NZL tag = XCC tag = XEU tag = SWE tag = NOR tag = USA
+
+			tag = AUS tag = SWI tag = LUX tag = BEL tag = NET tag = DEN
+			tag = POR tag = FIN tag = IRE tag = CAN tag = SPA tag = ISR
+			tag = DAI tag = SVI tag = SYR tag = LBY tag = GRE tag = PER 
+
+			#Historical Economic Great Powers
+			AND = { tag = GER is_vassal = no OR = { has_country_modifier = germaneconomy year = 1990 } }
+			AND = { tag = FRG is_vassal = no OR = { has_country_modifier = germaneconomy year = 1990 } }
+			AND = { tag = JAP is_vassal = no OR = { has_country_modifier = japaneseeconomy year = 1990 } }
+  
+		}
+	}
+	
+	option = {
+		name = "Onwards $COUNTRY$!"
+		set_country_flag = industrious_nation
+		clr_country_flag = economic_malaise
+	}
+}
+
+#Stop AI incompetence bankruptcies
+country_event = {
+	id = 781
+	title = "$COUNTRY_ADJ$ Capital Injection"
+	desc = "International Monetary Aid for $COUNTRY$ has arrived."
+	picture = "GOLD"
+	
+	
+	trigger = {
+NOT = { has_country_modifier = cold_war_hot }
+OR = { AND = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } is_vassal_of = RUS } is_greater_power = yes is_secondary_power = yes tag = SAF AND = { NOT = { war_with = CHI } tag = KMT } tag = ISR tag = SNG tag = HKG AND = { OR = { government = democracy government = democracy1 } tag = SPA } tag = POR tag = TUR tag = YUG tag = SKO tag = KOR tag = AUS tag = DEN tag = FIN tag = SWI tag = SWE tag = NOR tag = MEX tag = PER tag = MSY tag = JAP tag = HND tag = ITA tag = BEL tag = NET }
+
+		#war = no
+
+		ai = yes
+		NOT = { money = 1000000 }
+
+	}
+	
+	option = {
+		name = "Weaknesspays!"
+		treasury = 2000000
+		badboy = -1
+			}
+}
+
+#Stop AI incompetence bankruptcies
+country_event = {
+	id = 782
+	title = "$COUNTRY_ADJ$ Capital Injection"
+	desc = "International Monetary Aid for $COUNTRY$ has arrived."
+	picture = "GOLD"
+	
+	
+	trigger = {
+NOT = { has_country_modifier = cold_war_hot }
+OR = { NOT = { year = 1955 } war = no }
+		tag = USA
+		is_greater_power = yes
+		government = democracy
+		ai = yes
+		NOT = { money = 2000000 }
+
+	}
+	
+	option = {
+		name = "Weaknesspays!"
+		treasury = 2000000
+			}
+}
+
+#JAPAN population boom
+country_event = {
+	id = 1200234
+	title = "Japanese Population Boom"
+	desc = "The war is over and the population is booming, many people are starting to feel that it is okay to have larger families."
+	picture = "japanpopulationboom"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = JAP
+		year = 1946
+		NOT = { year = 1989 }
+		war = no
+		NOT = { has_country_flag = japopboom }
+
+	}
+	
+	option = {
+		name = "A higher birthrate is always good"
+		any_owned = {
+			add_province_modifier = { name = family_values1 duration = 1000 }
+		}
+		set_country_flag = japopboom
+	}
+}
+#USA population boom
+country_event = {
+	id = 1200235
+	title = "American Population Boom"
+	desc = "The war is over and the population is booming, many people are starting to feel that it is ok to have larger families."
+	picture = "germanpopulationboom"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		year = 1946
+		NOT = { year = 1989 }
+		war = no
+		NOT = { has_country_flag = usapopboom }
+
+	}
+	
+	option = {
+		name = "A higher birthrate is always good"
+		any_owned = {
+			add_province_modifier = { name = family_values1 duration = 1000 }
+		}
+		set_country_flag = usapopboom
+	}
+}
+#ISR population boom
+country_event = {
+	id = 1200236
+	title = "Israeli Population Boom"
+	desc = "The war is over and the population is booming, many people are starting to feel that it is ok to have larger families."
+	picture = "germanpopulationboom"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ISR
+		year = 1946
+		NOT = { year = 1989 }
+		war = no
+		NOT = { has_country_flag = isrpopboom }
+
+	}
+	
+	option = {
+		name = "A higher birthrate is always good"
+		any_owned = {
+			add_province_modifier = { name = family_values1 duration = 1000 }
+		}
+		set_country_flag = isrpopboom
+	}
+}
+#GERMAN population boom
+country_event = {
+	id = 1200233
+	title = "German Population Boom"
+	desc = "The war is over and the population is booming, many people are starting to feel that it is ok to have larger families."
+	picture = "germanpopulationboom"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		OR = { tag = GER tag = NGF tag = SGF tag = RHL tag = DDR tag = FRG }
+		year = 1946
+		NOT = { year = 1989 }
+		war = no
+		NOT = { has_country_flag = gerpopboom }
+
+	}
+	
+	option = {
+		name = "A higher birthrate is always good"
+		any_owned = {
+			add_province_modifier = { name = family_values1 duration = 1000 }
+		}
+		set_country_flag = gerpopboom
+	}
+}
+
+#INDIAN population boom
+country_event = {
+	id = 1200237
+	title = "Indian Population Boom"
+	desc = "With the end of the British Raj and the calm after the events of the late 1940s, many people are starting to feel that it is ok to have larger families."
+	picture = "indianpopulationboom"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HND
+		year = 1950
+		NOT = { year = 1965 }
+		is_vassal = no
+		war = no
+		NOT = { has_country_flag = hndpopboom_stage_1 }
+		NOT = { has_global_flag = radical_RAJ_partition }
+
+	}
+	
+	option = {
+		name = "A higher birthrate is always good!"
+		any_owned = {
+			add_province_modifier = { name = family_values1 duration = 3650 }
+		}
+		set_country_flag = hndpopboom_stage_1
+	}
+}
+
+#INDIAN population boom stage 2
+country_event = {
+	id = 1200238
+	title = "Indian Population Boom"
+	desc = "Despite already being considered overpopulated, the Nehru government of India took the stance that simply increasing food production would offset any ill effects of its massive population."
+	picture = "indianpopulationboom"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HND
+		year = 1960
+		NOT = { year = 1970 }
+		is_vassal = no
+		war = no
+		has_country_flag = hndpopboom_stage_1
+		NOT = { has_country_flag = hndpopboom_stage_2 }
+
+	}
+	
+	option = {
+		name = "A higher birthrate is always good!"
+		any_owned = {
+			add_province_modifier = { name = family_values2 duration = 3650 }
+		}
+		set_country_flag = hndpopboom_stage_2
+	}
+}
+
+#INDIAN population boom stage 3
+country_event = {
+	id = 1200238
+	title = "Indian Population Boom"
+	desc = "The efforts of the Nehru government to increase agricultural production to match India's growing population meant that India's population will continue to grow at an exponential pace."
+	picture = "indianpopulationboom"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = HND
+		year = 1970
+		NOT = { year = 1991 }
+		is_vassal = no
+		war = no
+		has_country_flag = hndpopboom_stage_2
+		NOT = { has_country_flag = hndpopboom_stage_3 }
+
+	}
+	
+	option = {
+		name = "A higher birthrate is always good!"
+		any_owned = {
+			add_province_modifier = { name = family_values3 duration = 7300 }
+		}
+		set_country_flag = hndpopboom_stage_3
+	}
+}
+
+#Event for RAJ at war with ENG
+country_event = {
+	id = 19474747
+	title = "War of Indian Independence"
+desc = "With the declaration of independence being rejected by the British overlords, India has no choice but to fight the British to achieve independence. We have asked the princely states to aid us in our struggle!"
+	picture = "warofindianindependence"
+	
+	
+	trigger = {
+		tag = RAJ
+		war_with = ENG
+		war = yes
+	NOT = { has_country_flag = warofindependenceindia }
+	}
+	
+	option = {
+		name = "For an independent India!"
+any_country = { limit = { OR = { tag = HYD tag = MNP tag = RAA tag = IND tag = GWA tag = BER tag = ORI tag = NAX tag = BOD tag = MYS tag = TRA tag = SIK tag = AZK tag = BLO tag = JAK tag = SIN } vassal_of = ENG } country_event = 19474748 }
+		set_country_flag = warofindependenceindia
+		}
+}
+
+country_event = {
+	id = 19474748
+	title = "War of Indian Independence"
+desc = "With the declaration of independence being rejected by the British overlords, India has no choice but to fight the British to achieve independence. The Nationalist Indian Government have asked the princely states to aid them in their struggle!"
+	picture = "warofindianindependence"
+	
+	is_triggered_only = yes
+	option = {
+		name = "Yes we shall join India's struggle"
+		RAJ = { inherit = THIS }
+		}
+}
+
+#Third World
+country_event = {
+	id = 19191
+	title = "Third World Nation"
+	desc = EVT_15403_DESC
+	picture = "colonialism_self_rule"
+	
+	
+	trigger = {
+		NOT = { year = 1946 }
+		NOT = { has_country_flag = third }
+		NOT = { OR = { tag = SNG tag = HKG tag = ISR tag = AST tag = NZL tag = SAF tag = RHO tag = MSY tag = BRU tag = JAP tag = SKO tag = KOR tag = KMT tag = RUS } } 
+OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = presidential_dictatorship government = theocracy tag = PAK }
+			}
+	
+	option = {
+		name = "We shall strive to be a first world nation!"
+	add_country_modifier = { name = thirdworldnation
+duration = -1 }
+		set_country_flag = third
+		}
+}
+
+#No more Third World
+country_event = {
+	id = 19192
+	title = "No longer a Third World Nation"
+	desc = EVT_15403_DESC
+	picture = "colonialism_self_rule"
+	
+	
+	trigger = {
+		year = 2000
+		has_country_flag = third
+		NOT = { tag = PAK }
+		OR = { is_greater_power = yes 
+		is_secondary_power = yes }
+		}
+	
+	option = {
+		name = "We are now a first world nation!"
+	remove_country_modifier = thirdworldnation
+		clr_country_flag = third
+		}
+}
+
+#Decolonisation
+country_event = {
+	id = 1615
+	title = "Decolonisation"
+	desc = EVT_15403_DESC
+	picture = "colonialism_self_rule"
+
+is_triggered_only = yes
+		
+	option = {
+		name = "We have to adapt to this changing environment"
+		activate_technology = decolonization		activate_technology = wars_of_national_liberation
+		set_country_flag = decoloniasation1
+		}
+}
+
+#Release KMT
+country_event = {
+	id = 444
+	title = "The Nationalist Government has fled to Taiwan"
+	desc = "General Chiang has led a successful evacuation of the Nationalist forces to the island of Taiwan to plot a new campaign to reseize the mainland."
+	picture = "kmt_end_of_instability"
+	
+	
+	trigger = {
+		NOT = { year = 1955 }
+		exists = CHI
+		CHI = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+		NOT = { has_country_flag = releasekmt }
+		tag = TAI
+		NOT = { exists = KMT }
+	}
+	
+	option = {
+		name = "We shall push on!"
+change_tag = KMT
+government = presidential_dictatorship
+country_event = 800050
+		CHI = { any_owned = { 
+			limit = { OR = { province_id = 1485 province_id = 1499 province_id = 2576 province_id = 2562 } }
+			secede_province = KMT
+		} }
+KMT = { end_war = ETS }
+KMT = { any_owned = { limit = { is_core = ETS } secede_province = CHI } }
+		CHI = { country_event = 90904 }
+		set_country_flag = releasekmt
+		}
+}
+
+#Test Event
+country_event = {
+	id = 8888
+	title = "Test Event"
+	desc = "Test Event"
+	picture = "GOLD"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "Testing is fun!"
+		remove_country_modifier = relations_timer 
+			}
+}
+
+country_event = {
+	id = 8889
+	title = "End of the Portugese Empire"
+	desc = "The end of the Portugese Empire."
+	picture = "endofpor"
+	
+	
+	trigger = {
+		tag = POR
+		has_country_flag = nonapplicableinactivated
+		OR = { government = democracy year = 1970 }
+	NOT = { AND = { exists = ANG exists = MOZ exists = GUB } }
+		NOT = { has_country_flag = endofpor }
+
+	}
+	
+	option = {
+		name = "This is it!"
+		release = ANG
+		release = MOZ
+		release = GUB
+		release = TIM
+		set_country_flag = endofpor
+			}
+}
+
+country_event = {
+	id = 6666
+	title = "Massive Corruption!"
+	desc = "The excesses of power by our Head of State has caused corruption to take root in our country."
+	picture = "corruption"
+	
+	
+	trigger = {
+		war = no
+		#NOT = { government = absolute_monarchy }
+		#NOT = { government = democracy }
+		#NOT = { government = proletarian_dictatorship }
+		#NOT = { government = proletarian_dictatorship1 }
+		#NOT = { government = sar_government }
+		#NOT = { government = colonial_government }
+		#NOT = { government = hms_government }
+		NOT = { has_country_flag = corruptionbegins }
+		#NOT = { tag = CHI }
+OR = { AND = { tag = IDO ai = yes } AND = { tag = BRZ year = 1980 ai = yes } }
+	}
+	
+	option = {
+		name = "That is bad news!"
+		
+add_country_modifier = { name = massive_corruption
+duration = 12410 }
+		
+		set_country_flag = corruptionbegins
+			}
+}
+
+country_event = {
+	id = 66667
+	title = "We are considered a Superpower"
+	desc = "The power and influence of our nation has made us considered a Superpower."
+	picture = "super_powers"
+	
+	
+	trigger = {
+
+		OR = { rank = 1 rank = 2 }
+		has_country_flag = is_disabled_for_now
+NOT = { has_country_flag = superpower }
+	}
+	
+	option = {
+		name = "That is super!"
+		
+		add_country_modifier = { name = superpower
+duration = 99999 }
+		
+		set_country_flag = superpower
+			}
+}
+
+country_event = {
+	id = 66668
+	title = "We are no longer considered a Superpower"
+	desc = "The power and influence of our nation that made us considered a Superpower has been lost and thus our status too."
+	picture = "super_powers"
+	
+	
+	trigger = {
+
+		NOT = { rank = 1 }
+		NOT = { rank = 2 }
+		
+	has_country_flag = superpower
+
+	}
+	
+	option = {
+		name = "That is terrible!"
+		
+		remove_country_modifier = superpower
+		
+		clr_country_flag = superpower
+			}
+}
+
+country_event = {
+	id = 6667
+	title = "Corruption has been reduced!"
+	desc = "The excesses of power by our previous Head of State has caused corruption to take root in our country but with the overthrow of the regime corruption has been brought back to more resonable levels."
+	picture = "corruption"
+	
+	
+	trigger = {
+OR = { AND = { tag = IDO ai = no } AND = { tag = BRZ ai = no } }
+		#crime_fighting = 0.30
+		has_country_flag = corruptionbegins
+	}
+	
+	option = {
+		name = "That is good news!"
+		
+		remove_country_modifier = massive_corruption
+		
+		clr_country_flag = corruptionbegins
+			}
+}
+
+#G8 join
+country_event = {
+	id = 1975
+	title = "$COUNTRY$ Joins the G8"
+	desc = EVTDESC1975
+	picture = "g8_join_image"
+	
+	trigger = {
+		year = 1975
+		is_greater_power = yes
+		NOT = { has_country_flag = gg }
+		NOT = { AND = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist } }
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "Good, we shall announce it to the world at noon today!"
+		add_country_modifier = { name = g8 duration = -1 }
+		prestige = 10
+		set_country_flag = gg
+	}
+}
+
+#G8 leave
+country_event = {
+	id = 1976
+	title = "$COUNTRY$ Leaves the G8"
+	desc = EVTDESC1975
+	picture = "g8_leave_image"
+	
+	trigger = {
+		has_country_flag = gg
+		OR = { is_greater_power = no AND = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist } }
+	}
+	
+	mean_time_to_happen = { months = 6 }
+	
+	option = {
+		name = "That's bad but we must still announce it to the world at noon today"
+		remove_country_modifier = g8
+		prestige = -20
+		clr_country_flag = gg
+	}
+}
+
+#Post War protectionism
+country_event = {
+	id = 1123
+	title = "Post-War protectionism"
+	desc = "In the wake of the economically devastating Second World War, many countries used protectionist measures to protect their economy from the rough global markets."
+	picture = "Merchants"
+	
+	
+	trigger = {
+		NOT = { year = 1990 }
+		NOT = { tag = ENG }
+		NOT = { tag = USA }
+		NOT = { tag = SNG }
+		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+		NOT = { has_country_flag = postwarprotectionism }
+	}
+	
+	option = {
+		name = "Raise the tariffs!"
+add_country_modifier = { name = protectionism duration = -1 }
+		set_country_flag = postwarprotectionism
+		}
+}
+

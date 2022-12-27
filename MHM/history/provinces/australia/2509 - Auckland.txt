@@ -5,6 +5,7 @@ trade_goods = fruit
 life_rating = 30
 terrain = deciduous_forest_hills
 colonial = 0
+naval_base = 1
 state_building = {
 	level = 2
 	building = canned_meat_factory

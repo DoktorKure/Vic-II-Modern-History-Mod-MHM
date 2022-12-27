@@ -1,16 +1,17 @@
-owner = SAF
-controller = SAF
+owner = NAM
+controller = NAM
 add_core = SAF
 trade_goods = fish
 life_rating = 35
 terrain = desert
+naval_base = 1
 colonial = 0
-1992.1.1 = {
-owner = SAF
-controller = SAF
-add_core = NAM
-add_core = SAF
-life_rating = 35
-colonial = 0
-naval_base = 2
+1992.1.1 = { 
+    owner = SAF
+    controller = SAF
+    add_core = NAM
+    add_core = SAF
+    life_rating = 35
+    colonial = 0
+    naval_base = 2
 }

@@ -1,5 +1,7 @@
 graphical_culture = AsianGC
 color = { 129 81 124 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "Sabah United"
 		citizenship_policy = limited_citizenship
