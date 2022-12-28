@@ -197,8 +197,9 @@ country_event = {
 	
 	option = {
 		name = "We had a good run."
-		clr_country_flag = ibrd_chairmanship
 		random_country = { limit = { AND = { NOT = { has_country_modifier = ibrd_chairmanship } has_country_modifier = ibrd_member has_country_modifier = creditor_nation } } country_event = 1300022 }
+		remove_country_modifier = ibrd_chairmanship
+		clr_country_flag = ibrd_chairmanship
 	}
 }
 
@@ -217,6 +218,7 @@ country_event = {
 		prestige = 10
 		add_country_modifier = { name = ibrd_chairmanship duration = 1825 }
 		set_country_flag = ibrd_chairmanship
+		FROM = { clr_country_flag = ibrd_chairmanship remove_country_modifier = ibrd_chairmanship } #Just in case
 	}
 }
 
