@@ -135,16 +135,18 @@ country_event = {
 	title = "Chairmanship of the IMF"
 	desc = "The Chairmanship of the IMF is rotating and the Chairmanship has come to us. The Chairmanship only lasts 5 years." 
 	picture = "world_bank"
-	
-is_triggered_only = yes
+	is_triggered_only = yes
 	major = yes
+	
 	option = {
-	name = "Splendid!"
-prestige = 10
-add_country_modifier = { name = imf_chairmanship duration = 1825 }
-set_country_flag = imf_chairmanship
-		}
+		name = "Splendid!"
+		prestige = 10
+		add_country_modifier = { name = imf_chairmanship duration = 1825 }
+		set_country_flag = imf_chairmanship
+		FROM = { clr_country_flag = imf_chairmanship remove_country_modifier = imf_chairmanship } #Just in case
+	}
 }
+
 #Rotating Chairmanship of the WTO
 country_event = {
 	id = 1300019
@@ -165,21 +167,23 @@ country_event = {
 		clr_country_flag = wto_chairmanship
 	}
 }
+
 #Rotating Chairmanship of the WTO - select the new leader
 country_event = {
 	id = 1300020
 	title = "Chairmanship of the WTO"
 	desc = "The Chairmanship of the WTO is rotating and the Chairmanship has come to us. The Chairmanship only lasts 5 years." 
 	picture = "world_bank"
-	
-is_triggered_only = yes
+	is_triggered_only = yes
 	major = yes
+	
 	option = {
-	name = "Splendid!"
-prestige = 10
-add_country_modifier = { name = wto_chairmanship duration = 1825 }
-set_country_flag = wto_chairmanship
-		}
+		name = "Splendid!"
+		prestige = 10
+		add_country_modifier = { name = wto_chairmanship duration = 1825 }
+		set_country_flag = wto_chairmanship
+		FROM = { clr_country_flag = wto_chairmanship remove_country_modifier = wto_chairmanship } #Just in case
+	}
 }
 
 #Rotating Chairmanship of the IBRD
