@@ -106,32 +106,44 @@ country_event = {
 						GUI = { set_country_flag = former_colonial_nation } 	
 						diplomatic_influence = { who = GUI value = 200 }
 					}
-					20 = { AOF = { GUI = { country_event = 989898 } } }
+					20 = {
+						AOF = { release = GUI }
+						GUI = { country_event = 989898 }
+					}
 				}
-
+			}
+			owner = {
 				#Create French dominions
 				AOF = {
-					any_country = {
-						limit = {
-							OR = { tag = MAU tag = IVC tag = BUF tag = NIG tag = MLI tag = BEN }
-							exists = no
-						}
-						country_event = 989898
-					}
+					release = MAU
+					release = IVC
+					release = BUF
+					release = NIG
+					release = MLI
+					release = BEN
+					release = TOG #In case it wasn't partitioned away
 					change_tag = SEN
 					country_event = 989898
 				}
 				AEF = {
-					any_country = {
-						limit = {
-							OR = { tag = CHA tag = GAB tag = ROC }
-							exists = no
-						}
-						country_event = 989898
-					}
+					release = CHA
+					release = GAB
+					release = ROC
 					change_tag = CAR
 					country_event = 989898
 				}
+			}
+			owner = {
+				MAU = { country_event = 989898 }
+				IVC = { country_event = 989898 }
+				BUF = { country_event = 989898 }
+				NIG = { country_event = 989898 }
+				MLI = { country_event = 989898 }
+				BEN = { country_event = 989898 }
+				TOG = { country_event = 989898 }
+				CHA = { country_event = 989898 }
+				GAB = { country_event = 989898 }
+				ROC = { country_event = 989898 }
 
 				#Madagascar situation
 				any_owned = { limit = { is_core = MAD } secede_province = MAD }
@@ -268,23 +280,20 @@ country_event = {
 				}
 			}
 		}
-		FROM = { any_owned = { limit = { controlled_by_rebels = yes is_core = THIS } secede_province = THIS } }
-		
-		#Clean up in case it was AEF/AOF who released this as a vassal, FROM in this instance would be one of the two tags
-		random_owned = {
-			limit = {
-				owner = {
-					OR = {
-						vassal_of = AEF
-						vassal_of = AOF
+		#New colonial system
+		FROM = {
+			random_owned = {
+				limit = {
+					owner = {
+						has_global_flag = new_colonial_system
 					}
 				}
-			}
-			owner = {
-				FROM = { release_vassal = THIS }
-				FRA = { create_vassal = THIS }
+				owner = {
+					create_vassal = THIS
+				}
 			}
 		}
+		FROM = { any_owned = { limit = { controlled_by_rebels = yes is_core = THIS } secede_province = THIS } }
 
 		#Create Colonial Government
 		government = democracy
