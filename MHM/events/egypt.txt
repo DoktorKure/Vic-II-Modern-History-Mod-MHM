@@ -112,7 +112,9 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = { months = 10 }
+	mean_time_to_happen = { months = 10
+		modifier = { factor = 0.1 year = 1952 }
+	}
 
 	option = {
 		name = "Claim the Sudan"
