@@ -819,6 +819,41 @@ country_event = {
 		ai_chance = { factor = 0.05 }
 	}
 	
+	option = {
+		name = "Play as Israel and fight the Arab countries!"
+		
+		set_global_flag = arab_israeli_war_1948_flag
+		
+		any_country = {
+			limit = { is_culture_group = arabic }
+			relation = { who = THIS value = 200 }
+		}
+		
+		#Invite the Arab states
+		any_country = {
+			limit = { 
+				is_vassal = no 
+				war = no
+				OR = { tag = JOR tag = EGY tag = IRQ tag = SYR tag = LEB tag = SAA tag = YEM }
+			}
+			create_alliance = THIS
+		}
+
+		war = {
+			target = ISR
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		
+		#US aid for Israel?
+		random_country = { limit = { tag = USA has_global_flag = blocsenabled } country_event = 1007603 }
+		
+		change_tag_no_core_switch = ISR
+		
+		ai_chance = { factor = 0 }
+	}
+	
 }
 
 #Palestine lost the 1948 war, PAL annexed by Jordan
