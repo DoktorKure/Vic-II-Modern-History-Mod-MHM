@@ -135,7 +135,7 @@ province_event = {
 				minorities_reform = minorities_oppression
 			}
 		}
-		owner = { NOT = { has_country_flag = colonial_province } } #So it won't fire for colonial provinces in the new colonial system
+		NOT = { has_global_flag = new_colonial_system } #So it won't fire for colonial provinces in the new colonial system
 		
 		#Not a core of the owner
 		NOT = { is_core = THIS }
