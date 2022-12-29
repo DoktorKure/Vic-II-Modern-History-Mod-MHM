@@ -29,18 +29,11 @@ any_country = { limit = { exists = yes war = no NOT = { truce_with = THIS } any_
 	sponsor_terror = {
 		picture = "jihad"
 		potential = {
-			war_on_terror = 1
+			globalization = 1 #2000
 			has_country_flag = desecularized
 			NOT = { has_country_modifier = relations_timer }
-			OR = {
-				government = theocracy
-				government = absolute_monarchy
-			}
-			OR = {
-				ruling_party_ideology = traditionalist
-				ruling_party_ideology = populist
-				ruling_party_ideology = nationalist
-			}
+			government = theocracy
+			ruling_party_ideology = traditionalist
 		}
 
 		effect = {
