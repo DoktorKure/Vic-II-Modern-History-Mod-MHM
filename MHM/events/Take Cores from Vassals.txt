@@ -39,12 +39,7 @@ country_event = {
 
     option = {
         name = "There is nothing we can do."
-        any_country = {
-            limit = {
-                is_sphere_leader_of = THIS
-            }
-            country_event = 9705981
-        }
+        overlord = { country_event = 9705981 }
         ai_chance = {
             factor = 100
         }
