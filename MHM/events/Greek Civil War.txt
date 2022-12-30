@@ -418,6 +418,17 @@ country_event = {
 			}
 			owner = { inherit = UGR }
 		}
+		
+		#GRE doesn't exist but UGR does
+		random_owned = {
+			limit = { 
+				owner = { 
+					tag = UGR
+					GRE = { exists = no }
+				} 
+			}
+			owner = { change_tag = GRE }
+		}
 
 	}
 
