@@ -205,6 +205,18 @@
         religion = sunni
         size = 598132
     }
+
+    bureaucrats = {
+        culture = bengali_hindu
+        religion = hindu
+        size = 104
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 1041
+    }
 }
 #Bytantaysk - Mirzapur (4182000/1045500 POPS)
 1071 = {
@@ -353,6 +365,12 @@
         religion = sunni
         size = 140986
     }
+	
+	bureaucrats = {
+        culture = pashtun
+        religion = sunni
+        size = 1048
+    }
 }
 #Quetta - Quetta (874000/218500 POPS)
 1219 = {
@@ -385,6 +403,12 @@
         religion = sunni
         size = 196363
     }
+	
+	bureaucrats = {
+        culture = pashtun
+        religion = sunni
+        size = 748
+    }
 }
 #Chitral - Chitral (980000/245000 POPS)
 1223 = {
@@ -416,6 +440,12 @@
         culture = pashtun
         religion = sunni
         size = 220175
+    }
+	
+	bureaucrats = {
+        culture = pashtun
+        religion = sunni
+        size = 748
     }
 }
 #Lahore - Lahore (4072000/1018000 POPS)
@@ -503,6 +533,18 @@
         religion = shiite
         size = 171687
     }
+	
+	bureaucrats = {
+        culture = punjabi
+        religion = sunni
+        size = 1594
+    }
+	
+	bureaucrats = {
+        culture = punjabi
+        religion = shiite
+        size = 194
+    }
 }
 #Multan - Multan (3498000/874500 POPS)
 1228 = {
@@ -534,6 +576,12 @@
         culture = punjabi
         religion = sunni
         size = 785896
+    }
+	
+	bureaucrats = {
+        culture = punjabi
+        religion = sunni
+        size = 1594
     }
 }
 #Sialkot - Sialkot (3693000/923250 POPS)
@@ -573,6 +621,12 @@
         religion = shiite
         size = 174171
     }
+	
+	bureaucrats = {
+        culture = punjabi
+        religion = sunni
+        size = 1594
+    }
 }
 #Attock - Attock (2119000/529750 POPS)
 1230 = {
@@ -604,6 +658,12 @@
         culture = punjabi
         religion = sunni
         size = 476077
+    }
+	
+	bureaucrats = {
+        culture = punjabi
+        religion = sunni
+        size = 2094
     }
 }
 #Bahawalpur - Bahawalpur (2431000/607750 POPS)
@@ -709,6 +769,12 @@
         religion = sunni
         size = 527920
     }
+	
+	bureaucrats = {
+        culture = punjabi
+        religion = sunni
+        size = 1594
+    }
 }
 #Shahpur - Shahpur (3252000/813000 POPS)
 1232 = {
@@ -740,6 +806,12 @@
         culture = punjabi
         religion = sunni
         size = 730626
+    }
+	
+	bureaucrats = {
+        culture = punjabi
+        religion = sunni
+        size = 1594
     }
 }
 #Amritsar - Punjab (4580500/1145125 POPS)
@@ -3251,6 +3323,18 @@
         religion = sunni
         size = 1444498
     }
+
+    bureaucrats = {
+        culture = bengali_hindu
+        religion = hindu
+        size = 204
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 1541
+    }
 }
 #Rajshahi - Rajshahi, Rangpur (6599000/1649750 POPS)
 1255 = {
@@ -3354,6 +3438,18 @@
         culture = bengali
         religion = sunni
         size = 1299130
+    }
+
+    bureaucrats = {
+        culture = bengali_hindu
+        religion = hindu
+        size = 104
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 1041
     }
 }
 #Jessore - Khulna, Barisal (4744000/1186000 POPS)
@@ -3459,6 +3555,18 @@
         religion = sunni
         size = 874641
     }
+
+    bureaucrats = {
+        culture = bengali_hindu
+        religion = hindu
+        size = 104
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 1041
+    }
 }
 #Chittagong - Chittagong (5037000/1259250 POPS)
 1257 = {
@@ -3514,6 +3622,18 @@
         culture = bengali
         religion = secularism
         size = 282
+    }
+
+    bureaucrats = {
+        culture = bengali_hindu
+        religion = hindu
+        size = 104
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 1041
     }
 }
 #Gauhati - Meghalaya (1239000/309750 POPS)
@@ -4819,6 +4939,12 @@
         religion = sunni
         size = 33237
     }
+	
+	bureaucrats = {
+        culture = sindi
+        religion = sunni
+        size = 5094
+    }
 }
 #Sukkur - Sukkur (1625000/406250 POPS)
 1289 = {
@@ -4856,6 +4982,12 @@
         culture = sindi
         religion = sunni
         size = 291950
+    }
+	
+	bureaucrats = {
+        culture = sindi
+        religion = sunni
+        size = 1594
     }
 }
 #Umarkot - Umarkot (707000/176750 POPS)
@@ -4954,6 +5086,12 @@
         culture = sindi
         religion = sunni
         size = 127019
+    }
+	
+	bureaucrats = {
+        culture = sindi
+        religion = sunni
+        size = 1594
     }
 }
 #Ahmedabad - Gujarat (5946000/1486500 POPS)
@@ -7427,6 +7565,18 @@
         religion = sunni
         size = 1183222
     }
+
+    bureaucrats = {
+        culture = bengali_hindu
+        religion = hindu
+        size = 104
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 1041
+    }
 }
 #Ust Nera - Muzaffarpur (5019000/1254750 POPS)
 2642 = {
@@ -8167,6 +8317,18 @@
         religion = hindu
         size = 436950
     }
+
+    bureaucrats = {
+        culture = bengali_hindu
+        religion = hindu
+        size = 104
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 1041
+    }
 }
 #Gheta - Comilla (2963000/740750 POPS)
 2658 = {
@@ -8210,6 +8372,18 @@
         culture = bengali
         religion = secularism
         size = 165
+    }
+
+    bureaucrats = {
+        culture = bengali_hindu
+        religion = hindu
+        size = 104
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 1041
     }
 }
 #Bereyezovka - Midnapore (5019000/1254750 POPS)
@@ -8731,6 +8905,18 @@
         religion = sunni
         size = 1183222
     }
+
+    bureaucrats = {
+        culture = bengali_hindu
+        religion = hindu
+        size = 104
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 1041
+    }
 }
 #Verkhoyansk - Darbhanga (5019000/1254750 POPS)
 2668 = {
@@ -9251,6 +9437,12 @@
         religion = shiite
         size = 130967
     }
+	
+	bureaucrats = {
+        culture = punjabi
+        religion = sunni
+        size = 1594
+    }
 }
 #Essey - Salem (3189000/797250 POPS)
 2674 = {
@@ -9509,6 +9701,18 @@
         religion = secularism
         size = 63
     }
+
+    bureaucrats = {
+        culture = bengali_hindu
+        religion = hindu
+        size = 104
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 1041
+    }
 }
 #Kostino - Rangpur (3555000/888750 POPS)
 2692 = {
@@ -9612,6 +9816,18 @@
         culture = bengali
         religion = sunni
         size = 699864
+    }
+
+    bureaucrats = {
+        culture = bengali_hindu
+        religion = hindu
+        size = 104
+    }
+
+    farmers = {
+        culture = bengali
+        religion = sunni
+        size = 1041
     }
 }
 #Uchami - Guwahati (5019000/1254750 POPS)

@@ -89,7 +89,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				war_policy = anti_military
+				war_policy = pacifism
 			}
 			modifier = {
 				factor = 3
@@ -165,7 +165,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.25
-				war_policy = anti_military
+				war_policy = pacifism
 			}					
 			modifier = {
 				factor = 0.5
@@ -241,7 +241,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.25
-				war_policy = anti_military
+				war_policy = pacifism
 			}					
 			modifier = {
 				factor = 0.5
@@ -316,7 +316,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				war_policy = anti_military
+				war_policy = pacifism
 			}
 			modifier = {
 				factor = 1.5
@@ -409,7 +409,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.25
-				war_policy = anti_military
+				war_policy = pacifism
 			}					
 			modifier = {
 				factor = 0.5
@@ -507,7 +507,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				war_policy = anti_military
+				war_policy = pacifism
 			}
 			modifier = {
 				factor = 1.5
@@ -549,10 +549,6 @@ country_event = {
 		relation = {
 			who = FROM
 			value = -25
-		}
-		add_country_modifier = {
-			name = no_freedom
-			duration = 1825
 		}
 	}
 }
@@ -596,10 +592,6 @@ country_event = {
 				is_sphere_leader_of = THIS
 			}
 			country_event = 800022
-		}
-		add_country_modifier = {
-			name = no_freedom
-			duration = 1825
 		}
 	}
 }
@@ -760,7 +752,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.25
-				war_policy = anti_military
+				war_policy = pacifism
 			}
 			modifier = {
 				factor = 0
@@ -844,7 +836,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 2
-				war_policy = anti_military
+				war_policy = pacifism
 			}
 			modifier = {
 				factor = 2

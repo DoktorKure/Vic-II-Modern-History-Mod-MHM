@@ -19,6 +19,184 @@ USA = {
 RUS = {
 	truce_until = 1950.1.1
 }
+
+#Colonies/Mandates
+TRI = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+SUD = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+ERI = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+SML = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+KEN = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+UGA = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+TAN = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+MLW = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+ZAM = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+BOT = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+NAM = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+NGE = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+GHA = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+SRN = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+GAM = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+GUY = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+BLZ = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+MAL = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+CYP = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+PAL = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+SYE = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+SRL = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+BUR = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+SNG = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+SWK = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+BRU = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+SAB = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+HKG = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+PPN = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+
+#Occupation Zones
 OG3 = {
 	level = 5
 	value = 200
@@ -222,6 +400,12 @@ AZK = {
 	military_access = yes
 }
 RAJ = {
+	level = 5
+	value = 200
+	influence_value = 25
+	military_access = yes
+}
+PAK = {
 	level = 5
 	value = 200
 	influence_value = 25

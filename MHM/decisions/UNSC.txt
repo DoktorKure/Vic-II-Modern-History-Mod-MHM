@@ -77,7 +77,14 @@ political_decisions = {
 		allow = {
 			war = no
 			election = no
-			cultural_imperialism = 1
+			OR = { #2000 or a UNSC member is no longer a GP
+				cultural_imperialism = 1
+				RUS = { has_country_modifier = unsc_permanent_member is_greater_power = no }
+				CHI = { has_country_modifier = unsc_permanent_member is_greater_power = no }
+				FRA = { has_country_modifier = unsc_permanent_member is_greater_power = no }
+				ENG = { has_country_modifier = unsc_permanent_member is_greater_power = no }
+				USA = { has_country_modifier = unsc_permanent_member is_greater_power = no }
+			}
 			NOT = { badboy = 0.2 }
 			NOT = { 
 				any_greater_power = { 
@@ -89,7 +96,7 @@ political_decisions = {
 			}
 		}
 		effect = {
-			prestige = 1000
+			prestige = 2500
 			add_country_modifier = { name = unsc_permanent_member duration = -1 }
 			set_country_flag = new_unsc_permanent_member
 		}

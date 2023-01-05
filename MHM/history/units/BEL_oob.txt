@@ -4,6 +4,12 @@ RWA = {
 	influence_value = 25
 	military_access = yes
 }
+CNG = {
+	level = 5
+	value = 200
+	influence_value = 25
+	military_access = yes
+}
 LUX = {
 	level = 3
 	value = 100

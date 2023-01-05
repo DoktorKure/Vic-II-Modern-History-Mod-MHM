@@ -5,7 +5,7 @@ political_decisions = {
 		potential = {
 			OR = { tag = GER tag = FRG }
 			OR = { government = democracy government = democracy1 }
-			is_vassal = no
+			OR = { is_vassal = no vassal_of USA }
 			NOT = { has_country_flag = german_monarchy_fired_already }
 		}
 	
@@ -13,22 +13,31 @@ political_decisions = {
 			war = no
 			election = no
 			NOT = { militancy = 4 }
-			ruling_party_ideology = traditionalist
+			
+			#Not a theocracy
+			NOT = { government = theocracy }
+			
+			#Traditionalist majority
+			AND = {
+				ruling_party_ideology = traditionalist
+				pop_majority_ideology = traditionalist
+				upper_house = { ideology = traditionalist value = 0.66 }
+			}
 		}
 
 		effect = {
 
 			set_country_flag = german_monarchy_fired_already
 
-			#If Germany is majority traditionalist - No plebscite needed
+			#If Germany is independent - No plebscite needed
 			random_owned = { 
-				limit = { owner = { pop_majority_ideology = traditionalist } }
+				limit = { owner = { is_vassal = no } }
 				owner = { government = hms_government }
 			}
 
-			#If Germany is not majority traditionalist - Plebscite needed
+			#If Germany is vassalized - plebiscite needed
 			random_owned = { 
-				limit = { owner = { NOT = { pop_majority_ideology = traditionalist } } }
+				limit = { owner = { vassal_of = USA } }
 				owner = { set_country_flag = restore_german_monarchy }
 			}
 
@@ -48,6 +57,7 @@ political_decisions = {
 			OR = { government = democracy government = democracy1 }
 			vassal_of = USA
 			NOT = { has_country_flag = german_monarchy_fired_USA }
+			has_country_flag = restore_german_monarchy
 			has_global_flag = blocsenabled
 		}
 	

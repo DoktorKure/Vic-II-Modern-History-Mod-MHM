@@ -1,5 +1,10 @@
 graphical_culture = AsianGC
 color = { 164 217 127 }
+colonial_government = { 43 175 43 }
+proletarian_dictatorship = { 221 116 95 }
+proletarian_dictatorship1 = { 221 116 95 }
+socialist_democracy = { 221 116 95 }
+
 party = {
 		name = "party_nationalist"
 		citizenship_policy = limited_citizenship

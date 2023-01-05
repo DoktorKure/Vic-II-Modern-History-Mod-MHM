@@ -15,7 +15,10 @@ country_event = { # Rwanda Independence
 	
 		is_our_vassal = RWA
 		NOT = { exists = BRN }
-		exists = CNG
+		AND = {
+			exists = CNG
+			CNG = { is_vassal = no }
+		}
 		
 		#owns = 2034
 	}

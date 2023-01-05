@@ -1,0 +1,278 @@
+#Self-Rule in Gambia
+country_event = {
+  id = 8009300
+  title = "Self-Rule in The Gambia"
+  desc = EVTDESC8009300
+  picture = "independence_gambia"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = ENG
+    	year = 1962 
+		NOT = { year = 1990 }
+		
+		government = hms_government
+		is_vassal = no
+		war = no
+		
+		OR = {
+			is_possible_vassal = GAM
+			is_our_vassal = GAM
+		}
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Grant them full internal self-governance"
+		prestige = 10
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = GAM }
+				}
+			}
+			owner = {
+				release_vassal = GAM
+				GAM = { 
+					government = colonial_government
+					country_event = 800054
+					ruling_party_ideology = big_tent
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = GAM
+				}
+			}
+			owner = {
+				GAM = { 
+					government = hms_government
+					country_event = 800054
+					ruling_party_ideology = big_tent
+				}
+			}
+		}
+		
+		diplomatic_influence = { who = GAM value = 200 } 
+		ai_chance = { factor = 0.8 }
+	}
+  
+	option = {
+		name = "Keep Gambia as a Crown Colony!"
+		prestige = -25
+		badboy = 3
+		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = GAM }
+				}
+			}
+			owner = {
+				
+				any_owned = { 
+					limit = { is_core = GAM } 
+					any_pop = { 
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.15 value = nationalist }
+					} 
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = GAM
+				}
+			}
+			owner = {
+				GAM = {
+					any_pop = { 
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.15 value = nationalist }
+					} 
+					any_owned = { limit = { is_core = GAM } add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+				}
+			}
+		}
+
+		ai_chance = { factor = 0.2 }
+	}
+  
+}
+
+# Independence of Gambia
+country_event = {
+  id = 8009301
+  title = "Independence of The Gambia"
+  desc = EVT_8009300_DESC
+  picture = "full_independence_gambia"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = ENG
+		year = 1965 
+		NOT = { year = 1990 }
+		
+		government = hms_government
+		is_vassal = no
+		war = no
+		
+		is_our_vassal = GAM
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Set them free!"
+		prestige = 10
+		
+		release_vassal = GAM
+		
+		GAM = { 
+			government = hms_government1 
+			ruling_party_ideology = conservative
+			set_country_flag = former_colonial_nation
+		}
+		
+		diplomatic_influence = { who = GAM value = 200 } 
+		ai_chance = { factor = 0.8 }
+	}
+  
+	option = {
+		name = "Delay independence"
+		prestige = -25
+		badboy = 3
+		
+		GAM = { 
+			any_pop = { 
+				militancy = 10
+				consciousness = 10
+				ideology = { factor = 0.15 value = nationalist }
+				ideology = { factor = 0.05 value = communist }
+			} 
+			add_country_modifier = { name = revolution_chaos duration = 3650 } 
+		}
+		
+		#Anger throughout British Africa
+		any_pop = { limit = { location = { continent = africa } } militancy = 8 consciousness = 5.0 }
+		any_country = {
+			limit = {
+				vassal_of = THIS
+				government = colonial_government
+			}
+			any_pop = { limit = { location = { continent = africa } } militancy = 8 consciousness = 5.0 }
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+  
+}
+
+#The Senegambia Confederation
+country_event = {
+	id = 1512034
+	title = "The Senegambia Confederation"
+	desc = EVTDESC1512034
+	picture = "sen_gam_union"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SEN
+		election = no
+		war = no
+		is_vassal = no
+		GAM = { exists = yes is_vassal = no ai = yes }
+		year = 1982
+		NOT = { year = 1991 }
+	}
+
+	mean_time_to_happen = { 
+		months = 2
+	}
+
+	option = {
+		name = "Form a full union!"
+		prestige = 100
+		inherit = GAM
+		any_owned = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+		ai_chance = { factor = 0.2 }
+	}
+
+	option = {
+		name = "Adopt a confederation structure"
+		prestige = 50
+		create_vassal = GAM
+		create_alliance = GAM
+		GAM = { ruling_party_ideology = conservative }
+		ai_chance = { factor = 0.7 }
+	}
+
+	option = {
+		name = "We want no Gambians in our glorious nation"
+		prestige_factor = 0.25
+		prestige = 25
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#The Senegambia Confederation end
+country_event = {
+	id = 1512035
+	title = "Dissolution of the Senegambia Confederation"
+	desc = EVTDESC1512035
+	picture = "sen_gam_union_end"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SEN
+		election = no
+		is_vassal = no
+		is_our_vassal = GAM
+		GAM = { exists = yes }
+		year = 1989
+		NOT = { year = 1991 }
+	}
+
+	mean_time_to_happen = { 
+		months = 9
+	}
+
+	option = {
+		name = "End the confederation!"
+		prestige = 100
+		release_vassal = GAM
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Cling on Gambia!"
+		prestige = -50
+		badboy = 5
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		release_vassal = GAM
+
+		war = {
+			target = GAM
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+
+		ai_chance = { factor = 0.2 }
+	}
+
+}

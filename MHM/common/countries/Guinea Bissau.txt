@@ -1,5 +1,10 @@
 graphical_culture = EuropeanGC
-color = { 80 30 20 }
+color = { 67 178 121 }
+colonial_government = { 43 175 43 }
+proletarian_dictatorship = { 178 68 64 }
+proletarian_dictatorship1 = { 178 68 64 }
+socialist_democracy = { 80 30 20 }
+
 party = {
 		name = "Liberation Movement of Guinea"
 		citizenship_policy = limited_citizenship

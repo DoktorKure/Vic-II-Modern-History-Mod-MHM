@@ -1,8 +1,7 @@
 #Gas attack capability
-
-#cold_war_doctrine, 1946 <----- revert to this once colonial rework is done as released nations also inherit all their former owner's inventions
+#cold_war_doctrine, 1946
 modern_gas_weaponry = {
-	limit = { mutual_assured_destruction = 1 }
+	limit = { cold_war_doctrine = 1 }
 	chance = {
 		base = 0
 		modifier = {

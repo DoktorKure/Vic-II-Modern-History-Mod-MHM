@@ -15,6 +15,7 @@ SPA = {
 	truce_until = 1955.1.1
 }
 
+#Occupation Zones
 OG2 = {
 	level = 5
 	value = 200
@@ -31,6 +32,56 @@ OG4 = {
 }
 ROA = {
 	value = 200
+	military_access = yes
+}
+
+#Colonies/Mandates
+FAG = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+AOF = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+AEF = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+CMR = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+DJI = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+GUN = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+MAD = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+FEZ = {
+	level = 5
+	value = 200
+	influence_value = 100
 	military_access = yes
 }
 

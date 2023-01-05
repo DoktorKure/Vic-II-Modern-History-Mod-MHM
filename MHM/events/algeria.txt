@@ -6,7 +6,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-		tag = FRA
+		OR = { tag = FRA tag = FAG }
 		year = 1948 NOT = { year = 1969 }
 		owns = 1700 # Algiers
 	}
@@ -25,11 +25,11 @@ country_event = {
 
 #boumediene_coup
 country_event = {
-  id = 8000313
-  title = EVT_8000313_NAME
-  desc = EVT_8000313_DESC
-  picture = "nwo2_boumediene_coup"
-  fire_only_once = yes
+	id = 8000313
+	title = EVT_8000313_NAME
+	desc = EVT_8000313_DESC
+	picture = "nwo2_boumediene_coup"
+	fire_only_once = yes
 
 	trigger = {
 		tag = ALG
@@ -64,11 +64,11 @@ country_event = {
 
 #1991 elections
 country_event = {
-  id = 8000316
-  title = "$YEAR$ Parliamentary Elections"
-  desc = EVTDESC8000316
-  picture = "1991_ALG_elections"
-  fire_only_once = yes
+	id = 8000316
+	title = "$YEAR$ Parliamentary Elections"
+	desc = EVTDESC8000316
+	picture = "1991_ALG_elections"
+	fire_only_once = yes
 
 	trigger = {
 		tag = ALG
@@ -102,11 +102,11 @@ country_event = {
 
 #1992 Algerian Coup
 country_event = {
-  id = 8000317
-  title = "The $YEAR$ Algerian Coup"
-  desc = EVTDESC8000317
-  picture = "1992_ALG_coup"
-  fire_only_once = yes
+	id = 8000317
+	title = "The $YEAR$ Algerian Coup"
+	desc = EVTDESC8000317
+	picture = "1992_ALG_coup"
+	fire_only_once = yes
 
 	trigger = {
 		tag = ALG
@@ -277,13 +277,39 @@ country_event = {
 		
 		diplomatic_influence = { who = FROM value = -100 }
 		
-		any_pop = { 
-			limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } }
-			militancy = 10
-			consciousness = 5
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ALG }
+					NOT = { exists = FAG }
+				}
+			}
+			owner = {
+				any_pop = { 
+					limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } }
+					militancy = 10
+					consciousness = 5
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FAG
+					is_our_vassal = FAG
+				}
+			}
+			owner = {
+				FAG = {
+					any_pop = { 
+						limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } }
+						militancy = 10
+						consciousness = 5
+					}
+				}
+			}
 		}
 	}
-  
 }
 
 #Philippeville massacre, 1955
@@ -303,7 +329,10 @@ country_event = {
 		war = no
 		
 		#FRA owns ALG
-		is_possible_vassal = ALG
+		OR = {
+			is_possible_vassal = ALG
+			is_our_vassal = FAG
+		}
 	}
 
 	mean_time_to_happen = { months = 8 }
@@ -312,16 +341,69 @@ country_event = {
 		name = "The blood price better be worth it"
 		badboy = 2.5
 		
-		any_pop = { 
-			limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } } 
-			militancy = 10
-			consciousness = 5
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ALG }
+					NOT = { exists = FAG }
+				}
+			}
+			owner = {
+				any_pop = { 
+					limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } }
+					militancy = 10
+					consciousness = 5
+				}
+			}
 		}
-		any_owned = {
-			limit = { is_core = ALG }
-			add_province_modifier = { name = generic_uprising duration = 365 }
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FAG
+					is_our_vassal = FAG
+				}
+			}
+			owner = {
+				FAG = {
+					any_pop = { 
+						limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } }
+						militancy = 10
+						consciousness = 5
+					}
+				}
+			}
 		}
 		
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ALG }
+					NOT = { exists = FAG }
+				}
+			}
+			owner = {
+				any_owned = {
+					limit = { is_core = ALG }
+					add_province_modifier = { name = generic_uprising duration = 365 }
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FAG
+					is_our_vassal = FAG
+				}
+			}
+			owner = {
+				FAG = {
+					any_owned = {
+						limit = { is_core = ALG }
+						add_province_modifier = { name = generic_uprising duration = 365 }
+					}
+				}
+			}
+		}
 	}
 
 }
@@ -342,7 +424,10 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		is_possible_vassal = ALG
+		OR = {
+			is_possible_vassal = ALG
+			is_our_vassal = FAG
+		}
 	}
 
 	mean_time_to_happen = { months = 8 }
@@ -352,19 +437,62 @@ country_event = {
 		
 		badboy = 5
 		
-		any_pop = { 
-			limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } } 
-			militancy = 10
-			consciousness = 5
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ALG }
+					NOT = { exists = FAG }
+				}
+			}
+			owner = {
+				any_pop = { 
+					limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } }
+					militancy = 10
+					consciousness = 5
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FAG
+					is_our_vassal = FAG
+				}
+			}
+			owner = {
+				FAG = {
+					any_pop = { 
+						limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } }
+						militancy = 10
+						consciousness = 5
+					}
+				}
+			}
 		}
 		
-		release = ALG
-		ALG = { any_owned = { limit = { NOT = { OR = { province_id = 1707 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } } change_controller = FRA } }
-		
-		war = {
-			target = ALG 
-			attacker_goal = { casus_belli = colonial_war } 
-			defender_goal = { casus_belli = status_quo } 
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ALG }
+					NOT = { exists = FAG }
+				}
+			}
+			owner = {
+				any_owned = { limit = { OR = { province_id = 1707 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } change_controller = REB }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FAG
+					is_our_vassal = FAG
+				}
+			}
+			owner = {
+				FAG = {
+					any_owned = { limit = { OR = { province_id = 1707 province_id = 1706 province_id = 1703 province_id = 1701 province_id = 1702 province_id = 1710 } } change_controller = REB }
+				}
+			}
 		}
 		
 		ai_chance = { factor = 0.9 }
@@ -375,7 +503,35 @@ country_event = {
 		
 		prestige_factor = -0.05
 		
-		release = ALG
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ALG }
+					NOT = { exists = FAG }
+				}
+			}
+			owner = {
+				release = ALG
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FAG
+					is_our_vassal = FAG
+				}
+			}
+			owner = {
+				release_vassal = FAG
+				FAG = { change_tag = ALG }
+				ALG = {
+					primary_culture = arab
+					remove_accepted_culture = french
+					remove_accepted_culture = jewish
+				}
+			}
+		}
+		
 		ALG = { 
 			government = presidential_dictatorship 
 			ruling_party_ideology = socialist 
@@ -406,7 +562,10 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		is_possible_vassal = ALG
+		OR = {
+			is_possible_vassal = ALG
+			is_our_vassal = FAG
+		}
 	}
 
 	mean_time_to_happen = { months = 2 }
@@ -414,17 +573,49 @@ country_event = {
 	option = {
 		name = "We have to crush the insurgency!"
 		
-		any_pop = { 
-			limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } } 
-			militancy = 10
-			consciousness = 5
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ALG }
+					NOT = { exists = FAG }
+				}
+			}
+			owner = {
+				any_pop = { 
+					limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } }
+					militancy = 10
+					consciousness = 5
+				}
+				release = ALG
+				ALG = { 
+					change_tag = FAG
+				}
+				FAG = {
+					primary_culture = french
+					remove_accepted_culture = arab
+					add_accepted_culture = jewish
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FAG
+					is_our_vassal = FAG
+				}
+			}
+			owner = {
+				FAG = {
+					any_pop = { 
+						limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } }
+						militancy = 10
+						consciousness = 5
+					}
+				}
+				release_vassal = FAG
+			}
 		}
 		
-		release = ALG
-		
-		ALG = { 
-			change_tag = FAG
-		}
 		FAG = {
 			primary_culture = french
 			remove_accepted_culture = arab
@@ -454,29 +645,76 @@ country_event = {
 		#Release French Algeria
 		ALG = { all_core = { add_core = FAG } }
 		
-		FAG = { civilized = yes }
-		
-		any_owned = {
-			limit = { OR = { province_id = 1707 province_id = 1708 province_id = 1709 province_id = 1705 province_id = 1706 province_id = 1703 province_id = 1704 province_id = 1701 province_id = 1702 province_id = 1710 } }
-			secede_province = FAG
+		#Old colonial system
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = FAG }
+				}
+			}
+			owner = {
+				FAG = { civilized = yes }
+				
+				any_owned = {
+					limit = { OR = { province_id = 1707 province_id = 1708 province_id = 1709 province_id = 1705 province_id = 1706 province_id = 1703 province_id = 1704 province_id = 1701 province_id = 1702 province_id = 1710 } }
+					secede_province = FAG
+				}
+				
+				FAG = {
+					capital = 1702 #Setif
+					government = sectarian_dictatorship
+					country_event = 800050
+					ruling_party_ideology = nationalist
+				}
+				
+				#Release Algeria
+				release = ALG
+				ALG = { 
+					government = democracy 
+					country_event = 800054
+					ruling_party_ideology = nationalist
+					any_pop = { 
+						limit = { culture = french } 
+						militancy = 10 
+					}
+				}
+			}
 		}
 		
-		FAG = {
-			capital = 1702 #Setif
-			government = sectarian_dictatorship
-			country_event = 800050
-			ruling_party_ideology = nationalist
-		}
-		
-		#Release Algeria
-		release = ALG
-		ALG = { 
-			government = democracy 
-			country_event = 800054
-			ruling_party_ideology = nationalist
-			any_pop = { 
-				limit = { culture = french } 
-				militancy = 10 
+		#New colonial system
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FAG
+					is_our_vassal = FAG
+				}
+			}
+			owner = {
+				release_vassal = FAG
+				
+				FAG = {
+					capital = 1702 #Setif
+					government = sectarian_dictatorship
+					country_event = 800050
+					ruling_party_ideology = nationalist
+				}
+				
+				FAG = { 
+					any_owned = {
+						limit = { NOT = { OR = { province_id = 1707 province_id = 1708 province_id = 1709 province_id = 1705 province_id = 1706 province_id = 1703 province_id = 1704 province_id = 1701 province_id = 1702 province_id = 1710 } } }
+						secede_province = ALG
+					}
+				}
+				
+				ALG = { 
+					government = democracy 
+					country_event = 800054
+					ruling_party_ideology = nationalist
+					any_pop = { 
+						limit = { culture = french } 
+						militancy = 10 
+					}
+				}
 			}
 		}
 		
@@ -596,7 +834,10 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		is_possible_vassal = ALG
+		OR = {
+			is_possible_vassal = ALG
+			is_our_vassal = FAG
+		}
 		
 		NOT = { has_country_flag = block_ALG_indy_permission }
 	}
@@ -609,12 +850,41 @@ country_event = {
 		name = "Grant Algeria independence"
 		badboy = -5
 		all_core = { limit = { is_core = ALG } remove_core = FRA }
-		any_pop = { limit = { location = { is_core = ALG } culture = french strata = middle } move_pop = 425 } # Paris
-		any_pop = { limit = { location = { is_core = ALG } culture = french NOT = { strata = middle } } move_pop = 467 } # Marseilles
-		any_pop = { limit = { location = { is_core = ALG } culture = jewish } move_pop = 425 } # Paris
-		release = ALG	
-		diplomatic_influence = { who = ALG value = 200 }
-		ALG = { primary_culture = arab government = presidential_dictatorship ruling_party_ideology = socialist country_event = 800050 }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = ALG }
+					NOT = { exists = FAG }
+				}
+			}
+			owner = {
+				any_pop = { limit = { location = { is_core = ALG } culture = french strata = middle } move_pop = 425 } # Paris
+				any_pop = { limit = { location = { is_core = ALG } culture = french NOT = { strata = middle } } move_pop = 467 } # Marseilles
+				any_pop = { limit = { location = { is_core = ALG } culture = jewish } move_pop = 425 } # Paris
+				release = ALG	
+				diplomatic_influence = { who = ALG value = 200 }
+				ALG = { primary_culture = arab government = presidential_dictatorship ruling_party_ideology = socialist country_event = 800050 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = FAG
+					is_our_vassal = FAG
+				}
+			}
+			owner = {
+				release_vassal = FAG
+				FAG = {
+					any_pop = { limit = { location = { is_core = ALG } culture = french strata = middle } move_pop = 425 } # Paris
+					any_pop = { limit = { location = { is_core = ALG } culture = french NOT = { strata = middle } } move_pop = 467 } # Marseilles
+					any_pop = { limit = { location = { is_core = ALG } culture = jewish } move_pop = 425 } # Paris
+					change_tag = ALG
+				}
+				diplomatic_influence = { who = ALG value = 200 }
+				ALG = { primary_culture = arab remove_accepted_culture = french remove_accepted_culture = jewish government = presidential_dictatorship ruling_party_ideology = socialist country_event = 800050 }
+			}
+		}
 		ai_chance = { factor = 0.8 }
 	}
 
@@ -628,3 +898,5 @@ country_event = {
 	}
 
 }
+
+#TO DO: add in civil war events in the event that the player chose to play French Algeria and France grants independence to Algeria

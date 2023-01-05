@@ -1,19 +1,16 @@
-owner = ENG
-controller = ENG
+owner = SML
+controller = SML
 add_core = SOM
 trade_goods = fruit
 life_rating = 35
 terrain = forested_farmland
+naval_base = 1
 colonial = 2
-1992.1.1 = {
-owner = SOM
-controller = SOM
-add_core = SOM
-life_rating = 35
-colonial = 0
-state_building = {
-	level = 3
-	building = fabric_factory
-	upgrade = yes
-}
+1992.1.1 = { 
+    owner = SOM
+    controller = SOM
+    add_core = SOM
+    life_rating = 35
+    colonial = 0
+    state_building = { level = 3 building = fabric_factory upgrade = yes } 
 }

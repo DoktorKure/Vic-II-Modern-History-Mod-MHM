@@ -265,6 +265,8 @@ political_decisions = {
 					farmers = { money = 50 }
 					labourers = { money = 50 }
 				}
+				
+				add_country_modifier = { name = unhappy_natives duration = 365 }
 			}
 			
 			add_country_modifier = { name = special_relations_timer duration = 365 }

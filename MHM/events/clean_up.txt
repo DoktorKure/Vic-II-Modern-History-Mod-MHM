@@ -9,6 +9,9 @@ country_event = {
 		NOT = {
 			government = proletarian_dictatorship
 			government = proletarian_dictatorship1
+			government = colonial_government
+			government = mandate_government
+			government = sar_government
 		}
 		civilized = yes
 		vote_franschise = none_voting
@@ -36,6 +39,11 @@ country_event = {
 			government = presidential_dictatorship
 			government = nationalist_dictatorship
 			government = sectarian_dictatorship
+			government = colonial_government
+			government = mandate_government
+			government = sar_government
+			government = hms_government
+			government = hms_government1
 		}
 		civilized = yes
 		vote_franschise = none_voting
@@ -107,6 +115,9 @@ country_event = {
 			government = theocracy
 			government = hms_government
 			government = hms_government1
+			government = colonial_government
+			government = mandate_government
+			government = sar_government
 		}
 		civilized = yes
 		vote_franschise = none_voting
@@ -373,7 +384,7 @@ country_event = {
 	
 	trigger = {
 
-		OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 }
+		OR = { government = democracy government = democracy1 }
 		vote_franschise = none_voting
 		OR = { ruling_party_ideology = socialist ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = conservative }
 		AND = { # poor attitude towards minorities leads to sectarian regime

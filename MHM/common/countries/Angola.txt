@@ -1,5 +1,10 @@
 graphical_culture = EuropeanGC
-color = { 57 190 101 }
+color = { 84 191 132 }
+colonial_government = { 43 175 43 }
+proletarian_dictatorship = { 191 68 87 }
+proletarian_dictatorship1 = { 191 68 87 }
+socialist_democracy = { 191 68 87 }
+
 party = {
 		name = "UNITA"
 		citizenship_policy = full_citizenship

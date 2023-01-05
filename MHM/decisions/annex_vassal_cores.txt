@@ -2,9 +2,9 @@ political_decisions = {
 	annex_vassal_cores = {
         picture = "anschluss"
         potential = {
-            is_greater_power = yes
             ai = no
             NOT = { has_global_flag = no_vassal_cores_annex }
+			num_of_vassals = 1
         }
         allow = {
             war = no
@@ -14,4 +14,46 @@ political_decisions = {
         }
         ai_will_do = { factor = 0 }
     }
+	
+	annex_colonies = {
+		picture = "renounce_african_assimilation"
+		alert = yes
+		potential = {
+			ai = no
+		
+			#Only available to colonial nations
+			colonial_nation = yes
+			
+			#Must have at least one colonial puppet
+			num_of_vassals = 1
+		}
+		
+		allow = {
+			#Only available to dictatorships
+			NOT = {
+				OR = {
+					government = democracy
+					government = democracy1
+					government = hms_government
+					government = hms_government1
+					government = socialist_democracy
+				}
+			}
+		}
+		
+		effect = {
+			random_country = {
+				limit = {
+					exists = yes
+					vassal_of = THIS
+					government = colonial_government
+				}
+				country_event = 9705983
+			}
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+	}
 }

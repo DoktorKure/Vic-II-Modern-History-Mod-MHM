@@ -20,6 +20,9 @@ political_decisions = {
 		
 			#Indicate that this is the MHM mod
 			set_global_flag = MHM_MOD_ACTIVE
+			
+			#Set global flag for new colonial mechanics, can be toggled in 000_startup_options.txt
+			set_global_flag = new_colonial_system
 
 			random_country = {
 				limit = {

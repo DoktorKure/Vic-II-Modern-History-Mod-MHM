@@ -461,10 +461,11 @@ country_event = {
 		government = hms_government
 		is_vassal = no
 		war = no
-	
-		is_possible_vassal = SYE
-		
-		owns = 1412 # Aden
+
+		OR = {
+			is_possible_vassal = SYE
+			is_our_vassal = SYE
+		}
 	}
 
 	mean_time_to_happen = { months = 2 }
@@ -473,8 +474,16 @@ country_event = {
 		name = "Form the Federation!"
 		prestige = 10
 		
-		#Release SYE as a vassal
-		release_vassal = SYE
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SYE }
+				}
+			}
+			owner = {
+				release_vassal = SYE
+			}
+		}
 		SYE = {
 			government = hms_government
 			country_event = 800054
@@ -491,8 +500,16 @@ country_event = {
 		prestige = -50
 		badboy = 5
 		
-		#Release SYE as a vassal
-		release_vassal = SYE
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SYE }
+				}
+			}
+			owner = {
+				release_vassal = SYE
+			}
+		}
 		SYE = {
 			government = hms_government
 			country_event = 800054
@@ -509,6 +526,7 @@ country_event = {
 	option = {
 		name = "South Arabia is not ripe for self-rule!"
 		prestige = -100
+		badboy = 10
 		
 		#Middle East British subjects become angry
 		any_pop = { 
@@ -522,7 +540,27 @@ country_event = {
 		}
 		
 		#Independence War
-		release = SYE
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SYE }
+				}
+			}
+			owner = {
+				release = SYE
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SYE
+					is_our_vassal = SYE
+				}
+			}
+			owner = {
+				release_vassal = SYE
+			}
+		}
 		SYE = { 
 			government = proletarian_dictatorship 
 			country_event = 800052 
@@ -590,6 +628,9 @@ country_event = {
 		relation = { who = SYE value = -200 } 
 		diplomatic_influence = { who = SYE value = -200 } 
 		leave_alliance = SYE
+		
+		#Aden situation
+		any_owned = { limit = { is_core = SYE } secede_province = SYE }
 
 		ai_chance = { factor = 0.9 }
 	}

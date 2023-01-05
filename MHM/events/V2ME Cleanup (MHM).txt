@@ -426,6 +426,103 @@ country_event = {
 		### END DEVELOPMENT LEVELS BLOCK ###
 		####################################
 		
+		### Overpopulation ###
+		
+		#Add modifiers to push pops out of overpopulated provinces
+		any_country = {
+			any_owned = {
+				limit = {
+					total_pops = 5500000
+					NOT = { has_province_modifier = overpopulated_province1 }
+				}
+				add_province_modifier = { name = overpopulated_province1 duration = -1 } 
+			}
+		}
+		any_country = {
+			any_owned = {
+				limit = {
+					total_pops = 6000000
+					NOT = { has_province_modifier = overpopulated_province2 }
+				}
+				add_province_modifier = { name = overpopulated_province2 duration = -1 } 
+			}
+		}
+		any_country = {
+			any_owned = {
+				limit = {
+					total_pops = 6500000
+					NOT = { has_province_modifier = overpopulated_province3 }
+				}
+				add_province_modifier = { name = overpopulated_province3 duration = -1 } 
+			}
+		}
+		any_country = {
+			any_owned = {
+				limit = {
+					total_pops = 7000000
+					NOT = { has_province_modifier = overpopulated_province4 }
+				}
+				add_province_modifier = { name = overpopulated_province4 duration = -1 } 
+			}
+		}
+		any_country = {
+			any_owned = {
+				limit = {
+					total_pops = 7500000
+					NOT = { has_province_modifier = overpopulated_province5 }
+				}
+				add_province_modifier = { name = overpopulated_province5 duration = -1 } 
+			}
+		}
+		
+		#Remove overpopulation modifiers
+		any_country = {
+			any_owned = {
+				limit = {
+					NOT = { total_pops = 5500000 }
+					has_province_modifier = overpopulated_province1
+				}
+				remove_province_modifier = overpopulated_province1
+			}
+		}
+		any_country = {
+			any_owned = {
+				limit = {
+					NOT = { total_pops = 6000000 }
+					has_province_modifier = overpopulated_province2
+				}
+				remove_province_modifier = overpopulated_province2
+			}
+		}
+		any_country = {
+			any_owned = {
+				limit = {
+					NOT = { total_pops = 6500000 }
+					has_province_modifier = overpopulated_province3
+				}
+				remove_province_modifier = overpopulated_province3
+			}
+		}
+		any_country = {
+			any_owned = {
+				limit = {
+					NOT = { total_pops = 7000000 }
+					has_province_modifier = overpopulated_province4
+				}
+				remove_province_modifier = overpopulated_province4
+			}
+		}
+		any_country = {
+			any_owned = {
+				limit = {
+					NOT = { total_pops = 7500000 }
+					has_province_modifier = overpopulated_province5
+				}
+				remove_province_modifier = overpopulated_province5
+			}
+		}
+
+		
 		#Collectivisation
 		any_country	= {
 			limit = {
@@ -607,7 +704,7 @@ country_event = {
 					NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } }
 				}
 			}
-			government = republic
+			government = democracy
 		}
 		any_country = {
 			limit = {
@@ -620,6 +717,28 @@ country_event = {
 				}
 			}
 			government = proletarian_dictatorship
+		}
+		
+		#Clean up independent colonial/mandate gov types without overlords
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = colonial_government
+					is_vassal = no
+				}
+			}
+			government = democracy
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = mandate_government
+					is_vassal = no
+				}
+			}
+			government = democracy
 		}
 		
 		CLN = { country_event = { id = 47777787 days = 1 } }
@@ -635,6 +754,164 @@ country_event = {
 	
 	option = {
 		name = "Checking..."
+		
+		######################
+		### Colonial Flags ###
+		######################
+		
+		### Set flags ###
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = colonial_government
+					vassal_of = ENG
+				}
+			}
+			set_country_flag = british_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = colonial_government
+					vassal_of = FRA
+				}
+			}
+			set_country_flag = french_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = colonial_government
+					vassal_of = BEL
+				}
+			}
+			set_country_flag = belgian_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = colonial_government
+					vassal_of = NET
+				}
+			}
+			set_country_flag = dutch_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = colonial_government
+					vassal_of = SPA
+				}
+			}
+			set_country_flag = spanish_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = colonial_government
+					vassal_of = POR
+				}
+			}
+			set_country_flag = portuguese_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				AND = {
+					government = colonial_government
+					vassal_of = FBU
+				}
+			}
+			set_country_flag = francobritish_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				government = colonial_government
+				is_vassal = yes
+			}
+			set_country_flag = colonial_province
+		}
+		
+		### Clear flags ###
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = british_colony
+				NOT = { vassal_of = ENG }
+			}
+			clr_country_flag = british_colony
+			set_country_flag = former_british_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = french_colony
+				NOT = { vassal_of = FRA }
+			}
+			clr_country_flag = french_colony
+			set_country_flag = former_french_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = belgian_colony
+				NOT = { vassal_of = BEL }
+			}
+			clr_country_flag = belgian_colony
+			set_country_flag = former_belgian_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = dutch_colony
+				NOT = { vassal_of = NET }
+			}
+			clr_country_flag = dutch_colony
+			set_country_flag = former_dutch_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = spanish_colony
+				NOT = { vassal_of = SPA }
+			}
+			clr_country_flag = spanish_colony
+			set_country_flag = former_spanish_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = portuguese_colony
+				NOT = { vassal_of = POR }
+			}
+			clr_country_flag = portuguese_colony
+			set_country_flag = former_portuguese_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = portuguese_colony
+				NOT = { vassal_of = FBU }
+			}
+			clr_country_flag = francobritish_colony
+			set_country_flag = former_francobritish_colony
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = colonial_province
+				is_vassal = no
+			}
+			clr_country_flag = colonial_province
+			set_country_flag = former_colonial_province
+		}
 		
 		########################
 		### ETHNIC CLEANSING ###
@@ -740,6 +1017,46 @@ country_event = {
 			}
 			relation = { who = THIS value = -400 }
 			diplomatic_influence = { who = THIS value = -400 }
+		}
+		
+		#Civilize nonexistent countries
+		any_country = {
+			limit = {
+				exists = no
+				civilized = no
+			}
+			civilized = yes
+		}
+		
+		#Cleanup SML and SOM tags
+		any_country = {
+			limit = {
+				tag = SML
+				owns = 1868
+				is_vassal = no
+				SOM = { exists = no }
+			}
+			change_tag = SOM
+		}
+		
+		#Namibia Situation
+		any_country = {
+			limit = {
+				tag = NAM
+				government = colonial_government
+				is_vassal = yes
+				vassal_of = SAF
+				NOT = { primary_culture = afrikaaner }
+			}
+			primary_culture = afrikaaner
+		}
+		any_country = {
+			limit = {
+				tag = NAM
+				is_vassal = no
+				primary_culture = afrikaaner
+			}
+			primary_culture = ovambo
 		}
 		
 		CLN = { country_event = { id = 47777790 days = 30 } }

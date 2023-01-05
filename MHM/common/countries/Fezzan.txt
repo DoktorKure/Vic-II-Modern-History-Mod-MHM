@@ -1,8 +1,9 @@
 graphical_culture = MiddleEasternGC
 color = { 224 17 17 }
-colonial_government = { 54 80 209 }
+colonial_government = { 65 105 225 }
 absolute_monarchy = { 190 205 190 }
 sar_government = { 190 205 190 }
+mandate_government = { 18 45 192 }
 
 party = {
 		name = "party_big_tent"

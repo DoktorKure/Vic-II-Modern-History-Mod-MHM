@@ -1,6 +1,8 @@
 graphical_culture = Generic
 color = { 59 119 201 }
-mandate_government = { 205 133 63 }
+colonial_government = { 252 160 0 }
+mandate_government = { 252 160 0 }
+
 party = {
 		name = "National Party - South West"
 		citizenship_policy = residency

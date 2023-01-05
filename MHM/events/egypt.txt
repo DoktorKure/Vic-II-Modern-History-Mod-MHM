@@ -87,6 +87,192 @@ country_event = {
 
 }
 
+#King of Egypt and Sudan
+country_event = {
+	id = 1512291
+	title = "King of Egypt and Sudan"
+	desc = EVTDESC1512291
+	picture = "egy_sud_claims"
+	fire_only_once = yes
+
+	trigger = {
+		tag = EGY
+		year = 1951
+		NOT = { year = 1990 }
+		OR = { government = hms_government government = absolute_monarchy }
+		OR = {
+			AND = {
+				SUD = { exists = no }
+				1827 = { owned_by = ENG }
+			}
+			AND = {
+				SUD = { exists = yes }
+				SUD = { government = colonial_government }
+			}
+		}
+	}
+
+	mean_time_to_happen = { months = 10
+		modifier = { factor = 0.1 year = 1952 }
+	}
+
+	option = {
+		name = "Claim the Sudan"
+		prestige = 50
+		badboy = 5
+
+		relation = { who = ENG value = -50 }
+
+		SUD = { all_core = { add_core = EGY } }
+
+		any_pop = { 
+			ideology = {
+			factor = 0.2
+			value = nationalist
+			} 
+		}
+
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Keep to the title of King of Egypt"
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Kingdom of Egypt demands the Sudan
+country_event = {
+	id = 1512295
+	title = "Abrogation of the Sudan Condominium"
+	desc = EVTDESC1512295
+	picture = "egy_sud_claims"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Refuse to end the occupation"
+		relation = { who = EGY value = -100 }
+		badboy = 5
+		ai_chance = { factor = 0.5 }
+	}
+
+	option = {
+		name = "Let the Sudanese decide"
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SUD
+					SUD = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				release_vassal = SUD
+				SUD = { government = democracy country_event = 800054 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SUD }
+				}
+			}
+			owner = {
+				release = SUD
+				SUD = { government = democracy country_event = 800054 }
+			}
+		}
+		ai_chance = { factor = 0.4 }
+	}
+
+	option = {
+		name = "Surrender the Sudan to Egypt"
+		prestige = -50
+		badboy = -5
+		random_owned = {
+			limit = {
+				owner = {
+					exists = SUD
+					SUD = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				EGY = { inherit = SUD }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = SUD }
+				}
+			}
+			owner = {
+				release = SUD
+				EGY = { inherit = SUD }
+			}
+		}
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+
+
+#Foundation of the UAR, 1958
+country_event = {
+	id = 1512314
+	title = "United Arab Republic"
+	desc = EVTDESC1512314
+	picture = "uar_foundation_event"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = EGY
+		war = no
+		is_vassal = no
+		year = 1958
+		NOT = { year = 1990 }
+		ruling_party_ideology = socialist
+		primary_culture = arab
+		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
+
+		UAR = { exists = no }
+		SYR = { exists = yes }
+
+		SYR = { 
+			war = no
+			OR = { vassal_of = EGY 
+			AND = { is_vassal = no in_sphere = EGY } 
+			AND = { is_vassal = no ruling_party_ideology = socialist } } 
+		}
+	}
+
+	mean_time_to_happen = { months = 2 }
+
+	option = {
+		name = "Realise the Pan-Arab dream!"	
+		prestige = 200
+		SYR = { all_core = { add_core = UAR } }
+		change_tag = UAR
+		SYR = { country_event = 11101 }
+		any_pop = { 
+			ideology = {
+				factor = 0.2
+				value = socialist
+			}
+		}
+		ai_chance = { factor = 0.9 }	
+	}
+
+	option = {
+		name = "Maybe later"
+		ai_chance = { factor = 0.1 }	
+	}
+
+}
+
 country_event = {
   id = 8004910
   title = "EVT_8004910_NAME"

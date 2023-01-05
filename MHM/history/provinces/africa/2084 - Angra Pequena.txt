@@ -1,19 +1,15 @@
-owner = SAF
-controller = SAF
+owner = NAM
+controller = NAM
 add_core = NAM
 trade_goods = fish
 life_rating = 35
 terrain = desert
 colonial = 2
-1992.1.1 = {
-owner = NAM
-controller = NAM
-add_core = NAM
-life_rating = 35
-colonial = 0
-state_building = {
-	level = 1
-	building = canned_meat_factory
-	upgrade = yes
-}
+1992.1.1 = { 
+    owner = NAM
+    controller = NAM
+    add_core = NAM
+    life_rating = 35
+    colonial = 0
+    state_building = { level = 1 building = canned_meat_factory upgrade = yes } 
 }

@@ -1,6 +1,8 @@
 graphical_culture = Generic
 color = { 128 128 128 }
 hms_government =  { 255 117 25 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "Malawi Congress Party"
 		citizenship_policy = residency

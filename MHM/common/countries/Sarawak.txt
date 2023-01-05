@@ -1,5 +1,7 @@
 graphical_culture = AsianGC
 color = { 123 104 238 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "Sarawak Conservative Party"
 		citizenship_policy = limited_citizenship

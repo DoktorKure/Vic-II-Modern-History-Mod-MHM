@@ -1,3 +1,11 @@
+#Colonies
+GUN = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+
 EGY = {
 	level = 4
 	value = 160

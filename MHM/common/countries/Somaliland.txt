@@ -1,5 +1,7 @@
 graphical_culture = MiddleEasternGC
 color = { 64 224 208 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "party_nationalist"
 		citizenship_policy = limited_citizenship

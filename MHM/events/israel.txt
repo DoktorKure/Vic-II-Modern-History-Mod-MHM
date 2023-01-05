@@ -14,6 +14,147 @@ country_event = {
   }
 }
 
+# Jewish Resistance Movement - 1946
+country_event = {
+	id = 1007601
+
+	title = EVT_1007601_NAME
+	desc = EVT_1007601_DESC
+	picture = "palestine_civil_war_1948"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		year = 1946 
+		NOT = { year = 1990 }
+		
+		government = hms_government
+		war = no
+		is_vassal = no
+		
+		#Owns Palestine
+		OR = {
+			is_possible_vassal = PAL
+			is_our_vassal = PAL
+		}
+	}
+
+	mean_time_to_happen = { months = 4 }
+	
+	immediate = { set_country_flag = dissolve_the_palestine_mandate }
+	
+	option = {
+		name = "Defer the issue to the UN"
+		
+		set_country_flag = ENG_UN_deferral
+		
+		prestige = -50
+
+		#Jews increase in population size slightly
+		any_pop = {
+			limit = {
+				OR = { culture = jewish culture =  haredim_jewish }
+				location = { OR = { is_core = ISR is_core = PAL } }
+			}
+			reduce_pop = 1.1
+		}
+		
+		#Everyone is slightly angry
+		any_pop = {
+			limit = {
+				location = { OR = { is_core = ISR is_core = PAL } }
+			}
+			consciousness = 5
+			militancy = 5
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Restrict Jewish immigration"
+		
+		set_country_flag = ENG_PAL_bias
+		
+		relation = { who = USA value = -50 }
+		
+		#Controversial move
+		badboy = 2.5
+		
+		#Jews increase in population size slightly
+		any_pop = {
+			limit = {
+				OR = { culture = jewish culture =  haredim_jewish }
+				location = { OR = { is_core = ISR is_core = PAL } }
+			}
+			reduce_pop = 1.2
+		}
+		
+		#Israelis are angry!
+		any_owned = { 
+			limit = { OR = { is_core = ISR is_core = PAL } }
+			add_province_modifier = { name = nationalist_agitation duration = 1825 } 
+		}
+		any_pop = {
+			limit = {
+				OR = { culture = jewish culture =  haredim_jewish }
+			}
+			consciousness = 10
+			militancy = 10
+			ideology = { factor = 0.25 value = nationalist }
+		}
+		
+		USA = { clr_country_flag = support_zionism }
+		
+		#Palestine to be independent via the generic system
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Allow unrestricted Jewish immigration"
+		
+		set_country_flag = ENG_ISR_bias
+		
+		relation = { who = USA value = 50 }
+		
+		#Controversial move
+		badboy = 5
+		
+		#Arabs are furious!
+		any_country = {
+			limit = { is_culture_group = arabic }
+			relation = { who = THIS value = -100 }
+		}
+		any_owned = { 
+			limit = { OR = { is_core = ISR is_core = PAL } }
+			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+		}
+		any_pop = {
+			limit = {
+				is_culture_group = arabic
+			}
+			consciousness = 10
+			militancy = 10
+			ideology = { factor = 0.25 value = nationalist }
+		}
+		
+		#Jews increase in population size
+		any_pop = {
+			limit = {
+				OR = { culture = jewish culture =  haredim_jewish }
+				location = { OR = { is_core = ISR is_core = PAL } }
+			}
+			reduce_pop = 1.4
+		}
+
+		USA = { clr_country_flag = support_zionism }
+		
+		ai_chance = { factor = 0.1 }
+	}	
+}
+
 #Initiate End of the Palestine Mandate
 country_event = {
   id = 8007622
@@ -32,7 +173,10 @@ country_event = {
 		is_vassal = no
 		
 		#Owns Palestine
-		is_possible_vassal = PAL
+		OR = {
+			is_possible_vassal = PAL
+			is_our_vassal = PAL
+		}
 		
 		has_country_flag = dissolve_the_palestine_mandate
 	}
@@ -41,19 +185,40 @@ country_event = {
 
 	option = {
 		name = "Abandon the Palestinian Mandate quickly"
+		prestige = 50
+		badboy = 5
 		country_event = 1007602
 		ai_chance = { factor = 0.8 }
 	}
 
 	option = {
 		name = "Enact the UN Trusteeship Plan"
-		prestige = -100
-		badboy = 5
 	
 		set_global_flag = independent_israel
 
-		release_vassal = ISR
-		release_vassal = PAL
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = PAL }
+				}
+			}
+			owner = {
+				release_vassal = ISR
+				release_vassal = PAL
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = PAL
+					is_our_vassal = PAL
+				}
+			}
+			owner = {
+				PAL = { release = ISR }
+				create_vassal = ISR
+			}
+		}
 
 		ISR = { government = hms_government1 country_event = 800054 }
 		PAL = { government = hms_government1 country_event = 800054 }
@@ -94,158 +259,55 @@ country_event = {
 
 	option = {
 		name = "We have our own solution - Keep Palestine"
-			prestige = -50
-			badboy = 5
-			any_owned = { limit = { OR = { is_core = ISR is_core = PAL } } add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+		prestige = -100
+		badboy = 10
 
-			any_pop = {
-				limit = {
-					is_culture_group = arabic
+		random_owned = {
+			limit = {
+				owner = {
+					exists = PAL
+					PAL = { vassal_of = THIS }
 				}
-				consciousness = 1
-				militancy = 2
 			}
-			any_country = {
-				limit = { is_culture_group = arabic }
-				relation = { who = THIS value = -100 }
+			owner = {
+				PAL = {
+					any_pop = {
+						limit = {
+							is_culture_group = arabic
+						}
+						consciousness = 1
+						militancy = 2
+					}
+					add_country_modifier = { name = revolution_chaos duration = 3650 } 
+				}
 			}
-
-		ai_chance = { factor = 0.1 }
-	}
-
-}
-
-# Jewish Resistance Movement - 1946
-country_event = {
-	id = 1007601
-
-	title = EVT_1007601_NAME
-	desc = EVT_1007601_DESC
-	picture = "palestine_civil_war_1948"
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = ENG
-		year = 1946 
-		NOT = { year = 1990 }
-		
-		government = hms_government
-		war = no
-		is_vassal = no
-		
-		#Owns Palestine
-		is_possible_vassal = PAL
-	}
-
-	mean_time_to_happen = { months = 4 }
-
-	
-	option = {
-		name = "Defer the issue to the UN"
-		prestige = -50
-
-		#Jews increase in population size slightly
-		any_pop = {
+		}
+		random_owned = {
 			limit = {
-				OR = { culture = jewish culture =  haredim_jewish }
-				location = { OR = { is_core = ISR is_core = PAL } }
+				owner = {
+					NOT = { exists = PAL }
+				}
 			}
-			reduce_pop = 1.1
-		}
-		
-		#Everyone is slightly angry
-		any_pop = {
-			limit = {
-				location = { OR = { is_core = ISR is_core = PAL } }
+			owner = {
+				any_owned = { limit = { OR = { is_core = ISR is_core = PAL } } add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+				any_pop = {
+					limit = {
+						is_culture_group = arabic
+					}
+					consciousness = 1
+					militancy = 2
+				}
 			}
-			consciousness = 5
-			militancy = 5
 		}
 
-		#Prepare to let go of Palestine historically
-		set_country_flag = dissolve_the_palestine_mandate
-		
-		ai_chance = { factor = 0.8 }
-	}
-	
-	option = {
-		name = "Restrict Jewish immigration"
-		
-		relation = { who = USA value = -50 }
-		
-		#Controversial move
-		badboy = 2.5
-		
-		#Jews increase in population size slightly
-		any_pop = {
-			limit = {
-				OR = { culture = jewish culture =  haredim_jewish }
-				location = { OR = { is_core = ISR is_core = PAL } }
-			}
-			reduce_pop = 1.2
-		}
-		
-		#Israelis are angry!
-		any_owned = { 
-			limit = { OR = { is_core = ISR is_core = PAL } }
-			add_province_modifier = { name = nationalist_agitation duration = 1825 } 
-		}
-		any_pop = {
-			limit = {
-				OR = { culture = jewish culture =  haredim_jewish }
-			}
-			consciousness = 10
-			militancy = 10
-			ideology = { factor = 0.25 value = nationalist }
-		}
-		
-		USA = { clr_country_flag = support_zionism }
-		
-		#Palestine to be independent via the generic system
-		
-		ai_chance = { factor = 0.1 }
-	}
-	
-	option = {
-		name = "Allow unrestricted Jewish immigration"
-		
-		relation = { who = USA value = 50 }
-		
-		#Controversial move
-		badboy = 5
-		
-		#Arabs are furious!
 		any_country = {
 			limit = { is_culture_group = arabic }
 			relation = { who = THIS value = -100 }
 		}
-		any_owned = { 
-			limit = { OR = { is_core = ISR is_core = PAL } }
-			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
-		}
-		any_pop = {
-			limit = {
-				is_culture_group = arabic
-			}
-			consciousness = 10
-			militancy = 10
-			ideology = { factor = 0.25 value = nationalist }
-		}
-		
-		#Jews increase in population size
-		any_pop = {
-			limit = {
-				OR = { culture = jewish culture =  haredim_jewish }
-				location = { OR = { is_core = ISR is_core = PAL } }
-			}
-			reduce_pop = 1.4
-		}
 
-		USA = { clr_country_flag = support_zionism }
-		
 		ai_chance = { factor = 0.1 }
-	}	
+	}
+
 }
 
 # United Nations Partition Plan for Palestine
@@ -260,27 +322,70 @@ country_event = {
 	option = {
 		name = "Accept the Partition of Palestine"
 		prestige = -50
-		release = ISR
-		ISR = { 
-			country_event = 8007624 
-			
-			government = democracy
-			country_event = 800054 
-			
-			clr_country_flag = presidential_system_republic
-			clr_country_flag = semi_presidential_system_republic
-			set_country_flag = parliamentary_system_republic
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = PAL }
+				}
+			}
+			owner = {
+				release = ISR
+				ISR = { 
+					country_event = 8007624 
+					
+					government = democracy
+					country_event = 800054 
+					
+					clr_country_flag = presidential_system_republic
+					clr_country_flag = semi_presidential_system_republic
+					set_country_flag = parliamentary_system_republic
+				}
+				release = PAL
+				PAL = { 
+					country_event = 1007604
+					
+					government = democracy
+					country_event = 800054 
+					
+					set_country_flag = presidential_system_republic
+					clr_country_flag = semi_presidential_system_republic
+					clr_country_flag = parliamentary_system_republic
+				}
+			}
 		}
-		release = PAL
-		PAL = { 
-			country_event = 1007604
-			
-			government = democracy
-			country_event = 800054 
-			
-			set_country_flag = presidential_system_republic
-			clr_country_flag = semi_presidential_system_republic
-			clr_country_flag = parliamentary_system_republic
+		
+		random_owned = {
+			limit = {
+				owner = {
+					exists = PAL
+					is_our_vassal = PAL
+				}
+			}
+			owner = {
+				release_vassal = PAL
+				PAL = { 
+					release = ISR
+					country_event = 1007604
+					
+					government = democracy
+					country_event = 800054 
+					
+					set_country_flag = presidential_system_republic
+					clr_country_flag = semi_presidential_system_republic
+					clr_country_flag = parliamentary_system_republic
+				}
+				
+				ISR = { 
+					country_event = 8007624 
+					
+					government = democracy
+					country_event = 800054 
+					
+					clr_country_flag = presidential_system_republic
+					clr_country_flag = semi_presidential_system_republic
+					set_country_flag = parliamentary_system_republic
+				}
+			}
 		}
 		
 		USA = { country_event = 1007603 }
@@ -292,9 +397,19 @@ country_event = {
 		3347 = { add_core = ISR }
 		3346 = { add_core = ISR }
 		
-		set_global_flag = independent_israel
+		set_global_flag = independent_israel_palestine
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			modifier = {
+				factor = 0
+				has_country_flag = ENG_ISR_bias
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ENG_PAL_bias
+			}
+		}
 	}
 		
 	option = {
@@ -310,7 +425,27 @@ country_event = {
 
 		PAL = { all_core = { add_core = ISR } }
 
-		release = PAL
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = PAL }
+				}
+			}
+			owner = {
+				release = PAL
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = PAL
+					is_our_vassal = PAL
+				}
+			}
+			owner = {
+				release_vassal = PAL
+			}
+		}
 		
 		PAL = { 
 			country_event = 1007604
@@ -324,9 +459,23 @@ country_event = {
 		3347 = { add_core = ISR }
 		3346 = { add_core = ISR }
 		
-		set_global_flag = independent_israel
+		set_global_flag = independent_palestine
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = {
+				factor = 1
+				has_country_flag = ENG_PAL_bias
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ENG_ISR_bias
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ENG_UN_deferral
+			}
+		}
 	}
 
 	option = {
@@ -342,7 +491,33 @@ country_event = {
 
 		ISR = { all_core = { add_core = PAL } }
 
-		release = ISR
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = PAL }
+				}
+			}
+			owner = {
+				release = ISR
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = PAL
+					is_our_vassal = PAL
+				}
+			}
+			owner = {
+				PAL = { change_tag = ISR }
+				ISR = {
+					primary_culture = jewish
+					add_accepted_culture = haredim_jewish
+					remove_accepted_culture = palestinian
+					remove_accepted_culture = arab
+				}
+			}
+		}
 		
 		ISR = { 
 			country_event = 8007624
@@ -361,7 +536,21 @@ country_event = {
 		
 		set_global_flag = independent_israel
 		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.05
+			modifier = {
+				factor = 1
+				has_country_flag = ENG_ISR_bias
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ENG_PAL_bias
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ENG_UN_deferral
+			}
+		}
 	}
 
 	option = {
@@ -376,8 +565,32 @@ country_event = {
 		PAL = { all_core = { add_core = ISP } }
 		ISR = { all_core = { add_core = ISP } }
 		
-
-		release = ISP
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = PAL }
+				}
+			}
+			owner = {
+				release = ISR
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = PAL
+					is_our_vassal = PAL
+				}
+			}
+			owner = {
+				PAL = { change_tag = ISP }
+				ISP = {
+					primary_culture = jewish
+					add_accepted_culture = haredim_jewish
+					add_accepted_culture = druze
+				}
+			}
+		}
 		
 		ISP = { 
 			country_event = 8007624
@@ -604,6 +817,41 @@ country_event = {
 		}
 
 		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Play as Israel and fight the Arab countries!"
+		
+		set_global_flag = arab_israeli_war_1948_flag
+		
+		any_country = {
+			limit = { is_culture_group = arabic }
+			relation = { who = THIS value = 200 }
+		}
+		
+		#Invite the Arab states
+		any_country = {
+			limit = { 
+				is_vassal = no 
+				war = no
+				OR = { tag = JOR tag = EGY tag = IRQ tag = SYR tag = LEB tag = SAA tag = YEM }
+			}
+			create_alliance = THIS
+		}
+
+		war = {
+			target = ISR
+			attacker_goal = { casus_belli = conquest }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		
+		#US aid for Israel?
+		random_country = { limit = { tag = USA has_global_flag = blocsenabled } country_event = 1007603 }
+		
+		change_tag_no_core_switch = ISR
+		
+		ai_chance = { factor = 0 }
 	}
 	
 }
@@ -2475,4 +2723,78 @@ country_event = {
 
 	#TODO: option 5, beg Soviets for Aliyah in exchange for becoming communist. Unfortunately, impossible to disable the choice if the Aliyah already happened, so Israel could become communist after fall of USSR
 
+}
+
+#Jordan Returns West Bank
+country_event = {
+	id = 1412171
+	title = "Question over the West Bank"
+	desc = EVTDESC1412171
+	picture = "west_bank"
+
+	fire_only_once = yes
+
+	trigger = {
+		war = no
+		is_vassal = no
+		tag = JOR
+		owns = 917
+		owns = 918
+		year = 1968
+		NOT = { year = 1991 }
+		NOT = { exists = PAL }
+		exists = EGY
+		exists = ISR
+		EGY = { truce_with = ISR }
+		EGY = { has_recently_lost_war = yes }
+		ISR = { has_recently_lost_war = no }
+	}
+
+	mean_time_to_happen = { 
+		months = 2
+	}
+
+	option = {
+		name = "Give the West Bank to Israel"
+		prestige = -25
+		sphere_owner = { diplomatic_influence = { who = THIS value = -50 } }
+		any_pop = { limit = { is_primary_culture = yes } militancy = 4 }
+		relation = { who = ISR value = 100 }
+		917 = { secede_province = ISR }
+		918 = { secede_province = ISR }
+		ai_chance = { factor = 0.7 modifier = { factor = 0 stronger_army_than = ISR } }
+	}
+
+	option = {
+		name = "Grant limited autonomy to the Palestinians"
+		prestige = 10
+		release_vassal = PAL
+		PAL = { government = sar_government country_event = 800054 }
+		relation = { who = ISR value = -50 }
+		badboy = 2
+		any_pop = { limit = { is_primary_culture = yes } militancy = 2 }
+		ai_chance = { factor = 0.2 modifier = { factor = 0 stronger_army_than = ISR } }
+	}
+
+	option = {
+		name = "Revert back to the UN partition Plan"
+		prestige_factor = -0.5
+		badboy = -5
+		any_pop = { limit = { is_primary_culture = yes } militancy = 3 }
+		relation = { who = ISR value = -50 }
+		release = JRU
+		JRU = { government = sar_government country_event = 800054 ruling_party_ideology = big_tent }
+		release = PAL
+		PAL = { government = democracy country_event = 800054 ruling_party_ideology = nationalist }
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Hold onto the West Bank!"
+		prestige_factor = -0.2
+		badboy = 10
+		any_pop = { limit = { is_primary_culture = yes } militancy = -2 }
+		relation = { who = ISR value = -100 }
+		ai_chance = { factor = 0.1 modifier = { factor = 1 stronger_army_than = ISR } }
+	}
 }

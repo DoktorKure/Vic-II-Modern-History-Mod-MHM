@@ -44,7 +44,7 @@ country_event = {
 		ai_chance = { 
 			factor = 0.9 
 			modifier = { factor = 0 FROM = { ai = no } }
-			modifier = { factor = 0 FROM = { ai = yes } }
+			modifier = { factor = 0 has_global_flag = new_colonial_system }
 		}
 	}
 
@@ -64,8 +64,8 @@ country_event = {
 		
 		ai_chance = { 
 			factor = 0.1 
+			modifier = { factor = 10 has_global_flag = new_colonial_system }
 			modifier = { factor = 1 FROM = { ai = no } }
-			modifier = { factor = 0 FROM = { ai = yes } }
 		}
 	}
 

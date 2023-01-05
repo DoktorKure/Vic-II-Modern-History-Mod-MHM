@@ -1,5 +1,8 @@
 graphical_culture = MiddleEasternGC
 color = { 66 140 101 }
+colonial_government = { 255 175 175 }
+mandate_government = { 255 128 128 }
+
 party = {
 		name = "Palestine Arab Party (N)"
 		citizenship_policy = residency

@@ -211,7 +211,6 @@ country_event = {
 
 	option = {
 		name = EVT_8007911_A
-		add_accepted_culture = circassians
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		any_owned = { add_province_modifier = { name = instigating_rebels duration = 3650 } }
 		any_pop = { 

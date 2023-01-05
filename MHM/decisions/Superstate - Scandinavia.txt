@@ -127,7 +127,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			is_secondary_power = yes
+			OR = { is_greater_power = yes is_secondary_power = yes }
 			prestige = 150
 			new_growth_theory = 1 # 1962
 			NOT = { ruling_party_ideology = nationalist }

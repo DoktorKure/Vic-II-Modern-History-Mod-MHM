@@ -1,5 +1,7 @@
 graphical_culture = MoroccoGC
 color = { 224 146 113 }
+colonial_government = { 65 105 225 }
+
 party = {
 		name = "Democratic Independence Party"
 		citizenship_policy = limited_citizenship

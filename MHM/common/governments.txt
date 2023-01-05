@@ -27,7 +27,7 @@ colonial_government = {
 	election = yes
 	duration = 54
 	appoint_ruling_party = yes
-	flagType = monarchy
+	flagType = colonial
 
 }
 mandate_government = {
@@ -44,7 +44,7 @@ mandate_government = {
 	election = yes
 	duration = 54
 	appoint_ruling_party = yes
-	flagType = monarchy
+	flagType = colonial
 }
 sar_government = {
 	progressive = yes

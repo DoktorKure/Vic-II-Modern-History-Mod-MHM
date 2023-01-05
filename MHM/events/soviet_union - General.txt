@@ -1910,8 +1910,8 @@ country_event = {
 	}
 
 	option = {
-		add_country_flag = recognized_baltic_states
 		name = "Set them free!"
+		add_country_flag = recognized_baltic_states
 		LIT = { all_core = { remove_core = RUS } }
 		LAT = { all_core = { remove_core = RUS } }
 		EST = { all_core = { remove_core = RUS } }

@@ -62,9 +62,9 @@ political_decisions = {
 				set_country_flag = icbm_bomb
 				
 				#Vassal Tribute
-				random_owned = { limit = { owner = { num_of_vassals = 1 OR = { economic_policy = state_capitalism economic_policy = planned_economy economic_policy = planned_economy1 } } } owner = { add_country_modifier = { name = vtslow duration = -1 } } }
-				random_owned = { limit = { owner = { num_of_vassals = 1 economic_policy = interventionism } } owner = { add_country_modifier = { name = vtsmedium duration = -1 } } }
-				random_owned = { limit = { owner = { num_of_vassals = 1 economic_policy = laissez_faire } } owner = { add_country_modifier = { name = vtshigh duration = -1 } } }
+				random_owned = { limit = { owner = { num_of_vassals = 1 OR = { economic_policy = state_capitalism economic_policy = planned_economy economic_policy = planned_economy1 } NOT = { colonial_nation = yes } } } owner = { add_country_modifier = { name = vtslow duration = -1 } } }
+				random_owned = { limit = { owner = { num_of_vassals = 1 OR = { economic_policy = interventionism colonial_nation = yes } } } owner = { add_country_modifier = { name = vtsmedium duration = -1 } } }
+				random_owned = { limit = { owner = { num_of_vassals = 1 economic_policy = laissez_faire NOT = { colonial_nation = yes } } } owner = { add_country_modifier = { name = vtshigh duration = -1 } } }
 				
 				#Import Export Focus
 				set_country_flag = exportfocus
@@ -89,9 +89,9 @@ political_decisions = {
 				add_country_modifier = { name = nepomedium duration = -1 }
 				
 				#Vassal Tribute
-				random_owned = { limit = { owner = { num_of_vassals = 1 OR = { economic_policy = state_capitalism economic_policy = planned_economy economic_policy = planned_economy1 } } } owner = { add_country_modifier = { name = vtslow duration = -1 } } }
-				random_owned = { limit = { owner = { num_of_vassals = 1 economic_policy = interventionism } } owner = { add_country_modifier = { name = vtsmedium duration = -1 } } }
-				random_owned = { limit = { owner = { num_of_vassals = 1 economic_policy = laissez_faire } } owner = { add_country_modifier = { name = vtshigh duration = -1 } } }
+				random_owned = { limit = { owner = { num_of_vassals = 1 OR = { economic_policy = state_capitalism economic_policy = planned_economy economic_policy = planned_economy1 } NOT = { colonial_nation = yes } } } owner = { add_country_modifier = { name = vtslow duration = -1 } } }
+				random_owned = { limit = { owner = { num_of_vassals = 1 OR = { economic_policy = interventionism colonial_nation = yes } } } owner = { add_country_modifier = { name = vtsmedium duration = -1 } } }
+				random_owned = { limit = { owner = { num_of_vassals = 1 economic_policy = laissez_faire NOT = { colonial_nation = yes } } } owner = { add_country_modifier = { name = vtshigh duration = -1 } } }
 				
 				#Import Export Focus
 				random_owned = { limit = { owner = { NOT = { capital_scope = { continent = south_america } } OR = { is_greater_power = yes is_secondary_power = yes } } } owner = { set_country_flag = exportfocus any_owned = { limit = { is_colonial = no } add_province_modifier = { name = exportfocus duration = -1 } } } }
@@ -99,11 +99,11 @@ political_decisions = {
 
 			}
 			
-				#Neoptism
-				any_country = {
-					limit = { exists = yes ai = no }
-					add_country_modifier = { name = nepomedium duration = -1 }
-				}
+			#Neoptism
+			any_country = {
+				limit = { exists = yes ai = no }
+				add_country_modifier = { name = nepomedium duration = -1 }
+			}
 			
 		}
 	

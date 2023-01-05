@@ -41,7 +41,83 @@ country_event = { # Independence of Nigeria - NGE exists
 		random_owned = { limit = { owner = { is_our_vassal = YOR } } owner = { NGE = { inherit = YOR } } }
 		random_owned = { limit = { owner = { is_our_vassal = BIF } } owner = { NGE = { inherit = BIF } } }
 
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.8 }
+	}
+	
+	option = {
+		name = "Prepare Nigeria for eventual independence"
+		prestige = 10
+		
+		#Release Nigeria as a dominion
+		NGE = {
+			government = hms_government1
+			country_event = 800054
+			ruling_party_ideology = conservative
+		}
+		diplomatic_influence = { who = NGE value = 200 }
+		create_alliance = NGE
+		
+		ai_chance = { factor = 0.1 }
+	}
+	
+	option = {
+		name = "Divide and Rule"
+		prestige = -10
+		badboy = 5
+		
+		random_owned = {
+			limit = { owner = { NOT = { exists = YOR } } }
+			owner = {
+				NGE = {
+					release = YOR
+				}
+				create_vassal = YOR
+				YOR = {
+					government = hms_government1
+					country_event = 800054
+					ruling_party_ideology = conservative
+				}
+				diplomatic_influence = { who = YOR value = 200 }
+				create_alliance = YOR
+			}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { exists = BIF } } }
+			owner = {
+				NGE = {
+					release = BIF
+				}
+				create_vassal = BIF
+				BIF = {
+					government = hms_government1
+					country_event = 800054
+					ruling_party_ideology = conservative
+				}
+				diplomatic_influence = { who = BIF value = 200 }
+				create_alliance = BIF
+			}
+		}
+		random_owned = {
+			limit = { owner = { NOT = { exists = ABZ } NGE = { is_possible_vassal = ABZ } } }
+			owner = {
+				NGE = {
+					release = ABZ
+				}
+				create_vassal = ABZ
+				ABZ = {
+					government = hms_government1
+					country_event = 800054
+					ruling_party_ideology = conservative
+				}
+				diplomatic_influence = { who = ABZ value = 200 }
+				create_alliance = ABZ
+			}
+		}
+		
+		#Partition off ABZ from Colony of Nigeria
+		NGE = { all_core = { limit = { is_core = ABZ } remove_core = NGE } }
+		
+		ai_chance = { factor = 0.05 }
 	}
 	
 	option = {
@@ -56,7 +132,7 @@ country_event = { # Independence of Nigeria - NGE exists
 			}
 			add_country_modifier = { name = revolution_chaos duration = 3650 }
 		}
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
 
 }

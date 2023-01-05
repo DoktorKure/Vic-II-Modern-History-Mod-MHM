@@ -1,6 +1,7 @@
 graphical_culture = ChineseGC
 color = { 255 182 193 }
-colonial_government = { 250 128 114 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "Hong Kong Independence Party"
 		citizenship_policy = limited_citizenship

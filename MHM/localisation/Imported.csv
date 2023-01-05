@@ -5,6 +5,8 @@ liberate_puppet_short;$THIRD$ acquires $STATE$ and becomes our puppet;;;;;;;;;;;
 liberate_puppet_setup;Return $STATE$ to $THIRD$ from $RECIPIENT$ and puppet $THIRD$;;;;;;;;;;;;;
 global_setup_title;Setup Cleanup;;;;;;;;;;;;;
 global_setup_desc;Setup AI Cleanup.;;;;;;;;;;;;;
+annex_colonies_title;Incorporate our Colonies;;;;;;;;;;;;;
+annex_colonies_desc;Now that we have sufficiently strengthened our central government, we should begin incorporating our colonies as states.;;;;;;;;;;;;;
 vassal_interactions_title;Open Vassal Interactions Menu;;;;;;;;;;;;;
 vassal_interactions_desc;This decision fires an event which will allow you to free or return cores to your vassals provided those cores don't also belong to you.;;;;;;;;;;;;;
 homeland_productive_year;Bountiful Year;;;;;;;;;;;;;

@@ -38,7 +38,7 @@ country_event = {
 		name = "Move towards a partitioned India"
 		prestige = -50
 		set_global_flag = partioned_india_option
-		set_global_flag = partioned_india_option_fast
+		country_event = 12140121 #Partition of Bangladesh
 		ai_chance = { factor = 0.05 }
 	}
 	
@@ -53,6 +53,7 @@ country_event = {
 			}
 			add_country_modifier = { name = revolution_chaos duration = 3650 }
 		}
+		country_event = 82140132
 		ai_chance = { factor = 0.05 }
 	}
 
@@ -97,6 +98,7 @@ country_event = {
 		}
 		
 		set_global_flag = partioned_india_option
+		country_event = 12140121 #Partition of Bangladesh
 		ai_chance = { factor = 0.1 }
 	}
 	
@@ -155,6 +157,7 @@ country_event = {
 				militancy = 3
 			}
 		}
+		country_event = 12140121 #Partition of Bangladesh
 		ai_chance = { factor = 0.95 }
 	}
 	
@@ -175,6 +178,92 @@ country_event = {
 
 }
 
+#Partition of Bangladesh
+country_event = {
+	id = 12140121
+	title = "Partition of Bangladesh"
+	desc = EVT_12140121_DESC
+	picture = "partition_of_bangladesh"
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Partition Bangladesh along religious lines between India and Pakistan"
+		set_global_flag = historic_bangladesh_partition
+		
+		#For some reason seceding provinces to PAK didn't work so just have releases and inherits instead based on cores
+		RAJ = { release = BNG }
+		PAK = { inherit = BNG }
+		PAK = { any_owned = { limit = { is_core = BNG } add_core = PAK } }
+		ai_chance = { factor = 0.90 }
+	}
+	
+	option = {
+		name = "Bangladesh will be united under Indian rule"
+		prestige_factor = -0.025
+		badboy = 5
+		RAJ = {
+			any_pop = {
+				limit = { religion = sunni }
+				militancy = 10
+			}
+			any_owned = {
+				limit = { is_core = BNG }
+				add_core = HNB
+				add_core = HND
+			}
+		}
+		set_global_flag = united_HND_bangladesh
+		ai_chance = { factor = 0.05 }
+	}
+	
+	option = {
+		name = "Bangladesh will be united under Pakistani rule"
+		prestige_factor = -0.025
+		badboy = 5
+		RAJ = {
+			any_owned = {
+				limit = { is_core = HNB }
+				add_core = BNG
+			}
+		}
+		
+		#For some reason seceding provinces to PAK didn't work so just have releases and inherits instead based on cores
+		RAJ = { release = BNG }
+		PAK = { inherit = BNG }
+		PAK = { any_owned = { limit = { is_core = BNG } add_core = PAK } }
+		RAJ = { release = ASM } #Landlocked Assam exclave means India cannot maintain its rule there
+		create_vassal = ASM
+		ASM = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 inherit = MNP }
+		set_global_flag = united_PAK_bangladesh
+		ai_chance = { factor = 0.02 }
+	}
+	
+	option = {
+		name = "A Bangladesh for Bengals"
+		prestige_factor = -0.025
+		badboy = 2.5
+		RAJ = {
+			any_owned = {
+				limit = { is_core = HNB }
+				remove_core = HND
+				add_core = BNG
+			}
+			release = BNG
+			release = ASM #Landlocked Assam exclave means India cannot maintain its rule there
+		}
+		create_vassal = BNG
+		create_vassal = ASM
+		BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 add_accepted_culture = bengali_hindu }
+		ASM = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 inherit = MNP }
+		set_global_flag = united_BNG_bangladesh
+		ai_chance = { factor = 0.03 }
+	}
+
+}
+
 #Mountbatten Plan - Independence of India, ENG
 country_event = {
 	id = 8214013
@@ -187,7 +276,7 @@ country_event = {
 	trigger = {
 		tag = ENG
 		government = hms_government
-		OR = { year = 1947 has_global_flag = partioned_india_option_fast }
+		year = 1947
 		NOT = { year = 1990 }
 		is_our_vassal = RAJ
 		exists = RAJ
@@ -204,33 +293,609 @@ country_event = {
 	}
 
 	option = {
-		name = "Grant India and Pakistan independence"
-		
+		name = "Accept existing partition plans"
 		release_vassal = RAJ
-		
+		release_vassal = PAK
+		random_owned = {
+			limit = { owner = { exists = ASM } }
+			owner = { release_vassal = ASM }
+		}
+		random_owned = {
+			limit = { owner = { exists = BNG } }
+			owner = { release_vassal = BNG }
+		}
 		RAJ = { country_event = 8007205 }
 		
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Explore further partition plans before we leave to keep India dependent on us"
+		badboy = 15
+		release_vassal = RAJ
+		release_vassal = PAK
+		random_owned = {
+			limit = { owner = { exists = ASM } }
+			owner = { release_vassal = ASM }
+		}
+		random_owned = {
+			limit = { owner = { exists = BNG } }
+			owner = { release_vassal = BNG }
+		}
+		country_event = 82140131
+		ai_chance = { factor = 0 }
+	}
+
+	option = {
+		name = "Halt independence plans and explore further partition plans (Divide and Conquer)"
+		badboy = 25
+		set_global_flag = no_independence_india
+		country_event = 82140131
+		
+		ai_chance = { factor = 0 }
 	}
 
 }
 
-#British influence on Princely states wanes
+#Partition plan of the Raj - triggered by Britain deciding against India's independence in 8214013 because they have already decided on partition
 country_event = {
-	id = 8214019
-	title = EVT_8214019_NAME
-	# EVT_8214019_NAME;Britain Leaves India
-	desc = EVT_8214019_DESC
-	# EVT_8214019_DESC;Neither paramountcy nor the subsidiary alliances could continue after Indian independence. The British took the view that because they had been established directly between the British crown and the princely states, they could not be transferred to the newly independent dominions of India and Pakistan.[11] At the same time, the alliances imposed obligations on Britain that it was not prepared to continue to carry out, such as the obligation to maintain troops in India for the defence of the princely states. The British government therefore decided that paramountcy, together with all treaties between them and the princely states, would come to an end upon the British departure from India.
-	picture = "princely_states"
-	is_triggered_only = yes # ENG
+	id = 82140131
+	title = "Partition of the Raj"
+	desc = EVT_82140131_DESC
+	picture = "partition_of_india"
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+		name = "Divide India into Aryan, Dravidian, Bengal, and Assamese states"
+		badboy = 10
+		RAJ = { inherit = MYS inherit = TRA inherit = HYD release = DRA }
+		#Clean up Princely States to prevent bordergore
+		RAJ = { inherit = RAA inherit = IND inherit = BER inherit = NAX inherit = ORI inherit = GWA }
+		
+		#If Bangladesh was set to be under HND rule
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = united_HND_bangladesh }
+			}
+			owner = {
+				RAJ = { release = HNB release = ASM }
+				HNB = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 add_accepted_culture = bengali }
+				ASM = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 inherit = MNP }
+			}
+		}
+		#If Bangladesh was set to be under PAK rule
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = united_PAK_bangladesh }
+			}
+			owner = {
+				PAK = { release = BNG }
+				BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 add_accepted_culture = bengali_hindu }
+			}
+		}
+		#If Bangladesh was partitioned
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = historic_bangladesh_partition }
+			}
+			owner = {
+				RAJ = { any_owned = { limit = { is_core = HNB } add_core = BNG secede_province = PAK } release = ASM }
+				PAK = { release = BNG }
+				ASM = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 inherit = MNP }
+				BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 add_accepted_culture = bengali_hindu }
+			}
+		}
+		
+		#Create vassals if Brits opted to halt independence
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = no_independence_india
+				}
+			}
+			owner = {
+				create_vassal = ASM
+				diplomatic_influence = { who = ASM value = 200 }
+				create_vassal = DRA
+				diplomatic_influence = { who = DRA value = 200 }
+			}
+		}
+		#Bangladesh Situation
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = no_independence_india
+					exists = BNG
+				}
+			}
+			owner = {
+				create_vassal = BNG
+				diplomatic_influence = { who = BNG value = 200 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = no_independence_india
+					exists = HNB
+				}
+			}
+			owner = {
+				create_vassal = HNB
+				diplomatic_influence = { who = HNB value = 200 }
+			}
+		}
+		
+		#Everyone in the region is pissed
+		any_country = {
+			limit = {
+				capital_scope = { OR = { is_core = HND is_core = PAK } }
+			}
+			add_country_modifier = { name = revolution_chaos duration = 7300 }
+		}
+		HND = {
+			all_core = {
+				any_pop = {
+					limit = { NOT = { culture = british } }
+					militancy = 10
+					consciousness = 10
+				}
+			}
+		}
+		PAK = {
+			all_core = {
+				any_pop = {
+					limit = { NOT = { culture = british } }
+					militancy = 10
+					consciousness = 10
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = no_independence_india } } }
+			owner = { RAJ = { country_event = 8007205 } }
+		}
+		
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Divide the Raj along ethnic lines! (Complete Dismantlement)"
+		set_global_flag = radical_RAJ_partition
+		badboy = 20
+		RAJ = {
+			#For some reason seceding provinces didn't work so just have releases and inherits instead based on cores
+			inherit = MYS
+			release = MYS
+			inherit = TRA
+			release = TRA
+			inherit = BER
+			release = BER
+			inherit = ORI
+			release = ORI
+			inherit = RAA
+			release = RAA
+			inherit = HYD
+			release = HYD
+			release = PNJ
+			release = MRH
+			release = TMN
+			release_vassal = SIK
+			release_vassal = BHU
+		}
+		
+		1272 = { add_core = NAX }
+		1275 = { add_core = NAX }
+		1276 = { add_core = NAX }
+		RAJ = {
+			inherit = NAX
+			release = NAX
+		}
+		
+		PNJ = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		MRH = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		TMN = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		
+		PAK = {
+			capital = 1230
+			inherit = AZK
+			release = AZK
+			release = SIN
+		}
+		AZK = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		SIN = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		
+		#If Bangladesh was set to be under HND rule
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = united_HND_bangladesh }
+			}
+			owner = {
+				RAJ = { release = HNB release = ASM }
+				HNB = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 add_accepted_culture = bengali }
+				ASM = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 inherit = MNP }
+			}
+		}
+		#If Bangladesh was partitioned
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = historic_bangladesh_partition }
+			}
+			owner = {
+				PAK = { release = BNG }
+				RAJ = { release = HNB release = ASM }
+				ASM = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 inherit = MNP }
+				BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				HNB = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+			}
+		}
+		#If Bangladesh was set to be under PAK rule
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = united_PAK_bangladesh }
+			}
+			owner = {
+				PAK = { release = BNG }
+				BNG = { government = absolute_monarchy country_event = 800050 add_accepted_culture = bengali_hindu }
+			}
+		}
+		
+		BNG = { government = absolute_monarchy country_event = 800050 add_accepted_culture = bengali_hindu }
+		
+		#Create vassals if Brits opted to halt independence
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = no_independence_india
+				}
+			}
+			owner = {
+				create_vassal = PNJ
+				create_vassal = MRH
+				create_vassal = TMN
+				create_vassal = SIN
+				create_vassal = AZK
+				create_vassal = SIK
+				create_vassal = MYS
+				create_vassal = TRA
+				create_vassal = BER
+				create_vassal = ORI
+				create_vassal = RAA
+				create_vassal = NAX
+				create_vassal = HYD
+			}
+			owner = {
+				PNJ = { government = theocracy ruling_party_ideology = traditionalist country_event = 800050 }
+				MRH = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				TMN = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				SIN = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				AZK = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				SIK = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				MYS = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				TRA = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				BER = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				ORI = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				RAA = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				NAX = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				HYD = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+			}
+			owner = {
+				diplomatic_influence = { who = PNJ value = 200 }
+				diplomatic_influence = { who = MRH value = 200 }
+				diplomatic_influence = { who = TMN value = 200 }
+				diplomatic_influence = { who = SIN value = 200 }
+				diplomatic_influence = { who = AZK value = 200 }
+				diplomatic_influence = { who = SIK value = 200 }
+				diplomatic_influence = { who = MYS value = 200 }
+				diplomatic_influence = { who = TRA value = 200 }
+				diplomatic_influence = { who = BER value = 200 }
+				diplomatic_influence = { who = ORI value = 200 }
+				diplomatic_influence = { who = RAA value = 200 }
+				diplomatic_influence = { who = NAX value = 200 }
+				diplomatic_influence = { who = HYD value = 200 }
+			}
+		}
+		#Bangladesh Situation
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = no_independence_india
+					exists = BNG
+				}
+			}
+			owner = {
+				create_vassal = BNG
+				diplomatic_influence = { who = BNG value = 200 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = no_independence_india
+					exists = HNB
+				}
+			}
+			owner = {
+				create_vassal = HNB
+				diplomatic_influence = { who = HNB value = 200 }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = no_independence_india
+					exists = ASM
+				}
+			}
+			owner = {
+				create_vassal = ASM
+				diplomatic_influence = { who = ASM value = 200 }
+			}
+		}
+		
+		#Assign influence
+		
+		
+		#Everyone in the entire region is pissed
+		any_country = {
+			limit = {
+				capital_scope = { OR = { is_core = HND is_core = PAK } }
+			}
+			add_country_modifier = { name = revolution_chaos duration = 7300 }
+		}
+		HND = {
+			all_core = {
+				any_pop = {
+					limit = { NOT = { culture = british } }
+					militancy = 10
+					consciousness = 10
+				}
+			}
+		}
+		PAK = {
+			all_core = {
+				any_pop = {
+					limit = { NOT = { culture = british } }
+					militancy = 10
+					consciousness = 10
+				}
+			}
+		}
+		
+		random_owned = {
+			limit = { owner = { NOT = { has_global_flag = no_independence_india } } }
+			owner = { RAJ = { country_event = 8007205 } }
+		}
+		
+		#Andaman Islands Situation
+		random_owned = {
+			limit = { owner = { NOT = { exists = BUR } } }
+			owner = {
+				1320 = { add_core = BUR }
+				RAJ = { release = SNT }
+				inherit = SNT
+			}
+		}
+		random_owned = {
+			limit = { owner = { exists = BUR } }
+			owner = { 1320 = { add_core = BUR } }
+			RAJ = { release = SNT }
+			BUR = { inherit = SNT }
+		}
+		
+		ai_chance = { factor = 0.2 }
+	}
+
+}
+
+#Partition plan of the Raj - triggered by Britain deciding against India's independence in 1214010 to give the option of not partitioning India to avoid infamy
+country_event = {
+	id = 82140132
+	title = "Partition of the Raj"
+	desc = EVT_82140131_DESC
+	picture = "partition_of_india"
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
 	
 	option = {
-		name = EVT_8214019_A 
-		FROM = { diplomatic_influence = { who = THIS value = -200 } }
-		FROM = { relation = { who = THIS value = -200 } }
-		FROM = { leave_alliance = THIS }
+		name = "There is no need, they'll never break away anyway"
+		ai_chance = { factor = 0.8 }
 	}
-	
+
+	option = {
+		name = "Divide India into Aryan, Dravidian, Bengal, Pakistani, and Assamese states"
+		badboy = 10
+		RAJ = { inherit = MYS inherit = TRA inherit = HYD release = DRA }
+		RAJ = { inherit = AZK inherit = BLO inherit = JAK release = PAK }
+		#Clean up Princely States to prevent bordergore
+		RAJ = { inherit = RAA inherit = IND inherit = BER inherit = NAX inherit = ORI inherit = GWA }
+		
+		RAJ = { any_owned = { limit = { is_core = HNB } add_core = BNG } release = BNG release = ASM }
+		
+		create_vassal = ASM
+		diplomatic_influence = { who = ASM value = 200 }
+		create_vassal = DRA
+		diplomatic_influence = { who = DRA value = 200 }
+		create_vassal = BNG
+		diplomatic_influence = { who = BNG value = 200 }
+		create_vassal = PAK
+		diplomatic_influence = { who = PAK value = 200 }
+		
+		BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 add_accepted_culture = bengali_hindu }
+		ASM = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 inherit = MNP }
+		DRA = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		PAK = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+				
+		#Everyone in the region is pissed
+		any_country = {
+			limit = {
+				capital_scope = { OR = { is_core = HND is_core = PAK } }
+			}
+			add_country_modifier = { name = revolution_chaos duration = 7300 }
+		}
+		HND = {
+			all_core = {
+				any_pop = {
+					limit = { NOT = { culture = british } }
+					militancy = 10
+					consciousness = 10
+				}
+			}
+		}
+		PAK = {
+			all_core = {
+				any_pop = {
+					limit = { NOT = { culture = british } }
+					militancy = 10
+					consciousness = 10
+				}
+			}
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+	option = {
+		name = "Divide the Raj along ethnic lines! (Complete Dismantlement)"
+		set_global_flag = radical_RAJ_partition
+		badboy = 20
+		RAJ = {
+			#For some reason seceding provinces didn't work so just have releases and inherits instead based on cores
+			inherit = MYS
+			release = MYS
+			inherit = TRA
+			release = TRA
+			inherit = BER
+			release = BER
+			inherit = ORI
+			release = ORI
+			inherit = RAA
+			release = RAA
+			inherit = HYD
+			release = HYD
+			inherit = AZK
+			release = AZK
+			release = PNJ
+			release = MRH
+			release = TMN
+			release = SIN
+			release = PAK
+			release_vassal = SIK
+			release_vassal = BHU
+		}
+		
+		RAJ = { any_owned = { limit = { is_core = HNB } add_core = BNG } release = BNG release = ASM }
+		
+		1272 = { add_core = NAX }
+		1275 = { add_core = NAX }
+		1276 = { add_core = NAX }
+		RAJ = {
+			inherit = NAX
+			release = NAX
+		}
+		
+		create_vassal = PNJ
+		create_vassal = MRH
+		create_vassal = TMN
+		create_vassal = SIN
+		create_vassal = AZK
+		create_vassal = SIK
+		create_vassal = MYS
+		create_vassal = TRA
+		create_vassal = BER
+		create_vassal = ORI
+		create_vassal = RAA
+		create_vassal = NAX
+		create_vassal = HYD
+		create_vassal = BNG
+		create_vassal = ASM
+		create_vassal = PAK
+		
+		PNJ = { government = absolute_monarchy ruling_party_ideology = traditionalist country_event = 800050 }
+		MRH = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		TMN = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		SIN = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		AZK = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		SIK = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		MYS = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		TRA = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		BER = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		ORI = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		RAA = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		NAX = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		HYD = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		PAK = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
+		BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 add_accepted_culture = bengali_hindu }
+		ASM = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 inherit = MNP }
+		
+		diplomatic_influence = { who = PNJ value = 200 }
+		diplomatic_influence = { who = MRH value = 200 }
+		diplomatic_influence = { who = TMN value = 200 }
+		diplomatic_influence = { who = SIN value = 200 }
+		diplomatic_influence = { who = AZK value = 200 }
+		diplomatic_influence = { who = SIK value = 200 }
+		diplomatic_influence = { who = MYS value = 200 }
+		diplomatic_influence = { who = TRA value = 200 }
+		diplomatic_influence = { who = BER value = 200 }
+		diplomatic_influence = { who = ORI value = 200 }
+		diplomatic_influence = { who = RAA value = 200 }
+		diplomatic_influence = { who = NAX value = 200 }
+		diplomatic_influence = { who = HYD value = 200 }
+		diplomatic_influence = { who = BNG value = 200 }
+		diplomatic_influence = { who = ASM value = 200 }
+		diplomatic_influence = { who = PAK value = 200 }
+		
+		#Everyone in the entire region is pissed
+		any_country = {
+			limit = {
+				capital_scope = { OR = { is_core = HND is_core = PAK } }
+			}
+			add_country_modifier = { name = revolution_chaos duration = 7300 }
+		}
+		HND = {
+			all_core = {
+				any_pop = {
+					limit = { NOT = { culture = british } }
+					militancy = 10
+					consciousness = 10
+				}
+			}
+		}
+		PAK = {
+			all_core = {
+				any_pop = {
+					limit = { NOT = { culture = british } }
+					militancy = 10
+					consciousness = 10
+				}
+			}
+		}
+		
+		#Andaman Islands Situation
+		random_owned = {
+			limit = { owner = { NOT = { exists = BUR } } }
+			owner = {
+				1320 = { add_core = BUR }
+				RAJ = { release = SNT }
+				inherit = SNT
+			}
+		}
+		random_owned = {
+			limit = { owner = { exists = BUR } }
+			owner = { 1320 = { add_core = BUR } }
+			RAJ = { release = SNT }
+			BUR = { inherit = SNT }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+
 }
 
 #The independence of India event
@@ -247,6 +912,7 @@ country_event = {
 	trigger = {
 		tag = RAJ
 		is_vassal = no
+		NOT = { truce_with = ENG } #Didn't fight a war of independence
 		war = no
 		NOT = { has_country_flag = 8007205_fired }
 		RAJ = { owns = 1236 } # Delhi
@@ -262,15 +928,12 @@ country_event = {
 	
 		set_country_flag = 8007205_fired
 	
-		#Release Pakistan
-		any_owned = {
-			limit = { is_core = PAK }
-			secede_province = PAK
-		}
-	
 		#New Pakistani Government
 		PAK = { government = hms_government }
-		PAK = { capital = 1288 }
+		random_owned = {
+			limit = { owner = { PAK = { owns = 1288 } } }
+			owner = { PAK = { capital = 1288 } }
+		}
 		
 		random_country = {
 			limit = { tag = ENG }
@@ -297,6 +960,25 @@ country_event = {
 		}
 	
 	}
+}
+
+#British influence on Princely states wanes
+country_event = {
+	id = 8214019
+	title = EVT_8214019_NAME
+	# EVT_8214019_NAME;Britain Leaves India
+	desc = EVT_8214019_DESC
+	# EVT_8214019_DESC;Neither paramountcy nor the subsidiary alliances could continue after Indian independence. The British took the view that because they had been established directly between the British crown and the princely states, they could not be transferred to the newly independent dominions of India and Pakistan.[11] At the same time, the alliances imposed obligations on Britain that it was not prepared to continue to carry out, such as the obligation to maintain troops in India for the defence of the princely states. The British government therefore decided that paramountcy, together with all treaties between them and the princely states, would come to an end upon the British departure from India.
+	picture = "princely_states"
+	is_triggered_only = yes # ENG
+	
+	option = {
+		name = EVT_8214019_A 
+		FROM = { diplomatic_influence = { who = THIS value = -200 } }
+		FROM = { relation = { who = THIS value = -200 } }
+		FROM = { leave_alliance = THIS }
+	}
+	
 }
 
 #Princely states get to decide who to join upon partition - HND princely states
@@ -379,7 +1061,7 @@ country_event = {
 		capital_scope = { is_core = PAK } # AZK and BLO
 		NOT = { tag = JAK }
 		NOT = { tag = SIN }
-		exists = PAK
+		PAK = { exists = yes is_vassal = no }
 		
 		OR = { has_global_flag = partioned_india_option PAK = { is_vassal = no } }
 		
@@ -448,6 +1130,7 @@ country_event = {
 
 	trigger = { 
 		tag = HYD
+		exists = yes
 		vassal_of = ENG 
 		exists = HND
 		OR = { has_global_flag = partioned_india_option HND = { is_vassal = no } }
@@ -523,8 +1206,16 @@ country_event = {
 		war = no
 		NOT = { has_global_flag = 1950_start_date_flag }
 		NOT = { year = 1990 }
-		vassal_of = ENG
-		has_global_flag = united_india_option
+		OR = {
+			AND = {
+				vassal_of = ENG
+				has_global_flag = united_india_option
+			}
+			AND = { #Won a war of independence
+				is_vassal = no
+				truce_with = ENG
+			}
+		}
 	}
 
 	mean_time_to_happen = { 
@@ -542,6 +1233,14 @@ country_event = {
 		government = hms_government1 # So they don't get the union jack stamp flag
 		country_event = { id = 1412200 days = 10 }
 		PAK = { all_core = { add_core = HND } }
+		random_owned = { #Inherit Pakistan if Britain went for the united India option
+			limit = {
+				owner = {
+					has_global_flag = united_india_option
+				}
+			}
+			owner = { inherit = PAK }
+		}
 		add_accepted_culture = sikkim
 		add_accepted_culture = punjabi
 		add_accepted_culture = pashtun

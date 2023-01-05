@@ -101,9 +101,18 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ENG
-		owns = 2019 # Entebbe Kampala
-		year = 1953 NOT = { year = 1990 }
+		OR = {
+			AND = {
+				tag = ENG
+				owns = 2019 # Entebbe Kampala
+				year = 1953 NOT = { year = 1990 }
+			}
+			AND = {
+				tag = UGA
+				owns = 2019 # Entebbe Kampala
+				year = 1953 NOT = { year = 1990 }
+			}
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -135,7 +144,10 @@ country_event = {
 	
 	trigger = {
 		tag = ENG
-		owns = 2019 # Entebbe Kampala
+		OR = {
+			owns = 2019 # Entebbe Kampala
+			exists = UGA
+		}
 		year = 1962 NOT = { year = 1990 }
 		OR = { exists = TAN year = 1971 }
 	}
@@ -143,36 +155,111 @@ country_event = {
 	mean_time_to_happen = { months = 3 }
 	
     option = {
-	  name = EVT_1027011_A
-	  prestige = 10
-	  release = UGA
-	ENG = { diplomatic_influence = { who = UGA value = 200 } }
-	create_alliance = UGA
+		name = EVT_1027011_A
+		prestige = 10
+		random_owned = {
+			limit = {
+				owner = {
+					exists = UGA
+					UGA = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				release_vassal = UGA
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = UGA }
+				}
+			}
+			owner = {
+				release = UGA
+			}
+		}
+		ENG = { diplomatic_influence = { who = UGA value = 200 } }
+		create_alliance = UGA
 
-	UGA = { government = hms_government1 }
-	UGA = { set_country_flag = former_colonial_nation }
-	UGA = { election = yes }
-  	  ai_chance = { factor = 0.7 }
+		UGA = {
+			government = hms_government1
+			set_country_flag = former_colonial_nation
+			election = yes
+		}
+		ai_chance = { factor = 0.7 }
     }
   
-  option = {
-	name = EVT_1027011_B
-	release_vassal = UGA
-	UGA = { set_country_flag = full_independance }
-	ENG = { diplomatic_influence = { who = UGA value = 200 } }
-	any_pop = { limit = { NOT = { culture = ganda } location = { is_core = UGA } } militancy = 2 consciousness = 4.0 }
-	create_alliance = UGA
-	ai_chance = { factor = 0.2 }
-  }  
+	option = {
+		name = EVT_1027011_B
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = UGA }
+				}
+			}
+			owner = {
+				release_vassal = UGA
+			}
+		}
+		UGA = { set_country_flag = full_independance }
+		ENG = { diplomatic_influence = { who = UGA value = 200 } }
+		any_pop = { limit = { NOT = { culture = ganda } location = { is_core = UGA } } militancy = 2 consciousness = 4.0 }
+		create_alliance = UGA
+		ai_chance = { factor = 0.2 }
+	}  
 
-  option = {
-	name = EVT_1027011_C
-	prestige = -10
-	any_pop = { limit = { NOT = { culture = ganda } location = { is_core = UGA } } militancy = 5 consciousness = 2.0 }
-	# TODO UGA UDI
-	ai_chance = { factor = 0.1 }
-  }	
+	option = {
+		name = EVT_1027011_C
+		prestige = -10
+		random_owned = {
+			limit = {
+				owner = {
+					exists = UGA
+					UGA = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				UGA = { country_event = 10270111 }
+			}
+		}
+		any_pop = { limit = { NOT = { culture = ganda } location = { is_core = UGA } } militancy = 5 consciousness = 2.0 }
+		# TODO UGA UDI
+		ai_chance = { factor = 0.1 }
+	}	
 	
+}
+
+country_event = {
+	id = 10270111
+	title = "Ugandan War of Indepedence?" # The Idi Amin Regime
+	desc = "Our overlords have refused to grant us the independence we rightly deserve. We should declare independence and fight to keep it if necessary!"
+	picture = "independence_uganda" 
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+    option = {
+		name = "To arms!"
+		FROM = { release_vassal = THIS }
+		government = democracy
+		country_event = 800054
+		FROM = {
+			war = {
+				target = THIS
+				attacker_goal = colonial_war
+				defender_goal = become_independent
+				call_ally = no
+			}
+		}
+		ai_chance = { factor = 0.9 }
+    }
+
+	option = {
+		name = "We will wait for a more opportune time"
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.1 }
+    }
 }
 
 country_event = {
@@ -261,7 +348,7 @@ country_event = {
 	
     option = {
 	  name = EVT_1027014_A
-	  war = { target = TAN attacker_goal = { casus_belli = acquire_state state_province_id = 2044 } defender_goal = { casus_belli = install_authoritarian_regime } }
+	  war = { target = TAN attacker_goal = { casus_belli = territorial_dispute } defender_goal = { casus_belli = install_authoritarian_regime } }
 	  ai_chance = { factor = 1 }
     }
 	

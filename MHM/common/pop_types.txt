@@ -327,12 +327,54 @@ migration_chance = { # 1
 	modifier = {
         factor = -2.5
         state_scope = { is_colonial = yes }
+		country = { NOT = { has_country_flag = promote_colonial_migration_active } }
     }
 	
 	#Less movement between overseas provinces
 	modifier = {
         factor = -2.0
         location = { is_overseas = yes }
+		country = { NOT = { has_country_flag = promote_colonial_migration_active } }
+    }
+	
+	#Increase movement away from overpopulated provinces
+	modifier = {
+        factor = 0.5
+        location = { has_province_modifier = overpopulated_province1 }
+    }
+	modifier = {
+        factor = 1.0
+        location = { has_province_modifier = overpopulated_province2 }
+    }
+	modifier = {
+        factor = 1.5
+        location = { has_province_modifier = overpopulated_province3 }
+    }
+	modifier = {
+        factor = 2.0
+        location = { has_province_modifier = overpopulated_province4 }
+    }
+	modifier = {
+        factor = 2.5
+        location = { has_province_modifier = overpopulated_province5 }
+    }
+	
+	#Increase movement away from nuked provinces
+	modifier = {
+        factor = 1.5
+		location = { has_province_modifier = tactical_nuked }
+    }
+	modifier = {
+        factor = 25
+		location = { has_province_modifier = nuke_low }
+    }
+	modifier = {
+        factor = 50
+		location = { has_province_modifier = nuke_medium }
+    }
+	modifier = {
+        factor = 100
+		location = { has_province_modifier = nuke_high }
     }
 	
 	#Increase movement away from rural provinces when there is urban focus

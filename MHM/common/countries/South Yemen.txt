@@ -1,5 +1,7 @@
 graphical_culture = MiddleEasternGC
 color = { 143 188 143 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "FLOSY"
 		citizenship_policy = full_citizenship

@@ -1,5 +1,7 @@
 graphical_culture = MiddleEasternGC
 color = { 170 206 162 }
+colonial_government = { 65 105 225 }
+
 party = {
 		name = "Neo Destour"
 		citizenship_policy = limited_citizenship

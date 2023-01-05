@@ -1,5 +1,7 @@
 graphical_culture = IndianGC
 color = { 124 231 156 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "party_nationalist"
 		citizenship_policy = limited_citizenship

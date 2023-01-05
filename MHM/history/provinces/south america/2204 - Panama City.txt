@@ -5,6 +5,7 @@ trade_goods = fish
 life_rating = 30
 terrain = urban_panama_city
 colonial = 0
+naval_base = 1
 state_building = {
 	level = 1
 	building = canned_meat_factory

@@ -1,5 +1,7 @@
 graphical_culture = EuropeanGC
 color = { 5 157 128 }
+colonial_government = { 255 175 175 }
+
 party = {
 		name = "party_nationalist_0_ISP"
 		citizenship_policy = limited_citizenship

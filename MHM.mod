@@ -1,4 +1,4 @@
-name = "Modern History Mod 1.06" # 2022
+name = "Modern History Mod 1.06B" # 2022
 path = "mod/MHM" # location of your mod files. If changed, change map/default.map as well.
 user_dir = "MHM" # optional.   
 replace_path = "common"

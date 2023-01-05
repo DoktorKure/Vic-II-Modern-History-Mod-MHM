@@ -1,6 +1,8 @@
 graphical_culture = AfricanGC
 color = { 123 104 238 }
 hms_government = { 30 144 255 }
+colonial_government = { 65 105 225 }
+
 party = {
 		name = "party_nationalist"
 		citizenship_policy = limited_citizenship

@@ -170,7 +170,7 @@ country_event = {
 		ruling_party_ideology = communist
 		
 		#Vietnam united
-		owns = 1380 # Saigon
+		DAI = { owns = 1380 } # Saigon
 		
 		#Appropriate international situation
 		DAI = { ruling_party_ideology = communist is_vassal = no } 
@@ -188,7 +188,7 @@ country_event = {
 		#Start the war
 		war = { 
 			target = DAI 
-			attacker_goal = { casus_belli = make_puppet } 
+			attacker_goal = { casus_belli = acquire_any_state state_province_id = 1380 } #Mekong Delta
 			defender_goal = { casus_belli = make_puppet } 
 			call_ally = no
 		}

@@ -1,3 +1,53 @@
+#Colonies/Mandates
+FAG = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+AOF = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+AEF = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+CMR = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+DJI = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+GUN = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+MAD = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+FEZ = {
+	level = 5
+	value = 200
+	influence_value = 100
+	military_access = yes
+}
+
 USA = {
 	value = 200
 	military_access = yes

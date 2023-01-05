@@ -1,0 +1,508 @@
+#Belize Self-government
+country_event = {
+	id = 1512085
+	title = "Self-Rule in British Honduras?"
+	desc = EVTDESC1512085
+	picture = "british_honduras_dominion"
+
+	fire_only_once = yes
+
+	trigger = {
+		year = 1964
+		NOT = { year = 1990 }
+		tag = ENG
+		government = hms_government
+		war = no
+		OR = { 
+			is_possible_vassal = BLZ
+			is_our_vassal = BLZ
+		}
+		GUA = { exists = yes }
+	}
+
+	mean_time_to_happen = { 
+		months = 1
+	}
+
+	option = {
+		name = "We shall guide them to independence"
+
+		prestige = 10
+
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = BLZ }
+				}
+			}
+			owner = {
+				release_vassal = BLZ
+
+				diplomatic_influence = { who = BLZ value = 200 }
+
+				BLZ = { 
+					government = colonial_government 
+					country_event = 800054 
+					ruling_party_ideology = conservative 
+
+					any_pop = { 
+					ideology = {
+						factor = 0.9
+						value = conservative
+						} 
+					}
+
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = BLZ
+					is_our_vassal = BLZ
+				}
+			}
+			owner = {
+				BLZ = { 
+					government = mandate_government 
+					country_event = 800054 
+					ruling_party_ideology = conservative 
+
+					any_pop = { 
+					ideology = {
+						factor = 0.9
+						value = conservative
+						} 
+					}
+
+				}
+			}
+		}
+
+		ai_chance = { factor = 0.7 }
+
+	}
+
+	option = {
+		name = "Cede the territory to Guatemala"
+		prestige = -10
+		relation = { who = USA value = 50 }
+		relation = { who = GUA value = 200 }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = BLZ }
+				}
+			}
+			owner = {
+				2190 = { secede_province = GUA }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = BLZ
+					is_our_vassal = BLZ
+				}
+			}
+			owner = {
+				release_vassal = BLZ
+				GUA = { inherit = BLZ }
+			}
+		}
+		
+		2190 = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+		ai_chance = { factor = 0.1 }
+	}
+
+	option = {
+		name = "Hold on to the lands!"
+		prestige = -25
+		badboy = 5
+		random_owned = {
+			limit = {
+				owner = {
+					exists = BLZ
+					BLZ = { vassal_of = THIS }
+				}
+			}
+			owner = {
+				BLZ = {
+					any_pop = {
+						militancy = 5
+						consciousness = 5
+						ideology = { factor = 0.25 value = nationalist }
+					}
+					add_country_modifier = { name = revolution_chaos duration = 3650 } 
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = BLZ }
+				}
+			}
+			owner = {
+				any_owned = { 
+					limit = { is_core = BLZ } 
+					any_pop = { 
+						militancy = 5
+						consciousness = 5
+						ideology = { factor = 0.15 value = nationalist }
+					} 
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+			}
+		}
+		relation = { who = GUA value = -200 }
+		ai_chance = { factor = 0.2 }
+	}
+}
+
+#Belize Name Change
+country_event = {
+	id = 1512088
+	title = "Road to Belizean Independence"
+	desc = EVTDESC1512088
+	picture = "british_belize_indy"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = BLZ
+		year = 1973
+		NOT = { year = 1990 }
+		
+		OR = { government = colonial_government government = mandate_government }
+		is_vassal = yes
+		
+		GUA = { exists = yes }
+	}
+
+	mean_time_to_happen = { 
+		months = 6
+	}
+
+	option = {
+		name = "Push for independence!"
+		prestige = 10
+		government = hms_government
+		set_global_flag = blz_indy_enable
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Join Guatemala as an associated state"
+		prestige = -50
+		overlord = { release_vassal = THIS }
+		all_core = { remove_core = GUA }
+		GUA = { create_vassal = THIS }
+		government = sar_government
+		any_pop = { militancy = 3 }
+		all_core = { add_core = GUA }
+		ai_chance = { factor = 0.1 }
+	}
+
+	option = {
+		name = "Stay British to protect Belize from Guatemala"
+		prestige = -25
+		ai_chance = { factor = 0.1 }
+	}
+
+
+}
+
+#Republic of Mauritius
+country_event = {
+	id = 1512089
+	title = "Republic of Mauritius"
+	desc = EVTDESC1512089
+	picture = "mrt_republic"
+
+	fire_only_once = yes
+
+	trigger = {
+	tag = MRT
+	year = 1992
+	government = hms_government1
+	is_vassal = no
+	election = no
+	war = no
+	}
+
+	mean_time_to_happen = { 
+		months = 3
+	}
+
+	option = {
+		name = "Adopt the new constitution!"
+		prestige = 10
+		government = democracy
+		country_event = 800054
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Stay a Commonwealth Realm"
+		prestige = -25
+		ai_chance = { factor = 0.2 }
+	}
+
+}
+
+#Federal Republic of Nigeria
+country_event = {
+	id = 1512090
+	title = "Federal Republic of Nigeria"
+	desc = EVTDESC1512090
+	picture = "nge_republic"
+
+	fire_only_once = yes
+
+	trigger = {
+		year = 1963
+		NOT = { year = 1990 }
+		tag = NGE
+		government = hms_government1
+		is_vassal = no
+		war = no
+	}
+
+	mean_time_to_happen = { 
+		months = 10
+	}
+
+	option = {
+		name = "Adopt the new constitution!"
+		prestige = 25
+		government = democracy
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Stay a Commonwealth Realm"
+		prestige = -50
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.2 }
+	}
+
+}
+
+#Independence of Fiji
+country_event = {
+	id = 1512091
+	title = "Independence of Fiji"
+	desc = EVTDESC1512091
+	picture = "fij_indy"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		government = hms_government
+		year = 1970
+		NOT = { year = 1990 }
+		FIJ = { exists = no }
+		owns = 2454
+		war = no
+	}
+
+	mean_time_to_happen = { 
+		months = 10
+	}
+
+	option = {
+		name = "Set Fiji free!"
+		prestige = 25
+		release = FIJ
+		diplomatic_influence = { who = FIJ value = 200 }
+		FIJ = { government = hms_government1 }
+
+		#FIJ = { set_country_flag = former_colonial_nation }
+
+		FIJ = { ruling_party_ideology = conservative }
+		FIJ = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+		badboy = -1
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Deny self-determination"
+		prestige = -50
+		badboy = 2
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Indepedence of the Bahamas
+country_event = {
+	id = 1512086
+	title = "Commonwealth of the Bahamas"
+	desc = EVTDESC1512086
+	picture = "bahamas_indy"
+
+	fire_only_once = yes
+
+	trigger = {
+		year = 1973
+		NOT = { year = 1990 }
+		tag = ENG
+		government = hms_government
+		war = no
+		owns = 2219
+		BAH = { exists = no }
+	}
+
+	mean_time_to_happen = { 
+		months = 7
+	}
+
+	option = {
+		name = "Grant them independence within the Commonwealth"
+		prestige = 10
+		release = BAH
+		diplomatic_influence = { who = BAH value = 200 }
+		BAH = { 
+			government = hms_government1 
+			country_event = 800054 
+			ruling_party_ideology = conservative 
+			any_pop = { 
+			ideology = {
+				factor = 0.9
+				value = conservative
+				} 
+			}
+		}
+		ai_chance = { factor = 0.9 }
+	}
+
+
+	option = {
+		name = "Refuse independence"
+		prestige = -50
+		badboy = 2.5
+		2219 = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
+#Independence of Grenada
+country_event = {
+	id = 1512128
+	title = "Independence of Grenada"
+	desc = EVTDESC1512128
+	picture = "grd_indy"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		is_our_vassal = GRD
+		year = 1974
+		NOT = { year = 1990 }
+		war = no
+		is_vassal = no
+	}
+
+	mean_time_to_happen = { 
+		months = 2
+	}
+
+	option = {
+		name = "Let them go their own ways"
+		release_vassal = GRD
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Refuse independence"
+		prestige = -50
+		badboy = 10
+		relation = { who = GRD value = -200 }
+		GRD = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Oman independence
+country_event = {
+	id = 1512004
+	title = "Treaty of Friendship, Commerce and Navigation"
+	desc = EVTDESC1512004
+	picture = "oma_independence"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		year = 1951
+		NOT = { year = 1990 }
+		government = hms_government
+		is_our_vassal = OMA
+		exists = HND
+	}
+
+	mean_time_to_happen = { 
+		months = 5
+	}
+
+	option = {
+		name = "Grant Oman independence"
+		prestige = 25
+		release_vassal = OMA
+		diplomatic_influence = { who = OMA value = 25 }
+		OMA = { government = absolute_monarchy country_event = 800050 ruling_party_ideology = traditionalist }
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Keep the protectorate"
+		prestige = -50
+		diplomatic_influence = { who = OMA value = -200 }
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Independence of New Hebrides
+country_event = {
+	id = 1512016
+	title = "Independence of New Hebrides"
+	desc = EVTDESC1512016
+	picture = "independence_of_vanatau"
+
+	fire_only_once = yes
+
+	trigger = {
+		year = 1980
+		NOT = { year = 1990 }
+		OR = { tag = FRA tag = ENG }
+		OR = { government = hms_government government = democracy }
+		is_our_vassal = VAN
+	}
+
+	mean_time_to_happen = { 
+		months = 5
+	}
+
+	option = {
+		name = "Grant independence"
+		prestige = 25
+		release_vassal = VAN
+		VAN = { government = democracy country_event = 800054 }
+		diplomatic_influence = { who = VAN value = 200 }
+		FRA = { diplomatic_influence = { who = VAN value = -110 } } 
+		random_country = { limit = { is_our_vassal = VAN OR = { tag = FRA tag = ENG } } relation = { who = THIS value = -25 } }
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Maintain the Condominium"
+		prestige = -100
+		ai_chance = { factor = 0.1 }
+	}
+
+}

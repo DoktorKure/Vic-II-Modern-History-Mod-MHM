@@ -1,10 +1,10 @@
 capital = 2078
-primary_culture = ovambo
+primary_culture = afrikaaner
 culture = german
 religion = secularism
-government = democracy
+government = colonial_government
 plurality = 2.0
-nationalvalue = nv_equality
+nationalvalue = nv_order
 literacy = 0.01
 non_state_culture_literacy = 0.0
 civilized = yes
@@ -51,6 +51,7 @@ schools = army_tech_school
 
 1992.1.1 = {
 	capital = 2078
+	primary_culture = ovambo
 	religion = secularism
 	government = democracy
 	plurality = 8.0

@@ -1,7 +1,7 @@
 capital = 1954
 primary_culture = black_portuguese
 religion = secularism
-government = proletarian_dictatorship
+government = colonial_government
 plurality = 5.0
 nationalvalue = nv_equality
 literacy = 0.01
@@ -9,7 +9,7 @@ non_state_culture_literacy = 0.0
 civilized = yes
 prestige = 0
 last_election = 1944.7.1
-ruling_party = "MLSTP"
+ruling_party = party_conservative_0_STP
 upper_house = {
 	populist = 4
 	liberal = 21

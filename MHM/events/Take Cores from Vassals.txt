@@ -39,12 +39,7 @@ country_event = {
 
     option = {
         name = "There is nothing we can do."
-        any_country = {
-            limit = {
-                is_sphere_leader_of = THIS
-            }
-            country_event = 9705981
-        }
+        overlord = { country_event = 9705981 }
         ai_chance = {
             factor = 100
         }
@@ -86,4 +81,89 @@ country_event = {
         }
 
     }
+}
+
+country_event = {
+    id = 9705982
+    title = "Colonial Incorporation"
+    desc = "If $FROMCOUNTRY$ is the country you want to interact with, select an option. Otherwise, select 'Next country' to cycle through, or select 'Exit options' to return to the game."
+    is_triggered_only = yes
+	
+	option = {
+		name = "Incorporate $FROMCOUNTRY$ as a state"
+		badboy = 3.5
+		random_owned = { limit = { owner = { has_global_flag = un_committe_on_decolonisation } } owner = { badboy = 3.5 } }
+		FROM = {
+			clr_country_flag = interacted_with
+		}
+		inherit = FROM
+		
+		any_country = {
+			limit = {
+				vassal_of = THIS
+				exists = yes
+				THIS = { NOT = { has_country_flag = possible_interactions } }
+			}
+			clr_country_flag = interacted_with
+		}
+		random_country = {
+			limit = {
+				vassal_of = THIS
+				exists = yes
+				government = colonial_government
+				NOT = { has_country_flag = interacted_with }
+			}
+			country_event = 9705983
+			THIS = { set_country_flag = possible_interactions }
+		}
+	}
+	
+	option = {
+		name = "Next country"
+		random_country = {
+			limit = {
+				vassal_of = THIS
+				exists = yes
+				government = colonial_government
+				NOT = { has_country_flag = interacted_with }
+			}
+			country_event = 9705983
+			THIS = { set_country_flag = possible_interactions }
+		}
+		any_country = {
+			limit = {
+				vassal_of = THIS
+				exists = yes
+				THIS = { NOT = { has_country_flag = possible_interactions } }
+			}
+			clr_country_flag = interacted_with
+		}
+	}
+	
+	option = {
+		name = "Exit options"
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+			}
+			clr_country_flag = interacted_with
+		}
+	}
+}
+
+country_event = {
+    id = 9705983
+    title = "Colonial Interactions"
+	desc = "This event lets your overlord interact with you. If you are a player, just close this."
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "OK"
+		set_country_flag = interacted_with
+		FROM = { clr_country_flag = possible_interactions }
+		overlord = { country_event = 9705982 }
+	}
+
 }

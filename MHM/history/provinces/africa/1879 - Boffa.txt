@@ -1,14 +1,15 @@
-owner = FRA
-controller = FRA
+owner = AOF
+controller = AOF
 add_core = GUI
 trade_goods = bauxite
 life_rating = 15
 terrain = seasonal_jungle
+naval_base = 1
 colonial = 2
-1992.1.1 = {
-owner = GUI
-controller = GUI
-add_core = GUI
-life_rating = 15
-colonial = 0
+1992.1.1 = { 
+    owner = GUI
+    controller = GUI
+    add_core = GUI
+    life_rating = 15
+    colonial = 0
 }

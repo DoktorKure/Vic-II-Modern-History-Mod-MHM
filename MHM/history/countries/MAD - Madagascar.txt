@@ -6,7 +6,7 @@ culture = african_minor
 culture = tsimihety
 culture = betsimisaraka
 religion = secularism
-government = democracy
+government = colonial_government
 plurality = 2.0
 nationalvalue = nv_equality
 literacy = 0.01
@@ -48,6 +48,11 @@ pollution = no_controls
 wage_reform = unregulated_hours
 public_housing_reform = no_public_housing
 # Technologies
+infantry = 1
+gold_standard = 1
+radio_network = 1
+containment = 1
+decolonization = 1
 # Starting Consciousness
 consciousness = 0
 nonstate_consciousness = 0

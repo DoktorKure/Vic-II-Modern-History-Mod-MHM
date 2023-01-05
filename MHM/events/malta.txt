@@ -13,7 +13,10 @@ country_event = {
 		year = 1964 
 		NOT = { year = 1990 }
 		
-		is_possible_vassal = MAL
+		OR = {
+			is_possible_vassal = MAL
+			is_our_vassal = MAL
+		}
 		
 		is_vassal = no
 	}
@@ -23,9 +26,28 @@ country_event = {
 	option = {
 		name = "Grant them independence"
 		prestige = 25
-		release = MAL
-		MAL = { set_country_flag = full_independance }
-		MAL = { government = hms_government1 country_event = 800054 }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = MAL }
+				}
+			}
+			owner = {
+				release = MAL
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = MAL
+					is_our_vassal = MAL
+				}
+			}
+			owner = {
+				release_vassal = MAL
+			}
+		}
+		MAL = { set_country_flag = full_independance government = hms_government1 country_event = 800054 }
 		ENG = { diplomatic_influence = { who = MAL value = 200 } }
 		ai_chance = { factor = 0.8 }
 	}
@@ -33,11 +55,16 @@ country_event = {
 	option = {
 		name = "Follow through with the plan to integrate Malta"
 		
-		any_pop = { 
-			limit = { culture = maltese } 
-			militancy = 5 
-			consciousness = 6 
-			ideology = { factor = 0.15 value = nationalist }
+		MAL = { 
+			all_core = { 
+				any_pop = { 
+					limit = { culture = maltese } 
+					militancy = 5 
+					consciousness = 6 
+					ideology = { factor = 0.15 value = nationalist }
+				}
+				add_province_modifier = { name = nationalist_agitation duration = 3650 }
+			} 
 		}
 		
 		#All British pops become nationalist and angry with Maltese joining the UK
@@ -57,8 +84,31 @@ country_event = {
 		854 = { add_core = ENG }
 		
 		#To turn Malta into a state
-		release = MAL
-		inherit = MAL
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = MAL }
+				}
+			}
+			owner = {
+				release = MAL
+				inherit = MAL
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = MAL
+					is_our_vassal = MAL
+				}
+			}
+			owner = { #I know this looks really weird and fucked up but it's here for a reason
+				release_vassal = MAL
+				inherit = MAL
+				release = MAL
+				inherit = MAL
+			}
+		}
 		ai_chance = { factor = 0.2 }
 	}
   
