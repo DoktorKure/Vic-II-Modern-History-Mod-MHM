@@ -198,13 +198,13 @@ political_decisions = {
 			
 			#High development
 			literacy = 0.30
-			
-			#Capital is nice
-			capital_scope = { 
-				has_province_modifier = mnc_start 
 				
 			#Favourable corporate policies
 			has_country_modifier = mnchigh
+			
+			#Capital is nice
+			capital_scope = { 
+				has_province_modifier = mnc_start 			
 			}
 		}
 
@@ -297,8 +297,7 @@ political_decisions = {
 		}
 
 		effect = {
-			money = -2000000
-			money = -2000000
+			money = -4000000
 			add_country_modifier = { name = germania duration = 3650 }
 			set_country_flag = germania
 			any_owned = { limit = { is_capital = no has_province_modifier = new_capital } life_rating = 5 remove_province_modifier = new_capital }
