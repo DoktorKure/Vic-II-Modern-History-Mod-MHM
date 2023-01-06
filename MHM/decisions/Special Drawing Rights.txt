@@ -8,7 +8,7 @@ year = 1968
 	has_country_modifier = imf_member
 	NOT = { has_country_flag = special_imf_dr }
 			}
-alert = no
+alert = yes
 		allow = {
 credit_rating_institutions = 1
 is_greater_power = yes
