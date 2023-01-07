@@ -1,7 +1,7 @@
 #increase fort, dig-in cap, decrease attrition, increase army base supply consumption
 post_war_radar = {
 	area = ballistic_and_recon
-	year = 1946
+	year = 1945
 	cost = 3600
 	unciv_military = yes
 
@@ -54,7 +54,7 @@ post_war_radar = {
 }
 strategic_bomber = {
 	area = ballistic_and_recon
-	year = 1953
+	year = 1950
 	cost = 5400
 	unciv_military = yes
 
@@ -111,7 +111,7 @@ strategic_bomber = {
 }
 icbm = {
 	area = ballistic_and_recon
-	year = 1953
+	year = 1955
 	cost = 5400
 	unciv_military = yes
 	
@@ -459,7 +459,7 @@ gps_iii_system = {
 thaa_defense = {
 #infiltration = {
 	area = ballistic_and_recon
-	year = 2050
+	year = 2040
 	cost = 21600
 	unciv_military = yes
 		
@@ -516,7 +516,7 @@ thaa_defense = {
 ascent_phase_defense = {
 #modern_army_doctrine = {
 	area = ballistic_and_recon
-	year = 2070
+	year = 2060
 	cost = 25200
 	unciv_military = yes
 	
@@ -572,7 +572,7 @@ ascent_phase_defense = {
 #Increase all infantry stats and infantry supply consumption
 infantry = {
 	area = infa_tech
-	year = 1946
+	year = 1945
 	cost = 3600
 	unciv_military = yes
 
@@ -621,7 +621,7 @@ infantry = {
 }
 guerrilla = {
 	area = infa_tech
-	year = 1955
+	year = 1950
 	cost = 5400
 	unciv_military = yes
 
@@ -671,7 +671,7 @@ guerrilla = {
 }
 mechanized_infantry = {
 	area = infa_tech
-	year = 1960
+	year = 1955
 	cost = 7200
 	unciv_military = yes
 
@@ -725,7 +725,7 @@ mechanized_infantry = {
 }
 special_forces = {
 	area = infa_tech
-	year = 1971
+	year = 1970
 	cost = 9000
 	unciv_military = yes
 
@@ -1160,7 +1160,7 @@ future_force_warrior = {
 #Increase Tank and artillery stats + supply consumption 
 heavy_tanks = {
 	area = heavy_armament
-	year = 1946
+	year = 1945
 	cost = 3600
 	unciv_military = yes
 
@@ -1202,7 +1202,7 @@ heavy_tanks = {
 }
 antitank_weapons = {
 	area = heavy_armament
-	year = 1951
+	year = 1950
 	cost = 5400
 	unciv_military = yes
 	
@@ -1250,7 +1250,7 @@ antitank_weapons = {
 }
 main_battle_tank = {
 	area = heavy_armament
-	year = 1960
+	year = 1955
 	cost = 7200
 	unciv_military = yes
 
@@ -1423,7 +1423,7 @@ third_generation_tanks = {
 thirdplus_generation_tanks = {
 #iron_breech_loaded_artillery = {
 	area = heavy_armament
-	year = 2015
+	year = 2010
 	cost = 12600
 	unciv_military = yes
 
@@ -1520,7 +1520,7 @@ mounted_combat_system = {
 electric_gun_technology = {
 #indirect_artillery_fire = {
 	area = heavy_armament
-	year = 2050
+	year = 2040
 	cost = 21600
 	unciv_military = yes
 
@@ -1573,7 +1573,7 @@ electric_gun_technology = {
 fourth_generation_tanks = {
 #heavy_armament_dunno = {
 	area = heavy_armament
-	year = 2070
+	year = 2060
 	cost = 25200
 	unciv_military = yes
 
@@ -1618,7 +1618,7 @@ fourth_generation_tanks = {
 #Increase all aircraft stats and supply consumption
 first_generation_subsonic_jet_fighters = {
 	area = jet_tech
-	year = 1946
+	year = 1945
 	cost = 3600
 	unciv_military = yes
 
@@ -1719,7 +1719,7 @@ second_generation_jet_fighters = {
 }
 surface_to_air_missile = {
 	area = jet_tech
-	year = 1960
+	year = 1955
 	cost = 5400
 	unciv_military = yes
 
@@ -1777,7 +1777,7 @@ surface_to_air_missile = {
 }
 close_air_support = {
 	area = jet_tech
-	year = 1965
+	year = 1960
 	cost = 12600
 	unciv_military = yes
 
@@ -2131,7 +2131,7 @@ sixth_generation_jets = {
 }
 next_gen_bombers = {
 	area = jet_tech
-	year = 2070
+	year = 2060
 	cost = 25200
 	
 	#Bomber 
@@ -2194,7 +2194,7 @@ next_gen_bombers = {
 #army_doctrine - increase tactics, morale and army base supply consumption
 cold_war_doctrine = {
 	area = army_doctrine
-	year = 1946
+	year = 1945
 	cost = 3600
 
 	morale = 0.15
@@ -2276,7 +2276,7 @@ proxy_war = {
 
 mutual_assured_destruction = {
 	area = army_doctrine
-	year = 1960
+	year = 1955
 	cost = 7200
 
 	morale = 0.20
@@ -2618,7 +2618,7 @@ full_spectrum_dominance = {
 		}
 		modifier = {
 			factor = 1.05
-			year = 2070
+			year = 2060
 		}
 		modifier = {
 			factor = 1.02
@@ -2642,7 +2642,7 @@ full_spectrum_dominance = {
 
 fifth_generation_warfare = {
 	area = army_doctrine
-	year = 2070
+	year = 2060
 	cost = 25200
 	unciv_military = yes
 
