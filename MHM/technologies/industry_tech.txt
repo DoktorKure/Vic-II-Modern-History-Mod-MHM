@@ -1,7 +1,7 @@
 #Increase fossil fuel, electricity output
 fossil_fuel_power = { 
 	area = tech_power
-	year = 1946
+	year = 1945
 	cost = 3600
 	
 	factory_goods_output = { 
@@ -30,7 +30,7 @@ fossil_fuel_power = {
 		}
 		modifier = {
 			factor = 2
-			year = 1965
+			year = 1960
 		}
 		modifier = {
 			factor = 1.2
@@ -73,7 +73,7 @@ oil_well = {
 		}
 		modifier = {
 			factor = 2
-			year = 1965
+			year = 1960
 		}
 		modifier = {
 			factor = 1.2
@@ -309,7 +309,7 @@ microgeneration = {
 		factor = 1.01
 		modifier = {
 			factor = 1.01
-			year = 2045
+			year = 2040
 		}
 		modifier = {
 			factor = 1.02
@@ -332,7 +332,7 @@ microgeneration = {
 
 nuclear_renaissance = {
 	area = tech_power
-	year = 2050
+	year = 2040
 	cost = 18000
 
 	factory_goods_output = { 
@@ -372,7 +372,7 @@ nuclear_renaissance = {
 }
 micropower = {
 	area = tech_power
-	year = 2070
+	year = 2060
 	cost = 21600
 
 	factory_goods_output = { 
@@ -414,7 +414,7 @@ micropower = {
 #computing, increase technological goods production
 radio = {
 	area = computing
-	year = 1946
+	year = 1945
 	cost = 3600
 
 	activate_building = telecommunications_factory
@@ -749,7 +749,7 @@ personal_computer = {
 }
 handheld_devices = {
 	area = computing
-	year = 2005
+	year = 2000
 	cost = 12600
 
 	activate_building = communication_factory
@@ -988,7 +988,7 @@ quantum_computer = {
 #commodities, increase mine and farm efficiency
 intensive_farming = {
 	area = commodities
-	year = 1946
+	year = 1945
 	cost = 3600
 
 	activate_building = alcoholic_beverages_factory
@@ -1363,7 +1363,7 @@ automated_mining = {
 }
 genetically_modified_organism = {
 	area = commodities
-	year = 2025
+	year = 2020
 	cost = 14400
 	
 	#Increase RGO output
@@ -1420,7 +1420,7 @@ genetically_modified_organism = {
 }
 new_green_revolution = {
 	area = commodities
-	year = 2050
+	year = 2040
 	cost = 18000
 	
 	#Increase RGO output
@@ -1476,7 +1476,7 @@ new_green_revolution = {
 }
 landfill_mining_and_recycling = {
 	area = commodities
-	year = 2070
+	year = 2060
 	cost = 18000
 	
 	#Increase RGO output
@@ -1536,7 +1536,7 @@ landfill_mining_and_recycling = {
 #tech_infrastructure, increase admin
 modern_roads = {
 	area = tech_infrastructure
-	year = 1946
+	year = 1945
 	cost = 3600
 
 	activate_building = railroad
@@ -1561,7 +1561,7 @@ modern_roads = {
 		modifier = {
 			factor = 2
 			is_greater_power = yes
-			year = 2025
+			year = 2020
 		}
 		modifier = {
 			factor = 1.02
@@ -1596,7 +1596,7 @@ early_highway = {
 		modifier = {
 			factor = 2
 			is_greater_power = yes
-			year = 2025
+			year = 2020
 		}
 		modifier = {
 			factor = 1.02
@@ -1631,7 +1631,7 @@ interstate_highway_system = {
 		modifier = {
 			factor = 2
 			is_greater_power = yes
-			year = 2025
+			year = 2020
 		}
 		modifier = {
 			factor = 1.02
@@ -1666,7 +1666,7 @@ high_speed_rail = {
 		modifier = {
 			factor = 2
 			is_greater_power = yes
-			year = 2025
+			year = 2020
 		}
 		modifier = {
 			factor = 1.02
@@ -1736,7 +1736,7 @@ modern_backbone = {
 		modifier = {
 			factor = 2
 			is_greater_power = yes
-			year = 2045
+			year = 2040
 		}
 		modifier = {
 			factor = 1.02
@@ -1772,7 +1772,7 @@ mobile_network = {
 		modifier = {
 			factor = 2
 			is_greater_power = yes
-			year = 2045
+			year = 2040
 		}
 		modifier = {
 			factor = 1.02
@@ -1854,7 +1854,7 @@ universal_wireless_access = {
 }
 future_data_centers = {
 	area = tech_infrastructure
-	year = 2070
+	year = 2060
 	cost = 21600
 	
 	#Increase supply limit
@@ -1893,7 +1893,7 @@ future_data_centers = {
 #Assembly Line
 electricity = {
 	area = medicine_tech
-	year = 1946
+	year = 1945
 	cost = 3600
 	
 	#Factory Buffs
@@ -1915,7 +1915,7 @@ electricity = {
 #Standardised Interchangeable Parts
 petrochemical_industry = {
 	area = medicine_tech
-	year = 1955
+	year = 1950
 	cost = 3600
 
 	activate_building = pharmaceuticals_factory
@@ -1939,7 +1939,7 @@ petrochemical_industry = {
 #Prefabrication
 plastic_industry = {
 	area = medicine_tech
-	year = 1965
+	year = 1960
 	cost = 5400
 	
 	#Factory Buffs
@@ -1961,7 +1961,7 @@ plastic_industry = {
 #Early Factory Robots
 modern_medicine = {
 	area = medicine_tech
-	year = 1975
+	year = 1970
 	cost = 7200
 	
 	#Factory Buffs
@@ -2042,7 +2042,7 @@ biotechnology = {
 #Advanced Biotechnology
 clinical_pharmacology = {
 	area = medicine_tech
-	year = 2015
+	year = 2010
 	cost = 14400
 	
 	#Factory Buffs
@@ -2104,7 +2104,7 @@ genomics = {
 		}
 		modifier = {
 			factor = 2
-			year = 2050
+			year = 2040
 		}
 		modifier = {
 			factor = 1.2
@@ -2116,7 +2116,7 @@ genomics = {
 #Advanced Factory Automation
 pharmacogenomics = {
 	area = medicine_tech
-	year = 2045
+	year = 2040
 	cost = 18000
 	
 	#Factory Buffs
@@ -2174,7 +2174,7 @@ evidence_based_medicine = {
 		}
 		modifier = {
 			factor = 1.1
-			year = 2070
+			year = 2060
 		}
 		modifier = {
 			factor = 2

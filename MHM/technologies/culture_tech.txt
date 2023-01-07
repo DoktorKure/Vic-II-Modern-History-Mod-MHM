@@ -1,7 +1,7 @@
 #discoveries
 quantum_physics = {
 	area = discoveries
-	year = 1946
+	year = 1945
 	cost = 3600
 	
 	activate_building = education_rnd_factory
@@ -159,7 +159,7 @@ international_science = {
 }
 contemporary_science = {
 	area = discoveries
-	year = 2010
+	year = 2000
 	cost = 14400
 
 	prestige = 0.05
@@ -188,7 +188,7 @@ contemporary_science = {
 }
 distributed_computations = {
 	area = discoveries
-	year = 2030
+	year = 2020
 	cost = 18000
 
 	factory_goods_output = { education_rnd = 0.2 }
@@ -220,7 +220,7 @@ distributed_computations = {
 virtual_science = {
 #expressionism = {
 	area = discoveries
-	year = 2050
+	year = 2040
 	cost = 21600
 
 	factory_goods_output = { education_rnd = 0.2 }
@@ -252,7 +252,7 @@ virtual_science = {
 quantum_science = {
 #mass_culture_n_the_avant_garde = {
 	area = discoveries
-	year = 2070
+	year = 2060
 	cost = 25200
 
 	prestige = 0.05
@@ -283,7 +283,7 @@ quantum_science = {
 #Internet and Networking
 radio_network = {
 	area = research_and_development
-	year = 1946
+	year = 1945
 	cost = 3600
 
 	administrative_efficiency = 0.025
@@ -460,7 +460,7 @@ early_networks = {
 		}
 		modifier = {
 			factor = 2
-			year = 2030
+			year = 2040
 		}
 	}
 }
@@ -495,7 +495,7 @@ strd_internet = {
 		}
 		modifier = {
 			factor = 1.1
-			year = 2030
+			year = 2040
 		}
 		modifier = {
 			factor = 2
@@ -503,7 +503,7 @@ strd_internet = {
 		}
 		modifier = {
 			factor = 2
-			year = 2050
+			year = 2040
 		}
 	}
 }
@@ -534,7 +534,7 @@ high_speed_uni_network = {
 		}
 		modifier = {
 			factor = 2
-			year = 2030
+			year = 2040
 		}
 	}
 }
@@ -559,7 +559,7 @@ uni_internet = {
 		}
 		modifier = {
 			factor = 1.1
-			year = 2030
+			year = 2040
 		}
 		modifier = {
 			factor = 2
@@ -569,7 +569,7 @@ uni_internet = {
 }
 distributed_computing_research = {
 	area = research_and_development
-	year = 2050
+	year = 2040
 	cost = 21600
 
 	factory_goods_output = { education_rnd = 0.1 }
@@ -588,7 +588,7 @@ distributed_computing_research = {
 		}
 		modifier = {
 			factor = 1.1
-			year = 2050
+			year = 2040
 		}
 		modifier = {
 			factor = 2
@@ -598,7 +598,7 @@ distributed_computing_research = {
 }
 research_supercomputers = {
 	area = research_and_development
-	year = 2070
+	year = 2060
 	cost = 25200
 
 	factory_goods_output = { education_rnd = 0.2 }
@@ -628,7 +628,7 @@ research_supercomputers = {
 #education_policies
 compulsory_primary_education = {
 	area = education_policies
-	year = 1946
+	year = 1945
 	cost = 3600
 
 	education_efficiency = 0.125
@@ -804,7 +804,7 @@ learning_management_systems = {
 }
 blended_learning = {
 	area = education_policies
-	year = 2050
+	year = 2040
 	cost = 21600
 
 	education_efficiency = 2.5
@@ -824,7 +824,7 @@ blended_learning = {
 }
 virtual_learning = {
 	area = education_policies
-	year = 2070
+	year = 2060
 	cost = 25200
 	
 	education_efficiency = 5.0
@@ -850,7 +850,7 @@ virtual_learning = {
 #geopolitics
 containment = {
 	area = geopolitics
-	year = 1946
+	year = 1945
 	cost = 3600
 
 	max_national_focus = 1
@@ -866,13 +866,13 @@ containment = {
 		modifier = {
 			factor = 6
 			is_greater_power = yes
-			year = 2030
+			year = 2040
 		}
 	}
 }
 cold_war = {
 	area = geopolitics
-	year = 1947
+	year = 1945
 	cost = 5400
 
 	max_national_focus = 1
@@ -897,7 +897,7 @@ cold_war = {
 }
 detente = {
 	area = geopolitics
-	year = 1969
+	year = 1970
 	cost = 7200
 
 	max_national_focus = 1
@@ -963,7 +963,7 @@ colour_revolution = {
 		modifier = {
 			factor = 6
 			is_greater_power = yes
-			year = 2030
+			year = 2040
 		}
 	}
 }
@@ -993,7 +993,7 @@ globalization = {
 		}
 		modifier = {
 			factor = 51
-			year = 2030
+			year = 2040
 		}
 		modifier = {
 			factor = 1.02
@@ -1024,7 +1024,7 @@ war_on_terror = {
 		modifier = {
 			factor = 51
 			rank = 16
-			year = 2030
+			year = 2040
 		}
 		modifier = {
 			factor = 51
@@ -1071,7 +1071,7 @@ age_of_protests = {
 		modifier = {
 			factor = 51
 			rank = 16
-			year = 2050
+			year = 2040
 		}
 		modifier = {
 			factor = 1.5
@@ -1086,7 +1086,7 @@ age_of_protests = {
 }
 political_polarization = {
 	area = geopolitics
-	year = 2030
+	year = 2040
 	cost = 18000
 
 	max_national_focus = 1
@@ -1118,7 +1118,7 @@ political_polarization = {
 }
 new_world_order = {
 	area = geopolitics
-	year = 2070
+	year = 2060
 	cost = 25200
 
 	max_national_focus = 1 
@@ -1147,7 +1147,7 @@ new_world_order = {
 #society_trends
 decolonization = {
 	area = society_trends
-	year = 1946
+	year = 1945
 	cost = 3600
 
 	colonial_migration = 0.05
@@ -1172,7 +1172,7 @@ decolonization = {
 		}
 		modifier = {
 			factor = 2
-			year = 2030
+			year = 2040
 		}
 		modifier = {
 			factor = 5
@@ -1183,7 +1183,7 @@ decolonization = {
 }
 wars_of_national_liberation = {
 	area = society_trends
-	year = 1955
+	year = 1950
 	cost = 5400
 
 	colonial_migration = 0.10
@@ -1208,7 +1208,7 @@ wars_of_national_liberation = {
 		}
 		modifier = {
 			factor = 2
-			year = 2030
+			year = 2040
 		}
 		modifier = {
 			factor = 5
@@ -1244,7 +1244,7 @@ seventies_subcultures = {
 		}
 		modifier = {
 			factor = 2
-			year = 2030
+			year = 2040
 		}
 	}
 
@@ -1276,7 +1276,7 @@ neoliberalism = {
 		}
 		modifier = {
 			factor = 2
-			year = 2030
+			year = 2040
 		}
 	}
 
@@ -1307,7 +1307,7 @@ market_communism = {
 		}
 		modifier = {
 			factor = 2
-			year = 2030
+			year = 2040
 		}
 	}
 
@@ -1341,7 +1341,7 @@ cultural_imperialism = {
 		}
 		modifier = {
 			factor = 2
-			year = 2030
+			year = 2040
 		}
 	}
 }
@@ -1400,13 +1400,13 @@ social_networking = {
 		}
 		modifier = {
 			factor = 2
-			year = 2050
+			year = 2040
 		}
 	}
 }
 hacktivism = {
 	area = society_trends
-	year = 2030
+	year = 2040
 	cost = 14400
 
 	prestige = 0.025
@@ -1429,7 +1429,7 @@ hacktivism = {
 		}
 		modifier = {
 			factor = 2
-			year = 2070
+			year = 2060
 		}
 	}
 
