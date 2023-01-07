@@ -1545,17 +1545,12 @@ icon = 14
 ### National Priority ###
 
 nprhigh = { #Development
-rich_income_modifier = -0.1
+rich_income_modifier = 0.1
 middle_income_modifier = -0.1
 poor_income_modifier = -0.1
-RGO_output = 0.10
-navy_tech_research_bonus = -0.25
-army_tech_research_bonus = -0.25
-industry_tech_research_bonus = 0.2
-commerce_tech_research_bonus = 0.2
-culture_tech_research_bonus = -0.25
+RGO_output = 0.15
 import_cost = 0.1
-loan_interest = 0.1
+loan_interest = -0.3
 education_efficiency_modifier = 0.05
 icon = 11
 }
@@ -1576,11 +1571,7 @@ icon = 15
 }
 
 nprlow = { #Diplomacy
-loan_interest = -0.1
-navy_tech_research_bonus = -0.2
-army_tech_research_bonus = -0.2
-culture_tech_research_bonus = 0.2
-diplomatic_points_modifier = 0.1
+diplomatic_points_modifier = 0.5
 influence_modifier = 0.1
 global_assimilation_rate = 0.1
 global_immigrant_attract = 0.1
