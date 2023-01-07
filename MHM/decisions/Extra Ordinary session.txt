@@ -1,43 +1,5 @@
 political_decisions = {
 
-	renovate_capital = {
-		picture = "renovate_capital"
-		potential = {
-			OR = { is_greater_power = yes is_secondary_power = yes }
-			NOT = { capital_scope = { has_province_modifier = new_capital } }
-			NOT = { has_country_flag = germania }
-			NOT = { has_country_modifier = germania }
-			
-			#Special
-			NOT = {
-				tag = RUS
-				government = proletarian_dictatorship
-				has_country_flag = ussr_not_rebuild_moscow
-			}
-		}
-
-		allow = {
-			prestige = 1000
-			war = no
-			money = 5000000
-			is_disarmed = no	
-			capital_scope = { has_building = railroad }
-		}
-
-		effect = {
-			money = -2000000
-			money = -2000000
-			add_country_modifier = { name = germania duration = 3650 }
-			set_country_flag = germania
-			any_owned = { limit = { is_capital = no has_province_modifier = new_capital } life_rating = 5 remove_province_modifier = new_capital }
-		}
-		
-		ai_will_do = { 
-			factor = 1
-		}
-		
-	}
-
 	the_cult_of_personality = {
 		picture = the_cult_of_personality
 		potential = {

@@ -121,4 +121,192 @@ political_decisions = {
 		}
 	}
 
+	sack_the_enemy_capital = {
+	picture = "sack_the_enemy_capital"
+	potential = {
+		is_vassal = no
+		war = yes
+		war_countries = { capital_scope = { controlled_by = THIS has_province_modifier = new_capital } }
+		}
+
+	allow = {
+
+	NOT = { war_policy = pacifism }
+
+	OR = { NOT = { badboy = 0.75 } ai = no }
+
+	OR = { ai = no war_exhaustion = 50 ruling_party_ideology = traditionalist ruling_party_ideology = nationalist jingoism = 20 }
+		
+	}
+
+	effect = {
+
+		badboy = 5
+
+		war_exhaustion = -25
+
+		random_country = { 
+
+		limit = { capital_scope = { controlled_by = THIS has_province_modifier = new_capital } }
+			
+		country_event = 1610090
+			
+		random_owned = {
+			limit = { owner = { is_greater_power = yes } }
+			owner = { THIS = { money = 2000000 } }
+		}
+
+		random_owned = {
+			limit = { owner = { is_secondary_power = yes } }
+			owner = { THIS = { money = 500000 } }
+		}
+
+		random_owned = {
+			limit = { owner = { 
+			is_greater_power = no 
+			is_secondary_power = no } }
+			owner = { THIS = { money = 25000 } }
+		}
+
+			random_owned = {
+				limit = { is_capital = yes }
+				remove_province_modifier = new_capital
+				remove_province_modifier = unesco_whs
+			}
+
+		}
+
+	}
+	
+		ai_will_do = {
+		factor = 1
+		}
+	}
+
+	financial_hub = {
+		picture = "financial_hub"
+		potential = {
+			NOT = { capital_scope = { trade_goods = credit } }
+			OR = { government = democracy1 government = democracy government = hms_government government = hms_government1 }
+			economic_globalization = 1
+		}
+
+		allow = {
+			war = no
+			election = no
+			money = 1000000
+			
+			#High development
+			literacy = 0.30
+				
+			#Favourable corporate policies
+			has_country_modifier = mnchigh
+			
+			#Capital is nice
+			capital_scope = { 
+				has_province_modifier = mnc_start 			
+			}
+		}
+
+		effect = {
+			prestige = 50
+			random_owned = { limit = { is_capital = yes } trade_goods = credit }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = { factor = 0 is_greater_power = no is_secondary_power = no }
+		}
+	}
+
+	theme_parks = {
+		picture = "theme_parks"
+		potential = {
+			NOT = { any_owned_province = { has_province_modifier = theme_parks } }
+			NOT = { immigration_policy = nobody_gets_out }
+			has_country_modifier = mnchigh
+			cultural_imperialism = 1
+		}
+						
+		allow = {
+			war = no
+			election = no
+			money = 5000000
+		}
+		
+		effect = {
+			money = -1000000
+			capital_scope = { add_province_modifier = { name = theme_parks duration = -1 } }
+			set_country_flag = theme_parks_flag
+		}
+		ai_will_do = { 
+			factor = 100 
+		}
+	}
+
+	space_theme_parks = {
+		picture = "space_theme_parks"
+		potential = {
+			NOT = { any_owned_province = { has_province_modifier = space_theme_parks } }
+			NOT = { immigration_policy = nobody_gets_out }
+			has_country_modifier = mnchigh
+			service_revolution = 1
+			has_country_modifier = space_private
+			has_country_modifier = space_station
+		}
+		
+		allow = {
+			war = no
+			election = no
+			money = 20000000
+		}
+				
+		effect = {
+			money = -5000000
+			prestige = 1000
+			capital_scope = { add_province_modifier = { name = space_theme_parks duration = -1 } }
+	}
+	
+		ai_will_do = { 
+			factor = 100 
+			}
+	}
+
+	renovate_capital = {
+		picture = "renovate_capital"
+		potential = {
+			OR = { is_greater_power = yes is_secondary_power = yes }
+			NOT = { capital_scope = { has_province_modifier = new_capital } }
+			NOT = { has_country_flag = germania }
+			NOT = { has_country_modifier = germania }
+			
+			#Special
+			NOT = {
+				tag = RUS
+				government = proletarian_dictatorship
+				has_country_flag = ussr_not_rebuild_moscow
+			}
+		}
+
+		allow = {
+			prestige = 1000
+			war = no
+			money = 5000000
+			is_disarmed = no	
+			capital_scope = { has_building = railroad }
+		}
+
+		effect = {
+			money = -4000000
+			add_country_modifier = { name = germania duration = 3650 }
+			set_country_flag = germania
+			any_owned = { limit = { is_capital = no has_province_modifier = new_capital } life_rating = 5 remove_province_modifier = new_capital }
+		}
+		
+		ai_will_do = { 
+			factor = 1
+		}
+		
+	}
+	
 }
