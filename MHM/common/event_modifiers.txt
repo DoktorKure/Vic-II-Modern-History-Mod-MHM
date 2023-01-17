@@ -6453,7 +6453,6 @@ communist_bloc_leader = {
 	loan_interest = -0.20
 	supply_consumption = 0.20
 	suppression_points_modifier = 1.0
-	
 	education_efficiency_modifier = 0.10
 	administrative_efficiency_modifier = 0.10
 	tariff_efficiency_modifier = 0.10
@@ -6466,14 +6465,10 @@ communist_bloc_leader = {
 	#Research points
 	research_points = 1.50
 	research_points_modifier = 0.20
-	
 	army_tech_research_bonus = 0.50
 	navy_tech_research_bonus = 0.50
-	
 	industry_tech_research_bonus = -0.25
 	commerce_tech_research_bonus = -0.25
-	
-	culture_tech_research_bonus = 0.50
 	
 	icon = 19
 }
@@ -6493,7 +6488,6 @@ communist_bloc = {
 	loan_interest = -0.10
 	supply_consumption = 0.10
 	suppression_points_modifier = 0.5
-	
 	education_efficiency_modifier = 0.05
 	administrative_efficiency_modifier = 0.05
 	tariff_efficiency_modifier = 0.05
@@ -6504,16 +6498,10 @@ communist_bloc = {
 	factory_owner_cost = -0.010
 
 	#Research points
-	research_points = 0.75
-	research_points_modifier = 0.10
-	
 	army_tech_research_bonus = 0.25
 	navy_tech_research_bonus = 0.25
-	
 	industry_tech_research_bonus = -0.25
 	commerce_tech_research_bonus = -0.25
-	
-	culture_tech_research_bonus = 0.25
 	
 	icon = 19
 	
@@ -6534,7 +6522,6 @@ democratic_bloc_leader = {
 	loan_interest = -0.20
 	supply_consumption = 0.20
 	suppression_points_modifier = 0.5
-	
 	education_efficiency_modifier = 0.10
 	administrative_efficiency_modifier = 0.10
 	tariff_efficiency_modifier = 0.10
@@ -6547,14 +6534,10 @@ democratic_bloc_leader = {
 	#Research points
 	research_points = 1.50
 	research_points_modifier = 0.20
-	
 	army_tech_research_bonus = -0.25
 	navy_tech_research_bonus = -0.25
-	
 	industry_tech_research_bonus = 0.50
 	commerce_tech_research_bonus = 0.50
-	
-	culture_tech_research_bonus = -0.25
 	
 	icon = 21
 }
@@ -6574,7 +6557,6 @@ democratic_bloc = {
 	loan_interest = -0.10
 	supply_consumption = 0.10
 	suppression_points_modifier = 0.25
-	
 	education_efficiency_modifier = 0.05
 	administrative_efficiency_modifier = 0.05
 	tariff_efficiency_modifier = 0.05
@@ -6585,16 +6567,11 @@ democratic_bloc = {
 	factory_owner_cost = -0.010
 
 	#Research points
-	research_points = 0.75
-	research_points_modifier = 0.10
-	
 	army_tech_research_bonus = -0.25
 	navy_tech_research_bonus = -0.25
-	
 	industry_tech_research_bonus = 0.25
 	commerce_tech_research_bonus = 0.25
 	
-	culture_tech_research_bonus = -0.25
 	
 	icon = 21
 }
@@ -6611,13 +6588,14 @@ independent_bloc = {
 	mine_RGO_size = 0.1
 	non_accepted_pop_militancy_modifier = 0.10
 	prestige = -0.01
-	research_points_modifier = -0.010
-	icon = 7
 	army_tech_research_bonus = -0.5
 	culture_tech_research_bonus = -0.5
 	industry_tech_research_bonus = -0.5
 	navy_tech_research_bonus = -0.5
 	commerce_tech_research_bonus = -0.5
+	
+	icon = 7
+	
 }
 
 ### Nationalism & Rebellion ###
