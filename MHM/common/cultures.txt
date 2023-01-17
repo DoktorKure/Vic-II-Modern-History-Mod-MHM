@@ -1006,14 +1006,8 @@ mongoloid_cultures = {
 	mongol = { # tag = _IMN tag = MGL
 		#!religion = { buddhist }
 		color = { 128 128 255  }
-		first_names = { Peljidiin Balingiin Sodnomyn Kubilai Baterdene Dogsomyn Damdin Khorloogiin Dambyan Gonchigjalzangiin Badamdorj Chingis Otgonbayar Batbayar }
-		last_names = { Genden Amar Tserendorj Tomorbaatar Damdinbazar Bodoo Sukhbaatar Jamyan Choibalsan Chagdarjav }
-	}
-	siberian = { # tag = -YAK
-		#!religion = { orthodox }
-		color = { 238 145 255 }
-		first_names = { Aleksandr Diniyar Mirsayet Sihabetdin Gabdull Afanasiy Viktor Grigory }
-		last_names = { Shaimiev Bilyaletdinov Shchapov Yadrintsev Krakovetsky Kolchak Potanin Shashkov }
+		first_names = { Afanasiy Aleksandr Badamdorj Balingiin Batbayar Baterdene Chingis Dambyan Damdin Diniyar Dogsomyn Gabdull Gonchigjalzangiin Grigory Khorloogiin Kubilai Mirsayet Otgonbayar Peljidiin Sihabetdin Sodnomyn Viktor }
+		last_names = { Amar Bilyaletdinov Bodoo Chagdarjav Choibalsan Damdinbazar Genden Jamyan Kolchak Krakovetsky Potanin Shaimiev Shashkov Shchapov Sukhbaatar Tomorbaatar Tserendorj Yadrintsev }
 	}
 	tatar = {
 		#!religion = { sunni }
