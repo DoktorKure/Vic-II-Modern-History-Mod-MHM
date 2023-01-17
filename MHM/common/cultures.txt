@@ -266,26 +266,11 @@ hungarian_culture_group = {
 helvetic_cultures = {
 	leader = european
 	unit = PrussianGC
-	swiss_german = { 
+	swiss = { 
 		color = { 180 40 40 }
-		first_names = { Adolf Alexander Eduard Ernst Franz Hans Johann Josef Konstantin Martin Melchior Robert Rudolf Ulrich Wilhelm Augusto Enrico Flavio Giuseppe Vincenzo Antoine Charles Emmanuel Guillaume Gustave Henri Hugo Louis Marc Paul }
-		last_names = { Brenner Deucher Funk Haab Herzog Knüsel Munzinger Näff Schneider Siegwart-Müller "von Donatz" "von Salis-Soglio" "von Steiger" "von Tavel" Wille Celio Cotti Fogliardi Motta Zeni Ador Calonder Chaudet Comtesse "de Prangins" Dufour Fornerod Guisan Ruchet Ruchonnet }
-	}
-	swiss_french = {
-		color = { 159 143 234 }
-		first_names = { Achille Adolphe Adrien Aimable Alphonse Amédée Antoine Armand August Augustin Charles Daniel Denis Édouard Elie Éttiene Eugène Félicien Félix Fernand François Frédéric Georges Guillaume Gustave Henri Hubert Hugo Jacques Jean Joseph Jules Julien Lazare Léopold Leroy Louis Lucien Matthieu Michel Napoléon Nicolas Patrice Paul Philippe Pierre Robert Thibaut Thierry Thomas }
-		last_names = { Anthoine "Baraguey d'Hilliers" Bazaine Billot Bonaparte Bosquet "Boué de Lapeyrère" Bouët-Willaumez Boulanger Bourbaki Bugeaud Caillard Canrobert Courbet Cousin-Mountauban Davout "de Bourbon" "de Castellane" "de Castelnau" "de Gaulle" "de Langle de Cary" "de MacMahon" "de Montaignac" "de Saint Arnaud" d'Orleans Dubail Dubois Duchêne Dupetit-Thouars Exelmans Foch Forey "Franchet d'Espèrey" Gallieni Gouraud Guillaumat Hamelin Harispe Hoche Humbert Jaurès Joffre Lebouef Lyautey Murat "Ney d'Elchingen" Nivelle Péllissier Petain Vaillant }
-	}
-	swiss_italian = {
-		color = { 150 220 170 }
-		first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo Cesare Costanzo Davide Enrico Ettore Fabrizio Faustino Federico Felice Ferdinando Fiorenzo Francesco Gaetano Gennaro Girolamo Giulio Giuseppe Guglielmo Innocenzo Leopoldo Luigi Marco Massimo Matteo Nicola Oreste Paolo Pasquale Pietro Prospero Raffaele Roberto Ruggiero Silvio Simone Tancredi Ugo Umberto Vincenzo Vittorio }
-		last_names = { Acton Albricci Badoglio Baldissera Baratieri Bava-Beccaris Cadorna Cagni Canevaro Capello Caviglia Ceccherini Cialdini Cusani d'Absburgo-Toscana d'Austria-Este Dezza "di Borbone di Parma" "di Robilant" "di Savoia" "di Savoia-Aosta" Emo Fanti Fara Filomarino Garibaldi Giardino Govone "La Màrmora" Mambretti Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
-	}
-	romansh = {
-		#!religion = { catholic }
-		color = { 120 140 110 }
-		first_names = { Alessandro Alfonso Ambrogio Amedeo Andrea Angelo Antonio Benito Camillo Carlo Cesare Costanzo Davide Enrico Ettore Fabrizio Faustino Federico Felice Ferdinando Fiorenzo Francesco Gaetano Gennaro Girolamo Giulio Giuseppe Guglielmo Innocenzo Leopoldo Luigi Marco Massimo Matteo Nicola Oreste Paolo Pasquale Pietro Prospero Raffaele Roberto Ruggiero Silvio Simone Tancredi Ugo Umberto Vincenzo Vittorio }
-		last_names = { Acton Albricci Badoglio Baldissera Baratieri Bava-Beccaris Cadorna Cagni Canevaro Capello Caviglia Ceccherini Cialdini Cusani d'Absburgo-Toscana d'Austria-Este Dezza "di Borbone di Parma" "di Robilant" "di Savoia" "di Savoia-Aosta" Emo Fanti Fara Filomarino Garibaldi Giardino Govone "La Màrmora" Mambretti Menabrea Orengo "Pacoret de Saint Bon" Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Pianelli Porro Presbitero Ramorino Ricotti-Magnani Sacchi Saletta Sanna Solari "Thaon di Revel" Vaccari Zupelli }
+		first_names = { Achille Adolf Adrien Aimable Alexander Alphonse Ambrogio Amédée Andrea Angelo Antoine Armand August Benito Camillo Carlo Cesare Charles Costanzo Daniel Davide Denis Édouard Elie Emmanuel Enrico Ernst Ettore Eugène Éttiene Fabrizio Faustino Federico Felice Fernand Fiorenzo Flavio Francesco Franz François Frédéric Félicien Félix Gaetano Gennaro Georges Girolamo Giulio Giuseppe Guglielmo Guillaume Gustave Hans Henri Hubert Hugo Innocenzo Jacques Jean Johann Josef Joseph Julien Konstantin Lazare Leopoldo Leroy Louis Lucien Luigi Léopold Marc Martin Massimo Matteo Matthieu Melchior Michel Napoléon Nicolas Oreste Pasquale Patrice Paul Philippe Pierre Pietro Prospero Raffaele Robert Rudolf Ruggiero Silvio Simone Tancredi Thibaut Thierry Thomas Ugo Ulrich Umberto Vincenzo Vittorio Wilhelm }
+		last_names = { Acton Ador Albricci Anthoine Badoglio Baldissera "Baraguey d'Hilliers" Baratieri Bava-Beccaris Bazaine Billot Bonaparte Bosquet
+"Boué de Lapeyrère" Boulanger Bourbaki Bouët-Willaumez Brenner Bugeaud Cadorna Cagni Caillard Calonder Canevaro Canrobert Capello Caviglia Ceccherini Celio Chaudet Cialdini Comtesse Cotti Courbet Cousin-Mountauban Cusani d'Absburgo-Toscana d'Austria-Este d'Orleans Davout Deucher Dezza "de Bourbon" "de Castellane" "de Castelnau" "de Gaulle" "de Langle de Cary" "de MacMahon" "de Montaignac"  "de Prangins" "de Saint Arnaud" "di Borbone di Parma" "di Robilant" "di Savoia" "di Savoia-Aosta" Dubail Dubois Duchêne Dufour Dupetit-Thouars Emo Exelmans Fanti Fara Filomarino Foch Fogliardi Forey Fornerod "Franchet d'Espèrey" Funk Gallieni Garibaldi Giardino Gouraud Govone Guillaumat Guisan Haab Hamelin Harispe Herzog Hoche Humbert Jaurès Joffre Knüsel "La Màrmora" Lebouef Lyautey Mambretti Menabrea Motta Munzinger Murat Näff  "Ney d'Elchingen" Nivelle Orengo "Pacoret de Saint Bon"  Pallavicino Pecori-Giraldi "Pellion di Persano" Pelloux Perruchetti Petain Pianelli Porro Presbitero Péllissier Ramorino Ricotti-Magnani Ruchet Ruchonnet Sacchi Saletta Sanna Schneider Siegwart-Müller Solari "Thaon di Revel" Vaccari Vaillant "von Donatz" "von Salis-Soglio" "von Steiger" "von Tavel" Wille Zeni Zupelli }
 	}
 	union = SWI
 }
