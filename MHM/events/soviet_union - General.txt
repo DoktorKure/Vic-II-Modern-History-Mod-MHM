@@ -1911,7 +1911,7 @@ country_event = {
 
 	option = {
 		name = "Set them free!"
-		add_country_flag = recognized_baltic_states
+		set_country_flag = recognized_baltic_states
 		LIT = { all_core = { remove_core = RUS } }
 		LAT = { all_core = { remove_core = RUS } }
 		EST = { all_core = { remove_core = RUS } }
@@ -2012,12 +2012,7 @@ country_event = {
 		
 		ruling_party_ideology = communist_social
 		NOT = { has_global_flag = august_coup }
-		
-		OR = { 
-			LAT = { exists = yes is_vassal = no }
-			EST = { exists = yes is_vassal = no }
-			LIT = { exists = yes is_vassal = no }
-		}
+		has_country_flag = recognized_baltic_states
 	}
 
 	mean_time_to_happen = { 
@@ -2129,7 +2124,7 @@ country_event = {
 		any_country = {
 			limit = { 
 				exists = no 
-				OR = { tag = UKR tag = BYE tag = GEO tag = AZB tag = ARM tag = TKR tag = MOL tag = UZB tag = KYR tag = TAJ tag = KAZ tag = MOL tag = LIT tag = LAT tag = EST } 
+				OR = { tag = UKR tag = BYE tag = GEO tag = AZB tag = ARM tag = TKR tag = MOL tag = UZB tag = KYR tag = TAJ tag = KAZ tag = LIT tag = LAT tag = EST } 
 				any_core = { owned_by = THIS }
 			} 
 			country_event = 19911
