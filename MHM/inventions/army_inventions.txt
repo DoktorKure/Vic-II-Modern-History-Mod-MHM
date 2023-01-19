@@ -1,7 +1,7 @@
 #Gas attack capability
-#cold_war_doctrine, 1946
+#proxy_war, 1950 - apparently nations that start with tech researched also research all of its inventions
 modern_gas_weaponry = {
-	limit = { cold_war_doctrine = 1 }
+	limit = { proxy_war = 1 }
 	chance = {
 		base = 0
 		modifier = {
