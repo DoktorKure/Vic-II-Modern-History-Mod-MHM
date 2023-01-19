@@ -686,7 +686,7 @@ country_event = {
             limit = {
 				exists = yes
                 OR = {
-                    NOT = { has_global_flag = wars_of_national_liberation_researched }
+                    NOT = { has_global_flag = enable_crises_now }
                     is_vassal = yes
                 }
             }
@@ -1010,10 +1010,10 @@ country_event = {
 		random_country = {
 			limit = {
 				exists = yes
-				NOT = { has_global_flag = wars_of_national_liberation_researched }
-				wars_of_national_liberation = 1
+				NOT = { has_global_flag = enable_crises_now }
+				year = 1965
 			}
-			set_global_flag = wars_of_national_liberation_researched
+			set_global_flag = enable_crises_now
 		}
 		
 		#ghost units monthly cleanup
@@ -1077,26 +1077,6 @@ country_event = {
 				SOM = { exists = no }
 			}
 			change_tag = SOM
-		}
-		
-		#Namibia Situation
-		any_country = {
-			limit = {
-				tag = NAM
-				government = colonial_government
-				is_vassal = yes
-				vassal_of = SAF
-				NOT = { primary_culture = afrikaaner }
-			}
-			primary_culture = afrikaaner
-		}
-		any_country = {
-			limit = {
-				tag = NAM
-				is_vassal = no
-				primary_culture = afrikaaner
-			}
-			primary_culture = ovambo
 		}
 		
 		CLN = { country_event = { id = 47777790 days = 30 } }
