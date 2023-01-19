@@ -745,6 +745,29 @@ country_event = {
 			government = democracy
 		}
 		
+		#Cleanup chairman flags
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = imf_chairmanship
+			}
+			clr_country_flag = imf_chairmanship
+		}
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = ibrd_chairmanship
+			}
+			clr_country_flag = ibrd_chairmanship
+		}
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = wto_chairmanship
+			}
+			clr_country_flag = wto_chairmanship
+		}
+		
 		CLN = { country_event = { id = 47777787 days = 1 } }
 	}
 }
