@@ -700,6 +700,7 @@ country_event = {
 				AND = {
 					government = sar_government
 					is_vassal = no
+					war = no
 					NOT = { tag = UNT }
 					NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } }
 				}
@@ -712,6 +713,7 @@ country_event = {
 				AND = {
 					government = sar_government
 					is_vassal = no
+					war = no
 					NOT = { tag = UNT }
 					OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
 				}
@@ -726,6 +728,7 @@ country_event = {
 				AND = {
 					government = colonial_government
 					is_vassal = no
+					war = no
 				}
 			}
 			government = democracy
@@ -736,6 +739,7 @@ country_event = {
 				AND = {
 					government = mandate_government
 					is_vassal = no
+					war = no
 				}
 			}
 			government = democracy
@@ -754,6 +758,42 @@ country_event = {
 	
 	option = {
 		name = "Checking..."
+		
+		#Superstate Flags
+		any_country = {
+			limit = {
+				exists = yes
+				OR = {
+					tag = XGC
+					tag = XEF
+					tag = XEU
+					tag = XCC
+					tag = XAU
+					tag = XEW
+					tag = XEC
+					tag = XSA
+					tag = XSU
+					tag = XMS
+					tag = XAC
+					tag = XAL
+					tag = XMU
+					tag = XAN
+					tag = XCI
+					tag = XME
+					tag = XNA
+					tag = XIO
+					tag = XPI
+					tag = XEA
+					tag = XTC
+					tag = XUM
+					tag = UAR
+					tag = SCA
+				}
+				NOT = { has_country_flag = superstate_flag }
+			}
+			set_country_flag = superstate_flag
+		}
+	
 		
 		######################
 		### Colonial Flags ###
