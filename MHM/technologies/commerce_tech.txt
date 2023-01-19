@@ -1,6 +1,6 @@
 international_financial_institutions = {
 	area = financial_institutions
-	year = 1946
+	year = 1945
 	cost = 3600
 
 	tax_eff = 5
@@ -92,7 +92,7 @@ bank_for_international_settlements = {
 }
 central_clearing = {
 	area = financial_institutions
-	year = 1975
+	year = 1970
 	cost = 7200
 
 	tax_eff = 5
@@ -124,7 +124,7 @@ central_clearing = {
 }
 credit_rating_institutions = {
 	area = financial_institutions
-	year = 1985
+	year = 1980
 	cost = 7200
 
 	tax_eff = 5
@@ -154,7 +154,7 @@ credit_rating_institutions = {
 }
 modern_stock_exchange = {
 	area = financial_institutions
-	year = 1995
+	year = 1990
 	cost = 14400
 
 	tax_eff = 3
@@ -247,7 +247,7 @@ quantitative_easing = {
 }
 financial_stability_board = {
 	area = financial_institutions
-	year = 2045
+	year = 2040
 	cost = 18000
 
 	tax_eff = 2
@@ -277,7 +277,7 @@ financial_stability_board = {
 }
 neofinancial_system = {
 	area = financial_institutions
-	year = 2070
+	year = 2060
 	cost = 21600
 
 	tax_eff = 2
@@ -301,7 +301,7 @@ neofinancial_system = {
 #monetary_system
 gold_standard = {
 	area = monetary_system
-	year = 1946
+	year = 1945
 	cost = 3600
 
 	administrative_efficiency = 0.05
@@ -319,7 +319,7 @@ gold_standard = {
 }
 bretton_system = {
 	area = monetary_system
-	year = 1946
+	year = 1945
 	cost = 3600
 	
 	administrative_efficiency = 0.05
@@ -372,7 +372,7 @@ dollar_standard = {
 }
 flexible_exchange_rates = {
 	area = monetary_system
-	year = 1975
+	year = 1970
 	cost = 9000
 
 	administrative_efficiency = 0.05
@@ -435,7 +435,7 @@ managed_exchange_rates = {
 }
 new_bretton = {
 	area = monetary_system
-	year = 2005
+	year = 2000
 	cost = 14400
 
 	administrative_efficiency = 0.05
@@ -509,7 +509,7 @@ beijing_consensus = {
 }
 end_of_money = {
 	area = monetary_system
-	year = 2070
+	year = 2060
 	cost = 25200
 	
 	factory_cost = -0.12
@@ -535,7 +535,7 @@ end_of_money = {
 #economic_thought_and_critique
 keynesian_economics = {
 	area = economic_thought_and_critique
-	year = 1946
+	year = 1945
 	cost = 3600
 	factory_input = -0.01
 	factory_cost = -0.02
@@ -567,7 +567,7 @@ keynesian_economics = {
 }
 new_growth_theory = {
 	area = economic_thought_and_critique
-	year = 1962
+	year = 1960
 	cost = 7200
 	
 	factory_input = -0.02
@@ -749,7 +749,7 @@ neoeconomics_theory = {
 }
 economic_machine_theory = {
 	area = economic_thought_and_critique
-	year = 2025
+	year = 2020
 	cost = 14400
 
 	factory_input = -0.02
@@ -779,7 +779,7 @@ economic_machine_theory = {
 }
 liquidity_trap_theory = {
 	area = economic_thought_and_critique
-	year = 2050
+	year = 2040
 	cost = 18000
 
 	administrative_efficiency = 0.05
@@ -809,7 +809,7 @@ liquidity_trap_theory = {
 }
 quantitative_behavioural_finance = {
 	area = economic_thought_and_critique
-	year = 2070
+	year = 2060
 	cost = 21600
 
 	administrative_efficiency = 0.05
@@ -840,7 +840,7 @@ quantitative_behavioural_finance = {
 #market_functionality
 marshall_plan = {
 	area = market_functionality
-	year = 1946
+	year = 1945
 	cost = 3600
 
 	influence = 0.1
@@ -871,7 +871,7 @@ marshall_plan = {
 }
 trust_busting = {
 	area = market_functionality
-	year = 1955
+	year = 1950
 	cost = 5400
 
 	farm_rgo_eff = 0.05
@@ -902,7 +902,7 @@ trust_busting = {
 }
 third_way = {
 	area = market_functionality
-	year = 1965
+	year = 1960
 	cost = 5400
 
 	activate_building = petroleum_fabric_factory
@@ -1189,7 +1189,7 @@ global_governance = {
 #tech_organization
 late_fordism = {
 	area = tech_organization
-	year = 1946
+	year = 1945
 	cost = 3600
 	
 	#activate_building = steel_factory 
@@ -1224,7 +1224,7 @@ late_fordism = {
 }
 scientific_management = {
 	area = tech_organization
-	year = 1954
+	year = 1950
 	cost = 5400
 	
 	factory_output = 0.02
@@ -1258,7 +1258,7 @@ scientific_management = {
 }
 toyotism = {
 	area = tech_organization
-	year = 1956
+	year = 1950
 	cost = 7200
 
 	factory_output = 0.02
@@ -1386,7 +1386,7 @@ post_fordism = {
 }
 neodigital = {
 	area = tech_organization
-	year = 2015
+	year = 2010
 	cost = 14400
 
 	factory_output = 0.02
@@ -1412,7 +1412,7 @@ neodigital = {
 }
 modern_workforce_management = {
 	area = tech_organization
-	year = 2035
+	year = 2030
 	cost = 18000
 
 	factory_output = 0.02
@@ -1438,7 +1438,7 @@ modern_workforce_management = {
 }
 offshore_software_development = {
 	area = tech_organization
-	year = 2050
+	year = 2040
 	cost = 21600
 
 	factory_output = 0.02
@@ -1464,7 +1464,7 @@ offshore_software_development = {
 }
 service_revolution = {
 	area = tech_organization
-	year = 2070
+	year = 2060
 	cost = 25200
 
 	factory_output = 0.02

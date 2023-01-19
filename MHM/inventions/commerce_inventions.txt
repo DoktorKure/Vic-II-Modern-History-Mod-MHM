@@ -803,10 +803,10 @@ shock_theraphy = {
 	limit = { washington_consensus = 1 }
 	news = no
 	chance = {
-		base = 0 
+		base = 1
 		modifier = {
 			factor = 5
-			NOT = { money = 1000 }	
+			NOT = { money = 100000 }	
 		}
 	}
 	effect = {
@@ -948,7 +948,7 @@ new_monetary_consensus = {
 	limit = { delhi_declaration = 1 }
 	news = no
 	chance = { 
-		base = 0 
+		base = 1 
 		modifier = {
 			factor = 5 
 			invention = shock_theraphy
