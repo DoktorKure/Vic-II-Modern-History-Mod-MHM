@@ -1,0 +1,13 @@
+CODE;ENGLISH;FRENCH;GERMAN;POLISH;SPANISH;HUNGARIAN;CZECH;HUNGARIAN;DUTCH;PORTUGUESE;RUSSIAN;FINNISH;;x;;;;;;;;;;;;;;;;
+show_startup_decisions_title;Show Startup Options;;;;;;;;;;X;;;;;;;
+show_startup_decisions_desc;Show options to toggle various features in the mod at the start for an optimal run for the player's preference. The player has §Rone year§! to make their choices, then these decisions will disapper for the rest of the game.;;;;;;;;;;X;;;;;;;
+hide_startup_decisions_title;Hide Startup Options;;;;;;;;;;X;;;;;;;
+hide_startup_decisions_desc;Hide startup options to unclutter the decisions list.;;;;;;;;;;X;;;;;;;
+toggle_ussr_railroading_title;Toggle USSR Railroading;;;;;;;;;;X;;;;;;;
+toggle_ussr_railroading_desc;Fires an event to allow the player to decide whether or not they want the USSR event chains to be railroaded towards their historical collapse.;;;;;;;;;;X;;;;;;;
+toggle_superstates_title;Toggle Superstates;;;;;;;;;;X;;;;;;;
+toggle_superstates_desc;Fires an event to allow the player to decide whether or not they want Superstates to be enabled or disabled for this game.;;;;;;;;;;X;;;;;;;
+toggle_climate_change_title;Toggle Climate Change;;;;;;;;;;X;;;;;;;
+toggle_climate_change_desc;Fires an event to allow the player to decide whether or not they want Climate Change events and decisions to be enabled or disabled for this game.;;;;;;;;;;X;;;;;;;
+toggle_performance_title;Toggle Performance Mode;;;;;;;;;;X;;;;;;;
+toggle_performance_desc;Fires an event to allow the player to decide whether or not they want to improve the mod's performance by reducing the world's population to a certain degree. §RWARNING! Any choice made in this event CANNOT be undone, so choose carefully!§!;;;;;;;;;;X;;;;;;;
