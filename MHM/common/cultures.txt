@@ -41,12 +41,6 @@ european_french = {
 european_italian = {
 	leader = european
 	unit = ItalianGC
-	corsican = { # tag = COR
-		#!religion = { catholic }
-		color = { 0 191 255 }
-		first_names = { Alan Alcide Andréa Albertu Ange-François Angelu Antone Austinu Baptiste Benedettu Bernardinu Biasgiu Carulu César Ciriaccu Cosimu Cristofanu Damianu Dumenicu Filippu Francescu Gaitanu Ghjuvanni Gnaziu Henry Jérôme Leunardu Louis Lucien Manuel Marcellu Martinu Matteu Michel Napoleon Niculaiu Oscar Pasquale Paulu Petru Raoul Roccu Saveriu Sebastianu Simeone Stefanu Vincent Vitu }
-		last_names = { Adriani Alberty ALtieri Amy Arenas Bartoli Bastiani Benedetty Berlingeri Bertolacci Bocchecramp Bonaparte Bonelli Bourdony Calvani Cardi Cesari Chicaloy Costa Damiani Dastas Dessy Dominicci Emmanuelli Fabianni Felippi Ficaya Forney Franquiche Garrosi Gaudin Ghigliotty Grimaldi Guillermety Lacroix Lamberty Laveri Marini Masey Massari Maxinie Micheli Molinari Muratti Nery Nicolai Olivares Orsini Paoli Philipi Pichardini Polidori Ricci Rosaly Savelli Senati Silvestry Tardy Tricoche Vallevigne Vicenty Vivoni }
-	}
 	italian = { # tag = ITA
 		#!religion = { catholic }
 		color = { 65 180 110 }
@@ -58,19 +52,12 @@ european_italian = {
 		color = { 0 128 0 }
 		first_names = { Achille Adriano Alberto Alessandro Alfredo Ambrogio Amedeo Amilcare Andrea Antonio Armando Attilio Augusto Benedetto Bernardo Bruno Carlo Cesare Claudio Clemente Daniele Davide Dino Edoardo Egidio Emanuele Emiliano Enrico Ernesto Ettore Eugenio Fabio Fabrizio Federico Felice Filippo Francesco Franco Fulvio Gabriele Germano Giacomo Gianfranco Gianluigi Giordano Giorgio Giuliano Giulio Giuseppe Gregorio Guglielmo Guido Ignazio Italo Jacopo Leonardo Leone Lorenzo Luca Luciano Ludovico Luigi Manfredi Marco Mario Massimiliano Matteo Mauro Michelangelo Modesto Niccolo Onofrio Orlando Oscar Ottavio Paolo Pierfrancesco Piergiorgio Piero Pierpaolo Pietro Primo Prospero Raffaele Raniero Riccardo Roberto Ruggero Salvatore Sauro Saverio Sebastiano Severino Silvestro Silvio Simone Stefano Tiziano Tommaso Tullio Umberto Valerio Vincenzo Vinicio Vittorio Walter }
 		last_names = { Alberio Alemanno Ambrosi Baldi Barberis Barbero Barbieri Bartolini Basso Beltrami Beretta Bernasconi Bianchi Bionaz Blanc Bortolotti Boscolo Bosio Bossi Brambilla Bruno Calcagnano Canepa Casadei Casagrande Cattaneo Cerise Cerutti Colombo Conti Corazza Costa Cretier Danti Delfino Degano Donati Egger Enimont Fabbri Fabbris Favaro Favre Ferrando Ferrari Ferrandis Ferretti Franzini Frigerio Fumagalli Furlan Galli Gallo Gatti Giordano Girardi Gori  Grimaldi Grosso Gruber Guidi Herin Hubner Innocenti Italianismo Kofler Landi Locatelli Lombardi Magnani Mantovani Martini Monti Mori Moro Moser Musso Nanni Negri Neri Ottonello Onofri Pagani Parodi Pastorino Pavan Pellegrini Pellessier Perroni Pession Piga Pircher Poggi Pozzi Proietti Quasimodo Repetto Ricci Righi Riva Rizzi Rosset Rossi Rosso Rota Russo Sabbatini Sala Santini Sartori Tettamanti Tomasi Tosetti Treves Trevisan Veltroni Venier Vigano Villa Visintin Vuillermoz Zanella Zanetti Zeni Zuliani Zunino }
-	}	
-	maltese = { # tag = MAL
-		#!religion = { catholic }
-		color = { 70 130 180 }
-		first_names = { Alessandru Alfred Alwigi Anglu Antonio Anard Bastjan Bernard Bert Censu Charlu Cristopher Daniel Dumniku Dwardu Emmanwel Ewgenju Federiku Fernardu Filippu Frangisk Giovanni Guzeppi Gerardo Gabriel Gavino Girgor Indrija Karlu Klement Lawrenz Leonardu Luigi Manwel Marcell Mark Matteo Mikiel Nikola Ninu Nunzio Oliver Oskar Patrizju Paul Pietru Rikkard Robert Samwel Saverju Sebastjan Stiefnu Tumas Valentin Vincenz Vittor Wistin Xandru Yandrick Zakkarija }
-		last_names = { Abela Agius Aquilina Attard Azzopardi Baldacchino Bonavia Bonella Borg Brown Buttigieg Busuttil Cachia Calleja Camilleri Cardona Caruana Cassar Costa Cutajar Darmanin Debono Dimech Ellul Falzon Farrugia Fenech Formosa Galea Gatt Gauci Grech Grimach Lowell Magro Mallia Martin Micaleff Mifsud Mizzi Muscat Olivier Pace Portelli Sammut Schembri Sciberras Smith Spiteri Tabone Taylor Tucci Vassallo Vella Williams Xerri Xuereb Zammit }
 	}
-	sardinian = { # tag = SAR
+	insular_mediterranean = { # tag = SAR
 		#!religion = { catholic }
 		color = { 244 238 224 }
-		first_names = { Andrea Amelio Angelo Anselmo Antioco Antonio Bachisio Bartolomeo Basile Bastiano Battista Bonaria Carmine Carlo Casimiro Cosimo Costantino Cristoforo Damiano Demetrio Domenico Efisio Elia Emilio Ernesto Ersilio Fedele Francesco Gaetano Gasparre Gavino Genesio Giacomo Gianuario Giommaria Giorgio "Giovanni Battista" Giuliano Giuseppe Gregorio Ignazio Isidoro Josto Leandro Luciano Lucifero Lussorio Mariano Maurizio Melchiorre Michele Nicola Palmiro Pantaleo Paolo Pasquale Pietro Priamo Proto Quirico Raffaele Raimondo Salvatorico Sebastiano Serafino Severino Sisinnio Stanislao Stefano Terenzio Virgilio }
-		last_names = { Addis Agus Anedda Angius Antonelli Atzeni Augias Azara Bardanzellu Berlinguer Broccu Cabras Canalis Canu Carta Careddu Chessa Cocco Concas Cossiga Cossu Deffenu Deiana Demurtas Derosas Fadda Fais Flore Floris Frau Fresu Garau Gessa Ibba Lai Ledda Lodo Loi Lussu Madeddu Manca Marras Medda Melis Meloni Mereu Miscali Murgia Murru Nivola Orrù Palmas Pierangeli Pinna Pintus Piras Porcu Puddu Salis Sanna Satta Sechi Serra Scanu Solinas Soru Spano Tavolara Torres Urru Usai Virdis Zola }
-	}
+		first_names = { Alan Albertu Alcide Alessandru Alfred Alwigi Amelio Anard Andrea Andréa Ange-François Angelu Anglu Anselmo Antioco Antone Austinu Bachisio Baptiste Bartolomeo Basile Bastjan Battista Benedettu Bernard Bernardinu Bert Biasgiu Bonaria Carmine Carulu Casimiro Censu Ciriaccu Cosimu Costantino Cristofanu Cristoforo César Damianu Daniel Demetrio Dumniku Dwardu Efisio Elia Emilio Emmanwel Ernesto Ersilio Ewgenju Fedele Federiku Fernardu Filippu Francescu Gabriel Gaitanu Gasparre Gavino Genesio Gerardo Ghjuvanni Giacomo Gianuario Giommaria Giorgio Giovanni Girgor Giuliano Gnaziu Gregorio Guzeppi Henry Ignazio Indrija Isidoro Josto Jérôme Klement Lawrenz Leandro Leunardu Louis Lucien Lucifero Luigi Lussorio Manwel Marcell Mariano Mark Martinu Matteu Maurizio Melchiorre Michel Napoleon Niculaiu Ninu Nunzio Oliver Oscar Palmiro Pantaleo Paolo Pasquale Patrizju Paulu Petru Priamo Proto Quirico Raffaele Raimondo Raoul Rikkard Robert Roccu Salvatorico Samwel Saverju Sebastjan Serafino Severino Simeone Sisinnio Stanislao Stiefnu Terenzio Tumas Valentin Vincenz Virgilio Vittor Vitu Wistin Xandru Yandrick Zakkarija }
+		last_names = { Abela Addis Adriani Agus Alberty ALtieri Amy Anedda Angius Antonelli Aquilina Arenas Attard Atzeni Augias Azara Azzopardi Baldacchino Bardanzellu Bartoli Bastiani Benedetty Berlinguer Bertolacci Bocchecramp Bonaparte Bonavia Bonella Borg Bourdony Broccu Brown Busuttil Buttigieg Cabras Cachia Calleja Calvani Camilleri Canalis Canu Cardi Cardona Careddu Carta Caruana Cassar Cesari Chessa Chicaloy Cocco Concas Cossiga Cossu Costa Cutajar Damiani Darmanin Dastas Debono Deffenu Deiana Demurtas Derosas Dessy Dimech Dominicci Ellul Emmanuelli Fabianni Fadda Fais Falzon Farrugia Felippi Fenech Ficaya Floris Formosa Forney Franquiche Frau Fresu Galea Garau Garrosi Gatt Gauci Gaudin Gessa Ghigliotty Grech Grimach Grimaldi Guillermety Ibba Lacroix Lai Lamberty Laveri Ledda Lodo Loi Lowell Lussu Madeddu Magro Mallia Manca Marini Marras Martin Masey Massari Maxinie Medda Melis Meloni Mereu Micaleff Micheli Mifsud Miscali Mizzi Molinari Muratti Murgia Murru Muscat Nery Nicolai Nivola Olivares Olivier Orrù Orsini Pace Palmas Paoli Philipi Pichardini Pierangeli Pinna Pintus Piras Polidori Porcu Portelli Puddu Ricci Rosaly Salis Sammut Sanna Satta Savelli Scanu Schembri Sciberras Sechi Senati Serra Silvestry Smith Solinas Soru Spano Spiteri Tabone Tardy Tavolara Taylor Torres Tricoche Tucci Urru Usai Vallevigne Vassallo Vella Vicenty Virdis Vivoni Williams Xerri Xuereb Zammit Zola }
 	union = ITA
 }
 european_spanish = {
@@ -727,40 +714,11 @@ latin_american_cultures = {
 		first_names = { Agustín Antonio Atanasio Baltasar Bartolomé Bernardino Bernardo Cándido Carlos Cecilio Cirilo Claudio Domingo Emiliano Esteban Eugenio Evaristo Facundo Faustino Feliciano Félix Francisco Fructuoso Gabriel Gaspar Guillermo Hipólito Ignacio José "Juan José" "Juan Manuel" "Juan Ramón" Julio Justo Lorenzo Luis Manuel Marcial Máximo Miguel Nicolás Patricio Pedro Ramón Roberto Roque Salvador Santiago Torcuato Venancio }
 		last_names = { Aguirre Avellaneda Báez Balcarce Bareiro Berro Brown Caballero Cruz "de Alvear" "de la Plaza" "de Rosas" "de Urquiza" Derqui Díaz Ellauri Escobar Flores González Jovellanos Juárez Justo Latorre López Machaín Maza Meza Mitre Paz Pedernera Pellegrini Pereira Quintana Rivarola Rivera Roca "Rodríguez de Francia" Rojas Rondeau Sáenz Santos Sarmineto Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen }
 	}
-	andean_white_spanish = { # tag = MEX ...
-		#!religion = { catholic }
-		color = { 240 210 160 }
-		first_names = { Agustín Antonio Atanasio Baltasar Bartolomé Bernardino Bernardo Cándido Carlos Cecilio Cirilo Claudio Domingo Emiliano Esteban Eugenio Evaristo Facundo Faustino Feliciano Félix Francisco Fructuoso Gabriel Gaspar Guillermo Hipólito Ignacio José "Juan José" "Juan Manuel" "Juan Ramón" Julio Justo Lorenzo Luis Manuel Marcial Máximo Miguel Nicolás Patricio Pedro Ramón Roberto Roque Salvador Santiago Torcuato Venancio }
-		last_names = { Aguirre Avellaneda Báez Balcarce Bareiro Berro Brown Caballero Cruz "de Alvear" "de la Plaza" "de Rosas" "de Urquiza" Derqui Díaz Ellauri Escobar Flores González Jovellanos Juárez Justo Latorre López Machaín Maza Meza Mitre Paz Pedernera Pellegrini Pereira Quintana Rivarola Rivera Roca "Rodríguez de Francia" Rojas Rondeau Sáenz Santos Sarmineto Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen }
-	}
-	platinean_white_spanish = { # tag = MEX ...
-		#!religion = { catholic }
-		color = { 240 220 150 }
-		first_names = { Agustín Antonio Atanasio Baltasar Bartolomé Bernardino Bernardo Cándido Carlos Cecilio Cirilo Claudio Domingo Emiliano Esteban Eugenio Evaristo Facundo Faustino Feliciano Félix Francisco Fructuoso Gabriel Gaspar Guillermo Hipólito Ignacio José "Juan José" "Juan Manuel" "Juan Ramón" Julio Justo Lorenzo Luis Manuel Marcial Máximo Miguel Nicolás Patricio Pedro Ramón Roberto Roque Salvador Santiago Torcuato Venancio }
-		last_names = { Aguirre Avellaneda Báez Balcarce Bareiro Berro Brown Caballero Cruz "de Alvear" "de la Plaza" "de Rosas" "de Urquiza" Derqui Díaz Ellauri Escobar Flores González Jovellanos Juárez Justo Latorre López Machaín Maza Meza Mitre Paz Pedernera Pellegrini Pereira Quintana Rivarola Rivera Roca "Rodríguez de Francia" Rojas Rondeau Sáenz Santos Sarmineto Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen }
-	}	
-	caribbean_white_spanish = { # tag = MEX ...
-		#!religion = { catholic }
-		color = { 240 240 130 }
-		first_names = { Agustín Antonio Atanasio Baltasar Bartolomé Bernardino Bernardo Cándido Carlos Cecilio Cirilo Claudio Domingo Emiliano Esteban Eugenio Evaristo Facundo Faustino Feliciano Félix Francisco Fructuoso Gabriel Gaspar Guillermo Hipólito Ignacio José "Juan José" "Juan Manuel" "Juan Ramón" Julio Justo Lorenzo Luis Manuel Marcial Máximo Miguel Nicolás Patricio Pedro Ramón Roberto Roque Salvador Santiago Torcuato Venancio }
-		last_names = { Aguirre Avellaneda Báez Balcarce Bareiro Berro Brown Caballero Cruz "de Alvear" "de la Plaza" "de Rosas" "de Urquiza" Derqui Díaz Ellauri Escobar Flores González Jovellanos Juárez Justo Latorre López Machaín Maza Meza Mitre Paz Pedernera Pellegrini Pereira Quintana Rivarola Rivera Roca "Rodríguez de Francia" Rojas Rondeau Sáenz Santos Sarmineto Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen }
-	}
 	mestizo = { # tag = _MEX ...
 		#!religion = { catholic }
 		color = { 51 117 62 }
-		first_names = { Adrián Agustín Álvaro Anastasio Andrés Ángel Antonio Bernardo Emiliano Emilio Enrique Ernesto Felipe Félix Francisco "Francisco Javier" Gabriel Gaspar Gregorio Ignacio Jerónimo Joaquín José "José Manuel" "José María" Juan "Juan Bautista" Justo Lázaro Manuel Mariano Martín Melchor Miguel Nicolás Pablo Pascual Pedro Porfirio Ramón Ricardo Rómulo Salvador Sebastián Tomás Valentín Valeriano Venustiano Vicente Victoriano }
-		last_names = { Almonte Álvarez Arista Barragán Bocanegra Bravo Bustamante Canalizo Carranza Caserta Cervantes Corona Corra "de Ampudia" "de Cos" "de Itúrbide" Díaz Echeverría Escandón Escobedo Fagoaga "Fernández del Valle" Flores Gómez González Guerrero Huerta Kosterlitzky "López de Santa Ana" Lozada "Martínez del Río" Mejía Miramón Múzquiz Obregón Pedraza Pimentel Reyes "Rincón Gallardo" Robles Ruíz Salas Sánchez "Sarmaniego del Castillo" "Vázquez de la Cadena" Villa Woll Zapata Zaragoza Zuloaga }
-	}
-	mesoamerican_white_spanish = { # tag = MEX ...
-		#!religion = { catholic }
-		color = { 240 230 140 }
-		first_names = { Agustín Antonio Atanasio Baltasar Bartolomé Bernardino Bernardo Cándido Carlos Cecilio Cirilo Claudio Domingo Emiliano Esteban Eugenio Evaristo Facundo Faustino Feliciano Félix Francisco Fructuoso Gabriel Gaspar Guillermo Hipólito Ignacio José "Juan José" "Juan Manuel" "Juan Ramón" Julio Justo Lorenzo Luis Manuel Marcial Máximo Miguel Nicolás Patricio Pedro Ramón Roberto Roque Salvador Santiago Torcuato Venancio }
-		last_names = { Aguirre Avellaneda Báez Balcarce Bareiro Berro Brown Caballero Cruz "de Alvear" "de la Plaza" "de Rosas" "de Urquiza" Derqui Díaz Ellauri Escobar Flores González Jovellanos Juárez Justo Latorre López Machaín Maza Meza Mitre Paz Pedernera Pellegrini Pereira Quintana Rivarola Rivera Roca "Rodríguez de Francia" Rojas Rondeau Sáenz Santos Sarmineto Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen }
-	}
-	american_spanish = { #Hispano
-		color = { 190 190 110 }
-		first_names = { Agustín Antonio Atanasio Baltasar Bartolomé Bernardino Bernardo Cándido Carlos Cecilio Cirilo Claudio Domingo Emiliano Esteban Eugenio Evaristo Facundo Faustino Feliciano Félix Francisco Fructuoso Gabriel Gaspar Guillermo Hipólito Ignacio José "Juan José" "Juan Manuel" "Juan Ramón" Julio Justo Lorenzo Luis Manuel Marcial Máximo Miguel Nicolás Patricio Pedro Ramón Roberto Roque Salvador Santiago Torcuato Venancio }
-		last_names = { Aguirre Avellaneda Báez Balcarce Bareiro Berro Brown Caballero Cruz "de Alvear" "de la Plaza" "de Rosas" "de Urquiza" Derqui Díaz Ellauri Escobar Flores González Jovellanos Juárez Justo Latorre López Machaín Maza Meza Mitre Paz Pedernera Pellegrini Pereira Quintana Rivarola Rivera Roca "Rodríguez de Francia" Rojas Rondeau Sáenz Santos Sarmineto Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen }
+		first_names = { Adrián Álvaro Andrés Ángel Emilio Enrique Ernesto Felipe Félix "Francisco Javier" Gaspar Gregorio Jerónimo Joaquín "José Manuel" "José María" Juan "Juan Bautista" Lázaro Mariano Martín Melchor Pablo Pascual Porfirio Ricardo Rómulo Sebastián Tomás Valentín Valeriano Venustiano Vicente Victoriano }
+		last_names = { Almonte Álvarez Arista Barragán Bocanegra Bravo Bustamante Canalizo Carranza Caserta Cervantes Corona Corra "de Ampudia" "de Cos" "de Itúrbide" Echeverría Escandón Escobedo Fagoaga "Fernández del Valle" Flores Gómez González Guerrero Huerta Kosterlitzky "López de Santa Ana" Lozada "Martínez del Río" Mejía Miramón Múzquiz Obregón Pedraza Pimentel Reyes "Rincón Gallardo" Robles Ruíz Salas Sánchez "Sarmaniego del Castillo" "Vázquez de la Cadena" Villa Woll Zapata Zaragoza Zuloaga }
 	}
 	union = XSU
 }
@@ -1025,14 +983,8 @@ mongoloid_cultures = {
 	mongol = { # tag = _IMN tag = MGL
 		#!religion = { buddhist }
 		color = { 128 128 255  }
-		first_names = { Peljidiin Balingiin Sodnomyn Kubilai Baterdene Dogsomyn Damdin Khorloogiin Dambyan Gonchigjalzangiin Badamdorj Chingis Otgonbayar Batbayar }
-		last_names = { Genden Amar Tserendorj Tomorbaatar Damdinbazar Bodoo Sukhbaatar Jamyan Choibalsan Chagdarjav }
-	}
-	siberian = { # tag = -YAK
-		#!religion = { orthodox }
-		color = { 238 145 255 }
-		first_names = { Aleksandr Diniyar Mirsayet Sihabetdin Gabdull Afanasiy Viktor Grigory }
-		last_names = { Shaimiev Bilyaletdinov Shchapov Yadrintsev Krakovetsky Kolchak Potanin Shashkov }
+		first_names = { Afanasiy Aleksandr Badamdorj Balingiin Batbayar Baterdene Chingis Dambyan Damdin Diniyar Dogsomyn Gabdull Gonchigjalzangiin Grigory Khorloogiin Kubilai Mirsayet Otgonbayar Peljidiin Sihabetdin Sodnomyn Viktor }
+		last_names = { Amar Bilyaletdinov Bodoo Chagdarjav Choibalsan Damdinbazar Genden Jamyan Kolchak Krakovetsky Potanin Shaimiev Shashkov Shchapov Sukhbaatar Tomorbaatar Tserendorj Yadrintsev }
 	}
 	tatar = {
 		#!religion = { sunni }
@@ -1330,23 +1282,11 @@ kurdish = {
 japanese_cultures = {
 	leader = asian
 	unit = JapaneseGC
-	ainu = { # tag = _JAP
-		#!religion = { shinto }
-		color = { 130 130 130 }
-		first_names = { Seimei Resaak Akihi Petennouk Unayanke Shiratekka Apniainu Pasekur Munkeke Shitekka Shinriki Shiromainu Menkakush }
-		last_names = { Aterui Shakushine Koshamine Harukor Turushno Isonash Keutoranke }
-	}
 	japanese = { # tag = JAP
 		#!religion = { shinto }
 		color = { 230 230 230 }
-		first_names = { Arisugawa Arichi Akiyama Araki Dewa Enomoto Hasegawa Honjo Ito Inoue Ichinohe Itagaki Kido Kuroda Katsura Kodama Kabayama Kawamura Kuroki Kawakami Kamimura Kataoka Kamio Kato Kanin Katsu Makino Muto Minami Masaki Matsudaira Nakamuta Nogi Nire Nozu Okubo Oyama Omura Oku Okada Osumi Saigo Suzuki Sato Sakura Shibayama Shimamura Shirakawa Togo Takashima Tsuboi Tachibana Terauchi Tamon Takasugi Tokugawa Uehara Uryu Ugaki Ueda Yamagata Yamamoto Yamakawa Yashiro Yui Yamashita Yamaya Uesugi Takeda Abe Usami Watanabe Honda Hosokawa Asai	Askikaga Chosokabe Date Fukushima Genji Hachisuka Hattori Heike Hojo Ishida Kaga Kuki Maeda Miyamoto Mori Murakami Oda Okamoto Ooka Saito Shibata Shimazu Suwa Takigawa Tanuma Ukita Konoe Takashi Kujo Ichijo Gojo Aburakoji Anenokoji Asukai Daigo Hirohata Imaidegawa Inokuma Jimyoin Kajuji Kaoin Karasuma Kawashi Konjo Kuga Masachika	Matsuki	Minase	Nakayama Nanba Nomiya Oimikado Rakujochigusa Reizei Saioji Sanjo Shigenoi Shijo Shimizudani Tokudaiji Washio Yamashina } 
-		last_names = { Aritomo Goro Gentaro Gonnohyoe Heihachiro Hiroshi Hikonojo Hyoe Hayao Iwao Jiro Jinzaburo Kiyotaka Kuranosuke Kozo Kantaro Koichiro Kagenori Kageaki Kotohito Keisuke Kazushige Kenkichi Maresuke Masujiro Michisura Masatake Mitsuomi Mitsue Mineo Nariaki Nobuyoshi Rokuro Sukeyuki Sukenori Shoin Sumiyoshi Samata Soroku Shichiro Shigeto Sotokichi Shigeru Sadao Shinsaku Takayoshi Takamori Toshimichi Tsugumichi Tadakuni Tomonosuke Taro Toshiyoshi Tetsutaro Taruhito Takeaki Tamemoto Tomasaburo Yoshika Yoshinobu Yoshimichi Yoshida Yasukata Yahachi Yusaku Yoshifuru Yoshinori Yasuyoshi Ieyasu }
-	}
-	ryukyuan = { # tag = RYK
-		#!religion = { shinto }
-		color = { 250 250 210 }
-		first_names = { Aritomo Goro Gentaro Gonnohyoe Heihachiro Hiroshi Hikonojo Hyoe Hayao Iwao Jiro Jinzaburo Kuranosuke Kozo Kantaro Koichiro Kagenori Kiyotaka Kageaki Kotohito Keisuke Kazushige Kenkichi Maresuke Masujiro Michisura Masatake Mitsuomi Mitsue Mineo Nariaki Nobuyoshi Rokuro Sukeyuki Sukenori Shoin Sumiyoshi Samata Soroku Shichiro Shigeto Sotokichi Shigeru Sadao Shinsaku Takayoshi Takamori Toshimichi Tsugumichi Tadakuni Tomonosuke Taro Toshiyoshi Tetsutaro Taruhito Takeaki Tamemoto Tomasaburo Yoshika Yoshinobu Yoshimichi Yoshida Yasukata Yahachi Yusaku Yoshifuru Yoshinori Yasuyoshi }
-		last_names = { Arisugawa Arichi Akiyama Araki Dewa Enomoto Hasegawa Honjo Ito Inoue Ichinohe Itagaki Kido Kuroda Katsura Kodama Kabayama Kawamura Kuroki Kawakami Kamimura Kataoka Kamio Kato Kanin Katsu Makino Muto Minami Masaki Matsudaira Nakamuta Nogi Nire Nozu Okubo Oyama Omura Oku Okada Osumi Saigo Suzuki Sato Sakura Shibayama Shimamura Shirakawa Togo Takashima Tsuboi Tachibana Terauchi Tamon Takasugi Tokugawa Uehara Uryu Ugaki Ueda Yamagata Yamamoto Yamakawa Yashiro Yui Yamashita Yamaya }
+		first_names = { Abe Aburakoji Akihi Akiyama Anenokoji Apniainu Araki Arichi Arisugawa Aritomo Asai Askikaga Asukai Chosokabe Daigo Date Dewa Enomoto Fukushima Genji Gentaro Gojo Gonnohyoe Goro Hachisuka Hasegawa Hattori Hayao Heihachiro Heike Hikonojo Hirohata Hiroshi Hojo Honda Honjo Hosokawa Hyoe Ichijo Ichinohe Imaidegawa Inokuma Inoue Ishida Itagaki Ito Iwao Jimyoin Jinzaburo Jiro Kabayama Kaga Kageaki Kagenori Kajuji Kamimura Kamio Kanin Kantaro Kaoin Karasuma Kataoka Kato Katsu Katsura Kawakami Kawamura Kawashi Kazushige Keisuke Kenkichi Kido Kiyotaka Kodama Koichiro Konjo Konoe Kotohito Kozo Kuga Kujo Kuki Kuranosuke Kuroda Kuroki Maeda Makino Maresuke Masachika Masaki Masatake Masujiro Matsudaira Matsuki Menkakush Michisura Minami Minase Mineo Mitsue Mitsuomi Miyamoto Mori Munkeke Murakami Muto Nakamuta Nakayama Nanba Nariaki Nire Nobuyoshi Nogi Nomiya Nozu Oda Oimikado Okada Okamoto Oku Okubo Omura Ooka Osumi Oyama Pasekur Petennouk Rakujochigusa Reizei Resaak Rokuro Sadao Saigo Saioji Saito Sakura Samata Sanjo Sato Seimei Shibata Shibayama Shichiro Shigenoi Shigeru Shigeto Shijo Shimamura Shimazu Shimizudani Shinriki Shinsaku Shirakawa Shiratekka Shiromainu Shitekka Shoin Soroku Sotokichi Sukenori Sukeyuki Sumiyoshi Suwa Suzuki Tachibana Tadakuni Takamori Takashi Takashima Takasugi Takayoshi Takeaki Takeda Takigawa Tamemoto Tamon Tanuma Taro Taruhito Terauchi Tetsutaro Togo Tokudaiji Tokugawa Tomasaburo Tomonosuke Toshimichi Toshiyoshi Tsuboi Tsugumichi Ueda Uehara Uesugi Ugaki Ukita Unayanke Uryu Usami Washio Watanabe Yahachi Yamagata Yamakawa Yamamoto Yamashina Yamashita Yamaya Yashiro Yasukata Yasuyoshi Yoshida Yoshifuru Yoshika Yoshimichi Yoshinobu Yoshinori Yui Yusaku } 
+		last_names = { Akiyama Araki Arichi Arisugawa Aritomo Aterui Dewa Enomoto Gentaro Gonnohyoe Goro Harukor Hasegawa Hayao Heihachiro Hikonojo Hiroshi Honjo Hyoe Ichinohe Ieyasu Inoue Isonash Itagaki Ito Iwao Jinzaburo Jiro Kabayama Kageaki Kagenori Kamimura Kamio Kanin Kantaro Kataoka Kato Katsu Katsura Kawakami Kawamura Kazushige Keisuke Kenkichi Keutoranke Kido Kiyotaka Kodama Koichiro Koshamine Kotohito Kozo Kuranosuke Kuroda Kuroki Makino Maresuke Masaki Masatake Masujiro Matsudaira Michisura Minami Mineo Mitsue Mitsuomi Muto Nakamuta Nariaki Nire Nobuyoshi Nogi Nozu Okada Oku Okubo Omura Osumi Oyama Rokuro Sadao Saigo Sakura Samata Sato Shakushine Shibayama Shichiro Shigeru Shigeto Shimamura Shinsaku Shirakawa Shoin Soroku Sotokichi Sukenori Sukeyuki Sumiyoshi Suzuki Tachibana Tadakuni Takamori Takashima Takasugi Takayoshi Takeaki Tamemoto Tamon Taro Taruhito Terauchi Tetsutaro Togo Tokugawa Tomasaburo Tomonosuke Toshimichi Toshiyoshi Tsuboi Tsugumichi Turushno Ueda Uehara Ugaki Uryu Yahachi Yamagata Yamakawa Yamamoto Yamashita Yamaya Yashiro Yasukata Yasuyoshi Yoshida Yoshifuru Yoshika Yoshimichi Yoshinobu Yoshinori Yui Yusaku }
 	}
 	union = JAP
 }
