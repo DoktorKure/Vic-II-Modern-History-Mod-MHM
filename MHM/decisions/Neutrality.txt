@@ -29,9 +29,9 @@ political_decisions = {
 				AND = { tag = AUS has_country_modifier = world_low government = democracy }
 				AND = { tag = IRE government = democracy }
 				AND = { tag = COS government = democracy }
-				AND = { tag = FIN has_country_flag = finnish_question government = democracy }
+				AND = { tag = FIN has_country_flag = finlandization government = democracy }
 				AND = { tag = MAL government = democracy }
-				AND = { tag = SWE government = hms_government }
+				AND = { tag = SWE government = hms_government NOT = { has_global_flag = RUS_FIN_war } }
 			}
 			
 			#Not a dictatorship
@@ -105,8 +105,6 @@ political_decisions = {
 				government = absolute_monarchy
 				
 			}
-			#Non-Democratic Germany
-			AND = { tag = GER NOT = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } } }
 			
 			NOT = { government = sar_government }
 		}
@@ -148,11 +146,13 @@ political_decisions = {
 				factor = 0
 				tag = SWE
 				government = hms_government
+				NOT = { has_global_flag = RUS_FIN_war }
 			}
 			modifier = {
 				factor = 0
 				tag = FIN
 				government = democracy
+				has_country_flag = finlandization
 			}
 			modifier = {
 				factor = 0

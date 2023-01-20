@@ -1741,7 +1741,6 @@ highway_construction = {
 	}
 	effect = {
 		rgo_throughput = 0.05
-		activate_building = furniture_houseware_factory
 	}
 }
 international_highways = {
@@ -1759,7 +1758,6 @@ international_highways = {
 	}
 	effect = {
 		rgo_throughput = 0.05
-		activate_building = clothes_footwear_factory
 	}
 }
 #early_backbone
@@ -2119,6 +2117,7 @@ machine_tools = {
 		}
 	}
 	effect = {
+		activate_building = furniture_houseware_factory
 		factory_goods_output = {
 			machine_parts = 0.1
 		}
@@ -2130,7 +2129,7 @@ spinning = {
 		base = 4
 	}
 	effect = {
-		activate_building = clothes_factory
+		activate_building = clothes_footwear_factory
 	}
 }
 circuits = {

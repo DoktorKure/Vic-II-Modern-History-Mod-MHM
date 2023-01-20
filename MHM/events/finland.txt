@@ -122,27 +122,118 @@ country_event = {
 
 #The Finno Soviet Treaty of 1948
 country_event = {
-  id = 8005524
-  title = "The Finno Soviet Treaty of $YEAR$"
-  desc = EVTDESC8005524
-  picture = "nwo2_yya_treaty"
+	id = 8005524
+	title = "The Finno Soviet Treaty of $YEAR$"
+	desc = EVTDESC8005524
+	picture = "nwo2_yya_treaty"
   
 	fire_only_once = yes
 
 	trigger = {
-		tag = FIN
+		tag = RUS
 		year = 1948
 		NOT = { year = 1950 }
-		
-		government = democracy
+		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
 		is_vassal = no
 		
 		#Cold War ongoing
 		has_global_flag = blocsenabled
+		
+		FIN = { 
+			OR = { government = democracy government = democracy1 }
+			NOT = { has_country_flag = finlandization }
+			is_vassal = no
+			war = no
+		}
 	}
 
 	mean_time_to_happen = { months = 4 }
+
+	option = {
+		name = "Propose a treaty recognizing their independence in exchange for their neutrality"
+		prestige = 25
+		FIN = { country_event = 80055241 }
+		
+		ai_chance = { factor = 0.9 } 
+	}
+
+	option = {
+		name = "We will install our own puppet government! (High risk of WW3)"
+		prestige = 50
+		badboy = 10
+		set_global_flag = RUS_FIN_war
+		
+		FIN = { inherit = ALA }
+		
+		relation = { who = USA value = -100 }
+		relation = { who = FIN value = -200 }
+		diplomatic_influence = { who = FIN value = -300 }
+		
+		USA = {
+			relation = { who = FIN value = 200 } 
+			diplomatic_influence = { who = FIN value = 200 }
+		}
+		
+		war = {
+			target = FIN
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		
+		#European Communists are happy
+		any_country = {
+			limit = { 
+				capital_scope = { continent = europe } 
+				OR = {
+					ruling_party_ideology = communist
+					ruling_party_ideology = communist_social
+				}
+			}
+			relation = { who = THIS value = 25 }
+		}
+		
+		#European Democracies are angry
+		any_country = {
+			limit = { 
+				capital_scope = { continent = europe } 
+				OR = {
+					government = democracy
+					government = democracy1
+					government = hms_government
+					government = hms_government1
+				}
+			}
+			relation = { who = THIS value = -25 }
+		}
+		
+		#Sweden gets spooked
+		SWE = {
+			remove_country_modifier = neutrality
+			clr_country_flag = renounced_war_rights
+			clr_country_flag = neutrality
+			country_event = 1512260
+			
+			#Remove capital marker
+			any_owned = {
+				remove_province_modifier = neutral_nation_marker
+			}
+		}
+		ai_chance = { factor = 0.1 } 
+	}
+}
+
+#The Finno Soviet Treaty of 1948
+country_event = {
+	id = 80055241
+	title = "The Finno Soviet Treaty of $YEAR$"
+	desc = EVTDESC8005524
+	picture = "nwo2_yya_treaty"
+  
+	fire_only_once = yes
+
+	is_triggered_only = yes
 
 	option = {
 		name = "Sign the treaty!"
@@ -170,6 +261,176 @@ country_event = {
 		
 		relation = { who = RUS value = -200 } 
 		RUS = { diplomatic_influence = { who = THIS value = -200 } }
+		RUS = { country_event = 8005525 }
 		ai_chance = { factor = 0.1 } 
+	}
+}
+
+#Soviet response to Finland refusing the treaty
+country_event = {
+	id = 8005525
+	title = "Finland refuses our offer!"
+	desc = EVTDESC8005525
+	picture = "nwo2_yya_treaty"
+  
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Send an ultimatum demanding their capitulation (war if they refuse)"
+		badboy = 2.5
+		FIN = { country_event = 80055251 }
+		ai_chance = { factor = 0.5 }
+	}
+
+	option = {
+		name = "Break off negotiations and install our own regime (High risk of WW3)"
+		badboy = 10
+		set_global_flag = RUS_FIN_war
+		
+		FIN = { inherit = ALA }
+		
+		relation = { who = USA value = -100 }
+		relation = { who = FIN value = -200 }
+		
+		USA = {
+			relation = { who = FIN value = 200 } 
+			diplomatic_influence = { who = FIN value = 200 }
+		}
+		
+		war = {
+			target = FIN
+			attacker_goal = { casus_belli = make_puppet }
+			defender_goal = { casus_belli = status_quo }
+			call_ally = yes
+		}
+		
+		#European Communists are happy
+		any_country = {
+			limit = { 
+				capital_scope = { continent = europe } 
+				OR = {
+					ruling_party_ideology = communist
+					ruling_party_ideology = communist_social
+				}
+			}
+			relation = { who = THIS value = 25 }
+		}
+		
+		#European Democracies are angry
+		any_country = {
+			limit = { 
+				capital_scope = { continent = europe } 
+				OR = {
+					government = democracy
+					government = democracy1
+					government = hms_government
+					government = hms_government1
+				}
+			}
+			relation = { who = THIS value = -25 }
+		}
+		
+		#Sweden gets spooked
+		SWE = {
+			remove_country_modifier = neutrality
+			clr_country_flag = renounced_war_rights
+			clr_country_flag = neutrality
+			country_event = 1512260
+			
+			#Remove capital marker
+			any_owned = {
+				remove_province_modifier = neutral_nation_marker
+			}
+		}
+		ai_chance = { factor = 0.3 } 
+	}
+
+	option = {
+		name = "We cannot afford another war"
+		prestige = -100
+		ai_chance = { factor = 0.2 } 
+	}
+}
+
+#Finnish response to Soviet Ultimatum
+country_event = {
+	id = 80055251
+	title = "The Soviet Ultimatum"
+	desc = EVTDESC8005521
+	picture = "soviet_ultimatum"
+  
+	fire_only_once = yes
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Accept the original offer by the Soviets"
+		relation = { who = USA value = -100 } 
+		USA = { diplomatic_influence = { who = THIS value = -100 } }
+		
+		relation = { who = RUS value = 200 } 
+		RUS = { diplomatic_influence = { who = THIS value = 100 } }
+		
+		set_country_flag = finlandization
+		ai_chance = { factor = 0.6 }
+	}
+
+	option = {
+		name = "Let us have the war then!"
+		prestige = 100
+		set_global_flag = RUS_FIN_war
+		
+		inherit = ALA
+		
+		RUS = {
+			war = {
+				target = THIS
+				attacker_goal = { casus_belli = make_puppet }
+				defender_goal = { casus_belli = status_quo }
+				call_ally = yes
+			}
+		}
+		
+		#European Communists are happy
+		any_country = {
+			limit = { 
+				capital_scope = { continent = europe } 
+				OR = {
+					ruling_party_ideology = communist
+					ruling_party_ideology = communist_social
+				}
+			}
+			relation = { who = RUS value = 25 }
+		}
+		
+		#European Democracies are angry
+		any_country = {
+			limit = { 
+				capital_scope = { continent = europe } 
+				OR = {
+					government = democracy
+					government = democracy1
+					government = hms_government
+					government = hms_government1
+				}
+			}
+			relation = { who = RUS value = -25 }
+		}
+		
+		#Sweden gets spooked
+		SWE = {
+			remove_country_modifier = neutrality
+			clr_country_flag = renounced_war_rights
+			clr_country_flag = neutrality
+			country_event = 1512260
+			
+			#Remove capital marker
+			any_owned = {
+				remove_province_modifier = neutral_nation_marker
+			}
+		}
+		ai_chance = { factor = 0.4 } 
 	}
 }

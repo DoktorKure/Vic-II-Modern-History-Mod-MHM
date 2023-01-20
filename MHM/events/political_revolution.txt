@@ -823,6 +823,9 @@ country_event = { #The New Regime - populist or dictatorship
 	option = {
 		name = "EVTOPTA800050"
 		
+		upper_house = { ideology = liberal value = -0.80 }
+		upper_house = { ideology = progressive value = -0.80 }
+		
 		# remove ideology based modifiers 
 		remove_country_modifier = comecon remove_country_modifier = comecon_excluded
 
@@ -853,6 +856,8 @@ country_event = { #The New Regime- traditionalist
 
 	option = {
 		name = "EVTOPTA800051"
+		
+		upper_house = { ideology = traditionalist value = 0.99 }
 
 		# remove ideology based modifiers 
 		remove_country_modifier = comecon remove_country_modifier = comecon_excluded
@@ -880,6 +885,8 @@ country_event = { # The New Regime - Communist
 
 	option = {
 		name = "EVTOPTA800052"
+		
+		upper_house = { ideology = communist value = 0.99 }
 		
 		# from rebel_types
 		political_reform = none_voting

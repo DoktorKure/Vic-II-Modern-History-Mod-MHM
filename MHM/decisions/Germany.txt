@@ -301,12 +301,14 @@ political_decisions = {
 			
 			random_owned = { 
 				limit = { owner = { tag = FRG } }
-				owner = { inherit = DDR change_tag = GER }
+				owner = { change_tag = GER }
+				owner = { inherit = DDR }
 			}
 
 			random_owned = { 
 				limit = { owner = { tag = DDR } }
-				owner = { inherit = FRG change_tag = GER }
+				owner = { change_tag = GER }
+				owner = { inherit = FRG }
 			}
 		
 		}

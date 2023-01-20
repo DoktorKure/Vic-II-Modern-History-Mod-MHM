@@ -398,6 +398,14 @@ migration_chance = { # 1
 		location = { AND = { OR = { is_primary_culture = yes is_accepted_culture = yes } NOT = { has_province_modifier = pop_replacement_province_modifier } } }
 		country = { has_country_flag = population_replacement_underway }
     }
+	
+	#Increase movement towards colonial provinces but only when the country is actively promoting colonial migration
+	modifier = {
+        factor = 1.5
+		OR = { is_primary_culture = yes is_accepted_culture = yes }
+		location = { AND = { OR = { is_primary_culture = yes is_accepted_culture = yes } is_colonial = no } }
+		country = { has_country_flag = promote_colonial_migration_active }
+    }
 
     modifier = {
         factor = -100
@@ -550,6 +558,13 @@ colonialmigration_chance = {
     modifier = {
         factor = -0.5
         NOT = { culture = THIS }
+		country = { NOT = { has_country_flag = promote_colonial_migration_active } }
+    }
+
+    modifier = {
+        factor = 0.5
+        NOT = { culture = THIS }
+		country = { has_country_flag = promote_colonial_migration_active }
     }
     group = {
         modifier = {
@@ -581,10 +596,15 @@ colonialmigration_chance = {
     }
     modifier = {
         factor = -5
-        OR = {
+        AND = {
             state_scope = { is_colonial = yes }
-            NOT = { location = { total_pops = 20000 } }
-            NOT = { location = { controlled_by = THIS } }
+			OR = {
+				AND = { 
+					NOT = { location = { total_pops = 20000 } }
+					location = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
+				}
+				NOT = { location = { controlled_by = THIS } }
+			}
         }
     }
     group = {
@@ -1166,12 +1186,15 @@ assimilation_chance = { # 1
 		has_culture_core = yes
 		NOT = {
 			OR = {
-				is_culture_group = regional_arabic_1
-				is_culture_group = arabic
-			}
-			OR = {
-				country = { has_country_flag = pan_arab_identity }
-				country = { has_country_flag = arab_national_identity }
+				OR = {
+					is_culture_group = regional_arabic_1
+					is_culture_group = arabic
+				}
+				OR = {
+					country = { has_country_flag = pan_arab_identity }
+					country = { has_country_flag = arab_national_identity }
+				}
+				has_country_flag = superstate_flag
 			}
 		}
 	}
@@ -1309,8 +1332,8 @@ conversion_chance = { # 1.0
 	}
 
 	group = {
-		modifier = { factor = 0.2 country = { religious_policy = moralism } }
-		modifier = { factor = 0.2 country = { religious_policy = pro_atheism } }
+		modifier = { factor = 0.4 country = { religious_policy = moralism } }
+		modifier = { factor = 0.4 country = { religious_policy = pro_atheism } }
 	}
 
 	group = {
@@ -1349,7 +1372,7 @@ conversion_chance = { # 1.0
 	}
 
 	modifier = {
-		factor = 0.1
+		factor = 1.0
 		country = { government = theocracy }
 	}
 
