@@ -163,7 +163,7 @@ country_event = {
 		badboy = 5
 		war = {
 			target = IDO
-			defender_goal = { casus_belli = become_independent }
+			defender_goal = { casus_belli = become_independent_colony }
 			attacker_goal = { casus_belli = colonial_war } 
 		}
 		ai_chance = { factor = 0.9 }
@@ -220,7 +220,7 @@ country_event = {
 		
 		war = {
 			target = IDO
-			defender_goal = { casus_belli = become_independent }
+			defender_goal = { casus_belli = become_independent_colony }
 			attacker_goal = { casus_belli = colonial_war } 
 		}
 		
@@ -311,7 +311,7 @@ country_event = {
 		
 		war = {
 			target = IDO
-			defender_goal = { casus_belli = become_independent }
+			defender_goal = { casus_belli = become_independent_colony }
 			attacker_goal = { casus_belli = colonial_war } 
 		}
 		

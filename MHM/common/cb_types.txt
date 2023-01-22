@@ -54,6 +54,7 @@ acquire_substate_region
 annex_all_cores
 annex_all_colonial_cores
 annex_un_occupied_territories
+liberate_puppet
 free_allied_cores
 install_democracy
 assert_hegemony
@@ -3110,6 +3111,7 @@ become_independent = {
 		is_our_vassal = THIS
 		THIS = { NOT = { war_policy = pacifism } }
 		THIS = { NOT = { government = colonial_government } }
+		THIS = { NOT = { has_country_flag = colonial_province } }
 	}
 	
 	# THIS - us
