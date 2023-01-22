@@ -745,6 +745,7 @@ country_event = {
 		name = "This is a great day in German history!"
 		prestige = 500
 		inherit = DDR
+		change_tag = GER
 		any_pop = { militancy = -5 consciousness = -5 }
 	}
 
