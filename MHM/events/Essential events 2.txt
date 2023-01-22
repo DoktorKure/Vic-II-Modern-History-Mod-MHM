@@ -5865,7 +5865,7 @@ country_event = {
 			owner = {
 				war = {
 					target = FROM
-					defender_goal = { casus_belli = colonial_war }
+					defender_goal = { }
 					attacker_goal = { casus_belli = become_independent_colony }
 				}
 			}
