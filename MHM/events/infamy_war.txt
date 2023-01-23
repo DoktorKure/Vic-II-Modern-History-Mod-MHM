@@ -170,7 +170,7 @@ country_event = {
 		NOT = { has_country_modifier = international_pariah }
 		
 		#Have enough infamy to spare
-		NOT = { badboy = 0.2 }
+		NOT = { badboy = 0.35 }
 		
 		NOT = {
 			has_global_flag = ultimatum_delivered
@@ -220,7 +220,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 6
+		months = 2
 		
 		#Fast response if THIS is a Superpower
 		modifier = {
