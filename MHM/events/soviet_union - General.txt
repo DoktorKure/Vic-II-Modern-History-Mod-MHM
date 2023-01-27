@@ -1911,16 +1911,40 @@ country_event = {
 
 	option = {
 		name = "Set them free!"
-		add_country_flag = recognized_baltic_states
-		LIT = { all_core = { remove_core = RUS } }
-		LAT = { all_core = { remove_core = RUS } }
-		EST = { all_core = { remove_core = RUS } }
-		release = LIT 
-		release = LAT
-		release = EST 
-		LIT = { country_event = 8014247 }
-		LAT = { country_event = 8014247 }
-		EST = { country_event = 8014247 }
+		set_country_flag = recognized_baltic_states
+		
+		#If 1990, release only Lithuania as Lativa and Estonia didn't quit the USSR until 1991
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { year = 1991 }
+				}
+			}
+			owner = {
+				LIT = { all_core = { remove_core = RUS } }
+				release = LIT
+				LIT = { country_event = 8014247 }
+			}
+		}
+		#If 1991 and beyond, release all three Baltic States
+		random_owned = {
+			limit = {
+				owner = {
+					year = 1991
+				}
+			}
+			owner = {
+				LIT = { all_core = { remove_core = RUS } }
+				LAT = { all_core = { remove_core = RUS } }
+				EST = { all_core = { remove_core = RUS } }
+				release = LIT 
+				release = LAT
+				release = EST 
+				LIT = { country_event = 8014247 }
+				LAT = { country_event = 8014247 }
+				EST = { country_event = 8014247 }
+			}
+		}
 		random = {
 			chance = 15
 			695 = { 
@@ -2012,12 +2036,7 @@ country_event = {
 		
 		ruling_party_ideology = communist_social
 		NOT = { has_global_flag = august_coup }
-		
-		OR = { 
-			LAT = { exists = yes is_vassal = no }
-			EST = { exists = yes is_vassal = no }
-			LIT = { exists = yes is_vassal = no }
-		}
+		has_country_flag = recognized_baltic_states
 	}
 
 	mean_time_to_happen = { 
@@ -2129,7 +2148,7 @@ country_event = {
 		any_country = {
 			limit = { 
 				exists = no 
-				OR = { tag = UKR tag = BYE tag = GEO tag = AZB tag = ARM tag = TKR tag = MOL tag = UZB tag = KYR tag = TAJ tag = KAZ tag = MOL tag = LIT tag = LAT tag = EST } 
+				OR = { tag = UKR tag = BYE tag = GEO tag = AZB tag = ARM tag = TKR tag = MOL tag = UZB tag = KYR tag = TAJ tag = KAZ tag = LIT tag = LAT tag = EST } 
 				any_core = { owned_by = THIS }
 			} 
 			country_event = 19911

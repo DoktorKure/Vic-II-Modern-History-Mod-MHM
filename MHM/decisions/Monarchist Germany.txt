@@ -5,7 +5,7 @@ political_decisions = {
 		potential = {
 			OR = { tag = GER tag = FRG }
 			OR = { government = democracy government = democracy1 }
-			OR = { is_vassal = no vassal_of USA }
+			OR = { is_vassal = no vassal_of = USA }
 			NOT = { has_country_flag = german_monarchy_fired_already }
 		}
 	

@@ -26,6 +26,8 @@ country_event = {
 			OR = {
 				is_possible_vassal = TRI
 				is_our_vassal = TRI
+			}
+		}
 			
 	}
 
@@ -822,7 +824,8 @@ country_event = {
 			OR = {
 				is_possible_vassal = TRI
 				is_our_vassal = TRI
-			
+			}
+		}
 		
 		
 		#UK opted to make Libya independent

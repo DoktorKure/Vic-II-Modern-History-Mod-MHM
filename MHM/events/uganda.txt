@@ -248,7 +248,7 @@ country_event = {
 			war = {
 				target = THIS
 				attacker_goal = colonial_war
-				defender_goal = become_independent
+				defender_goal = become_independent_colony
 				call_ally = no
 			}
 		}

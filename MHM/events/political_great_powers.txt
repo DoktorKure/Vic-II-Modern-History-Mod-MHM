@@ -740,50 +740,6 @@ country_event = {
 	}
 }
 
-# The Cold War Great wars
-country_event = {
-	id = 19355
-	news = yes
-	news_desc_long = "EVTDESC19355_NEWS_LONG"
-	news_desc_medium = "EVTDESC19355_NEWS_MEDIUM"
-	news_desc_short = "EVTDESC19355_NEWS_SHORT"
-	title = "EVTNAME19355"
-	desc = "EVTDESC19355"
-	#major = yes
-	picture = "cold_war"
-
-	fire_only_once = yes
-
-	trigger = {
-		# great_wars_enabled = no why is this enable?
-		NOT = { has_global_flag = great_wars_enabled }
-		ai = yes
-		containment = 1
-	}
-
-	immediate = { 
-		great_wars_enabled = yes
-		set_global_flag = great_wars_enabled
-		set_global_flag = NWO_v1_06 # TODO change with a new version
-	}
-	
-	option = {
-		name = "EVTOPTA19355"
-		any_country = { 
-			limit = { 
-				exists = yes
-			}
-			set_country_flag = recognized_government
-			
-		}
-		USA = { remove_accepted_culture = german } # due to literacy Vic2 mod limitations
-		FRA = { remove_accepted_culture = german }
-		SPA = { remove_accepted_culture = catalan remove_accepted_culture = basque }
-		RUS = { remove_accepted_culture = german remove_accepted_culture= estonian remove_accepted_culture = latvian remove_accepted_culture = lithuanian }
-		ENG = { remove_accepted_culture = german }
-	}
-}
-
 country_event = {
     id = 19369
     title = "Our New Puppet"

@@ -141,6 +141,18 @@ country_event = {
 	option = {
 		name = "Splendid!"
 		prestige = 10
+		any_country = {
+			limit = {
+				has_country_flag = imf_chairmanship
+			}
+			clr_country_flag = imf_chairmanship
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = imf_chairmanship
+			}
+			remove_country_modifier = imf_chairmanship
+		}
 		add_country_modifier = { name = imf_chairmanship duration = 1825 }
 		set_country_flag = imf_chairmanship
 		FROM = { clr_country_flag = imf_chairmanship remove_country_modifier = imf_chairmanship } #Just in case
@@ -180,6 +192,18 @@ country_event = {
 	option = {
 		name = "Splendid!"
 		prestige = 10
+		any_country = {
+			limit = {
+				has_country_flag = wto_chairmanship
+			}
+			clr_country_flag = wto_chairmanship
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = wto_chairmanship
+			}
+			remove_country_modifier = wto_chairmanship
+		}
 		add_country_modifier = { name = wto_chairmanship duration = 1825 }
 		set_country_flag = wto_chairmanship
 		FROM = { clr_country_flag = wto_chairmanship remove_country_modifier = wto_chairmanship } #Just in case
@@ -220,6 +244,18 @@ country_event = {
 	option = {
 		name = "Splendid!"
 		prestige = 10
+		any_country = {
+			limit = {
+				has_country_flag = ibrd_chairmanship
+			}
+			clr_country_flag = ibrd_chairmanship
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = ibrd_chairmanship
+			}
+			remove_country_modifier = ibrd_chairmanship
+		}
 		add_country_modifier = { name = ibrd_chairmanship duration = 1825 }
 		set_country_flag = ibrd_chairmanship
 		FROM = { clr_country_flag = ibrd_chairmanship remove_country_modifier = ibrd_chairmanship } #Just in case
@@ -242,7 +278,7 @@ country_event = {
 		
 		NOT = { has_country_modifier = ibrd_chairmanship }
 		
-		NOT = { any_greater_power = { has_country_modifier = ibrd_chairmanship } }
+		NOT = { any_greater_power = { has_country_flag = ibrd_chairmanship } }
 	}
 	
 	mean_time_to_happen = { months = 6 }
@@ -250,6 +286,20 @@ country_event = {
 	option = {
 		name = "Splendid!"
 		prestige = 10
+		
+		#Clean up any potential existing flags/modifiers
+		any_country = {
+			limit = {
+				has_country_flag = ibrd_chairmanship
+			}
+			clr_country_flag = ibrd_chairmanship
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = ibrd_chairmanship
+			}
+			remove_country_modifier = ibrd_chairmanship
+		}
 		add_country_modifier = { name = ibrd_chairmanship duration = 1825 }
 		set_country_flag = ibrd_chairmanship
 		set_global_flag = ibrdusafirst
@@ -296,7 +346,7 @@ country_event = {
 		
 		NOT = { has_country_modifier = imf_chairmanship }
 		
-		NOT = { any_greater_power = { has_country_modifier = imf_chairmanship } }
+		NOT = { any_greater_power = { has_country_flag = imf_chairmanship } }
 	}
 	
 	mean_time_to_happen = { months = 6 }
@@ -304,6 +354,20 @@ country_event = {
 	option = {
 		name = "Splendid!"
 		prestige = 10
+		
+		#Clean up any potential existing flags/modifiers
+		any_country = {
+			limit = {
+				has_country_flag = imf_chairmanship
+			}
+			clr_country_flag = imf_chairmanship
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = imf_chairmanship
+			}
+			remove_country_modifier = imf_chairmanship
+		}
 		add_country_modifier = { name = imf_chairmanship duration = 1825 }
 		set_country_flag = imf_chairmanship
 		set_global_flag = imfusafirst
@@ -349,7 +413,7 @@ country_event = {
 		
 		NOT = { has_country_modifier = wto_chairmanship }
 		
-		NOT = { any_greater_power = { has_country_modifier = wto_chairmanship } }
+		NOT = { any_greater_power = { has_country_flag = wto_chairmanship } }
 	}
 	
 	mean_time_to_happen = { months = 6 }
@@ -357,6 +421,20 @@ country_event = {
 	option = {
 		name = "Splendid!"
 		prestige = 10
+		
+		#Clean up any potential existing flags/modifiers
+		any_country = {
+			limit = {
+				has_country_flag = wto_chairmanship
+			}
+			clr_country_flag = wto_chairmanship
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = wto_chairmanship
+			}
+			remove_country_modifier = wto_chairmanship
+		}
 		add_country_modifier = { name = wto_chairmanship duration = 1825 }
 		set_country_flag = wto_chairmanship
 		set_global_flag = wtousafirst
@@ -5787,8 +5865,8 @@ country_event = {
 			owner = {
 				war = {
 					target = FROM
-					defender_goal = { casus_belli = colonial_war }
-					attacker_goal = { casus_belli = become_independent }
+					defender_goal = { }
+					attacker_goal = { casus_belli = become_independent_colony }
 				}
 			}
 		}

@@ -280,7 +280,7 @@ country_event = {
 		war = {
 			target = TIM
 			attacker_goal = { casus_belli = colonial_war }
-			defender_goal = { casus_belli = become_independent } 
+			defender_goal = { casus_belli = become_independent_colony } 
 		}
 		
 		ai_chance = { factor = 0.1 }
@@ -369,7 +369,7 @@ country_event = {
 		
 		war = {
 			target = NET
-			attacker_goal = { casus_belli = become_independent }
+			attacker_goal = { casus_belli = become_independent_colony }
 			defender_goal = { casus_belli = colonial_war } 
 		}
 
