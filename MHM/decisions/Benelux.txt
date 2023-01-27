@@ -41,10 +41,9 @@ political_decisions = {
 			prestige = 20
 			change_tag = BNL
 			add_accepted_culture = dutch
-			add_accepted_culture = flemish
-			add_accepted_culture = wallonian
+			add_accepted_culture = french
 			add_accepted_culture = german
-			remove_accepted_culture = french 
+			
 			any_country = {
 				limit = {
 					in_sphere = THIS
@@ -109,10 +108,8 @@ political_decisions = {
 			any_country = {
 				limit = { tag = BNL }
 				add_accepted_culture = dutch
-				add_accepted_culture = flemish
-				add_accepted_culture = wallonian
+				add_accepted_culture = french
 				add_accepted_culture = german
-				remove_accepted_culture = french 
     			ruling_party_ideology = communist
 			}
 

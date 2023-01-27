@@ -8032,12 +8032,11 @@ country_event = {
 	}
 	
 	option = {
-		name = "Pax Europa!"
+		name = "Pax Europaea!"
 		XEU = {
 			primary_culture = european
 			
 			add_accepted_culture = french
-			add_accepted_culture = wallonian
 			add_accepted_culture = breton
 			add_accepted_culture = occitans
 			add_accepted_culture = padanian
@@ -8068,10 +8067,7 @@ country_event = {
 			add_accepted_culture = german
 			add_accepted_culture = south_german
 			add_accepted_culture = swiss_german
-			add_accepted_culture = swiss_italian
-			add_accepted_culture = swiss_french
 			add_accepted_culture = dutch
-			add_accepted_culture = flemish
 			add_accepted_culture = czech
 			add_accepted_culture = slovak
 			add_accepted_culture = greek
@@ -8084,7 +8080,6 @@ country_event = {
 			add_accepted_culture = swedish
 			add_accepted_culture = albanian
 			add_accepted_culture = romanian
-			add_accepted_culture = romansh
 			add_accepted_culture = portuguese
 		}
 	}
