@@ -1921,7 +1921,7 @@ country_event = {
 #MAS In Power prior to historic
 country_event = { 
 	id = 80018166
-	title = "Boliviano Indigenismo"
+	title = "Indigenismo Boliviano"
 	desc = EVTDESC80018166
 	picture = "Indigenismo_Bolivia"
   
@@ -1945,7 +1945,7 @@ country_event = {
 	mean_time_to_happen = { months = 6 }
 
 	option = {
-		name = "Bolivia is a Plurinational State!"
+		name = "Bolivia is a plurinational state!"
 		
 		primary_culture = mestizo
 		
