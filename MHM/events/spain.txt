@@ -180,7 +180,7 @@ country_event = {
 		government = hms_government 
 		ruling_party_ideology = liberal
 		#TODO: make an event for the return of republican spanish exiles and civil rights
-		add_accepted_culture = caribbean_white_spanish
+		add_accepted_culture = white_spanish
 		add_accepted_culture = black_spanish
 		
 		country_event = 800054

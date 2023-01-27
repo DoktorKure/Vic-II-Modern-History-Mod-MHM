@@ -554,66 +554,14 @@ romani_group = {
 	}
 }
 
-# Latin American
+# Native American
 native_american = {
 	leader = nativeamerican
 	unit = SouthAmericanGC
-	aimara = { # tag = _PEU
-		#!religion = { catholic }
-		color = { 190 45 23 }
-		first_names = { Agustín Alejandro Antonio Bartolomé Carlos David Eduardo Enrique Evo Facundo Felipe Francisco Gregorio Hugo José Juan "Juan José" Manuel Marcos Mario Máximo Nicolás Osvaldo Ramón Roberto Santiago Túpac Vicente Víctor "Víctor Hugo" }
-		last_names = { Apaza Ayme Calisaya Cardenas Castilla Chino Choquehuanca Condori Corahua Cusicanqui Hoffmann Huachua Huallpa Katari Larico Machaca Mamani Morales Paredes Peñaranda Puma Quilca Quispe Rivera Sisa Tamayo Taquiri Torres Yllanes Yucra }
-	}
-	inuit = { # tag = GRN
-		#!religion = { protestant }
-		color = { 210 243 242 }
-		first_names = { Peter Ipeelee Jose Steve David Jack Goo Germaine James Pitseolak Kenojuak Ernie Caubvick }
-		last_names = { Alakannuark Arreak Ashoona Enuaraq Evaloarjuk Ipeelee Irgittuq Keenainak Kunuk Kusugak Maksagak Nutarak Paniloo Piugattuk Pudluk Tiktaalaaq Ungallaq }
-	}
-	mayan = { # tag = _GUA
-		#!religion = { catholic }
-		color = { 98 88 142 }
-		first_names = { Agustín Akbal Alejandro Andrés Aníbal Antonio Armando Bernardo Carlos Crescencio Cristóbal Cuautéhmoc Diego Felipe Gaspar Hernando Hilario Humberto Ignacio Jacinto Jesús Luis Marcial Martín Miguel Ramiro Rodolfo Rolando Santiago Yumil }
-		last_names = { Ak'ab'al Cal Canek Canul Carrillo Ceh Chee Chi Choc Coc Curruchic Ixquiac López Manzanero Mas Menchú Mérida Mes Osorio Pek Poot Pop Puk Shal Sho Tecú Teul Tuyuc Xicara Xiloj }
-	}
-	mixtec = { # tag = -MEX
-		#!religion = { catholic }
-		color = { 199 21 133 }
-		first_names = { Aniceto Antonio Bartolomé Camilo Carlos Claudio David Emiliano Eugenio Felipe Félix Fernando Gregorio Jacinto Jesús José Juan Julio Luis Manuel Marcos Máximo Narciso Pablo Pedro Rodrigo Roque Simón Teodoro Víctor }
-		last_names = { Abjaisu Álvarez Ayegua Camba Chuaie Correa Cunhagatú Díaz Fernández Galeano Gómez González Guaracay Guaraní Guerrero Jopara López Mongelós Morla Ortíz Paravé Picagua Riquelme Rivarola "Santa Cruz" Tarayú Torga Velázquez Yaguarete Yrahi }
-	}
-	nahua = { # tag = -MEX
-		#!religion = { catholic }
-		color = { 88 175 160 }
-		first_names = { Antonio Carlos Diego Emiliano Emilio Felipe Fernando Francisco Gaspar Hernando Hilario Ignacio Isaac Jacinto Jesús José Juan Julio Lorenzo Manuel Marcial Mario Martín Natalio Oliverio Pedro Roberto Rodolfo Santiago Víctor }
-		last_names = { Ahuactzin Altamirano Atlanteco Badiano Bernardino Coaguila Coyotl Cuautlaxahue Gutiérrez Hernández Huanitzin Itzel Ixtlilxochitl Jiménez Matlacuahuac Mayahuel Moxo Muñoz Nahui Ocelotl Panecatl Tlaxca Tletla Tzehe Valeriano Xaxalpa Zicoténcatl Xochitl Zapata Zapotitla }
-	}
 	native_american_minor = { 
 		color = { 160 30 100 }
-		first_names = { John Tahlonteeskee Takatoka Charles William Lweis Dennis Joel Thomas Frank Andrew Edward }
-		last_names = { Ross Downing Potter Thompson Wolf Mayes Buffington Harris Rogers Boudinot }
-	}
-	dakota = {
-        color = { 117 84 13 }
-        first_names = { Sinté Thaóyate Thathanka Thasunke Mahpiya Istahba Hehaka Thahca Ohiyes Wanbdi Tamaha Inkpaduta }
-        last_names = { Gleská Duta Iyotake Witko Luta Kohkophapi Sapa Huste Thankja }
-    }
-	quechua = { # tag = _BOL
-		#!religion = { catholic }
-		color = { 178 141 85 }
-		first_names = { Agustín Alejandro Antauro Antonio Basilio Daniel Diego Eugenio Facundo Felipe Francisco Gustavo Hilario Inca Isaac "José María" Julio Lorenzo Manuel Marcos Mariano Martín Nicolás Osvaldo René Roberto Simón Túpac Ulises Víctor }
-		last_names = { Arguedas Barrientos Cajahuanca Canchata Chambi Chihuán Cusurichi Espejo Frisancho Gamarra Guaman Guayasamín Gutiérrez Heredia Humala Iturri Lazarte Ludueña Melgarejo Palacios Patiño Quispe Rodríguez Roncaglia "Santa Cruz" Sosa Sumac Toledo Vargas Zapata }
-	}
-	zapotec = { # tag = -MEX
-		#!religion = { catholic }
-		color = { 87 199 81 }
-		first_names = { Agustín Alberto Alfonso Alfredo Andrés Benito Carlos César Eduardo Eugenio Felipe Fernando Gabriel Gilberto Gregorio Jacinto Jesús José Juan Julio Macario Manuel Miguel Nazario Nicolás Oliverio Pablo Porfirio Rodolfo Rufino }
-		last_names = { Alonso Antúnez Cabrera Cajigas Chacón Chiñas Cortés Fernández Gamboa García González Gutiérrez Guzmán Henestrosa Isael Jiménez Juárez López Matus Mérida Morales Nayeli Orozco Ortíz Pineda Rojas Ruíz Suárez Tamayo Vichido }
-	}
-	metis = {
-		color = { 30 75 200 }
-		first_names = { Narcisse René Èdouard Luc Letellier Théodore Louis Francois Auguste Joseph Pierre Luis-Phillippe Jean Gaspard Eugéne Èssioff Huguel Jean-Pierre Gilles }
-		last_names = { Belleau Caron "de St.-Just" Robitaille Masson Angers Chapleau Jotte Pantaléon Langelier Damasne LeBlanc Brodeur Perodeau }
+		first_names = { Agustín Akbal Alberto Alejandro Alfonso Alfredo Andrew Andrés Aniceto Antauro Antonio Aníbal Armando Auguste Bartolomé Basilio Benito Bernardo Camilo Carlos Caubvick Charles Claudio Crescencio Cristóbal Cuautéhmoc César Daniel David Dennis Diego Èdouard Eduardo Edward Emiliano Emilio Enrique Ernie Èssioff Eugenio Eugéne Evo Facundo Felipe Fernando Francisco François Frank Félix Gabriel Gaspar Gaspard Germaine Gilberto Gilles Goo Gregorio Gustavo Hehaka Hernando Hilario Hugo Huguel Humberto Ignacio Inca Inkpaduta Ipeelee Isaac Istahba Jacinto Jack James Jean Jean-Pierre Jesús Joel John Joseph José "José María" Juan "Juan José" Julio Kenojuak Letellier Lorenzo Louis Luc Luis Luis-Phillippe Lweis Macario Mahpiya Manuel Marcial Marcos Mariano Mario Martín Miguel Máximo Narcisse Natalio Nazario Nicolás Ohiyes Oliverio Osvaldo Pablo Pedro Peter Pierre Pitseolak Porfirio Ramiro Ramón René Roberto Rodolfo Rodrigo Rolando Roque Rufino Santiago Simón Sinté Steve Tahlonteeskee Takatoka Tamaha Teodoro Thahca Thasunke Thathanka Thaóyate Thomas Théodore Túpac Ulises Vicente Víctor "Víctor Hugo" Wanbdi William Yumil }
+		last_names = { Abjaisu Ahuactzin Ak'ab'al Alakannuark Alonso Altamirano Álvarez Angers Antúnez Apaza Arguedas Arreak Ashoona Atlanteco Ayegua Ayme Badiano Barrientos Belleau Bernardino Boudinot Brodeur Buffington Cabrera Cajahuanca Cajigas Cal Calisaya Camba Canchata Canek Canul Cardenas Caron Carrillo Castilla Ceh Chacón Chambi Chapleau Chee Chi Chihuán Chino Chiñas Choc Choquehuanca Chuaie Coaguila Coc Condori Corahua Correa Cortés Coyotl Cuautlaxahue Cunhagatú Curruchic Cusicanqui Cusurichi Damasne "de St. Just" Downing Duta Díaz Enuaraq Espejo Evaloarjuk Fernández Frisancho Galeano Gamarra Gamboa García Gleská González Guaman Guaracay Guaraní Guayasamín Guerrero Gutiérrez Guzmán Gómez Harris Henestrosa Heredia Hernández Hoffmann Huachua Huallpa Huanitzin Humala Huste Ipeelee Irgittuq Isael Iturri Itzel Ixquiac Ixtlilxochitl Iyotake Jiménez Jopara Jotte Juárez Katari Keenainak Kohkophapi Kunuk Kusugak Langelier Larico Lazarte LeBlanc Ludueña Luta López Machaca Maksagak Mamani Manzanero Mas Masson Matlacuahuac Matus Mayahuel Mayes Melgarejo Menchú Mes Mongelós Morales Morla Moxo Muñoz Mérida Nahui Nayeli Nutarak Ocelotl Orozco Ortíz Osorio Palacios Panecatl Paniloo Pantaléon Paravé Paredes Patiño Pek Perodeau Peñaranda Picagua Pineda Piugattuk Poot Pop Potter Pudluk Puk Puma Quilca Quispe Riquelme Rivarola Rivera Robitaille Rodríguez Rogers Rojas Roncaglia Ross Ruíz "Santa Cruz" Sapa Shal Sho Sisa Sosa Sumac Suárez Tamayo Taquiri Tarayú Tecú Teul Thankja Thompson Tiktaalaaq Tlaxca Tletla Toledo Torga Torres Tuyuc Tzehe Ungallaq Valeriano Vargas Velázquez Vichido Witko Wolf Xaxalpa Xicara Xiloj Xochitl Yaguarete Yllanes Yrahi Yucra Zapata Zapotitla Zicoténcatl }
 	}
 }
 

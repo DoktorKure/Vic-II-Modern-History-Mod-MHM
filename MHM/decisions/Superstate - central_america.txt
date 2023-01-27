@@ -177,7 +177,7 @@ political_decisions = {
 			all_core = { add_core = XCI }
 			change_tag = XCI
 			add_accepted_culture = mestizo
-			add_accepted_culture = mesoamerican_white_spanish
+			add_accepted_culture = white_spanish
 			add_accepted_culture = black_spanish
 		}
 		ai_will_do = { factor = 1 }

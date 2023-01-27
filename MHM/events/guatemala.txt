@@ -142,7 +142,7 @@ country_event = {
 	any_pop = { militancy = 7.0 consciousness = 1 }
 	random_state = {
 		any_pop = {
-			limit = { culture = mayan }
+			limit = { culture = native_american_minor }
 			reduce_pop = 0.85
 		}
 	}
