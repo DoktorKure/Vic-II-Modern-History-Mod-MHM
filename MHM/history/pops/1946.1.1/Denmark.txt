@@ -1,78 +1,78 @@
 #Nuuk - Kujalleq (11000/2750 POPS)
 251 = {
 	officers = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 6
 	 } 
 	officers = {
-		culture = native_american_minor
+		culture = danish
 		religion = secularism
 		size = 1
 	 } 
 	soldiers = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 27
 	 } 
 	soldiers = {
-		culture = native_american_minor
+		culture = danish
 		religion = secularism
 		size = 5
 	 } 
 	aristocrats = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 92
 	 } 
 	aristocrats = {
-		culture = native_american_minor
+		culture = danish
 		religion = secularism
 		size = 17
 	 } 
 	bureaucrats = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 4
 	 } 
 	capitalists = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 10
 	 } 
 	capitalists = {
-		culture = native_american_minor
+		culture = danish
 		religion = secularism
 		size = 2
 	 } 
 	clergymen = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 22
 	 } 
 	clergymen = {
-		culture = native_american_minor
+		culture = danish
 		religion = secularism
 		size = 4
 	 } 
 	artisans = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 69
 	 } 
 	artisans = {
-		culture = native_american_minor
+		culture = danish
 		religion = secularism
 		size = 12
 	 } 
 	farmers = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 1751
 	 } 
 	farmers = {
-		culture = native_american_minor
-		religion = secularism
+		culture = danish
+		religion = protestant
 		size = 321
 	 } 
 }
@@ -245,67 +245,67 @@
 #JanMayen - JanMayen (11000/2750 POPS)
 3246 = {
 	officers = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 6
 	 } 
 	officers = {
-		culture = native_american_minor
+		culture = danish
 		religion = secularism
 		size = 1
 	 } 
 	soldiers = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 27
 	 } 
 	soldiers = {
-		culture = native_american_minor
+		culture = danish
 		religion = secularism
 		size = 5
 	 } 
 	aristocrats = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 92
 	 } 
 	aristocrats = {
-		culture = native_american_minor
+		culture = danish
 		religion = secularism
 		size = 17
 	 } 
 	bureaucrats = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 4
 	 } 
 	capitalists = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 10
 	 } 
 	capitalists = {
-		culture = native_american_minor
+		culture = danish
 		religion = secularism
 		size = 2
 	 } 
 	clergymen = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 22
 	 } 
 	clergymen = {
-		culture = native_american_minor
+		culture = danish
 		religion = secularism
 		size = 4
 	 } 
 	artisans = {
-		culture = native_american_minor
+		culture = danish
 		religion =  protestant 
 		size = 69
 	 } 
 	artisans = {
-		culture = native_american_minor
+		culture = danish
 		religion = secularism
 		size = 12
 	 } 
@@ -315,8 +315,8 @@
 		size = 1751
 	 } 
 	farmers = {
-		culture = native_american_minor
-		religion = secularism
+		culture = danish
+		religion = protestant
 		size = 321
 	 } 
 }
