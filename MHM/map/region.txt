@@ -4,7 +4,7 @@ CLN_3381 = { 3381 } # Cleanup
 
 USA_1 = { 1 2 3 4 5 2630 } #Alaska Gulf of Alaska Aleutians West Aleutians
 
-ENG_6 = { 1277 1278 1284 1298 } #India - East Maharashtra
+ENG_6 = { 1298 1284 1278 1277 } #India - East Maharashtra
 
 ENG_9 = { 6 11 32 2595 39 2648 } #Northwest Territories
 
@@ -148,7 +148,11 @@ ENG_300 = { 300 294 301 302 303 } #South East England
 
 ### Scandinavia
 
-DEN_251 = { 251 252 253 3246 } #Greenland
+DEN_251 = { 251 3246 } #Greenland
+
+ICL_252 = { 252 } #Iceland
+
+FAR_253 = { 253 } #Faroe Islands
 
 SWE_308 = { 308 305 306 307 } #Nordnoge Norway
 
@@ -464,11 +468,13 @@ EGY_921 = { 917 918 919 920 921 916 3346 3347 3348 3349 } #Palestine
 
 SYR_2687 = { 2687 } #Golan Heights
 
-TUR_931 = { 923 927 931 } #Middle Iraq
+TUR_931 = { 923 926 927 928 931 } #Middle Iraq
 
-TUR_932 = { 932 928 930 933} #Eastern Iraq
+TUR_932 = { 932 933 930 } #Southern Iraq
 
-TUR_934 = { 934 926 929 935 } #Middle Euphrates
+TUR_934 = { 934 929 } #Middle Euphrates
+
+TUR_935 = { 935 } #Kuwait
 
 RUS_1090 = { 1090 1093 1091 1092 1094 1095 1096 } #Georgia
 
@@ -639,6 +645,8 @@ RUS_2621 = { 1239 1240 1241 2650 2644 1238 } #East Uttar Pradesh
 
 RUS_2653 = { 2654 1248 1247 1250 } #North Siberia - South Bihar
 
+HKG_1496 = { 1496 }
+
 RUS_2685 = { 1058 1059 2683 } #Ural
 
 RUS_2694 = { 2664 1249 } #Middle Siberia - 
@@ -684,7 +692,9 @@ HYD_1283 = { 1283 1285 1286 1287 } #Hyderabad - Telangana
 
 ENG_1291 = { 1291 1296 1294 1295 1292 1293 2694 } #Gujarat Eastern Ghat
 
-ENG_1297 = { 1297 1299 1300 1301 1303 2655 } #Bombay 
+ENG_1297 = { 1297 1299 1300 1301 2655 } #Bombay 
+
+ENG_1303 = { 1303 } #Goa
 
 ENG_1304 = { 1304 1309 1310 1311 1312 2675 2674 } #Madras - Tamil Nadu
 
@@ -694,7 +704,9 @@ MYS_1314 = { 1314 1313 1316 1315 1302 1076 } #Mysore
 
 ENG_1317 = { 1317 1318 1319 } #Travancore
 
-ENG_1321 = { 1321 1320 1322 1323 1324 1325 } #North Indian Ocean Islands
+ENG_1321 = { 1321 1322 1323 1324 } #Ceylon
+
+ENG_1325 = { 1325 } #Maldives
 
 NEP_1327 = { 1326 1327 1328 1329 1593 } #Himalayas
 
@@ -705,6 +717,8 @@ BUR_1334 = { 1334 1335 1336 1337 1339 1345 } #Western Burma
 BUR_1339 = { 1341 1342 } #Kachin North Burma
 
 ENG_1343 = { 1343 1344 1333 } #Tenasserim
+
+ENG_1320 = { 1320 } #Andaman Islands
 
 ENG_2125 = { 2125 2127 2128 2126 2124 } #Indian Ocean Territory
 
@@ -728,7 +742,9 @@ DAI_1375 = { 1379 1378 1377 } #Annam
 
 DAI_1380 = { 1380 1382 1383 1381 } #Cochinchina Indochine
 
-ENG_1385 = { 1385 1384 1386 } #Southern Malaya Malacka
+ENG_1385 = { 1385 1386 } #Southern Malaya Malacka
+
+SNG_1384 = { 1384 } #Singapore
 
 ENG_1391 = { 1391 1388 1389 2575 } #Northern Malaya
 
@@ -796,7 +812,9 @@ CHI_1485 = { 1485 2562 3343 } #Formosa
 
 CHI_1490 = { 1490 1491 1488 1489 1492 3369 3370 3372 } #Gansu
 
-CHI_1493 = { 1493 1494 1495 1496 1497 1498 1499 1500 1501 2646 2681 2690 } #Guangdong
+CHI_1493 = { 1493 1500 1495 1501 2646 1494 1497 1499 2681 2690 } #Guangdong
+
+MCA_1498 = { 1498 }
 
 CHI_1504 = { 1502 1503 1504 2682 3364 } #Guangxi
 
@@ -1017,7 +1035,9 @@ FRA_1893 = { 1893 1895 1896 1900 } #Windward Coast
 
 FRA_1901 = { 1901 1902 1903 1904 1905 1906 } #Volta
 
-FRA_1907 = { 1907 1908 1909 1910 1911 1912 1913 } #Ghana
+ASH_1909 = { 1907 1908 1909 } #Gold Coast
+
+FRA_1907 = { 1910 1911 1912 1913 } #Ghana
 
 FRA_1914 = { 1914 1915 1916 1917 1918 } #Togo Slave Coast
 
@@ -1166,13 +1186,21 @@ PNM_1723 = { 1723 } #Panama Canal
 
 SPA_2209 = { 2209 2210 2211 2212 3339 } #Cuba
 
-HAI_2213 = { 2213 2214 2215 2216 } #Hispaniola
+HAI_2213 = { 2213 2214 2215 2216 } #Hispanola
 
-ENG_2217 = { 203 2217 2218 2219 2220 } #Anglophone Caribbean
+ENG_2217 = { 2217 2218 2222 } #Greater Antilles
 
-ENG_2224 = { 2230 2222 2223 2224 2225 2226 2227 2234 2235 2236 3283 3284 } #Leeward Islands
+ENG_2219 = { 2219 2220 } #Lucayan Archipelago
 
-ENG_2228 = { 2228 2229 2231 2232 2233 2237 2238 2409 } #Windward Islands
+ENG_2220 = { 203 } #The Bermuda Islands
+
+ENG_2224 = { 2230 2223 2224 2225 2226 2227 2236 3283 3284 } #Leeward Islands
+
+ENG_2228 = { 2228 2229 2231 2232 2233 2409 } #Windward Islands
+
+NET_2235 = { 2234 2235 } #Leeward Antilles
+
+ENG_2237 = { 2237 2238 } #Trinidad and Tobago
 
 
 ### South America
@@ -1257,7 +1285,9 @@ CHL_2322 = { 2324 2322 2323 2326 2325 } #Santiago Chile
 
 CHL_2327 = { 2327 2330 2329 2331 2328 } #Los Rios Chilean Archipelago
 
-CHL_2332 = { 2332 2333 2334 2335 2336 } #Araucania
+CHL_2332 = { 2332 2333 2334 2335 } #Araucania
+
+CHL_2336 = { 2336 } #Easter Island
 
 ARG_2355 = { 2348 2355 2353 2354 2350 2351 2352 2349 } #Buenos Aires Lower Argentine
 
