@@ -258,17 +258,6 @@ hungarian_culture_group = {
 	}
 }
 
-helvetic_cultures = {
-	leader = european
-	unit = PrussianGC
-	swiss_german = { 
-		color = { 180 40 40 }
-		first_names = { Adolf Alexander Eduard Ernst Franz Hans Johann Josef Konstantin Martin Melchior Robert Rudolf Ulrich Wilhelm Augusto Enrico Flavio Giuseppe Vincenzo Antoine Charles Emmanuel Guillaume Gustave Henri Hugo Louis Marc Paul }
-		last_names = { Brenner Deucher Funk Haab Herzog Knüsel Munzinger Näff Schneider Siegwart-Müller "von Donatz" "von Salis-Soglio" "von Steiger" "von Tavel" Wille Celio Cotti Fogliardi Motta Zeni Ador Calonder Chaudet Comtesse "de Prangins" Dufour Fornerod Guisan Ruchet Ruchonnet }
-	}
-	union = SWI
-}
-
 german_cultures = {
 	leader = european
 	unit = PrussianGC
@@ -279,8 +268,8 @@ german_cultures = {
 	}
 	south_german = {
 		color = { 140 110 110 }
-		first_names = { Adolf Albrecht Alexander Alfons Alois Anton Arthur Bernhard Christian Edmund Eduard Engelbert Ernst Erwin Ferdinand Franz Friedrich Gebhard Gerhard Gottfried Günther Gustav Heinrich Hermann Horst Jakob Joachim Johann Joseph Julius Karl Konrad Kurt Leonhard Leopold Lorenz Lothar Ludwig Maximilian Michael Otto Reinhold Rudolf Stefan Theodor Viktor Walter Werner Wilhelm }
-		last_names = { Beck-Rzikowsky Blos Dankl Eisner Geiss Goering Hainisch Haus Held Hellpach Hoffmann Hummel Köhler Mergenthaler Miklas Remmele Schmitt Schobber Seitz Steeb Hitler Stolzer Trunk "von Baden" "von Benedek" "von Böhm-Ermolli" "von Brudermann" "von Clam-Gallas" "von der Tann" "von Dietrich" "von Gablenz" "von Grünne" "von Habsburg" "von Hartmann" "von Haynau" "von Hess" "von Hohenhausen" "d'Aspre von Hoobreuk" "von Hortstein" "von Hötzendorf" "von Kirbach" "von Kobratin" "von Schönburg" "von Tegetthoff" "von Uchatius" "von Wittelsbach" "von Württemberg" "von Zahringen" Wagner Wittmann "zu Hohenlohe" }
+		first_names = { Adolf Albrecht Alexander Alfons Alois Antoine Anton Arthur Augusto Bernhard Charles Christian Edmund Eduard Emmanuel Engelbert Enrico Ernst Erwin Ferdinand Flavio Franz Friedrich Gebhard Gerhard Giuseppe Gottfried Guillaume Gustav Gustave Günther Hans Heinrich Henri Hermann Horst Hugo Jakob Joachim Johann Josef Joseph Julius Karl Konrad Konstantin Kurt Leonhard Leopold Lorenz Lothar Louis Ludwig Marc Martin Maximilian Melchior Michael Otto Paul Reinhold Robert Rudolf Stefan Theodor Ulrich Viktor Vincenzo Walter Werner Wilhelm }
+		last_names = { Ador Beck-Rzikowsky Blos Brenner Calonder Celio Chaudet Comtesse Cotti Dankl "d'Aspre von Hoobreuk" "de Prangins" Deucher Dufour Eisner Fogliardi Fornerod Funk Geiss Goering Guisan Haab Hainisch Haus Held Hellpach Herzog Hitler Hoffmann Hummel Knüsel Köhler Mergenthaler Miklas Motta Munzinger Näff Remmele Ruchet Ruchonnet Schmitt Schneider Schobber Seitz Siegwart-Müller Steeb Stolzer Trunk "von der Tann" "von Baden" "von Benedek" "von Brudermann" "von Böhm-Ermolli" "von Clam-Gallas" "von Dietrich" "von Donatz" "von Gablenz" "von Grünne" "von Habsburg" "von Hartmann" "von Haynau" "von Hess" "von Hohenhausen" "von Hortstein" "von Hötzendorf" "von Kirbach" "von Kobratin" "von Salis-Soglio" "von Schönburg" "von Steiger" "von Tavel" "von Tegetthoff" "von Uchatius" "von Wittelsbach" "von Württemberg" "von Zahringen" Wagner Wille Wittmann Zeni "zu Hohenlohe" }
 	}
 	mennonites = {
 		#!religion = { mennonite }
@@ -382,13 +371,8 @@ american_cultures = {
 	}
     dixie = {
         color = { 129 129 129 }
-        first_names = { Robert Jesse James Nathan George Joseph John Patrick Albert Braxton William Ambrose Jubal Richard Lewis Edmund Leonida Benjamin Wade Daniel Thomas Jonathan Stonewall Lemual Sterling Raphael Kirby Pierre Jonas Frank Charles Peter Rand Leslie Howard Malvin Oscar Henry Simon Edward Gideon Isaac Evander Jerome Alfred Cadmus "Fitz Hugh" Carnot Ezra Wilton }
-        last_names = { Lee Jackson Johnson Beauregard Stuart Longstreet Forrest Pickett Mosby Cleburne Hood Breckenridge Bragg  Barksdale Early Hill Ewell Morgan Armistead Semmes Smith Hampton Polk Cheatham Wheeler Pemberton Gordon Hardee Floyd Price Wise "Van Dorn" Loring Buckner Taylor Williams French Gibbs Hindman Anderson Sibley Garnett Magruder Pillow McLaws Rodes Heth Pender Trimble Kershaw Wofford Kemper Law Robertson Benning Hays Walker Iverson Wilcox Mahone Wright Pettigrew Archer Davis Lane Posey Scales Warner Imboden Jenkins }
-    }
-    texan = {
-        color = { 153 0 0 }
-        first_names = { Hamilton Matthew Richard Hiram Thomas Elkanah John William James Albert Wilburn Walter Hinchie Samuel Benjamin Henry Allison Horace Felix Jerome Lawrence Alexander Louis }
-        last_names = { Bee Ector Gano Granbury Green Greer Gregg Hardeman Harrison Hood Johnston King Lane Mabry Maxey McCulloch Moore Nelson Randal Robertson Ross Rosser Scurry Steele Terrell Waterhouse Waul Wharton Whitfield Wigfall Young Bowie Travis Houston }
+        first_names = { Albert Alexander Alfred Allison Ambrose Benjamin Braxton Cadmus Carnot Charles Daniel Edmund Edward Elkanah Evander Ezra Felix "Fitz Hugh" Frank George Gideon Hamilton Henry Hinchie Hiram Horace Howard Isaac James Jerome Jesse John Jonas Jonathan Joseph Jubal Kirby Lawrence Lemual Leonida Leslie Lewis Louis Malvin Matthew Nathan Oscar Patrick Peter Pierre Rand Raphael Richard Robert Samuel Simon Sterling Stonewall Thomas Wade Walter Wilburn William Wilton }
+        last_names = { Anderson Archer Armistead Barksdale Beauregard Bee Benning Bowie Bragg Breckenridge Buckner Cheatham Cleburne Davis Earle Ector Ewell Floyd Forrest French Gano Garnett Gibbs Gordon Granbury Green Greer Gregg Hampton Hardee Hardeman Harrison Hays Heth Hill Hindman Hood Houston Imboden Iverson Jackson Jenkins Johnson Johnston Kemper Kershaw King Lane Law Lee Longstreet Loring Mabry Magruder Mahone Maxey McCulloch McLaws Moore Morgan Mosby Nelson Pemberton Pender Pettigrew Pickett Pillow Polk Posey Price Randal Robertson Rodes Ross Rosser Scales Scurry Semmes Sibley Smith Steele Stuart Taylor Terrell Travis Trimble "Van Dorn" Walker Warner Waterhouse Waul Wharton Wheeler Whitfield Wigfall Wilcox Williams Wise Wofford Wright Young }
     }
 	union = USA
 }
