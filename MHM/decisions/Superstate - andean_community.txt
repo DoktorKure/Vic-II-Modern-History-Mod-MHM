@@ -182,7 +182,7 @@ NOT = { has_country_flag = hide_superstate }
 			all_core = { add_core = XAC }
 			change_tag = XAC
 			primary_culture = mestizo
-			add_accepted_culture = andean_white_spanish
+			add_accepted_culture = white_spanish
 		}
 		ai_will_do = { factor = 1 }
 	}

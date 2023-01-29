@@ -211,8 +211,7 @@ political_decisions = {
 			#Set US cultures
 			USA = { 
 				add_accepted_culture = afro_american
-				add_accepted_culture = caribbean_white_spanish
-				add_accepted_culture = american_spanish
+				add_accepted_culture = white_spanish
 				add_accepted_culture = polynesian
 				add_accepted_culture = white_french
 				remove_accepted_culture = german

@@ -31,15 +31,13 @@ country_event = {
 		
 		political_reform = minorities_equal_rights #limited
 		
-		add_accepted_culture = quechua
-		add_accepted_culture = aimara
+		add_accepted_culture = native_american_minor
 		
 		any_pop = {
 			limit = {
 				type = farmers
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -410,21 +408,19 @@ country_event = {
 	mean_time_to_happen = { months = 6 }
 
 	option = {
-		name = "We don't need to make concessions with them any longer."
+		name = "We don't need to make concessions to them any longer."
 		
 		clr_country_flag = national_indigenous_congress
 		
 		political_reform = minorities_oppression
 		
-		remove_accepted_culture = quechua
-		remove_accepted_culture = aimara
+		remove_accepted_culture = native_american_minor
 		
 		any_pop = {
 			limit = {
 				type = farmers
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -452,8 +448,7 @@ country_event = {
 			limit = {
 				type = farmers
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -525,7 +520,7 @@ country_event = {
 		}
 	}
 	option = {
-		name = "The Revolutionary Nationalist Movement regains their power!"
+		name = "The Revolutionary Nationalist Movement regains its power!"
 		
 		government = democracy
 		country_event = 800054
@@ -1746,8 +1741,7 @@ country_event = {
 				AND = {
 					type = farmers
 					OR = {
-						culture = quechua
-						culture = aimara
+						culture = native_american_minor
 					}
 				}
 			}
@@ -1784,8 +1778,7 @@ country_event = {
 				AND = {
 					type = farmers
 					OR = {
-						culture = quechua
-						culture = aimara
+						culture = native_american_minor
 					}
 				}
 			}
@@ -1830,8 +1823,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -1867,18 +1859,16 @@ country_event = {
 	mean_time_to_happen = { months = 5 }
 
 	option = {
-		name = "The ASP will be part of our National Front!"
+		name = "The ASP will be part of the National Front!"
 		
 		set_country_flag = BOL_MAS
 		
-		add_accepted_culture = quechua
-		add_accepted_culture = aimara
+		add_accepted_culture = native_american_minor
 		
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			scaled_consciousness = {
@@ -1900,8 +1890,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			scaled_consciousness = {
@@ -1921,7 +1910,7 @@ country_event = {
 #MAS In Power prior to historic
 country_event = { 
 	id = 80018166
-	title = "Boliviano Indigenismo"
+	title = "Indigenismo Boliviano"
 	desc = EVTDESC80018166
 	picture = "Indigenismo_Bolivia"
   
@@ -1938,26 +1927,23 @@ country_event = {
 		
 		has_country_flag = BOL_MAS
 		
-		NOT = { accepted_culture = quechua }
-		NOT = { accepted_culture = aimara }
+		NOT = { accepted_culture = native_american_minor }
 	}
 
 	mean_time_to_happen = { months = 6 }
 
 	option = {
-		name = "Bolivia is a Plurinational State!"
+		name = "Bolivia is a plurinational state!"
 		
 		primary_culture = mestizo
 		
-		add_accepted_culture = quechua
-		add_accepted_culture = aimara
-		add_accepted_culture = andean_white_spanish
+		add_accepted_culture = native_american_minor
+		add_accepted_culture = white_spanish
 		
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -1994,8 +1980,7 @@ country_event = {
 		
 		election = no
 		
-		accepted_culture = quechua
-		accepted_culture = aimara
+		accepted_culture = native_american_minor
 	}
 
 	mean_time_to_happen = { months = 6 }
@@ -2003,17 +1988,15 @@ country_event = {
 	option = {
 		name = "Bolivia's traditions are restored."
 
-		primary_culture = andean_white_spanish
+		primary_culture = white_spanish
 		
-		remove_accepted_culture = quechua
-		remove_accepted_culture = aimara
+		remove_accepted_culture = native_american_minor
 		add_accepted_culture = mestizo
 		
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -2066,7 +2049,7 @@ country_event = {
 	mean_time_to_happen = { months = 12 }
 
 	option = {
-		name = "Cave in to the protestor's demands"
+		name = "Cave in to the protestors' demands."
 		
 		money = -100000
 		
@@ -2082,8 +2065,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -2132,8 +2114,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -2284,8 +2265,7 @@ country_event = {
 		
 		NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } }
 		
-		NOT = { accepted_culture = quechua }
-		NOT = { accepted_culture = aimara }
+		NOT = { accepted_culture = native_american_minor }
 	}
 
 	mean_time_to_happen = { months = 10 }
@@ -2305,8 +2285,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -2325,7 +2304,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Liberal parties manage to maintain control."
+		name = "Liberal parties will manage to remain popular!"
 
 		ruling_party_ideology = liberal
 		

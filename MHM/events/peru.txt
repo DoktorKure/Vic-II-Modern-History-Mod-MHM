@@ -246,8 +246,7 @@ country_event = {
 	option = {
 		name = "Do it!"
 		money = -250000
-		add_accepted_culture = quechua
-		add_accepted_culture = aimara
+		add_accepted_culture = native_american_minor
 		
 		add_country_modifier = { name = economic_boom duration = 720 }
 		
@@ -1468,9 +1467,8 @@ country_event = {
 		
 		PBC = {
 			primary_culture = mestizo
-			add_accepted_culture = quechua
-			add_accepted_culture = aimara
-			add_accepted_culture = andean_white_spanish
+			add_accepted_culture = native_american_minor
+			add_accepted_culture = white_spanish
 		}
 		
 		#Inherit Bolivia
@@ -1518,8 +1516,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -1557,7 +1554,7 @@ country_event = {
 		has_country_flag = peru_indigenismo_flag
 		
 		#Some form of discrimination going on
-		NOT = { minorities_reform = minorities_affirmative_action }
+		minorities_reform = minorities_oppression }
 	}
 
 	mean_time_to_happen = { months = 5 }
@@ -1568,8 +1565,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -1655,7 +1651,7 @@ country_event = {
 	
 }
 
-#January 2005 occupation a rural police station in Andahuaylas
+#January 2005 occupation of a rural police station in Andahuaylas
 country_event = {
 	id = 8012103
 	title = "Andahuaylas Uprising"
@@ -1680,13 +1676,12 @@ country_event = {
 	mean_time_to_happen = { months = 1 }
 
 	option = {
-		name = "Antauro and his followers are swiftly arrested."
+		name = "Arrest Antauro and his followers!"
  
  		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -1714,7 +1709,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Antauro's actions were able to overthrow the government."
+		name = "Resign and let Antauro seize power."
 
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 
@@ -1728,9 +1723,8 @@ country_event = {
 			ruling_party_ideology = populist
 			
 			primary_culture = mestizo
-			add_accepted_culture = quechua
-			add_accepted_culture = aimara
-			remove_accepted_culture = andean_white_spanish
+			add_accepted_culture = native_american_minor
+			remove_accepted_culture = white_spanish
 		}
 
 		#Domestic reaction
@@ -1738,8 +1732,8 @@ country_event = {
 			limit = {
 				NOT = {
 					OR = {
-						culture = quechua
-						culture = aimara
+						culture = mestizo
+						culture = native_american_minor
 					}
 				}
 			}
@@ -1753,8 +1747,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -1786,7 +1779,7 @@ country_event = {
 		has_country_flag = peru_indigenismo_flag
 		
 		#Some form of discrimination going on
-		NOT = { minorities_reform = minorities_affirmative_action }
+		{ minorities_reform = minorities_oppression }
 	}
 
 	mean_time_to_happen = { months = 10 }
@@ -1797,8 +1790,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
@@ -1898,9 +1890,8 @@ country_event = {
 			ruling_party_ideology = populist
 		
 			primary_culture = mestizo
-			add_accepted_culture = quechua
-			add_accepted_culture = aimara
-			remove_accepted_culture = andean_white_spanish
+			add_accepted_culture = native_american_minor
+			remove_accepted_culture = white_spanish
 		}
 
 		#Domestic reaction
@@ -1908,8 +1899,8 @@ country_event = {
 			limit = {
 				NOT = {
 					OR = {
-						culture = quechua
-						culture = aimara
+						culture = mestizo
+						culture = native_american_minor
 					}
 				}
 			}
@@ -1923,8 +1914,7 @@ country_event = {
 		any_pop = {
 			limit = {
 				OR = {
-					culture = quechua
-					culture = aimara
+					culture = native_american_minor
 				}
 			}
 			ideology = {
