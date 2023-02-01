@@ -2612,6 +2612,16 @@ country_event = {
 			}
 		}
 
+		#Prevent FRG from ceding Berlin to DDR
+		modifier = { 
+			factor = 0
+			AND = {
+				tag = FRG
+				owns = 549
+				DDR = { exists = yes owns = 551 }
+			}
+		}
+
 		modifier = { 
 			factor = 0 
 			AND = { is_greater_power = yes NOT = { badboy = 1 } }
