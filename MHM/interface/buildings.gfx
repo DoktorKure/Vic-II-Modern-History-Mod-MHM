@@ -24,109 +24,119 @@ objectTypes = {
 		scale = 0.75
 	}
 	
-	EMFXActorType = {
-		name = "building_naval_base"
-		actorfile = "gfx\anims\Port_Empty.xac"
-		idle   = "gfx\anims\Port_Animation.xsm"
-		scale = 0.75
+	#EMFXActorType = {
+	#	name = "building_naval_base"
+	#	actorfile = "gfx\anims\Port_Empty.xac"
+	#	idle   = "gfx\anims\Port_Animation.xsm"
+	#	scale = 0.75
+	#}
+
+	billboardType = {
+		name = "building_fort"
+		textureFile = "gfx\interface\fort_1.png"
+		scale = 3.80		#fort 1
 	}
-	
-#	billboardType = {
-#		name = "building_naval_base"
-#		textureFile = "gfx\interface\building_navalbase_empty.tga"
-#		noOfFrames = 1
-#		scale = 0
-#	}
-	
+	billboardType = {
+		name = "building_fort2"
+		textureFile = "gfx\interface\fort_1.png"
+		scale = 3.80		#fort 2
+	}
+	billboardType = {
+		name = "building_fort3"
+		textureFile = "gfx\interface\fort_2.png"
+		scale = 3.80		#fort 3
+	}
+	billboardType = {
+		name = "building_fort4"
+		textureFile = "gfx\interface\fort_2.png"
+		scale = 3.80		#fort 4
+	}
+	billboardType = {
+		name = "building_fort5"
+		textureFile = "gfx\interface\fort_3.png"
+		scale = 3.80		#fort 2
+	}
+	billboardType = {
+		name = "building_fort6"
+		textureFile = "gfx\interface\fort_3.png"
+		scale = 3.80		#fort 6
+	}
+	###################
+	billboardType = {
+		name = "building_naval_base"
+		textureFile = "gfx\interface\naval_base_0.png"
+		scale = 2.40		#naval 0
+	}
 	billboardType = {
 		name = "building_naval_base_ships"
-		textureFile = "gfx\interface\building_navalbase_full.dds"
-		noOfFrames = 1
-		scale = 1.5
+		textureFile = "gfx\interface\naval_base_0.png"
+		scale = 2.40		#naval 0
 	}
-	
+
 	billboardType = {
 		name = "building_naval_base1"
-		textureFile = "gfx\interface\building_navalbase_empty.dds"
-		noOfFrames = 1
-		scale = 2.5	
+		textureFile = "gfx\interface\naval_base_1.png"
+		scale = 5.00		#naval 1
 	}
-	
 	billboardType = {
 		name = "building_naval_base1_ships"
-		textureFile = "gfx\interface\building_navalbase_full.dds"
-		noOfFrames = 1	
-		scale = 2.5
+		textureFile = "gfx\interface\naval_base_1.png"
+		scale = 5.00		#naval 1
 	}
-	
+
 	billboardType = {
 		name = "building_naval_base2"
-		textureFile = "gfx\interface\building_navalbase_empty.dds"
-		noOfFrames = 1
-		scale = 2.5	
+		textureFile = "gfx\interface\naval_base_2.png"
+		scale = 5.00		#naval 2
 	}
-	
 	billboardType = {
 		name = "building_naval_base2_ships"
-		textureFile = "gfx\interface\building_navalbase_full.dds"
-		noOfFrames = 1	
-		scale = 2.5
+		textureFile = "gfx\interface\naval_base_2.png"
+		scale = 5.00		#naval 2
 	}
 
 	billboardType = {
 		name = "building_naval_base3"
-		textureFile = "gfx\interface\building_navalbase_empty.dds"
-		noOfFrames = 1
-		scale = 2.5	
+		textureFile = "gfx\interface\naval_base_3.png"
+		scale = 5.00		#naval 3
 	}
-	
 	billboardType = {
 		name = "building_naval_base3_ships"
-		textureFile = "gfx\interface\building_navalbase_full.dds"
-		noOfFrames = 1	
-		scale = 2.5
+		textureFile = "gfx\interface\naval_base_3.png"
+		scale = 5.00		#naval 3
 	}
-	
+
 	billboardType = {
 		name = "building_naval_base4"
-		textureFile = "gfx\interface\building_navalbase_empty.dds"
-		noOfFrames = 1
-		scale = 2.5	
+		textureFile = "gfx\interface\naval_base_4.png"
+		scale = 5.00		#naval 4
 	}
-	
 	billboardType = {
 		name = "building_naval_base4_ships"
-		textureFile = "gfx\interface\building_navalbase_full.dds"
-		noOfFrames = 1	
-		scale = 2.5
+		textureFile = "gfx\interface\naval_base_4.png"
+		scale = 5.00		#naval 4
 	}
-	
+
 	billboardType = {
 		name = "building_naval_base5"
-		textureFile = "gfx\interface\building_navalbase_empty.dds"
-		noOfFrames = 1
-		scale = 2.5	
+		textureFile = "gfx\interface\naval_base_5.png"
+		scale = 5.00		#naval 5
 	}
-	
 	billboardType = {
 		name = "building_naval_base5_ships"
-		textureFile = "gfx\interface\building_navalbase_full.dds"
-		noOfFrames = 1	
-		scale = 2.5
+		textureFile = "gfx\interface\naval_base_5.png"
+		scale = 5.00		#naval 5
 	}
-	
+
 	billboardType = {
 		name = "building_naval_base6"
-		textureFile = "gfx\interface\building_navalbase_empty.dds"
-		noOfFrames = 1
-		scale = 2.5	
+		textureFile = "gfx\interface\naval_base_6.png"
+		scale = 5.00		#naval 6
 	}
-	
 	billboardType = {
 		name = "building_naval_base6_ships"
-		textureFile = "gfx\interface\building_navalbase_full.dds"
-		noOfFrames = 1	
-		scale = 2.5
+		textureFile = "gfx\interface\naval_base_6.png"
+		scale = 5.00		#naval 6
 	}
 	
 	
