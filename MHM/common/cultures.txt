@@ -322,26 +322,15 @@ european = {
 	union = XEU
 }
 
-australian_cultures = {
+british_oceanian_cultures = {
 	leader = european
 	unit = BritishGC
-	australian = {
-		color = { 64 132 105 }
+	anglo_oceanian = {
+		color = { 230 160 160 }
 		first_names = { John Alf Adrian Louis Hallam Henry Shane Stafford William Frederick Thomas Ronald Lawrence Bruce Ray Stuart Brian Bob Scott Guy }
 		last_names = { Hope Tennyson Northcote War Thesinger Denman Forster Baird Issac Stewart Fisher Cook Davis Armstrong Anderson Mitchell MacKenzie }	
 	}
 	union = AST
-}
-
-new_zealand_cultures = {
-	leader = european
-	unit = BritishGC
-	new_zealander = {
-		color = { 128  128  128 }
-		first_names = { John Alf Adrian Louis Hallam Henry Shane Stafford William Frederick Thomas Ronald Lawrence Bruce Ray Stuart Brian Bob Scott Guy }
-		last_names = { Hope Tennyson Northcote War Thesinger Denman Forster Baird Issac Stewart Fisher Cook Davis Armstrong Anderson Mitchell MacKenzie }	
-	}
-	union = NZL
 }
 
 canadian_cultures = {
