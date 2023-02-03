@@ -213,6 +213,7 @@ country_event = {
 				limit = { is_core = BNG }
 				add_core = HNB
 				add_core = HND
+				remove_core = BNG
 			}
 		}
 		set_global_flag = united_HND_bangladesh
@@ -227,6 +228,7 @@ country_event = {
 			any_owned = {
 				limit = { is_core = HNB }
 				add_core = BNG
+				remove_core = HNB
 			}
 		}
 		
@@ -248,15 +250,16 @@ country_event = {
 		RAJ = {
 			any_owned = {
 				limit = { is_core = HNB }
-				remove_core = HND
 				add_core = BNG
+				remove_core = HND
+				remove_core =  HNB
 			}
 			release = BNG
 			release = ASM #Landlocked Assam exclave means India cannot maintain its rule there
 		}
 		create_vassal = BNG
 		create_vassal = ASM
-		BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 add_accepted_culture = bengali_hindu }
+		BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
 		ASM = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 inherit = MNP }
 		set_global_flag = united_BNG_bangladesh
 		ai_chance = { factor = 0.03 }
@@ -373,7 +376,7 @@ country_event = {
 			}
 			owner = {
 				PAK = { release = BNG }
-				BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 add_accepted_culture = bengali_hindu }
+				BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
 			}
 		}
 		#If Bangladesh was partitioned
@@ -385,7 +388,7 @@ country_event = {
 				RAJ = { any_owned = { limit = { is_core = HNB } add_core = BNG secede_province = PAK } release = ASM }
 				PAK = { release = BNG }
 				ASM = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 inherit = MNP }
-				BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 add_accepted_culture = bengali_hindu }
+				BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
 			}
 		}
 		
@@ -540,11 +543,11 @@ country_event = {
 			}
 			owner = {
 				PAK = { release = BNG }
-				BNG = { government = absolute_monarchy country_event = 800050 add_accepted_culture = bengali_hindu }
+				BNG = { government = absolute_monarchy country_event = 800050 }
 			}
 		}
 		
-		BNG = { government = absolute_monarchy country_event = 800050 add_accepted_culture = bengali_hindu }
+		BNG = { government = absolute_monarchy country_event = 800050 }
 		
 		#Create vassals if Brits opted to halt independence
 		random_owned = {
@@ -727,7 +730,7 @@ country_event = {
 		create_vassal = PAK
 		diplomatic_influence = { who = PAK value = 200 }
 		
-		BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 add_accepted_culture = bengali_hindu }
+		BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
 		ASM = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 inherit = MNP }
 		DRA = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
 		PAK = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
@@ -831,7 +834,7 @@ country_event = {
 		NAX = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
 		HYD = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
 		PAK = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
-		BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 add_accepted_culture = bengali_hindu }
+		BNG = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 }
 		ASM = { government = absolute_monarchy ruling_party_ideology = conservative country_event = 800050 inherit = MNP }
 		
 		diplomatic_influence = { who = PNJ value = 200 }

@@ -84,8 +84,7 @@ country_event = {
 		all_core = { add_core = IMP }
 		change_tag = IMP
 		add_accepted_culture = white_anglo
-		add_accepted_culture = australian
-		add_accepted_culture = new_zealander
+		add_accepted_culture = anglo_oceanian
 		add_accepted_culture = anglo_canadian
 		add_accepted_culture = british
 		any_country = {

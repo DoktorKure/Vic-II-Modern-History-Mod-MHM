@@ -454,11 +454,11 @@ scandinavian = {
 		first_names = { Alfred Adrian Arne Bernt Bjorn Carl Caspar Christian Christopher Cort Einar Elias Fredrik Georg Gerhard Gustav Haakon Hans Harald Herman Johan Jorgen Ludvig Nils Ogmund Olav Osvald Otto Peter Sigurd }
 		last_names = { Adeler Balchen Berg Bloch Borresen Bratzland Brentzon Dhal Egge Fleicher Frisvold Hákonarson Hansen Hund Kaldager Konow Lambrechts Morgenstierne Munthe Petersen Rye Sissener Skjalgsson Tambarskjelve "von Holstein-Glücksburg" "von Klenow" Wedel-Jarlsberg Wiborg With Zeiner-Gundersen }
 	}
-	sami = {
+	finno_ugrian = {
 		#!religion = { protestant }
 		color = { 60 180 110 }
-		first_names = { Asllak Biejas Dure Erke Hanno Iskko Joha Laras Markkos Mikko Niillas Osku Uhkku }
-		last_names = { Hætta Somby Turi Magga Dunfjeld Kvitfjell Kappfjell }
+		first_names = { Abelin Asaf Asllak Baqi Biejas Didrik Dokya Dondy Dure Erke Galiaskar Gunnar Hanno Inmar Iskko Kuaz Kuzma Kyldysin Laras Lindman Makhmut Markkos Mikko Musa Niillas Olof Osku Ozhmeg Per Rustam Sten Uhkku Verner Yusuf }
+		last_names = { Amirkhanov Baysarov Begishev Blinov Blok Brakenhielm Brechalov Breitholtz Chaynikov Chepkasov Chrsiterson Dorodov Dunfjeld Dyrssen Faysi Gizzat Gyllengranat Hætta Ibragimov Ingelman Kamal Kappfjell Khusainov Konev Kvitfjell Leijonhufvud Lindman Loginov Magga Peyron Pugachyov Ryding Shklyaev Solovyov Somby Sysoyev Tinchurin Tingsten Tukay Tuktaryov Turi Ulner Ulyanenko Volkov Yanbayev Zarbatov }
 	}
 	swedish = {
 		#!religion = { protestant }
@@ -1038,40 +1038,16 @@ caucasian_minorities = {
 central_russian_minorities = {
 	leader = asian
 	unit = AsianGC
-	komi = {
-		#!religion = { orthodox }
-		color = { 240 255 255 }
-		first_names = { Albrecht Alexander Arnold August Axel Baltzar Carl Christofer Didrik Edvard Elias Emil Erik Esaias Fabian Frans Fredrik Gunnar Gustav Henrik Jakob Jesper Johan Julius Knut Lars Ludvig Magnus Michael Nikolaus Nils Olof Oscar Per Rudolf Sten Theodor Verner Viktor Vilhelm }
-		last_names = { Abelin Bernardotte Bildt Björnstjerna Brahe Brakenhielm Breitholtz Chrsiterson Crusebjörn Dyrssen Ehnemark Ehrenstam Gyllengranat Gyndestolpe Ingelman Leijonhufvud Lindman Mörner Nordenskiöld "Palanger af Vega" Palmstierna Peyron Rappe Reuterskiöld Rosensvärd Ryding Sprengtportem Ström Taube Tawast Thörnell Thulstrup Tingsten Ulner Virgin "von Essen" "von Hohenhausen" "von Otter" "von Platen" Weidenhielm }
-	}
-	mari = {
-		#!religion = { orthodox }
-		color = { 245 255 250 }
-		first_names = { Albrecht Alexander Arnold August Axel Baltzar Carl Christofer Didrik Edvard Elias Emil Erik Esaias Fabian Frans Fredrik Gunnar Gustav Henrik Jakob Jesper Johan Julius Knut Lars Ludvig Magnus Michael Nikolaus Nils Olof Oscar Per Rudolf Sten Theodor Verner Viktor Vilhelm }
-		last_names = { Abelin Bernardotte Bildt Björnstjerna Brahe Brakenhielm Breitholtz Chrsiterson Crusebjörn Dyrssen Ehnemark Ehrenstam Gyllengranat Gyndestolpe Ingelman Leijonhufvud Lindman Mörner Nordenskiöld "Palanger af Vega" Palmstierna Peyron Rappe Reuterskiöld Rosensvärd Ryding Sprengtportem Ström Taube Tawast Thörnell Thulstrup Tingsten Ulner Virgin "von Essen" "von Hohenhausen" "von Otter" "von Platen" Weidenhielm }
-	}
-	udmurt = {
-		#!religion = { orthodox }
-		color = { 0 255 255 }
-		first_names = { Alexander Andrey Dokya Dondy Inmar Kuaz Kuzma Kyldysin Ozhmeg Pyotr Sergey Vladimir }
-		last_names = { Baysarov Begishev Blinov Blok Brechalov Chaynikov Chepkasov Dorodov Konev Loginov Markin Pugachyov Pyatchenko Solovyov Shklyaev Sysoyev Tuktaryov Ulyanenko Volkov Zarbatov }
-	}
 	bashkir = {
 		#!religion = { sunni }
 		color = { 193 205 193 }
-		first_names = { Asaf Baqi Galiaskar Ismail Makhmut  Musa Rustam Yusuf }
+		first_names = { Asaf Baqi Galiaskar Ismail Makhmut Musa Rustam Yusuf }
 		last_names = { Amirkhanov Faysi Gizzat Ibragimov Kamal Khusainov Tinchurin Tukay Yanbayev }
 	}
 	chuvash = {
 		#!religion = { sunni }
 		color = { 244 238 224 }
-		first_names = { Asaf Baqi Galiaskar Ismail Makhmut  Musa Rustam Yusuf }
-		last_names = { Amirkhanov Faysi Gizzat Ibragimov Kamal Khusainov Tinchurin Tukay Yanbayev }
-	}
-	mordovian = {
-		#!religion = { orthodox }
-		color = { 65 105 225 }
-		first_names = { Asaf Baqi Galiaskar Ismail Makhmut  Musa Rustam Yusuf }
+		first_names = { Asaf Baqi Galiaskar Ismail Makhmut Musa Rustam Yusuf }
 		last_names = { Amirkhanov Faysi Gizzat Ibragimov Kamal Khusainov Tinchurin Tukay Yanbayev }
 	}
 }
@@ -1482,14 +1458,8 @@ bangladeshi_cultures = {
 	bengali = {
 		#!religion = { sunni }
 		color = { 60 179 113 }
-		first_names = { Murshid Quli Shujauddin Alauddin Alivardi Sirajuddaula "Mir Muhammad" Najimuddin Reza Saifuddaula Zainul Ahmad Mansur Mubarak Hasan Wasif Waris }
-		last_names = { Jafar Muhammad Sarfaraz Ali "Qasim Ali" Najabut Bahadur Mirza }
-	}
-	bengali_hindu = {
-		#!religion = { hindu }
-		color = { 255 99 71 }
-		first_names = { Ranjit Kharak Nau Nihal Chand Kaur Shir Dhalip Diwan Jassa Hari Bhuma Nawab Banda Baba Kapur }
-		last_names = { Singh Kunwar Bahadur Dhillon Nalwa Ahluwalia Ramgarhia Mal Mulraj }
+		first_names = { Ahmad Alauddin Alivardi Baba Banda Bhuma Chand Dhalip Diwan Hari Hasan Jassa Kapur Kaur Kharak Mansur "Mir Muhammad" Mubarak Murshid Najimuddin Nau Nawab Nihal Quli Ranjit Reza Saifuddaula Shir Shujauddin Sirajuddaula Waris Wasif Zainul }
+		last_names = { Ahluwalia Ali Bahadur Bahadur Dhillon Jafar Kunwar Mal Mirza Muhammad Mulraj Najabut Nalwa "Qasim Ali" Ramgarhia Sarfaraz Singh }
 	}
 	union = BNG
 }

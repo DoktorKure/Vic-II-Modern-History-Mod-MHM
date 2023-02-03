@@ -324,8 +324,7 @@ country_event = {
 					primary_culture = afrikaaner
 					is_culture_group = british_cultures 
 					is_culture_group = canadian_cultures 
-					is_culture_group = new_zealand_cultures 
-					is_culture_group = australian_cultures 
+					is_culture_group = british_oceanian_cultures
 					vassal_of = THIS 
 				}
 				OR = { government = absolute_monarchy government = hms_government government = hms_government1 }

@@ -5,8 +5,7 @@ political_decisions = {
 			NOT = { has_country_flag = hide_superstate }
 			OR = {
 				primary_culture = white_anglo
-				primary_culture = australian
-				primary_culture = new_zealander
+				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
 				has_country_modifier = commonwealthmember
@@ -189,8 +188,7 @@ political_decisions = {
 			NOT = { capital_scope = { has_province_modifier = single_market } }
 			OR = {
 				primary_culture = white_anglo
-				primary_culture = australian
-				primary_culture = new_zealander
+				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
 				vassal_of = ENG
@@ -205,8 +203,7 @@ political_decisions = {
 		allow = {
 			OR = {
 				primary_culture = white_anglo
-				primary_culture = australian
-				primary_culture = new_zealander
+				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
 				vassal_of = ENG
@@ -251,8 +248,7 @@ political_decisions = {
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
 			OR = {
 				primary_culture = white_anglo
-				primary_culture = australian
-				primary_culture = new_zealander
+				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
 				vassal_of = ENG
@@ -300,8 +296,7 @@ political_decisions = {
 			NOT = { capital_scope = { is_core = IMP } }
 			OR = {
 				primary_culture = white_anglo
-				primary_culture = australian
-				primary_culture = new_zealander
+				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
 				vassal_of = ENG
@@ -353,8 +348,7 @@ political_decisions = {
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
 			OR = {
 				primary_culture = white_anglo
-				primary_culture = australian
-				primary_culture = new_zealander
+				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
 				vassal_of = ENG
@@ -437,8 +431,7 @@ political_decisions = {
 			}
 			change_tag = IMP
 			add_accepted_culture = white_anglo
-			add_accepted_culture = australian
-			add_accepted_culture = new_zealander
+			add_accepted_culture = anglo_oceanian
 			add_accepted_culture = anglo_canadian
 			add_accepted_culture = british
 		}
