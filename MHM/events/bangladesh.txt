@@ -294,7 +294,7 @@ country_event = {
 	mean_time_to_happen = { months = 4 }
 
 	option = {
-		name = "The people cannot handle a democracy"
+		name = "The people cannot handle a democracy."
 		
 		government = presidential_dictatorship
 		country_event = 800050
@@ -311,7 +311,7 @@ country_event = {
 	}
 
 	option = {
-		name = "There are better things to do than overthrowing governments"
+		name = "There are better things to do than overthrowing governments..."
 		
 		add_country_modifier = { name = revolution_chaos duration = 1825 }
 		
@@ -342,9 +342,9 @@ country_event = {
 
 	option = {
 		name = "They will come back one day"
-		any_pop = { limit = { location = { state_id = 2657 } culture = bengali_hindu } move_pop = 1251 } # Khulna-Barisal State -> Calcutta
-		any_pop = { limit = { location = { state_id = 1255 } culture = bengali_hindu } move_pop = 1252 } # Rajashahi-Rangpur State -> Darjeeling
-		any_pop = { limit = { location = { state_id = 1254 } culture = bengali_hindu } move_pop = 1260 } # Central Bengal State -> Dibrugarh
-		any_pop = { limit = { location = { state_id = 1257 } culture = bengali_hindu } move_pop = 3280 } # Chittagong State -> Tripura
+		any_pop = { limit = { location = { state_id = 2657 } religion = hindu } move_pop = 1251 } # Khulna-Barisal State -> Calcutta
+		any_pop = { limit = { location = { state_id = 1255 } religion = hindu } move_pop = 1252 } # Rajashahi-Rangpur State -> Darjeeling
+		any_pop = { limit = { location = { state_id = 1254 } religion = hindu } move_pop = 1260 } # Central Bengal State -> Dibrugarh
+		any_pop = { limit = { location = { state_id = 1257 } religion = hindu } move_pop = 3280 } # Chittagong State -> Tripura
 	}
 }

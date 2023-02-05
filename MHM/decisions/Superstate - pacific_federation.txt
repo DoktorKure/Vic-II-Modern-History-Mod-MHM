@@ -213,8 +213,7 @@ political_decisions = {
 			prestige = 20
 			all_core = { add_core = XPI }
 			change_tag = XPI
-			add_accepted_culture = australian
-			add_accepted_culture = new_zealander
+			add_accepted_culture = anglo_oceanian
 			add_accepted_culture = papua
 			add_accepted_culture = polynesian
 			add_accepted_culture = micronesian

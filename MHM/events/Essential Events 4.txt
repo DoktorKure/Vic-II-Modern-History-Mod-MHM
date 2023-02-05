@@ -3633,13 +3633,13 @@ months = 11
 	}
 
 option = {
-name = "Keep the Australian Monarchy"
+name = "We shall keep the Australian monarchy."
 prestige = 25
 ai_chance = { factor = 0.9 }
 		}
 
 option = {
-name = "Become a republic!"
+name = "We're done with the queen!"
 government = democracy
 ai_chance = { factor = 0.1 }
 		}
