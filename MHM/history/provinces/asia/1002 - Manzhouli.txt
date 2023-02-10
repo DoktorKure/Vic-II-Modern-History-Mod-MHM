@@ -1,0 +1,23 @@
+owner = CHI
+controller = CHI
+add_core = CHI
+add_core = KMT
+add_core = MCK
+add_core = IMN
+trade_goods = cattle
+life_rating = 35
+terrain = dry_grassland
+
+1950.1.1 = {
+owner = CHI
+controller = CHI
+}
+
+1992.1.1 = {
+owner = CHI
+controller = CHI
+add_core = IMN
+add_core = CHI
+add_core = MCK
+life_rating = 35
+}

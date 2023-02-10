@@ -1,0 +1,29 @@
+owner = JAK
+controller = JAK
+add_core = JAK
+add_core = HND
+add_core = PAK
+trade_goods = grain
+life_rating = 35
+terrain = mountain_farmland
+colonial = 0
+
+1950.1.1 = {
+owner = HND
+controller = HND
+}
+
+1992.1.1 = {
+owner = HND
+controller = HND
+add_core = JAK
+add_core = HND
+add_core = PAK
+life_rating = 35
+colonial = 0
+state_building = {
+	level = 5
+	building = canned_vegetables_factory
+	upgrade = yes
+}
+}

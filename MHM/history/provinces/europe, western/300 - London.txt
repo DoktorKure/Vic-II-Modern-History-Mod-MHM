@@ -1,0 +1,54 @@
+owner = ENG
+controller = ENG
+add_core = ENG
+add_core = ENL
+trade_goods = credit
+life_rating = 45
+terrain = urban_london
+railroad = 1
+colonial = 0
+
+state_building = {
+	level = 2
+	building = optics_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = paper_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = small_arms_factory
+	upgrade = yes
+}
+state_building = {
+	level = 5
+	building = coal_fuel_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = telecommunications_factory
+	upgrade = yes
+}
+
+1992.1.1 = {
+owner = ENG
+controller = ENG
+add_core = ENG
+life_rating = 45
+railroad = 2
+colonial = 0
+state_building = {
+	level = 2
+	building = financial_services_factory
+	upgrade = yes
+}
+state_building = {
+	level = 2
+	building = computers_factory
+	upgrade = yes
+}
+}

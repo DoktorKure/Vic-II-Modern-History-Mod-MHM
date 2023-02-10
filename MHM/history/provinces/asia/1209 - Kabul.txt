@@ -1,0 +1,20 @@
+owner = AFG
+controller = AFG
+add_core = AFG
+add_core = AZK
+trade_goods = timber
+life_rating = 35
+terrain = urban_kabul
+colonial = 0
+1992.1.1 = {
+owner = AFG
+controller = AFG
+add_core = AFG
+life_rating = 35
+colonial = 0
+state_building = {
+	level = 2
+	building = fabric_factory
+	upgrade = yes
+}
+}
