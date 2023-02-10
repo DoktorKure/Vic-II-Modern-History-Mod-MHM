@@ -52,21 +52,54 @@ country_event = {
 		prestige = -50
 
 		#Jews increase in population size slightly
-		any_pop = {
+		random_owned = {
 			limit = {
-				OR = { culture = jewish culture =  haredim_jewish }
-				location = { OR = { is_core = ISR is_core = PAL } }
+				owner = {
+					exists = PAL
+					PAL = { vassal_of = THIS }
+				}
 			}
-			reduce_pop = 1.1
+			owner = {
+				PAL = {
+					any_pop = {
+						limit = {
+							OR = { culture = jewish culture = haredim_jewish }
+						}
+						reduce_pop = 1.2
+					}
+				
+					#Everyone is slightly angry
+					any_pop = {
+						consciousness = 5
+						militancy = 5
+					}
+				}
+			}
 		}
-		
-		#Everyone is slightly angry
-		any_pop = {
+		random_owned = {
 			limit = {
-				location = { OR = { is_core = ISR is_core = PAL } }
+				owner = {
+					NOT = { exists = PAL }
+				}
 			}
-			consciousness = 5
-			militancy = 5
+			owner = {
+				any_pop = {
+					limit = {
+						OR = { culture = jewish culture = haredim_jewish }
+						location = { OR = { is_core = ISR is_core = PAL } }
+					}
+					reduce_pop = 1.2
+				}
+				
+				#Everyone is slightly angry
+				any_pop = {
+					limit = {
+						location = { OR = { is_core = ISR is_core = PAL } }
+					}
+					consciousness = 5
+					militancy = 5
+				}
+			}
 		}
 		
 		ai_chance = { factor = 0.8 }
@@ -83,26 +116,69 @@ country_event = {
 		badboy = 2.5
 		
 		#Jews increase in population size slightly
-		any_pop = {
+		random_owned = {
 			limit = {
-				OR = { culture = jewish culture =  haredim_jewish }
-				location = { OR = { is_core = ISR is_core = PAL } }
+				owner = {
+					exists = PAL
+					PAL = { vassal_of = THIS }
+				}
 			}
-			reduce_pop = 1.2
+			owner = {
+				PAL = {
+					any_pop = {
+						limit = {
+							OR = { culture = jewish culture = haredim_jewish }
+						}
+						reduce_pop = 1.1
+					}
+				
+					#Israelis are angry!
+					any_pop = {
+						limit = {
+							OR = { culture = jewish culture = haredim_jewish }
+						}
+						consciousness = 10
+						militancy = 10
+						ideology = { factor = 0.25 value = nationalist }
+					}
+					
+					any_owned = {
+						add_province_modifier = { name = nationalist_agitation duration = 1825 } 
+					}
+				}
+			}
 		}
-		
-		#Israelis are angry!
-		any_owned = { 
-			limit = { OR = { is_core = ISR is_core = PAL } }
-			add_province_modifier = { name = nationalist_agitation duration = 1825 } 
-		}
-		any_pop = {
+		random_owned = {
 			limit = {
-				OR = { culture = jewish culture =  haredim_jewish }
+				owner = {
+					NOT = { exists = PAL }
+				}
 			}
-			consciousness = 10
-			militancy = 10
-			ideology = { factor = 0.25 value = nationalist }
+			owner = {
+				any_pop = {
+					limit = {
+						OR = { culture = jewish culture = haredim_jewish }
+						location = { OR = { is_core = ISR is_core = PAL } }
+					}
+					reduce_pop = 1.1
+				}
+				
+				#Israelis are angry!
+				any_pop = {
+					limit = {
+						OR = { culture = jewish culture = haredim_jewish }
+					}
+					consciousness = 10
+					militancy = 10
+					ideology = { factor = 0.25 value = nationalist }
+				}
+				
+				
+				any_owned = { 
+					limit = { OR = { is_core = ISR is_core = PAL } }
+					add_province_modifier = { name = nationalist_agitation duration = 1825 } 
+				}
+			}
 		}
 		
 		USA = { clr_country_flag = support_zionism }
@@ -127,26 +203,68 @@ country_event = {
 			limit = { is_culture_group = arabic }
 			relation = { who = THIS value = -100 }
 		}
-		any_owned = { 
-			limit = { OR = { is_core = ISR is_core = PAL } }
-			add_province_modifier = { name = nationalist_agitation duration = 3650 } 
-		}
-		any_pop = {
-			limit = {
-				is_culture_group = arabic
-			}
-			consciousness = 10
-			militancy = 10
-			ideology = { factor = 0.25 value = nationalist }
-		}
 		
 		#Jews increase in population size
-		any_pop = {
+		random_owned = {
 			limit = {
-				OR = { culture = jewish culture =  haredim_jewish }
-				location = { OR = { is_core = ISR is_core = PAL } }
+				owner = {
+					exists = PAL
+					PAL = { vassal_of = THIS }
+				}
 			}
-			reduce_pop = 1.4
+			owner = {
+				PAL = {
+					any_pop = {
+						limit = {
+							OR = { culture = jewish culture = haredim_jewish }
+						}
+						reduce_pop = 1.4
+					}
+				
+					#Arabs are angry!
+					any_owned = {
+						add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+					}
+					any_pop = {
+						limit = {
+							is_culture_group = arabic
+						}
+						consciousness = 10
+						militancy = 10
+						ideology = { factor = 0.25 value = nationalist }
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = PAL }
+				}
+			}
+			owner = {
+				any_pop = {
+					limit = {
+						OR = { culture = jewish culture = haredim_jewish }
+						location = { OR = { is_core = ISR is_core = PAL } }
+					}
+					reduce_pop = 1.4
+				}
+				
+				#Arabs are angry!
+				any_owned = { 
+					limit = { OR = { is_core = ISR is_core = PAL } }
+					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+				}
+				any_pop = {
+					limit = {
+						is_culture_group = arabic
+					}
+					consciousness = 10
+					militancy = 10
+					ideology = { factor = 0.25 value = nationalist }
+				}
+			}
 		}
 
 		USA = { clr_country_flag = support_zionism }
@@ -188,7 +306,7 @@ country_event = {
 		prestige = 50
 		badboy = 5
 		country_event = 1007602
-		ai_chance = { factor = 0.8 }
+		ai_chance = { factor = 0.9 }
 	}
 
 	option = {
@@ -215,8 +333,13 @@ country_event = {
 				}
 			}
 			owner = {
+				#This looks weird but it accomplishes its intended purposes since a straight up release only releases Tel Aviv for some bizarre reason, I suspect due to ISR and PAL both sharing only one region
 				PAL = { release = ISR }
-				create_vassal = ISR
+				PAL = {
+					916 = { secede_province = ISR }
+					921 = { secede_province = ISR }
+				}
+				ENG = { create_vassal = ISR }
 			}
 		}
 
@@ -305,7 +428,7 @@ country_event = {
 			relation = { who = THIS value = -100 }
 		}
 
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 
 }
@@ -447,8 +570,7 @@ country_event = {
 			}
 		}
 		
-		PAL = { 
-			country_event = 1007604
+		PAL = {
 			government = democracy
 			country_event = 800054 
 			any_owned = { limit = { is_core = ISR } add_province_modifier = { name = nationalist_agitation duration = 3650 } } 

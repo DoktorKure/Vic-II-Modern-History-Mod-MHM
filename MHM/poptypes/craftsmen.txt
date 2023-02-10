@@ -1205,6 +1205,12 @@ promote_to =
 			NOT = { state_scope = { work_available = { worker = craftsmen } } }
 		}
 		
+		#Craftsmen demote in nations with colonial gov type for balance purposes
+		modifier = {
+			factor = 100
+			country = { government = colonial_government }
+		}
+		
 		modifier = {
 			factor = 5.0
 			NOT = {

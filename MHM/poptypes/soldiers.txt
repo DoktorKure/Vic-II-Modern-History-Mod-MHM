@@ -189,7 +189,7 @@ migration_target = {
     }
 	###Pop massively prefers provinces undergoing population replacement###
     modifier = {
-        factor = 4
+        factor = 3
         has_province_modifier = pop_replacement_province_modifier
     }
 

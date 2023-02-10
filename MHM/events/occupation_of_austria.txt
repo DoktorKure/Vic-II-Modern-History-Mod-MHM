@@ -55,6 +55,7 @@ country_event = {
 			government = proletarian_dictatorship1
 			country_event = 800052
 			ruling_party_ideology = communist
+			clr_country_flag = special_communist_vassal
 		}
 		create_alliance = AUS
 		military_access = AUS
@@ -78,6 +79,7 @@ country_event = {
 			government = democracy
 			country_event = 800054
 			ruling_party_ideology = conservative
+			clr_country_flag = special_communist_vassal
 		}
 		
 		relation = { who = AUS value = 200 }
@@ -207,6 +209,7 @@ country_event = {
 				government = proletarian_dictatorship1
 				country_event = 800052
 				ruling_party_ideology = communist
+				clr_country_flag = special_communist_vassal
 			}
 			RUS = {
 				create_alliance = AUS
@@ -542,6 +545,21 @@ country_event = {
 			} 
 		}
 		
+		#If Austria was already democratic but under Soviet control, Soviets turn Austria into a proper puppet
+		random_owned = {
+			limit = { owner = { exists = AUS AUS = { government = democracy1 } } }
+			AUS = {
+				government = proletarian_dictatorship1
+				country_event = 800052
+				ruling_party_ideology = communist
+				clr_country_flag = special_communist_vassal
+			}
+			RUS = {
+				create_alliance = AUS
+				military_access = AUS
+			}
+		}
+		
 		relation = { who = SGF value = 200 }
 		diplomatic_influence = { who = SGF value = 200 }
 		
@@ -582,6 +600,21 @@ country_event = {
 				add_core = SGF
 				remove_core = ROA 
 			} 
+		}
+		
+		#If Austria was already democratic but under Soviet control, Soviets turn Austria into a proper puppet
+		random_owned = {
+			limit = { owner = { exists = AUS AUS = { government = democracy1 } } }
+			AUS = {
+				government = proletarian_dictatorship1
+				country_event = 800052
+				ruling_party_ideology = communist
+				clr_country_flag = special_communist_vassal
+			}
+			RUS = {
+				create_alliance = AUS
+				military_access = AUS
+			}
 		}
 		
 		ai_chance = { factor = 0.1 }
@@ -642,6 +675,7 @@ country_event = {
 				government = proletarian_dictatorship1
 				country_event = 800052
 				ruling_party_ideology = communist
+				clr_country_flag = special_communist_vassal
 			}
 			RUS = {
 				create_alliance = AUS
@@ -684,6 +718,7 @@ country_event = {
 				government = proletarian_dictatorship1
 				country_event = 800052
 				ruling_party_ideology = communist
+				clr_country_flag = special_communist_vassal
 			}
 			RUS = {
 				create_alliance = AUS
