@@ -18,10 +18,6 @@ country_event = {
 		wars_of_national_liberation = 1
 	}
 
-	mean_time_to_happen = { 
-		months = 1
-	}
-
 	option = {
 		name = "Yes!"
 		#Sovietization event if THIS is a European nation, not a GP, and borders the Soviets or a Soviet vassal; else Soviets get Treaty of Friendship event
