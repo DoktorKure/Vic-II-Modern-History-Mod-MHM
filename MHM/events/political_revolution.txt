@@ -823,8 +823,8 @@ country_event = { #The New Regime - populist or dictatorship
 	option = {
 		name = "EVTOPTA800050"
 		
-		upper_house = { ideology = liberal value = -0.80 }
-		upper_house = { ideology = progressive value = -0.80 }
+		#To prevent instant reverts back to a democratic gov
+		upper_house = { ideology = traditionalist value = 0.99 }
 		
 		# remove ideology based modifiers 
 		remove_country_modifier = comecon remove_country_modifier = comecon_excluded
