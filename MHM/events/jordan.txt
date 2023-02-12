@@ -226,7 +226,6 @@ country_event = {
 		government = presidential_dictatorship
 		country_event = 800050
 		ruling_party_ideology = traditionalist
-		primary_culture = palestinian
 		ai_chance = { factor = 0.1 }
 	}
 

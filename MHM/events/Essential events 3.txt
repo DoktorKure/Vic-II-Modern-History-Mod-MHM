@@ -7139,9 +7139,9 @@ country_event = {
 		
 		change_tag = LBY
 		
-		primary_culture = libyan
+		primary_culture = berber
 		
-		EGY = { capital = 1745 primary_culture = egyptian }
+		EGY = { capital = 1745 primary_culture = arab_nile }
 	}
 
 }

@@ -265,11 +265,8 @@ political_decisions = {
 			OR = {
 				primary_culture = mestizo 
 				primary_culture = white_portuguese
-				primary_culture = platinean_white_spanish
-				primary_culture = andean_white_spanish
 				primary_culture = pardo_portuguese
-				primary_culture = mesoamerican_white_spanish
-				primary_culture = caribbean_white_spanish
+				primary_culture = white_spanish
 			}
 			
 			has_country_flag = xsu_ambition

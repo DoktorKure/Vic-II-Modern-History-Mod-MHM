@@ -90,7 +90,7 @@ country_event = {
        name = "Suppress the protests"
        BHR = {
            any_pop = {
-               limit = { culture = bahrani }
+               limit = { culture = arab_gulf }
                
            ideology = { factor = 0.3 value = communist }
            ideology = { factor = 0.2 value = nationalist }

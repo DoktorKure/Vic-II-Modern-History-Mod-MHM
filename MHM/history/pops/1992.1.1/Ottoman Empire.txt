@@ -1842,7 +1842,7 @@
 		size = 233095
 	 } 
 	farmers = {
-		culture = sunni_arab
+		culture = arab
 		religion =  sunni 
 		size = 69570
 	 } 
@@ -2054,7 +2054,7 @@
 		size = 51660
 	 } 
 	farmers = {
-		culture = sunni_arab
+		culture = arab
 		religion =  sunni 
 		size = 43050
 	 } 
@@ -2107,12 +2107,12 @@
 		size = 16466
 	 } 
 	farmers = {
-		culture = syrian
+		culture = arab_mashriqi
 		religion =  shiite 
 		size = 83520
 	 } 
 	farmers = {
-		culture = syrian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 104400
 	 } 

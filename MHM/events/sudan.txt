@@ -80,7 +80,7 @@ country_event = {
 		badboy = 5
 		set_country_flag = claim_the_sudan
 		SUD = { all_core = { add_core = EGY } }
-		any_pop = { limit = { culture = sunni_arab } consciousness = 2 }
+		any_pop = { limit = { culture = arab } consciousness = 2 }
 		ai_chance = { factor = 0.2 }
 	}
 	
@@ -145,7 +145,7 @@ country_event = {
 				}
 			}
 			owner = {
-				any_pop = { limit = { culture = sunni_arab } militancy = 6  consciousness = 5.0 }
+				any_pop = { limit = { culture = arab } militancy = 6  consciousness = 5.0 }
 			}
 		}
 		random_owned = {
@@ -157,7 +157,7 @@ country_event = {
 			}
 			owner = {
 				SUD = {
-					any_pop = { limit = { culture = sunni_arab } militancy = 6  consciousness = 5.0 }
+					any_pop = { limit = { culture = arab } militancy = 6  consciousness = 5.0 }
 					add_country_modifier = { name = revolution_chaos duration = 3650 }
 				}
 			}
@@ -332,7 +332,6 @@ country_event = {
 			#TODO: allow Egypt to decline
 			limit = { capital = 1745 }
 			prestige = 25
-			add_accepted_culture = sudanese
 			inherit = SUD
 		}
 		ai_chance = { factor = 0.6 }

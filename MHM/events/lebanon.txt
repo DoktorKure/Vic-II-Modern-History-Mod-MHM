@@ -46,8 +46,6 @@ country_event = {
 		ruling_party_ideology = traditionalist
 		ISR = { country_event = 80087511 }
 
-		add_accepted_culture = palestinian
-
 		#Break relations
 		sphere_owner = { 
 			diplomatic_influence = { who = THIS value = -200 } 

@@ -58,7 +58,7 @@ country_event = {
 		MAL = { 
 			all_core = { 
 				any_pop = { 
-					limit = { culture = maltese } 
+					limit = { culture = insular_mediterranean } 
 					militancy = 5 
 					consciousness = 6 
 					ideology = { factor = 0.15 value = nationalist }
@@ -80,7 +80,7 @@ country_event = {
 			ideology = { factor = 0.05 value = nationalist }
 		}
 		
-		add_accepted_culture = maltese
+		add_accepted_culture = insular_mediterranean
 		854 = { add_core = ENG }
 		
 		#To turn Malta into a state

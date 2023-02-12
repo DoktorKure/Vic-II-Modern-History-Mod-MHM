@@ -13,7 +13,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = yemeni
+		culture = arab_gulf
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -34,7 +34,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = yemeni
+		culture = arab_gulf
 		religion =  sunni 
 		size = 100
 	 } 
@@ -65,7 +65,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = yemeni
+		culture = arab_gulf
 		religion =  sunni 
 		size = 100
 	 } 
@@ -121,7 +121,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = yemeni
+		culture = arab_gulf
 		religion =  sunni 
 		size = 100
 	 } 
@@ -2726,7 +2726,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = yemeni
+		culture = arab_gulf
 		religion =  sunni 
 		size = 100
 	 } 
@@ -2863,7 +2863,7 @@
 		size = 229
 	 } 
 	capitalists = {
-		culture = libyan
+		culture = berber
 		religion = secularism
 		size = 11
 	 } 
@@ -2903,7 +2903,7 @@
 		size = 2827
 	 } 
 	aristocrats = {
-		culture = libyan
+		culture = berber
 		religion = secularism
 		size = 438
 	 }
@@ -2933,7 +2933,7 @@
 		size = 1071
 	 } 
 	clergymen = {
-		culture = libyan
+		culture = arab_mashriqi
 		religion = secularism
 		size = 33
 	 } 
@@ -2985,7 +2985,7 @@
 	
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = libyan
+		culture = berber
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -3011,7 +3011,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = libyan
+		culture = berber
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -3052,7 +3052,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = libyan
+		culture = berber
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -3073,7 +3073,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = libyan
+		culture = berber
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -3087,7 +3087,7 @@
 #Benghazi - Benghazi (155000/38750 POPS)
 1735 = {
 	aristocrats = {
-		culture = libyan
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1550
 	 } 
@@ -3134,7 +3134,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = libyan
+		culture = berber
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -3155,7 +3155,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = libyan
+		culture = berber
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -3176,7 +3176,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = libyan
+		culture = berber
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -3232,7 +3232,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = libyan
+		culture = berber
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -3288,7 +3288,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = libyan
+		culture = berber
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -3344,7 +3344,7 @@
 
 	#For Pan-Arab and National Arab
 	farmers = {
-		culture = libyan
+		culture = berber
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -3363,27 +3363,27 @@
 		size = 1000
 	 } 
 	soldiers = {
-		culture = egyptian
+		culture = arab_nile
 		religion =  sunni 
 		size = 1281
 	 } 
 	aristocrats = {
-		culture = egyptian
+		culture = arab_nile
 		religion =  sunni 
 		size = 4270
 	 } 
 	clergymen = {
-		culture = egyptian
+		culture = arab_nile
 		religion =  sunni 
 		size = 1067
 	 } 
 	artisans = {
-		culture = egyptian
+		culture = arab_nile
 		religion =  sunni 
 		size = 1640
 	 } 
 	farmers = {
-		culture = egyptian
+		culture = arab_nile
 		religion =  sunni 
 		size = 92461
 	 } 
@@ -3467,32 +3467,32 @@
 #Khartoum - Khartoum (1129000/282250 POPS)
 1827 = {
 	soldiers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 3387
 	 } 
 	aristocrats = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 11290
 	 } 
 	capitalists = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 1411
 	 } 
 	clergymen = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 2822
 	 } 
 	artisans = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 3311
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 252411
 	 } 
@@ -3500,27 +3500,27 @@
 #Wad Madani - Wad Madani (598000/149500 POPS)
 1828 = {
 	soldiers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 1794
 	 } 
 	aristocrats = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 5980
 	 } 
 	clergymen = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 1495
 	 } 
 	artisans = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 1753
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 133696
 	 } 
@@ -3528,12 +3528,12 @@
 #Kassala - Kassala (250000/62500 POPS)
 1829 = {
 	aristocrats = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 2500
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 55893
 	 } 
@@ -3541,12 +3541,12 @@
 #Sennar - Sennar (327000/81750 POPS)
 1830 = {
 	aristocrats = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 3270
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 73108
 	 } 
@@ -3554,12 +3554,12 @@
 #Rabak - Rabak (254000/63500 POPS)
 1831 = {
 	aristocrats = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 2540
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 56787
 	 } 
@@ -3642,7 +3642,7 @@
 		size = 77
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 36355
 	 } 
@@ -3769,12 +3769,12 @@
 #Atbara - Atbara (293000/73250 POPS)
 1837 = {
 	aristocrats = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 2930
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 65507
 	 } 
@@ -3782,27 +3782,27 @@
 #Obeid - Obeid (541000/135250 POPS)
 1838 = {
 	soldiers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 1623
 	 } 
 	aristocrats = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 5410
 	 } 
 	clergymen = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 1352
 	 } 
 	artisans = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 1586
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 120953
 	 } 
@@ -3810,12 +3810,12 @@
 #Nuhud - Abyei (282000/70500 POPS)
 1839 = {
 	aristocrats = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 2820
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 63046
 	 } 
@@ -3823,12 +3823,12 @@
 #Kaduqli - South Kurdufan (237000/59250 POPS)
 1840 = {
 	aristocrats = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 2370
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 52986
 	 } 
@@ -3916,7 +3916,7 @@
 		size = 129
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 132407
 	 } 
@@ -4009,7 +4009,7 @@
 		size = 6925
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 110384
 	 } 
@@ -19622,7 +19622,7 @@
 		size = 400
 	 } 
 	farmers = {
-		culture = sudanese
+		culture = arab_nile
 		religion =  sunni 
 		size = 14550
 	 } 
@@ -23820,17 +23820,17 @@
 		size = 358
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  orthodox 
 		size = 14636
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion = secularism
 		size = 185
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 61879
 	 } 
@@ -23842,7 +23842,7 @@
 		size = 1000
 	 } 
 	farmers = {
-		culture = arab_levantine
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -23931,17 +23931,17 @@
 		size = 10750
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 7650
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  orthodox 
 		size = 7350
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion = secularism
 		size = 50
 	 } 
@@ -23953,7 +23953,7 @@
 		size = 1000
 	 } 
 	farmers = {
-		culture = arab_levantine
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -23962,17 +23962,17 @@
 #Nablus - Nablus (326000/81500 POPS)
 918 = {
 	aristocrats = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 3260
 	 } 
 	artisans = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 2139
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 63731
 	 } 
@@ -23984,7 +23984,7 @@
 		size = 1000
 	 } 
 	farmers = {
-		culture = arab_levantine
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24103,17 +24103,17 @@
 		size = 40
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  orthodox 
 		size = 3421
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion = secularism
 		size = 43
 	 } 
 	craftsmen = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 55305
 	 } 
@@ -24125,7 +24125,7 @@
 		size = 1000
 	 } 
 	farmers = {
-		culture = arab_levantine
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24134,77 +24134,77 @@
 #Gaza - Gaza (245000/61250 POPS)
 920 = {
 	officers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 180
 	 } 
 	officers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion = secularism
 		size = 2
 	 } 
 	soldiers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 725
 	 } 
 	soldiers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion = secularism
 		size = 9
 	 } 
 	aristocrats = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 2419
 	 } 
 	aristocrats = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion = secularism
 		size = 30
 	 } 
 	bureaucrats = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 60
 	 } 
 	capitalists = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 302
 	 } 
 	capitalists = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion = secularism
 		size = 3
 	 } 
 	clergymen = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 604
 	 } 
 	clergymen = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion = secularism
 		size = 7
 	 } 
 	artisans = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1586
 	 } 
 	artisans = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion = secularism
 		size = 20
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 47297
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion = secularism
 		size = 598
 	 } 
@@ -24216,7 +24216,7 @@
 		size = 1000
 	 } 
 	farmers = {
-		culture = arab_levantine
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24265,22 +24265,22 @@
 		size = 5000
 	 } 
 	clergymen = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1
 	 } 
 	artisans = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 59
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 61879
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1760
 	 } 
@@ -24292,7 +24292,7 @@
 		size = 1000
 	 } 
 	farmers = {
-		culture = arab_levantine
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24340,22 +24340,22 @@
 		size = 25000
 	 } 
 	clergymen = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1
 	 } 
 	artisans = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 59
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 61529
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1760
 	 } 
@@ -24367,7 +24367,7 @@
 		size = 1000
 	 } 
 	farmers = {
-		culture = arab_levantine
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24415,22 +24415,22 @@
 		size = 20000
 	 } 
 	clergymen = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1
 	 } 
 	artisans = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 59
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 41879
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1760
 	 } 
@@ -24442,7 +24442,7 @@
 		size = 1000
 	 } 
 	farmers = {
-		culture = arab_levantine
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24485,22 +24485,22 @@
 		size = 20
 	 } 
 	clergymen = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1
 	 } 
 	artisans = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 59
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 51879
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1760
 	 } 
@@ -24512,7 +24512,7 @@
 		size = 1000
 	 } 
 	farmers = {
-		culture = arab_levantine
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1000
 	 } 
@@ -24555,22 +24555,22 @@
 		size = 20
 	 } 
 	clergymen = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1
 	 } 
 	artisans = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 59
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 53879
 	 } 
 	farmers = {
-		culture = palestinian
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1760
 	 } 
@@ -24582,7 +24582,7 @@
 		size = 1000
 	 } 
 	farmers = {
-		culture = arab_levantine
+		culture = arab_mashriqi
 		religion =  sunni 
 		size = 1000
 	 } 
