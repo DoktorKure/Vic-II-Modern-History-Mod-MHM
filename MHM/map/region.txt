@@ -430,25 +430,21 @@ TUR_860 = { 860 861 } #Istanbul
 
 ### Middle East
 
-TUR_863 = { 863 862 867 868 } #East Marmara
+TUR_863 = { 863 862 867 } #East Marmara
 
 TUR_864 = { 864 828 858 859 865 } #West Marmara
 
-TUR_869 = { 869 866 870 871 872 874 } #Aegean
+TUR_869 = { 869  870 871 872 } #Aegean
 
-TUR_876 = { 876 873 } #West Anatolia
+TUR_876 = { 885 886 1096 } #Kars
 
-TUR_878 = { 878 879 } #Central Anatolia
+TUR_878 = { 876 866 868 873 874 877 878 879 } #Central Anatolia
 
-TUR_882 = { 882 877 880 881 883 884 886 } #Black Sea
-
-TUR_887 = { 887 885 888 } #Northeast Anatolia
-
-TUR_890 = { 890 889 891 892 } #Central East Anatolia
+TUR_882 = { 882 880 881 883 884 } #Black Sea
 
 TUR_894 = { 894 875 896 895 } #Mediterranean
 
-TUR_898 = { 898 893 899 } #Southeast Anatolia
+TUR_898 = { 887 888 889 890 891 892 893 898 899 } #Southeast Anatolia
 
 EGY_897 = { 897 901 907 } #Aleppo
 
@@ -470,7 +466,7 @@ TUR_932 = { 932 928 930 933} #Eastern Iraq
 
 TUR_934 = { 934 926 929 935 } #Middle Euphrates
 
-RUS_1090 = { 1090 1093 1091 1092 1094 1095 1096 } #Georgia
+RUS_1090 = { 1090 1093 1091 1092 1094 1095 } #Georgia
 
 RUS_1098 = { 1098 1099 1100 } #Armenia Armenia_Azerbaijan
 
