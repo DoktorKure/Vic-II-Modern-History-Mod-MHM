@@ -50,6 +50,16 @@
 		religion = secularism
 		size = 170
 	 } 
+	soldiers = {
+		culture = arab_nile
+		religion = secularism
+		size = 1828
+	} 
+	soldiers = {
+		culture = arab
+		religion = sunni
+		size = 1828
+	} 
 	farmers = {
 		culture = arab_nile
 		religion =  orthodox 
