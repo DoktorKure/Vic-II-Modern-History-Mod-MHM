@@ -30,6 +30,10 @@ political_decisions = {
 				ruling_party_ideology = socialist
 				ruling_party_ideology = communist
 				ruling_party_ideology = communist_social
+				AND = {
+					is_vassal = yes
+					overlord = { primary_culture = arab }
+				}
 			}
 		}
 		effect = {
@@ -83,6 +87,10 @@ political_decisions = {
 				ruling_party_ideology = liberal
 				ruling_party_ideology = progressive
 				ruling_party_ideology = big_tent
+				AND = {
+					is_vassal = yes
+					overlord = { NOT = { primary_culture = arab } }
+				}
 			}
 		}
 
