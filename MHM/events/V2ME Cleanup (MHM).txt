@@ -816,7 +816,158 @@ country_event = {
 			}
 			set_country_flag = superstate_flag
 		}
-	
+
+		################################
+		### Clean up Arab identities ###
+		################################
+		
+		#Set master Arab country flag for later scoping
+		any_country = {
+			limit = {
+				capital_scope = { region = arabia_metaregion }
+				NOT = { has_country_flag = arab_country }
+			}
+			set_country_flag = arab_country
+		}
+		
+		#Set cultural arab country flags for later revision
+		any_country = {
+			limit = {
+				primary_culture = arab_gulf
+				NOT = { has_country_flag = arab_gulf_nation }
+			}
+			set_country_flag = arab_gulf_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = berber
+				NOT = { has_country_flag = berber_nation }
+			}
+			set_country_flag = berber_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = arab_mashriqi
+				NOT = { has_country_flag = arab_mashriqi_nation }
+			}
+			set_country_flag = arab_mashriqi_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = arab_nile
+				NOT = { has_country_flag = arab_nile_nation }
+			}
+			set_country_flag = arab_nile_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = arab_hassaniya
+				NOT = { has_country_flag = arab_hassaniya_nation }
+			}
+			set_country_flag = arab_hassaniya_nation
+		}
+		
+		#Clean up country flags and set cultures if the country doesn't exist and its owner is a pan-arab nation		
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = arab_country
+				NOT = { has_country_flag = pan_arab_identity }
+				capital_scope = { owner = { has_country_flag = pan_arab_identity } }
+			}
+			set_country_flag = pan_arab_identity
+			clr_country_flag = arab_cultural_identity
+			primary_culture = arab
+			
+			#Force assimilation
+			remove_accepted_culture = arab_gulf 
+			remove_accepted_culture = berber
+			remove_accepted_culture = arab_mashriqi
+			remove_accepted_culture = arab_nile
+			remove_accepted_culture = arab_hassaniya
+		}
+		
+		#Clean up country flags and set cultures back to original if the country doesn't exist and owner is not a pan-arab country
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = arab_country
+				has_country_flag = arab_gulf_nation
+				NOT = { has_country_flag = arab_cultural_identity }
+				capital_scope = { owner = { has_country_flag = arab_cultural_identity } }
+			}
+			clr_country_flag = pan_arab_identity
+			set_country_flag = arab_cultural_identity
+			
+			primary_culture = arab_gulf
+			
+			#Force assimilation
+			remove_accepted_culture = arab 
+		}
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = arab_country
+				has_country_flag = berber_nation
+				NOT = { has_country_flag = arab_cultural_identity }
+				capital_scope = { owner = { has_country_flag = arab_cultural_identity } }
+			}
+			clr_country_flag = pan_arab_identity
+			set_country_flag = arab_cultural_identity
+			
+			primary_culture = berber
+			
+			#Force assimilation
+			remove_accepted_culture = arab 
+		}
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = arab_country
+				has_country_flag = arab_mashriqi_nation
+				NOT = { has_country_flag = arab_cultural_identity }
+				capital_scope = { owner = { has_country_flag = arab_cultural_identity } }
+			}
+			clr_country_flag = pan_arab_identity
+			set_country_flag = arab_cultural_identity
+			
+			primary_culture = arab_mashriqi
+			
+			#Force assimilation
+			remove_accepted_culture = arab 
+		}
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = arab_country
+				has_country_flag = arab_nile_nation
+				NOT = { has_country_flag = arab_cultural_identity }
+				capital_scope = { owner = { has_country_flag = arab_cultural_identity } }
+			}
+			clr_country_flag = pan_arab_identity
+			set_country_flag = arab_cultural_identity
+			
+			primary_culture = arab_nile
+			
+			#Force assimilation
+			remove_accepted_culture = arab 
+		}
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = arab_country
+				has_country_flag = arab_hassaniya_nation
+				NOT = { has_country_flag = arab_cultural_identity }
+				capital_scope = { owner = { has_country_flag = arab_cultural_identity } }
+			}
+			clr_country_flag = pan_arab_identity
+			set_country_flag = arab_cultural_identity
+			
+			primary_culture = arab_hassaniya
+			
+			#Force assimilation
+			remove_accepted_culture = arab 
+		}
 		
 		######################
 		### Colonial Flags ###
