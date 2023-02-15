@@ -1160,7 +1160,6 @@ clergymen =
 	}
 	
 	soldiers = {
-
 		#Imported from HPM
 		group = {
 			modifier = {
@@ -1188,7 +1187,6 @@ clergymen =
 				recruited_percentage = 0.60
 			}
 		}
-	
 		group = {
 			modifier = {
 				factor = 2

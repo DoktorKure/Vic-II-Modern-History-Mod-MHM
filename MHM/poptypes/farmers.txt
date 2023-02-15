@@ -1156,9 +1156,7 @@ modifier = { factor = -0.25 agree_with_ruling_party = 0.9 }
 		modifier = { factor = 25 location = { trade_goods = credit } }
 
 	}
-
 	soldiers = {
-
 		#Imported from HPM
 		group = {
 			modifier = {
@@ -1186,7 +1184,6 @@ modifier = { factor = -0.25 agree_with_ruling_party = 0.9 }
 				recruited_percentage = 0.60
 			}
 		}
-	
 		group = {
 			modifier = {
 				factor = 2

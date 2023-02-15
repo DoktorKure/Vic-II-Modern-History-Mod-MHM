@@ -1223,8 +1223,7 @@ promote_to =
 		}
 	}
 
-	soldiers =
-	{
+	soldiers = {
 		#Imported from HPM
 		group = {
 			modifier = {
@@ -1252,7 +1251,6 @@ promote_to =
 				recruited_percentage = 0.60
 			}
 		}
-	
 		group = {
 			modifier = {
 				factor = 2
