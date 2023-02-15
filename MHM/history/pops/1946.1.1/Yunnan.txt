@@ -2,75 +2,40 @@
 #Kunming - Kunming, Qujing, Zhaotong (5216000/1304000 POPS)
 1601 = {
 	soldiers = {
-		culture = hui
-		religion =  sunni 
+		culture = chinese
+		religion = sunni 
 		size = 746
 	} 
 	officers = {
-		culture = hui
+		culture = chinese
 		religion = sunni
 		size = 89
 	} 
 	farmers = {
-		culture = hui
-		religion =  sunni 
+		culture = chinese
+		religion = sunni 
 		size = 60140
 	} 
 	clerks = {
-		culture = hui
+		culture = chinese
 		religion = sunni
 		size = 8
 	} 
 	clergymen = {
-		culture = hui
-		religion =  sunni 
+		culture = chinese
+		religion = sunni 
 		size = 618
 	} 
 	capitalists = {
-		culture = hui
+		culture = chinese
 		religion = sunni
 		size = 309
 	} 
 	bureaucrats = {
-		culture = hui
-		religion =  sunni 
+		culture = chinese
+		religion = sunni 
 		size = 62
-	} 
-	soldiers = {
-		culture = hui
-		religion =  secularism 
-		size = 187
-	} 
-	officers = {
-		culture = hui
-		religion = secularism
-		size = 22
-	} 
-	farmers = {
-		culture = hui
-		religion =  secularism 
-		size = 15035
-	} 
-	clerks = {
-		culture = hui
-		religion = secularism
-		size = 2
-	} 
-	clergymen = {
-		culture = hui
-		religion =  secularism 
-		size = 154
-	} 
-	capitalists = {
-		culture = hui
-		religion = secularism
-		size = 77
-	} 
-	bureaucrats = {
-		culture = hui
-		religion =  secularism 
-		size = 15
-	} 
+	}
 	soldiers = {
 		culture = yi
 		religion =  animist 
@@ -149,7 +114,7 @@
 	officers = {
 		culture = chinese
 		religion = taoism
-		size = 1954
+		size = 1976
 	} 
 	farmers = {
 		culture = chinese
@@ -179,8 +144,8 @@
 	soldiers = {
 		culture = chinese
 		religion =  secularism 
-		size = 4082
-	} 
+		size = 4269
+	}
 	officers = {
 		culture = chinese
 		religion = secularism
@@ -189,27 +154,27 @@
 	farmers = {
 		culture = chinese
 		religion =  secularism 
-		size = 329052
+		size = 344087
 	} 
 	clerks = {
 		culture = chinese
 		religion = secularism
-		size = 46
+		size = 48
 	} 
 	clergymen = {
 		culture = chinese
 		religion =  secularism 
-		size = 3379
+		size = 3533
 	} 
 	capitalists = {
 		culture = chinese
 		religion = secularism
-		size = 1689
+		size = 1766
 	} 
 	bureaucrats = {
 		culture = chinese
 		religion =  secularism 
-		size = 337
+		size = 352
 	} 
 }
 #Dali - Yunann the rest (6036000/1509000 POPS)
