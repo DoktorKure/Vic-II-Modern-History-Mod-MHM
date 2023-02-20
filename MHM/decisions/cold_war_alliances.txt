@@ -749,6 +749,8 @@ OR = { is_vassal = yes has_country_modifier = neutrality has_country_flag = neut
 			
 			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 
+			OR = { tag = RUS vassal_of = RUS capital_scope = { continent = europe } }
+
 		}
 
 		allow = {
@@ -756,10 +758,6 @@ OR = { is_vassal = yes has_country_modifier = neutrality has_country_flag = neut
 			NOT = { badboy = 1 }
 			
 			war = no
-
-			OR = { tag = RUS sphere_owner = { has_country_modifier = warsaw_pact } ai = no }
-
-			OR = { is_vassal = no overlord = { has_country_modifier = warsaw_pact } }
 
 			NOT = { has_country_flag = neutrality }
 			NOT =  { has_country_modifier = neutrality }
