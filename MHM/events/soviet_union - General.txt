@@ -1937,9 +1937,11 @@ country_event = {
 				LIT = { all_core = { remove_core = RUS } }
 				LAT = { all_core = { remove_core = RUS } }
 				EST = { all_core = { remove_core = RUS } }
+			}
+			owner = {
 				release = LIT 
 				release = LAT
-				release = EST 
+				release = EST
 				LIT = { country_event = 8014247 }
 				LAT = { country_event = 8014247 }
 				EST = { country_event = 8014247 }

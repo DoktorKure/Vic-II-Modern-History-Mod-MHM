@@ -10,6 +10,7 @@ political_decisions = {
 			
 			#UN trust territories do not align with anyone
 			NOT = { tag = UNT }
+			NOT = { tag = CLN }
 
 			NOT = { has_country_modifier = king_timer }
 			
@@ -112,6 +113,7 @@ political_decisions = {
 			
 			#UN trust territories do not align with anyone
 			NOT = { tag = UNT }
+			NOT = { tag = CLN }
 
 			NOT = { has_country_modifier = king_timer }
 			
@@ -223,6 +225,7 @@ political_decisions = {
 			
 			#UN trust territories do not align with anyone
 			NOT = { tag = UNT }
+			NOT = { tag = CLN }
 
 			NOT = { has_country_modifier = king_timer }
 			
@@ -318,6 +321,10 @@ political_decisions = {
 			NOT = { has_country_modifier = un_king2 }
 			NOT = { has_country_modifier = king_timer }
 			
+			#UN trust territories do not align with anyone
+			NOT = { tag = UNT }
+			NOT = { tag = CLN }
+			
 			NOT = { OR = { tag = RUS tag = CHI } }
 			
 			OR = {
@@ -412,6 +419,10 @@ political_decisions = {
 			NOT = { has_country_modifier = un_king1 }
 			NOT = { has_country_modifier = un_king2 }
 			NOT = { has_country_modifier = king_timer }
+			
+			#UN trust territories do not align with anyone
+			NOT = { tag = UNT }
+			NOT = { tag = CLN }
 			
 			NOT = { OR = { tag = RUS tag = CHI } }
 			

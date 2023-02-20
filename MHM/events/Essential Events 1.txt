@@ -2602,7 +2602,7 @@ country_event = {
 		diplomatic_influence = { who = FROM value = 100 }
 		any_owned = { limit = { is_core = FROM } secede_province = FROM }
 		FROM = { country_event = 1412161 }
-		ai_chance = { factor = 1 
+		ai_chance = { factor = 0.1
 
 		modifier = { 
 			factor = 1
@@ -2695,7 +2695,7 @@ country_event = {
 		relation = { who = FROM value = -100 }
 		FROM = { country_event = 1412162 }
 		ai_chance = {
-			factor = 1
+			factor = 0.9
 			modifier = { factor = 2 OR = { ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist } }
 		}
 	}

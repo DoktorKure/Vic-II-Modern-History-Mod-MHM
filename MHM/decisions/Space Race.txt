@@ -24,6 +24,12 @@ political_decisions = {
 			money = -50000
 			prestige = 100
 			add_country_modifier = { name = space_agency duration = -1 }
+			
+			#Set up the variable for use in events/Space Attempts.txt
+			set_variable = {
+				which = space_attempts
+				value = 0
+			}
 		}
 		ai_will_do = { factor = 1 }
 	}

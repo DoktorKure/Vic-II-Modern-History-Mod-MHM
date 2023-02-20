@@ -62,10 +62,11 @@ political_decisions = {
 			NOT = { AND = { tag = NCY vassal_of = TUR } }
 
 			NOT = { government = mandate_government }
+			
+			#Stop repetitive independence wars for colonies
+			NOT = { AND = { government = colonial_government ai = yes } }
 
 			NOT = { tag = VIR }
-
-			NOT = { AND = { tag = CUR vassal_of = NET government = colonial_government ai = yes } }
 
 			NOT = { AND = { tag = FAR vassal_of = DEN government = colonial_government ai = yes NOT = { average_militancy = 7 } } }
 

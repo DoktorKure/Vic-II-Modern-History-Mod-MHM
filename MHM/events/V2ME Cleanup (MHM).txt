@@ -60,6 +60,14 @@ country_event = {
 			inherit = UNO
 		}
 		
+		#Release CLN if it gets vassalized for any reason at all
+		any_country = {
+			limit = {
+				is_our_vassal = CLN
+			}
+			release_vassal = CLN
+		}
+		
 		########################
 		###					 ###
 		### Seasonal Effects ###
