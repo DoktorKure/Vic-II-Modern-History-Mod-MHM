@@ -6,17 +6,13 @@ country_event = {
 	picture = "genocide_options"
 
 	trigger = {
-		OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
-	}
-
-	mean_time_to_happen = { 
-		months = 6
-		modifier = { factor = 0 NOT = { has_country_flag = genocide_101 } }
-		modifier = { factor = 0.5 has_country_flag = war_genocide }
+		has_country_flag = ethnic_cleansed
+		NOT = { has_country_modifier = geno_cooldown }
 	}
 	
 	option = {
 		name = "Cleanse the homeland! (15% chance of discovery)"
+		add_country_modifier = { name = geno_cooldown duration = 180 }
 		set_country_flag = genocide_101
 		clr_country_flag = war_genocide
 		
@@ -142,6 +138,7 @@ country_event = {
 
 	option = {
 		name = "Cleanse the colonies! (20% chance of discovery)"
+		add_country_modifier = { name = geno_cooldown duration = 180 }
 		set_country_flag = genocide_101
 		clr_country_flag = war_genocide
 		
@@ -265,6 +262,7 @@ country_event = {
 
 	option = {
 		name = "Cleanse the entire nation! (30% chance of discovery)"
+		add_country_modifier = { name = geno_cooldown duration = 180 }
 		set_country_flag = genocide_101
 		clr_country_flag = war_genocide
 		
@@ -387,6 +385,7 @@ country_event = {
 
 	option = {
 		name = "Exterminate people in areas occupied by us! (High Infamy!)"
+		add_country_modifier = { name = geno_cooldown duration = 180 }
 		set_country_flag = genocide_101
 		any_country = { limit = { war_with = THIS } country_event = 15120372 }
 
