@@ -399,6 +399,18 @@ country_event = {
 
 		ai_chance = { factor = 0.2 }
 	}
+
+	option = {
+		name = "Stop the genocide."
+		
+		clr_country_flag = ethnic_cleansed
+		clr_country_flag = genocide_101
+		remove_country_modifier = ethnic_cleansing
+		clr_country_flag = discovered_genocide 
+		clr_country_flag = discovered_genocide1
+		any_owned = { remove_province_modifier = ethnic_cleansing_province_modifier }
+		ai_chance = { factor = 0 }
+	}
 }
 
 country_event = {
