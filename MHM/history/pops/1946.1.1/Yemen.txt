@@ -56,18 +56,12 @@
 		size = 303640
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Hodeida - Hodeida (529000/132250 POPS)
 1179 = {
@@ -97,18 +91,12 @@
 		size = 116265
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Taizz - Taizz (1619000/404750 POPS)
 1180 = {
@@ -153,16 +141,10 @@
 		size = 145976
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }

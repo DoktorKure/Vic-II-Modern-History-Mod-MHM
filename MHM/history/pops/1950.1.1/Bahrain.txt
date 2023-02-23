@@ -16,15 +16,10 @@
 		size = 15572
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }

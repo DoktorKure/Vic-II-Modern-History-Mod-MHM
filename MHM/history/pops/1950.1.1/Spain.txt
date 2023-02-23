@@ -26,16 +26,11 @@
 		size = 89558
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -67,16 +62,11 @@
 		size = 89558
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -103,16 +93,11 @@
 		size = 1610
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -199,16 +184,11 @@
 		size = 5798
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -260,16 +240,11 @@
 		size = 240
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -283,16 +258,15 @@
 	farmers = {
 		culture = arab_hassaniya
 		religion = sunni 
-		size = 28815
+		size = 27815
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Aaiun - Aaiun (1000/250 POPS)
 1773 = {
@@ -324,21 +298,15 @@
 	farmers = {
 		culture = arab_hassaniya
 		religion = sunni 
-		size = 190
+		size = 590
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_hassaniya
-		religion = sunni 
-		size = 500
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 100
+		size = 200
 	 } 
-
 }
 #Dakhla - Dakhla (7000/1750 POPS)
 1774 = {
@@ -380,21 +348,15 @@
 	farmers = {
 		culture = arab_hassaniya
 		religion = sunni 
-		size = 1332
+		size = 1732
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_hassaniya
-		religion = sunni 
-		size = 500
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 100
+		size = 200
 	 } 
-
 }
 #Fernando Po - Fernando Po (126000/31500 POPS)
 1955 = {

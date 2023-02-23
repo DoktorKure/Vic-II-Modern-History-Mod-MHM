@@ -51,18 +51,12 @@
 		size = 3217
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Aleppo - Aleppo (950000/237500 POPS)
 897 = {
@@ -154,16 +148,11 @@
 		size = 10000 #Unclear estimates from the time period
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -220,16 +209,11 @@
 		size = 30195
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -301,16 +285,11 @@
 		size = 164122
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -418,16 +397,11 @@
 		size = 10000 #Unclear estimates from the time period
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -529,16 +503,11 @@
 		size = 49470
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -605,16 +574,11 @@
 		size = 12825
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -631,16 +595,11 @@
 		size = 23129
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -657,16 +616,10 @@
 		size = 37952
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }

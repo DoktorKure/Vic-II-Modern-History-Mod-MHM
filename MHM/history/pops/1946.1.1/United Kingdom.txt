@@ -11,18 +11,12 @@
 		size = 53804
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Ghayda - Ghayda (24000/6000 POPS)
 1175 = {
@@ -32,16 +26,11 @@
 		size = 5381
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 100
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 100
+		size = 200
 	 } 
 
 }
@@ -63,16 +52,11 @@
 		size = 1872
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 100
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 100
+		size = 200
 	 } 
 
 }
@@ -119,18 +103,12 @@
 		size = 1793
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 100
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 100
+		size = 200
 	 } 
-
 }
 #Colombo - Colombo (3230000/807500 POPS)
 1321 = {
@@ -2724,16 +2702,11 @@
 		size = 2084
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 100
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 100
+		size = 200
 	 } 
 
 }
@@ -2983,18 +2956,12 @@
 		size = 2523
 	}
 	
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Ghayran - Ghayran (50000/12500 POPS)
 1732 = {
@@ -3009,18 +2976,12 @@
 		size = 1388
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Misratah - Misratah (85000/21250 POPS)
 1733 = {
@@ -3050,18 +3011,12 @@
 		size = 25
 	} 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Sirt - Sirt (29000/7250 POPS)
 1734 = {
@@ -3071,18 +3026,12 @@
 		size = 5603
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Benghazi - Benghazi (155000/38750 POPS)
 1735 = {
@@ -3132,18 +3081,12 @@
 		size = 161
 	} 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Darna - Darna (59000/14750 POPS)
 1736 = {
@@ -3153,18 +3096,12 @@
 		size = 11398
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Tobruk - Tobruk (24000/6000 POPS)
 1737 = {
@@ -3174,18 +3111,12 @@
 		size = 4636
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Jaghbub - Jaghbub (13000/3250 POPS)
 1738 = {
@@ -3230,18 +3161,12 @@
 		size = 2512
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Kufra - Kufra (13000/3250 POPS)
 1739 = {
@@ -3286,18 +3211,12 @@
 		size = 2512
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Waddan - Waddan (11000/2750 POPS)
 1740 = {
@@ -3342,18 +3261,12 @@
 		size = 2125
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Suez Canal - Ismailia, Port Said (427000/106750 POPS)
 1755 = {
@@ -3388,11 +3301,11 @@
 		size = 92461
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -3497,11 +3410,11 @@
 		size = 252411
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Wad Madani - Wad Madani (598000/149500 POPS)
@@ -3532,11 +3445,11 @@
 		size = 133696
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Kassala - Kassala (250000/62500 POPS)
@@ -3552,11 +3465,11 @@
 		size = 55893
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Sennar - Sennar (327000/81750 POPS)
@@ -3572,11 +3485,11 @@
 		size = 73108
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Rabak - Rabak (254000/63500 POPS)
@@ -3592,11 +3505,11 @@
 		size = 56787
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Fashoda - Fashoda (178000/44500 POPS)
@@ -3682,11 +3595,11 @@
 		size = 36355
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Suakin - Suakin (214000/53500 POPS)
@@ -3821,11 +3734,11 @@
 		size = 65507
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Obeid - Obeid (541000/135250 POPS)
@@ -3856,11 +3769,11 @@
 		size = 120953
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Nuhud - Abyei (282000/70500 POPS)
@@ -3876,11 +3789,11 @@
 		size = 63046
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Kaduqli - South Kurdufan (237000/59250 POPS)
@@ -3896,11 +3809,11 @@
 		size = 52986
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Fasher - Fasher (618000/154500 POPS)
@@ -3991,11 +3904,11 @@
 		size = 132407
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Junayah - Junayah (554000/138500 POPS)
@@ -4091,11 +4004,11 @@
 		size = 110384
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Waw - Waw (252000/63000 POPS)
@@ -19711,11 +19624,11 @@
 		size = 14550
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Kiel - Schleswig-Holstein (504000/126000 POPS)
@@ -23926,18 +23839,12 @@
 		size = 61879
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
-
+		size = 2000
+	 }
 }
 #Jerusalem - Jerusalem (275000/68750 POPS)
 917 = {
@@ -24037,18 +23944,12 @@
 		size = 50
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
-
+		size = 2000
+	 }
 }
 #Nablus - Nablus (326000/81500 POPS)
 918 = {
@@ -24068,18 +23969,12 @@
 		size = 63731
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
-
 }
 #Jaffa - Jaffa (693000/173250 POPS)
 919 = {
@@ -24209,18 +24104,12 @@
 		size = 55305
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
-
+		size = 2000
+	 }
 }
 #Gaza - Gaza (245000/61250 POPS)
 920 = {
@@ -24300,18 +24189,12 @@
 		size = 598
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
-
+		size = 2000
+	 }
 }
 #Beersheba - Beersheba (9000/2250 POPS)
 921 = {
@@ -24376,16 +24259,11 @@
 		size = 1760
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Nazareth - Nazareth (9000/2250 POPS)
@@ -24451,17 +24329,12 @@
 		size = 1760
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }
 }
 #Ascalon - Ascalon (9000/2250 POPS)
 3347 = {
@@ -24526,17 +24399,12 @@
 		size = 1760
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }
 }
 #Beersheba - Beersheba (9000/2250 POPS)
 3348 = {
@@ -24596,16 +24464,11 @@
 		size = 1760
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Auja - Auja (9000/2250 POPS)
@@ -24666,16 +24529,11 @@
 		size = 1760
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Anguilla - Anguilla (5000/1250 POPS)

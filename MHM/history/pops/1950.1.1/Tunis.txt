@@ -41,16 +41,11 @@
 		size = 124
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Bizerte - Bizerte (567000/141750 POPS)
@@ -76,18 +71,12 @@
 		size = 115678
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Gafsa - Gafsa (825000/206250 POPS)
 1727 = {
@@ -117,18 +106,12 @@
 		size = 168316
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Kairouan - Kairouan (791000/197750 POPS)
 1728 = {
@@ -153,16 +136,11 @@
 		size = 161379
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -179,18 +157,12 @@
 		size = 27542
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Gabes - Gabes (274000/68500 POPS)
 1730 = {
@@ -210,16 +182,10 @@
 		size = 55901
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }

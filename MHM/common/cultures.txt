@@ -1026,8 +1026,8 @@ chinese_cultures = {
 	chinese = {
 		#!religion = { taoism }
 		color = { 163 68 68 }
-		first_names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu Xi }
-		last_names = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Wang Ting Shen Fang Jin Qiu Jingping Xiaoping }
+		first_names = { Be Chen Cheng Deng Dong Duc Gao Hoang Hsia Hu Huang Kong Kwong Le Li Liang Liao Liu Luo Ma Mao Nong Pan Quoc Quynh Tan The Van Wang Xi Xie Yang Yu Zhang Zhu }
+		last_names = { Cao Chan Den Dong Fang Hau Hu Jiang Jin Jingping Khanh Lü Ma Manh Peng Phach Phung Qiu Shen Sun Thu Tian Ting Trieu Wang Wei Wu Xiaoping Ye Zhao }
 	}
 	chinese_cantonese = {
 		#!religion = { taoism }
@@ -1068,12 +1068,6 @@ chinese_cultures = {
 	hani = { #chinese minorities
 		#!religion = { taoism }
 		color = { 184 134 11 }
-		first_names = { Hoang Nong Le Be Van Quoc Quynh The Duc }
-		last_names = { Thu Manh Trieu Khanh Phung Hau Chan Den Phach Cao }
-	}
-	hui = {
-		#!religion = { sunni }
-		color = { 240 230 140 }
 		first_names = { Hoang Nong Le Be Van Quoc Quynh The Duc }
 		last_names = { Thu Manh Trieu Khanh Phung Hau Chan Den Phach Cao }
 	}

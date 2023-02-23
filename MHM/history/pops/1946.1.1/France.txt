@@ -1239,16 +1239,11 @@
 		size = 30000
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -1290,17 +1285,12 @@
 		size = 19528
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Setif - Bouïra, Setif,Bordj Bou Arréridj (750000187500 POPS)
@@ -1356,17 +1346,12 @@
 		size = 24809
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Medea - Relizane, Tissemsilt (27300068250 POPS)
@@ -1422,17 +1407,12 @@
 		size = 12441
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Oran - Oran (421000105250 POPS)
@@ -1533,17 +1513,12 @@
 		size = 31816
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Tlemcen - Tlemcen, Ain Timouchent (35200088000 POPS)
@@ -1634,17 +1609,12 @@
 		size = 56523
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Mustaghanim - Chlef, Ain Defla, Tipaza (638000159500 POPS)
@@ -1700,17 +1670,12 @@
 		size = 5154
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Mascara - Saïda, Sidi Bel Abbès, Mascara (475000118750 POPS)
@@ -1741,17 +1706,12 @@
 		size = 93282
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Constantine - Batna, Oum El Bouaghi, Souk Ahras (588000147000 POPS)
@@ -1842,17 +1802,12 @@
 		size = 97360
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Bone - Annaba, Guelma, Souk Ahras, El Taref (524000131000 POPS)
@@ -1943,17 +1898,12 @@
 		size = 93312
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Biskra - Biskra, Batna, Tébessa, Khenchela (770000192500 POPS)
@@ -1989,17 +1939,12 @@
 		size = 15845
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Ouargla - Ouargla (14600036500 POPS)
@@ -2015,17 +1960,12 @@
 		size = 28671
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Tuggurt - El Oued (17800044500 POPS)
@@ -2051,17 +1991,12 @@
 		size = 1436
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Laghwat - Tiaret , Médéa, Djelfa, Laghouat (888000222000 POPS)
@@ -2097,17 +2032,12 @@
 		size = 174387
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Bechar - Bechar (7200018000 POPS)
@@ -2123,17 +2053,12 @@
 		size = 14139
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Naama - Ain Defla (20400051000 POPS)
@@ -2154,17 +2079,12 @@
 		size = 40061
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Tindouf - Tindouf (4200010500 POPS)
@@ -2175,17 +2095,12 @@
 		size = 8248
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Chenachene - Andar (9000022500 POPS)
@@ -2202,17 +2117,12 @@
 		size = 4000
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #In Salah - Ghardaia (9900024750 POPS)
@@ -2229,17 +2139,12 @@
 		size = 4000
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Ilizi - Ilizi (140003500 POPS)
@@ -2285,16 +2190,11 @@
 		size = 2750
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -2311,17 +2211,12 @@
 		size = 3143
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #In Guezzam - Tamanrasset (260006500 POPS)
@@ -2338,18 +2233,12 @@
 		size = 1000
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
-
+		size = 2000
+	 }  
 }
 #Tin Zawatene - Andar (260006500 POPS)
 1722 = {
@@ -2365,17 +2254,12 @@
 		size = 1000
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Tamanrasset - Tamanrasset (260006500 POPS)
@@ -2391,17 +2275,12 @@
 		size = 1000
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Murzuk - Murzuk (110002750 POPS)
@@ -2447,17 +2326,12 @@
 		size = 2125
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Sabha - Sabha (200005000 POPS)
@@ -2503,17 +2377,12 @@
 		size = 3862
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Ghat - Ghat (240006000 POPS)
@@ -2524,17 +2393,12 @@
 		size = 4506
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Ghadamis - Ghadamis (130003250 POPS)
@@ -2580,17 +2444,12 @@
 		size = 2512
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = berber
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
-	 } 
+		size = 2000
+	 }  
 
 }
 #Nouakchott - Nouakchott (24600061500 POPS)
@@ -2671,16 +2530,11 @@
 		size = 52720
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_hassaniya
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 }
 #Rosso - Rosso (6000015000 POPS)
@@ -2696,18 +2550,12 @@
 		size = 6558
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_hassaniya
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Aleg - Aleg (6900017250 POPS)
 1777 = {
@@ -2722,18 +2570,12 @@
 		size = 8749
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_hassaniya
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Maghama - Maghama (13400033500 POPS)
 1778 = {
@@ -2748,18 +2590,12 @@
 		size = 29200
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_hassaniya
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Shingit - Shingit (310007750 POPS)
 1779 = {
@@ -2769,17 +2605,12 @@
 		size = 6755
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_hassaniya
-		religion = sunni 
-		size = 100
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 100
-	 } 
+		size = 200
+	 }
 
 }
 #Tishit - Tishit (35300088250 POPS)
@@ -2830,18 +2661,12 @@
 		size = 76920
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_hassaniya
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Walata - Walata (9600024000 POPS)
 1781 = {
@@ -2851,18 +2676,12 @@
 		size = 20917
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_hassaniya
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab 
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Bir Murghayn - Bir Murghayn (110002750 POPS)
 1782 = {
@@ -2907,18 +2726,12 @@
 		size = 2397
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_hassaniya
-		religion = sunni 
-		size = 100
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 100
+		size = 200
 	 } 
-
 }
 #Dakar - Dakar (608000152000 POPS)
 1783 = {

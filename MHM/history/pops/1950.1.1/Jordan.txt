@@ -36,16 +36,11 @@
 		size = 63
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -62,16 +57,11 @@
 		size = 24320
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -83,16 +73,11 @@
 		size = 11877
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -139,16 +124,11 @@
 		size = 1886
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -160,16 +140,11 @@
 		size = 7730
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }

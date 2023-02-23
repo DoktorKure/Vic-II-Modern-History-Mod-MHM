@@ -81,16 +81,11 @@
 		size = 5440
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -177,16 +172,11 @@
 		size = 1104
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -243,16 +233,11 @@
 		size = 83
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -304,18 +289,12 @@
 		size = 60
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
-
 }
 #Duqm - Duqm (7000/1750 POPS)
 1172 = {
@@ -350,16 +329,11 @@
 		size = 6
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
@@ -411,16 +385,11 @@
 		size = 42
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion = sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
 		religion = sunni 
-		size = 1000
+		size = 2000
 	 } 
 
 }
