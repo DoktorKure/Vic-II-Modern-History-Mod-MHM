@@ -2,34 +2,29 @@
 935 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 1450
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 1278
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 19530
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  shiite 
+		religion = shiite 
 		size = 6835
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_gulf
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 }

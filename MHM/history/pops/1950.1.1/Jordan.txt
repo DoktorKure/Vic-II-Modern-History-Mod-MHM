@@ -2,32 +2,32 @@
 908 = {
 	soldiers = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 1343
 	 } 
 	aristocrats = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 3140
 	 } 
 	artisans = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 2279
 	 } 
 	farmers = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 45028
 	 } 
 	farmers = {
 		culture = circassians
-		religion =  sunni 
+		religion = sunni 
 		size = 7850
 	 } 
 	farmers = {
 		culture = arab_mashriqi
-		religion =  orthodox 
+		religion = orthodox 
 		size = 6256
 	 } 
 	farmers = {
@@ -36,16 +36,11 @@
 		size = 63
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -53,25 +48,20 @@
 909 = {
 	aristocrats = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 1290
 	 } 
 	farmers = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 24320
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -79,20 +69,15 @@
 910 = {
 	farmers = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 11877
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -100,55 +85,50 @@
 911 = {
 	officers = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 10
 	 } 
 	soldiers = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 42
 	 } 
 	aristocrats = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 100
 	 } 
 	bureaucrats = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 2
 	 } 
 	capitalists = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 12
 	 } 
 	clergymen = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 25
 	 } 
 	artisans = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 72
 	 } 
 	farmers = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 1886
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -156,20 +136,15 @@
 922 = {
 	farmers = {
 		culture = arab_mashriqi
-		religion =  sunni 
+		religion = sunni 
 		size = 7730
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = arab_mashriqi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
