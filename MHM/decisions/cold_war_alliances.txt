@@ -741,7 +741,7 @@ OR = { is_vassal = yes has_country_modifier = neutrality has_country_flag = neut
 
 			has_global_flag = blocsenabled
 
-			NOT = { has_global_flag = dissolve_warsaw_pact }
+			NOT = { has_global_flag = depuppetize_warsaw_pact }
 			NOT = { has_country_modifier = warsaw_pact }
 			NOT = { has_country_modifier = leave_warsaw_pact }
 
@@ -796,21 +796,26 @@ OR = { is_vassal = yes has_country_modifier = neutrality has_country_flag = neut
 
 		allow = {
 			has_country_modifier = warsaw_pact
-			NOT = { vassal_of = RUS }
-			NOT = { 
-				OR = {
-					alliance_with = RUS
-					sphere_owner = { has_country_modifier = warsaw_pact }
-					overlord = { has_country_modifier = warsaw_pact }
+			OR = {
+				has_global_flag = depuppetize_warsaw_pact
+				AND = {
+					NOT = { vassal_of = RUS }
+					NOT = { 
+						OR = {
+							alliance_with = RUS
+							sphere_owner = { has_country_modifier = warsaw_pact }
+							overlord = { has_country_modifier = warsaw_pact }
+						}
+					}
+					OR = { 
+						has_country_modifier = neutrality 
+						has_country_flag = neutrality
+
+						NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+
+						AND = { is_vassal = no NOT = { relation = { who = RUS value = 0 } } }
+					}
 				}
-			}
-			OR = { 
-				has_country_modifier = neutrality 
-				has_country_flag = neutrality
-
-				NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-
-				AND = { is_vassal = no NOT = { relation = { who = RUS value = 0 } } }
 			}
 		}
 
