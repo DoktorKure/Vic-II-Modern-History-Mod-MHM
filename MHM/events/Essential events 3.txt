@@ -5054,8 +5054,7 @@ country_event = {
 		}
 
 		#Angry officers or bureaucrats
-		any_owned_province = {
-			is_core = THIS
+		capital_scope = {
 			any_pop = { OR = { type = officers type = bureaucrats } militancy = 8 }
 		}
 	}
