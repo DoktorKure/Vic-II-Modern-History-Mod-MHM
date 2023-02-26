@@ -74,7 +74,7 @@ country_event = {
 		#War with DSE Greece
 		war = {
 			target = UGR 
-			attacker_goal = { casus_belli = install_democracy } 
+			attacker_goal = { casus_belli = assisted_unification } 
 			defender_goal = { casus_belli = status_quo } 
 			call_ally = yes
 		}
@@ -180,7 +180,7 @@ country_event = {
 		#War with DSE Greece
 		war = {
 			target = UGR 
-			attacker_goal = { casus_belli = install_democracy } 
+			attacker_goal = { casus_belli = assisted_unification } 
 			defender_goal = { casus_belli = status_quo } 
 			call_ally = yes
 		}
@@ -306,10 +306,12 @@ country_event = {
 	option = {
 		name = "Send in the troops!"
 		
+		set_global_flag = ussr_intervenes_GCW_flag
+		
 		#War with Greece
 		war = {
 			target = GRE
-			attacker_goal = { casus_belli = install_communist_gov_cb } 
+			attacker_goal = { casus_belli = assisted_unification } 
 			defender_goal = { casus_belli = status_quo } 
 			call_ally = yes
 		}
@@ -419,15 +421,29 @@ country_event = {
 			owner = { inherit = UGR }
 		}
 		
-		#GRE doesn't exist but UGR does
+		#GRE doesn't exist but UGR does, and Soviets didn't get involved
 		random_owned = {
 			limit = { 
 				owner = { 
 					tag = UGR
 					GRE = { exists = no }
+					NOT = { has_global_flag = ussr_intervenes_GCW_flag }
 				} 
 			}
 			owner = { change_tag = GRE }
+		}
+		
+		#GRE doesn't exist but UGR does, and Soviets intervened in GCW
+		random_owned = {
+			limit = { 
+				owner = { 
+					tag = UGR
+					GRE = { exists = no }
+					has_global_flag = ussr_intervenes_GCW_flag
+				} 
+			}
+			owner = { change_tag = GRE }
+			owner = { RUS = { country_event = 120003 } } #GRE gets Sovietized
 		}
 
 	}
@@ -538,9 +554,30 @@ country_event = {
 		diplomatic_influence = { who = GRE value = 200 }
 
 		#Execute the territorial transfer
-		ENG = { release = CYP } #So that the provinces would be states
-		GRE = { country_event = 90015012 }
-		ENG = { any_owned = { limit = { is_core = GRE } secede_province = GRE } }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { exists = CYP }
+				}
+			}
+			owner = {
+				ENG = { release = CYP } #So that the provinces would be states
+				GRE = { country_event = 90015012 }
+				ENG = { any_owned = { limit = { is_core = GRE } secede_province = GRE } }
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = CYP
+				}
+			}
+			owner = {
+				ENG = { release_vassal = CYP }
+				GRE = { country_event = 90015012 }
+				ENG = { any_owned = { limit = { is_core = GRE } secede_province = GRE } }
+			}
+		}
 		
 		#Domestic reaction
 		any_pop = {

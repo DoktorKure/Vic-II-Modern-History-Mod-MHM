@@ -1332,8 +1332,8 @@ conversion_chance = { # 1.0
 	}
 
 	group = {
-		modifier = { factor = 0.4 country = { religious_policy = moralism } }
-		modifier = { factor = 0.4 country = { religious_policy = pro_atheism } }
+		modifier = { factor = 1.5 country = { religious_policy = moralism } }
+		modifier = { factor = 1.5 country = { religious_policy = pro_atheism } }
 	}
 
 	group = {
@@ -1372,8 +1372,28 @@ conversion_chance = { # 1.0
 	}
 
 	modifier = {
-		factor = 1.0
+		factor = 3.0
 		country = { government = theocracy }
+	}
+
+	modifier = {
+		factor = 10
+		country = { has_country_flag = religious_inquisition_active }
+	}
+
+	group = { #Left-wing governments tend to be extremely atheistic with a major effect on pop religion as evidenced by religious maps of (East) Germany and Czechia
+		modifier = {
+			factor = 10
+			country = { government = proletarian_dictatorship }
+		}
+		modifier = {
+			factor = 10
+			country = { government = proletarian_dictatorship1 }
+		}
+		modifier = {
+			factor = 2
+			country = { government = socialist_democracy }
+		}
 	}
 
 	modifier = {

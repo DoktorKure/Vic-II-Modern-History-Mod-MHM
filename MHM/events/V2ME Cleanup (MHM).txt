@@ -824,6 +824,14 @@ country_event = {
 			}
 			set_country_flag = superstate_flag
 		}
+		
+		#Clean up sphere coup flag
+		any_country = {
+			limit = {
+				has_country_flag = potential_soviet_vassal
+			}
+			clr_country_flag = potential_soviet_vassal
+		}
 
 		################################
 		### Clean up Arab identities ###

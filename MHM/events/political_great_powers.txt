@@ -254,6 +254,20 @@ country_event = {
 
 	option = {
 		name = EVT_19002_A
+		#Set conditions for RUS to get Sovietization event from THIS in event 19006
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = blocsenabled
+					OR = { capital_scope = { continent = europe } tag = TUR } #Soviets would be keen on vassalizing Turkey due to its strategic location
+					any_neighbor_country = { OR = { tag = RUS vassal_of = RUS } }
+					sphere_owner = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+				}
+			}
+			owner = {
+				set_country_flag = potential_soviet_vassal
+			}
+		}
 		sphere_owner = { country_event = 19003 }
 		ai_chance = { factor = 1 }
 	}
@@ -475,9 +489,9 @@ country_event = { # Demand install communist in-power
 	option = {
 		name = EVT_19006_A
 		sphere_owner = { 
-		diplomatic_influence = { who = THIS value = -100 } 
+			diplomatic_influence = { who = THIS value = -100 } 
 			relation = { who = THIS value = -200 } 
-			casus_belli = { target = THIS type = install_communist_gov_cb months = 12  }
+			casus_belli = { target = THIS type = install_communist_gov_cb months = 12 }
 		}
 		
 		#40% chance of a coup instigated by sphere owner succeeding in installing a friendly gov type anyway
@@ -504,7 +518,12 @@ country_event = { # Demand install communist in-power
 				}
 			}
 			random_owned = {
-				limit = { owner = { sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } }
+				limit = {
+					owner = {
+						NOT = { has_country_flag = potential_soviet_vassal }
+						sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
+					}
+				}
 				owner = { 
 					government = proletarian_dictatorship
 					political_reform = none_voting
@@ -518,6 +537,33 @@ country_event = { # Demand install communist in-power
 					political_reform = nobody_gets_out
 					political_reform = two_year_draft
 					political_reform = minorities_oppression
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = potential_soviet_vassal
+						sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
+					}
+				}
+				owner = { 
+					government = proletarian_dictatorship
+					political_reform = none_voting
+					political_reform = ruling_party_opinion
+					political_reform = no_meetings
+					political_reform = capital_punishment
+					political_reform = politicised_service
+					political_reform = state_publishing
+					political_reform = state_controlled_unions
+					political_reform = parties_not_allowed
+					political_reform = nobody_gets_out
+					political_reform = two_year_draft
+					political_reform = minorities_oppression
+					clr_country_flag = potential_soviet_vassal
+				}
+				owner = {
+					RUS = { country_event = 120003 }
 				}
 			}
 			
@@ -536,7 +582,7 @@ country_event = { # Demand install communist in-power
 			
 			add_country_modifier = { name = revolution_chaos duration = 3650 }
 		}
-		ai_chance = { factor = 0.5  }
+		ai_chance = { factor = 0.5 }
 	}
 	
 	option = {
@@ -562,7 +608,12 @@ country_event = { # Demand install communist in-power
 			}
 		}
 		random_owned = {
-			limit = { owner = { sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } }
+			limit = {
+				owner = {
+					NOT = { has_country_flag = potential_soviet_vassal }
+					sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
+				}
+			}
 			owner = { 
 				government = proletarian_dictatorship
 				political_reform = none_voting
@@ -576,6 +627,33 @@ country_event = { # Demand install communist in-power
 				political_reform = nobody_gets_out
 				political_reform = two_year_draft
 				political_reform = minorities_oppression
+			}
+		}
+			
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = potential_soviet_vassal
+					sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
+				}
+			}
+			owner = { 
+				government = proletarian_dictatorship
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = state_publishing
+				political_reform = state_controlled_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+				clr_country_flag = potential_soviet_vassal
+			}
+			owner = {
+				RUS = { country_event = 120003 }
 			}
 		}
 		

@@ -164,7 +164,7 @@ country_event = {
 		inherit = LEB
 		any_pop = { militancy = -4 consciousness = -6 }
 		prestige = 10
-		ai_chance = { factor = 3 }
+		ai_chance = { factor = 0.5 }
 	}
 
 	option = {
@@ -174,24 +174,7 @@ country_event = {
 		relation = { who = IRQ value = -100 } 
 		relation = { who = SYR value = -100 } 
 		prestige = 5
-		ai_chance = { factor = 3 }
-	}
-
-	option = {
-    	name = EVT_8014737_C
-		create_vassal = LEB
-		any_pop = { militancy = -3 consciousness = -5 }
-		prestige = 5
-    		912 = {
-	    		secede_province = SYR
-    		}
-    		914 = {
-	    		secede_province = SYR
-    		}
-    		915 = {
-	    		secede_province = SYR
-    		}
-		ai_chance = { factor = 3 }
+		ai_chance = { factor = 0.4 }
 	}
 
 	option = {
