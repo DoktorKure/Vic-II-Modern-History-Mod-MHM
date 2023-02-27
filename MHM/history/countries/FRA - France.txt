@@ -1,11 +1,6 @@
 capital = 425
 primary_culture = french
-culture = german
-
-#culture = white_french
-
 culture = breton
-#culture = german
 religion = secularism
 government = democracy
 plurality = 19.0
@@ -89,7 +84,6 @@ decision = jointheunsc
 oob = "/FRA_oob.txt"
 
 1950.1.1 = {
-	remove_accepted_culture = german
 	oob = "1950/FRA_oob.txt"
 }
 
