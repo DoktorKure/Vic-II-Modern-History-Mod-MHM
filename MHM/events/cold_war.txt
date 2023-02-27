@@ -553,11 +553,21 @@ country_event = {
 	picture = "endofcoldwarussr"
 	
 	fire_only_once = yes
+	
+	major = yes
 
 	trigger = {
+		tag = RUS
 
 		#USSR or USS
-		RUS = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy rank = 3 } }
+		RUS = {
+			OR = {
+				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
+				government = socialist_democracy
+			}
+			rank = 3 
+		}
 
 		#Not during a Soviet Civil War
 		NOT = { has_global_flag = soviet_civil_war_happening }
@@ -595,6 +605,34 @@ country_event = {
 				value = communist
 			}
 		}
+		any_country = {
+			limit = { exists = yes }
+			any_pop = {
+				ideology = {
+					factor = 0.3
+					value = communist
+				}
+			}
+		}
+		
+		#Non-communist countries experience a wave of instability like 1920s Europe due to surge in communist support and USA being too weak to prop them up against Soviet pressure and subversion
+		any_country = {
+			limit = {
+				exists = yes
+				NOT = {
+					OR = {
+						government = proletarian_dictatorship
+						government = proletarian_dictatorship1
+						government = socialist_democracy
+						ruling_party_ideology = socialist
+						ruling_party_ideology = communist
+						ruling_party_ideology = communist_social
+					}
+				}
+				NOT = { has_country_modifier = revolution_chaos }
+			}
+			add_country_modifier = { name = revolution_chaos duration = 3650 }
+		}
 	}
 
 }
@@ -607,8 +645,13 @@ country_event = {
 	title = EVT_19808_NAME # EVT_19808_NAME;End of the Cold War
 	desc = EVT_19808_DESC # EVT_19808_DESC;With the fall of the USA, the Cold War has ended!
 	picture = "endofcoldwarusa"
+	
+	fire_only_once = yes
+	
+	major = yes
 
 	trigger = {
+		tag = USA
 
 		#Democratic or right-wing USA
 		USA = {
@@ -647,6 +690,31 @@ country_event = {
 				factor = -0.3
 				value = communist
 			}
+		}
+		any_country = {
+			limit = { exists = yes }
+			any_pop = {
+				ideology = {
+					factor = -0.3
+					value = communist
+				}
+			}
+		}
+		
+		#Communist countries experience a wave of instability like IRL due to USSR no longer being able to prop them up
+		any_country = {
+			limit = {
+				exists = yes
+				OR = {
+					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
+					government = socialist_democracy
+					ruling_party_ideology = communist
+					ruling_party_ideology = communist_social
+				}
+				NOT = { has_country_modifier = revolution_chaos }
+			}
+			add_country_modifier = { name = revolution_chaos duration = 3650 }
 		}
 	}
 }
