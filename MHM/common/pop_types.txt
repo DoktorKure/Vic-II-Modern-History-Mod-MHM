@@ -557,14 +557,22 @@ colonialmigration_chance = {
 
     modifier = {
         factor = -0.5
-        NOT = { culture = THIS }
+        location = { NOT = { culture = THIS } }
 		country = { NOT = { has_country_flag = promote_colonial_migration_active } }
     }
 
     modifier = {
-        factor = 0.5
-        NOT = { culture = THIS }
+        factor = 2
+        location = { NOT = { culture = THIS } }
 		country = { has_country_flag = promote_colonial_migration_active }
+    }
+
+    modifier = {
+        factor = 3
+		AND = {
+			location = { NOT = { culture = THIS } }
+			location = { has_province_modifier = pop_replacement_province_modifier }
+		}
     }
     group = {
         modifier = {
