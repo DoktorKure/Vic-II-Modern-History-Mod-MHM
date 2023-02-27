@@ -755,7 +755,7 @@ name = "The $COUNTRY_ADJ$ people have enough of useless diplomacy!"
 
 war = {
 	target = FROM
-	attacker_goal = { casus_belli = dismantle_cb }
+	attacker_goal = { casus_belli = annex_all_cores }
 	defender_goal = { casus_belli = territorial_dispute }
 	call_ally = yes
 }
