@@ -28,6 +28,9 @@ country_event = {
 			militancy = -5 
 			consciousness = 2 
 		}
+		any_owned = {
+			remove_province_modifier = occupied_province
+		}
 	}
 }
 
