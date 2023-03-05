@@ -55,10 +55,11 @@ political_decisions = {
 
 		allow = {
 			OR = {
-					GER = { exists = yes OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } }
-					NGF = { exists = yes OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } }
-					SGF = { exists = yes OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } }
-				}
+				GER = { exists = yes OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } }
+				FRG = { exists = yes OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } }
+				NGF = { exists = yes OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } }
+				SGF = { exists = yes OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } }
+			}
 			is_disarmed = no
 			OR = { has_country_flag = schuman_declaration new_synthesis = 1 }
 			public_switched_telephone_network = 1
