@@ -1062,7 +1062,7 @@ country_event = {
 	mean_time_to_happen = { months = 10 }
 
 	option = {
-		name = "Start mining operations.."
+		name = "Start the mining operations."
 		money = -10000
 		815 = {
 			trade_goods = other_minerals
