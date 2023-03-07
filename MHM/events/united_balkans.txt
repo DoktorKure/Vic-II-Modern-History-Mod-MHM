@@ -30,7 +30,7 @@ country_event = {
 	}
 
 	option = {
-		name = Let's cement our friendship!
+		name = "Let's cement our friendship!"
 		relation = { who = BUL value = 100 } 
 		relation = { who = RUS value = 50 } 
 		any_pop = { militancy = -1 consciousness = -1 }
@@ -39,7 +39,7 @@ country_event = {
 	}
 
 	option = {
-		name = We will never trust each other.
+		name = "We will never trust each other."
 		relation = { who = RUS value = -50 } 
 		relation = { who = BUL value = -50 } 
 		any_pop = { militancy = 2 consciousness = 5 }
