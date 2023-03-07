@@ -192,7 +192,7 @@ offshore_drilling = {
 		}
 		modifier = {
 			factor = 2
-			year = 2030
+			year = 2020
 		}
 		modifier = {
 			factor = 1.02
@@ -295,7 +295,7 @@ sustainable_energy = {
 
 microgeneration = {
 	area = tech_power
-	year = 2030
+	year = 2020
 	cost = 18000
 
 	factory_goods_output = { 
@@ -2073,7 +2073,7 @@ clinical_pharmacology = {
 #AI Guided Manufacturing
 genomics = {
 	area = medicine_tech
-	year = 2030
+	year = 2020
 	cost = 14400
 	
 	#Factory Buffs

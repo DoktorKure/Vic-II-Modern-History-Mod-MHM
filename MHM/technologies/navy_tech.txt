@@ -2171,7 +2171,7 @@ electromagnetic_aircraft_launch = {
 		# We're late with this!
 		modifier = {
 			factor = 1.25
-			year = 2030
+			year = 2040
 		}
 		# Bigger navy, more weight
 		modifier = {
@@ -2945,7 +2945,7 @@ aegis_defense = {
 aegis_combined = {
 #naval_logistics = {
 	area = ship_systems
-	year = 2030
+	year = 2020
 	cost = 18000
 	unciv_military = yes
 	supply_range = 0.50
@@ -3832,7 +3832,7 @@ supercarrier_battle_group = {
 }
 fleet_in_being = {
 	area = naval_doctrine
-	year = 2030
+	year = 2020
 	cost = 18000
 	unciv_military = yes
 	
