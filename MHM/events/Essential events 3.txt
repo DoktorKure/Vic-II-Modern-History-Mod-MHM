@@ -260,6 +260,13 @@ country_event = {
 	option = {
 		name = "We shall unite!"
 		all_core = { add_core = FROM }
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+			}
+			set_country_flag = transfer_to_superstate
+		}
 		any_owned = {
                 secede_province = FROM
         }
