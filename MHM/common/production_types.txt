@@ -525,7 +525,7 @@ machine_parts_factory = {
 		value = 0.25
 	}
 	bonus = {
-		trigger = { trade_goods_in_state = coal }
+		trigger = { has_building = aluminium_factory }
 		value = 0.25
 	}
 }
