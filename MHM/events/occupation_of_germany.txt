@@ -2012,25 +2012,12 @@ country_event = {
 
 	trigger = {
 		tag = NET
-		year = 1947
 		NOT = { has_global_flag = 1950_start_date_flag }
 		NOT = { year = 1990 }
-		
-		is_vassal = no
-		
+		OG3 = { exists = yes }
 		NGF = { exists = no }
 		FRG = { exists = no }
 		GER = { exists = no }
-		
-		ENG = { 
-			is_vassal = no
-			owns = 575
-			owns = 576
-			owns = 577
-			owns = 581
-			owns = 542
-			owns = 543
-		}
 	}
 
 	mean_time_to_happen = { 
@@ -2038,7 +2025,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Request for German lands as reparations"
+		name = "Request for German lands as reparations!"
 		prestige = 25
 		badboy = 5
 		ENG = { country_event = 1512271 }
@@ -2046,13 +2033,13 @@ country_event = {
 	}
 
 	option = {
-		name = "Keep Germany's territorial borders"
+		name = "It's better for us to keep Germany's territorial borders."
 		money = 500000
 		ai_chance = { factor = 0.1 }
 	}
 }
 
-#Dutch annexation of German lands - ENG
+#Dutch annexation of German lands - ENG approves
 country_event = {
 	id = 1512271
 	title = "Bakker-Schut Plan"
@@ -2070,23 +2057,34 @@ country_event = {
 	}
 
 	option = {
-		name = "Accept the Dutch request"
+		name = "Accept the Dutch request."
 		
 		#Get a bribe
 		money = 500000
-		
 		relation = { who = NET value = 200 }
-		
-		#Cede German lands
+		OG3 = { country_event = 8006806 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+	
+#Dutch annexation of German lands - OG3 is forced to transfer provinces
+country_event = {
+	id = 8006806
+	title = "Bakker-Schut Plan"
+	desc = EVTDESC1512270
+	picture = "dutch_annexation_ger"
+	is_triggered_only = yes 
+	
+	#Cede German lands
+	option = { 
+		name = "What hand would not wither that binds itself and us in these fetters?"
 		575 = { secede_province = NET }
 		576 = { secede_province = NET }
 		577 = { secede_province = NET }
 		581 = { secede_province = NET }
 		542 = { secede_province = NET }
 		543 = { secede_province = NET }
-		ai_chance = { factor = 0.1 }
-	}
-
+	}	
 }
 
 #Return of the Hohenzollern monarchy in Germany
