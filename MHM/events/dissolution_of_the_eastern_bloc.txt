@@ -163,9 +163,9 @@ country_event = {
 		random_owned = { limit = { owner = { is_possible_vassal = MGL } } owner = { release = MGL MGL = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
 		
 		#Release any Korean Cores
-		random_owned = { limit = { owner = { exists = NKO } } owner = { any_owned = { limit = { is_core = NKO } secede_province = NKO } } }
-		random_owned = { limit = { owner = { exists = SKO } } owner = { any_owned = { limit = { is_core = SKO } secede_province = SKO } } }
-		random_owned = { limit = { owner = { exists = KOR } } owner = { any_owned = { limit = { is_core = KOR } secede_province = KOR } } }
+		random_owned = { limit = { owner = { exists = NKO } } owner = { any_owned = { limit = { is_core = NKO NOT = { is_core = RUS } } secede_province = NKO } } }
+		random_owned = { limit = { owner = { exists = SKO } } owner = { any_owned = { limit = { is_core = SKO NOT = { is_core = RUS } } secede_province = SKO } } }
+		random_owned = { limit = { owner = { exists = KOR } } owner = { any_owned = { limit = { is_core = KOR NOT = { is_core = RUS } } secede_province = KOR } } }
 		
 		random_owned = { limit = { owner = { is_possible_vassal = KOR } } owner = { release = KOR KOR = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
 		random_owned = { limit = { owner = { is_possible_vassal = SKO } } owner = { release = SKO SKO = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
