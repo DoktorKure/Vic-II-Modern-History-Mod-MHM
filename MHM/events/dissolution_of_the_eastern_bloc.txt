@@ -130,7 +130,6 @@ country_event = {
 		set_global_flag = german_reunification_allowed
 		any_country = {
 			limit = { has_country_modifier = warsaw_pact }
-			remove_country_modifier = warsaw_pact
 			leave_alliance = THIS
 			any_pop = { 
 				limit = { strata = poor } 
