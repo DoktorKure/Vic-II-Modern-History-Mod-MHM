@@ -8050,8 +8050,8 @@ in_disrepair = {
 }
 
 stack_overflow = {
-	goods_demand = 0.25
-	tax_efficiency = -0.25
+	goods_demand = 1.25
+	tax_efficiency = -0.95
 	icon = 9
 }
 

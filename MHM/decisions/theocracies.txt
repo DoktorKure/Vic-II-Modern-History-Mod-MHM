@@ -8,21 +8,24 @@ political_decisions = {
 			has_unclaimed_cores = yes
 			government = theocracy
 		}
+		
 		allow = {
 			war = no
 			is_vassal = no
 			is_disarmed = no
-	NOT = { has_country_modifier = relations_timer }
+			NOT = { has_country_modifier = relations_timer }
 		}
+		
 		effect = {
-add_country_modifier = { name = relations_timer duration = 450 }
+			add_country_modifier = { name = relations_timer duration = 450 }
 			badboy = 5
-any_country = { limit = { exists = yes war = no NOT = { truce_with = THIS } any_owned_province = { is_core = THIS } } country_event = 1014800 }
+			any_country = { limit = { exists = yes war = no NOT = { truce_with = THIS } any_owned_province = { is_core = THIS } } country_event = 1014800 }
 		}
+		
 		ai_will_do = {
 			factor = 1
-		modifier = { factor = 0 badboy = 0.75 }
-		modifier = { factor = 0 war_exhaustion = 50 }
+			modifier = { factor = 0 badboy = 0.75 }
+			modifier = { factor = 0 war_exhaustion = 50 }
 		}
 	}
 
@@ -32,9 +35,11 @@ any_country = { limit = { exists = yes war = no NOT = { truce_with = THIS } any_
 			globalization = 1 #2000
 			has_country_flag = desecularized
 			NOT = { has_country_modifier = relations_timer }
-			government = theocracy
+			OR = { government = theocracy government = absolute_monarchy }
 			ruling_party_ideology = traditionalist
 		}
+		
+		allow = { }
 
 		effect = {
 			prestige = 40
@@ -49,7 +54,7 @@ any_country = { limit = { exists = yes war = no NOT = { truce_with = THIS } any_
 				relation = { who = THIS value = -40 }
 				random_owned = {
 					limit = { any_pop = { religion = THIS } has_national_minority = yes }
-					province_event = { id = 1511119 }
+					province_event = { id = 1511119 days = 1 }
 					state_scope = {
 						any_pop = {
 							limit = { religion = THIS }
@@ -61,7 +66,7 @@ any_country = { limit = { exists = yes war = no NOT = { truce_with = THIS } any_
 						}
 						any_pop = {
 							limit = { NOT = { religion = THIS } }
-							consciousness = -3
+							militancy = 3
 							ideology = {
 								value = populist
 								factor = 0.35
@@ -70,10 +75,61 @@ any_country = { limit = { exists = yes war = no NOT = { truce_with = THIS } any_
 					}
 				}
 				# CBs against sponsor; democratically elected communists get both kinds
-				random_owned = { limit = { owner = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } } } owner = { casus_belli = { target = THIS type = install_communist_gov_cb months = 36 } } }
-				random_owned = { limit = { owner = { OR = { government = democracy government = hms_government government = hms_government1 government = socialist_democracy } } } owner = { casus_belli = { target = THIS type = install_democracy months = 36 } } }
-				#random_owned = { limit = { owner = { OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship } } } owner = { casus_belli = { target = THIS type = install_authoritarian_regime months = 36 } } }
-				#random_owned = { limit = { owner = { government = theocracy } } owner = { casus_belli = { target = THIS type = install_theocratic_regime months = 36 } } }
+				random_owned = {
+					limit = {
+						owner = {
+							OR = {
+								ruling_party_ideology = communist
+								ruling_party_ideology = communist_social
+							}
+						}
+					}
+					owner = { casus_belli = { target = THIS type = install_communist_gov_cb months = 36 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							OR = {
+								government = democracy
+								government = democracy1
+								government = hms_government
+								government = hms_government1
+								government = socialist_democracy
+							}
+						}
+					}
+					owner = { casus_belli = { target = THIS type = install_democracy months = 36 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							OR = {
+								government = presidential_dictatorship
+								government = sectarian_dictatorship
+								government = nationalist_dictatorship
+							}
+						}
+					}
+					owner = { casus_belli = { target = THIS type = install_authoritarian_regime months = 36 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							government = absolute_monarchy
+							THIS = { NOT = { government = absolute_monarchy } }
+						}
+					}
+					owner = { casus_belli = { target = THIS type = install_absolute_monarchy months = 36 } }
+				}
+				random_owned = {
+					limit = {
+						owner = {
+							government = theocracy
+							THIS = { NOT = { government = theocracy } }
+						}
+					}
+					owner = { casus_belli = { target = THIS type = install_theocratic_regime months = 36 } }
+				}
 			}
 			any_pop = {
 				limit = { religion = THIS }

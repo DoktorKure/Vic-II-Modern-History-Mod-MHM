@@ -21,8 +21,11 @@ political_decisions = {
 		potential = {
 			ai = no
 		
-			#Only available to colonial nations
-			colonial_nation = yes
+			OR = {
+				colonial_nation = yes
+				
+				has_country_flag = colonial_overlord #For nations with colonial puppets but not actually having what the game recognizes as colonial provinces
+			}
 			
 			#Must have at least one colonial puppet
 			num_of_vassals = 1

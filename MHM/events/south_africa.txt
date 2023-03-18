@@ -384,6 +384,8 @@ country_event = {
 				}
 			}
 			owner = {
+				release_vassal = NAM
+				
 				NAM = {
 					#SWAPO support
 					any_pop = { 
@@ -402,6 +404,14 @@ country_event = {
 						}
 						ideology = { factor = 0.30 value = communist }
 					}
+			
+					war = {
+						target = SAF
+						attacker_goal = { casus_belli = become_independent_colony }
+						defender_goal = { casus_belli = colonial_war }
+						call_ally = no
+					}
+
 					any_owned = {
 						limit = {
 							NOT = {
@@ -414,14 +424,6 @@ country_event = {
 						}
 						change_controller = SAF
 					}
-				}
-				release_vassal = NAM
-		
-				war = {
-					target = NAM
-					attacker_goal = { casus_belli = colonial_war }
-					defender_goal = { casus_belli = become_independent_colony }
-					call_ally = no
 				}
 			}
 		}
@@ -2379,7 +2381,8 @@ country_event = {
 					exists = BOT
 				}
 			}
-			owner = { inherit = BOT }
+			owner = { create_vassal = BOT }
+			owner = { BOT = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative } }
 		}
 		random_owned = {
 			limit = {
@@ -2403,7 +2406,8 @@ country_event = {
 					exists = SWA
 				}
 			}
-			owner = { inherit = SWA }
+			owner = { create_vassal = SWA }
+			owner = { SWA = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative } }
 		}
 		random_owned = {
 			limit = {
@@ -2427,7 +2431,8 @@ country_event = {
 					exists = LES
 				}
 			}
-			owner = { inherit = LES }
+			owner = { create_vassal = LES }
+			owner = { LES = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative } }
 		}
 		random_owned = {
 			limit = {
@@ -2463,6 +2468,7 @@ country_event = {
 				}
 			}
 			owner = { create_vassal = BOT }
+			owner = { BOT = { government = hms_government country_event = 800054 ruling_party_ideology = conservative } }
 		}
 		random_owned = {
 			limit = {
@@ -2478,6 +2484,7 @@ country_event = {
 					} 
 				}
 				release_vassal = BOT
+				BOT = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative }
 			}
 		}
 		
@@ -2489,6 +2496,7 @@ country_event = {
 				}
 			}
 			owner = { create_vassal = SWA }
+			owner = { SWA = { government = hms_government country_event = 800054 ruling_party_ideology = conservative } }
 		}
 		random_owned = {
 			limit = {
@@ -2504,6 +2512,7 @@ country_event = {
 					} 
 				}
 				release_vassal = SWA
+				SWA = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative }
 			}
 		}
 		
@@ -2515,6 +2524,7 @@ country_event = {
 				}
 			}
 			owner = { create_vassal = LES }
+			owner = { LES = { government = hms_government country_event = 800054 ruling_party_ideology = conservative } }
 		}
 		random_owned = {
 			limit = {
@@ -2530,12 +2540,9 @@ country_event = {
 					} 
 				}
 				release_vassal = LES
+				LES = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative }
 			}
 		}
-
-		BOT = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative }
-		LES = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative }
-		SWA = { government = colonial_government country_event = 800054 ruling_party_ideology = conservative }
 
 		sphere_owner = { 
 			diplomatic_influence = { who = BOT value = 200 } 

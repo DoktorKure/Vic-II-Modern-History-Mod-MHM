@@ -397,6 +397,7 @@ political_decisions = {
 		
 		effect = {
 			prestige = 20
+			set_country_flag = european_cultural_identity
 			all_core = { add_core = XEU }
 			change_tag = XEU
 		}
@@ -489,6 +490,153 @@ political_decisions = {
 			any_owned = { add_province_modifier = { name = currency_union_province duration = -1 } }
 			all_core = { add_core = XEU }
 			prestige = 10
+		}
+		
+		ai_will_do = { factor = 1 }	
+	}
+	
+	pan_europeanism = {
+		picture = "pan_europeanism"
+		potential = {
+			tag = XEU
+			NOT = { has_country_flag = pan_european_identity }
+		}
+
+		allow = {
+			OR = {
+				ruling_party_ideology = nationalist
+				ruling_party_ideology = populist
+				ruling_party_ideology = communist
+				ruling_party_ideology = communist_social
+			}
+			OR = {
+				government = nationalist_dictatorship
+				government = sectarian_dictatorship
+				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
+			}
+			war = no
+		}
+
+		effect = {
+			set_country_flag = pan_european_identity
+			clr_country_flag = european_cultural_identity
+			
+			#Force assimilation
+			remove_accepted_culture = french
+			remove_accepted_culture = breton
+			remove_accepted_culture = occitans
+			remove_accepted_culture = padanian
+			remove_accepted_culture = italian
+			remove_accepted_culture = insular_mediterranean
+			remove_accepted_culture = basque
+			remove_accepted_culture = catalan
+			remove_accepted_culture = spanish
+			remove_accepted_culture = byelorussian
+			remove_accepted_culture = russian
+			remove_accepted_culture = polish
+			remove_accepted_culture = ukrainian
+			remove_accepted_culture = serb
+			remove_accepted_culture = bulgarian
+			remove_accepted_culture = croat
+			remove_accepted_culture = bosniak
+			remove_accepted_culture = slovene
+			remove_accepted_culture = irish
+			remove_accepted_culture = british
+			remove_accepted_culture = scottish
+			remove_accepted_culture = welsh
+			remove_accepted_culture = estonian
+			remove_accepted_culture = latvian
+			remove_accepted_culture = lithuanian
+			remove_accepted_culture = hungarian
+			remove_accepted_culture = german
+			remove_accepted_culture = south_german
+			remove_accepted_culture = dutch
+			remove_accepted_culture = czech
+			remove_accepted_culture = slovak
+			remove_accepted_culture = greek
+			remove_accepted_culture = danish
+			remove_accepted_culture = finnish
+			remove_accepted_culture = norwegian
+			remove_accepted_culture = finno_ugrian
+			remove_accepted_culture = swedish
+			remove_accepted_culture = albanian
+			remove_accepted_culture = romanian
+			remove_accepted_culture = portuguese
+		}
+		
+		ai_will_do = { factor = 1 }	
+	}
+	
+	add_european_cultures = {
+		picture = "add_european_cultures"
+		potential = {
+			tag = XEU
+			NOT = { has_country_flag = european_cultural_identity }
+		}
+
+		allow = {
+			OR = {
+				ruling_party_ideology = socialist
+				ruling_party_ideology = big_tent
+				ruling_party_ideology = progressive
+				ruling_party_ideology = liberal
+			}
+			OR = {
+				government = democracy
+				government = democracy1
+				government = hms_government
+				government = hms_government1
+				government = socialist_democracy
+			}
+			war = no
+		}
+
+		effect = {
+			set_country_flag = european_cultural_identity
+			clr_country_flag = pan_european_identity
+			
+			#Add cultures
+			add_accepted_culture = french
+			add_accepted_culture = breton
+			add_accepted_culture = occitans
+			add_accepted_culture = padanian
+			add_accepted_culture = italian
+			add_accepted_culture = insular_mediterranean
+			add_accepted_culture = basque
+			add_accepted_culture = catalan
+			add_accepted_culture = spanish
+			add_accepted_culture = byelorussian
+			add_accepted_culture = russian
+			add_accepted_culture = polish
+			add_accepted_culture = ukrainian
+			add_accepted_culture = serb
+			add_accepted_culture = bulgarian
+			add_accepted_culture = croat
+			add_accepted_culture = bosniak
+			add_accepted_culture = slovene
+			add_accepted_culture = irish
+			add_accepted_culture = british
+			add_accepted_culture = scottish
+			add_accepted_culture = welsh
+			add_accepted_culture = estonian
+			add_accepted_culture = latvian
+			add_accepted_culture = lithuanian
+			add_accepted_culture = hungarian
+			add_accepted_culture = german
+			add_accepted_culture = south_german
+			add_accepted_culture = dutch
+			add_accepted_culture = czech
+			add_accepted_culture = slovak
+			add_accepted_culture = greek
+			add_accepted_culture = danish
+			add_accepted_culture = finnish
+			add_accepted_culture = norwegian
+			add_accepted_culture = finno_ugrian
+			add_accepted_culture = swedish
+			add_accepted_culture = albanian
+			add_accepted_culture = romanian
+			add_accepted_culture = portuguese
 		}
 		
 		ai_will_do = { factor = 1 }	
