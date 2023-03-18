@@ -798,7 +798,7 @@ OR = { is_vassal = yes has_country_modifier = neutrality has_country_flag = neut
 			has_country_modifier = warsaw_pact
 			OR = {
 				has_global_flag = depuppetize_warsaw_pact
-				AND = {
+				OR = {
 					NOT = { vassal_of = RUS }
 					NOT = { 
 						OR = {

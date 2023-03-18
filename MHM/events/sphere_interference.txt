@@ -1,0 +1,418 @@
+#Interfere with sphere politics - independent
+country_event = {
+	id = 1610042
+	title = "Foreign Interference in $COUNTRY_ADJ$ Politics"
+	desc = EVTDESC1610042
+	picture = "interfering_with_sphere"
+
+	trigger = {
+		part_of_sphere = yes
+		sphere_owner = { has_country_modifier = sphere_interference }
+		is_vassal = no
+
+		OR = { 
+			AND = { sphere_owner = { ruling_party_ideology = traditionalist } NOT = { has_country_flag = sphere_traditionalist } }
+			AND = { sphere_owner = { ruling_party_ideology = conservative } NOT = { has_country_flag = sphere_conservative } }
+			AND = { sphere_owner = { ruling_party_ideology = big_tent } NOT = { has_country_flag = sphere_big_tent } }
+			AND = { sphere_owner = { ruling_party_ideology = socialist } NOT = { has_country_flag = sphere_socialist } }
+			AND = { sphere_owner = { ruling_party_ideology = communist } NOT = { has_country_flag = sphere_communist } }
+			AND = { sphere_owner = { ruling_party_ideology = communist_social } NOT = { has_country_flag = sphere_communist_social } }
+			AND = { sphere_owner = { ruling_party_ideology = populist } NOT = { has_country_flag = sphere_populist } }
+			AND = { sphere_owner = { ruling_party_ideology = nationalist } NOT = { has_country_flag = sphere_nationalist } }
+			AND = { sphere_owner = { ruling_party_ideology = liberal } NOT = { has_country_flag = sphere_liberal } }
+			AND = { sphere_owner = { ruling_party_ideology = progressive } NOT = { has_country_flag = sphere_progressive } }
+		}
+	}
+
+	mean_time_to_happen = { 
+		months = 6
+	}
+
+	option = {
+		name = "We can't do anything"
+		prestige_factor = -0.01
+		sphere_owner = { relation = { who = THIS value = -50 } }
+
+		clr_country_flag = sphere_traditionalist
+		clr_country_flag = sphere_conservative
+		clr_country_flag = sphere_big_tent
+		clr_country_flag = sphere_socialist
+		clr_country_flag = sphere_communist
+		clr_country_flag = sphere_communist_social
+		clr_country_flag = sphere_populist
+		clr_country_flag = sphere_nationalist
+		clr_country_flag = sphere_liberal
+		clr_country_flag = sphere_progressive
+
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = traditionalist } } } owner = { set_country_flag = sphere_traditionalist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = conservative } } } owner = { set_country_flag = sphere_conservative } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = big_tent } } } owner = { set_country_flag = sphere_big_tent } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = socialist } } } owner = { set_country_flag = sphere_socialist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist } } } owner = { set_country_flag = sphere_communist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist_social } } } owner = { set_country_flag = sphere_communist_social } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = populist } } } owner = { set_country_flag = sphere_populist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = nationalist } } } owner = { set_country_flag = sphere_nationalist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = liberal } } } owner = { set_country_flag = sphere_liberal } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = progressive } } } owner = { set_country_flag = sphere_progressive } }
+
+		ai_chance = { 
+			factor = 0.7 
+			modifier = { 
+				factor = 1
+				AND = {
+					sphere_owner = { 
+						OR = { 
+							ruling_party_ideology = nationalist 
+							ruling_party_ideology = populist
+							ruling_party_ideology = traditionalist 
+							alliance_with = THIS 
+							relation = { who = THIS value = 50 } 
+						} 
+					}
+					OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = traditionalist } 
+				}
+			}
+			modifier = { 
+				factor = 1
+				AND = {
+					sphere_owner = { 
+						OR = { 
+							ruling_party_ideology = conservative 
+							ruling_party_ideology = big_tent
+							ruling_party_ideology = liberal 
+							alliance_with = THIS 
+							relation = { who = THIS value = 50 } 
+						} 
+					}
+					OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent ruling_party_ideology = liberal } 
+				}
+			}
+			modifier = { 
+				factor = 1
+				AND = {
+					sphere_owner = { 
+						OR = { 
+							ruling_party_ideology = progressive
+							ruling_party_ideology = socialist
+							alliance_with = THIS 
+							relation = { who = THIS value = 50 } 
+						} 
+					}
+					OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist } 
+				}
+			}
+			modifier = { 
+				factor = 1
+				AND = {
+					sphere_owner = { 
+						OR = { 
+							ruling_party_ideology = communist
+							ruling_party_ideology = communist_social
+							alliance_with = THIS 
+							relation = { who = THIS value = 50 } 
+						} 
+					}
+					OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } 
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "Sever ties with our sphere master!"
+		sphere_owner = { relation = { who = THIS value = -200 } diplomatic_influence = { who = THIS value = -200 } }
+
+		clr_country_flag = sphere_traditionalist
+		clr_country_flag = sphere_conservative
+		clr_country_flag = sphere_big_tent
+		clr_country_flag = sphere_socialist
+		clr_country_flag = sphere_communist
+		clr_country_flag = sphere_communist_social
+		clr_country_flag = sphere_populist
+		clr_country_flag = sphere_nationalist
+		clr_country_flag = sphere_liberal
+		clr_country_flag = sphere_progressive
+
+		ai_chance = { 
+			factor = 0.3
+			modifier = { 
+				factor = 1
+				AND = {
+					sphere_owner = { #Doesn't share ideology type and has poor relations
+						NOT = {
+							OR = { 
+								ruling_party_ideology = nationalist 
+								ruling_party_ideology = populist
+								ruling_party_ideology = traditionalist
+							}
+							alliance_with = THIS 
+							relation = { who = THIS value = 50 }
+						}
+					}
+					OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = traditionalist }
+				}
+			}
+			modifier = { 
+				factor = 1
+				AND = {
+					sphere_owner = { #Doesn't share ideology type and has poor relations
+						NOT = {
+							OR = { 
+								ruling_party_ideology = socialist
+								ruling_party_ideology = communist 
+								ruling_party_ideology = communist_social
+							}
+							alliance_with = THIS 
+							relation = { who = THIS value = 50 }
+						}
+					}
+					OR = { ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
+				}
+			}
+			modifier = { 
+				factor = 1
+				AND = {
+					sphere_owner = { #radical right-wing doesn't like left-wing ideologies, period
+						OR = {
+							ruling_party_ideology = progressive 
+							ruling_party_ideology = socialist
+							ruling_party_ideology = communist
+							ruling_party_ideology = communist_social
+						} 
+					}
+					OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = traditionalist }
+				}
+			}
+			modifier = { 
+				factor = 1
+				AND = {
+					sphere_owner = { #left-wing doesn't like radical right-wing ideologies, period
+						OR = {
+							ruling_party_ideology = nationalist 
+							ruling_party_ideology = populist
+							ruling_party_ideology = traditionalist
+						} 
+					}
+					OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social }
+				}
+			}
+			modifier = { 
+				factor = 1
+				AND = {
+					sphere_owner = { #moderate right-wing doesn't like radical left-wing ideologies, period
+						OR = {
+							ruling_party_ideology = communist 
+							ruling_party_ideology = communist_social
+						} 
+					}
+					OR = { ruling_party_ideology = liberal ruling_party_ideology = conservative ruling_party_ideology = big_tent }
+				}
+			}
+		}
+	}
+
+}
+
+#Interfere with sphere politics - vassal
+country_event = {
+	id = 1610043
+	title = "Foreign Interference in $COUNTRY_ADJ$ Politics"
+	desc = EVTDESC1610042
+	picture = "interfering_with_sphere"
+
+	trigger = {
+		part_of_sphere = yes
+		sphere_owner = { has_country_modifier = sphere_interference }
+		is_vassal = yes
+
+		OR = { 
+			AND = { sphere_owner = { ruling_party_ideology = traditionalist } NOT = { has_country_flag = sphere_traditionalist } }
+			AND = { sphere_owner = { ruling_party_ideology = conservative } NOT = { has_country_flag = sphere_conservative } }
+			AND = { sphere_owner = { ruling_party_ideology = big_tent } NOT = { has_country_flag = sphere_big_tent } }
+			AND = { sphere_owner = { ruling_party_ideology = socialist } NOT = { has_country_flag = sphere_socialist } }
+			AND = { sphere_owner = { ruling_party_ideology = communist } NOT = { has_country_flag = sphere_communist } }
+			AND = { sphere_owner = { ruling_party_ideology = communist_social } NOT = { has_country_flag = sphere_communist_social } }
+			AND = { sphere_owner = { ruling_party_ideology = populist } NOT = { has_country_flag = sphere_populist } }
+			AND = { sphere_owner = { ruling_party_ideology = nationalist } NOT = { has_country_flag = sphere_nationalist } }
+			AND = { sphere_owner = { ruling_party_ideology = liberal } NOT = { has_country_flag = sphere_liberal } }
+			AND = { sphere_owner = { ruling_party_ideology = progressive } NOT = { has_country_flag = sphere_progressive } }
+		}
+
+	}
+
+	mean_time_to_happen = { 
+		months = 3
+	}
+
+	option = {
+		name = "We can't do anything"
+		prestige_factor = -0.01
+		sphere_owner = { relation = { who = THIS value = -50 } }
+
+		clr_country_flag = sphere_traditionalist
+		clr_country_flag = sphere_conservative
+		clr_country_flag = sphere_big_tent
+		clr_country_flag = sphere_socialist
+		clr_country_flag = sphere_communist
+		clr_country_flag = sphere_communist_social
+		clr_country_flag = sphere_populist
+		clr_country_flag = sphere_nationalist
+		clr_country_flag = sphere_liberal
+		clr_country_flag = sphere_progressive
+
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = traditionalist } } } owner = { set_country_flag = sphere_traditionalist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = conservative } } } owner = { set_country_flag = sphere_conservative } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = big_tent } } } owner = { set_country_flag = sphere_big_tent } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = socialist } } } owner = { set_country_flag = sphere_socialist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist } } } owner = { set_country_flag = sphere_communist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist_social } } } owner = { set_country_flag = sphere_communist_social } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = populist } } } owner = { set_country_flag = sphere_populist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = nationalist } } } owner = { set_country_flag = sphere_nationalist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = liberal } } } owner = { set_country_flag = sphere_liberal } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = progressive } } } owner = { set_country_flag = sphere_progressive } }
+	}
+
+}
+
+#Interfere with sphere politics - same ideology
+country_event = {
+	id = 1610152
+	title = "Foreign Interference in $COUNTRY_ADJ$ Politics"
+	desc = EVTDESC1610152
+	picture = "interfering_with_sphere"
+
+	trigger = {
+		part_of_sphere = yes
+		sphere_owner = { has_country_modifier = sphere_interference }
+		is_vassal = no
+
+		OR = { 
+
+			AND = { sphere_owner = { ruling_party_ideology = traditionalist } ruling_party_ideology = traditionalist NOT = { has_country_flag = sphere_traditionalist } }
+			AND = { sphere_owner = { ruling_party_ideology = conservative } ruling_party_ideology = conservative NOT = { has_country_flag = sphere_conservative } }
+			AND = { sphere_owner = { ruling_party_ideology = big_tent } ruling_party_ideology = big_tent NOT = { has_country_flag = sphere_big_tent } }
+			AND = { sphere_owner = { ruling_party_ideology = socialist } ruling_party_ideology = socialist NOT = { has_country_flag = sphere_socialist } }
+			AND = { sphere_owner = { ruling_party_ideology = communist } ruling_party_ideology = communist NOT = { has_country_flag = sphere_communist } }
+			AND = { sphere_owner = { ruling_party_ideology = communist_social } ruling_party_ideology = communist_social NOT = { has_country_flag = sphere_communist_social } }
+			AND = { sphere_owner = { ruling_party_ideology = populist } ruling_party_ideology = populist NOT = { has_country_flag = sphere_populist } }
+			AND = { sphere_owner = { ruling_party_ideology = nationalist } ruling_party_ideology = nationalist NOT = { has_country_flag = sphere_nationalist } }
+			AND = { sphere_owner = { ruling_party_ideology = liberal } ruling_party_ideology = liberal NOT = { has_country_flag = sphere_liberal } }
+			AND = { sphere_owner = { ruling_party_ideology = progressive } ruling_party_ideology = progressive NOT = { has_country_flag = sphere_progressive } }
+		}
+
+	}
+
+	#No MTTH as we need this to fire before 1610042
+
+	option = {
+		name = "We welcome this development"
+		clr_country_flag = sphere_traditionalist
+		clr_country_flag = sphere_conservative
+		clr_country_flag = sphere_big_tent
+		clr_country_flag = sphere_socialist
+		clr_country_flag = sphere_communist
+		clr_country_flag = sphere_communist_social
+		clr_country_flag = sphere_populist
+		clr_country_flag = sphere_nationalist
+		clr_country_flag = sphere_liberal
+		clr_country_flag = sphere_progressive
+
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = traditionalist } } } owner = { set_country_flag = sphere_traditionalist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = conservative } } } owner = { set_country_flag = sphere_conservative } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = big_tent } } } owner = { set_country_flag = sphere_big_tent } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = socialist } } } owner = { set_country_flag = sphere_socialist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist } } } owner = { set_country_flag = sphere_communist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist_social } } } owner = { set_country_flag = sphere_communist_social } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = populist } } } owner = { set_country_flag = sphere_populist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = nationalist } } } owner = { set_country_flag = sphere_nationalist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = liberal } } } owner = { set_country_flag = sphere_liberal } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = progressive } } } owner = { set_country_flag = sphere_progressive } }
+
+		ai_chance = { 
+			factor = 0.9
+		}
+	}
+
+	option = {
+		name = "We will not allow our sovereignty to be undermined!"
+		sphere_owner = { relation = { who = THIS value = -200 } diplomatic_influence = { who = THIS value = -200 } }
+
+		clr_country_flag = sphere_traditionalist
+		clr_country_flag = sphere_conservative
+		clr_country_flag = sphere_big_tent
+		clr_country_flag = sphere_socialist
+		clr_country_flag = sphere_communist
+		clr_country_flag = sphere_communist_social
+		clr_country_flag = sphere_populist
+		clr_country_flag = sphere_nationalist
+		clr_country_flag = sphere_liberal
+		clr_country_flag = sphere_progressive
+
+		ai_chance = { 
+			factor = 0.1
+		}
+	}
+
+}
+
+#Non GPs lose the interfering with sphere modifier
+country_event = {
+	id = 1610041
+	title = "$COUNTRY_ADJ$ Global Influence Fades"
+	desc = "$COUNTRY$ is no longer a Great Power hence it cannot continue to promote its ideology in the $COUNTRY_ADJ$ sphere."
+	picture = "interfering_with_sphere"
+
+	trigger = {
+		has_country_modifier = sphere_interference
+		is_greater_power = no
+	}
+
+	option = {
+		name = "We must make $COUNTRY$ great again!"
+		remove_country_modifier = sphere_interference
+	}
+
+}
+
+#Non GPs lose the interfering with sphere modifier
+country_event = {
+	id = 1610044
+	title = "End of Foreign Interference in $COUNTRY_ADJ$"
+	desc = EVTDESC1610044
+	picture = "interfering_with_sphere"
+
+	trigger = {
+		OR = {
+			part_of_sphere = no
+			AND = { part_of_sphere = yes sphere_owner = { NOT = { has_country_modifier = sphere_interference } } }
+		}
+
+		OR = { 
+			has_country_flag = sphere_traditionalist
+			has_country_flag = sphere_conservative
+			has_country_flag = sphere_big_tent
+			has_country_flag = sphere_socialist
+			has_country_flag = sphere_communist
+			has_country_flag = sphere_communist_social
+			has_country_flag = sphere_populist
+			has_country_flag = sphere_nationalist
+			has_country_flag = sphere_liberal
+			has_country_flag = sphere_progressive
+		}
+	}
+
+	option = {
+		name = "Good riddance!"
+		clr_country_flag = sphere_traditionalist
+		clr_country_flag = sphere_conservative
+		clr_country_flag = sphere_big_tent
+		clr_country_flag = sphere_socialist
+		clr_country_flag = sphere_communist
+		clr_country_flag = sphere_communist_social
+		clr_country_flag = sphere_populist
+		clr_country_flag = sphere_nationalist
+		clr_country_flag = sphere_liberal
+		clr_country_flag = sphere_progressive
+	}
+
+}

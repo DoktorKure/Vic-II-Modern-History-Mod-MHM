@@ -709,7 +709,12 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = terror_strike_impending
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 	}
 
 	option = {
@@ -732,7 +737,12 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = terror_strike_impending
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 	}
 
 	option = {
@@ -808,7 +818,12 @@ province_event = {
 		name = "Pay the ransom"
 		owner = { money = -100000 }
 		add_province_modifier = { name = terrorist_chaos duration = 365 }
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 		ai_chance = {
 			factor = 0.2
 				modifier = {
@@ -821,8 +836,8 @@ province_event = {
 	option = {
 		name = "Attempt a hostage rescue operation"
 		random_list = {
-			1 =	{ owner = { prestige = 10 } state_scope = { any_pop = { consciousness = -1 } } add_province_modifier = { name = terrorist_chaos duration = 274 } }
-			1 =	{ owner = { prestige = -20 } state_scope = { any_pop = { militancy = -1 } } add_province_modifier = { name = terrorist_chaos duration = 456 } owner = { country_event = { id = 1511120 days = 2 } } }
+			50 = { owner = { prestige = 10 } state_scope = { any_pop = { consciousness = -1 } } add_province_modifier = { name = terrorist_chaos duration = 274 } }
+			50 = { owner = { prestige = -20 } state_scope = { any_pop = { militancy = -1 } } add_province_modifier = { name = terrorist_chaos duration = 456 } owner = { country_event = { id = 1511120 days = 2 } } }
 		}
 		ai_chance = { factor = 0.8 }
 	}
@@ -843,7 +858,12 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = terror_strike_impending
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 	}
 
 	option = {
@@ -871,7 +891,12 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = terror_strike_impending
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 	}
 
 	option = {
@@ -896,7 +921,12 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = terror_strike_impending
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 	}
 
 	option = {
@@ -933,7 +963,12 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = terror_strike_impending
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 	}
 
 	option = {
@@ -965,7 +1000,12 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = terror_strike_impending
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 	}
 
 	option = {
@@ -988,7 +1028,12 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = terror_strike_impending
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 	}
 
 	option = {
@@ -1010,7 +1055,12 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = terror_strike_impending
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 	}
 
 	option = {
@@ -1051,7 +1101,12 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = terror_strike_impending
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 	}
 
 	option = {
@@ -1077,7 +1132,12 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = terror_strike_impending
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 	}
 
 	option = {
@@ -1131,7 +1191,12 @@ province_event = {
 
 	immediate = {
 		remove_province_modifier = terror_strike_impending
-		owner = { country_event = { id = 1511120 days = 2 } }
+		random_owned = {
+			limit = {
+				owner = { has_global_flag = war_on_terror }
+			}
+			owner = { country_event = { id = 1511120 days = 2 } }
+		}
 	}
 
 	option = {
@@ -1190,20 +1255,20 @@ country_event = { #possibly disable this if missing free press?
 		name = EVT_1511120_A
 		prestige = -15
 		random_owned = { 
-			limit = { owner = { security_reform = basic_security } }
-			owner = { social_reform = weak_security }
-		}
-		random_owned = { 
-			limit = { owner = { security_reform = weak_security } }
-			owner = { social_reform = acceptable_security }
+			limit = { owner = { security_reform = good_security } }
+			owner = { social_reform = excellent_security }
 		}
 		random_owned = { 
 			limit = { owner = { security_reform = acceptable_security } }
 			owner = { social_reform = good_security }
 		}
 		random_owned = { 
-			limit = { owner = { security_reform = good_security } }
-			owner = { social_reform = excellent_security }
+			limit = { owner = { security_reform = weak_security } }
+			owner = { social_reform = acceptable_security }
+		}
+		random_owned = { 
+			limit = { owner = { security_reform = basic_security } }
+			owner = { social_reform = weak_security }
 		}
 		any_pop = {
 			ideology = {

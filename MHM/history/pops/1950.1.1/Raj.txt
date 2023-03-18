@@ -110,11 +110,19 @@
  size = 143
  }
 
+<<<<<<< HEAD
+    officers = {
+        culture = bengali
+        religion = hindu
+        size = 4
+    }
+=======
  officers = {
  culture = bengali
  religion = hindu
  size = 4
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  soldiers = {
  culture = bengali
@@ -122,11 +130,19 @@
  size = 574
  }
 
+<<<<<<< HEAD
+    soldiers = {
+        culture = bengali
+        religion = hindu
+        size = 17
+    }
+=======
  soldiers = {
  culture = bengali
  religion = hindu
  size = 17
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  artisans = {
  culture = bengali
@@ -134,11 +150,19 @@
  size = 28741
  }
 
+<<<<<<< HEAD
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 888
+    }
+=======
  artisans = {
  culture = bengali
  religion = hindu
  size = 888
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  artisans = {
  culture = bengali
@@ -146,11 +170,19 @@
  size = 717
  }
 
+<<<<<<< HEAD
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 22
+    }
+=======
  artisans = {
  culture = bengali
  religion = hindu
  size = 22
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  capitalists = {
  culture = bengali
@@ -158,11 +190,19 @@
  size = 3591
  }
 
+<<<<<<< HEAD
+    capitalists = {
+        culture = bengali
+        religion = hindu
+        size = 111
+    }
+=======
  capitalists = {
  culture = bengali
  religion = hindu
  size = 111
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  clergymen = {
  culture = bengali
@@ -170,11 +210,19 @@
  size = 7184
  }
 
+<<<<<<< HEAD
+    clergymen = {
+        culture = bengali
+        religion = hindu
+        size = 222
+    }
+=======
  clergymen = {
  culture = bengali
  religion = hindu
  size = 222
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  artisans = {
  culture = bengali
@@ -182,6 +230,19 @@
  size = 7312
  }
 
+<<<<<<< HEAD
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 226
+    }
+
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 81068
+    }
+=======
  artisans = {
  culture = bengali
  religion = hindu
@@ -193,6 +254,7 @@
  religion = hindu
  size = 81068
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -206,11 +268,19 @@
  size = 598132
  }
 
+<<<<<<< HEAD
+    bureaucrats = {
+        culture = bengali
+        religion = hindu
+        size = 104
+    }
+=======
  bureaucrats = {
  culture = bengali
  religion = hindu
  size = 104
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -2892,6 +2962,97 @@
 }
 #Calcutta - West Bengal (8067000/2016750 POPS)
 1251 = {
+<<<<<<< HEAD
+    officers = {
+        culture = bengali
+        religion = hindu
+        size = 282
+    }
+
+    officers = {
+        culture = bengali
+        religion = secularism
+        size = 6
+    }
+
+    soldiers = {
+        culture = bengali
+        religion = hindu
+        size = 1134
+    }
+
+    soldiers = {
+        culture = bengali
+        religion = secularism
+        size = 25
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 56774
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 1306
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 1418
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 32
+    }
+
+    capitalists = {
+        culture = bengali
+        religion = hindu
+        size = 7096
+    }
+
+    capitalists = {
+        culture = bengali
+        religion = secularism
+        size = 162
+    }
+
+    clergymen = {
+        culture = bengali
+        religion = hindu
+        size = 14193
+    }
+
+    clergymen = {
+        culture = bengali
+        religion = secularism
+        size = 326
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 15920
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 365
+    }
+
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 1135196
+    }
+=======
  officers = {
  culture = bengali
  religion = hindu
@@ -2981,6 +3142,7 @@
  religion = hindu
  size = 1135196
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -2990,11 +3152,19 @@
 }
 #Darjeeling - West Bengal (6484000/1621000 POPS)
 1252 = {
+<<<<<<< HEAD
+    officers = {
+        culture = bengali
+        religion = hindu
+        size = 227
+    }
+=======
  officers = {
  culture = bengali
  religion = hindu
  size = 227
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  officers = {
  culture = hindi
@@ -3002,11 +3172,19 @@
  size = 5
  }
 
+<<<<<<< HEAD
+    soldiers = {
+        culture = bengali
+        religion = hindu
+        size = 911
+    }
+=======
  soldiers = {
  culture = bengali
  religion = hindu
  size = 911
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  soldiers = {
  culture = hindi
@@ -3014,11 +3192,19 @@
  size = 20
  }
 
+<<<<<<< HEAD
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 45634
+    }
+=======
  artisans = {
  culture = bengali
  religion = hindu
  size = 45634
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  artisans = {
  culture = hindi
@@ -3026,11 +3212,19 @@
  size = 1049
  }
 
+<<<<<<< HEAD
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 1140
+    }
+=======
  artisans = {
  culture = bengali
  religion = hindu
  size = 1140
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  artisans = {
  culture = hindi
@@ -3038,11 +3232,19 @@
  size = 25
  }
 
+<<<<<<< HEAD
+    capitalists = {
+        culture = bengali
+        religion = hindu
+        size = 5703
+    }
+=======
  capitalists = {
  culture = bengali
  religion = hindu
  size = 5703
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  capitalists = {
  culture = hindi
@@ -3050,11 +3252,19 @@
  size = 131
  }
 
+<<<<<<< HEAD
+    clergymen = {
+        culture = bengali
+        religion = hindu
+        size = 11408
+    }
+=======
  clergymen = {
  culture = bengali
  religion = hindu
  size = 11408
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  clergymen = {
  culture = hindi
@@ -3062,11 +3272,19 @@
  size = 262
  }
 
+<<<<<<< HEAD
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 12795
+    }
+=======
  artisans = {
  culture = bengali
  religion = hindu
  size = 12795
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  artisans = {
  culture = hindi
@@ -3086,6 +3304,19 @@
  size = 4248
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 342257
+    }
+
+    farmers = {
+        culture = bengali
+        religion = secularism
+        size = 7877
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
@@ -3097,6 +3328,7 @@
  religion = secularism
  size = 7877
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -3118,6 +3350,103 @@
 }
 #Bardwan - West Bengal (6088000/1522000 POPS)
 1253 = {
+<<<<<<< HEAD
+    officers = {
+        culture = bengali
+        religion = hindu
+        size = 213
+    }
+
+    officers = {
+        culture = bengali
+        religion = secularism
+        size = 4
+    }
+
+    soldiers = {
+        culture = bengali
+        religion = hindu
+        size = 856
+    }
+
+    soldiers = {
+        culture = bengali
+        religion = secularism
+        size = 19
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 42847
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 985
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 1070
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 24
+    }
+
+    capitalists = {
+        culture = bengali
+        religion = hindu
+        size = 5355
+    }
+
+    capitalists = {
+        culture = bengali
+        religion = secularism
+        size = 123
+    }
+
+    clergymen = {
+        culture = bengali
+        religion = hindu
+        size = 10711
+    }
+
+    clergymen = {
+        culture = bengali
+        religion = secularism
+        size = 246
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 12013
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 276
+    }
+
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 623197
+    }
+
+    farmers = {
+        culture = bengali
+        religion = secularism
+        size = 14344
+    }
+=======
  officers = {
  culture = bengali
  religion = hindu
@@ -3213,6 +3542,7 @@
  religion = secularism
  size = 14344
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -3306,6 +3636,19 @@
  size = 482
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 50313
+    }
+
+    farmers = {
+        culture = bengali
+        religion = secularism
+        size = 1556
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
@@ -3317,6 +3660,7 @@
  religion = secularism
  size = 1556
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -3324,11 +3668,19 @@
  size = 1444498
  }
 
+<<<<<<< HEAD
+    bureaucrats = {
+        culture = bengali
+        religion = hindu
+        size = 204
+    }
+=======
  bureaucrats = {
  culture = bengali
  religion = hindu
  size = 204
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -3422,11 +3774,19 @@
  size = 503
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 212554
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
  size = 212554
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -3440,11 +3800,19 @@
  size = 1299130
  }
 
+<<<<<<< HEAD
+    bureaucrats = {
+        culture = bengali
+        religion = hindu
+        size = 104
+    }
+=======
  bureaucrats = {
  culture = bengali
  religion = hindu
  size = 104
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -3454,11 +3822,19 @@
 }
 #Jessore - Khulna, Barisal (4744000/1186000 POPS)
 1256 = {
+<<<<<<< HEAD
+    officers = {
+        culture = bengali
+        religion = hindu
+        size = 229
+    }
+=======
  officers = {
  culture = bengali
  religion = hindu
  size = 229
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  officers = {
  culture = bengali
@@ -3466,11 +3842,19 @@
  size = 7
  }
 
+<<<<<<< HEAD
+    soldiers = {
+        culture = bengali
+        religion = hindu
+        size = 919
+    }
+=======
  soldiers = {
  culture = bengali
  religion = hindu
  size = 919
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  soldiers = {
  culture = bengali
@@ -3478,11 +3862,19 @@
  size = 28
  }
 
+<<<<<<< HEAD
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 46016
+    }
+=======
  artisans = {
  culture = bengali
  religion = hindu
  size = 46016
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  artisans = {
  culture = bengali
@@ -3490,11 +3882,19 @@
  size = 1423
  }
 
+<<<<<<< HEAD
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 1150
+    }
+=======
  artisans = {
  culture = bengali
  religion = hindu
  size = 1150
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  artisans = {
  culture = bengali
@@ -3502,11 +3902,19 @@
  size = 35
  }
 
+<<<<<<< HEAD
+    capitalists = {
+        culture = bengali
+        religion = hindu
+        size = 5752
+    }
+=======
  capitalists = {
  culture = bengali
  religion = hindu
  size = 5752
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  capitalists = {
  culture = bengali
@@ -3514,11 +3922,19 @@
  size = 177
  }
 
+<<<<<<< HEAD
+    clergymen = {
+        culture = bengali
+        religion = hindu
+        size = 11504
+    }
+=======
  clergymen = {
  culture = bengali
  religion = hindu
  size = 11504
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  clergymen = {
  culture = bengali
@@ -3526,11 +3942,19 @@
  size = 355
  }
 
+<<<<<<< HEAD
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 11707
+    }
+=======
  artisans = {
  culture = bengali
  religion = hindu
  size = 11707
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  artisans = {
  culture = bengali
@@ -3538,11 +3962,19 @@
  size = 362
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 210324
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
  size = 210324
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -3556,11 +3988,19 @@
  size = 874641
  }
 
+<<<<<<< HEAD
+    bureaucrats = {
+        culture = bengali
+        religion = hindu
+        size = 104
+    }
+=======
  bureaucrats = {
  culture = bengali
  religion = hindu
  size = 104
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -3612,11 +4052,19 @@
  size = 1149475
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 9125
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
  size = 9125
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -3624,11 +4072,19 @@
  size = 282
  }
 
+<<<<<<< HEAD
+    bureaucrats = {
+        culture = bengali
+        religion = hindu
+        size = 104
+    }
+=======
  bureaucrats = {
  culture = bengali
  religion = hindu
  size = 104
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -3764,6 +4220,19 @@
  size = 8920
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 26261
+    }
+
+    farmers = {
+        culture = bengali
+        religion = secularism
+        size = 604
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
@@ -3775,6 +4244,7 @@
  religion = secularism
  size = 604
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 }
 #Dibrugarh - Assam (8017000/2004250 POPS)
 1260 = {
@@ -7224,11 +7694,19 @@
  size = 280
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 2406
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
  size = 2406
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -7360,6 +7838,103 @@
 }
 #Markovo - Parganas (4182000/1045500 POPS)
 2622 = {
+<<<<<<< HEAD
+    officers = {
+        culture = bengali
+        religion = hindu
+        size = 146
+    }
+
+    officers = {
+        culture = bengali
+        religion = secularism
+        size = 2
+    }
+
+    soldiers = {
+        culture = bengali
+        religion = hindu
+        size = 588
+    }
+
+    soldiers = {
+        culture = bengali
+        religion = secularism
+        size = 12
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 29432
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 676
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 735
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 16
+    }
+
+    capitalists = {
+        culture = bengali
+        religion = hindu
+        size = 3678
+    }
+
+    capitalists = {
+        culture = bengali
+        religion = secularism
+        size = 84
+    }
+
+    clergymen = {
+        culture = bengali
+        religion = hindu
+        size = 7357
+    }
+
+    clergymen = {
+        culture = bengali
+        religion = secularism
+        size = 169
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 8252
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 189
+    }
+
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 575255
+    }
+
+    farmers = {
+        culture = bengali
+        religion = secularism
+        size = 13240
+    }
+=======
  officers = {
  culture = bengali
  religion = hindu
@@ -7455,6 +8030,7 @@
  religion = secularism
  size = 13240
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -7548,11 +8124,19 @@
  size = 407
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 42450
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
  size = 42450
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -7566,11 +8150,19 @@
  size = 1183222
  }
 
+<<<<<<< HEAD
+    bureaucrats = {
+        culture = bengali
+        religion = hindu
+        size = 104
+    }
+=======
  bureaucrats = {
  culture = bengali
  religion = hindu
  size = 104
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -8216,11 +8808,19 @@
 }
 #Svetlogorsk - Khulna (2370000/592500 POPS)
 2657 = {
+<<<<<<< HEAD
+    officers = {
+        culture = bengali
+        religion = hindu
+        size = 114
+    }
+=======
  officers = {
  culture = bengali
  religion = hindu
  size = 114
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  officers = {
  culture = bengali
@@ -8228,11 +8828,19 @@
  size = 3
  }
 
+<<<<<<< HEAD
+    soldiers = {
+        culture = bengali
+        religion = hindu
+        size = 459
+    }
+=======
  soldiers = {
  culture = bengali
  religion = hindu
  size = 459
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  soldiers = {
  culture = bengali
@@ -8240,11 +8848,19 @@
  size = 14
  }
 
+<<<<<<< HEAD
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 22989
+    }
+=======
  artisans = {
  culture = bengali
  religion = hindu
  size = 22989
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  artisans = {
  culture = bengali
@@ -8252,11 +8868,19 @@
  size = 711
  }
 
+<<<<<<< HEAD
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 574
+    }
+=======
  artisans = {
  culture = bengali
  religion = hindu
  size = 574
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  artisans = {
  culture = bengali
@@ -8264,11 +8888,19 @@
  size = 17
  }
 
+<<<<<<< HEAD
+    capitalists = {
+        culture = bengali
+        religion = hindu
+        size = 2873
+    }
+=======
  capitalists = {
  culture = bengali
  religion = hindu
  size = 2873
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  capitalists = {
  culture = bengali
@@ -8276,11 +8908,19 @@
  size = 88
  }
 
+<<<<<<< HEAD
+    clergymen = {
+        culture = bengali
+        religion = hindu
+        size = 5747
+    }
+=======
  clergymen = {
  culture = bengali
  religion = hindu
  size = 5747
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  clergymen = {
  culture = bengali
@@ -8288,11 +8928,19 @@
  size = 177
  }
 
+<<<<<<< HEAD
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 5849
+    }
+=======
  artisans = {
  culture = bengali
  religion = hindu
  size = 5849
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  artisans = {
  culture = bengali
@@ -8312,6 +8960,19 @@
  size = 3249
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 436950
+    }
+
+    bureaucrats = {
+        culture = bengali
+        religion = hindu
+        size = 104
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
@@ -8323,6 +8984,7 @@
  religion = hindu
  size = 104
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -8362,11 +9024,19 @@
  size = 676176
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 5366
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
  size = 5366
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -8374,11 +9044,19 @@
  size = 165
  }
 
+<<<<<<< HEAD
+    bureaucrats = {
+        culture = bengali
+        religion = hindu
+        size = 104
+    }
+=======
  bureaucrats = {
  culture = bengali
  religion = hindu
  size = 104
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -8388,6 +9066,103 @@
 }
 #Bereyezovka - Midnapore (5019000/1254750 POPS)
 2660 = {
+<<<<<<< HEAD
+    officers = {
+        culture = bengali
+        religion = hindu
+        size = 175
+    }
+
+    officers = {
+        culture = bengali
+        religion = secularism
+        size = 3
+    }
+
+    soldiers = {
+        culture = bengali
+        religion = hindu
+        size = 705
+    }
+
+    soldiers = {
+        culture = bengali
+        religion = secularism
+        size = 15
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 35323
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 812
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 882
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 20
+    }
+
+    capitalists = {
+        culture = bengali
+        religion = hindu
+        size = 4414
+    }
+
+    capitalists = {
+        culture = bengali
+        religion = secularism
+        size = 101
+    }
+
+    clergymen = {
+        culture = bengali
+        religion = hindu
+        size = 8830
+    }
+
+    clergymen = {
+        culture = bengali
+        religion = secularism
+        size = 203
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 9905
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 227
+    }
+
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 690389
+    }
+
+    farmers = {
+        culture = bengali
+        religion = secularism
+        size = 15891
+    }
+=======
  officers = {
  culture = bengali
  religion = hindu
@@ -8483,6 +9258,7 @@
  religion = secularism
  size = 15891
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -8492,6 +9268,103 @@
 }
 #Nizhnekolymsk - Baharampur (5019000/1254750 POPS)
 2661 = {
+<<<<<<< HEAD
+    officers = {
+        culture = bengali
+        religion = hindu
+        size = 175
+    }
+
+    officers = {
+        culture = bengali
+        religion = secularism
+        size = 3
+    }
+
+    soldiers = {
+        culture = bengali
+        religion = hindu
+        size = 705
+    }
+
+    soldiers = {
+        culture = bengali
+        religion = secularism
+        size = 15
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 35323
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 812
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 882
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 20
+    }
+
+    capitalists = {
+        culture = bengali
+        religion = hindu
+        size = 4414
+    }
+
+    capitalists = {
+        culture = bengali
+        religion = secularism
+        size = 101
+    }
+
+    clergymen = {
+        culture = bengali
+        religion = hindu
+        size = 8830
+    }
+
+    clergymen = {
+        culture = bengali
+        religion = secularism
+        size = 203
+    }
+
+    artisans = {
+        culture = bengali
+        religion = hindu
+        size = 9905
+    }
+
+    artisans = {
+        culture = bengali
+        religion = secularism
+        size = 227
+    }
+
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 513771
+    }
+
+    farmers = {
+        culture = bengali
+        religion = secularism
+        size = 11825
+    }
+=======
  officers = {
  culture = bengali
  religion = hindu
@@ -8587,6 +9460,7 @@
  religion = secularism
  size = 11825
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -8888,11 +9762,19 @@
  size = 407
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 42450
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
  size = 42450
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -8906,11 +9788,19 @@
  size = 1183222
  }
 
+<<<<<<< HEAD
+    bureaucrats = {
+        culture = bengali
+        religion = hindu
+        size = 104
+    }
+=======
  bureaucrats = {
  culture = bengali
  religion = hindu
  size = 104
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -9690,11 +10580,19 @@
  size = 1736
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 2041
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
  size = 2041
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -9702,11 +10600,19 @@
  size = 63
  }
 
+<<<<<<< HEAD
+    bureaucrats = {
+        culture = bengali
+        religion = hindu
+        size = 104
+    }
+=======
  bureaucrats = {
  culture = bengali
  religion = hindu
  size = 104
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -9800,11 +10706,19 @@
  size = 271
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 114507
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
  size = 114507
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -9818,11 +10732,19 @@
  size = 699864
  }
 
+<<<<<<< HEAD
+    bureaucrats = {
+        culture = bengali
+        religion = hindu
+        size = 104
+    }
+=======
  bureaucrats = {
  culture = bengali
  religion = hindu
  size = 104
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 
  farmers = {
  culture = bengali
@@ -10398,9 +11320,17 @@
  size = 3605
  }
 
+<<<<<<< HEAD
+    farmers = {
+        culture = bengali
+        religion = hindu
+        size = 16709
+    }
+=======
  farmers = {
  culture = bengali
  religion = hindu
  size = 16709
  }
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 }

@@ -308,7 +308,11 @@
 	 } 
 	farmers = {
 		culture = finno_ugrian
+<<<<<<< HEAD
+		religion =  protestant 
+=======
 		religion = protestant 
+>>>>>>> 570bd67a3d37d6be60910b85dcc5b6b98830b1d1
 		size = 8565
 	 } 
 	farmers = {

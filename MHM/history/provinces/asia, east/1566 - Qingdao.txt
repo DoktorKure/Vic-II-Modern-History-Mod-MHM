@@ -1,0 +1,24 @@
+owner = CHI
+controller = KMT
+add_core = CHI
+add_core =  KMT
+add_core = QGD
+trade_goods = tea
+life_rating = 35
+terrain = good_farmland
+colonial = 2
+
+1950.1.1 = {
+owner = CHI
+controller = CHI
+}
+
+1992.1.1 = {
+owner = CHI
+controller = CHI
+add_core = CHI
+add_core = QGD
+life_rating = 35
+colonial = 0
+naval_base = 1
+}

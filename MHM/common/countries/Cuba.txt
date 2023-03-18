@@ -1,7 +1,7 @@
 graphical_culture = Generic
-color = { 0 0 255 }
-proletarian_dictatorship = { 255 0 0 }
-socialist_democracy = { 255 0 0 }
+color = { 198 129 49 }
+proletarian_dictatorship = { 192 41 71 }
+socialist_democracy = { 192 41 71 }
 party = {
 		name = "Progressive Action Party"
 		citizenship_policy = limited_citizenship

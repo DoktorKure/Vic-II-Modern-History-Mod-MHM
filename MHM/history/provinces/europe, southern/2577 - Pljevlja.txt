@@ -1,0 +1,18 @@
+owner = YUG
+controller = YUG
+add_core = YUG
+add_core = SER
+add_core = MON
+trade_goods = bauxite
+life_rating = 35
+terrain = deciduous_forest_mountains
+colonial = 0
+1992.1.1 = {
+owner = MON
+controller = MON
+add_core = YUG
+add_core = SER
+add_core = MON
+life_rating = 35
+colonial = 0
+}
