@@ -10,6 +10,13 @@ country_event = {
 	option = {
 		name = "EVTOPTA11106"
 		all_core = { add_core = FROM }
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+			}
+			set_country_flag = transfer_to_superstate
+		}
 		any_owned = {
                 secede_province = FROM
         }
@@ -60,56 +67,45 @@ country_event = {
 			any_owned = { secede_province = THIS }
 		}
 		THIS = { inherit = FROM }
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = transfer_to_superstate
+			}
+			country_event = 11108
+		}
 		ai_chance = { factor = 1 }
 	}
 
 }
-country_event = { # this is dead code, as I can't get the "acting country". is_primary_culture = THIS, THIS is oddly enough "any_neighbor_country" not "THIS" countrys culture.
+country_event = {
 	id = 11108
-	title = "EVT_11108_NAME"
-	desc = "EVT_11108_DESC"
+	title = "Transfered to Superstate"
+	desc = "As we were vassals of a country that has been diplomatically annexed into a superstate, we are now their vassal."
 	picture = "gain_core"
 
 	fire_only_once = yes
 	
-	trigger = {
-		has_country_flag = dead_code
-		any_neighbor_country = { 
-			any_owned_province = { is_primary_culture = THIS NOT = { is_core = THIS is_primary_culture = yes } NOT = { continent = north_america continent = south_america } } 
-			relation = { who = THIS value = -100 }
-		}
-	}
+	is_triggered_only = yes
 	
-	mean_time_to_happen = { months = 120 }
+	immediate = { clr_country_flag = transfer_to_superstate }
 
 	option = {
-		name = "EVT_11108_A"
-		prestige = -5
-		any_neighbor_country = { 
-			limit = { 
-				any_owned_province = { is_primary_culture = THIS NOT = { is_core = THIS is_primary_culture = yes } NOT = { continent = north_america continent = south_america } } 
-			}
-			any_owned = { 
-				limit = {
-					is_primary_culture = THIS NOT = { is_core = THIS is_primary_culture = yes } NOT = { continent = north_america continent = south_america }
-				}
-				add_core = THIS
-			}
-			relation = { who = THIS value = -100 }
-		}
-		ai_chance = { factor = 0 }
-	}
-
-	option = {
-		name = "EVT_11108_B"
-		prestige = 5
-		any_neighbor_country = { 
-			limit = { 
-				any_owned_province = { is_primary_culture = THIS NOT = { is_core = THIS is_primary_culture = yes } NOT = { continent = north_america continent = south_america } } 
-			}  
-			relation = { who = THIS value = 50 }
+		name = "We have no choice but to accept this reality"
+		FROM = {
+			create_vassal = THIS
 		}
 		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "WAR! WE WILL HAVE INDEPENDENCE!"
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = become_independent } 
+			defender_goal = {  } #stop_independence automatically added in cb_types.txt
+		}
+		ai_chance = { factor = 0 }
 	}	
 }
 

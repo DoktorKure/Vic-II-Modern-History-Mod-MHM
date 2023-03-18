@@ -51,6 +51,83 @@ country_event = {
 	option = {
 		name = "Checking..."
 		
+		#Clean up farmers in labourer RGOs and labourers in farmer RGOs
+		any_country	= {
+			limit = {
+				exists = yes
+			}
+			any_owned = {
+				limit = {
+					AND = {
+						OR = {
+							trade_goods = fruit
+							trade_goods = grain
+							trade_goods = oil_seeds
+							trade_goods = sugar
+							trade_goods = tea
+							trade_goods = tobacco
+							trade_goods = coffee
+							trade_goods = cotton
+							trade_goods = timber
+							trade_goods = fish
+							trade_goods = cattle
+							trade_goods = wool
+							trade_goods = cotton
+							trade_goods = credit
+							trade_goods = rubber
+						}
+					}
+				}
+				any_pop = {
+					limit = {
+						type = labourers
+					}
+					pop_type = farmers
+				}
+			}
+		}
+		
+		any_country	= {
+			limit = {
+				exists = yes
+			}
+			any_owned = {
+				limit = {
+					AND = {
+						OR = {
+							trade_goods = coal
+							trade_goods = iron
+							trade_goods = petroleum
+							trade_goods = natural_gas
+							trade_goods = bauxite
+							trade_goods = copper
+							trade_goods = other_minerals
+							trade_goods = gold_silver
+						}
+					}
+				}
+				any_pop = {
+					limit = {
+						type = farmers
+					}
+					pop_type = labourers
+				}
+			}
+		}
+		
+		#Prevent stack overflow
+		any_country = {
+			limit = {
+				exists = yes
+				money = 500000000
+			}
+			money = -2000000
+			money = -2000000
+			money = -2000000
+			money = -2000000
+			money = -2000000
+		}
+		
 		#Clean up UNO tag if it exists
 		any_country = {
 			limit = {
@@ -58,6 +135,14 @@ country_event = {
 				neighbour = UNO
 			}
 			inherit = UNO
+		}
+		
+		#Release CLN if it gets vassalized for any reason at all
+		any_country = {
+			limit = {
+				is_our_vassal = CLN
+			}
+			release_vassal = CLN
 		}
 		
 		########################
@@ -816,7 +901,1574 @@ country_event = {
 			}
 			set_country_flag = superstate_flag
 		}
-	
+		
+		#Clean up sphere coup flag
+		any_country = {
+			limit = {
+				has_country_flag = potential_soviet_vassal
+			}
+			clr_country_flag = potential_soviet_vassal
+		}
+
+		################################
+		### Clean up Arab identities ###
+		################################
+		
+		#Set master Arab country flag for later scoping
+		any_country = {
+			limit = {
+				capital_scope = { region = arabia_metaregion }
+				NOT = { has_country_flag = arab_country }
+				NOT = { OR = { tag = ISR tag = FAG } }
+			}
+			set_country_flag = arab_country
+		}
+		
+		#Set cultural arab country flags for later revision
+		any_country = {
+			limit = {
+				primary_culture = arab_gulf
+				NOT = { has_country_flag = arab_gulf_nation }
+			}
+			set_country_flag = arab_gulf_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = berber
+				NOT = { has_country_flag = berber_nation }
+			}
+			set_country_flag = berber_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = arab_mashriqi
+				NOT = { has_country_flag = arab_mashriqi_nation }
+			}
+			set_country_flag = arab_mashriqi_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = arab_nile
+				NOT = { has_country_flag = arab_nile_nation }
+			}
+			set_country_flag = arab_nile_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = arab_hassaniya
+				NOT = { has_country_flag = arab_hassaniya_nation }
+			}
+			set_country_flag = arab_hassaniya_nation
+		}
+		
+		#Clean up country flags and set cultures if the country doesn't exist and its owner is a pan-arab nation		
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = arab_country
+				NOT = { has_country_flag = pan_arab_identity }
+				capital_scope = { owner = { has_country_flag = pan_arab_identity } }
+			}
+			set_country_flag = pan_arab_identity
+			clr_country_flag = arab_cultural_identity
+			primary_culture = arab
+			
+			#Force assimilation
+			remove_accepted_culture = arab_gulf 
+			remove_accepted_culture = berber
+			remove_accepted_culture = arab_mashriqi
+			remove_accepted_culture = arab_nile
+			remove_accepted_culture = arab_hassaniya
+		}
+		
+		#Clean up country flags and set cultures back to original if the country doesn't exist and owner is not a pan-arab country
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = arab_country
+				has_country_flag = arab_gulf_nation
+				NOT = { has_country_flag = arab_cultural_identity }
+				capital_scope = { owner = { has_country_flag = arab_cultural_identity } }
+			}
+			clr_country_flag = pan_arab_identity
+			set_country_flag = arab_cultural_identity
+			
+			primary_culture = arab_gulf
+			
+			#Force assimilation
+			remove_accepted_culture = arab 
+		}
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = arab_country
+				has_country_flag = berber_nation
+				NOT = { has_country_flag = arab_cultural_identity }
+				capital_scope = { owner = { has_country_flag = arab_cultural_identity } }
+			}
+			clr_country_flag = pan_arab_identity
+			set_country_flag = arab_cultural_identity
+			
+			primary_culture = berber
+			
+			#Force assimilation
+			remove_accepted_culture = arab 
+		}
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = arab_country
+				has_country_flag = arab_mashriqi_nation
+				NOT = { has_country_flag = arab_cultural_identity }
+				capital_scope = { owner = { has_country_flag = arab_cultural_identity } }
+			}
+			clr_country_flag = pan_arab_identity
+			set_country_flag = arab_cultural_identity
+			
+			primary_culture = arab_mashriqi
+			
+			#Force assimilation
+			remove_accepted_culture = arab 
+		}
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = arab_country
+				has_country_flag = arab_nile_nation
+				NOT = { has_country_flag = arab_cultural_identity }
+				capital_scope = { owner = { has_country_flag = arab_cultural_identity } }
+			}
+			clr_country_flag = pan_arab_identity
+			set_country_flag = arab_cultural_identity
+			
+			primary_culture = arab_nile
+			
+			#Force assimilation
+			remove_accepted_culture = arab 
+		}
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = arab_country
+				has_country_flag = arab_hassaniya_nation
+				NOT = { has_country_flag = arab_cultural_identity }
+				capital_scope = { owner = { has_country_flag = arab_cultural_identity } }
+			}
+			clr_country_flag = pan_arab_identity
+			set_country_flag = arab_cultural_identity
+			
+			primary_culture = arab_hassaniya
+			
+			#Force assimilation
+			remove_accepted_culture = arab 
+		}
+		
+		#################################
+		###                           ###
+		### EUROPEAN CULTURES CLEANUP ###
+		###                           ###
+		#################################
+		
+		### Set master European country flag for later scoping ###
+		any_country = {
+			limit = {
+				capital_scope = { region = europe_metaregion }
+				NOT = { has_country_flag = european_country }
+			}
+			set_country_flag = european_country
+		}
+		
+		### Set cultural european country flags for later revision ###
+		
+		#Portugal
+		any_country = {
+			limit = {
+				primary_culture = portuguese
+				NOT = { has_country_flag = portuguese_nation }
+			}
+			set_country_flag = portuguese_nation
+		}
+		
+		#Spain
+		any_country = {
+			limit = {
+				primary_culture = spanish
+				NOT = { has_country_flag = spanish_nation }
+			}
+			set_country_flag = spanish_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = catalan
+				NOT = { has_country_flag = catalan_nation }
+			}
+			set_country_flag = catalan_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = basque
+				NOT = { has_country_flag = basque_nation }
+			}
+			set_country_flag = basque_nation
+		}
+		
+		#France
+		any_country = {
+			limit = {
+				primary_culture = french
+				NOT = { has_country_flag = french_nation }
+			}
+			set_country_flag = french_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = breton
+				NOT = { has_country_flag = breton_nation }
+			}
+			set_country_flag = breton_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = occitans
+				NOT = { has_country_flag = occitan_nation }
+			}
+			set_country_flag = occitan_nation
+		}
+		
+		#Netherlands
+		any_country = {
+			limit = {
+				primary_culture = dutch
+				NOT = { has_country_flag = dutch_nation }
+			}
+			set_country_flag = dutch_nation
+		}
+		
+		#Italy
+		any_country = {
+			limit = {
+				primary_culture = italian
+				NOT = { has_country_flag = italian_nation }
+			}
+			set_country_flag = italian_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = padanian
+				NOT = { has_country_flag = padanian_nation }
+			}
+			set_country_flag = padanian_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = insular_mediterranean
+				NOT = { has_country_flag = insular_mediterranean_nation }
+			}
+			set_country_flag = insular_mediterranean_nation
+		}
+		
+		#Germany
+		any_country = {
+			limit = {
+				primary_culture = german
+				NOT = { has_country_flag = german_nation }
+			}
+			set_country_flag = german_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = south_german
+				NOT = { has_country_flag = south_german_nation }
+			}
+			set_country_flag = south_german_nation
+		}
+		
+		#Poland
+		any_country = {
+			limit = {
+				primary_culture = polish
+				NOT = { has_country_flag = polish_nation }
+			}
+			set_country_flag = polish_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = silesians
+				NOT = { has_country_flag = silesian_nation }
+			}
+			set_country_flag = silesian_nation
+		}
+		
+		#Hungary
+		any_country = {
+			limit = {
+				primary_culture = hungarian
+				NOT = { has_country_flag = hungarian_nation }
+			}
+			set_country_flag = hungarian_nation
+		}
+		
+		#Baltics
+		any_country = {
+			limit = {
+				primary_culture = estonian
+				NOT = { has_country_flag = estonian_nation }
+			}
+			set_country_flag = estonian_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = latvian
+				NOT = { has_country_flag = latvian_nation }
+			}
+			set_country_flag = latvian_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = lithuanian
+				NOT = { has_country_flag = lithuanian_nation }
+			}
+			set_country_flag = lithuanian_nation
+		}
+		
+		#Czechoslovakia
+		any_country = {
+			limit = {
+				primary_culture = czech
+				NOT = { has_country_flag = czech_nation }
+			}
+			set_country_flag = czech_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = slovak
+				NOT = { has_country_flag = slovakian_nation }
+			}
+			set_country_flag = slovakian_nation
+		}
+		
+		#Belarus
+		any_country = {
+			limit = {
+				primary_culture = byelorussian
+				NOT = { has_country_flag = byelorussian_nation }
+			}
+			set_country_flag = byelorussian_nation
+		}
+		
+		#Ukraine
+		any_country = {
+			limit = {
+				primary_culture = ukrainian
+				NOT = { has_country_flag = ukrainian_nation }
+			}
+			set_country_flag = ukrainian_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = rusyn
+				NOT = { has_country_flag = rusyn_nation }
+			}
+			set_country_flag = rusyn_nation
+		}
+		
+		#Russia
+		any_country = {
+			limit = {
+				primary_culture = russian
+				NOT = { has_country_flag = russian_nation }
+			}
+			set_country_flag = russian_nation
+		}
+		
+		#Romania
+		any_country = {
+			limit = {
+				primary_culture = romanian
+				NOT = { has_country_flag = romanian_nation }
+			}
+			set_country_flag = romanian_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = aromanians
+				NOT = { has_country_flag = aromanian_nation }
+			}
+			set_country_flag = aromanian_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = roma
+				NOT = { has_country_flag = roma_nation }
+			}
+			set_country_flag = roma_nation
+		}
+		
+		#Bulgaria
+		any_country = {
+			limit = {
+				primary_culture = bulgarian
+				NOT = { has_country_flag = bulgarian_nation }
+			}
+			set_country_flag = bulgarian_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = pomak
+				NOT = { has_country_flag = pomak_nation }
+			}
+			set_country_flag = pomak_nation
+		}
+		
+		#Yugoslavia
+		any_country = {
+			limit = {
+				primary_culture = yugoslav
+				NOT = { has_country_flag = yugoslav_nation }
+			}
+			set_country_flag = yugoslav_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = serb
+				NOT = { has_country_flag = serbian_nation }
+			}
+			set_country_flag = serbian_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = montenegrin
+				NOT = { has_country_flag = montenegrin_nation }
+			}
+			set_country_flag = montenegrin_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = croat
+				NOT = { has_country_flag = croatian_nation }
+			}
+			set_country_flag = croatian_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = bosniak
+				NOT = { has_country_flag = bosnian_nation }
+			}
+			set_country_flag = bosnian_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = slovene
+				NOT = { has_country_flag = slovenian_nation }
+			}
+			set_country_flag = slovenian_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = albanian
+				NOT = { has_country_flag = albanian_nation }
+			}
+			set_country_flag = albanian_nation
+		}
+		
+		#Greece
+		any_country = {
+			limit = {
+				primary_culture = greek
+				NOT = { has_country_flag = greek_nation }
+			}
+			set_country_flag = greek_nation
+		}
+		
+		#Norway
+		any_country = {
+			limit = {
+				primary_culture = norwegian
+				NOT = { has_country_flag = norwegian_nation }
+			}
+			set_country_flag = norwegian_nation
+		}
+		
+		#Sweden
+		any_country = {
+			limit = {
+				primary_culture = swedish
+				NOT = { has_country_flag = swedish_nation }
+			}
+			set_country_flag = swedish_nation
+		}
+		
+		#Denmark
+		any_country = {
+			limit = {
+				primary_culture = danish
+				NOT = { has_country_flag = danish_nation }
+			}
+			set_country_flag = danish_nation
+		}
+		
+		#Finland
+		any_country = {
+			limit = {
+				primary_culture = finnish
+				NOT = { has_country_flag = finnish_nation }
+			}
+			set_country_flag = finnish_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = finno_ugrian
+				NOT = { has_country_flag = finno_ugrian_nation }
+			}
+			set_country_flag = finno_ugrian_nation
+		}
+		
+		#Britain
+		any_country = {
+			limit = {
+				primary_culture = british
+				NOT = { has_country_flag = british_nation }
+			}
+			set_country_flag = british_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = scottish
+				NOT = { has_country_flag = scottish_nation }
+			}
+			set_country_flag = scottish_nation
+		}
+		any_country = {
+			limit = {
+				primary_culture = welsh
+				NOT = { has_country_flag = welsh_nation }
+			}
+			set_country_flag = welsh_nation
+		}
+		
+		#Ireland
+		any_country = {
+			limit = {
+				primary_culture = irish
+				NOT = { has_country_flag = irish_nation }
+			}
+			set_country_flag = irish_nation
+		}
+		
+		### Country flag cleanup ###
+		
+		#Clean up cultural country flags for XEU tag to prevent primary culture fuckery
+		any_country = {
+			limit = {
+				tag = XEU
+				exists = yes
+				OR = {
+					has_country_flag = portuguese_nation
+					has_country_flag = spanish_nation
+					has_country_flag = catalan_nation
+					has_country_flag = basque_nation
+					has_country_flag = french_nation
+					has_country_flag = breton_nation
+					has_country_flag = occitan_nation
+					has_country_flag = dutch_nation
+					has_country_flag = italian_nation
+					has_country_flag = padanian_nation
+					has_country_flag = insular_mediterranean_nation
+					has_country_flag = german_nation
+					has_country_flag = south_german_nation
+					has_country_flag = polish_nation
+					has_country_flag = silesian_nation
+					has_country_flag = hungarian_nation
+					has_country_flag = estonian_nation
+					has_country_flag = latvian_nation
+					has_country_flag = lithuanian_nation
+					has_country_flag = czech_nation
+					has_country_flag = slovakian_nation
+					has_country_flag = byelorussian_nation
+					has_country_flag = ukrainian_nation
+					has_country_flag = rusyn_nation
+					has_country_flag = russian_nation
+					has_country_flag = romanian_nation
+					has_country_flag = aromanian_nation
+					has_country_flag = roma_nation
+					has_country_flag = bulgarian_nation
+					has_country_flag = pomak_nation
+					has_country_flag = yugoslav_nation
+					has_country_flag = serbian_nation
+					has_country_flag = montenegrin_nation
+					has_country_flag = croatian_nation
+					has_country_flag = bosnian_nation
+					has_country_flag = slovenian_nation
+					has_country_flag = albanian_nation
+					has_country_flag = greek_nation
+					has_country_flag = norwegian_nation
+					has_country_flag = swedish_nation
+					has_country_flag = danish_nation
+					has_country_flag = finnish_nation
+					has_country_flag = finno_ugrian_nation
+					has_country_flag = british_nation
+					has_country_flag = scottish_nation
+					has_country_flag = welsh_nation
+					has_country_flag = irish_nation
+				}
+			}
+			clr_country_flag = portuguese_nation
+			clr_country_flag = spanish_nation
+			clr_country_flag = catalan_nation
+			clr_country_flag = basque_nation
+			clr_country_flag = french_nation
+			clr_country_flag = breton_nation
+			clr_country_flag = occitan_nation
+			clr_country_flag = dutch_nation
+			clr_country_flag = italian_nation
+			clr_country_flag = padanian_nation
+			clr_country_flag = insular_mediterranean_nation
+			clr_country_flag = german_nation
+			clr_country_flag = south_german_nation
+			clr_country_flag = polish_nation
+			clr_country_flag = silesian_nation
+			clr_country_flag = hungarian_nation
+			clr_country_flag = estonian_nation
+			clr_country_flag = latvian_nation
+			clr_country_flag = lithuanian_nation
+			clr_country_flag = czech_nation
+			clr_country_flag = slovakian_nation
+			clr_country_flag = byelorussian_nation
+			clr_country_flag = ukrainian_nation
+			clr_country_flag = rusyn_nation
+			clr_country_flag = russian_nation
+			clr_country_flag = romanian_nation
+			clr_country_flag = aromanian_nation
+			clr_country_flag = roma_nation
+			clr_country_flag = bulgarian_nation
+			clr_country_flag = pomak_nation
+			clr_country_flag = yugoslav_nation
+			clr_country_flag = serbian_nation
+			clr_country_flag = montenegrin_nation
+			clr_country_flag = croatian_nation
+			clr_country_flag = bosnian_nation
+			clr_country_flag = slovenian_nation
+			clr_country_flag = albanian_nation
+			clr_country_flag = greek_nation
+			clr_country_flag = norwegian_nation
+			clr_country_flag = swedish_nation
+			clr_country_flag = danish_nation
+			clr_country_flag = finnish_nation
+			clr_country_flag = finno_ugrian_nation
+			clr_country_flag = british_nation
+			clr_country_flag = scottish_nation
+			clr_country_flag = welsh_nation
+			clr_country_flag = irish_nation
+		}
+		
+		#Clean up country flags and set cultures if the country doesn't exist and its owner is XEU
+		any_country = {
+			limit = {
+				exists = no
+				has_country_flag = european_country
+				NOT = { has_country_flag = pan_european_identity }
+				capital_scope = { owner = { has_country_flag = pan_european_identity } }
+			}
+			set_country_flag = pan_european_identity
+			clr_country_flag = european_cultural_identity
+			primary_culture = european
+			
+			#Force assimilation
+			remove_accepted_culture = arab_gulf 
+			remove_accepted_culture = french
+			remove_accepted_culture = breton
+			remove_accepted_culture = occitans
+			remove_accepted_culture = padanian
+			remove_accepted_culture = italian
+			remove_accepted_culture = insular_mediterranean
+			remove_accepted_culture = basque
+			remove_accepted_culture = catalan
+			remove_accepted_culture = spanish
+			remove_accepted_culture = byelorussian
+			remove_accepted_culture = russian
+			remove_accepted_culture = polish
+			remove_accepted_culture = ukrainian
+			remove_accepted_culture = serb
+			remove_accepted_culture = bulgarian
+			remove_accepted_culture = croat
+			remove_accepted_culture = bosniak
+			remove_accepted_culture = slovene
+			remove_accepted_culture = irish
+			remove_accepted_culture = british
+			remove_accepted_culture = scottish
+			remove_accepted_culture = welsh
+			remove_accepted_culture = estonian
+			remove_accepted_culture = latvian
+			remove_accepted_culture = lithuanian
+			remove_accepted_culture = hungarian
+			remove_accepted_culture = german
+			remove_accepted_culture = south_german
+			remove_accepted_culture = dutch
+			remove_accepted_culture = czech
+			remove_accepted_culture = slovak
+			remove_accepted_culture = greek
+			remove_accepted_culture = danish
+			remove_accepted_culture = finnish
+			remove_accepted_culture = norwegian
+			remove_accepted_culture = finno_ugrian
+			remove_accepted_culture = swedish
+			remove_accepted_culture = albanian
+			remove_accepted_culture = romanian
+			remove_accepted_culture = portuguese
+		}
+		
+		### Reset primary culture in the event owner is not a pan-european identitarian nation or THIS exists and has european as primary ###
+		
+		#Portugal
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = portuguese_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = portuguese
+		}
+		
+		#Spain
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = spanish_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = spanish
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = catalan_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = catalan
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = basque_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = basque
+		}
+		
+		#France
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = french_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = french
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = breton_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = breton
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = occitan_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = occitans
+		}
+		
+		#Netherlands
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = dutch_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = dutch
+		}
+		
+		#Italy
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = italian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = italian
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = padanian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = padanian
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = insular_mediterranean_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = insular_mediterranean
+		}
+		
+		#Germany
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = german_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = german
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = south_german_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = south_german
+		}
+		
+		#Poland
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = polish_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = polish
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = silesian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = silesians
+		}
+		
+		#Hungary
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = hungarian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = hungarian
+		}
+		
+		#Baltics
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = estonian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = estonian
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = latvian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = latvian
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = lithuanian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = lithuanian
+		}
+		
+		#Czechoslovakia
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = czech_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = czech
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = slovakian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = slovak
+		}
+		
+		#Belarus
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = byelorussian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = byelorussian
+		}
+		
+		#Ukraine
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = ukrainian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = ukrainian
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = rusyn_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = rusyn
+		}
+		
+		#Russia
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = russian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = russian
+		}
+		
+		#Romania
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = romanian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = romanian
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = aromanian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = aromanians
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = roma_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = roma
+		}
+		
+		#Bulgaria
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = bulgarian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = bulgarian
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = pomak_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = pomak
+		}
+		
+		#Yugoslavia
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = yugoslav_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = yugoslav
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = serbian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = serb
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = montenegrin_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = montenegrin
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = croatian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = croat
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = bosnian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = bosniak
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = slovenian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = slovene
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = albanian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = albanian
+		}
+		
+		#Greece
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = greek_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = greek
+		}
+		
+		#Norway
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = norwegian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = norwegian
+		}
+		
+		#Denmark
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = danish_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = danish
+		}
+		
+		#Sweden
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = swedish_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = swedish
+		}
+		
+		#Finland
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = finnish_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = finnish
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = finno_ugrian_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = finno_ugrian
+		}
+		
+		#Britain
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = british_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = british
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = scottish_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = scottish
+		}
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = welsh_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = welsh
+		}
+		
+		#Ireland
+		any_country = {
+			limit = {
+				has_country_flag = european_country
+				has_country_flag = irish_nation
+				OR = {
+					AND = {
+						exists = no
+						capital_scope = { owner = { has_country_flag = european_cultural_identity } }
+					}
+					AND = {
+						exists = yes
+						primary_culture = european
+					}
+				}
+			}
+			primary_culture = irish
+		}
+		
+		#####################################
+		###                               ###
+		### END EUROPEAN CULTURES CLEANUP ###
+		###                               ###
+		#####################################
 		
 		######################
 		### Colonial Flags ###
@@ -900,6 +2552,7 @@ country_event = {
 				is_vassal = yes
 			}
 			set_country_flag = colonial_province
+			overlord = { set_country_flag = colonial_overlord }
 		}
 		
 		### Clear flags ###
@@ -974,6 +2627,14 @@ country_event = {
 			}
 			clr_country_flag = colonial_province
 			set_country_flag = former_colonial_province
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = colonial_overlord
+				NOT = { num_of_vassals = 1 }
+			}
+			clr_country_flag = colonial_overlord
 		}
 		
 		########################

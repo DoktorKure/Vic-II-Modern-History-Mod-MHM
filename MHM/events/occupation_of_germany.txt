@@ -28,6 +28,9 @@ country_event = {
 			militancy = -5 
 			consciousness = 2 
 		}
+		any_owned = {
+			remove_province_modifier = occupied_province
+		}
 	}
 }
 
@@ -53,6 +56,9 @@ country_event = {
 		prestige = 100
 		relation = { who = RUS value = 100 }
 		any_pop = { militancy = -5 consciousness = 1 }
+		any_owned = {
+			remove_province_modifier = occupied_province
+		}
 	}
 }
 

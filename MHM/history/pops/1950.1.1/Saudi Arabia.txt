@@ -2,7 +2,7 @@
 1151 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 9731
 	 } 
 	aristocrats = {
@@ -12,12 +12,12 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 242
 	 } 
 	soldiers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 20000
 	 } 
 	bureaucrats = {
@@ -27,7 +27,7 @@
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 1215
 	 } 
 	capitalists = {
@@ -37,7 +37,7 @@
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 2432
 	 } 
 	clergymen = {
@@ -47,7 +47,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 7182
 	 } 
 	artisans = {
@@ -57,7 +57,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 187747
 	 } 
 	farmers = {
@@ -66,16 +66,11 @@
 		size = 1896
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -83,7 +78,7 @@
 1152 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 574
 	 } 
 	aristocrats = {
@@ -93,17 +88,17 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 13
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 71
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 143
 	 } 
 	clergymen = {
@@ -113,7 +108,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 423
 	 } 
 	artisans = {
@@ -123,7 +118,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 11077
 	 } 
 	farmers = {
@@ -132,16 +127,11 @@
 		size = 111
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -149,7 +139,7 @@
 1153 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 2494
 	 } 
 	aristocrats = {
@@ -159,12 +149,12 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 62
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 311
 	 } 
 	capitalists = {
@@ -174,7 +164,7 @@
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 623
 	 } 
 	clergymen = {
@@ -184,7 +174,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 1840
 	 } 
 	artisans = {
@@ -194,7 +184,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 48129
 	 } 
 	farmers = {
@@ -203,16 +193,11 @@
 		size = 486
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -220,7 +205,7 @@
 1154 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 1108
 	 } 
 	aristocrats = {
@@ -230,12 +215,12 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 27
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 138
 	 } 
 	capitalists = {
@@ -245,7 +230,7 @@
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 277
 	 } 
 	clergymen = {
@@ -255,7 +240,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 817
 	 } 
 	artisans = {
@@ -265,7 +250,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 21391
 	 } 
 	farmers = {
@@ -274,16 +259,11 @@
 		size = 216
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -291,7 +271,7 @@
 1155 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 2692
 	 } 
 	aristocrats = {
@@ -301,12 +281,12 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 67
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 336
 	 } 
 	capitalists = {
@@ -316,7 +296,7 @@
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 673
 	 } 
 	clergymen = {
@@ -326,7 +306,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 1986
 	 } 
 	artisans = {
@@ -336,7 +316,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 6360
 	 } 
 	farmers = {
@@ -346,20 +326,15 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  shiite 
+		religion = shiite 
 		size = 46050
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -367,7 +342,7 @@
 1156 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 613
 	 } 
 	aristocrats = {
@@ -377,17 +352,17 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 14
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 76
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 153
 	 } 
 	clergymen = {
@@ -397,7 +372,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 452
 	 } 
 	artisans = {
@@ -407,7 +382,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 11840
 	 } 
 	farmers = {
@@ -416,16 +391,11 @@
 		size = 119
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -433,7 +403,7 @@
 1157 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 9543
 	 } 
 	aristocrats = {
@@ -443,7 +413,7 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 238
 	 } 
 	bureaucrats = {
@@ -453,7 +423,7 @@
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 1192
 	 } 
 	capitalists = {
@@ -463,7 +433,7 @@
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 2385
 	 } 
 	clergymen = {
@@ -473,7 +443,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 7042
 	 } 
 	artisans = {
@@ -483,7 +453,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 184118
 	 } 
 	farmers = {
@@ -492,16 +462,11 @@
 		size = 1859
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -509,7 +474,7 @@
 1158 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 445
 	 } 
 	aristocrats = {
@@ -519,17 +484,17 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 10
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 55
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 110
 	 } 
 	clergymen = {
@@ -539,7 +504,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 328
 	 } 
 	artisans = {
@@ -549,7 +514,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 8594
 	 } 
 	farmers = {
@@ -558,16 +523,11 @@
 		size = 86
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -575,7 +535,7 @@
 1159 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 1702
 	 } 
 	aristocrats = {
@@ -585,12 +545,12 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 42
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 212
 	 } 
 	capitalists = {
@@ -600,7 +560,7 @@
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 425
 	 } 
 	clergymen = {
@@ -610,7 +570,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 1256
 	 } 
 	artisans = {
@@ -620,7 +580,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 32851
 	 } 
 	farmers = {
@@ -629,16 +589,11 @@
 		size = 331
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -646,7 +601,7 @@
 1160 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 831
 	 } 
 	aristocrats = {
@@ -656,12 +611,12 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 20
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 103
 	 } 
 	capitalists = {
@@ -671,7 +626,7 @@
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 207
 	 } 
 	clergymen = {
@@ -681,7 +636,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 612
 	 } 
 	artisans = {
@@ -691,7 +646,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 16042
 	 } 
 	farmers = {
@@ -700,16 +655,11 @@
 		size = 162
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -717,7 +667,7 @@
 1161 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 702
 	 } 
 	aristocrats = {
@@ -727,17 +677,17 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 16
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 87
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 175
 	 } 
 	clergymen = {
@@ -747,7 +697,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 518
 	 } 
 	artisans = {
@@ -757,7 +707,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 13560
 	 } 
 	farmers = {
@@ -766,16 +716,11 @@
 		size = 136
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -783,7 +728,7 @@
 1163 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 2890
 	 } 
 	aristocrats = {
@@ -793,12 +738,12 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 72
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 361
 	 } 
 	capitalists = {
@@ -808,7 +753,7 @@
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 722
 	 } 
 	clergymen = {
@@ -818,7 +763,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 2133
 	 } 
 	artisans = {
@@ -828,7 +773,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 1046
 	 } 
 	farmers = {
@@ -838,20 +783,15 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  shiite 
+		religion = shiite 
 		size = 55276
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -859,7 +799,7 @@
 1164 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 2890
 	 } 
 	aristocrats = {
@@ -869,12 +809,12 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 72
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 361
 	 } 
 	capitalists = {
@@ -884,7 +824,7 @@
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 722
 	 } 
 	clergymen = {
@@ -894,7 +834,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 2133
 	 } 
 	artisans = {
@@ -904,7 +844,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 37181
 	 } 
 	farmers = {
@@ -914,20 +854,15 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  shiite 
+		religion = shiite 
 		size = 18776
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -935,7 +870,7 @@
 2586 = {
 	aristocrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 1920
 	 } 
 	aristocrats = {
@@ -945,12 +880,12 @@
 	 } 
 	bureaucrats = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 47
 	 } 
 	capitalists = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 239
 	 } 
 	capitalists = {
@@ -960,7 +895,7 @@
 	 } 
 	clergymen = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 480
 	 } 
 	clergymen = {
@@ -970,7 +905,7 @@
 	 } 
 	artisans = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 1416
 	 } 
 	artisans = {
@@ -980,7 +915,7 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  sunni 
+		religion = sunni 
 		size = 21823
 	 } 
 	farmers = {
@@ -990,20 +925,15 @@
 	 } 
 	farmers = {
 		culture = arab_gulf
-		religion =  shiite 
+		religion = shiite 
 		size = 15383
 	 } 
 
-	#For Pan-Arab and National Arab
-	farmers = {
-		culture = saudi
-		religion =  sunni 
-		size = 1000
-	 } 
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }

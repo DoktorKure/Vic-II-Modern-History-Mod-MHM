@@ -262,7 +262,9 @@ political_decisions = {
 		}
 				
 		effect = {
-			money = -5000000
+			money = -2000000
+			money = -2000000
+			money = -1000000
 			prestige = 1000
 			capital_scope = { add_province_modifier = { name = space_theme_parks duration = -1 } }
 	}
@@ -297,7 +299,8 @@ political_decisions = {
 		}
 
 		effect = {
-			money = -4000000
+			money = -2000000
+			money = -2000000
 			add_country_modifier = { name = germania duration = 3650 }
 			set_country_flag = germania
 			any_owned = { limit = { is_capital = no has_province_modifier = new_capital } life_rating = 5 remove_province_modifier = new_capital }

@@ -10,10 +10,22 @@ political_decisions = {
 			
 			#UN trust territories do not align with anyone
 			NOT = { tag = UNT }
+			NOT = { tag = CLN }
 
 			NOT = { has_country_modifier = king_timer }
 			
-			is_vassal = no
+			OR = {
+				is_vassal = no
+				AND = {
+					is_vassal = yes
+					overlord = {
+						OR = {
+							has_country_flag = joindemo
+							has_country_modifier = democratic_bloc
+						}
+					}
+				}
+			}
 			
 			#Not a communist dictatorship - that uses a different system
 			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
@@ -101,10 +113,22 @@ political_decisions = {
 			
 			#UN trust territories do not align with anyone
 			NOT = { tag = UNT }
+			NOT = { tag = CLN }
 
 			NOT = { has_country_modifier = king_timer }
 			
-			is_vassal = no
+			OR = {
+				is_vassal = no
+				AND = {
+					is_vassal = yes
+					overlord = {
+						OR = {
+							has_country_flag = joincomm
+							has_country_modifier = communist_bloc
+						}
+					}
+				}
+			}
 			
 			#Use a different system if the Sino soviet split is ongoing
 			NOT = { 
@@ -201,10 +225,17 @@ political_decisions = {
 			
 			#UN trust territories do not align with anyone
 			NOT = { tag = UNT }
+			NOT = { tag = CLN }
 
 			NOT = { has_country_modifier = king_timer }
 			
-			is_vassal = no
+			OR = {
+				is_vassal = no
+				AND = {
+					is_vassal = yes
+					overlord = { has_country_flag = joinnam }
+				}
+			}
 			
 			NOT = { has_country_modifier = democratic_bloc_leader }
 			NOT = { has_country_modifier = communist_bloc_leader }
@@ -290,8 +321,19 @@ political_decisions = {
 			NOT = { has_country_modifier = un_king2 }
 			NOT = { has_country_modifier = king_timer }
 			
+			#UN trust territories do not align with anyone
+			NOT = { tag = UNT }
+			NOT = { tag = CLN }
+			
 			NOT = { OR = { tag = RUS tag = CHI } }
-			is_vassal = no
+			
+			OR = {
+				is_vassal = no
+				AND = {
+					is_vassal = yes
+					overlord = { tag = RUS }
+				}
+			}
 			
 			has_global_flag = blocsenabled
 			
@@ -378,8 +420,19 @@ political_decisions = {
 			NOT = { has_country_modifier = un_king2 }
 			NOT = { has_country_modifier = king_timer }
 			
+			#UN trust territories do not align with anyone
+			NOT = { tag = UNT }
+			NOT = { tag = CLN }
+			
 			NOT = { OR = { tag = RUS tag = CHI } }
-			is_vassal = no
+			
+			OR = {
+				is_vassal = no
+				AND = {
+					is_vassal = yes
+					overlord = { tag = CHI }
+				}
+			}
 			
 			has_global_flag = blocsenabled
 			

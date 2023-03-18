@@ -390,7 +390,7 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 2
+		months = 1
 		modifier = {
 			factor = 0.5
 			any_greater_power = {
@@ -431,7 +431,7 @@ country_event = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 0.5
 			any_greater_power = {
 				badboy = 1.2
 				is_disarmed = no
@@ -446,7 +446,7 @@ country_event = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1
 			any_greater_power = {
 				badboy = 1.2
 				is_disarmed = no
@@ -476,7 +476,7 @@ country_event = {
 			}
 		}
 		modifier = {
-			factor = 2
+			factor = 1
 			any_greater_power = {
 				badboy = 1.2
 				is_disarmed = no
@@ -493,6 +493,10 @@ country_event = {
 		modifier = {
 			factor = 4
 			war_policy = pacifism
+		}
+		modifier = {
+			factor = 0.5
+			war_policy = jingoism
 		}
 		modifier = {
 			factor = 2

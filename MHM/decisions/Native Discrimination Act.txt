@@ -8,7 +8,6 @@ native_discrimination_act = {
 
 
 OR = {
-accepted_culture = sudanese
 accepted_culture = akan	
 accepted_culture = bambara 
 accepted_culture = black_muslim 	
@@ -313,11 +312,6 @@ has_pop_culture = zulu
 				}
 			}
 			
-				
-			random_owned = {
-				limit = { is_core = THIS any_pop = { has_pop_culture = sudanese } owner = { accepted_culture = sudanese } }
-				owner = { remove_accepted_culture = sudanese }
-			}
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = akan } owner = { accepted_culture = akan } }
 				owner = { remove_accepted_culture = akan }

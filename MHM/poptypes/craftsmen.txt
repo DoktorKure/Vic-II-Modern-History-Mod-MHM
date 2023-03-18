@@ -1205,6 +1205,12 @@ promote_to =
 			NOT = { state_scope = { work_available = { worker = craftsmen } } }
 		}
 		
+		#Craftsmen demote in nations with colonial gov type for balance purposes
+		modifier = {
+			factor = 100
+			country = { government = colonial_government }
+		}
+		
 		modifier = {
 			factor = 5.0
 			NOT = {
@@ -1217,19 +1223,18 @@ promote_to =
 		}
 	}
 
-	soldiers =
-	{
+	soldiers = {
 		factor = 0.01
-		
+
 		#Conscription laws limit the total soldier pop size unless there is a war
 		modifier = { factor = -100 soldiers = 0.01 country = { conscription_policy = no_draft war = no } }
-		
 		modifier = { factor = -100 soldiers = 0.02 country = { conscription_policy = one_year_draft war = no } }
-
 		modifier = { factor = -100 soldiers = 0.03 country = { conscription_policy = two_year_draft war = no } }
-
 		modifier = { factor = -100 soldiers = 0.04 country = { conscription_policy = three_year_draft war = no } }
 
+		#Special
+		modifier = { factor = 5 country = { has_country_flag = indo_con } }
+		
 		#Imported from HPM
 		group = {
 			modifier = {
@@ -1257,7 +1262,6 @@ promote_to =
 				recruited_percentage = 0.60
 			}
 		}
-	
 		group = {
 			modifier = {
 				factor = 2

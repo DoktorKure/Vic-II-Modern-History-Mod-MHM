@@ -241,7 +241,7 @@ country_event = {
 				secede_province = CSA
 			}
 		}
-		USA = { any_owned = { limit = { is_core = USA } add_core = CSA } }
+		USA = { all_core = { add_core = CSA } }
 	}
 }
 

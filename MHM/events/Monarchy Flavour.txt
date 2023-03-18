@@ -1196,3 +1196,49 @@ country_event = {
 	}
 
 }
+
+#Absolute Monarchies
+country_event = {
+	id = 1512332
+	title = "The $COUNTRY_ADJ$ Aristocrats' Demands"
+	desc = EVTDESC1512332
+	picture = "royal_court"
+
+	trigger = {
+		war = no
+		OR = { 
+			average_militancy = 5
+			capital_scope = {
+				any_pop = { type = aristocrats militancy = 9 }
+			}
+		}
+		political_opinions = ruling_party_opinion
+		government = absolute_monarchy
+		NOT = { has_country_modifier = revolution_chaos }
+	}
+
+	mean_time_to_happen = { months = 6 }
+
+	option = {
+		name = "Accept the demands of the aristocrats"
+		prestige_factor = -0.05
+		political_reform = appointed_opinion
+		any_pop = { limit = { type = aristocrats } militancy = -6 }
+		ai_chance = { factor = 0.75 }	
+	}
+
+	option = {
+		name = "Tell them who's King!"
+		add_country_modifier = { name = revolution_chaos duration = 365 }
+		any_pop = { 
+			dominant_issue = {
+				value = appointed_opinion
+				factor = 0.25
+			}
+		}
+		any_pop = { limit = { type = aristocrats } militancy = 6 }
+		any_pop = { limit = { type = officers } militancy = 3 }
+		ai_chance = { factor = 0.25 }		
+	}
+}
+

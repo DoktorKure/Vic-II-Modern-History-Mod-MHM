@@ -1927,20 +1927,90 @@ country_event = {
 		clr_country_flag = calling_all_allies
 		clr_country_flag = enemy_of_my_enemy
 		clr_country_flag = total_collapse
-		remove_country_modifier = great_war
-		remove_country_modifier = great_war2
-		remove_country_modifier = great_war3
-		war_exhaustion = 20
-		any_pop = {
-			militancy = -3
-			dominant_issue = {
-				factor = 0.10
-				value = pacifism
+		
+		#Won a great war with minimal toll
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = great_war
+					NOT = {
+						OR = {
+							has_country_modifier = great_war2
+							has_country_modifier = great_war3
+						}
+					}
+				}
+			}
+			owner = {
+				remove_country_modifier = great_war
+				any_pop = {
+					militancy = -3
+					dominant_issue = {
+						factor = 0.10
+						value = jingoism
+					}
+				}
 			}
 		}
-		add_country_modifier = {
-			name = no_more_war
-			duration = 1095
+		
+		#Won a great war but it took its toll (Think: WWI)
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = great_war2
+					NOT = {
+						OR = {
+							has_country_modifier = great_war
+							has_country_modifier = great_war3
+						}
+					}
+				}
+			}
+			owner = {
+				remove_country_modifier = great_war2
+				war_exhaustion = 20
+				any_pop = {
+					militancy = -3
+					dominant_issue = {
+						factor = 0.10
+						value = pacifism
+					}
+				}
+				add_country_modifier = {
+					name = no_more_war
+					duration = 1095
+				}
+			}
+		}
+		
+		#Won a great war but at a heavy cost (Think: WWII)
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = great_war3
+					NOT = {
+						OR = {
+							has_country_modifier = great_war
+							has_country_modifier = great_war2
+						}
+					}
+				}
+			}
+			owner = {
+				remove_country_modifier = great_war3
+				war_exhaustion = 50
+				any_pop = {
+					militancy = -5
+					dominant_issue = {
+						factor = 0.25
+						value = pacifism
+					}
+				}
+				add_country_modifier = {
+					name = no_more_war
+					duration = 3650
+				}
+			}
 		}
 	}
 }

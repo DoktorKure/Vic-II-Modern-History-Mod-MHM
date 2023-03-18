@@ -44,13 +44,13 @@ EVT_8008104_B;We must claim Osh to support our brothers and sisters there;;;;;;;
 EVT_8008104_C;Kyrgzstan will have to pay for this atrocity in blood!;;;;;;;;;;;;;x
 EVT_8008104_D;This is not worth our time;;;;;;;;;;;;;x
 EVT_19002_NAME;Foreign Influence in our Country;;;;;;;;;;;;;x;;;;
-EVT_19002_DESC;We have come under the sphere of influence of $SPHEREMASTER$. Our Government type differs from theirs. This is causing contention. Shall we seek there permission to continue our current form of government?;;;;;;;;;;;;;x;;;;
+EVT_19002_DESC;We have come under the sphere of influence of $SPHEREMASTER$. Our Government type differs from theirs. This is causing contention. Shall we seek their permission to continue our current form of government?;;;;;;;;;;;;;x;;;;
 EVT_19002_A;Seek permission;;;;;;;;;;;;;x;;;;
 EVT_19002_B;Distance our selves from them;;;;;;;;;;;;;x;;;;
 EVT_19004_NAME;$FROMCOUNTRY$ request permission to maintain their current form of government;;;;;;;;;;;;;x;;;;
-EVT_19004_DESC;We have sphered $FROMCOUNTRY$. Their government form is different from ours. Shall we insist that they change there form of government, potentially risking us losing our influence if they refuse?;;;;;;;;;;;;;x;;;;
+EVT_19004_DESC;We have sphered $FROMCOUNTRY$. Their government form is different from ours. Shall we insist that they change their form of government, potentially risking us losing our influence if they refuse?;;;;;;;;;;;;;x;;;;
 EVT_19004_A;Accept our differences;;;;;;;;;;;;;x;;;;
-EVT_19004_B;Demand regime change outright (risk loosing influence);;;;;;;;;;;;;x;;;;
+EVT_19004_B;Demand regime change outright (risk losing influence);;;;;;;;;;;;;x;;;;
 EVT_8004326_NAME;The Reparations Agreement between Israel and the Federal Republic of Germany;;;;;;;;;;;;;x;;;;
 EVT_8004326_DESC;Calls from Jewish organisations and the State of Israel, for compensation for the unspeakable crimes have been committed in the name of the German people, calling for moral and material indemnity. Shall the The Federal Government are prepared, jointly with representatives of Jewry and the State of Israel bring about a solution of the material indemnity problem, thus easing the way to the spiritual settlement of infinite suffering, or shall we leave the issue unresolved?;;;;;;;;;;;;;x;;;;
 EVT_8004326_A;We have guilt. Make the payment;;;;;;;;;;;;;x;;;;
@@ -7102,13 +7102,14 @@ EVT_19001_DESC;We have come under the sphere of influence of a $SPHEREMASTER$. O
 EVT_19001_A;Seek permission;;;;;;;;;;;;;x
 EVT_19001_B;Distance ourselves from them;;;;;;;;;;;;;x
 EVT_19003_NAME;$FROMCOUNTRY$ request permission to maintain their current form of government;;;;;;;;;;;;;x
-EVT_19003_DESC;We have sphered $FROMCOUNTRY$. Their government form is different from ours - $GOVT$. Shall we insist that they change their form of government, potentially risking us losing our influence if they refuse?;;;;;;;;;;;;;x
+EVT_19003_DESC;We have sphered $FROMCOUNTRY$. Their government form is different from ours - $GOVT$. Shall we insist that they change their form of government? If they refuse, we have assets within their govermnent that will attempt to instigate a coup, but we will lose our influence if it fails.;;;;;;;;;;;;;x
 EVT_19003_A;Accept our differences;;;;;;;;;;;;;x
 EVT_19003_B;Demand regime change outright (risk losing influence);;;;;;;;;;;;;x
 EVT_19006_NAME;Demand to install communists in power;;;;;;;;;;;;;x
-EVT_19006_DESC;We have come under the sphere of influence of a $SPHEREMASTER$. Our $GOVT$ differs from theirs, and this is causing contention. The hegemony $SPHEREMASTER$ demands our submission and regime change.;;;;;;;;;;;;;x
-EVT_19006_A;Refuse!;;;;;;;;;;;;;x
+EVT_19006_DESC;We have come under the sphere of influence of a $SPHEREMASTER$. Our $GOVT$ differs from theirs, and this is causing contention. The hegemony $SPHEREMASTER$ demands our submission and regime change. If we refuse, we risk a coup instigated by $SPHEREMASTER$, or an outright regime change war if the coup fails!;;;;;;;;;;;;;x
+EVT_19006_A;Refuse! (40% Chance of a coup!);;;;;;;;;;;;;x
 EVT_19006_B;Accept and give the communists power;;;;;;;;;;;;;x
+EVT_19006_C;Accept and become a far-right dictatorship;;;;;;;;;;;;;x
 EVT_19007_NAME;Demand to install a democracy;;;;;;;;;;;;;x
 EVT_19007_B;Accept and become a democracy;;;;;;;;;;;;;x
 EVT_19805_NAME;Non-Aligned Movement;;;;;;;;;;;;;x

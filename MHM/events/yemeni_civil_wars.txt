@@ -161,7 +161,7 @@ country_event = {
 		ruling_party_ideology = traditionalist
 		
 		any_pop = { 
-			limit = { culture = yemeni } 
+			limit = { culture = arab_gulf } 
 			militancy = 5 
 			consciousness = 4 
 		}
@@ -200,7 +200,7 @@ country_event = {
 		
 		prestige = 50
 		
-		any_pop = { limit = { culture = yemeni } militancy = 3 consciousness = 2 }
+		any_pop = { limit = { culture = arab_gulf } militancy = 3 consciousness = 2 }
 		
 		all_core = { remove_core = HOU }
 		

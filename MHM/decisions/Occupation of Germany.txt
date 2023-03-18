@@ -251,6 +251,7 @@ political_decisions = {
 			OG1 = { change_tag = DDR }
 			diplomatic_influence = { who = DDR value = 200 }
 			RUS = { military_access = DDR }
+			RUS = { create_alliance = DDR }
 			DDR = { primary_culture = german country_event = 1600 }
 			prestige = 50
 		}
@@ -364,7 +365,7 @@ political_decisions = {
 			war = no
 			election = no
 			is_vassal = no
-			OR = { ai = no ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = big_tent }
+			OR = { ai = no ruling_party_ideology = liberal ruling_party_ideology = progressive ruling_party_ideology = big_tent ruling_party_ideology = socialist }
 		}
 		alert = no
 		effect = {

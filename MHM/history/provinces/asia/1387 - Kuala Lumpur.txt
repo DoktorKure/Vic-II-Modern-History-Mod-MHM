@@ -7,10 +7,10 @@ life_rating = 30
 terrain = urban_kuala_lumpur
 naval_base = 1
 colonial = 0
-1992.1.1 = {
-owner = MSY
-controller = MSY
-add_core = MSY
-life_rating = 30
-colonial = 0
+1992.1.1 = { 
+    owner = MSY
+    controller = MSY
+    add_core = MSY
+    life_rating = 30
+    colonial = 0
 }

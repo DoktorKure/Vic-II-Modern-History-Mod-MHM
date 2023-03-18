@@ -161,15 +161,6 @@ political_decisions = {
 				}
 			}
 			random_owned = { 
-				limit = { owner = { has_country_modifier = space_private cloud_computing = 1 NOT = { cloud_computing = 1 } } } #2020s tech
-				owner = {
-					random_list = {
-						55 = { country_event = 1400055 } #Rocket Successful
-						45 = { country_event = 1400054 } #Rocket Failure
-					}
-				}
-			}
-			random_owned = { 
 				limit = { owner = { has_country_modifier = space_private cloud_computing = 1 NOT = { artificial_intelligence = 1 } } } #2020s tech
 				owner = {
 					random_list = {

@@ -77,7 +77,6 @@ political_decisions = {
 		picture = "unesco_whs"
 		potential = {
 			has_country_modifier = unesco
-			neoliberalism = 1
 			NOT = { OR = { capital_scope = { continent = asia } capital_scope = { continent = mena } capital_scope = { continent = europe } } }
 			any_owned_province = { total_pops = 10000 NOT = { has_province_modifier = unesco_whs } }
 			NOT = { has_country_modifier = unesco_timer }
@@ -100,7 +99,6 @@ political_decisions = {
 		picture = "unesco_whs"
 		potential = {
 			has_country_modifier = unesco
-			neoliberalism = 1
 			capital_scope = { continent = asia }
 			any_owned_province = { total_pops = 10000 NOT = { has_province_modifier = unesco_whs } }
 			NOT = { has_country_modifier = unesco_timer }
@@ -123,7 +121,6 @@ political_decisions = {
 		picture = "unesco_whs"
 		potential = {
 			has_country_modifier = unesco
-			neoliberalism = 1
 			capital_scope = { continent = europe }
 			any_owned_province = { total_pops = 10000 NOT = { has_province_modifier = unesco_whs } }
 			NOT = { has_country_modifier = unesco_timer }
@@ -146,7 +143,6 @@ political_decisions = {
 		picture = "unesco_whs"
 		potential = {
 			has_country_modifier = unesco
-			neoliberalism = 1
 			capital_scope = { continent = mena }
 			any_owned_province = { total_pops = 10000 NOT = { has_province_modifier = unesco_whs } }
 			NOT = { has_country_modifier = unesco_timer }

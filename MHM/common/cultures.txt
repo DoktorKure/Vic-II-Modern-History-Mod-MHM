@@ -640,7 +640,7 @@ regional_arabic_1 = {
 	unit = MiddleEasternGC
 	berber = { # tag = _LIB tag = _TUN tag = _ALG tag = _MOR
 		#!religion = { sunni }
-		color = { 51 75 70 }
+		color = { 59 104 50 }
 		first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
 		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
 	}
@@ -649,62 +649,20 @@ regional_arabic_1 = {
 		first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
 		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
 	}
-	arab_levantine = { 
+	arab_mashriqi = { 
 		color = { 77 164 60 }
 		first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
 		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
 	}
-	arab_mesopotamian = { 
-		color = { 59 104 50 }
-		first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
-		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
-	}
-	arab_awazi = { 
-		color = { 25 63 18 }
-		first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
-		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
-	}
-	arab_sahrawi = { 
-		color = { 124 246 145 }
-		first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
-		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
-	}
-	arab_saharan = { 
-		color = { 200 246 145 }
-		first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
-		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
-	}
-	arab_shuwa = { 
-		color = { 99 185 113 }
-		first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
-		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
-	}
-	arab_marsh = { 
-		color = { 30 91 21 }
-		first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
-		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
-	}
-	arab_khamseh = { 
-		color = { 31 70 25 }
+	arab_nile = { 
+		color = { 99 156 12 }
 		first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
 		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
 	}
 	arab_hassaniya = { 
-		color = { 50 70 100 }
+		color = { 39 126 77 }
 		first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
 		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
-	}
-	union = XUM
-}
-
-arabic = {
-	leader = arab
-	unit = MiddleEasternGC
-	christian_arab = {
-		#!religion = { orthodox }
-		color = { 255 20 147 }
-		first_names = { "Ibn Muhammad" Abdullah "Abbas said" Ismail Mansur Rahman Abdallahi Hassan Malusi Tahir Wiraj Amsalu Nijam Bakri }
-		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi }
 	}
 	druze = {
 		#!religion = { druze }
@@ -712,125 +670,16 @@ arabic = {
 		first_names = { "Ibn Muhammad" Abdullah "Abbas said" Ismail Mansur Rahman Abdallahi Hassan Malusi Tahir Wiraj Amsalu Nijam Bakri }
 		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi }
 	}
-	ibad_arab = {
-		#!religion = { ibad }
-		color = { 32 178 170 }
-		first_names = { "Ibn Muhammad" Abdullah "Abbas said" Ismail Mansur Rahman Abdallahi Hassan Malusi Tahir Wiraj Amsalu Nijam Bakri }
-		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi }
-	}
-	shia_arab = {
-		#!religion = { shiite }
-		color = { 189 183 107 }
-		first_names = { "Ibn Muhammad" Abdullah "Abbas said" Ismail Mansur Rahman Abdallahi Hassan Malusi Tahir Wiraj Amsalu Nijam Bakri }
-		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi }
-	}
-	sunni_arab = {
-		#!religion = { sunni }
-		color = { 60 179 113 }
-		first_names = { "Ibn Muhammad" Abdullah "Abbas said" Ismail Mansur Rahman Abdallahi Hassan Malusi Tahir Wiraj Amsalu Nijam Bakri }
-		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi }
-	}
-	sudanese = {
-		color = {241 241 78}
-		first_names = { "Ibn Muhammad" Abdullah "Abbas said" Ismail Mansur Rahman Abdallahi Hassan Malusi Tahir Wiraj Amsalu Nijam Bakri }
-		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi }
-		radicalism = 10
-	}
+	union = XUM
+}
+
+arabic = {
+	leader = arab
+	unit = MiddleEasternGC
 	arab = { 
 		color = { 60 179 113 }
 		first_names = { "Ibn Muhammad" "Abdullah" "Abbas said" "Ismail Mansur" "Rahman" "Abdallahi" "Hassan" "Malusi" "Tahir" "Wiraj" "Amsalu" "Nijam" "Bakri" "Abd Allah" "Abd al-Karim" "Abd al-Malik" "Abd al-Qadir" "Abd al-Rahman" "Abu Bakr" "Ahmad" "Ali" "Fawzi" "Fuad" "Halil" "Hasan" "Hisham" "Ibrahim" "Ishaq" "Iskandar" "Ja'far" "Jamal" "Kamil" "Khalid" "Muhammad" "Mustafa" "Nur al-Din" "Sa'd al-Din" "Salim"  "Sa'ud" "Shukri" "Tawfiq" "Umar" "Uthman" "Yahya" "Yusuf" "Zafir" }
 		last_names = { Ahmad Ali Zubayr Digna Azrak Hammuda al-Tasashi Nujumi "al-Annabi" "al-Araishi" "al-Asfawi" "al-Binzarti" "al-Fasi" "al-Gharyani" "al-Jaza'iri" "al-Miknasi" "al-Misurati" "al-Murrakushi" "al-Qabisi" "al-Qayrawani" "al-Ribati" "al-Safaqisi" "al-Silawi" "al-Sirti" "al-Susawi" "al-Tilimsani" "al-Tanjawi" "al-Tatwani" "al-Trablusi" "al-Tunusi" "al-Wahrani" "al-Warqali" "al-Wujdi" "ibn Abd Allah" "ibn Abd al-Qadir" "ibn Abu Bakr" "ibn Ahmad" "ibn Ali" "ibn Fuad" "ibn Halil" "ibn Hasan" "ibn Hisham" "ibn Ishaq" "ibn Ja'far" "ibm Kamil" "ibn Khalid" "ibn Muhammad" "ibn Mustafa" "ibn Salim" "ibn Umar" "ibn Uthman" "ibn Yusuf" }
-	}
-
-	mauritanian = {
-		color = { 76 179 250 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	omani = {
-		color = { 98 134 153 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	yemeni = {
-		color = { 240 230 140 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	emirati = {
-		color = { 131 139 131 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	qatari = {
-		color = { 85 107 47 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	bahrani = {
-		color = { 193 205 193 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	kuwaiti = {
-		color = { 129 81 124 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	saudi = {
-		color = { 60 255 113 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	egyptian = {
-		color = { 243 214 76 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	jordanian = {
-		color = { 0 100 0 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	palestinian = {
-		color = { 66 140 101 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	moroccan = {
-		color = { 224 146 113 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	libyan = {
-		color = { 193 205 193 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	tunisian = {
-		color = { 170 206 162 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	iraqi = {
-		color = { 240 230 140 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	syrian = {
-		color = { 205 201 201 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	lebanese = {
-		color = { 230 230 250 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
-	}
-	algerian = {
-		color = { 222 184 135 }
-		first_names = { Abdullah Abdulhamid Abdulkerim Ahmet Ali Bekir Cemal Enver Fevzi Fuat Halil Hasan Ibrahim Iskender Ismet Izzet Kamil Kazim Kemal Mehmet Murat Musa Mustafa Nazim Nurettin Omar Osman Nuri Rauf Rifat Selim Shukru Suleyman Urabi Yusuf Yunus Ziya }
-		last_names = { Elsherbiny  Elshinnawy Abdel-Dayem Elhadidy Adib Bassili Aboul-Nour Elbassiouny Aoul-Enein Elsaeid Elhousseiny Khattab Gouda Elbordiny Arafa Elsafty Elshorbagy Hasheesh Halim Tawakol Elfar Elbadry Khalil Shahin Elserafie Hakim Kira Amer Bakhoum Elmanawy Deyab Derbala Elhadidi Elbenhawy Negm Nakhla Koura Elshazly Soliman Elkhashab Elkady Hindawy Zeitoun Elgammal }
 	}
 	union = UAR
 }
@@ -1177,8 +1026,8 @@ chinese_cultures = {
 	chinese = {
 		#!religion = { taoism }
 		color = { 163 68 68 }
-		first_names = { Wang Li Zhang Liu Chen Huang Liang Luo Kwong Hsia Zhu Mao Hu Liao Tan Deng Cheng Yang Gao Xie Ma Kong Dong Pan Yu Xi }
-		last_names = { Zhao Wu Sun Ma Hu Peng Dong Ye Lü Tian Jiang Wei Wang Ting Shen Fang Jin Qiu Jingping Xiaoping }
+		first_names = { Be Chen Cheng Deng Dong Duc Gao Hoang Hsia Hu Huang Kong Kwong Le Li Liang Liao Liu Luo Ma Mao Nong Pan Quoc Quynh Tan The Van Wang Xi Xie Yang Yu Zhang Zhu }
+		last_names = { Cao Chan Den Dong Fang Hau Hu Jiang Jin Jingping Khanh Lü Ma Manh Peng Phach Phung Qiu Shen Sun Thu Tian Ting Trieu Wang Wei Wu Xiaoping Ye Zhao }
 	}
 	chinese_cantonese = {
 		#!religion = { taoism }
@@ -1219,12 +1068,6 @@ chinese_cultures = {
 	hani = { #chinese minorities
 		#!religion = { taoism }
 		color = { 184 134 11 }
-		first_names = { Hoang Nong Le Be Van Quoc Quynh The Duc }
-		last_names = { Thu Manh Trieu Khanh Phung Hau Chan Den Phach Cao }
-	}
-	hui = {
-		#!religion = { sunni }
-		color = { 240 230 140 }
 		first_names = { Hoang Nong Le Be Van Quoc Quynh The Duc }
 		last_names = { Thu Manh Trieu Khanh Phung Hau Chan Den Phach Cao }
 	}

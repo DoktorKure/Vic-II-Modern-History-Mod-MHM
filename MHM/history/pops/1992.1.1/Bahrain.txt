@@ -2,7 +2,7 @@
 1162 = {
 	capitalists = {
 		culture = white_anglo
-		religion =  protestant 
+		religion = protestant 
 		size = 568
 	 } 
 	capitalists = {
@@ -11,33 +11,33 @@
 		size = 63
 	 } 
 	soldiers = {
-		culture = bahrani
-		religion =  sunni 
+		culture = arab_gulf
+		religion = sunni 
 		size = 3892
 	 } 
 	aristocrats = {
-		culture = bahrani
-		religion =  sunni 
+		culture = arab_gulf
+		religion = sunni 
 		size = 5060
 	 } 
 	clergymen = {
-		culture = bahrani
-		religion =  sunni 
+		culture = arab_gulf
+		religion = sunni 
 		size = 1265
 	 } 
 	clerks = {
-		culture = bahrani
-		religion =  sunni 
+		culture = arab_gulf
+		religion = sunni 
 		size = 4069
 	 } 
 	artisans = {
-		culture = bahrani
-		religion =  sunni 
+		culture = arab_gulf
+		religion = sunni 
 		size = 3866
 	 } 
 	craftsmen = {
 		culture = white_anglo
-		religion =  protestant 
+		religion = protestant 
 		size = 569
 	 } 
 	craftsmen = {
@@ -47,7 +47,7 @@
 	 } 
 	craftsmen = {
 		culture = chinese
-		religion =  taoism 
+		religion = taoism 
 		size = 1138
 	 } 
 	craftsmen = {
@@ -57,7 +57,7 @@
 	 } 
 	craftsmen = {
 		culture = hindi
-		religion =  hindu 
+		religion = hindu 
 		size = 8686
 	 } 
 	craftsmen = {
@@ -67,7 +67,7 @@
 	 } 
 	farmers = {
 		culture = hindi
-		religion =  hindu 
+		religion = hindu 
 		size = 2698
 	 } 
 	farmers = {
@@ -76,23 +76,23 @@
 		size = 299
 	 } 
 	farmers = {
-		culture = bahrani
-		religion =  shiite 
+		culture = arab_gulf
+		religion = shiite 
 		size = 44275
 	 } 
 	farmers = {
-		culture = bahrani
-		religion =  orthodox 
+		culture = arab_gulf
+		religion = orthodox 
 		size = 1138
 	 } 
 	farmers = {
-		culture = bahrani
+		culture = arab_gulf
 		religion = secularism
 		size = 126
 	 } 
 	farmers = {
 		culture = filipino
-		religion =  catholic 
+		religion = catholic 
 		size = 7969
 	 } 
 	farmers = {
@@ -102,12 +102,12 @@
 	 } 
 	farmers = {
 		culture = punjabi
-		religion =  sunni 
+		religion = sunni 
 		size = 25300
 	 } 
 	farmers = {
 		culture = bengali
-		religion =  sunni 
+		religion = sunni 
 		size = 11385
 	 } 
 }

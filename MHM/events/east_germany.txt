@@ -695,7 +695,10 @@ country_event = {
 		has_country_flag = DDR_to_collapse_flag
 	}
 
-	mean_time_to_happen = { months = 4 }
+	mean_time_to_happen = {
+		months = 4
+		modifier = { factor = 0.1 year = 1990 }
+	}
 
 	option = {
 		name = "It is the end of East Germany"
@@ -703,7 +706,7 @@ country_event = {
 		#West Germany to annex East Germany
 		FRG = { country_event = 8004325 }
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -727,7 +730,7 @@ country_event = {
 		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 	
 }

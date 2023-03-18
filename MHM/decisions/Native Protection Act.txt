@@ -14,7 +14,6 @@ native_protection_act = {
 				any_core = {
 					any_pop = {
 						OR = {
-has_pop_culture = sudanese
 has_pop_culture = akan	
 has_pop_culture = bambara 
 has_pop_culture = black_muslim 	
@@ -184,10 +183,6 @@ clr_country_flag = native_discrimination_act_enacted
 				}
 			}
 			
-			random_owned = {
-				limit = { is_core = THIS any_pop = { has_pop_culture = sudanese } NOT = { owner = { accepted_culture = sudanese } } }
-				owner = { add_accepted_culture = sudanese }
-			}	
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = akan } NOT = { owner = { accepted_culture = akan } } }
 				owner = { add_accepted_culture = akan }

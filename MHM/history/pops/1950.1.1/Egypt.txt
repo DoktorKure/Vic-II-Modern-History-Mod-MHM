@@ -2,7 +2,7 @@
 1745 = {
 	capitalists = {
 		culture = jewish
-		religion =  jewish 
+		religion = jewish 
 		size = 5620
 	 } 
 	capitalists = {
@@ -11,38 +11,38 @@
 		size = 56
 	 } 
 	soldiers = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1049
 	 } 
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 45420
 	 } 
 	bureaucrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1135
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 11355
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 17698
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 797416
+		culture = arab_nile
+		religion = sunni 
+		size = 796416
 	 } 
 	farmers = {
 		culture = jewish
-		religion =  jewish 
+		religion = jewish 
 		size = 16862
 	 } 
 	farmers = {
@@ -51,211 +51,211 @@
 		size = 170
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  orthodox 
+		culture = arab_nile
+		religion = orthodox 
 		size = 181045
 	 } 
 	farmers = {
-		culture = egyptian
+		culture = arab_nile
 		religion = secularism
 		size = 1828
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Dumyat - Damietta , Kafr el-Sheikh (1005000/251250 POPS)
 1746 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 10050
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1256
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 2512
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3916
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 220676
+		culture = arab_nile
+		religion = sunni 
+		size = 219676
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Tanta - Gharbia (1085000/271250 POPS)
 1747 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 10850
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1356
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 2712
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 4227
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 170147
+		culture = arab_nile
+		religion = sunni 
+		size = 169147
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  orthodox 
+		culture = arab_nile
+		religion = orthodox 
 		size = 67415
 	 } 
 	farmers = {
-		culture = egyptian
+		culture = arab_nile
 		religion = secularism
 		size = 680
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Mansura - Dakahlia (1504000/376000 POPS)
 1748 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 15040
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1880
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3760
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 5860
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 330246
+		culture = arab_nile
+		religion = sunni 
+		size = 329246
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Ziqaziq - Ziqaziq (1626000/406500 POPS)
 1749 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 16260
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 2032
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 4065
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 6335
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 357035
+		culture = arab_nile
+		religion = sunni 
+		size = 356035
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Giza - Giza (1548000/387000 POPS)
 1750 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 15480
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1935
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3870
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 6031
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 339907
+		culture = arab_nile
+		religion = sunni 
+		size = 338907
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
@@ -263,7 +263,7 @@
 1751 = {
 	capitalists = {
 		culture = jewish
-		religion =  jewish 
+		religion = jewish 
 		size = 3628
 	 } 
 	capitalists = {
@@ -272,828 +272,823 @@
 		size = 36
 	 } 
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 29320
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 7330
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 11424
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 643803
+		culture = arab_nile
+		religion = sunni 
+		size = 642803
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Matruh - Matruh (78000/19500 POPS)
 1752 = {
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 17127
+		culture = arab_nile
+		religion = sunni 
+		size = 16127
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Sidi Barrani - Sidi Barrani (105000/26250 POPS)
 1753 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1050
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 23055
+		culture = arab_nile
+		religion = sunni 
+		size = 22055
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Siwa - Siwa (13000/3250 POPS)
 1754 = {
 	soldiers = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 130
 	 } 
 	bureaucrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 16
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 32
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 50
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 2855
+		culture = arab_nile
+		religion = sunni 
+		size = 1855
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
-
 }
 #Al Arish - North Sinai (106000/26500 POPS)
 1756 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1060
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 23275
+		culture = arab_nile
+		religion = sunni 
+		size = 22275
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Sharm al Shaykh - South Sinai (43000/10750 POPS)
 1757 = {
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 9442
+		culture = arab_nile
+		religion = sunni 
+		size = 8442
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Farafra - New Valley (29000/7250 POPS)
 1758 = {
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 6369
+		culture = arab_nile
+		religion = sunni 
+		size = 5369
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Bawiti - Bawiti (13000/3250 POPS)
 1759 = {
 	soldiers = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 130
 	 } 
 	bureaucrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 16
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 32
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 50
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 2855
+		culture = arab_nile
+		religion = sunni 
+		size = 1855
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Mut - Mut (13000/3250 POPS)
 1760 = {
 	soldiers = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 130
 	 } 
 	bureaucrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 16
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 32
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 50
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 2855
+		culture = arab_nile
+		religion = sunni 
+		size = 1855
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Baris - Baris (13000/3250 POPS)
 1761 = {
 	soldiers = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 130
 	 } 
 	bureaucrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 16
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 32
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 50
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 2855
+		culture = arab_nile
+		religion = sunni 
+		size = 1855
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Asyut - Asyut (1052000/263000 POPS)
 1762 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 10520
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1315
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 2630
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 4099
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 125520
+		culture = arab_nile
+		religion = sunni 
+		size = 124520
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  orthodox 
+		culture = arab_nile
+		religion = orthodox 
 		size = 65092
 	 } 
 	farmers = {
-		culture = egyptian
+		culture = arab_nile
 		religion = secularism
 		size = 657
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  shiite 
+		culture = arab_nile
+		religion = shiite 
 		size = 39727
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Bani Suwayf - Bani Suwayf (619000/154750 POPS)
 1763 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 6190
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1547
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 2411
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 135919
+		culture = arab_nile
+		religion = sunni 
+		size = 134919
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Minya - Minya (1127000/281750 POPS)
 1764 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 11270
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1408
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 2817
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 4391
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 247465
+		culture = arab_nile
+		religion = sunni 
+		size = 246465
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Fayyum - Fayyum (679000/169750 POPS)
 1765 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 6790
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1697
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 2645
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 109876
+		culture = arab_nile
+		religion = sunni 
+		size = 108876
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  orthodox 
+		culture = arab_nile
+		religion = orthodox 
 		size = 38825
 	 } 
 	farmers = {
-		culture = egyptian
+		culture = arab_nile
 		religion = secularism
 		size = 392
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
-
 }
 #Aswan - Aswan (357000/89250 POPS)
 1766 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3570
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1390
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 34566
+		culture = arab_nile
+		religion = sunni 
+		size = 33566
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  orthodox 
+		culture = arab_nile
+		religion = orthodox 
 		size = 17671
 	 } 
 	farmers = {
-		culture = egyptian
+		culture = arab_nile
 		religion = secularism
 		size = 178
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  shiite 
+		culture = arab_nile
+		religion = shiite 
 		size = 25975
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Luxor - Luxor (287000/71750 POPS)
 1767 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 2870
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1118
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 48596
+		culture = arab_nile
+		religion = sunni 
+		size = 47596
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  orthodox 
+		culture = arab_nile
+		religion = orthodox 
 		size = 14278
 	 } 
 	farmers = {
-		culture = egyptian
+		culture = arab_nile
 		religion = secularism
 		size = 144
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
-
 }
 #Idfu - Idfu (13000/3250 POPS)
 1768 = {
 	soldiers = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 130
 	 } 
 	bureaucrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 16
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 32
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 50
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 2855
+		culture = arab_nile
+		religion = sunni 
+		size = 1855
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Qina - Qina (757000/189250 POPS)
 1769 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 7570
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1892
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 2949
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 99787
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  shiite 
-		size = 66435
+		culture = arab_nile
+		religion = shiite 
+		size = 65435
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
-
 }
 #Qusayr - Red Sea (32000/8000 POPS)
 1770 = {
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 7027
+		culture = arab_nile
+		religion = sunni 
+		size = 6027
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Marsa Alam - Marsa Alam (13000/3250 POPS)
 1771 = {
 	soldiers = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 130
 	 } 
 	bureaucrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 16
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 32
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 50
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 2855
+		culture = arab_nile
+		religion = sunni 
+		size = 1855
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Ras Gharib - Ras Gharib (13000/3250 POPS)
 1772 = {
 	soldiers = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 130
 	 } 
 	bureaucrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 16
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 32
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 50
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 2366
+		culture = arab_nile
+		religion = sunni 
+		size = 1366
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  orthodox 
+		culture = arab_nile
+		religion = orthodox 
 		size = 484
 	 } 
 	farmers = {
-		culture = egyptian
+		culture = arab_nile
 		religion = secularism
 		size = 4
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
-
 }
 #Halaib - Halaib (13000/3250 POPS)
 1834 = {
 	soldiers = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 130
 	 } 
 	bureaucrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 3
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 16
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 32
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 50
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 416
 	 } 
 	farmers = {
 		culture = beja
-		religion =  sunni 
-		size = 2439
+		religion = sunni 
+		size = 1439
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }
 #Suhaj - Suhaj (1139000/284750 POPS)
 2559 = {
 	aristocrats = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 11390
 	 } 
 	capitalists = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 1423
 	 } 
 	clergymen = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 2847
 	 } 
 	artisans = {
-		culture = egyptian
-		religion =  sunni 
+		culture = arab_nile
+		religion = sunni 
 		size = 4438
 	 } 
 	farmers = {
-		culture = egyptian
-		religion =  sunni 
-		size = 250100
+		culture = arab_nile
+		religion = sunni 
+		size = 249100
 	 } 
 
-	#For Pan-Arab and National Arab
+	#For Pan-Arab
 	farmers = {
 		culture = arab
-		religion =  sunni 
-		size = 1000
+		religion = sunni 
+		size = 2000
 	 } 
 
 }

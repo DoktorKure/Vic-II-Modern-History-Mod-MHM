@@ -15,6 +15,7 @@ political_decisions = {
 			any_greater_power = { has_country_modifier = un_king1 }
 
 			NOT = { tag = UNT }
+			NOT = { tag = CLN }
 
 			NOT = { has_country_modifier = un_king1 }
 			NOT = { has_country_modifier = un_king2 }
@@ -144,6 +145,7 @@ political_decisions = {
 			any_greater_power = { has_country_modifier = un_king2 }
 
 			NOT = { tag = UNT }
+			NOT = { tag = CLN }
 
 			NOT = { has_country_modifier = un_king1 }
 			NOT = { has_country_modifier = un_king2 }

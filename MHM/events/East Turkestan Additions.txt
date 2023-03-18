@@ -567,7 +567,7 @@ country_event = {
 	option = {
 		name = "We must defend the idea of a united China!"
 		any_pop = {
-			limit = { NOT = { OR = { culture = chinese culture = hui } } }
+			limit = { NOT = { OR = { culture = chinese } } }
 			ideology = { factor = 0.10 value = communist }
 			militancy = 8
 			consciousness = 8
@@ -623,7 +623,7 @@ country_event = {
 		relation = { who = RUS value = -50 }
 		
 		any_pop = {
-			limit = { NOT = { OR = { culture = chinese culture = hui } } }
+			limit = { NOT = { OR = { culture = chinese } } }
 			ideology = { factor = 0.10 value = communist }
 			militancy = 8
 			consciousness = 8
@@ -665,7 +665,7 @@ country_event = {
 		name = "Zhizhong will lead the province."
 		ruling_party_ideology = socialist
 		any_pop = {
-			limit = { OR = { culture = chinese culture = hui } }
+			limit = { OR = { culture = chinese } }
 			ideology = { factor = 0.10 value = socialist }
 			militancy = 3
 			consciousness = 3
@@ -715,7 +715,7 @@ country_event = {
 		name = "Make a proposal for a coalition government."
 		ETS = { country_event = 8013813 }
 		any_pop = {
-			limit = { OR = { culture = chinese culture = hui } }
+			limit = { OR = { culture = chinese } }
 			ideology = { factor = 0.10 value = nationalist }
 			militancy = 3
 			consciousness = 3
@@ -736,7 +736,7 @@ country_event = {
 			call_ally = no
 		}
 		any_pop = {
-			limit = { OR = { culture = chinese culture = hui } }
+			limit = { OR = { culture = chinese } }
 			militancy = -3
 			consciousness = -3
 		}
@@ -776,7 +776,7 @@ country_event = {
 		name = "Masud Sabri will ensure loyalty."
 		ruling_party_ideology = conservative
 		any_pop = {
-			limit = { OR = { culture = chinese culture = hui } }
+			limit = { OR = { culture = chinese } }
 			ideology = { factor = 0.10 value = conservative }
 			militancy = 3
 			consciousness = 3
@@ -791,7 +791,7 @@ country_event = {
 		add_country_modifier = { name = political_strife duration = 395 }
 		ruling_party_ideology = nationalist
 		any_pop = {
-			limit = { OR = { culture = chinese culture = hui } }
+			limit = { OR = { culture = chinese } }
 			ideology = { factor = 0.10 value = nationalist }
 			militancy = 3
 			consciousness = 3
@@ -834,7 +834,7 @@ country_event = {
 		remove_accepted_culture = uighur
 
 		any_pop = {
-			limit = { OR = { culture = chinese culture = hui } }
+			limit = { OR = { culture = chinese } }
 			ideology = { factor = 0.10 value = nationalist }
 			militancy = 3
 			consciousness = 3
@@ -848,7 +848,7 @@ country_event = {
 		name = "We will preserve what we have built."
 		add_country_modifier = { name = political_strife duration = 395 }
 		any_pop = {
-			limit = { OR = { culture = chinese culture = hui } }
+			limit = { OR = { culture = chinese } }
 			ideology = { factor = 0.10 value = socialist }
 			militancy = -3
 			consciousness = -3
@@ -1278,7 +1278,7 @@ country_event = {
 		name = "Burhan Shahidi's moderate position will bring stability."
 		ruling_party_ideology = socialist
 		any_pop = {
-			limit = { OR = { culture = chinese culture = hui } }
+			limit = { OR = { culture = chinese } }
 			ideology = { factor = 0.10 value = socialist }
 			militancy = 3
 			consciousness = 3
@@ -1293,7 +1293,7 @@ country_event = {
 		add_country_modifier = { name = political_strife duration = 395 }
 		ruling_party_ideology = traditionalist
 		any_pop = {
-			limit = { OR = { culture = chinese culture = hui } }
+			limit = { OR = { culture = chinese } }
 			ideology = { factor = 0.10 value = nationalist }
 			militancy = 3
 			consciousness = 3
@@ -1349,7 +1349,7 @@ country_event = {
 		add_country_modifier = { name = political_strife duration = 395 }
 		add_country_modifier = { name = economic_malaise duration = 1825 }
 		any_pop = {
-			limit = { OR = { culture = chinese culture = hui } }
+			limit = { OR = { culture = chinese } }
 			ideology = { factor = 0.10 value = nationalist }
 			militancy = 3
 			consciousness = 3

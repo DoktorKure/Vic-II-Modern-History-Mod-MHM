@@ -5,7 +5,7 @@ trade_goods = natural_gas
 life_rating = 30
 terrain = floodplain_farmland
 naval_base = 2
-colonial = 2
+colonial = 0
 1950.1.1 = { owner = BUR controller = BUR colonial = 0 } 
 1992.1.1 = { 
     owner = BUR

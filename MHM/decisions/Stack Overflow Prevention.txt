@@ -1,36 +1,37 @@
 political_decisions = {
 
 	stack_overflow = {
-			picture = "stack_overflow"
-			potential = {
-				ai = no
-				money = 500000000
+		picture = "stack_overflow"
+		potential = {
+			ai = no
+			money = 500000000
 			NOT = { has_country_flag = stack_overflow }
-							}
+		}
 
-			allow = {
-				money = 500000000
-			}
+		allow = {
+			money = 500000000
+		}
 
-			effect = {
+		effect = {
 			set_country_flag = stack_overflow
-			}
-			ai_will_do = { factor = 1 }
+		}
+		ai_will_do = { factor = 1 }
 	}
 
 	end_stack_overflow = {
-			picture = "stack_overflow"
-			potential = {	
+		picture = "stack_overflow"
+		potential = {	
 			has_country_flag = stack_overflow
-							}
+		}
 
-			allow = {
-			}
+		allow = {
+			NOT = { money = 100000000 }
+		}
 
-			effect = {
+		effect = {
 			clr_country_flag = stack_overflow
-			}
-			ai_will_do = { factor = 1 }
+		}
+		ai_will_do = { factor = 1 }
 	}
 
 

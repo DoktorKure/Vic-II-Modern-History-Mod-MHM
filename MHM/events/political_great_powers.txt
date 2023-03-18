@@ -75,15 +75,81 @@ country_event = { # Country is sphered change government
 		part_of_sphere = yes
 		is_vassal = no
 		NOT = { has_country_flag = accept_differances_in_gov_by_democracy }
-		sphere_owner = { OR = { government = democracy1 government = democracy government = hms_government government = hms_government1 } } 
-		NOT = { OR = { government = absolute_monarchy government = democracy government = democracy1 government = sar_government government = mandate_government government = colonial_government government = hms_government government = hms_government1 government = presidential_dictatorship } }
+		sphere_owner = {
+			OR = {
+				government = democracy1
+				government = democracy
+				government = hms_government
+				government = hms_government1
+			}
+		}
+		NOT = {
+			OR = {
+				government = absolute_monarchy
+				government = democracy
+				government = democracy1
+				government = sar_government
+				government = mandate_government
+				government = colonial_government
+				government = hms_government
+				government = hms_government1
+				
+				#This is here because historically the US sphered a lot of authoritarian republics or otherwise installed them by coup
+				government = presidential_dictatorship
+			}
+		}
 	}
 
 	mean_time_to_happen = {
 		months = 12
+		modifier = {
+			factor = 0.9
+			sphere_owner = {
+				NOT = { rank = 2 }
+				has_country_modifier = sphere_interference
+			}
+		}
+		modifier = {
+			factor = 0.8
+			AND = { 
+				sphere_owner = { OR = { rank = 1 rank = 2 } }
+				NOT = { has_global_flag = blocsenabled }
+			}
+		}
+		modifier = {
+			factor = 0.6
+			AND = {
+				sphere_owner = {
+					OR = { rank = 1 rank = 2 }
+					has_country_modifier = sphere_interference
+				}
+				NOT = { has_global_flag = blocsenabled }
+			}
+		}
+		modifier = {
+			factor = 0.6
+			AND = { 
+				sphere_owner = { OR = { rank = 1 rank = 2 } }
+				has_global_flag = blocsenabled
+			}
+		}
+		modifier = {
+			factor = 0.4
+			AND = {
+				sphere_owner = {
+					OR = { rank = 1 rank = 2 }
+					has_country_modifier = sphere_interference
+				}
+				has_global_flag = blocsenabled
+			}
+		}
 	}
 	
-	immediate = { clr_country_flag = accept_differances_in_gov_by_communist }
+	immediate = {
+		clr_country_flag = accept_differances_in_gov_by_democracy
+		clr_country_flag = accept_differances_in_gov_by_communist
+		clr_country_flag = accept_differances_in_gov_by_authoritarian_regime
+	}
 
 	option = {
 		name = EVT_19001_A
@@ -114,18 +180,94 @@ country_event = {
 		has_global_flag = blocsenabled
 		year = 1955
 		NOT = { has_country_flag = accept_differances_in_gov_by_communist }
-		sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
-		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 ruling_party_ideology = communist ruling_party_ideology = socialist } }
+		sphere_owner = {
+			OR = {
+				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
+				government = socialist_democracy
+			}
+		} 
+		NOT = {
+			OR = {
+				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
+				government = socialist_democracy
+				
+				#These ruling party ideology limits are there to prevent funkiness from happening with Eastern Europe in the 1946 start date
+				ruling_party_ideology = communist
+				ruling_party_ideology = communist_social
+				ruling_party_ideology = socialist
+			}
+		}
 	}
 
 	mean_time_to_happen = {
 		months = 12
+		modifier = {
+			factor = 0.9
+			sphere_owner = {
+				NOT = { rank = 2 }
+				has_country_modifier = sphere_interference
+			}
+		}
+		modifier = {
+			factor = 0.8
+			AND = { 
+				sphere_owner = { OR = { rank = 1 rank = 2 } }
+				NOT = { has_global_flag = blocsenabled }
+			}
+		}
+		modifier = {
+			factor = 0.6
+			AND = {
+				sphere_owner = {
+					OR = { rank = 1 rank = 2 }
+					has_country_modifier = sphere_interference
+				}
+				NOT = { has_global_flag = blocsenabled }
+			}
+		}
+		modifier = {
+			factor = 0.6
+			AND = { 
+				sphere_owner = { OR = { rank = 1 rank = 2 } }
+				has_global_flag = blocsenabled
+			}
+		}
+		modifier = {
+			factor = 0.4
+			AND = {
+				sphere_owner = {
+					OR = { rank = 1 rank = 2 }
+					has_country_modifier = sphere_interference
+				}
+				has_global_flag = blocsenabled
+			}
+		}
 	}
 
-	immediate = { clr_country_flag = accept_differances_in_gov_by_democracy }
+	immediate = {
+		clr_country_flag = accept_differances_in_gov_by_democracy
+		clr_country_flag = accept_differances_in_gov_by_communist
+		clr_country_flag = accept_differances_in_gov_by_authoritarian_regime
+	}
 
 	option = {
 		name = EVT_19002_A
+		#Set conditions for RUS to get Sovietization event from THIS in event 19006
+		random_owned = {
+			limit = {
+				owner = {
+					has_global_flag = blocsenabled
+					OR = { capital_scope = { continent = europe } tag = TUR } #Soviets would be keen on vassalizing Turkey due to its strategic location
+					any_neighbor_country = { OR = { tag = RUS vassal_of = RUS } }
+					sphere_owner = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+				}
+			}
+			owner = {
+				set_country_flag = potential_soviet_vassal
+			}
+		}
 		sphere_owner = { country_event = 19003 }
 		ai_chance = { factor = 1 }
 	}
@@ -140,7 +282,7 @@ country_event = {
 		ai_chance = { factor = 0 }
 	}
 }
-#Democracy in the SOI of a Presidential Dictatorship
+#non-rightwing dictatorship in the SOI of a right-wing dictatorship
 country_event = { 
 	id = 19102
 	title = EVT_19002_NAME
@@ -151,15 +293,77 @@ country_event = {
 		part_of_sphere = yes
 		is_vassal = no
 		NOT = { has_country_flag = accept_differances_in_gov_by_authoritarian_regime }
-		sphere_owner = { government = presidential_dictatorship } 
-		OR = { government = democracy government = hms_government government = democracy1 government = hms_government1 }
+		sphere_owner = {
+			OR = { 
+				government = presidential_dictatorship
+				government = nationalist_dictatorship
+				government = sectarian_dictatorship
+				government = absolute_monarchy
+				government = sectarian_dictatorship
+				government = theocracy
+			}
+		}
+		OR = {
+			government = democracy
+			government = democracy1
+			government = hms_government
+			government = hms_government1
+			government = socialist_democracy
+			government = proletarian_dictatorship
+			government = proletarian_dictatorship1
+		}
 	}
 
 	mean_time_to_happen = {
 		months = 12
+		modifier = {
+			factor = 0.9
+			sphere_owner = {
+				NOT = { rank = 2 }
+				has_country_modifier = sphere_interference
+			}
+		}
+		modifier = {
+			factor = 0.8
+			AND = { 
+				sphere_owner = { OR = { rank = 1 rank = 2 } }
+				NOT = { has_global_flag = blocsenabled }
+			}
+		}
+		modifier = {
+			factor = 0.6
+			AND = {
+				sphere_owner = {
+					OR = { rank = 1 rank = 2 }
+					has_country_modifier = sphere_interference
+				}
+				NOT = { has_global_flag = blocsenabled }
+			}
+		}
+		modifier = {
+			factor = 0.6
+			AND = { 
+				sphere_owner = { OR = { rank = 1 rank = 2 } }
+				has_global_flag = blocsenabled
+			}
+		}
+		modifier = {
+			factor = 0.4
+			AND = {
+				sphere_owner = {
+					OR = { rank = 1 rank = 2 }
+					has_country_modifier = sphere_interference
+				}
+				has_global_flag = blocsenabled
+			}
+		}
 	}
 
-	immediate = { clr_country_flag = accept_differances_in_gov_by_democracy }
+	immediate = {
+		clr_country_flag = accept_differances_in_gov_by_democracy
+		clr_country_flag = accept_differances_in_gov_by_communist
+		clr_country_flag = accept_differances_in_gov_by_authoritarian_regime
+	}
 
 	option = {
 		name = EVT_19002_A
@@ -188,17 +392,24 @@ country_event = { # Demand install communist in-power
 	option = {
 		name = EVT_19003_A
 		FROM = { set_country_flag = accept_differances_in_gov_by_communist }
-		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { NOT = { tag = FIN } OR = { government = democracy government = hms_government government = absolute_monarchy } } } }
+		ai_chance = { factor = 0.5
+			modifier = {
+				factor = 0
+				FROM = {
+					NOT = { OR = { has_country_flag = finlandization has_country_flag = special_communist_vassal } }
+				}
+			}
+		}
 	}
 	
 	option = {
 		name = EVT_19003_B
 		FROM = { country_event = 19006 }
-		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { tag = FIN } } }
+		ai_chance = { factor = 0.5 modifier = { factor = 0 FROM = { OR = { has_country_flag = finlandization has_country_flag = special_communist_vassal } } } }
 	}
 }
 
-country_event = { # Demand adopt presidential dictatorship
+country_event = { # Demand adopt rightwing authoritarian dictatorship
 	id = 19103
 	title = EVT_19003_NAME
 	desc = EVT_19003_DESC
@@ -208,13 +419,18 @@ country_event = { # Demand adopt presidential dictatorship
 	option = {
 		name = EVT_19003_A
 		FROM = { set_country_flag = accept_differances_in_gov_by_authoritarian_regime }
-		ai_chance = { factor = 1 }
+		ai_chance = { factor = 0.5
+			modifier = {
+				factor = 0
+				FROM = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
+			}
+		}
 	}
 	
 	option = {
 		name = EVT_19003_B
 		FROM = { country_event = 19106 }
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 0.5 }
 	}
 }
 
@@ -273,17 +489,189 @@ country_event = { # Demand install communist in-power
 	option = {
 		name = EVT_19006_A
 		sphere_owner = { 
-		diplomatic_influence = { who = THIS value = -100 } 
+			diplomatic_influence = { who = THIS value = -100 } 
 			relation = { who = THIS value = -200 } 
-			casus_belli = { target = THIS type = install_communist_gov_cb months = 12  }
+			casus_belli = { target = THIS type = install_communist_gov_cb months = 12 }
 		}
-		ai_chance = { factor = 0.5  }
+		
+		#40% chance of a coup instigated by sphere owner succeeding in installing a friendly gov type anyway
+		random = {
+			chance = 40
+			
+			set_country_flag = soi_demand_install
+			random_owned = {
+				limit = { owner = { sphere_owner = { government = socialist_democracy } } }
+				owner = { 
+					government = socialist_democracy
+					political_reform = harassed_voting
+					political_reform = semi_democratic_state_opinion
+					political_reform = limited_meetings
+					political_reform = capital_punishment
+					political_reform = politicised_service
+					political_reform = state_publishing
+					political_reform = state_controlled_unions
+					political_reform = parties_restricted
+					political_reform = quota_immigration
+					political_reform = one_year_draft
+					political_reform = minorities_equal_rights
+					political_reform = jefferson_method
+				}
+			}
+			random_owned = {
+				limit = {
+					owner = {
+						NOT = { has_country_flag = potential_soviet_vassal }
+						sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
+					}
+				}
+				owner = { 
+					government = proletarian_dictatorship
+					political_reform = none_voting
+					political_reform = ruling_party_opinion
+					political_reform = no_meetings
+					political_reform = capital_punishment
+					political_reform = politicised_service
+					political_reform = state_publishing
+					political_reform = state_controlled_unions
+					political_reform = parties_not_allowed
+					political_reform = nobody_gets_out
+					political_reform = two_year_draft
+					political_reform = minorities_oppression
+				}
+			}
+			
+			random_owned = {
+				limit = {
+					owner = {
+						has_country_flag = potential_soviet_vassal
+						sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
+					}
+				}
+				owner = { 
+					government = proletarian_dictatorship
+					political_reform = none_voting
+					political_reform = ruling_party_opinion
+					political_reform = no_meetings
+					political_reform = capital_punishment
+					political_reform = politicised_service
+					political_reform = state_publishing
+					political_reform = state_controlled_unions
+					political_reform = parties_not_allowed
+					political_reform = nobody_gets_out
+					political_reform = two_year_draft
+					political_reform = minorities_oppression
+					clr_country_flag = potential_soviet_vassal
+				}
+				owner = {
+					RUS = { country_event = 120003 }
+				}
+			}
+			
+			###### Change Ruling Party ######
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = progressive } } } owner = { ruling_party_ideology = progressive } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = socialist } } } owner = { ruling_party_ideology = socialist } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist } } } owner = { ruling_party_ideology = communist } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist_social } } } owner = { ruling_party_ideology = communist_social } }
+			
+			country_event = 800042
+			
+			sphere_owner = { 
+				diplomatic_influence = { who = THIS value = 300 } 
+				relation = { who = THIS value = 400 }
+			}
+			
+			add_country_modifier = { name = revolution_chaos duration = 3650 }
+		}
+		ai_chance = { factor = 0.5 }
 	}
 	
 	option = {
 		name = EVT_19006_B
 		set_country_flag = soi_demand_install
-	government = proletarian_dictatorship country_event = 800042
+		
+		random_owned = {
+			limit = { owner = { sphere_owner = { government = socialist_democracy } } }
+			owner = { 
+				government = socialist_democracy
+				political_reform = harassed_voting
+				political_reform = semi_democratic_state_opinion
+				political_reform = limited_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = state_publishing
+				political_reform = state_controlled_unions
+				political_reform = parties_restricted
+				political_reform = quota_immigration
+				political_reform = one_year_draft
+				political_reform = minorities_equal_rights
+				political_reform = jefferson_method
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = potential_soviet_vassal }
+					sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
+				}
+			}
+			owner = { 
+				government = proletarian_dictatorship
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = state_publishing
+				political_reform = state_controlled_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+			
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_flag = potential_soviet_vassal
+					sphere_owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } 
+				}
+			}
+			owner = { 
+				government = proletarian_dictatorship
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = state_publishing
+				political_reform = state_controlled_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+				clr_country_flag = potential_soviet_vassal
+			}
+			owner = {
+				RUS = { country_event = 120003 }
+			}
+		}
+		
+		###### Change Ruling Party ######
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = progressive } } } owner = { ruling_party_ideology = progressive } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = socialist } } } owner = { ruling_party_ideology = socialist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist } } } owner = { ruling_party_ideology = communist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist_social } } } owner = { ruling_party_ideology = communist_social } }
+		
+		country_event = 800042
+			
+		sphere_owner = { 
+			diplomatic_influence = { who = THIS value = 100 } 
+			relation = { who = THIS value = 400 }
+		}
+			
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+
 		ai_chance = { factor = 0.5 }
 	}
 }
@@ -302,13 +690,227 @@ country_event = { # Demand install presidential dictatorship
 			relation = { who = THIS value = -200 } 
 			casus_belli = { target = THIS type = install_authoritarian_regime months = 12  }
 		}
+		
+		#40% chance of a coup instigated by sphere owner succeeding in installing a friendly gov type anyway
+		random = {
+			chance = 40
+			
+			set_country_flag = soi_demand_install
+			
+			random_owned = {
+				limit = { owner = { sphere_owner = { government = theocracy } } }
+				owner = { 
+					government = theocracy
+					political_reform = none_voting
+					political_reform = ruling_party_opinion
+					political_reform = no_meetings
+					political_reform = capital_punishment
+					political_reform = politicised_service
+					political_reform = state_publishing
+					political_reform = no_trade_unions
+					political_reform = parties_not_allowed
+					political_reform = nobody_gets_out
+					political_reform = two_year_draft
+					political_reform = minorities_oppression
+				}
+			}
+			random_owned = {
+				limit = { owner = { sphere_owner = { government = absolute_monarchy } } }
+				owner = { 
+					government = absolute_monarchy
+					political_reform = none_voting
+					political_reform = appointed_opinion 
+					political_reform = no_meetings
+					political_reform = capital_punishment
+					political_reform = politicised_service
+					political_reform = state_publishing
+					political_reform = no_trade_unions
+					political_reform = parties_not_allowed
+					political_reform = nobody_gets_out
+					political_reform = two_year_draft
+					political_reform = minorities_oppression
+				}
+			}
+			random_owned = {
+				limit = { owner = { sphere_owner = { government = presidential_dictatorship } } }
+				owner = { 
+					government = presidential_dictatorship
+					political_reform = none_voting
+					political_reform = ruling_party_opinion
+					political_reform = no_meetings
+					political_reform = capital_punishment
+					political_reform = politicised_service
+					political_reform = state_publishing
+					political_reform = no_trade_unions
+					political_reform = parties_not_allowed
+					political_reform = nobody_gets_out
+					political_reform = two_year_draft
+					political_reform = minorities_oppression
+				}
+			}
+			random_owned = {
+				limit = { owner = { sphere_owner = { government = nationalist_dictatorship } } }
+				owner = { 
+					government = nationalist_dictatorship
+					political_reform = none_voting
+					political_reform = ruling_party_opinion
+					political_reform = no_meetings
+					political_reform = capital_punishment
+					political_reform = politicised_service
+					political_reform = state_publishing
+					political_reform = no_trade_unions
+					political_reform = parties_not_allowed
+					political_reform = nobody_gets_out
+					political_reform = two_year_draft
+					political_reform = minorities_oppression
+				}
+			}
+			random_owned = {
+				limit = { owner = { sphere_owner = { government = sectarian_dictatorship } } }
+				owner = { 
+					government = sectarian_dictatorship
+					political_reform = none_voting
+					political_reform = ruling_party_opinion
+					political_reform = no_meetings
+					political_reform = capital_punishment
+					political_reform = politicised_service
+					political_reform = state_publishing
+					political_reform = no_trade_unions
+					political_reform = parties_not_allowed
+					political_reform = nobody_gets_out
+					political_reform = two_year_draft
+					political_reform = minorities_oppression
+				}
+			}
+
+			###### Change Ruling Party ######
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = traditionalist } } } owner = { ruling_party_ideology = traditionalist } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = conservative } } } owner = { ruling_party_ideology = conservative } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = big_tent } } } owner = { ruling_party_ideology = big_tent } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = socialist } } } owner = { ruling_party_ideology = socialist } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = populist } } } owner = { ruling_party_ideology = populist } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = nationalist } } } owner = { ruling_party_ideology = nationalist } }
+			
+			country_event = 800040
+			
+			sphere_owner = { 
+				diplomatic_influence = { who = THIS value = 300 } 
+				relation = { who = THIS value = 400 }
+			}
+			
+			add_country_modifier = { name = revolution_chaos duration = 3650 }
+		}
+			
 		ai_chance = { factor = 0.5  }
 	}
 	
 	option = {
-		name = EVT_19006_B
+		name = EVT_19006_C
 		set_country_flag = soi_demand_install
-government = presidential_dictatorship country_event = 800040
+		
+		random_owned = {
+			limit = { owner = { sphere_owner = { government = theocracy } } }
+			owner = { 
+				government = theocracy
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = state_publishing
+				political_reform = no_trade_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+		random_owned = {
+			limit = { owner = { sphere_owner = { government = absolute_monarchy } } }
+			owner = { 
+				government = absolute_monarchy
+				political_reform = none_voting
+				political_reform = appointed_opinion 
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = state_publishing
+				political_reform = no_trade_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+		random_owned = {
+			limit = { owner = { sphere_owner = { government = presidential_dictatorship } } }
+			owner = { 
+				government = presidential_dictatorship
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = state_publishing
+				political_reform = no_trade_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+		random_owned = {
+			limit = { owner = { sphere_owner = { government = nationalist_dictatorship } } }
+			owner = { 
+				government = nationalist_dictatorship
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = state_publishing
+				political_reform = no_trade_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+		random_owned = {
+			limit = { owner = { sphere_owner = { government = sectarian_dictatorship } } }
+			owner = { 
+				government = sectarian_dictatorship
+				political_reform = none_voting
+				political_reform = ruling_party_opinion
+				political_reform = no_meetings
+				political_reform = capital_punishment
+				political_reform = politicised_service
+				political_reform = state_publishing
+				political_reform = no_trade_unions
+				political_reform = parties_not_allowed
+				political_reform = nobody_gets_out
+				political_reform = two_year_draft
+				political_reform = minorities_oppression
+			}
+		}
+
+		###### Change Ruling Party ######
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = traditionalist } } } owner = { ruling_party_ideology = traditionalist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = conservative } } } owner = { ruling_party_ideology = conservative } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = big_tent } } } owner = { ruling_party_ideology = big_tent } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = socialist } } } owner = { ruling_party_ideology = socialist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = populist } } } owner = { ruling_party_ideology = populist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = nationalist } } } owner = { ruling_party_ideology = nationalist } }
+		
+		country_event = 800040
+			
+		sphere_owner = { 
+			diplomatic_influence = { who = THIS value = 100 } 
+			relation = { who = THIS value = 400 }
+		}
+			
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+		
 		ai_chance = { factor = 0.5 }
 	}
 }
@@ -321,19 +923,141 @@ country_event = { # Demand install democracy
 	is_triggered_only = yes # in soi
 
 	option = {
-		name = EVT_19007_A
+		name = EVT_19006_A
 		sphere_owner = { 
-		diplomatic_influence = { who = THIS value = -100 } 
+			diplomatic_influence = { who = THIS value = -100 } 
 			relation = { who = THIS value = -200 } 
 			casus_belli = { target = THIS type = install_democracy months = 12  }
-		}		
+		}
+		
+		#40% chance of a coup instigated by sphere owner succeeding in installing a friendly gov type anyway
+		random = {
+			chance = 40
+			set_country_flag = soi_demand_install
+		
+			random_owned = {
+				limit = { owner = { sphere_owner = { OR = { government = hms_government government = hms_government1 } } } }
+				owner = { 
+					government = hms_government1
+					political_reform = harassed_voting
+					political_reform = semi_democratic_state_opinion
+					political_reform = limited_meetings
+					political_reform = capital_punishment
+					political_reform = elitist_service
+					political_reform = responsible_publishing
+					political_reform = restricted_unions
+					political_reform = parties_rigged
+					political_reform = quota_immigration
+					political_reform = no_draft
+					political_reform = minorities_oppression
+					political_reform = first_past_the_post
+				}
+			}
+			random_owned = {
+				limit = { owner = { sphere_owner = { OR = { government = democracy government = democracy1 } } } }
+				owner = { 
+					government = democracy
+					political_reform = harassed_voting
+					political_reform = semi_democratic_state_opinion
+					political_reform = limited_meetings
+					political_reform = capital_punishment
+					political_reform = elitist_service
+					political_reform = responsible_publishing
+					political_reform = restricted_unions
+					political_reform = parties_rigged
+					political_reform = quota_immigration
+					political_reform = no_draft
+					political_reform = minorities_oppression
+					political_reform = proportional_representation
+				}
+			}
+			
+			###### Change Ruling Party ######
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = traditionalist } } } owner = { ruling_party_ideology = traditionalist } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = conservative } } } owner = { ruling_party_ideology = conservative } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = liberal } } } owner = { ruling_party_ideology = liberal } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = big_tent } } } owner = { ruling_party_ideology = big_tent } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = progressive } } } owner = { ruling_party_ideology = progressive } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = socialist } } } owner = { ruling_party_ideology = socialist } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist } } } owner = { ruling_party_ideology = communist } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist_social } } } owner = { ruling_party_ideology = communist_social } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = populist } } } owner = { ruling_party_ideology = populist } }
+			random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = nationalist } } } owner = { ruling_party_ideology = nationalist } }
+			
+			country_event = 800044
+			
+			sphere_owner = { 
+				diplomatic_influence = { who = THIS value = 300 } 
+				relation = { who = THIS value = 400 }
+			}
+			
+			add_country_modifier = { name = revolution_chaos duration = 3650 }
+		}
 		ai_chance = { factor = 0.5 }
 	}
 	
 	option = {
 		name = EVT_19004_B
 		set_country_flag = soi_demand_install
-		government = democracy country_event = 800044
+		
+		random_owned = {
+			limit = { owner = { sphere_owner = { OR = { government = hms_government government = hms_government1 } } } }
+			owner = { 
+				government = hms_government1
+				political_reform = harassed_voting
+				political_reform = semi_democratic_state_opinion
+				political_reform = limited_meetings
+				political_reform = capital_punishment
+				political_reform = elitist_service
+				political_reform = responsible_publishing
+				political_reform = restricted_unions
+				political_reform = parties_rigged
+				political_reform = quota_immigration
+				political_reform = no_draft
+				political_reform = minorities_oppression
+				political_reform = first_past_the_post
+			}
+		}
+		random_owned = {
+			limit = { owner = { sphere_owner = { OR = { government = democracy government = democracy1 } } } }
+			owner = { 
+				government = democracy
+				political_reform = harassed_voting
+				political_reform = semi_democratic_state_opinion
+				political_reform = limited_meetings
+				political_reform = capital_punishment
+				political_reform = elitist_service
+				political_reform = responsible_publishing
+				political_reform = restricted_unions
+				political_reform = parties_rigged
+				political_reform = quota_immigration
+				political_reform = no_draft
+				political_reform = minorities_oppression
+				political_reform = proportional_representation
+			}
+		}
+		
+		###### Change Ruling Party ######
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = traditionalist } } } owner = { ruling_party_ideology = traditionalist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = conservative } } } owner = { ruling_party_ideology = conservative } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = liberal } } } owner = { ruling_party_ideology = liberal } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = big_tent } } } owner = { ruling_party_ideology = big_tent } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = progressive } } } owner = { ruling_party_ideology = progressive } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = socialist } } } owner = { ruling_party_ideology = socialist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist } } } owner = { ruling_party_ideology = communist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = communist_social } } } owner = { ruling_party_ideology = communist_social } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = populist } } } owner = { ruling_party_ideology = populist } }
+		random_owned = { limit = { owner = { sphere_owner = { ruling_party_ideology = nationalist } } } owner = { ruling_party_ideology = nationalist } }
+		
+		country_event = 800044
+			
+		sphere_owner = { 
+			diplomatic_influence = { who = THIS value = 100 } 
+			relation = { who = THIS value = 400 }
+		}
+			
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+		
 		ai_chance = { factor = 0.5 }
 	}
 }
