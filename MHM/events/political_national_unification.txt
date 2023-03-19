@@ -17,6 +17,13 @@ country_event = {
 			}
 			set_country_flag = transfer_to_superstate
 		}
+		any_country = {
+			limit = {
+				exists = yes
+				in_sphere = THIS
+			}
+			set_country_flag = sphere_to_superstate
+		}
 		any_owned = {
                 secede_province = FROM
         }
@@ -74,10 +81,19 @@ country_event = {
 			}
 			country_event = 11108
 		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = sphere_to_superstate
+			}
+			country_event = 11109
+		}
 		ai_chance = { factor = 1 }
 	}
 
 }
+
+#Transfer Vassals to superstate
 country_event = {
 	id = 11108
 	title = "Transfered to Superstate"
@@ -91,7 +107,7 @@ country_event = {
 	immediate = { clr_country_flag = transfer_to_superstate }
 
 	option = {
-		name = "We have no choice but to accept this reality"
+		name = "We have no choice but to accept this reality."
 		FROM = {
 			create_vassal = THIS
 		}
@@ -109,52 +125,44 @@ country_event = {
 	}	
 }
 
-# Event to Inherit - causd by master
-# Theory, annex_to = THIS will cause the inheriting superstate to inherit the armies as well
+#Transfer spherelings to superstate
 country_event = {
-	id = 11100
-	title = "EVTNAME11100"
-	desc = "EVTDESC11100"
-	picture = "annexation_into_union"
+	id = 11109
+	title = "Transfered to Superstate"
+	desc = "As we were in the sphere of a country that has been diplomatically annexed into a superstate, we are now their spherelings."
+	picture = "gain_core"
 
+	fire_only_once = yes
+	
 	is_triggered_only = yes
+	
+	immediate = { clr_country_flag = sphere_to_superstate }
 
 	option = {
-		name = "EVTOPTA11101"
-		change_tag = culture
-		any_country = {
-			limit = {
-				NOT = {
-					tag = THIS
+		name = "We have no choice but to accept this reality."
+		FROM = { diplomatic_influence = { who = THIS value = 500 } }
+		ai_chance = {
+			factor = 0.99
+			modifier = {
+				factor = 0
+				AND = {
+					FROM = { NOT = { OR = { government = nationalist_dictatorship ruling_party_ideology = nationalist ruling_party_ideology = populist } } }
+					OR = { government = nationalist_dictatorship ruling_party_ideology = nationalist ruling_party_ideology = populist }
 				}
-				is_culture_group = THIS
-				is_greater_power = no
-				OR = {
-					in_sphere = THIS
-					AND = {
-						part_of_sphere = no
-								}
-					}
-				num_of_cities = 1
 			}
-			country_event = { id = 11101 days = 0 }
-			inherit = FROM
 		}
-		ai_chance = { factor = 1 }
 	}
 
 	option = {
-		name = "EVTOPTB11101"
-		prestige = 1
-		relation = {
-			who = FROM
-			value = -100
+		name = "We will go our own way."
+		FROM = {
+			casus_belli = {
+				target = THIS
+				type = add_to_sphere
+				months = 12
+			}
 		}
-		any_pop = {
-			militancy = 3
-			consciousness = 2
-		}
-		ai_chance = { factor = 0 }
+		ai_chance = { factor = 0.01 }
 	}	
 }
 
