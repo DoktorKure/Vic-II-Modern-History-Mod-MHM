@@ -1288,8 +1288,9 @@ country_event = {
 		name = "Recognize their independence."
 		prestige = -200
 		badboy = -10
-		any_owned = { limit = { is_core = TIB } secede_province = TIB }
 		TIB = { any_owned = { limit = { is_core = CHI } remove_core = CHI } }
+		#Lose core on Arunachal Pradesh
+		1593 = { remove_core = CHI }
 		
 		relation = { who = HND value = 200 } # India is very happy with this
 		ai_chance = { factor = 0.1 }
