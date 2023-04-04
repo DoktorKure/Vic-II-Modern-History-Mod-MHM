@@ -138,6 +138,17 @@ objectTypes = {
 		textureFile = "gfx\interface\naval_base_6.png"
 		scale = 5.00		#naval 6
 	}
+
+	billboardType = {
+		name = "building_naval_base7"
+		textureFile = "gfx\interface\naval_base_7.png"
+		scale = 5.00		#naval 7
+	}
+	billboardType = {
+		name = "building_naval_base7_ships"
+		textureFile = "gfx\interface\naval_base_7.png"
+		scale = 5.00		#naval 7
+	}
 	
 	
 	EMFXActorType = {
