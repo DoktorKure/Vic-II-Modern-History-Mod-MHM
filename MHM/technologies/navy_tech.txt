@@ -511,8 +511,6 @@ naval_warfare_center = {
 	unciv_military = yes
 	
 	navy_base = { build_time = 10 }
-
-	max_naval_base = 1
 	
 	ai_chance = {
 		factor = 1
