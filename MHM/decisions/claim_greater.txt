@@ -961,6 +961,7 @@ political_decisions = {
 			1485 = { add_core = THIS }
 			1341 = { add_core = THIS } # Putao
 			1678 = { add_core = THIS } # Okiwawa 
+			3378 = { add_core = THIS } # Ishigaki 
 			2576 = { add_core = THIS } # Spratly
 			1469 = { add_core = THIS } # Tuva
 			1467 = { add_core = THIS }
@@ -1031,6 +1032,7 @@ political_decisions = {
 						province_id = 1485
 						province_id = 1341
 						province_id = 1678
+						province_id = 3378
 						province_id = 2576
 						province_id = 1469
 						province_id = 1467
@@ -3076,6 +3078,7 @@ political_decisions = {
 			1341 = { add_core = THIS } # Putao
 			1208 = { add_core = THIS } # Khorug
 			1678 = { add_core = THIS } # Okiwawa 
+			3378 = { add_core = THIS } # Ishigaki 
 			2576 = { add_core = THIS } # Spratly
 			1469 = { add_core = THIS } # Tuva
 			1467 = { add_core = THIS }
@@ -3141,6 +3144,7 @@ political_decisions = {
 						province_id = 1341
 						province_id = 1208
 						province_id = 1678
+						province_id = 3378
 						province_id = 2576
 						province_id = 1469
 						province_id = 1467

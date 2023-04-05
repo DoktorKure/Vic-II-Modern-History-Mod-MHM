@@ -1,24 +1,22 @@
-owner = YUG
-controller = YUG
-add_core = ITA
-add_core = FVG
-add_core = TRE
-add_core = TRB
-add_core = YUG
-add_core = CRO
-trade_goods = grain
-life_rating = 30
-terrain = deciduous_forest_hills
-colonial = 0
+owner = USA
+controller = USA
+#add_core = JAP
+add_core = RYK
+add_core = CHI
 
-1950.1.1 = {
-owner = TRE
-controller = TRE
-}
-
-1992.1.1 = {
-owner = CRO
-controller = CRO
+trade_goods = fish
 life_rating = 35
+terrain = hilly_farmland
+railroad = 1
+colonial = 0
+1992.1.1 = {
+owner = JAP
+controller = JAP
+add_core = JAP
+add_core = RYK
+add_core = CHI
+add_core = KMT
+life_rating = 35
+railroad = 2
 colonial = 0
 }

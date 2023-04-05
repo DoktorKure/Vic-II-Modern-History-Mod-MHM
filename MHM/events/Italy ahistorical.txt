@@ -3053,7 +3053,7 @@ country_event = {
 		
 		#Koper, Istria
 		random_country = { 
-		    limit = { is_vassal = no war = no owns = 3345 } 
+		    limit = { is_vassal = no war = no owns = 769 } 
 			relation = { who = THIS value = -100 }
 			relation = { who = ITA value = -100 }
 			country_event = 8020453 
@@ -3160,19 +3160,6 @@ country_event = {
 		}
 		
 		#Italy
-		
-		#Koper, Istria
-		random_country = { 
-			limit = { is_vassal = no war = no owns = 3345 } 
-			relation = { who = THIS value = -100 }
-			relation = { who = ITA value = -100 }
-			country_event = 8020453 
-		}
-		#Umag, Istria
-		random_country = { 
-			limit = { tag = CRO is_vassal = no war = no owns = 3378 } 
-			3378 = { secede_province = ITA remove_core = CRO change_province_name = "Umago" }
-		}
 		#Pula, Istria
 		random_country = { 
 			limit = { tag = CRO is_vassal = no war = no owns = 770 } 
@@ -3246,8 +3233,6 @@ country_event = {
 			limit = { tag = CRO is_vassal = no }
 			relation = { who = THIS value = -100 }
 		}
-		
-		3345 = { secede_province = ITA change_province_name = "Capodistria" }
 
 		ai_chance = { factor = 0.9 }
 	}
@@ -3259,8 +3244,7 @@ country_event = {
 		war = {
 			target = ITA
 			attacker_goal = {
-				casus_belli = acquire_core_state
-				state_province_id = 3345
+				casus_belli = territorial_dispute
 			}
 			defender_goal = {
 				casus_belli = humiliate

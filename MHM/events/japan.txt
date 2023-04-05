@@ -279,6 +279,7 @@ country_event = {
 		name = "Return Okinawa to Japan"
 		
 		1678 = { secede_province = JAP add_core = JAP }
+		3378 = { secede_province = JAP add_core = JAP }
 
 		badboy = -5
 		

@@ -17920,6 +17920,89 @@
 		size = 17925
 	 } 
 }
+#East Berlin - Brandenburg (584000/146000 POPS)
+3345 = {
+	officers = {
+		culture = german
+		religion = catholic 
+		size = 370
+	 } 
+	officers = {
+		culture = german
+		religion = secularism
+		size = 67
+	 } 
+	soldiers = {
+		culture = german
+		religion = catholic 
+		size = 1480
+	 } 
+	soldiers = {
+		culture = german
+		religion = secularism
+		size = 271
+	 } 
+	bureaucrats = {
+		culture = german
+		religion = catholic 
+		size = 4564
+	 } 
+	bureaucrats = {
+		culture = german
+		religion = secularism
+		size = 837
+	 } 
+	clergymen = {
+		culture = german
+		religion = catholic 
+		size = 2467
+	 } 
+	clergymen = {
+		culture = german
+		religion = secularism
+		size = 452
+	 } 
+	clerks = {
+		culture = german
+		religion = catholic 
+		size = 3386
+	 } 
+	clerks = {
+		culture = german
+		religion = secularism
+		size = 621
+	 } 
+	craftsmen = {
+		culture = german
+		religion = catholic 
+		size = 3217
+	 } 
+	craftsmen = {
+		culture = german
+		religion = secularism
+		size = 590
+	 } 
+	craftsmen = {
+		culture = german
+		religion = catholic 
+		size = 10161
+	 } 
+	craftsmen = {
+		culture = german
+		religion = secularism
+		size = 1864
+	 } 
+	farmers = {
+		culture = german
+		religion = catholic 
+		size = 97720
+	 } 
+	farmers = {
+		culture = german
+		religion = secularism
+		size = 17925
+	 } 
+}
 #Cottbus - Brandenburg (584000/146000 POPS)
 552 = {
 	officers = {

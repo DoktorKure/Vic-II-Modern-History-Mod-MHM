@@ -20,15 +20,15 @@ political_decisions = {
 			set_country_flag = expulsion_of_germans
 			relation = { who = GER value = -200 } 
 			RUS = { set_country_flag = allow_polish_population_transfers }
-			any_pop = { limit = { location = { province_id = 699 } culture = german } move_pop = 551 } # Posen -> E.Berlin
-			any_pop = { limit = { location = { province_id = 684 } culture = german NOT = { strata = rich religion = secularism } } move_pop = 551 } # Oppeln -> E.Berlin
-			any_pop = { limit = { location = { province_id = 681 } culture = german } move_pop = 551 } # Kustrin -> E.Berlin
-			any_pop = { limit = { location = { province_id = 692 } culture = german } move_pop = 551 } # D.Krone -> E.Berlin
-			any_pop = { limit = { location = { province_id = 693 } culture = german } move_pop = 551 } # Kustrin -> E.Berlin
-			any_pop = { limit = { location = { province_id = 696 } culture = german } move_pop = 551 } # Allenstein -> E.Berlin
-			any_pop = { limit = { location = { state_id = 690 } culture = german } move_pop = 551 } # W Prussia -> E.Berlin
+			any_pop = { limit = { location = { province_id = 699 } culture = german } move_pop = 3345 } # Posen -> E.Berlin
+			any_pop = { limit = { location = { province_id = 684 } culture = german NOT = { strata = rich religion = secularism } } move_pop = 3345 } # Oppeln -> E.Berlin
+			any_pop = { limit = { location = { province_id = 681 } culture = german } move_pop = 3345 } # Kustrin -> E.Berlin
+			any_pop = { limit = { location = { province_id = 692 } culture = german } move_pop = 3345 } # D.Krone -> E.Berlin
+			any_pop = { limit = { location = { province_id = 693 } culture = german } move_pop = 3345 } # Kustrin -> E.Berlin
+			any_pop = { limit = { location = { province_id = 696 } culture = german } move_pop = 3345 } # Allenstein -> E.Berlin
+			any_pop = { limit = { location = { state_id = 690 } culture = german } move_pop = 3345 } # W Prussia -> E.Berlin
 			any_pop = { limit = { location = { state_id = 682 } culture = german } move_pop = 564 } # Lower Silesia -> Frankfurt.a.M
-			any_pop = { limit = { location = { state_id = 546 } culture = german } move_pop = 551 } # Pomeria -> E.Berlin
+			any_pop = { limit = { location = { state_id = 546 } culture = german } move_pop = 3345 } # Pomeria -> E.Berlin
 			# have to fill empty german provices
 			any_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 683 }
 			any_pop = { limit = { culture = polish OR = { type = farmers type = labourers } religion = secularism } move_pop = 679 }

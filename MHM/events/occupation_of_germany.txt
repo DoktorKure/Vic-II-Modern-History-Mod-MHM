@@ -316,6 +316,7 @@ country_event = {
 		#International City of Berlin
 		any_owned = { limit = { is_core = ICB } }
 		USA = { release_vassal = ICB diplomatic_influence = { who = ICB value = 200 } }
+		3345 = { secede_province = ICB }
 		
 		ICB = { 
 			government = sar_government 
@@ -1144,7 +1145,7 @@ country_event = {
 		owns = 574
 		owns = 564
 		owns = 549
-		NOT = { owns = 551 } # East Berlin
+		NOT = { owns = 3345 } # East Berlin
 		NOT = { has_global_flag = 1950_start_date_flag }
 	}
 
@@ -1192,7 +1193,7 @@ country_event = {
 		NOT = { owns = 574 } # Rhineland has been partitioned away
 		owns = 564
 		owns = 549
-		NOT = { owns = 551 } # East Berlin
+		NOT = { owns = 3345 } # East Berlin
 	}
 
 	mean_time_to_happen = { months = 1 }
@@ -1281,7 +1282,7 @@ country_event = {
 		has_global_flag = blocsenabled
 		
 		#Divided Berlin
-		owns = 551
+		owns = 3345
 		OR = { GER = { owns = 549 } FRG = { owns = 549 } }
 	}
 
@@ -1289,8 +1290,7 @@ country_event = {
 
 	option = {
 		name = EVT_8204101_A
-		551 = { change_province_name = "East Berlin" }
-		capital = 551
+		capital = 3345
 	}
 }
 
@@ -1423,7 +1423,7 @@ country_event = {
 		has_global_flag = 1961_berlin_crisis_flag_build_wall
 		
 		#Divided Berlin
-		owns = 551 
+		owns = 3345 
 		OR = {
 			GER = { owns = 549 }
 			NGF = { owns = 549 }
@@ -1438,7 +1438,7 @@ country_event = {
 		
 		#Add Berlin Wall
 		549 = { add_province_modifier = { name = berlin_wall duration = -1 } }
-		551 = { add_province_modifier = { name = berlin_wall duration = -1 } }
+		3345 = { add_province_modifier = { name = berlin_wall duration = -1 } }
 		
 		#Close borders
 		political_reform = nobody_gets_out
@@ -2186,8 +2186,8 @@ country_event = {
 	trigger = {
 		OR = { 
 			OR = {
-				AND = { tag = GER is_vassal = no owns = 551 } 
-				AND = { tag = FRG is_vassal = no owns = 551 } 
+				AND = { tag = GER is_vassal = no owns = 3345 } 
+				AND = { tag = FRG is_vassal = no owns = 3345 } 
 			}
 			OR = {
 				AND = { tag = DDR has_global_flag = cold_warussr GER = { NOT = { owns = 549 } } } 

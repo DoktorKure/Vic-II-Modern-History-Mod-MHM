@@ -4407,3 +4407,46 @@
 		size = 138
 	 } 
 }
+#Ishigaki - Senkaku (1000/250 POPS)
+3378 = {
+	soldiers = {
+		culture = japanese
+		religion = shinto 
+		size = 2
+	 } 
+	aristocrats = {
+		culture = japanese
+		religion = shinto 
+		size = 4
+	 } 
+	aristocrats = {
+		culture = japanese
+		religion = secularism
+		size = 1
+	 } 
+	clergymen = {
+		culture = japanese
+		religion = shinto 
+		size = 1
+	 } 
+	artisans = {
+		culture = japanese
+		religion = shinto 
+		size = 6
+	 } 
+	artisans = {
+		culture = japanese
+		religion = secularism
+		size = 1
+	 } 
+	farmers = {
+		culture = japanese
+		religion = shinto 
+		size = 150
+	 } 
+	farmers = {
+		culture = japanese
+		religion = secularism
+		size = 32
+	 } 
+}

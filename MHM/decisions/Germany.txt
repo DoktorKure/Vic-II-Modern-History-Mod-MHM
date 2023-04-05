@@ -332,14 +332,13 @@ political_decisions = {
 		}
 		
 		allow = {
-			owns = 551
+			owns = 3345
 			owns = 549
 			549 = { controlled_by = THIS }
 		}
 		
 		effect = {
 			capital = 549
-			551 = { change_province_name =  "Potsdam" }
 		}
 	
 	}

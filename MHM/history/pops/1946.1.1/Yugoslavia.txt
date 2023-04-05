@@ -647,12 +647,42 @@
 	farmers = {
 		culture = slovene
 		religion = catholic 
-		size = 15211
+		size = 21711
 	 } 
 	farmers = {
 		culture = yugoslav
 		religion = secularism
 		size = 2222
+	 } 
+	craftsmen = {
+		culture = slovene
+		religion = catholic 
+		size = 548
+	 } 
+	craftsmen = {
+		culture = slovene
+		religion = secularism
+		size = 569
+	 } 
+	craftsmen = {
+		culture = italian
+		religion = catholic 
+		size = 603
+	 } 
+	craftsmen = {
+		culture = italian
+		religion = secularism
+		size = 227
+	 }
+	farmers = {
+		culture = italian
+		religion = catholic 
+		size = 3217
+	 } 
+	farmers = {
+		culture = italian
+		religion = secularism
+		size = 1063
 	 } 
 }
 #Pola - Pazin (193000/59350 POPS)
@@ -730,110 +760,22 @@
 	farmers = {
 		culture = italian
 		religion = catholic 
-		size = 20385
+		size = 3685
 	 } 
 	farmers = {
 		culture = italian
 		religion = secularism
-		size = 4065
-	 } 
-	farmers = {
-		culture = croat
-		religion = catholic 
-		size = 22114
-	 } 
-	farmers = {
-		culture = croat
-		religion = secularism
-		size = 3158
-	 } 
-}
-#Umag (40000/10350 POPS)
-3378 = {
-	officers = {
-		culture = italian
-		religion = catholic 
-		size = 133
-	 } 
-	officers = {
-		culture = italian
-		religion = secularism
-		size = 10
-	 } 
-	soldiers = {
-		culture = italian
-		religion = catholic 
-		size = 587
-	 } 
-	soldiers = {
-		culture = italian
-		religion = secularism
-		size = 41
-	 } 
-	aristocrats = {
-		culture = italian
-		religion = catholic 
-		size = 290
-	 } 
-	aristocrats = {
-		culture = italian
-		religion = secularism
-		size = 359
-	 } 
-	bureaucrats = {
-		culture = italian
-		religion = catholic 
-		size = 829
-	 } 
-	bureaucrats = {
-		culture = italian
-		religion = secularism
-		size = 36
-	 } 
-	clergymen = {
-		culture = italian
-		religion = catholic 
-		size = 1395
-	 } 
-	clergymen = {
-		culture = italian
-		religion = secularism
-		size = 169
-	 } 
-	artisans = {
-		culture = italian
-		religion = catholic 
-		size = 1535
-	 } 
-	artisans = {
-		culture = croat
-		religion = catholic 
-		size = 1467
-	 } 
-	artisans = {
-		culture = croat
-		religion = secularism
-		size = 59
-	 } 
-	farmers = {
-		culture = italian
-		religion = catholic 
-		size = 1385
-	 } 
-	farmers = {
-		culture = italian
-		religion = secularism
-		size = 165
+		size = 4165
 	 } 
 	farmers = {
 		culture = croat
 		religion = catholic 
-		size = 5114
+		size = 2728
 	 } 
 	farmers = {
 		culture = croat
 		religion = secularism
-		size = 1158
+		size = 4316
 	 } 
 }
 #Zagreb - Zagreb, Karpina (1156000/289000 POPS)
@@ -3642,208 +3584,5 @@
 		culture = bulgarian
 		religion = orthodox 
 		size = 16425
-	 } 
-}
-#Koper - Koper (67200/17050 POPS)
-3345 = {
-	officers = {
-		culture = slovene
-		religion = catholic 
-		size = 45
-	 } 
-	officers = {
-		culture = slovene
-		religion = secularism
-		size = 42
-	 } 
-	officers = {
-		culture = italian
-		religion = catholic 
-		size = 22
-	 } 
-	officers = {
-		culture = italian
-		religion = secularism
-		size = 9
-	 } 
-	soldiers = {
-		culture = slovene
-		religion = catholic 
-		size = 227
-	 } 
-	soldiers = {
-		culture = slovene
-		religion = secularism
-		size = 225
-	 } 
-	soldiers = {
-		culture = italian
-		religion = catholic 
-		size = 128
-	 } 
-	soldiers = {
-		culture = italian
-		religion = secularism
-		size = 12
-	 } 
-	aristocrats = {
-		culture = slovene
-		religion = catholic 
-		size = 130
-	 } 
-	aristocrats = {
-		culture = slovene
-		religion = secularism
-		size = 206
-	 } 
-	aristocrats = {
-		culture = italian
-		religion = catholic 
-		size = 386
-	 } 
-	aristocrats = {
-		culture = italian
-		religion = secularism
-		size = 98
-	 } 
-	bureaucrats = {
-		culture = slovene
-		religion = catholic 
-		size = 127
-	 } 
-	bureaucrats = {
-		culture = slovene
-		religion = secularism
-		size = 73
-	 } 
-	bureaucrats = {
-		culture = italian
-		religion = catholic 
-		size = 156
-	 } 
-	bureaucrats = {
-		culture = italian
-		religion = secularism
-		size = 54
-	 } 
-	capitalists = {
-		culture = slovene
-		religion = catholic 
-		size = 81
-	 } 
-	capitalists = {
-		culture = slovene
-		religion = secularism
-		size = 69
-	 } 
-	capitalists = {
-		culture = italian
-		religion = catholic 
-		size = 114
-	 } 
-	capitalists = {
-		culture = italian
-		religion = secularism
-		size = 36
-	 } 
-	clergymen = {
-		culture = slovene
-		religion = catholic 
-		size = 151
-	 } 
-	clergymen = {
-		culture = slovene
-		religion = secularism
-		size = 124
-	 } 
-	clergymen = {
-		culture = italian
-		religion = catholic 
-		size = 247
-	 } 
-	clergymen = {
-		culture = italian
-		religion = secularism
-		size = 13
-	 } 
-	clerks = {
-		culture = slovene
-		religion = catholic 
-		size = 201
-	 } 
-	clerks = {
-		culture = slovene
-		religion = secularism
-		size = 193
-	 } 
-	clerks = {
-		culture = italian
-		religion = catholic 
-		size = 238
-	 } 
-	clerks = {
-		culture = italian
-		religion = secularism
-		size = 82
-	 } 
-	artisans = {
-		culture = slovene
-		religion = catholic 
-		size = 283
-	 } 
-	artisans = {
-		culture = slovene
-		religion = secularism
-		size = 267
-	 } 
-	artisans = {
-		culture = italian
-		religion = catholic 
-		size = 171
-	 } 
-	artisans = {
-		culture = italian
-		religion = secularism
-		size = 94
-	 } 
-	craftsmen = {
-		culture = slovene
-		religion = catholic 
-		size = 548
-	 } 
-	craftsmen = {
-		culture = slovene
-		religion = secularism
-		size = 569
-	 } 
-	craftsmen = {
-		culture = italian
-		religion = catholic 
-		size = 603
-	 } 
-	craftsmen = {
-		culture = italian
-		religion = secularism
-		size = 227
-	 } 
-	farmers = {
-		culture = slovene
-		religion = catholic 
-		size = 3222
-	 } 
-	farmers = {
-		culture = slovene
-		religion = secularism
-		size = 3259
-	 } 
-	farmers = {
-		culture = italian
-		religion = catholic 
-		size = 3217
-	 } 
-	farmers = {
-		culture = italian
-		religion = secularism
-		size = 1063
 	 } 
 }

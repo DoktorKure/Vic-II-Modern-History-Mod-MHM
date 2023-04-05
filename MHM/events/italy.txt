@@ -8335,7 +8335,7 @@ country_event = {
 		NOT = {
 			OR = { 
 				549 = { has_province_modifier = berlin_wall } 
-				551 = { has_province_modifier = berlin_wall } 
+				3345 = { has_province_modifier = berlin_wall } 
 			}
 		}
 		

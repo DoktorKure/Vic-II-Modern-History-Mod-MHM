@@ -405,7 +405,7 @@ country_event = {
 		OR = { 
 			ai = yes
 			549 = { has_province_modifier = berlin_wall } 
-			551 = { has_province_modifier = berlin_wall } 
+			3345 = { has_province_modifier = berlin_wall } 
 		}
 		
 		#Cold War ongoing
@@ -549,7 +549,7 @@ country_event = {
 		NOT = {
 			OR = { 
 				549 = { has_province_modifier = berlin_wall } 
-				551 = { has_province_modifier = berlin_wall } 
+				3345 = { has_province_modifier = berlin_wall } 
 			}
 		}
 		
@@ -612,7 +612,7 @@ country_event = {
 		
 		#Delete berlin wall
 		549 = { remove_province_modifier = berlin_wall } 
-		551 = { remove_province_modifier = berlin_wall } 
+		3345 = { remove_province_modifier = berlin_wall } 
 		
 		#Opposition grows
 		any_pop = { 

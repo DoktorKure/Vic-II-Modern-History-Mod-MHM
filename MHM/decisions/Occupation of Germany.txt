@@ -173,7 +173,7 @@ political_decisions = {
 			OG1 = { exists = no }
 			DDR = { exists = no }
 			NOT = { has_country_flag = no_partition_of_germany }
-			owns = 551
+			owns = 3345
 			OR = { 
 				year = 1952
 				GER = { exists = yes }

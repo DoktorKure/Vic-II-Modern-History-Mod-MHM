@@ -93,12 +93,12 @@
 	farmers = {
 		culture = croat
 		religion = catholic 
-		size = 29351
+		size = 35751
 	 } 
 	farmers = {
 		culture = croat
 		religion = secularism
-		size = 11988
+		size = 13188
 	 } 
 	farmers = {
 		culture = italian
@@ -109,7 +109,7 @@
 		culture = italian
 		religion = secularism
 		size = 1264
-	 } 
+	 }
 }
 #Zagreb - Zagreb, Karpina (1303000/325750 POPS)
 771 = {
@@ -1194,93 +1194,5 @@
 		culture = croat
 		religion = secularism
 		size = 7782
-	 } 
-}
-#Umag (40000/10350 POPS)
-3378 = {
-	officers = {
-		culture = croat
-		religion = catholic 
-		size = 133
-	 } 
-	officers = {
-		culture = croat
-		religion = secularism
-		size = 10
-	 } 
-	soldiers = {
-		culture = croat
-		religion = catholic 
-		size = 587
-	 } 
-	soldiers = {
-		culture = croat
-		religion = secularism
-		size = 41
-	 } 
-	aristocrats = {
-		culture = croat
-		religion = catholic 
-		size = 290
-	 } 
-	aristocrats = {
-		culture = croat
-		religion = secularism
-		size = 359
-	 } 
-	bureaucrats = {
-		culture = croat
-		religion = catholic 
-		size = 829
-	 } 
-	bureaucrats = {
-		culture = croat
-		religion = secularism
-		size = 36
-	 } 
-	clergymen = {
-		culture = croat
-		religion = catholic 
-		size = 1395
-	 } 
-	clergymen = {
-		culture = croat
-		religion = secularism
-		size = 169
-	 } 
-	artisans = {
-		culture = croat
-		religion = catholic 
-		size = 1535
-	 } 
-	artisans = {
-		culture = croat
-		religion = catholic 
-		size = 1467
-	 } 
-	artisans = {
-		culture = croat
-		religion = secularism
-		size = 59
-	 } 
-	farmers = {
-		culture = croat
-		religion = catholic 
-		size = 1385
-	 } 
-	farmers = {
-		culture = croat
-		religion = secularism
-		size = 165
-	 } 
-	farmers = {
-		culture = croat
-		religion = catholic 
-		size = 5114
-	 } 
-	farmers = {
-		culture = croat
-		religion = secularism
-		size = 1158
 	 } 
 }
