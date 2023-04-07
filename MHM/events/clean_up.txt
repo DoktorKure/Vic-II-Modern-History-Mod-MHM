@@ -243,7 +243,7 @@ country_event = {
 			government = hms_government
 			government = hms_government1
 			AND = {
-				OR = { government = democracy government = democracy1 }
+				OR = { government = democracy government = democracy1 government = socialist_democracy }
 				OR = { ruling_party_ideology = traditionalist ruling_party_ideology = conservative } # conservatives in a country with monarchists will restore the monarchy no matter what
 				has_country_flag = pre_existing_monarchy
 			}
@@ -351,7 +351,7 @@ country_event = {
 	
 	trigger = {
 
-		OR = { government = democracy government = democracy1 }
+		OR = { government = democracy government = democracy1 government = socialist_democracy }
 		civilized = yes
 		vote_franschise = none_voting
 		OR = {
@@ -384,7 +384,7 @@ country_event = {
 	
 	trigger = {
 
-		OR = { government = democracy government = democracy1 }
+		OR = { government = democracy government = democracy1 government = socialist_democracy }
 		vote_franschise = none_voting
 		OR = { ruling_party_ideology = socialist ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = conservative }
 		AND = { # poor attitude towards minorities leads to sectarian regime
@@ -437,7 +437,7 @@ country_event = {
 	trigger = {
 		has_country_flag = is_disabled_for_now #Keep disabled to prevent conflict with reactionary regime entry
 
-		OR = { government = democracy government = democracy1 }
+		OR = { government = democracy government = democracy1 government = socialist_democracy }
 		vote_franschise = none_voting
 		ruling_party_ideology = traditionalist
 		civilized = yes
