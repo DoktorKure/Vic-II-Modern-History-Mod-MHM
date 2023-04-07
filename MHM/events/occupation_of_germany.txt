@@ -62,7 +62,7 @@ country_event = {
 	}
 }
 
-#Player choice in the event player takes control of any occupation zones
+#Player choice in the event player takes control of any Western occupation zones
 country_event = {
 	id = 82040105
 	title = "Player Choice for Germany"
@@ -72,7 +72,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 tag = OG5 }
+		OR = { tag = OG2 tag = OG3 tag = OG4 }
 		ai = no
 		NOT = { has_global_flag = player_choice_GER_occupation }
 	}
@@ -155,6 +155,92 @@ country_event = {
 	option = {
 		name = "Stick to the historical routes"
 		change_tag_no_core_switch = OG4 #Guarantees player doesn't get gameover'd
+	}
+}
+
+#Player choice in the event player takes control of any Eastern occupation zones
+country_event = {
+	id = 82040106
+	title = "Player Choice for Germany"
+	desc = "As a player has taken control of an occupation zone, this event will offer the choice to annex all occupation zones at the cost of Germany being neutral and renouncing rights to war, or proceeding down the historical paths."
+	picture = "nwo2_allied_occupation_of_germany2"
+	
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = OG1 tag = OG5 }
+		ai = no
+		NOT = { has_global_flag = player_choice_GER_occupation }
+	}
+	
+	mean_time_to_happen = { days = 2 }
+
+	option = {
+		name = "Deutschland, Deutschland über alles..."
+		set_global_flag = player_choice_GER_occupation
+		overlord = { release_vassal = THIS diplomatic_influence = { who = THIS value = -200 } }
+		change_tag = GER
+		any_country = { limit = { exists = yes OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 tag = OG5 } } country_event = 11106 }
+		any_country = { limit = { OR = { tag = RUS tag = FRA tag = ENG tag = USA tag = POL } } remove_country_flag = occupation_zones_in_germany }
+		government = democracy
+		ruling_party_ideology = conservative
+		country_event = 800054
+		#capital = 549
+		prestige = 150
+		#Set neutrality
+		set_country_flag = neutrality
+		any_country = { 
+			limit = { alliance_with = THIS } 
+			leave_alliance = THIS 
+		}
+		set_country_flag = renounced_war_rights
+		country_event = { id = 1512259 days = 1 }
+		country_event = { id = 8204004 days = 1 }
+		country_event = { id = 8204102 days = 1 }
+		
+		#Become parliamentary republic
+		clr_country_flag = presidential_system_republic
+		clr_country_flag = semi_presidential_system_republic
+		clr_country_flag = parliamentary_system_republic
+		set_country_flag = parliamentary_system_republic
+		add_country_modifier = { name = changecentral duration = 1825 }
+		#Changing to Parliamentary Republic clears legislative gridlock
+		clr_country_flag = gridlocked_legislature
+			
+		#Add marker on capital for players to know which countries are neutral
+		random_owned = {
+			limit = { is_capital = yes }
+			add_province_modifier = { name = neutral_nation_marker duration = -1 }
+		}
+		any_owned = {
+			remove_province_modifier = occupied_province
+		}
+		relation = { who = RUS value = 100 }
+		relation = { who = USA value = 100 }
+		relation = { who = FRA value = 100 }
+		relation = { who = ENG value = 100 }
+		any_pop = { militancy = -5 consciousness = 1 }
+	}
+
+	option = {
+		name = "I just want the Eastern half."
+		change_tag = DDR
+		any_country = { limit = { exists = yes tag = OG5 } any_owned = { add_core = DDR } country_event = 11106 }
+		government = proletarian_dictatorship
+		ruling_party_ideology = communist
+		country_event = 800052
+		capital = 3345
+		prestige = 50
+		
+		any_owned = {
+			remove_province_modifier = occupied_province
+		}
+		any_pop = { militancy = -3 consciousness = 1 }
+	}
+
+	option = {
+		name = "Stick to the historical routes"
+		change_tag_no_core_switch = OG1 #Guarantees player doesn't get gameover'd
 	}
 }
 
