@@ -5,8 +5,6 @@ formtheadb = {
 			tag = JAP
 			year = 1966
 			
-			is_greater_power = yes
-			
 			NOT = { has_country_modifier = adb_member }
 			
 			NOT = { has_global_flag = adbformed }
