@@ -18,7 +18,7 @@ bomber = {
 	weighted_value = 4.0
 
 	#Building Costs
-	build_time = 120
+	build_time = 150
 	#cost 53M x 10 = 0.5B
 	build_cost = {
 		aeroplanes = 15
