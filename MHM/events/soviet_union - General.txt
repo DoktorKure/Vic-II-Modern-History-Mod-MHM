@@ -1,3 +1,66 @@
+country_event = {
+	id = 8226020
+	title = EVT_8226020_NAME
+	desc = EVT_8226020_DESC
+	picture = "nwo2_hero_cities"
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1965
+		NOT = { has_country_flag = hero_cities_active }
+	}
+
+	mean_time_to_happen = { months = 5 }
+
+	option = {
+		name = EVT_8226020_A
+		money = -5000
+		any_pop = { militancy = -0.5  consciousness = -0.2 }
+		set_country_flag = hero_cities_active
+		
+		#Brest
+		973 = { add_province_modifier = { name = hero_city duration = 3500 } }
+		
+		#Leningrad
+		994 = { add_province_modifier = { name = hero_city duration = 3500 } }
+		
+		#Stalingrad
+		1039 = { add_province_modifier = { name = hero_city duration = 3500 } }
+		
+		#Odessa
+		968 = { add_province_modifier = { name = hero_city duration = 3500 } }
+		
+		#Sevastopol
+		967 = { add_province_modifier = { name = hero_city duration = 3500 } }
+		
+		#Moscow
+		1008 = { add_province_modifier = { name = hero_city duration = 3500 } }
+		
+		#Kiev
+		958 = { add_province_modifier = { name = hero_city duration = 3500 } }
+		
+		#Novorossiysk
+		1049 = { add_province_modifier = { name = hero_city duration = 3500 } }
+		
+		#Kerch
+		966 = { add_province_modifier = { name = hero_city duration = 3500 } }
+		
+		#Minsk
+		718 = { add_province_modifier = { name = hero_city duration = 3500 } }
+		
+		#Tula
+		1011 = { add_province_modifier = { name = hero_city duration = 3500 } }
+		
+		#Murmansk
+		2587 = { add_province_modifier = { name = hero_city duration = 3500 } }
+		
+		#Smolensk
+		943 = { add_province_modifier = { name = hero_city duration = 3500 } }
+	}
+}
+
+
 #Add Soviet cores
 country_event = {
 	id = 1412179
