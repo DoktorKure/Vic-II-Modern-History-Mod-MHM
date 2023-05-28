@@ -1,4 +1,40 @@
 political_decisions = {
+
+	becomearepublic = {
+		picture = "indiarepublicday"
+		potential = {
+			tag = HND
+			OR = { government = hms_government government = hms_government1 }
+			NOT = { has_country_flag = hnd_republic_flag }
+		}
+		allow = {
+			war = no
+			is_vassal = no
+			has_country_modifier = united_nations_ga_member
+			year = 1950
+		}
+		effect = {
+			prestige = 25
+			random_country = {
+				limit = { owns = 300 } # London
+				relation = { who = THIS value = -50 }
+			}
+			government = democracy
+			set_country_flag = hnd_republic_flag
+			
+			clr_country_flag = time_to_select_new_king
+			remove_country_modifier = regency_government
+			remove_country_modifier = centrist_king #Big tent
+			remove_country_modifier = populist_king #Populist
+			remove_country_modifier = socialist_king #Socialist
+			remove_country_modifier = traditional_king #Traditionalist
+			remove_country_modifier = nationalist_king #Nationalist
+			remove_country_modifier = conservative_king #Conservative
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
 	
 	claim_kashmir = {
 		picture = "claim_kashmir"
