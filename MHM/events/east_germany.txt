@@ -605,7 +605,10 @@ country_event = {
 		}
 	}
 
-	mean_time_to_happen = { months = 9 }
+	mean_time_to_happen = {
+		months = 9
+		modifier = { factor = 0.1 year = 1990 }
+	}
 
 	option = {
     	name = "The Berlin Wall no longer exists"
@@ -637,7 +640,7 @@ country_event = {
 		#Open borders
 		political_reform = open_immigration
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -659,7 +662,7 @@ country_event = {
 		}
 		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 	
 }
@@ -675,7 +678,7 @@ country_event = {
 
 	trigger = {
     	tag = DDR
-		year = 1989
+		year = 1990
 		has_global_flag = autumn_of_nations
 		
 		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
@@ -696,8 +699,8 @@ country_event = {
 	}
 
 	mean_time_to_happen = {
-		months = 4
-		modifier = { factor = 0.1 year = 1990 }
+		months = 10
+		modifier = { factor = 0.1 year = 1991 }
 	}
 
 	option = {
