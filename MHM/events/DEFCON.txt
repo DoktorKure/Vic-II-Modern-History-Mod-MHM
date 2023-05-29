@@ -167,11 +167,27 @@ country_event = {
 		remove_country_modifier = defcon4
 		remove_country_modifier = defcon5
 		
-		#Reset national priorities
+		#Make all military decisions automatically show up
+		clr_country_flag = hide_military_decisions
+		
+		#Reset national priorities and set priority to defence
 		remove_country_modifier = nprhigh
 		remove_country_modifier = nprmedium
 		remove_country_modifier = nprlow
 		add_country_modifier = { name = nprmedium duration = -1 }
+		
+		#Change economic specialisation to military specialisation
+		remove_country_modifier = spchigh
+		remove_country_modifier = spcmedium
+		remove_country_modifier = spclow
+		remove_country_modifier = spcno
+		add_country_modifier = { name = spcno duration = -1 }
+		
+		clr_country_flag = spchigh
+		clr_country_flag = spcmedium
+		clr_country_flag = spclow
+		clr_country_flag = spcno
+		set_country_flag = spcno
 	}
 	
 }

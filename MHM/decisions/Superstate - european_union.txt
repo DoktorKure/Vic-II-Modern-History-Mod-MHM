@@ -355,6 +355,192 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	}
 
+	changexeu = {
+		picture = "jointhexeu"
+		potential = {
+			NOT = { has_country_flag = hide_superstate }
+			has_country_modifier = xeu_chairmanship
+			OR = {
+				has_country_modifier = xeuhigh_gp
+				has_country_modifier = xeumedium_gp
+				has_country_modifier = xeulow_gp
+			}
+		}
+		alert = no
+		allow = {
+			war = no
+			OR = {
+				ai = no
+				AND = {
+					ai = yes
+					OR = { 
+						AND = { has_global_flag = xeuhigh NOT = { OR = { economic_policy = state_capitalism economic_policy = planned_economy economic_policy = planned_economy1 } } } 
+						AND = { has_global_flag = xeumedium NOT = { economic_policy = interventionism } } 
+						AND = { has_global_flag = xeulow NOT = { economic_policy = laissez_faire } } 
+					}
+				}
+			} 
+		}
+		effect = {
+			remove_country_modifier = xeuhigh_gp
+			remove_country_modifier = xeumedium_gp
+			remove_country_modifier = xeulow_gp
+			remove_country_modifier = xeuhigh
+			remove_country_modifier = xeumedium
+			remove_country_modifier = xeulow
+			clr_global_flag = xeuhigh
+			clr_global_flag = xeumedium
+			clr_global_flag = xeulow
+			any_country = {
+				limit = { has_country_modifier = xeu_member } 
+				remove_country_modifier = xeuhigh
+				remove_country_modifier = xeumedium
+				remove_country_modifier = xeulow
+				clr_country_flag = xeuhigh
+				clr_country_flag = xeumedium
+				clr_country_flag = xeulow
+			}
+		}
+		ai_will_do = { 
+			factor = 100 
+		}
+	}
+
+	xeuhigh = {
+		picture = "jointhexeu"
+		potential = {
+			NOT = { has_country_flag = hide_superstate }
+			has_country_modifier = xeu_chairmanship
+			NOT = {
+				OR = {
+					has_country_modifier = xeuhigh_gp
+					has_country_modifier = xeumedium_gp
+					has_country_modifier = xeulow_gp
+				}
+			}
+		}
+		allow = {
+			war = no
+			NOT = {
+				AND = {
+					has_country_modifier = xeuhigh_gp
+					has_country_modifier = xeumedium_gp
+					has_country_modifier = xeulow_gp
+				}
+			}
+			OR = {
+				ai = no
+				AND = { ai = yes economic_policy = state_capitalism }
+				AND = { ai = yes economic_policy = planned_economy }
+				AND = { ai = yes economic_policy = planned_economy1 }
+			}
+		}
+		effect = {
+			add_country_modifier = { name = xeuhigh_gp duration = -1 }
+			any_country = { limit = { has_country_modifier = xeu_member } add_country_modifier = { name = xeuhigh duration = -1 } }
+			any_country = { limit = { has_country_modifier = xeu_member OR = { is_greater_power = no is_secondary_power = no } } relation = { who = THIS value = 50 } }
+			set_global_flag = xeuhigh
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+	xeumedium = {
+		picture = "jointhexeu"
+		potential = {
+			NOT = { has_country_flag = hide_superstate }
+			has_country_modifier = xeu_chairmanship
+			NOT = {
+				OR = {
+					has_country_modifier = xeuhigh_gp
+					has_country_modifier = xeumedium_gp
+					has_country_modifier = xeulow_gp
+				}
+			}
+		}
+		allow = {
+			war = no
+			NOT = {
+				AND = {
+					has_country_modifier = xeuhigh_gp
+					has_country_modifier = xeumedium_gp
+					has_country_modifier = xeulow_gp
+				}
+			}
+			OR = { ai = no AND = { ai = yes economic_policy = interventionism } }
+		}
+		effect = {
+			add_country_modifier = { name = xeumedium_gp duration = -1 }
+			any_country = { limit = { has_country_modifier = xeu_member } add_country_modifier = { name = xeumedium duration = -1 } }
+			set_global_flag = xeumedium
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+	xeulow = {
+		picture = "jointhexeu"
+		potential = {
+			NOT = { has_country_flag = hide_superstate }
+			has_country_modifier = xeu_chairmanship
+			NOT = {
+				OR = {
+					has_country_modifier = xeuhigh_gp
+					has_country_modifier = xeumedium_gp
+					has_country_modifier = xeulow_gp
+				}
+			}
+		}
+		allow = {
+			war = no
+			NOT = {
+				AND = {
+					has_country_modifier = xeuhigh_gp
+					has_country_modifier = xeumedium_gp
+					has_country_modifier = xeulow_gp
+				}
+			}
+			OR = { ai = no AND = { ai = yes economic_policy = laissez_faire } }
+
+				}
+		effect = {
+			add_country_modifier = { name = xeulow_gp duration = -1 }
+			any_country = { limit = { has_country_modifier = xeu_member } add_country_modifier = { name = xeulow duration = -1 } }
+			any_country = { limit = { has_country_modifier = xeu_member OR = { is_greater_power = no is_secondary_power = no } } relation = { who = THIS value = -50 } }
+			set_global_flag = xeulow
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+	xeu_friendship = {
+		picture = "xeu_friendship"
+		potential = {
+			NOT = { has_country_flag = hide_superstate }
+			NOT = { has_country_modifier = special_relations_timer }
+			tech_school = XEU_tech_school
+			NOT = { tag = XEU }
+			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
+		}
+		alert = no
+		allow = {
+			war = no
+			election = no
+			NOT = { has_country_flag = neutrality }
+			NOT =  { has_country_modifier = neutrality }
+			any_neighbor_country = { tech_school = XEU_tech_school NOT = { relation = { who = THIS value = 100 } } }
+			is_vassal = no
+		}
+		effect = {
+			any_country = { limit = { tech_school = XEU_tech_school } relation = { who = THIS value = 35 } }
+			add_country_modifier = { name = special_relations_timer duration = 500 }
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
 #
 # Leader Decision: Political Union
 #
@@ -464,6 +650,7 @@ political_decisions = {
 	maastricht_treaty = {
 		picture = "maastricht_treaty"
 		potential = {
+			NOT = { has_country_flag = hide_superstate }
 			has_country_flag = xeu_ambition
 			year = 1990 
 			OR = { 

@@ -12,7 +12,7 @@ NOT = { has_country_flag = nuclear_power_ge }
 			election = no
 		money = 5000000
 			}
-		alert = no
+		alert = yes
 		effect = {
 			prestige = 50
 			money = -2000000
@@ -36,7 +36,7 @@ NOT = { has_country_flag = wind_power_ge }
 			election = no
 		money = 4000000
 			}
-		alert = no
+		alert = yes
 		effect = {
 			prestige = 50
 			money = -2000000
@@ -60,7 +60,7 @@ NOT = { has_country_flag = solar_energy_ge }
 			election = no
 		money = 5000000
 			}
-		alert = no
+		alert = yes
 		effect = {
 			prestige = 50
 			money = -2000000
@@ -84,7 +84,7 @@ NOT = { has_country_flag = bioenergy_ge }
 			election = no
 		money = 5000000
 			}
-		alert = no
+		alert = yes
 		effect = {
 			prestige = 50
 			money = -2000000
@@ -108,7 +108,7 @@ NOT = { has_country_flag = fusion_power_ge }
 			election = no
 		money = 10000000
 			}
-		alert = no
+		alert = yes
 		effect = {
 			prestige = 50
 			money = -2000000
@@ -132,7 +132,7 @@ NOT = { has_country_flag = geothermal_energy_ge }
 			election = no
 		money = 10000000
 			}
-		alert = no
+		alert = yes
 		effect = {
 			prestige = 50
 			money = -2000000

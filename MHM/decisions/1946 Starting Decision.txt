@@ -80,6 +80,22 @@ political_decisions = {
 			RUS = {
 				set_country_flag = aerial_bombardment_ability
 			}
+
+			#Set DEFCON levels
+			any_country = {
+				limit = { 
+					exists = yes
+					war = no
+				}
+				add_country_modifier = { name = defcon5 duration = -1 }
+			}
+			any_country = {
+				limit = { 
+					exists = yes
+					war = yes
+				}
+				add_country_modifier = { name = defcon2 duration = -1 }
+			}
 			
 			#Agricultural collectivization for communist nations
 			any_country = {

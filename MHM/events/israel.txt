@@ -14,6 +14,38 @@ country_event = {
   }
 }
 
+country_event = {
+	id = 10076011
+	title = "Railroading of Israel/Palestine"
+	desc = "As a player has taken control of Mandatory Palestine, they can choose to railroad historical events to favor Israel or Palestine. Alternatively, they can allow the historical routes to fire as normal."
+	picture = "nwo2_british_mandate_for_palestine"
+
+	trigger = {
+		tag = PAL
+		ai = no
+		NOT = { has_global_flag = ISR_PAL_railroading_event_fired }
+	}
+	
+	immediate = { set_global_flag = ISR_PAL_railroading_event_fired }
+	
+	option = {
+		name = "Railroad events to favor Israel's release."
+		set_global_flag = ISR_PAL_railroaded
+		ENG = { set_country_flag = ENG_ISR_bias }
+	}
+	
+	option = {
+		name = "Railroad events to favor Palestine's release."
+		set_global_flag = ISR_PAL_railroaded
+		ENG = { set_country_flag = ENG_PAL_bias }
+	}
+	
+	option = {
+		name = "Allow historical events to fire as normal."
+		ENG = { set_country_flag = ENG_UN_deferral }
+	}
+}
+
 # Jewish Resistance Movement - 1946
 country_event = {
 	id = 1007601
@@ -102,7 +134,10 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.8 }
+		ai_chance = {
+			factor = 0.8
+			modifier = { factor = 0 has_country_flag = ENG_ISR_bias }
+		}
 	}
 	
 	option = {
@@ -185,7 +220,10 @@ country_event = {
 		
 		#Palestine to be independent via the generic system
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = { factor = 0 has_country_flag = ENG_ISR_bias }
+		}
 	}
 	
 	option = {
@@ -269,7 +307,10 @@ country_event = {
 
 		USA = { clr_country_flag = support_zionism }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = { factor = 1 has_country_flag = ENG_ISR_bias }
+		}
 	}	
 }
 
@@ -377,7 +418,10 @@ country_event = {
 			relation = { who = THIS value = -150 }
 		}
 
-		ai_chance = { factor = 0.1 }
+		ai_chance = {
+			factor = 0.1
+			modifier = { factor = 0 has_global_flag = ISR_PAL_railroaded }
+		}
 	}
 
 	option = {
@@ -722,7 +766,17 @@ country_event = {
 			any_owned = { limit = { is_core = ISR } add_province_modifier = { name = nationalist_agitation duration = 3650 } } 
 		}
 		
-		ai_chance = { factor = 0.05 }
+		ai_chance = {
+			factor = 0.05
+			modifier = {
+				factor = 0
+				has_country_flag = ENG_ISR_bias
+			}
+			modifier = {
+				factor = 0
+				has_country_flag = ENG_PAL_bias
+			}
+		}
 	}
 	
 }

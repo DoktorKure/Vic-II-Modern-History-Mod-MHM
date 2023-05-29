@@ -1,0 +1,119 @@
+political_decisions = {
+
+	xhide_superstate = {
+		picture = "hide_superstate"
+		potential = { NOT = { has_country_flag = hide_superstate } }	
+		alert = no
+		allow = { ai = no }
+		alert = no
+		effect = { set_country_flag = hide_superstate }
+		
+		ai_will_do = { factor = 0 }
+	}
+
+	xunhide_superstate = {
+		picture = "hide_superstate"
+		potential = { has_country_flag = hide_superstate }	
+		alert = no
+		allow = { ai = no }
+		alert = no
+		effect = { clr_country_flag = hide_superstate }
+		
+		ai_will_do = { factor = 0 }
+	}
+
+	allow_superstate_sphere = {
+		picture = "allow_superstate_sphere"
+		potential = {
+			NOT = { has_country_flag = hide_superstate } 
+			is_greater_power = yes
+			has_country_flag = deny_superstate
+		}
+		alert = no
+		allow = {
+			OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = socialist_democracy ai = no }
+		}
+		effect = {
+			clr_country_flag = deny_superstate
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+	deny_superstate_sphere = {
+		picture = "deny_superstate_sphere"
+		potential = {
+			NOT = { has_country_flag = hide_superstate }
+			is_greater_power = yes
+			NOT = { has_country_flag = deny_superstate }
+		}
+		alert = no
+		allow = {
+			OR = { ai = no NOT = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = socialist_democracy } } }
+		}
+		effect = {
+			set_country_flag = deny_superstate
+			any_country = { limit = { in_sphere = THIS } relation = { who = THIS value = -50 } }
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+	
+	#An Open Market
+	# trade_block_ambition - called during elections in on_action.txt
+	# this events regulates the nations engagement in the trade block
+	trade_block_ambition = {
+		picture = "trade_block_ambition"
+		potential = {
+			NOT = { has_country_flag = hide_superstate } 
+			NOT = { has_country_flag = trade_block_ambition }		
+		}
+
+		allow = {
+			war = no
+			OR = {
+				ruling_party_ideology = communist_social
+
+				AND = { has_country_flag = market_communism government = proletarian_dictatorship }
+
+				AND = { has_country_flag = market_communism government = proletarian_dictatorship1 }
+
+				AND = { OR = { government = democracy government = democracy1 government = socialist_democracy government = hms_government government = hms_government1 } trade_policy = free_trade }
+
+			}
+
+			OR = { has_country_flag = schuman_declaration new_synthesis = 1 }
+		}
+		
+		effect = {
+			set_country_flag = trade_block_ambition
+			artisans = {
+				militancy = 0.5
+				consciousness = 1
+			}
+			capitalists = {
+				militancy = -0.5
+				consciousness = -1
+			}
+			any_pop = {
+				dominant_issue = {
+					factor = 0.30
+					value = free_trade
+				}
+			}
+			any_pop = {
+				scaled_militancy = {
+					issue = protectionism
+					factor = 3
+				}
+				scaled_consciousness = {
+					issue = protectionism
+					factor = 3
+				}
+			}
+		}
+		ai_will_do = { factor = 1 }
+	}
+}

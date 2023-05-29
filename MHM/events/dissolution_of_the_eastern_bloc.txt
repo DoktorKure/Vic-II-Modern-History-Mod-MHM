@@ -23,7 +23,10 @@ country_event = { # Sinatra Doctrine
 		has_country_flag = mikhail_gorbachev
 		
 		#Cold War ongoing
-		has_global_flag = blocsenabled
+		OR = {
+			has_global_flag = blocsenabled
+			has_country_flag = USSR_events_railroaded
+		}
 		
 		#Has an Eastern Bloc
 		OR = {

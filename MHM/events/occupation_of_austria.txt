@@ -1,3 +1,77 @@
+country_event = {
+	id = 82030001
+	title = "Occupation of Austria"
+	desc = "As a player has taken control of one of the Austrian occupation zones, the player has the choice of unifying the two Austrias early or letting history play out as normal."
+	picture = "nwo2_occupation_of_austria"
+	fire_only_once = yes
+
+	trigger = {
+		OR = { tag = AUS tag = ROA }
+		ai = no
+	}
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = "We will unite the two Austrias"
+		random_owned = {
+			limit = {
+				owner = {
+					tag = ROA
+				}
+			}
+			owner = {
+				#Make Austria independent
+				USA = { release_vassal = ROA }
+				
+				#Change ROA to AUS
+				inherit = AUS
+				change_tag = AUS
+				all_core = { remove_core = ROA }
+				
+				#Set AUS
+				capital = 619 # Wien
+				any_pop = { ideology = { value = conservative factor = 0.25 } }
+				
+				#Victors of WW2
+				RUS = { military_access = THIS }
+				ENG = { military_access = THIS }
+				USA = { military_access = THIS }
+				FRA = { military_access = THIS }
+				
+				relation = { who = USA value = 50 }
+				relation = { who = RUS value = 50 }
+				relation = { who = ENG value = 50 }
+				relation = { who = FRA value = 50 }
+				
+				#Neutrality
+				set_country_flag = neutrality
+				set_country_flag = renounced_war_rights
+				neutrality = yes
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = {
+					tag = AUS
+				}
+			}
+			owner = {
+				change_tag_no_core_switch = ROA
+				ROA = { country_event = { id = 8203010 days = 3 } }
+			}
+		}
+		
+		ai_chance = { factor = 1 }
+	}
+
+	option = {
+		name = "Let history play out as normal"
+		ai_chance = { factor = 0 }
+	}
+}
+
 # RUS choice over what to do with Austria
 country_event = {
 	id = 8203000

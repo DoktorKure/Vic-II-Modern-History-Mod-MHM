@@ -76,6 +76,39 @@ political_decisions = {
 		}
 	}
 
+	united_nations = {
+		picture = "united_nations"
+		potential = {
+			NOT = { has_country_modifier = united_nations }
+			NOT = { OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 } }
+		}
+
+		allow = {
+			war = no
+			OR = { 
+				is_vassal = no 
+				is_secondary_power = yes 
+				wars_of_national_liberation = 1 
+				overlord = { tag = RUS has_global_flag = blocsenabled } 
+			}
+			
+			#Issue of China's representation in the UN
+			OR = { 
+				NOT = { has_country_flag = not_participating_UNSC }
+				AND = { tag = CHI CHI = { exists = yes } KMT = { exists = no } }
+				AND = { tag = KMT CHI = { exists = no } KMT = { exists = yes } }
+			}
+		}
+
+		effect = {
+			prestige = 100
+			remove_country_modifier = not_member_of_united_nations
+			add_country_modifier = { name = united_nations duration = -1 }
+		}
+
+		ai_will_do = { factor = 1 }
+	}
+	
 	jointheunga = {
 		picture = "united_nations_general_assembly"
 		potential = {
@@ -173,6 +206,33 @@ political_decisions = {
 		}
 	}
 	
+	### UNSC ###
+	
+	united_nations_security_council = {
+		picture = "united_nations_security_council"
+		potential = {
+			is_greater_power = yes
+			has_country_modifier = unsc_permanent_member
+			crisis_exist = yes
+			involved_in_crisis = no
+		}
+
+		allow = {
+			any_greater_power = {
+				involved_in_crisis = yes
+				crisis_exist = yes 
+				relation = { who = THIS value = 100 }
+			}
+			war = no
+		}
+
+		effect = {
+			add_crisis_interest = yes
+		}
+		
+		ai_will_do = { factor = 1 }
+	}
+	
 	jointheunsc = {
 		picture = "united_nations_security_council"
 		potential = {
@@ -212,6 +272,111 @@ political_decisions = {
 			add_country_modifier = { name = unsc_permanent_member duration = -1 }
 		}
 		
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+		
+	china_joins_unsc = {
+		picture = "china_joins_unsc"
+		potential = {
+			tag = CHI
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+			
+			#Not in the UNSC
+			NOT = { has_country_modifier = unsc_permanent_member }
+
+			#Cold War
+			has_global_flag = blocsenabled
+
+			#ROC is in the UNSC
+			exists = KMT
+			KMT = { has_country_modifier = unsc_permanent_member }
+			
+			#Decision has not already fired
+			NOT = { has_global_flag = PRC_ping_pong_flag }
+		}
+		
+		allow = {
+			OR = {
+				KMT = { is_vassal = yes }
+				AND = { rank = 3 relation = { who = USA value = 100 } detente = 1 }
+				AND = { year = 1971 USA = { has_country_flag = nixon_elected } } 
+			}
+			is_vassal = no
+			war = no
+			
+			#Not if PRC has achieved good relations with the USSR
+			NOT = { has_global_flag = restoration_win }
+		}
+		
+		effect = {
+		
+			set_global_flag = PRC_ping_pong_flag
+		
+			#Ping pong diplomacy
+			country_event = 8002850
+			
+			clr_country_flag = not_participating_UNSC
+		}
+	
+	}
+
+	taiwan_joins_un = {
+		picture = "taiwan_joins_un"
+		potential = {
+			OR = { tag = KMT tag = TAI }
+    		has_country_flag = not_participating_UNSC
+		}
+		
+		allow = {
+			is_vassal = no
+			war = no
+			tag = TAI
+		}
+		
+		effect = {
+			prestige = 500
+			clr_country_flag = not_participating_UNSC
+		}
+	
+	}
+	
+	reform_the_unsc = {
+		picture = "reform_the_unsc"
+		potential = {
+			is_greater_power = yes
+			NOT = { has_global_flag = blocsenabled }
+			has_country_modifier = united_nations_ga_member
+			NOT = { has_country_modifier = unsc_permanent_member }
+			NOT = { has_country_flag = not_participating_UNSC }
+		}
+		allow = {
+			war = no
+			election = no
+			OR = { #2000 or a UNSC member is no longer a GP
+				cultural_imperialism = 1
+				RUS = { has_country_modifier = unsc_permanent_member is_greater_power = no }
+				CHI = { has_country_modifier = unsc_permanent_member is_greater_power = no }
+				FRA = { has_country_modifier = unsc_permanent_member is_greater_power = no }
+				ENG = { has_country_modifier = unsc_permanent_member is_greater_power = no }
+				USA = { has_country_modifier = unsc_permanent_member is_greater_power = no }
+			}
+			NOT = { badboy = 0.2 }
+			NOT = { 
+				any_greater_power = { 
+					AND = { 
+						has_country_modifier = unsc_permanent_member 
+						NOT = { relation = { who = THIS value = 150 } }
+					} 
+				} 
+			}
+		}
+		effect = {
+			prestige = 2500
+			add_country_modifier = { name = unsc_permanent_member duration = -1 }
+			set_country_flag = new_unsc_permanent_member
+		}
 		ai_will_do = { 
 			factor = 1 
 		}

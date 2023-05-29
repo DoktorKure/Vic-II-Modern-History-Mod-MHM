@@ -13,7 +13,7 @@ political_decisions = {
 			war = no
 			election = no
 			money = 1000000
-has_country_modifier = united_nations_ga_member
+			has_country_modifier = united_nations_ga_member
 		}
 		effect = {
 			prestige = 5
@@ -37,11 +37,13 @@ has_country_modifier = united_nations_ga_member
 		allow = {
 			war = no
 			election = no
-has_country_modifier = united_nations_ga_member
+			has_country_modifier = united_nations_ga_member
 		}
 		effect = {
 			prestige = 5
 			set_country_flag = unclos_1
+			add_country_modifier = { name = claim_12 duration = -1 }
+			set_country_flag = claim_12
 		}
 		ai_will_do = { 
 			factor = 100 
@@ -64,84 +66,7 @@ has_country_modifier = united_nations_ga_member
 		effect = {
 			prestige = 5
 			set_country_flag = unclos_3
-		}
-		ai_will_do = { 
-			factor = 100 
-		}
-	}
-
-	claim_12 = {
-		picture = "claim_12"
-		potential = {
-			num_of_ports = 1
-			has_country_flag = unclos_1
-			NOT = { has_global_flag = unclos_2 }
-			NOT = { has_country_flag = claim_24 }
-			NOT = { has_country_flag = claim_200 }
-			NOT = { has_country_flag = claim_12 }
-			NOT = { has_country_modifier = claim_12 }
-		}
-		allow = {
-			war = no
-			is_vassal = no
-			election = no
-has_country_modifier = united_nations_ga_member
-		}
-		effect = {
-			prestige = 5
-			add_country_modifier = { name = claim_12 duration = -1 }
-			set_country_flag = claim_12
-		}
-		ai_will_do = { 
-			factor = 100 
-		}
-	}
-
-	claim_24 = {
-		picture = "claim_24"
-		potential = {
-			num_of_ports = 1
-			has_global_flag = unclos_2
-			NOT = { has_global_flag = unclos_3 }
-			NOT = { has_country_flag = claim_200 }
-			has_country_flag = claim_12
-			NOT = { has_country_flag = claim_24 }
-			NOT = { has_country_modifier = claim_24 }
-		}
-		allow = {
-			war = no
-			is_vassal = no
-			election = no
-has_country_modifier = united_nations_ga_member
-		}
-		effect = {
-			prestige = 10
 			remove_country_modifier = claim_12
-			add_country_modifier = { name = claim_24 duration = -1 }
-			set_country_flag = claim_24
-		}
-		ai_will_do = { 
-			factor = 100 
-		}
-	}
-
-	claim_200 = {
-		picture = "claim_200"
-		potential = {
-			num_of_ports = 1
-			has_country_flag = unclos_3
-			NOT = { has_country_flag = claim_200 }
-			NOT = { has_country_modifier = claim_200 }
-		}
-		allow = {
-			war = no
-			is_vassal = no
-			election = no
-has_country_modifier = united_nations_ga_member
-		}
-		effect = {
-			prestige = 10
-			remove_country_modifier = claim_24
 			add_country_modifier = { name = claim_200 duration = -1 }
 			set_country_flag = claim_200
 		}
@@ -165,7 +90,7 @@ has_country_modifier = united_nations_ga_member
 			war = no
 			is_vassal = no
 			election = no
-has_country_modifier = united_nations_ga_member
+			has_country_modifier = united_nations_ga_member
 		}
 		effect = {
 			add_country_modifier = { name = sea_dispute duration = 1825 }
