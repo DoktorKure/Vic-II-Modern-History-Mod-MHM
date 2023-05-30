@@ -36,22 +36,17 @@ country_event = {
 			limit = {
 				owner = {
 					has_global_flag = new_colonial_system
+					KEN = { ai = no }
 				}
 			}
 			owner = {
-				any_country = {
-					limit = {
-						tag = KEN
-						ai = no
+				KEN = {
+					inherit = TAN
+					inherit = UGA
+					any_owned = {
+						add_core = XEF
 					}
-					KEN = {
-						inherit = TAN
-						inherit = UGA
-						any_owned = {
-							add_core = XEF
-						}
-						change_tag = XEF
-					}
+					change_tag = XEF
 				}
 			}
 		}
@@ -59,22 +54,17 @@ country_event = {
 			limit = {
 				owner = {
 					has_global_flag = new_colonial_system
+					UGA = { ai = no }
 				}
 			}
 			owner = {
-				any_country = {
-					limit = {
-						tag = UGA
-						ai = no
+				UGA = {
+					inherit = TAN
+					inherit = KEN
+					any_owned = {
+						add_core = XEF
 					}
-					UGA = {
-						inherit = KEN
-						inherit = TAN
-						any_owned = {
-							add_core = XEF
-						}
-						change_tag = XEF
-					}
+					change_tag = XEF
 				}
 			}
 		}
@@ -82,22 +72,17 @@ country_event = {
 			limit = {
 				owner = {
 					has_global_flag = new_colonial_system
+					TAN = { ai = no }
 				}
 			}
 			owner = {
-				any_country = {
-					limit = {
-						tag = TAN
-						ai = no
+				TAN = {
+					inherit = KEN
+					inherit = UGA
+					any_owned = {
+						add_core = XEF
 					}
-					TAN = {
-						inherit = KEN
-						inherit = UGA
-						any_owned = {
-							add_core = XEF
-						}
-						change_tag = XEF
-					}
+					change_tag = XEF
 				}
 			}
 		}
@@ -107,21 +92,17 @@ country_event = {
 			limit = {
 				owner = {
 					has_global_flag = new_colonial_system
-					KEN = { ai = yes }
-					TAN = { ai = yes }
-					UGA = { ai = yes }
+					AND = { KEN = { ai = yes } TAN = { ai = yes } UGA = { ai = yes } }
 				}
 			}
 			owner = {
-				any_country = {
-					TAN = {
-						inherit = KEN
-						inherit = UGA
-						any_owned = {
-							add_core = XEF
-						}
-						change_tag = XEF
+				TAN = {
+					inherit = KEN
+					inherit = UGA
+					any_owned = {
+						add_core = XEF
 					}
+					change_tag = XEF
 				}
 			}
 		}
