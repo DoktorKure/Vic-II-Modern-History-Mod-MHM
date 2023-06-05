@@ -73,6 +73,7585 @@ country_event = {
 			all_core = { add_core = THIS }
 			any_owned = { secede_province = THIS }
 		}
+		
+		### FUCKHUGE BLOCK FOR DYNAMIC CULTURE ADDITIONS ###
+		### /!\ ANY MODIFICATIONS TO cultures.txt NEEDS TO UPDATE THIS BLOCK AS WELL /!\ ###
+		
+		### PRIMARY CULTURES ###
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = french
+					}
+				}
+			}
+			owner = { add_accepted_culture = french }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = breton
+					}
+				}
+			}
+			owner = { add_accepted_culture = breton }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = white_french
+					}
+				}
+			}
+			owner = { add_accepted_culture = white_french }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = occitans
+					}
+				}
+			}
+			owner = { add_accepted_culture = occitans }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = italian
+					}
+				}
+			}
+			owner = { add_accepted_culture = italian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = padanian
+					}
+				}
+			}
+			owner = { add_accepted_culture = padanian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = insular_mediterranean
+					}
+				}
+			}
+			owner = { add_accepted_culture = insular_mediterranean }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = basque
+					}
+				}
+			}
+			owner = { add_accepted_culture = basque }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = catalan
+					}
+				}
+			}
+			owner = { add_accepted_culture = catalan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = spanish
+					}
+				}
+			}
+			owner = { add_accepted_culture = spanish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = byelorussian
+					}
+				}
+			}
+			owner = { add_accepted_culture = byelorussian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = russian
+					}
+				}
+			}
+			owner = { add_accepted_culture = russian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ukrainian
+					}
+				}
+			}
+			owner = { add_accepted_culture = ukrainian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = rusyn
+					}
+				}
+			}
+			owner = { add_accepted_culture = rusyn }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = polish
+					}
+				}
+			}
+			owner = { add_accepted_culture = polish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = silesians
+					}
+				}
+			}
+			owner = { add_accepted_culture = silesians }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = yugoslav
+					}
+				}
+			}
+			owner = { add_accepted_culture = yugoslav }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = bulgarian
+					}
+				}
+			}
+			owner = { add_accepted_culture = bulgarian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = pomak
+					}
+				}
+			}
+			owner = { add_accepted_culture = pomak }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = serb
+					}
+				}
+			}
+			owner = { add_accepted_culture = serb }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = montenegrin
+					}
+				}
+			}
+			owner = { add_accepted_culture = montenegrin }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = croat
+					}
+				}
+			}
+			owner = { add_accepted_culture = croat }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = bosniak
+					}
+				}
+			}
+			owner = { add_accepted_culture = bosniak }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = slovene
+					}
+				}
+			}
+			owner = { add_accepted_culture = slovene }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = irish
+					}
+				}
+			}
+			owner = { add_accepted_culture = irish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = british
+					}
+				}
+			}
+			owner = { add_accepted_culture = british }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = scottish
+					}
+				}
+			}
+			owner = { add_accepted_culture = scottish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = welsh
+					}
+				}
+			}
+			owner = { add_accepted_culture = welsh }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = estonian
+					}
+				}
+			}
+			owner = { add_accepted_culture = estonian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = latvian
+					}
+				}
+			}
+			owner = { add_accepted_culture = latvian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = lithuanian
+					}
+				}
+			}
+			owner = { add_accepted_culture = lithuanian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = hungarian
+					}
+				}
+			}
+			owner = { add_accepted_culture = hungarian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = german
+					}
+				}
+			}
+			owner = { add_accepted_culture = german }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = south_german
+					}
+				}
+			}
+			owner = { add_accepted_culture = south_german }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mennonites
+					}
+				}
+			}
+			owner = { add_accepted_culture = mennonites }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = dutch
+					}
+				}
+			}
+			owner = { add_accepted_culture = dutch }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = czech
+					}
+				}
+			}
+			owner = { add_accepted_culture = czech }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = slovak
+					}
+				}
+			}
+			owner = { add_accepted_culture = slovak }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = european
+					}
+				}
+			}
+			owner = { add_accepted_culture = european }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = anglo_oceanian
+					}
+				}
+			}
+			owner = { add_accepted_culture = anglo_oceanian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = anglo_canadian
+					}
+				}
+			}
+			owner = { add_accepted_culture = anglo_canadian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = french_canadian
+					}
+				}
+			}
+			owner = { add_accepted_culture = french_canadian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = white_anglo
+					}
+				}
+			}
+			owner = { add_accepted_culture = white_anglo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = dixie
+					}
+				}
+			}
+			owner = { add_accepted_culture = dixie }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = global_human
+					}
+				}
+			}
+			owner = { add_accepted_culture = global_human }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = afrikaaner
+					}
+				}
+			}
+			owner = { add_accepted_culture = afrikaaner }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = assyrian
+					}
+				}
+			}
+			owner = { add_accepted_culture = assyrian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = georgian
+					}
+				}
+			}
+			owner = { add_accepted_culture = georgian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = greek
+					}
+				}
+			}
+			owner = { add_accepted_culture = greek }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = armenian
+					}
+				}
+			}
+			owner = { add_accepted_culture = armenian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = danish
+					}
+				}
+			}
+			owner = { add_accepted_culture = danish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = finnish
+					}
+				}
+			}
+			owner = { add_accepted_culture = finnish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = norwegian
+					}
+				}
+			}
+			owner = { add_accepted_culture = norwegian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = finno_ugrian
+					}
+				}
+			}
+			owner = { add_accepted_culture = finno_ugrian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = swedish
+					}
+				}
+			}
+			owner = { add_accepted_culture = swedish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = albanian
+					}
+				}
+			}
+			owner = { add_accepted_culture = albanian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = haredim_jewish
+					}
+				}
+			}
+			owner = { add_accepted_culture = haredim_jewish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = jewish
+					}
+				}
+			}
+			owner = { add_accepted_culture = jewish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = romanian
+					}
+				}
+			}
+			owner = { add_accepted_culture = romanian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = aromanians
+					}
+				}
+			}
+			owner = { add_accepted_culture = aromanians }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = roma
+					}
+				}
+			}
+			owner = { add_accepted_culture = roma }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = native_american_minor
+					}
+				}
+			}
+			owner = { add_accepted_culture = native_american_minor }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = hawaiian
+					}
+				}
+			}
+			owner = { add_accepted_culture = hawaiian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kanak
+					}
+				}
+			}
+			owner = { add_accepted_culture = kanak }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = melanesian
+					}
+				}
+			}
+			owner = { add_accepted_culture = melanesian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = micronesian
+					}
+				}
+			}
+			owner = { add_accepted_culture = micronesian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = papua
+					}
+				}
+			}
+			owner = { add_accepted_culture = papua }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = polynesian
+					}
+				}
+			}
+			owner = { add_accepted_culture = polynesian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = maori
+					}
+				}
+			}
+			owner = { add_accepted_culture = maori }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = white_spanish
+					}
+				}
+			}
+			owner = { add_accepted_culture = white_spanish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mestizo
+					}
+				}
+			}
+			owner = { add_accepted_culture = mestizo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = portuguese
+					}
+				}
+			}
+			owner = { add_accepted_culture = portuguese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = white_portuguese
+					}
+				}
+			}
+			owner = { add_accepted_culture = white_portuguese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = pardo_portuguese
+					}
+				}
+			}
+			owner = { add_accepted_culture = pardo_portuguese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = berber
+					}
+				}
+			}
+			owner = { add_accepted_culture = berber }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = arab_gulf
+					}
+				}
+			}
+			owner = { add_accepted_culture = arab_gulf }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = arab_mashriqi
+					}
+				}
+			}
+			owner = { add_accepted_culture = arab_mashriqi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = arab_nile
+					}
+				}
+			}
+			owner = { add_accepted_culture = arab_nile }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = arab_hassaniya
+					}
+				}
+			}
+			owner = { add_accepted_culture = arab_hassaniya }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = druze
+					}
+				}
+			}
+			owner = { add_accepted_culture = druze  }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = arab
+					}
+				}
+			}
+			owner = { add_accepted_culture = arab }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = altay
+					}
+				}
+			}
+			owner = { add_accepted_culture = altay }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = buryat
+					}
+				}
+			}
+			owner = { add_accepted_culture = buryat }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kalmyk
+					}
+				}
+			}
+			owner = { add_accepted_culture = kalmyk }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = khakas
+					}
+				}
+			}
+			owner = { add_accepted_culture = khakas }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mongol
+					}
+				}
+			}
+			owner = { add_accepted_culture = mongol }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tatar
+					}
+				}
+			}
+			owner = { add_accepted_culture = tatar }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tuvans
+					}
+				}
+			}
+			owner = { add_accepted_culture = tuvans }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = nepali
+					}
+				}
+			}
+			owner = { add_accepted_culture = nepali }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = newar
+					}
+				}
+			}
+			owner = { add_accepted_culture = newar }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ngalop
+					}
+				}
+			}
+			owner = { add_accepted_culture = ngalop }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = sikkim
+					}
+				}
+			}
+			owner = { add_accepted_culture = sikkim }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tibetan
+					}
+				}
+			}
+			owner = { add_accepted_culture = tibetan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = aimat
+					}
+				}
+			}
+			owner = { add_accepted_culture = aimat }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = pashtun
+					}
+				}
+			}
+			owner = { add_accepted_culture = pashtun }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = baluchi
+					}
+				}
+			}
+			owner = { add_accepted_culture = baluchi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = hazara
+					}
+				}
+			}
+			owner = { add_accepted_culture = hazara }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = pamir
+					}
+				}
+			}
+			owner = { add_accepted_culture = pamir }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = persian
+					}
+				}
+			}
+			owner = { add_accepted_culture = persian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tajik
+					}
+				}
+			}
+			owner = { add_accepted_culture = tajik }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = abkhaz
+					}
+				}
+			}
+			owner = { add_accepted_culture = abkhaz }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = avar
+					}
+				}
+			}
+			owner = { add_accepted_culture = avar }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = balkar
+					}
+				}
+			}
+			owner = { add_accepted_culture = balkar }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = chechen
+					}
+				}
+			}
+			owner = { add_accepted_culture = chechen }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = circassians
+					}
+				}
+			}
+			owner = { add_accepted_culture = circassians }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = dargwa
+					}
+				}
+			}
+			owner = { add_accepted_culture = dargwa }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ingush
+					}
+				}
+			}
+			owner = { add_accepted_culture = ingush }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kabarday
+					}
+				}
+			}
+			owner = { add_accepted_culture = kabarday }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = karachay
+					}
+				}
+			}
+			owner = { add_accepted_culture = karachay }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = north_caucasian
+					}
+				}
+			}
+			owner = { add_accepted_culture = north_caucasian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ossetian
+					}
+				}
+			}
+			owner = { add_accepted_culture = ossetian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = bashkir
+					}
+				}
+			}
+			owner = { add_accepted_culture = bashkir }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = chuvash
+					}
+				}
+			}
+			owner = { add_accepted_culture = chuvash }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = azerbaijani
+					}
+				}
+			}
+			owner = { add_accepted_culture = azerbaijani }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = gagauz
+					}
+				}
+			}
+			owner = { add_accepted_culture = gagauz }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = karakalpak
+					}
+				}
+			}
+			owner = { add_accepted_culture = karakalpak }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = turkish
+					}
+				}
+			}
+			owner = { add_accepted_culture = turkish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = turkmen
+					}
+				}
+			}
+			owner = { add_accepted_culture = turkmen }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = uighur
+					}
+				}
+			}
+			owner = { add_accepted_culture = uighur }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = uzbek
+					}
+				}
+			}
+			owner = { add_accepted_culture = uzbek }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kazak
+					}
+				}
+			}
+			owner = { add_accepted_culture = kazak }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kirgiz
+					}
+				}
+			}
+			owner = { add_accepted_culture = kirgiz }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = lazi
+					}
+				}
+			}
+			owner = { add_accepted_culture = lazi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = yakut
+					}
+				}
+			}
+			owner = { add_accepted_culture = yakut }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kurdish
+					}
+				}
+			}
+			owner = { add_accepted_culture = kurdish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = japanese
+					}
+				}
+			}
+			owner = { add_accepted_culture = japanese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = korean
+					}
+				}
+			}
+			owner = { add_accepted_culture = korean }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = taiwanese
+					}
+				}
+			}
+			owner = { add_accepted_culture = taiwanese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = chinese
+					}
+				}
+			}
+			owner = { add_accepted_culture = chinese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = chinese_cantonese
+					}
+				}
+			}
+			owner = { add_accepted_culture = chinese_cantonese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = chinese_macanese
+					}
+				}
+			}
+			owner = { add_accepted_culture = chinese_macanese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = chinese_hokkien
+					}
+				}
+			}
+			owner = { add_accepted_culture = chinese_hokkien }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = chinese_hakka
+					}
+				}
+			}
+			owner = { add_accepted_culture = chinese_hakka }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = bai
+					}
+				}
+			}
+			owner = { add_accepted_culture = bai }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = dong
+					}
+				}
+			}
+			owner = { add_accepted_culture = dong }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = hani
+					}
+				}
+			}
+			owner = { add_accepted_culture = hani }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = manchu
+					}
+				}
+			}
+			owner = { add_accepted_culture = manchu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = miao
+					}
+				}
+			}
+			owner = { add_accepted_culture = miao }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = min
+					}
+				}
+			}
+			owner = { add_accepted_culture = min }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = yi
+					}
+				}
+			}
+			owner = { add_accepted_culture = yi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = yue
+					}
+				}
+			}
+			owner = { add_accepted_culture = yue }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = zhuang
+					}
+				}
+			}
+			owner = { add_accepted_culture = zhuang }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = singalese
+					}
+				}
+			}
+			owner = { add_accepted_culture = singalese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = sinhala
+					}
+				}
+			}
+			owner = { add_accepted_culture = sinhala }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = sikh
+					}
+				}
+			}
+			owner = { add_accepted_culture = sikh }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = assamese
+					}
+				}
+			}
+			owner = { add_accepted_culture = assamese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = avadhi
+					}
+				}
+			}
+			owner = { add_accepted_culture = avadhi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = hindi
+					}
+				}
+			}
+			owner = { add_accepted_culture = hindi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = manipuri
+					}
+				}
+			}
+			owner = { add_accepted_culture = manipuri }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = rajput
+					}
+				}
+			}
+			owner = { add_accepted_culture = rajput }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = oriya
+					}
+				}
+			}
+			owner = { add_accepted_culture = oriya }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = gujarati
+					}
+				}
+			}
+			owner = { add_accepted_culture = gujarati }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = manupur
+					}
+				}
+			}
+			owner = { add_accepted_culture = manupur }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mizoram
+					}
+				}
+			}
+			owner = { add_accepted_culture = mizoram }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = naga
+					}
+				}
+			}
+			owner = { add_accepted_culture = naga }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tripuri
+					}
+				}
+			}
+			owner = { add_accepted_culture = tripuri }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = bodo
+					}
+				}
+			}
+			owner = { add_accepted_culture = bodo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = khasi
+					}
+				}
+			}
+			owner = { add_accepted_culture = khasi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tamil
+					}
+				}
+			}
+			owner = { add_accepted_culture = tamil }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = goan
+					}
+				}
+			}
+			owner = { add_accepted_culture = goan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kannada
+					}
+				}
+			}
+			owner = { add_accepted_culture = kannada }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = marathi
+					}
+				}
+			}
+			owner = { add_accepted_culture = marathi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = telegu
+					}
+				}
+			}
+			owner = { add_accepted_culture = telegu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = dhivehi
+					}
+				}
+			}
+			owner = { add_accepted_culture = dhivehi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = christian_malayalam
+					}
+				}
+			}
+			owner = { add_accepted_culture = christian_malayalam }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = malayalam
+					}
+				}
+			}
+			owner = { add_accepted_culture = malayalam }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = punjabi
+					}
+				}
+			}
+			owner = { add_accepted_culture = punjabi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = sindi
+					}
+				}
+			}
+			owner = { add_accepted_culture = sindi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kashmiri
+					}
+				}
+			}
+			owner = { add_accepted_culture = kashmiri }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = bengali
+					}
+				}
+			}
+			owner = { add_accepted_culture = bengali }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = asian_minor
+					}
+				}
+			}
+			owner = { add_accepted_culture = asian_minor }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = khmer
+					}
+				}
+			}
+			owner = { add_accepted_culture = khmer }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tujia
+					}
+				}
+			}
+			owner = { add_accepted_culture = tujia }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tay
+					}
+				}
+			}
+			owner = { add_accepted_culture = tay }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = cham
+					}
+				}
+			}
+			owner = { add_accepted_culture = cham }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = filipino
+					}
+				}
+			}
+			owner = { add_accepted_culture = filipino }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = moro
+					}
+				}
+			}
+			owner = { add_accepted_culture = moro }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = burmese
+					}
+				}
+			}
+			owner = { add_accepted_culture = burmese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = chin
+					}
+				}
+			}
+			owner = { add_accepted_culture = chin }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kachin
+					}
+				}
+			}
+			owner = { add_accepted_culture = kachin }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = karen
+					}
+				}
+			}
+			owner = { add_accepted_culture = karen }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mon
+					}
+				}
+			}
+			owner = { add_accepted_culture = mon }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = rakhine
+					}
+				}
+			}
+			owner = { add_accepted_culture = rakhine }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = rohingya
+					}
+				}
+			}
+			owner = { add_accepted_culture = rohingya }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = thai
+					}
+				}
+			}
+			owner = { add_accepted_culture = thai }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = shan
+					}
+				}
+			}
+			owner = { add_accepted_culture = shan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = lao
+					}
+				}
+			}
+			owner = { add_accepted_culture = lao }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = malay
+					}
+				}
+			}
+			owner = { add_accepted_culture = malay }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kalimatan
+					}
+				}
+			}
+			owner = { add_accepted_culture = kalimatan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = bali
+					}
+				}
+			}
+			owner = { add_accepted_culture = bali }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = bataks
+					}
+				}
+			}
+			owner = { add_accepted_culture = bataks }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = gorontalo
+					}
+				}
+			}
+			owner = { add_accepted_culture = gorontalo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = indonesian
+					}
+				}
+			}
+			owner = { add_accepted_culture = indonesian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ache
+					}
+				}
+			}
+			owner = { add_accepted_culture = ache }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = moluccan
+					}
+				}
+			}
+			owner = { add_accepted_culture = moluccan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = toraja
+					}
+				}
+			}
+			owner = { add_accepted_culture = toraja }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ambon_timor
+					}
+				}
+			}
+			owner = { add_accepted_culture = ambon_timor }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = vietnamese
+					}
+				}
+			}
+			owner = { add_accepted_culture = vietnamese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = vietnamese_christian
+					}
+				}
+			}
+			owner = { add_accepted_culture = vietnamese_christian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = yao_asia
+					}
+				}
+			}
+			owner = { add_accepted_culture = yao_asia }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = aborigine
+					}
+				}
+			}
+			owner = { add_accepted_culture = aborigine }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = afro_american
+					}
+				}
+			}
+			owner = { add_accepted_culture = afro_american }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = afro_antillean
+					}
+				}
+			}
+			owner = { add_accepted_culture = afro_antillean }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = afro_brazilian
+					}
+				}
+			}
+			owner = { add_accepted_culture = afro_brazilian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = afro_caribbean
+					}
+				}
+			}
+			owner = { add_accepted_culture = afro_caribbean }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = afro_caribeno
+					}
+				}
+			}
+			owner = { add_accepted_culture = afro_caribeno }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = black_anglo
+					}
+				}
+			}
+			owner = { add_accepted_culture = black_anglo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = black_dutch
+					}
+				}
+			}
+			owner = { add_accepted_culture = black_dutch }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = black_french
+					}
+				}
+			}
+			owner = { add_accepted_culture = black_french }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = black_portuguese
+					}
+				}
+			}
+			owner = { add_accepted_culture = black_portuguese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = black_spanish
+					}
+				}
+			}
+			owner = { add_accepted_culture = black_spanish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = akan
+					}
+				}
+			}
+			owner = { add_accepted_culture = akan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = bambara
+					}
+				}
+			}
+			owner = { add_accepted_culture = bambara }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = betsileo
+					}
+				}
+			}
+			owner = { add_accepted_culture = betsileo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = betsimisaraka
+					}
+				}
+			}
+			owner = { add_accepted_culture = betsimisaraka }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = black_muslim
+					}
+				}
+			}
+			owner = { add_accepted_culture = black_muslim }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = dyula
+					}
+				}
+			}
+			owner = { add_accepted_culture = dyula }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = edo
+					}
+				}
+			}
+			owner = { add_accepted_culture = edo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ewe
+					}
+				}
+			}
+			owner = { add_accepted_culture = ewe }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = fon
+					}
+				}
+			}
+			owner = { add_accepted_culture = fon }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = fula
+					}
+				}
+			}
+			owner = { add_accepted_culture = fula }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = fulbe
+					}
+				}
+			}
+			owner = { add_accepted_culture = fulbe }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = gur
+					}
+				}
+			}
+			owner = { add_accepted_culture = gur }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = hausa
+					}
+				}
+			}
+			owner = { add_accepted_culture = hausa }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ibibio
+					}
+				}
+			}
+			owner = { add_accepted_culture = ibibio }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ibo
+					}
+				}
+			}
+			owner = { add_accepted_culture = ibo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ijaw
+					}
+				}
+			}
+			owner = { add_accepted_culture = ijaw }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = itsekari
+					}
+				}
+			}
+			owner = { add_accepted_culture = itsekari }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = jola
+					}
+				}
+			}
+			owner = { add_accepted_culture = jola }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kru
+					}
+				}
+			}
+			owner = { add_accepted_culture = kru }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mande
+					}
+				}
+			}
+			owner = { add_accepted_culture = mande }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mossi
+					}
+				}
+			}
+			owner = { add_accepted_culture = mossi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = nupe
+					}
+				}
+			}
+			owner = { add_accepted_culture = nupe }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = nyakole
+					}
+				}
+			}
+			owner = { add_accepted_culture = nyakole }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = sakalava
+					}
+				}
+			}
+			owner = { add_accepted_culture = sakalava }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = senufo
+					}
+				}
+			}
+			owner = { add_accepted_culture = senufo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = soga
+					}
+				}
+			}
+			owner = { add_accepted_culture = soga }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = songhai
+					}
+				}
+			}
+			owner = { add_accepted_culture = songhai }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = soussou
+					}
+				}
+			}
+			owner = { add_accepted_culture = soussou }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tiv
+					}
+				}
+			}
+			owner = { add_accepted_culture = tiv }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = toubou
+					}
+				}
+			}
+			owner = { add_accepted_culture = toubou }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tsimihety
+					}
+				}
+			}
+			owner = { add_accepted_culture = tsimihety }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tuareg
+					}
+				}
+			}
+			owner = { add_accepted_culture = tuareg }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = wolof
+					}
+				}
+			}
+			owner = { add_accepted_culture = wolof }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = yoruba
+					}
+				}
+			}
+			owner = { add_accepted_culture = yoruba }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = zaghawa
+					}
+				}
+			}
+			owner = { add_accepted_culture = zaghawa }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = zarma
+					}
+				}
+			}
+			owner = { add_accepted_culture = zarma }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = african_minor
+					}
+				}
+			}
+			owner = { add_accepted_culture = african_minor }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = bakongo
+					}
+				}
+			}
+			owner = { add_accepted_culture = bakongo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = balanta
+					}
+				}
+			}
+			owner = { add_accepted_culture = balanta }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = banda
+					}
+				}
+			}
+			owner = { add_accepted_culture = banda }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = baya_mandjia
+					}
+				}
+			}
+			owner = { add_accepted_culture = baya_mandjia }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = bemba
+					}
+				}
+			}
+			owner = { add_accepted_culture = bemba }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = biko
+					}
+				}
+			}
+			owner = { add_accepted_culture = biko }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = chokwe
+					}
+				}
+			}
+			owner = { add_accepted_culture = chokwe }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = comore
+					}
+				}
+			}
+			owner = { add_accepted_culture = comore }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = damara
+					}
+				}
+			}
+			owner = { add_accepted_culture = damara }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = fang
+					}
+				}
+			}
+			owner = { add_accepted_culture = fang }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ga_adangbe
+					}
+				}
+			}
+			owner = { add_accepted_culture = ga_adangbe }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ganda
+					}
+				}
+			}
+			owner = { add_accepted_culture = ganda }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ganguela
+					}
+				}
+			}
+			owner = { add_accepted_culture = ganguela }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = igbo
+					}
+				}
+			}
+			owner = { add_accepted_culture = igbo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = iteso
+					}
+				}
+			}
+			owner = { add_accepted_culture = iteso }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kabye
+					}
+				}
+			}
+			owner = { add_accepted_culture = kabye }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kalenjin
+					}
+				}
+			}
+			owner = { add_accepted_culture = kalenjin }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kamba
+					}
+				}
+			}
+			owner = { add_accepted_culture = kamba }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kanem_bornou
+					}
+				}
+			}
+			owner = { add_accepted_culture = kanem_bornou }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kanuri
+					}
+				}
+			}
+			owner = { add_accepted_culture = kanuri }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kavango
+					}
+				}
+			}
+			owner = { add_accepted_culture = kavango }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kiga
+					}
+				}
+			}
+			owner = { add_accepted_culture = kiga }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kimbundu
+					}
+				}
+			}
+			owner = { add_accepted_culture = kimbundu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kisii
+					}
+				}
+			}
+			owner = { add_accepted_culture = kisii }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kpelle
+					}
+				}
+			}
+			owner = { add_accepted_culture = kpelle }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kuba
+					}
+				}
+			}
+			owner = { add_accepted_culture = kuba }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = langi
+					}
+				}
+			}
+			owner = { add_accepted_culture = langi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = lendu
+					}
+				}
+			}
+			owner = { add_accepted_culture = lendu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = lingala
+					}
+				}
+			}
+			owner = { add_accepted_culture = lingala }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = lozi
+					}
+				}
+			}
+			owner = { add_accepted_culture = lozi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = luba
+					}
+				}
+			}
+			owner = { add_accepted_culture = luba }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = luhya
+					}
+				}
+			}
+			owner = { add_accepted_culture = luhya }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = lunda
+					}
+				}
+			}
+			owner = { add_accepted_culture = lunda }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mayo_kebbi
+					}
+				}
+			}
+			owner = { add_accepted_culture = mayo_kebbi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mbaka
+					}
+				}
+			}
+			owner = { add_accepted_culture = mbaka }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mbochi
+					}
+				}
+			}
+			owner = { add_accepted_culture = mbochi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mende
+					}
+				}
+			}
+			owner = { add_accepted_culture = mende }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = merida
+					}
+				}
+			}
+			owner = { add_accepted_culture = merida }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mongo
+					}
+				}
+			}
+			owner = { add_accepted_culture = mongo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = mushunguli
+					}
+				}
+			}
+			owner = { add_accepted_culture = mushunguli }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ndau
+					}
+				}
+			}
+			owner = { add_accepted_culture = ndau }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ovambo
+					}
+				}
+			}
+			owner = { add_accepted_culture = ovambo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = sangha
+					}
+				}
+			}
+			owner = { add_accepted_culture = sangha }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = sara
+					}
+				}
+			}
+			owner = { add_accepted_culture = sara }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = teda
+					}
+				}
+			}
+			owner = { add_accepted_culture = teda }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = voltaic
+					}
+				}
+			}
+			owner = { add_accepted_culture = voltaic }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = afar
+					}
+				}
+			}
+			owner = { add_accepted_culture = afar }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = amhara
+					}
+				}
+			}
+			owner = { add_accepted_culture = amhara }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = azande
+					}
+				}
+			}
+			owner = { add_accepted_culture = azande }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = bari
+					}
+				}
+			}
+			owner = { add_accepted_culture = bari }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = beja
+					}
+				}
+			}
+			owner = { add_accepted_culture = beja }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = dinka
+					}
+				}
+			}
+			owner = { add_accepted_culture = dinka }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = fur
+					}
+				}
+			}
+			owner = { add_accepted_culture = fur }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = hadjarai
+					}
+				}
+			}
+			owner = { add_accepted_culture = hadjarai }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = hutu
+					}
+				}
+			}
+			owner = { add_accepted_culture = hutu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = kikuyu
+					}
+				}
+			}
+			owner = { add_accepted_culture = kikuyu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = luo
+					}
+				}
+			}
+			owner = { add_accepted_culture = luo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = maasai
+					}
+				}
+			}
+			owner = { add_accepted_culture = maasai }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = makonde
+					}
+				}
+			}
+			owner = { add_accepted_culture = makonde }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = meru
+					}
+				}
+			}
+			owner = { add_accepted_culture = meru }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = nuba
+					}
+				}
+			}
+			owner = { add_accepted_culture = nuba }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = nuer
+					}
+				}
+			}
+			owner = { add_accepted_culture = nuer }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = oromo
+					}
+				}
+			}
+			owner = { add_accepted_culture = oromo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = shilluk
+					}
+				}
+			}
+			owner = { add_accepted_culture = shilluk }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = somali
+					}
+				}
+			}
+			owner = { add_accepted_culture = somali }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = nyamwezi
+					}
+				}
+			}
+			owner = { add_accepted_culture = nyamwezi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = sukuma
+					}
+				}
+			}
+			owner = { add_accepted_culture = sukuma }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = swahili
+					}
+				}
+			}
+			owner = { add_accepted_culture = swahili }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = teke
+					}
+				}
+			}
+			owner = { add_accepted_culture = teke }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = temne
+					}
+				}
+			}
+			owner = { add_accepted_culture = temne }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tigray
+					}
+				}
+			}
+			owner = { add_accepted_culture = tigray }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tigre
+					}
+				}
+			}
+			owner = { add_accepted_culture = tigre }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tsonga
+					}
+				}
+			}
+			owner = { add_accepted_culture = tsonga }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tuposa
+					}
+				}
+			}
+			owner = { add_accepted_culture = tuposa }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tutsi
+					}
+				}
+			}
+			owner = { add_accepted_culture = tutsi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = chewa
+					}
+				}
+			}
+			owner = { add_accepted_culture = chewa }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = coloured
+					}
+				}
+			}
+			owner = { add_accepted_culture = coloured }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = herero
+					}
+				}
+			}
+			owner = { add_accepted_culture = herero }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = khoisan
+					}
+				}
+			}
+			owner = { add_accepted_culture = khoisan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = lomwe
+					}
+				}
+			}
+			owner = { add_accepted_culture = lomwe }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = makua
+					}
+				}
+			}
+			owner = { add_accepted_culture = makua }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = nama
+					}
+				}
+			}
+			owner = { add_accepted_culture = nama }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = nguni
+					}
+				}
+			}
+			owner = { add_accepted_culture = nguni }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = ovimbundu
+					}
+				}
+			}
+			owner = { add_accepted_culture = ovimbundu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = sena
+					}
+				}
+			}
+			owner = { add_accepted_culture = sena }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = sepedi
+					}
+				}
+			}
+			owner = { add_accepted_culture = sepedi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = serer
+					}
+				}
+			}
+			owner = { add_accepted_culture = serer }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = shona
+					}
+				}
+			}
+			owner = { add_accepted_culture = shona }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = sotho
+					}
+				}
+			}
+			owner = { add_accepted_culture = sotho }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = swazi
+					}
+				}
+			}
+			owner = { add_accepted_culture = swazi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tonga
+					}
+				}
+			}
+			owner = { add_accepted_culture = tonga }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = tswana
+					}
+				}
+			}
+			owner = { add_accepted_culture = tswana }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = venda
+					}
+				}
+			}
+			owner = { add_accepted_culture = venda }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = xhosa
+					}
+				}
+			}
+			owner = { add_accepted_culture = xhosa }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = yao
+					}
+				}
+			}
+			owner = { add_accepted_culture = yao }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						primary_culture = zulu
+					}
+				}
+			}
+			owner = { add_accepted_culture = zulu }
+		}
+		
+		### ACCEPTED CULTURES ###
+		
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = french
+					}
+				}
+			}
+			owner = { add_accepted_culture = french }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = breton
+					}
+				}
+			}
+			owner = { add_accepted_culture = breton }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = white_french
+					}
+				}
+			}
+			owner = { add_accepted_culture = white_french }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = occitans
+					}
+				}
+			}
+			owner = { add_accepted_culture = occitans }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = italian
+					}
+				}
+			}
+			owner = { add_accepted_culture = italian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = padanian
+					}
+				}
+			}
+			owner = { add_accepted_culture = padanian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = insular_mediterranean
+					}
+				}
+			}
+			owner = { add_accepted_culture = insular_mediterranean }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = basque
+					}
+				}
+			}
+			owner = { add_accepted_culture = basque }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = catalan
+					}
+				}
+			}
+			owner = { add_accepted_culture = catalan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = spanish
+					}
+				}
+			}
+			owner = { add_accepted_culture = spanish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = byelorussian
+					}
+				}
+			}
+			owner = { add_accepted_culture = byelorussian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = russian
+					}
+				}
+			}
+			owner = { add_accepted_culture = russian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ukrainian
+					}
+				}
+			}
+			owner = { add_accepted_culture = ukrainian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = rusyn
+					}
+				}
+			}
+			owner = { add_accepted_culture = rusyn }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = polish
+					}
+				}
+			}
+			owner = { add_accepted_culture = polish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = silesians
+					}
+				}
+			}
+			owner = { add_accepted_culture = silesians }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = yugoslav
+					}
+				}
+			}
+			owner = { add_accepted_culture = yugoslav }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = bulgarian
+					}
+				}
+			}
+			owner = { add_accepted_culture = bulgarian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = pomak
+					}
+				}
+			}
+			owner = { add_accepted_culture = pomak }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = serb
+					}
+				}
+			}
+			owner = { add_accepted_culture = serb }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = montenegrin
+					}
+				}
+			}
+			owner = { add_accepted_culture = montenegrin }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = croat
+					}
+				}
+			}
+			owner = { add_accepted_culture = croat }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = bosniak
+					}
+				}
+			}
+			owner = { add_accepted_culture = bosniak }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = slovene
+					}
+				}
+			}
+			owner = { add_accepted_culture = slovene }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = irish
+					}
+				}
+			}
+			owner = { add_accepted_culture = irish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = british
+					}
+				}
+			}
+			owner = { add_accepted_culture = british }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = scottish
+					}
+				}
+			}
+			owner = { add_accepted_culture = scottish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = welsh
+					}
+				}
+			}
+			owner = { add_accepted_culture = welsh }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = estonian
+					}
+				}
+			}
+			owner = { add_accepted_culture = estonian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = latvian
+					}
+				}
+			}
+			owner = { add_accepted_culture = latvian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = lithuanian
+					}
+				}
+			}
+			owner = { add_accepted_culture = lithuanian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = hungarian
+					}
+				}
+			}
+			owner = { add_accepted_culture = hungarian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = german
+					}
+				}
+			}
+			owner = { add_accepted_culture = german }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = south_german
+					}
+				}
+			}
+			owner = { add_accepted_culture = south_german }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mennonites
+					}
+				}
+			}
+			owner = { add_accepted_culture = mennonites }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = dutch
+					}
+				}
+			}
+			owner = { add_accepted_culture = dutch }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = czech
+					}
+				}
+			}
+			owner = { add_accepted_culture = czech }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = slovak
+					}
+				}
+			}
+			owner = { add_accepted_culture = slovak }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = european
+					}
+				}
+			}
+			owner = { add_accepted_culture = european }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = anglo_oceanian
+					}
+				}
+			}
+			owner = { add_accepted_culture = anglo_oceanian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = anglo_canadian
+					}
+				}
+			}
+			owner = { add_accepted_culture = anglo_canadian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = french_canadian
+					}
+				}
+			}
+			owner = { add_accepted_culture = french_canadian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = white_anglo
+					}
+				}
+			}
+			owner = { add_accepted_culture = white_anglo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = dixie
+					}
+				}
+			}
+			owner = { add_accepted_culture = dixie }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = global_human
+					}
+				}
+			}
+			owner = { add_accepted_culture = global_human }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = afrikaaner
+					}
+				}
+			}
+			owner = { add_accepted_culture = afrikaaner }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = assyrian
+					}
+				}
+			}
+			owner = { add_accepted_culture = assyrian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = georgian
+					}
+				}
+			}
+			owner = { add_accepted_culture = georgian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = greek
+					}
+				}
+			}
+			owner = { add_accepted_culture = greek }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = armenian
+					}
+				}
+			}
+			owner = { add_accepted_culture = armenian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = danish
+					}
+				}
+			}
+			owner = { add_accepted_culture = danish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = finnish
+					}
+				}
+			}
+			owner = { add_accepted_culture = finnish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = norwegian
+					}
+				}
+			}
+			owner = { add_accepted_culture = norwegian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = finno_ugrian
+					}
+				}
+			}
+			owner = { add_accepted_culture = finno_ugrian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = swedish
+					}
+				}
+			}
+			owner = { add_accepted_culture = swedish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = albanian
+					}
+				}
+			}
+			owner = { add_accepted_culture = albanian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = haredim_jewish
+					}
+				}
+			}
+			owner = { add_accepted_culture = haredim_jewish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = jewish
+					}
+				}
+			}
+			owner = { add_accepted_culture = jewish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = romanian
+					}
+				}
+			}
+			owner = { add_accepted_culture = romanian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = aromanians
+					}
+				}
+			}
+			owner = { add_accepted_culture = aromanians }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = roma
+					}
+				}
+			}
+			owner = { add_accepted_culture = roma }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = native_american_minor
+					}
+				}
+			}
+			owner = { add_accepted_culture = native_american_minor }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = hawaiian
+					}
+				}
+			}
+			owner = { add_accepted_culture = hawaiian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kanak
+					}
+				}
+			}
+			owner = { add_accepted_culture = kanak }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = melanesian
+					}
+				}
+			}
+			owner = { add_accepted_culture = melanesian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = micronesian
+					}
+				}
+			}
+			owner = { add_accepted_culture = micronesian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = papua
+					}
+				}
+			}
+			owner = { add_accepted_culture = papua }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = polynesian
+					}
+				}
+			}
+			owner = { add_accepted_culture = polynesian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = maori
+					}
+				}
+			}
+			owner = { add_accepted_culture = maori }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = white_spanish
+					}
+				}
+			}
+			owner = { add_accepted_culture = white_spanish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mestizo
+					}
+				}
+			}
+			owner = { add_accepted_culture = mestizo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = portuguese
+					}
+				}
+			}
+			owner = { add_accepted_culture = portuguese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = white_portuguese
+					}
+				}
+			}
+			owner = { add_accepted_culture = white_portuguese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = pardo_portuguese
+					}
+				}
+			}
+			owner = { add_accepted_culture = pardo_portuguese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = berber
+					}
+				}
+			}
+			owner = { add_accepted_culture = berber }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = arab_gulf
+					}
+				}
+			}
+			owner = { add_accepted_culture = arab_gulf }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = arab_mashriqi
+					}
+				}
+			}
+			owner = { add_accepted_culture = arab_mashriqi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = arab_nile
+					}
+				}
+			}
+			owner = { add_accepted_culture = arab_nile }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = arab_hassaniya
+					}
+				}
+			}
+			owner = { add_accepted_culture = arab_hassaniya }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = druze
+					}
+				}
+			}
+			owner = { add_accepted_culture = druze  }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = arab
+					}
+				}
+			}
+			owner = { add_accepted_culture = arab }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = altay
+					}
+				}
+			}
+			owner = { add_accepted_culture = altay }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = buryat
+					}
+				}
+			}
+			owner = { add_accepted_culture = buryat }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kalmyk
+					}
+				}
+			}
+			owner = { add_accepted_culture = kalmyk }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = khakas
+					}
+				}
+			}
+			owner = { add_accepted_culture = khakas }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mongol
+					}
+				}
+			}
+			owner = { add_accepted_culture = mongol }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tatar
+					}
+				}
+			}
+			owner = { add_accepted_culture = tatar }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tuvans
+					}
+				}
+			}
+			owner = { add_accepted_culture = tuvans }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = nepali
+					}
+				}
+			}
+			owner = { add_accepted_culture = nepali }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = newar
+					}
+				}
+			}
+			owner = { add_accepted_culture = newar }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ngalop
+					}
+				}
+			}
+			owner = { add_accepted_culture = ngalop }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = sikkim
+					}
+				}
+			}
+			owner = { add_accepted_culture = sikkim }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tibetan
+					}
+				}
+			}
+			owner = { add_accepted_culture = tibetan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = aimat
+					}
+				}
+			}
+			owner = { add_accepted_culture = aimat }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = pashtun
+					}
+				}
+			}
+			owner = { add_accepted_culture = pashtun }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = baluchi
+					}
+				}
+			}
+			owner = { add_accepted_culture = baluchi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = hazara
+					}
+				}
+			}
+			owner = { add_accepted_culture = hazara }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = pamir
+					}
+				}
+			}
+			owner = { add_accepted_culture = pamir }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = persian
+					}
+				}
+			}
+			owner = { add_accepted_culture = persian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tajik
+					}
+				}
+			}
+			owner = { add_accepted_culture = tajik }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = abkhaz
+					}
+				}
+			}
+			owner = { add_accepted_culture = abkhaz }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = avar
+					}
+				}
+			}
+			owner = { add_accepted_culture = avar }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = balkar
+					}
+				}
+			}
+			owner = { add_accepted_culture = balkar }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = chechen
+					}
+				}
+			}
+			owner = { add_accepted_culture = chechen }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = circassians
+					}
+				}
+			}
+			owner = { add_accepted_culture = circassians }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = dargwa
+					}
+				}
+			}
+			owner = { add_accepted_culture = dargwa }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ingush
+					}
+				}
+			}
+			owner = { add_accepted_culture = ingush }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kabarday
+					}
+				}
+			}
+			owner = { add_accepted_culture = kabarday }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = karachay
+					}
+				}
+			}
+			owner = { add_accepted_culture = karachay }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = north_caucasian
+					}
+				}
+			}
+			owner = { add_accepted_culture = north_caucasian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ossetian
+					}
+				}
+			}
+			owner = { add_accepted_culture = ossetian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = bashkir
+					}
+				}
+			}
+			owner = { add_accepted_culture = bashkir }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = chuvash
+					}
+				}
+			}
+			owner = { add_accepted_culture = chuvash }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = azerbaijani
+					}
+				}
+			}
+			owner = { add_accepted_culture = azerbaijani }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = gagauz
+					}
+				}
+			}
+			owner = { add_accepted_culture = gagauz }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = karakalpak
+					}
+				}
+			}
+			owner = { add_accepted_culture = karakalpak }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = turkish
+					}
+				}
+			}
+			owner = { add_accepted_culture = turkish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = turkmen
+					}
+				}
+			}
+			owner = { add_accepted_culture = turkmen }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = uighur
+					}
+				}
+			}
+			owner = { add_accepted_culture = uighur }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = uzbek
+					}
+				}
+			}
+			owner = { add_accepted_culture = uzbek }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kazak
+					}
+				}
+			}
+			owner = { add_accepted_culture = kazak }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kirgiz
+					}
+				}
+			}
+			owner = { add_accepted_culture = kirgiz }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = lazi
+					}
+				}
+			}
+			owner = { add_accepted_culture = lazi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = yakut
+					}
+				}
+			}
+			owner = { add_accepted_culture = yakut }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kurdish
+					}
+				}
+			}
+			owner = { add_accepted_culture = kurdish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = japanese
+					}
+				}
+			}
+			owner = { add_accepted_culture = japanese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = korean
+					}
+				}
+			}
+			owner = { add_accepted_culture = korean }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = taiwanese
+					}
+				}
+			}
+			owner = { add_accepted_culture = taiwanese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = chinese
+					}
+				}
+			}
+			owner = { add_accepted_culture = chinese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = chinese_cantonese
+					}
+				}
+			}
+			owner = { add_accepted_culture = chinese_cantonese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = chinese_macanese
+					}
+				}
+			}
+			owner = { add_accepted_culture = chinese_macanese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = chinese_hokkien
+					}
+				}
+			}
+			owner = { add_accepted_culture = chinese_hokkien }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = chinese_hakka
+					}
+				}
+			}
+			owner = { add_accepted_culture = chinese_hakka }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = bai
+					}
+				}
+			}
+			owner = { add_accepted_culture = bai }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = dong
+					}
+				}
+			}
+			owner = { add_accepted_culture = dong }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = hani
+					}
+				}
+			}
+			owner = { add_accepted_culture = hani }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = manchu
+					}
+				}
+			}
+			owner = { add_accepted_culture = manchu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = miao
+					}
+				}
+			}
+			owner = { add_accepted_culture = miao }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = min
+					}
+				}
+			}
+			owner = { add_accepted_culture = min }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = yi
+					}
+				}
+			}
+			owner = { add_accepted_culture = yi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = yue
+					}
+				}
+			}
+			owner = { add_accepted_culture = yue }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = zhuang
+					}
+				}
+			}
+			owner = { add_accepted_culture = zhuang }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = singalese
+					}
+				}
+			}
+			owner = { add_accepted_culture = singalese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = sinhala
+					}
+				}
+			}
+			owner = { add_accepted_culture = sinhala }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = sikh
+					}
+				}
+			}
+			owner = { add_accepted_culture = sikh }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = assamese
+					}
+				}
+			}
+			owner = { add_accepted_culture = assamese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = avadhi
+					}
+				}
+			}
+			owner = { add_accepted_culture = avadhi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = hindi
+					}
+				}
+			}
+			owner = { add_accepted_culture = hindi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = manipuri
+					}
+				}
+			}
+			owner = { add_accepted_culture = manipuri }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = rajput
+					}
+				}
+			}
+			owner = { add_accepted_culture = rajput }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = oriya
+					}
+				}
+			}
+			owner = { add_accepted_culture = oriya }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = gujarati
+					}
+				}
+			}
+			owner = { add_accepted_culture = gujarati }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = manupur
+					}
+				}
+			}
+			owner = { add_accepted_culture = manupur }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mizoram
+					}
+				}
+			}
+			owner = { add_accepted_culture = mizoram }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = naga
+					}
+				}
+			}
+			owner = { add_accepted_culture = naga }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tripuri
+					}
+				}
+			}
+			owner = { add_accepted_culture = tripuri }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = bodo
+					}
+				}
+			}
+			owner = { add_accepted_culture = bodo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = khasi
+					}
+				}
+			}
+			owner = { add_accepted_culture = khasi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tamil
+					}
+				}
+			}
+			owner = { add_accepted_culture = tamil }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = goan
+					}
+				}
+			}
+			owner = { add_accepted_culture = goan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kannada
+					}
+				}
+			}
+			owner = { add_accepted_culture = kannada }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = marathi
+					}
+				}
+			}
+			owner = { add_accepted_culture = marathi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = telegu
+					}
+				}
+			}
+			owner = { add_accepted_culture = telegu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = dhivehi
+					}
+				}
+			}
+			owner = { add_accepted_culture = dhivehi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = christian_malayalam
+					}
+				}
+			}
+			owner = { add_accepted_culture = christian_malayalam }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = malayalam
+					}
+				}
+			}
+			owner = { add_accepted_culture = malayalam }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = punjabi
+					}
+				}
+			}
+			owner = { add_accepted_culture = punjabi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = sindi
+					}
+				}
+			}
+			owner = { add_accepted_culture = sindi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kashmiri
+					}
+				}
+			}
+			owner = { add_accepted_culture = kashmiri }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = bengali
+					}
+				}
+			}
+			owner = { add_accepted_culture = bengali }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = asian_minor
+					}
+				}
+			}
+			owner = { add_accepted_culture = asian_minor }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = khmer
+					}
+				}
+			}
+			owner = { add_accepted_culture = khmer }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tujia
+					}
+				}
+			}
+			owner = { add_accepted_culture = tujia }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tay
+					}
+				}
+			}
+			owner = { add_accepted_culture = tay }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = cham
+					}
+				}
+			}
+			owner = { add_accepted_culture = cham }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = filipino
+					}
+				}
+			}
+			owner = { add_accepted_culture = filipino }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = moro
+					}
+				}
+			}
+			owner = { add_accepted_culture = moro }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = burmese
+					}
+				}
+			}
+			owner = { add_accepted_culture = burmese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = chin
+					}
+				}
+			}
+			owner = { add_accepted_culture = chin }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kachin
+					}
+				}
+			}
+			owner = { add_accepted_culture = kachin }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = karen
+					}
+				}
+			}
+			owner = { add_accepted_culture = karen }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mon
+					}
+				}
+			}
+			owner = { add_accepted_culture = mon }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = rakhine
+					}
+				}
+			}
+			owner = { add_accepted_culture = rakhine }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = rohingya
+					}
+				}
+			}
+			owner = { add_accepted_culture = rohingya }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = thai
+					}
+				}
+			}
+			owner = { add_accepted_culture = thai }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = shan
+					}
+				}
+			}
+			owner = { add_accepted_culture = shan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = lao
+					}
+				}
+			}
+			owner = { add_accepted_culture = lao }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = malay
+					}
+				}
+			}
+			owner = { add_accepted_culture = malay }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kalimatan
+					}
+				}
+			}
+			owner = { add_accepted_culture = kalimatan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = bali
+					}
+				}
+			}
+			owner = { add_accepted_culture = bali }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = bataks
+					}
+				}
+			}
+			owner = { add_accepted_culture = bataks }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = gorontalo
+					}
+				}
+			}
+			owner = { add_accepted_culture = gorontalo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = indonesian
+					}
+				}
+			}
+			owner = { add_accepted_culture = indonesian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ache
+					}
+				}
+			}
+			owner = { add_accepted_culture = ache }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = moluccan
+					}
+				}
+			}
+			owner = { add_accepted_culture = moluccan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = toraja
+					}
+				}
+			}
+			owner = { add_accepted_culture = toraja }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ambon_timor
+					}
+				}
+			}
+			owner = { add_accepted_culture = ambon_timor }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = vietnamese
+					}
+				}
+			}
+			owner = { add_accepted_culture = vietnamese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = vietnamese_christian
+					}
+				}
+			}
+			owner = { add_accepted_culture = vietnamese_christian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = yao_asia
+					}
+				}
+			}
+			owner = { add_accepted_culture = yao_asia }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = aborigine
+					}
+				}
+			}
+			owner = { add_accepted_culture = aborigine }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = afro_american
+					}
+				}
+			}
+			owner = { add_accepted_culture = afro_american }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = afro_antillean
+					}
+				}
+			}
+			owner = { add_accepted_culture = afro_antillean }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = afro_brazilian
+					}
+				}
+			}
+			owner = { add_accepted_culture = afro_brazilian }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = afro_caribbean
+					}
+				}
+			}
+			owner = { add_accepted_culture = afro_caribbean }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = afro_caribeno
+					}
+				}
+			}
+			owner = { add_accepted_culture = afro_caribeno }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = black_anglo
+					}
+				}
+			}
+			owner = { add_accepted_culture = black_anglo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = black_dutch
+					}
+				}
+			}
+			owner = { add_accepted_culture = black_dutch }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = black_french
+					}
+				}
+			}
+			owner = { add_accepted_culture = black_french }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = black_portuguese
+					}
+				}
+			}
+			owner = { add_accepted_culture = black_portuguese }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = black_spanish
+					}
+				}
+			}
+			owner = { add_accepted_culture = black_spanish }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = akan
+					}
+				}
+			}
+			owner = { add_accepted_culture = akan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = bambara
+					}
+				}
+			}
+			owner = { add_accepted_culture = bambara }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = betsileo
+					}
+				}
+			}
+			owner = { add_accepted_culture = betsileo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = betsimisaraka
+					}
+				}
+			}
+			owner = { add_accepted_culture = betsimisaraka }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = black_muslim
+					}
+				}
+			}
+			owner = { add_accepted_culture = black_muslim }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = dyula
+					}
+				}
+			}
+			owner = { add_accepted_culture = dyula }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = edo
+					}
+				}
+			}
+			owner = { add_accepted_culture = edo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ewe
+					}
+				}
+			}
+			owner = { add_accepted_culture = ewe }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = fon
+					}
+				}
+			}
+			owner = { add_accepted_culture = fon }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = fula
+					}
+				}
+			}
+			owner = { add_accepted_culture = fula }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = fulbe
+					}
+				}
+			}
+			owner = { add_accepted_culture = fulbe }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = gur
+					}
+				}
+			}
+			owner = { add_accepted_culture = gur }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = hausa
+					}
+				}
+			}
+			owner = { add_accepted_culture = hausa }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ibibio
+					}
+				}
+			}
+			owner = { add_accepted_culture = ibibio }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ibo
+					}
+				}
+			}
+			owner = { add_accepted_culture = ibo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ijaw
+					}
+				}
+			}
+			owner = { add_accepted_culture = ijaw }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = itsekari
+					}
+				}
+			}
+			owner = { add_accepted_culture = itsekari }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = jola
+					}
+				}
+			}
+			owner = { add_accepted_culture = jola }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kru
+					}
+				}
+			}
+			owner = { add_accepted_culture = kru }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mande
+					}
+				}
+			}
+			owner = { add_accepted_culture = mande }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mossi
+					}
+				}
+			}
+			owner = { add_accepted_culture = mossi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = nupe
+					}
+				}
+			}
+			owner = { add_accepted_culture = nupe }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = nyakole
+					}
+				}
+			}
+			owner = { add_accepted_culture = nyakole }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = sakalava
+					}
+				}
+			}
+			owner = { add_accepted_culture = sakalava }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = senufo
+					}
+				}
+			}
+			owner = { add_accepted_culture = senufo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = soga
+					}
+				}
+			}
+			owner = { add_accepted_culture = soga }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = songhai
+					}
+				}
+			}
+			owner = { add_accepted_culture = songhai }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = soussou
+					}
+				}
+			}
+			owner = { add_accepted_culture = soussou }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tiv
+					}
+				}
+			}
+			owner = { add_accepted_culture = tiv }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = toubou
+					}
+				}
+			}
+			owner = { add_accepted_culture = toubou }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tsimihety
+					}
+				}
+			}
+			owner = { add_accepted_culture = tsimihety }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tuareg
+					}
+				}
+			}
+			owner = { add_accepted_culture = tuareg }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = wolof
+					}
+				}
+			}
+			owner = { add_accepted_culture = wolof }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = yoruba
+					}
+				}
+			}
+			owner = { add_accepted_culture = yoruba }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = zaghawa
+					}
+				}
+			}
+			owner = { add_accepted_culture = zaghawa }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = zarma
+					}
+				}
+			}
+			owner = { add_accepted_culture = zarma }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = african_minor
+					}
+				}
+			}
+			owner = { add_accepted_culture = african_minor }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = bakongo
+					}
+				}
+			}
+			owner = { add_accepted_culture = bakongo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = balanta
+					}
+				}
+			}
+			owner = { add_accepted_culture = balanta }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = banda
+					}
+				}
+			}
+			owner = { add_accepted_culture = banda }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = baya_mandjia
+					}
+				}
+			}
+			owner = { add_accepted_culture = baya_mandjia }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = bemba
+					}
+				}
+			}
+			owner = { add_accepted_culture = bemba }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = biko
+					}
+				}
+			}
+			owner = { add_accepted_culture = biko }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = chokwe
+					}
+				}
+			}
+			owner = { add_accepted_culture = chokwe }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = comore
+					}
+				}
+			}
+			owner = { add_accepted_culture = comore }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = damara
+					}
+				}
+			}
+			owner = { add_accepted_culture = damara }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = fang
+					}
+				}
+			}
+			owner = { add_accepted_culture = fang }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ga_adangbe
+					}
+				}
+			}
+			owner = { add_accepted_culture = ga_adangbe }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ganda
+					}
+				}
+			}
+			owner = { add_accepted_culture = ganda }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ganguela
+					}
+				}
+			}
+			owner = { add_accepted_culture = ganguela }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = igbo
+					}
+				}
+			}
+			owner = { add_accepted_culture = igbo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = iteso
+					}
+				}
+			}
+			owner = { add_accepted_culture = iteso }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kabye
+					}
+				}
+			}
+			owner = { add_accepted_culture = kabye }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kalenjin
+					}
+				}
+			}
+			owner = { add_accepted_culture = kalenjin }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kamba
+					}
+				}
+			}
+			owner = { add_accepted_culture = kamba }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kanem_bornou
+					}
+				}
+			}
+			owner = { add_accepted_culture = kanem_bornou }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kanuri
+					}
+				}
+			}
+			owner = { add_accepted_culture = kanuri }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kavango
+					}
+				}
+			}
+			owner = { add_accepted_culture = kavango }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kiga
+					}
+				}
+			}
+			owner = { add_accepted_culture = kiga }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kimbundu
+					}
+				}
+			}
+			owner = { add_accepted_culture = kimbundu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kisii
+					}
+				}
+			}
+			owner = { add_accepted_culture = kisii }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kpelle
+					}
+				}
+			}
+			owner = { add_accepted_culture = kpelle }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kuba
+					}
+				}
+			}
+			owner = { add_accepted_culture = kuba }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = langi
+					}
+				}
+			}
+			owner = { add_accepted_culture = langi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = lendu
+					}
+				}
+			}
+			owner = { add_accepted_culture = lendu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = lingala
+					}
+				}
+			}
+			owner = { add_accepted_culture = lingala }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = lozi
+					}
+				}
+			}
+			owner = { add_accepted_culture = lozi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = luba
+					}
+				}
+			}
+			owner = { add_accepted_culture = luba }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = luhya
+					}
+				}
+			}
+			owner = { add_accepted_culture = luhya }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = lunda
+					}
+				}
+			}
+			owner = { add_accepted_culture = lunda }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mayo_kebbi
+					}
+				}
+			}
+			owner = { add_accepted_culture = mayo_kebbi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mbaka
+					}
+				}
+			}
+			owner = { add_accepted_culture = mbaka }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mbochi
+					}
+				}
+			}
+			owner = { add_accepted_culture = mbochi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mende
+					}
+				}
+			}
+			owner = { add_accepted_culture = mende }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = merida
+					}
+				}
+			}
+			owner = { add_accepted_culture = merida }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mongo
+					}
+				}
+			}
+			owner = { add_accepted_culture = mongo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = mushunguli
+					}
+				}
+			}
+			owner = { add_accepted_culture = mushunguli }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ndau
+					}
+				}
+			}
+			owner = { add_accepted_culture = ndau }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ovambo
+					}
+				}
+			}
+			owner = { add_accepted_culture = ovambo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = sangha
+					}
+				}
+			}
+			owner = { add_accepted_culture = sangha }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = sara
+					}
+				}
+			}
+			owner = { add_accepted_culture = sara }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = teda
+					}
+				}
+			}
+			owner = { add_accepted_culture = teda }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = voltaic
+					}
+				}
+			}
+			owner = { add_accepted_culture = voltaic }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = afar
+					}
+				}
+			}
+			owner = { add_accepted_culture = afar }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = amhara
+					}
+				}
+			}
+			owner = { add_accepted_culture = amhara }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = azande
+					}
+				}
+			}
+			owner = { add_accepted_culture = azande }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = bari
+					}
+				}
+			}
+			owner = { add_accepted_culture = bari }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = beja
+					}
+				}
+			}
+			owner = { add_accepted_culture = beja }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = dinka
+					}
+				}
+			}
+			owner = { add_accepted_culture = dinka }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = fur
+					}
+				}
+			}
+			owner = { add_accepted_culture = fur }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = hadjarai
+					}
+				}
+			}
+			owner = { add_accepted_culture = hadjarai }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = hutu
+					}
+				}
+			}
+			owner = { add_accepted_culture = hutu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = kikuyu
+					}
+				}
+			}
+			owner = { add_accepted_culture = kikuyu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = luo
+					}
+				}
+			}
+			owner = { add_accepted_culture = luo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = maasai
+					}
+				}
+			}
+			owner = { add_accepted_culture = maasai }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = makonde
+					}
+				}
+			}
+			owner = { add_accepted_culture = makonde }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = meru
+					}
+				}
+			}
+			owner = { add_accepted_culture = meru }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = nuba
+					}
+				}
+			}
+			owner = { add_accepted_culture = nuba }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = nuer
+					}
+				}
+			}
+			owner = { add_accepted_culture = nuer }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = oromo
+					}
+				}
+			}
+			owner = { add_accepted_culture = oromo }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = shilluk
+					}
+				}
+			}
+			owner = { add_accepted_culture = shilluk }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = somali
+					}
+				}
+			}
+			owner = { add_accepted_culture = somali }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = nyamwezi
+					}
+				}
+			}
+			owner = { add_accepted_culture = nyamwezi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = sukuma
+					}
+				}
+			}
+			owner = { add_accepted_culture = sukuma }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = swahili
+					}
+				}
+			}
+			owner = { add_accepted_culture = swahili }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = teke
+					}
+				}
+			}
+			owner = { add_accepted_culture = teke }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = temne
+					}
+				}
+			}
+			owner = { add_accepted_culture = temne }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tigray
+					}
+				}
+			}
+			owner = { add_accepted_culture = tigray }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tigre
+					}
+				}
+			}
+			owner = { add_accepted_culture = tigre }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tsonga
+					}
+				}
+			}
+			owner = { add_accepted_culture = tsonga }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tuposa
+					}
+				}
+			}
+			owner = { add_accepted_culture = tuposa }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tutsi
+					}
+				}
+			}
+			owner = { add_accepted_culture = tutsi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = chewa
+					}
+				}
+			}
+			owner = { add_accepted_culture = chewa }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = coloured
+					}
+				}
+			}
+			owner = { add_accepted_culture = coloured }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = herero
+					}
+				}
+			}
+			owner = { add_accepted_culture = herero }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = khoisan
+					}
+				}
+			}
+			owner = { add_accepted_culture = khoisan }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = lomwe
+					}
+				}
+			}
+			owner = { add_accepted_culture = lomwe }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = makua
+					}
+				}
+			}
+			owner = { add_accepted_culture = makua }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = nama
+					}
+				}
+			}
+			owner = { add_accepted_culture = nama }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = nguni
+					}
+				}
+			}
+			owner = { add_accepted_culture = nguni }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = ovimbundu
+					}
+				}
+			}
+			owner = { add_accepted_culture = ovimbundu }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = sena
+					}
+				}
+			}
+			owner = { add_accepted_culture = sena }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = sepedi
+					}
+				}
+			}
+			owner = { add_accepted_culture = sepedi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = serer
+					}
+				}
+			}
+			owner = { add_accepted_culture = serer }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = shona
+					}
+				}
+			}
+			owner = { add_accepted_culture = shona }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = sotho
+					}
+				}
+			}
+			owner = { add_accepted_culture = sotho }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = swazi
+					}
+				}
+			}
+			owner = { add_accepted_culture = swazi }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tonga
+					}
+				}
+			}
+			owner = { add_accepted_culture = tonga }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = tswana
+					}
+				}
+			}
+			owner = { add_accepted_culture = tswana }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = venda
+					}
+				}
+			}
+			owner = { add_accepted_culture = venda }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = xhosa
+					}
+				}
+			}
+			owner = { add_accepted_culture = xhosa }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = yao
+					}
+				}
+			}
+			owner = { add_accepted_culture = yao }
+		}
+
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						accepted_culture = zulu
+					}
+				}
+			}
+			owner = { add_accepted_culture = zulu }
+		}
+		
+		#################
+		### END BLOCK ###
+		#################
+		
 		THIS = { inherit = FROM }
 		any_country = {
 			limit = {

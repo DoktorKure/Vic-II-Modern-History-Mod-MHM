@@ -2,6 +2,9 @@
 # tag = _XXX potential sectarian culture for tag
 # tag = -XXX minority culture only (no tag)
 # ... to many to list
+
+### /!\ ANY MODIFICATIONS TO THE CULTURES HERE NEEDS TO UPDATE THE CODE BLOCK WITHIN events\political_national_unification.txt AS WELL /!\ ###
+
 # European
 european_french = {
 	leader = european
