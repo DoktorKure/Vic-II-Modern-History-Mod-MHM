@@ -17,10 +17,11 @@ nuclear_ultimatum = {
 
 		allow = {
 		
-			#Pacifists will never choose to blow up the world unless they're being genocided
+			#Pacifists will never choose to blow up the world unless they're being genocided or struck with tactical nukes
 			OR = {
 				NOT = { war_policy = pacifism }
 				has_country_flag = under_existential_threat
+				any_owned_province = { has_province_modifier = tactical_nuked } 
 			}
 
 			NOT = { has_country_modifier = nuclear_system_down }
