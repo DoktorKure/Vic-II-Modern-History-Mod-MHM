@@ -129,6 +129,7 @@ country_event = {
 		ai = no
 		NOT = { has_global_flag = ipcc }
 		NOT = { has_global_flag = climate_change_disabled }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}	
 
 	mean_time_to_happen = { 
@@ -152,6 +153,7 @@ country_event = {
 	trigger = { 
 		year = 1990
 		ai = no
+		NOT = { has_global_flag = 2015_start_date_flag }
 		NOT = { has_global_flag = ipcc_first_report }
 		NOT = { has_global_flag = climate_change_disabled }
 	}	
@@ -179,6 +181,7 @@ country_event = {
 		ai = no
 		NOT = { has_global_flag = montreal_start }
 		NOT = { has_global_flag = climate_change_disabled }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}	
 
 	mean_time_to_happen = { 
@@ -202,6 +205,7 @@ country_event = {
 		year = 1992
 		NOT = { has_country_flag = earth_summit }
 		NOT = { has_global_flag = climate_change_disabled }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}	
 
 	mean_time_to_happen = { 
@@ -234,6 +238,7 @@ country_event = {
 		ai = no
 		NOT = { has_global_flag = ipcc_second_report }
 		NOT = { has_global_flag = climate_change_disabled }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}	
 
 	mean_time_to_happen = { 
@@ -266,6 +271,7 @@ country_event = {
 		ai = no
 		NOT = { has_global_flag = kyoto_protocol }
 		NOT = { has_global_flag = climate_change_disabled }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}	
 
 	mean_time_to_happen = { 
@@ -293,6 +299,7 @@ country_event = {
 		rank = 1
 		NOT = { has_global_flag = zero_five_two }
 		NOT = { has_global_flag = climate_change_disabled }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}	
 
 	mean_time_to_happen = { 
@@ -320,6 +327,7 @@ country_event = {
 		ai = no
 		NOT = { has_global_flag = ipcc_third_report }
 		NOT = { has_global_flag = climate_change_disabled }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}	
 
 	mean_time_to_happen = { 
@@ -346,6 +354,7 @@ country_event = {
 		rank = 1
 		NOT = { has_global_flag = copenhagen_accord }
 		NOT = { has_global_flag = climate_change_disabled }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}	
 
 	mean_time_to_happen = { 
@@ -431,6 +440,7 @@ country_event = {
 		has_country_flag = c_a_a
 		NOT = { has_global_flag = copenhagen_accord_result }
 		NOT = { has_global_flag = climate_change_disabled }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}
 
 	mean_time_to_happen = { 
@@ -464,6 +474,7 @@ country_event = {
 		NOT = { has_country_flag = c_a_a }
 		NOT = { has_global_flag = copenhagen_accord_result }
 		NOT = { has_global_flag = climate_change_disabled }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}
 
 	mean_time_to_happen = { 

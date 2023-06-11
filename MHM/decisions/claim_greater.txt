@@ -1824,9 +1824,13 @@ political_decisions = {
 			is_vassal = no
 			prestige = 45
 			OR = {
-				ruling_party_ideology = populist
+				#Specific conditions for populists in order to keep France from regularly going over the infamy limit whenever populists get elected as AI France
+				OR = {
+					AND = { ruling_party_ideology = populist ai = yes NOT = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = socialist_democracy } } }
+					AND = { ruling_party_ideology = populist ai = no }
+				}
 				ruling_party_ideology = nationalist
-				ruling_party_ideology = communist
+				ruling_party_ideology = traditionalist
 				jingoism = 24
 			}
 		}

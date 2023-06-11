@@ -323,6 +323,7 @@ country_event = {
 		
 		#Federation of Ethiopia and Eritrea
 		is_our_vassal = ERI
+		NOT = { year = 1990 }
 	}
 
 	mean_time_to_happen = {
@@ -589,6 +590,7 @@ country_event = {
 		tag = ETH
 		has_country_flag = derg
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	
 		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
@@ -654,6 +656,7 @@ country_event = {
 		year = 1991
 		has_global_flag = autumn_of_nations
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	
 		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_vassal = no
@@ -782,6 +785,7 @@ country_event = {
 		tag = ETH
 		year = 1993
 		has_country_flag = fall_of_derg
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 }
 		is_vassal = no
@@ -852,6 +856,7 @@ country_event = {
 		tag = ETH
 		has_country_flag = fall_of_derg
 		year = 1995
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy1
 		is_vassal = no

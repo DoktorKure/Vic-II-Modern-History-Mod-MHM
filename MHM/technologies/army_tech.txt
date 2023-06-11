@@ -843,7 +843,7 @@ modern_rifles = {
 precision_long_ranged_weapons = {
 #muzzle_loaded_rifles = {
 	area = infa_tech
-	year = 1990
+	year = 2000
 	cost = 12600
 	unciv_military = yes
 
@@ -908,7 +908,7 @@ precision_long_ranged_weapons = {
 spec_ops = {
 #breech_loaded_rifles = {
 	area = infa_tech
-	year = 1990
+	year = 2010
 	cost = 12600
 
 	unciv_military = yes

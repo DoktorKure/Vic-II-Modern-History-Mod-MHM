@@ -1,0 +1,113 @@
+#Iceland - Iceland (255000/63750 POPS)
+252 = {
+	officers = {
+		culture = danish
+		religion = protestant 
+		size = 2
+	 } 
+	officers = {
+		culture = danish
+		religion = secularism
+		size = 3
+	 } 
+	soldiers = {
+		culture = danish
+		religion = protestant 
+		size = 10
+	 } 
+	soldiers = {
+		culture = danish
+		religion = secularism
+		size = 15
+	 } 
+	aristocrats = {
+		culture = danish
+		religion = protestant 
+		size = 892
+	 } 
+	aristocrats = {
+		culture = danish
+		religion = secularism
+		size = 1338
+	 } 
+	bureaucrats = {
+		culture = danish
+		religion = protestant 
+		size = 102
+	 } 
+	bureaucrats = {
+		culture = danish
+		religion = secularism
+		size = 153
+	 } 
+	capitalists = {
+		culture = danish
+		religion = protestant 
+		size = 152
+	 } 
+	capitalists = {
+		culture = danish
+		religion = secularism
+		size = 229
+	 } 
+	clergymen = {
+		culture = danish
+		religion = protestant 
+		size = 254
+	 } 
+	clergymen = {
+		culture = danish
+		religion = secularism
+		size = 382
+	 } 
+	clerks = {
+		culture = danish
+		religion = protestant 
+		size = 902
+	 } 
+	clerks = {
+		culture = danish
+		religion = secularism
+		size = 1353
+	 } 
+	artisans = {
+		culture = danish
+		religion = protestant 
+		size = 857
+	 } 
+	artisans = {
+		culture = danish
+		religion = secularism
+		size = 1285
+	 } 
+	craftsmen = {
+		culture = danish
+		religion = protestant 
+		size = 2753
+	 } 
+	craftsmen = {
+		culture = danish
+		religion = secularism
+		size = 4129
+	 } 
+	farmers = {
+		culture = danish
+		religion = protestant 
+		size = 18042
+	 } 
+	farmers = {
+		culture = danish
+		religion = secularism
+		size = 27063
+	 } 
+	farmers = {
+		culture = polish
+		religion = catholic 
+		size = 1530
+	 } 
+	farmers = {
+		culture = polish
+		religion = secularism
+		size = 2295
+	 } 
+}

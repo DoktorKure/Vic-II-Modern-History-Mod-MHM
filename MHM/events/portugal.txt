@@ -1777,6 +1777,7 @@ country_event = {
 	fire_only_once = yes
   
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = POR
 		OR = { has_country_flag = carnation_revolution has_country_flag = carnation_revolution_version_2 }
 		

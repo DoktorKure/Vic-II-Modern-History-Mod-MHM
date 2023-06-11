@@ -1815,7 +1815,7 @@ annex_all_cores = { # acquire all core states in target's own hands
 
 	badboy_factor = 1.5
 	prestige_factor = 2
-	peace_cost_factor = 0.7
+	peace_cost_factor = 1.2
 	penalty_factor = 1
 
 	break_truce_prestige_factor = 1

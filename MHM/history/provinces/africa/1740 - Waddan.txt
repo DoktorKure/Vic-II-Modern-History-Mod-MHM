@@ -14,3 +14,6 @@ colonial = 0
     colonial = 0
     state_building = { level = 1 building = petroleum_plastics_factory upgrade = yes } 
 }
+2015.1.1 = { 
+    controller = CYR
+}

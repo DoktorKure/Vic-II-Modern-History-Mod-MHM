@@ -70,6 +70,13 @@ country_event = {
 
 # Special - haredim_jewish, roma and mennonites and not prim/accept
 
+#reduce_pop = 1.002 leads to 1.02% increase per year which translates into 2% annual growth per year. 
+#30,076,000 x 1.002 (repeated 12 times) leads to 30,805,817, which divided by the original number leads to 1.02 per year
+#30,076,000 x 1.02 (repeated 12 times) leads to 36,662,476, which is an per annum growth rate of 2%
+#Thus, monthly ticks of reduce_pop = 1.002 should theoretically simulate a 2% pop growth rate per year, which is the average for developing countries during the 20th century
+#consequently, monthly ticks of reduce_pop = 0.998 should theoretically simulate a -2% pop growth rate per year which is an early demographic crunch
+#Developed countries experiencing a baby boom will thus have a year increase of 1.017, or 1.0017 per monthly tick
+
 # The Demographic Transition - Population Boom
 country_event = {
 	id = 22600

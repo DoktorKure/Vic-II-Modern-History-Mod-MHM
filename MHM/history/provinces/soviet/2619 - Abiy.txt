@@ -16,3 +16,10 @@ add_core = SWA
 life_rating = 15
 colonial = 0
 }
+2015.1.1 = { 
+    owner = RSA
+    controller = RSA
+    add_core = RSA
+    life_rating = 15
+    colonial = 0
+}

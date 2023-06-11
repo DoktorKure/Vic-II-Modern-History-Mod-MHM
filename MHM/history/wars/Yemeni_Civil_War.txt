@@ -1,0 +1,19 @@
+name = "Yemeni Civil War"
+2014.1.1 = {
+	add_attacker = HOU
+	add_defender = YEM
+	war_goal = {
+		casus_belli = civil_war
+		actor = HOU
+		receiver = YEM
+	}
+	war_goal = {
+		casus_belli = civil_war
+		actor = YEM
+		receiver = HOU
+	}
+}
+2023.1.1 = {
+	rem_attacker = HOU
+	rem_defender = YEM
+}

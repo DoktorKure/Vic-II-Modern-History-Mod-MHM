@@ -739,6 +739,7 @@ country_event = {
 	trigger = {
 		tag = MGL
 		year = 2000
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		war = no
@@ -1054,6 +1055,7 @@ country_event = {
 	trigger = {
 		tag = MGL
 		year = 2012
+		NOT = { has_global_flag = 2015_start_date_flag }
 		NOT = { year = 2016 }
 		
 		government = democracy

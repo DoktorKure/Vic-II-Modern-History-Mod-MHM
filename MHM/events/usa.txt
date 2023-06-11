@@ -133,6 +133,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = USA
 		government = democracy
 		
@@ -264,6 +265,7 @@ country_event = {
 	
 	trigger = {
 		tag = USA
+		NOT = { has_global_flag = 2015_start_date_flag }
 		year = 1999
 		
 		government = democracy
@@ -1779,6 +1781,7 @@ country_event = {
 		tag = USA
 		year = 2008
 		NOT = { year = 2016 }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		
@@ -1822,6 +1825,7 @@ country_event = {
 		tag = USA
 		year = 2009
 		NOT = { year = 2017 }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		
@@ -1968,6 +1972,7 @@ country_event = {
 		tag = USA
 		year = 2010
 		NOT = { year = 2016 }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		#Poor pollution controls
 		NOT = { OR = { pollution = acceptable_envir pollution = good_envir } }
@@ -2038,6 +2043,7 @@ country_event = {
 		government = democracy
 		year = 2011
 		NOT = { year = 2025 }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		is_greater_power = yes
 
 		#Full spectrum dominance or Counter-terrorism spy focus
@@ -2088,6 +2094,7 @@ country_event = {
 		tag = USA
 		year = 2013
 		NOT = { year = 2025 }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		is_vassal = no

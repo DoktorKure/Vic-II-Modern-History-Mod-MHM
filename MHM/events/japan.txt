@@ -12,6 +12,7 @@ country_event = {
 		year = 1947
 		NOT = { has_global_flag = 1950_start_date_flag }
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { 
 			government = hms_government 

@@ -21,16 +21,18 @@ war = {
 #Test Event
 country_event = {
 	id = 88881
-	title = "Test Event"
-	desc = "Test Event"
+	title = "Literacy Event"
+	desc = "This event increases literacy for this country due to the 2015 start date being selected. This event exists because it's just faster and easier to do this by event than by tweaking all the country files."
 	picture = "GOLD"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "Testing is fun!"
-	set_country_flag = un_hq_host_country
-	any_owned = { remove_province_modifier = un_headquarters }
+		name = "Yay literacy!"
+		#Increase global literacy
+		any_pop = {
+			literacy = 0.2
+		}
 	}
 }
 
@@ -58,20 +60,56 @@ set_country_flag = pre_existing_monarchy
 #Test Event
 country_event = {
 	id = 88883
-	title = "Test Event"
-	desc = "Test Event"
+	title = "AI Literacy Event"
+	desc = "This event is for all AI countries and only AI countries. If you're seeing this event... something is wrong."
 	picture = "GOLD"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "Testing is fun!"
-
-government = proletarian_dictatorship
-country_event = 800052
-relation = { who = RUS value = 200 }
-
-SWE = { relation = { who = USA value = 200 } }
+		name = "Yay Literacy!"
+		any_country = {
+			limit = { exists = yes capital_scope = { continent = europe } }
+			any_pop = {
+				literacy = 0.2
+			}
+		}
+		any_country = {
+			limit = { exists = yes capital_scope = { continent = north_america } }
+			any_pop = {
+				literacy = 0.2
+			}
+		}
+		any_country = {
+			limit = { exists = yes capital_scope = { continent = south_america } }
+			any_pop = {
+				literacy = 0.15
+			}
+		}
+		any_country = {
+			limit = { exists = yes capital_scope = { continent = asia } }
+			any_pop = {
+				literacy = 0.2
+			}
+		}
+		any_country = {
+			limit = { exists = yes capital_scope = { continent = mena } }
+			any_pop = {
+				literacy = 0.15
+			}
+		}
+		any_country = {
+			limit = { exists = yes capital_scope = { continent = africa } }
+			any_pop = {
+				literacy = 0.15
+			}
+		}
+		any_country = {
+			limit = { exists = yes capital_scope = { continent = oceania } }
+			any_pop = {
+				literacy = 0.2
+			}
+		}
 
 	}
 }
@@ -199,35 +237,15 @@ country_event = {
 #Test Event
 country_event = {
 	id = 88889
-	title = "Test Event"
-	desc = "Test Event"
-	picture = "GOLD"
+	title = "Election Year"
+	desc = "$YEAR$ is election year for many countries including ours, and as such it's time to elect our new leadership!"
+	picture = "election_crowd"
 	
 	is_triggered_only = yes
 	
 	option = {
-		name = "Testing is fun!"
-		PRG = { add_country_modifier = { name = proxy_involvement_conservative_dictatorship duration = 1825 } }
-		USA = { add_country_modifier = { name = proxy_involvement_democracy duration = 1825 } }
-		
-		random_state = { 
-			limit = { NOT = { any_owned_province = { is_capital = yes } } }
-			any_owned = {
-				change_controller = REB
-			} 
-		} 
-		random_state = { 
-			limit = { NOT = { any_owned_province = { is_capital = yes } } }
-			any_owned = {
-				change_controller = REB
-			} 
-		} 
-		random_state = { 
-			limit = { NOT = { any_owned_province = { is_capital = yes } } }
-			any_owned = {
-				change_controller = REB
-			} 
-		} 
+		name = "Let's begin the campaigning!"
+		election = yes
 	}
 
 }

@@ -1,0 +1,103 @@
+#Malta - Malta (359000/89750 POPS)
+854 = {
+	officers = {
+		culture = insular_mediterranean
+		religion = catholic 
+		size = 91
+	 } 
+	officers = {
+		culture = insular_mediterranean
+		religion = secularism
+		size = 14
+	 } 
+	soldiers = {
+		culture = insular_mediterranean
+		religion = catholic 
+		size = 365
+	 } 
+	soldiers = {
+		culture = insular_mediterranean
+		religion = secularism
+		size = 59
+	 } 
+	aristocrats = {
+		culture = insular_mediterranean
+		religion = catholic 
+		size = 2701
+	 } 
+	aristocrats = {
+		culture = insular_mediterranean
+		religion = secularism
+		size = 439
+	 } 
+	bureaucrats = {
+		culture = insular_mediterranean
+		religion = catholic 
+		size = 308
+	 } 
+	bureaucrats = {
+		culture = insular_mediterranean
+		religion = secularism
+		size = 50
+	 } 
+	capitalists = {
+		culture = insular_mediterranean
+		religion = catholic 
+		size = 462
+	 } 
+	capitalists = {
+		culture = insular_mediterranean
+		religion = secularism
+		size = 75
+	 } 
+	clergymen = {
+		culture = insular_mediterranean
+		religion = catholic 
+		size = 771
+	 } 
+	clergymen = {
+		culture = insular_mediterranean
+		religion = secularism
+		size = 125
+	 } 
+	clerks = {
+		culture = insular_mediterranean
+		religion = catholic 
+		size = 2749
+	 } 
+	clerks = {
+		culture = insular_mediterranean
+		religion = secularism
+		size = 447
+	 } 
+	artisans = {
+		culture = insular_mediterranean
+		religion = catholic 
+		size = 2611
+	 } 
+	artisans = {
+		culture = insular_mediterranean
+		religion = secularism
+		size = 425
+	 } 
+	craftsmen = {
+		culture = insular_mediterranean
+		religion = catholic 
+		size = 8385
+	 } 
+	craftsmen = {
+		culture = insular_mediterranean
+		religion = secularism
+		size = 1365
+	 } 
+	farmers = {
+		culture = insular_mediterranean
+		religion = catholic 
+		size = 58738
+	 } 
+	farmers = {
+		culture = insular_mediterranean
+		religion = secularism
+		size = 9562
+	 } 
+}

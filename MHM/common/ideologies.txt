@@ -4,7 +4,7 @@ centre_group = {
 
 	#Supports both adding and removing political and social reforms
 	big_tent = {
-		color = { 117 165 188 }
+		color = { 51 153 255 }
 		
 		#can_reduce_militancy = yes
 		
@@ -198,7 +198,7 @@ centre_right_group = {
 
 	#Always supports political reforms
 	liberal = {
-		color = { 51 153 255 }
+		color = { 128 192 255 }
 
 		add_political_reform = { base = 1 }
 		

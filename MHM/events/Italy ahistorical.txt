@@ -1173,6 +1173,7 @@ country_event = {
 	trigger = {
 		tag = ITA
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		is_vassal = no
@@ -1241,6 +1242,7 @@ country_event = {
 	trigger = {
 		tag = ITA
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		is_vassal = no
@@ -1763,6 +1765,7 @@ country_event = {
 	trigger = {
 		tag = ITA
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		is_vassal = no
@@ -1822,6 +1825,7 @@ country_event = {
 	trigger = {
 		tag = ITA
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		is_vassal = no
@@ -1876,7 +1880,8 @@ country_event = {
 		tag = ITA
 		year = 2013
 		month = 4
-		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 1992_start_date_flag 
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = presidential_dictatorship
 		
@@ -2424,6 +2429,7 @@ country_event = {
 		tag = ITA
 		year = 2019
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship
 		
@@ -2459,6 +2465,7 @@ country_event = {
 		tag = ITA
 		year = 1977
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship 
 		war = no
@@ -2739,6 +2746,7 @@ country_event = {
 		tag = ITA
 		year = 1981
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship 
 		war = no
@@ -2843,6 +2851,7 @@ country_event = {
 		tag = ITA
 		year = 1988
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship 
 		war = no
@@ -2922,6 +2931,7 @@ country_event = {
 		tag = ITA
 		year = 1989
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship
 		is_vassal = no
@@ -3021,6 +3031,7 @@ country_event = {
 		tag = CRO
 		year = 1992
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship
 		is_vassal = no
@@ -3095,6 +3106,7 @@ country_event = {
 		tag = CRO
 		year = 1992
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship
 		is_vassal = no
@@ -3901,6 +3913,7 @@ country_event = {
 		year = 2014
 		month = 4
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship
 		
@@ -3939,6 +3952,7 @@ country_event = {
 		tag = ITA
 		year = 1989
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship 
 		is_vassal = no
@@ -4021,6 +4035,7 @@ country_event = {
 		year = 1991
 		month = 1
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship 
 		is_vassal = no
@@ -4155,6 +4170,7 @@ country_event = {
 		tag = ITA
 		year = 1991
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		is_vassal = no
@@ -4212,6 +4228,7 @@ country_event = {
 	trigger = {
 		tag = ITA
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		is_vassal = no
@@ -4282,6 +4299,7 @@ country_event = {
 	trigger = {
 		tag = ITA
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		is_vassal = no
@@ -4651,6 +4669,7 @@ country_event = {
 		year = 1990
 		month = 12
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship 
 		is_vassal = no
@@ -4741,6 +4760,7 @@ country_event = {
 		year = 1993
 		month = 5
 		NOT = { year = 1992 }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = sectarian_dictatorship
 		is_vassal = no
@@ -4857,6 +4877,7 @@ country_event = {
 		year = 2002
 		month = 10
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = sectarian_dictatorship 
 		is_vassal = no
@@ -4932,6 +4953,7 @@ country_event = {
 		year = 2012
 		month = 11
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = sectarian_dictatorship
 		
@@ -4968,6 +4990,7 @@ country_event = {
 		year = 2007
 		month = 9
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = sectarian_dictatorship
 		
@@ -5002,6 +5025,7 @@ country_event = {
 		year = 1998
 		month = 7
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = sectarian_dictatorship 
 		is_vassal = no
@@ -5146,6 +5170,7 @@ country_event = {
 		tag = ITA
 		year = 1994
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship 
 		war = no
@@ -5244,6 +5269,7 @@ country_event = {
 		year = 2021
 		month = 6
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = nationalist_dictatorship
 		
@@ -6571,6 +6597,7 @@ country_event = {
 		tag = ITA
 		year = 1988
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
 		is_vassal = no
@@ -6747,6 +6774,7 @@ country_event = {
 		tag = ITA
 		year = 1983
 		NOT = { year = 2021 }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
 		is_vassal = no

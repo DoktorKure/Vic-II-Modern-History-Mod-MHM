@@ -1350,6 +1350,7 @@ country_event = {
 	trigger = {
 		tag = MEX
 		year = 2012
+		NOT = { has_global_flag = 2015_start_date_flag }
 		NOT = { year = 2018 }
 		
 		OR = { government = presidential_dictatorship government = democracy government = democracy1 }

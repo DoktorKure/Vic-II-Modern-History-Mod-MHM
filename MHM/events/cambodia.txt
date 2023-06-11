@@ -389,6 +389,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = DAI
 		
 		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }

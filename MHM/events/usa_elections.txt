@@ -1201,6 +1201,7 @@ country_event = {
 	trigger = {
     	tag = USA
 		year = 2012 NOT = { year = 2016 }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		election = no
 		government = democracy
 		NOT = { has_country_flag = elections_disabled }	

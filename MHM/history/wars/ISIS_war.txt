@@ -1,0 +1,38 @@
+#Middle_Eastern_Wars.txt
+name = "Int'l Intervention against ISIS" #CJTF-OIR
+2014.1.1 = {
+	add_attacker = ISI
+	add_defender = USA
+	add_defender = CAN
+	add_defender = ENG
+	add_defender = AST
+	add_defender = FRA
+	add_defender = NET
+	add_defender = DEN
+	add_defender = FIN
+	add_defender = BEL
+	add_defender = ROM
+	war_goal = {
+		casus_belli = humiliate
+		actor = ISI
+		receiver = USA
+	}
+	war_goal = {
+		casus_belli = cut_down_to_size
+		actor = USA
+		receiver = ISI
+	}
+}
+2021.1.1 = {
+	rem_attacker = ISI
+	rem_defender = USA
+	rem_defender = CAN
+	rem_defender = ENG
+	rem_defender = AST
+	rem_defender = FRA
+	rem_defender = NET
+	rem_defender = DEN
+	rem_defender = FIN
+	rem_defender = BEL
+	rem_defender = ROM
+}

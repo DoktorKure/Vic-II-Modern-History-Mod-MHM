@@ -318,6 +318,7 @@ country_event = {
 		tag = PAK
 		year = 1988
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = presidential_dictatorship
 		ruling_party_ideology = traditionalist
@@ -381,6 +382,7 @@ country_event = {
 		tag = PAK
 		year = 1990
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		ruling_party_ideology = socialist
@@ -472,7 +474,7 @@ country_event = {
 		capital = 1230 
 		1230 = { change_province_name = "Islamabad" }
 		prestige = 50
-		money = -500000 
+		#money = -500000 
 		ai_chance = { factor = 0.9 }
 	}
 
@@ -481,7 +483,7 @@ country_event = {
 		capital = 1229 
 		1229 = { change_province_name = "Islamabad" }
 		prestige = 10
-		money = -100000
+		#money = -100000
 		ai_chance = { factor = 0.1 }
 	}
 

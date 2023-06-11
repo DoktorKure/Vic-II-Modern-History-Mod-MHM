@@ -461,13 +461,6 @@ NOT = { owner = { economic_policy = planned_economy } }
 # Vanilla loyalty focus value 0.001
 party_loyalty_focus =
 {
-	traditionalist_focus =
-	{
-		ideology = traditionalist
-		loyalty_value = 0.01 # By that much pops will be more loyal
-		icon = 34
-	}
-	
 	populist_focus =
 	{
 		ideology = populist
@@ -482,11 +475,39 @@ party_loyalty_focus =
 		icon = 32
 	}
 	
+	traditionalist_focus =
+	{
+		ideology = traditionalist
+		loyalty_value = 0.01 # By that much pops will be more loyal
+		icon = 34
+	}
+	
 	conservative_focus =
 	{
 		ideology = conservative
 		loyalty_value = 0.01 # By that much pops will be more loyal
 		icon = 35
+	}
+
+	centrist_focus =
+	{
+		ideology = big_tent
+		loyalty_value = 0.01 # By that much pops will be more loyal
+		icon = 38
+	}
+	
+	liberal_focus =
+	{
+		ideology = liberal
+		loyalty_value = 0.01 # By that much pops will be more loyal
+		icon = 40
+	}
+	
+	progressive_focus =
+	{
+		ideology = progressive
+		loyalty_value = 0.01 # By that much pops will be more loyal
+		icon = 39
 	}
 	
 	socialist_focus =
@@ -496,13 +517,6 @@ party_loyalty_focus =
 		icon = 36
 	}
 	
-	communist_focus =
-	{
-		ideology = communist
-		loyalty_value = 0.01 # By that much pops will be more loyal
-		icon = 41
-	}
-	
 	market_communist_focus =
 	{
 		ideology = communist_social
@@ -510,24 +524,10 @@ party_loyalty_focus =
 		icon = 37
 	}
 	
-	liberal_focus =
+	communist_focus =
 	{
-		ideology = liberal
+		ideology = communist
 		loyalty_value = 0.01 # By that much pops will be more loyal
-		icon = 38
-	}
-	
-	progressive_focus =
-	{
-		ideology = progressive
-		loyalty_value = 0.01 # By that much pops will be more loyal
-		icon = 39
-	}
-
-	centrist_focus =
-	{
-		ideology = big_tent
-		loyalty_value = 0.01 # By that much pops will be more loyal
-		icon = 40
+		icon = 41
 	}
 }

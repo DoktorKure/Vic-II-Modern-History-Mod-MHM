@@ -10,6 +10,7 @@ country_event = {
 	trigger = {
 		tag = SAA
 		has_global_flag = arab_spring #2011
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = absolute_monarchy
 		is_vassal = no
@@ -522,6 +523,7 @@ country_event = {
 	trigger = {
 		tag = SAA
 		has_global_flag = SAA_PER_cold_war_flag #2011
+		NOT = { has_global_flag = 2015_start_date_flag }
 
 		government = absolute_monarchy
 		is_vassal = no
@@ -641,6 +643,7 @@ country_event = {
 	trigger = {
 		tag = PER
 		has_global_flag = SAA_PER_cold_war_flag #2011
+		NOT = { has_global_flag = 2015_start_date_flag }
 
 		government = theocracy
 		is_vassal = no

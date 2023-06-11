@@ -527,6 +527,7 @@ country_event = {
 		year = 1990
 		NOT = { has_global_flag = 1990_gulf_war_fired_flag }
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 
 		OR = { 
 			government = presidential_dictatorship 
@@ -643,6 +644,7 @@ country_event = {
     	tag = IRQ
 		year = 1990
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		is_vassal = no
 
 		OR = { government = presidential_dictatorship government = nationalist_dictatorship government = sectarian_dictatorship }
@@ -868,6 +870,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = USA
 		is_greater_power = yes
 		government = democracy
@@ -1035,6 +1038,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = USA
 		is_greater_power = yes
 		government = democracy
@@ -1157,6 +1161,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = IRQ
 		is_vassal = no
 		war = no
@@ -1194,6 +1199,7 @@ country_event = {
 		government = democracy
 		war = no
 		has_global_flag = iraq_war
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}
 
 	mean_time_to_happen = {
@@ -1219,6 +1225,7 @@ country_event = {
 		tag = IRQ
 		government = democracy
 		year = 2006
+		NOT = { has_global_flag = 2015_start_date_flag }
 		war = no
 		has_global_flag = iraq_war
 	}
@@ -1242,6 +1249,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = USA
 		government = democracy
 		is_greater_power = yes
@@ -1290,6 +1298,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = IRQ
 		year = 2014
 		owns = 923 
@@ -1544,7 +1553,7 @@ country_event = {
 
 	option = {
 		name = EVT_8008024_A
-		ai_chance = { factor = 0.60 }
+		ai_chance = { factor = 0.20 }
 		release_vassal = MSU
 MSU = { government = sar_government country_event = 800054 set_country_flag = former_devolved_nation }
 		prestige = 8
@@ -1559,7 +1568,7 @@ MSU = { government = sar_government country_event = 800054 set_country_flag = fo
 
 	option = {
 		name = EVT_8008024_C
-		ai_chance = { factor = 0.30 }
+		ai_chance = { factor = 0.70 }
 		923 = {
 			state_scope = {
 				flashpoint_tension = 30
@@ -1580,6 +1589,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = USA
 		government = democracy
 		is_greater_power = yes
@@ -1617,10 +1627,10 @@ country_event = {
 		war = {
 			target = ISI
 			attacker_goal = {
-				casus_belli = free_allied_cores
+				casus_belli = cut_down_to_size
 			}
 			defender_goal = {
-				casus_belli = status_quo
+				casus_belli = humiliate
 			}
 		}		
 	}
@@ -1643,6 +1653,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = PER
 		government = theocracy
 		is_vassal = no
@@ -1682,10 +1693,10 @@ country_event = {
 		war = {
 			target = ISI
 			attacker_goal = {
-				casus_belli = free_allied_cores
+				casus_belli = cut_down_to_size
 			}
 			defender_goal = {
-				casus_belli = status_quo
+				casus_belli = humiliate
 			}
 		}		
 	}

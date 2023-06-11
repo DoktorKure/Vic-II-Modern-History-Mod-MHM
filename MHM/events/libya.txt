@@ -1421,6 +1421,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = LBY
 		year = 2011
 		NOT = { year = 2021 }

@@ -31,7 +31,7 @@ political_decisions = {
 				AND = { tag = COS government = democracy }
 				AND = { tag = FIN has_country_flag = finlandization government = democracy }
 				AND = { tag = MAL government = democracy }
-				AND = { tag = SWE government = hms_government NOT = { has_global_flag = RUS_FIN_war } }
+				AND = { tag = SWE government = hms_government NOT = { OR = { has_global_flag = RUS_FIN_war has_global_flag = RUS_UKR_war } } }
 			}
 			
 			#Not a dictatorship
@@ -147,6 +147,7 @@ political_decisions = {
 				tag = SWE
 				government = hms_government
 				NOT = { has_global_flag = RUS_FIN_war }
+				NOT = { has_global_flag = RUS_UKR_war }
 			}
 			modifier = {
 				factor = 0
@@ -157,6 +158,11 @@ political_decisions = {
 			modifier = {
 				factor = 0
 				tag = MAL
+				government = democracy
+			}
+			modifier = {
+				factor = 0
+				tag = UKR
 				government = democracy
 			}
 		

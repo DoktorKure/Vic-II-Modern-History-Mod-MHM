@@ -501,9 +501,8 @@ political_decisions = {
 				#Finland hasn't embraced Finlandization
 				FIN = { NOT = { has_country_flag = finlandization } }
 				
-				#Right Wing dictatorships can only join during the Cold War IF USA is right wing
+				#Right Wing dictatorships can only join IF USA is right wing
 				AND = {
-					has_global_flag = blocsenabled
 					USA = { 
 						exists = yes
 						is_greater_power = yes
@@ -514,7 +513,13 @@ political_decisions = {
 							ruling_party_ideology = big_tent 
 							ruling_party_ideology = nationalist 
 							ruling_party_ideology = populist 
-						} 
+						}
+						OR = {
+							government = presidential_dictatorship
+							government = nationalist_dictatorship
+							government = sectarian_dictatorship
+							government = absolute_monarchy
+						}						
 					}
 					OR = {
 						government = presidential_dictatorship
@@ -525,6 +530,7 @@ political_decisions = {
 					OR = { 
 						ruling_party_ideology = traditionalist 
 						ruling_party_ideology = conservative 
+						ruling_party_ideology = big_tent 
 						ruling_party_ideology = nationalist 
 						ruling_party_ideology = populist 
 					}

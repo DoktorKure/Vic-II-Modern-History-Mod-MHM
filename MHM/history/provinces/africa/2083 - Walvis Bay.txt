@@ -15,3 +15,10 @@ colonial = 0
     colonial = 0
     naval_base = 2
 }
+2015.1.1 = { 
+    owner = RSA
+    controller = RSA
+    add_core = RSA
+    life_rating = 15
+    colonial = 0
+}

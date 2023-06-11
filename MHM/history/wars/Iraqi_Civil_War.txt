@@ -1,0 +1,29 @@
+name = "Iraqi Civil War"
+2014.6.1 = {
+	add_attacker = ISI
+	add_defender = IRQ
+	add_defender = KUR
+	add_defender = PER
+	war_goal = {
+		casus_belli = conquest
+		actor = ISI
+		receiver = IRQ
+	}
+	war_goal = {
+		casus_belli = conquest
+		actor = ISI
+		receiver = KUR
+	}
+	war_goal = {
+		casus_belli = acquire_any_state
+		actor = IRQ
+		receiver = ISI
+		state_province_id = 923
+	}
+}
+2017.12.24 = {
+	rem_attacker = ISI
+	rem_defender = IRQ
+	rem_defender = KUR
+	rem_defender = PER
+}

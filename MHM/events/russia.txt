@@ -164,6 +164,8 @@ country_event = {
 	trigger = {
 		tag = RUS
 		year = 1991
+		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 	
 		#Russian Federation
 		OR = { government = democracy government = democracy1 government = presidential_dictatorship }
@@ -224,6 +226,7 @@ country_event = {
 	trigger = {
 		tag = RUS
 		year = 1994
+		NOT = { has_global_flag = 2015_start_date_flag }
 	
 		#Russian Federation
 		OR = { government = democracy government = democracy1 government = presidential_dictatorship }
@@ -313,6 +316,7 @@ country_event = {
 	trigger = {
 		tag = RUS
 		year = 1999
+		NOT = { has_global_flag = 2015_start_date_flag }
 	
 		#Russian Federation
 		OR = { government = democracy government = democracy1 government = presidential_dictatorship }
@@ -411,6 +415,7 @@ country_event = {
 	trigger = {
 		tag = RUS
 		year = 1999
+		NOT = { has_global_flag = 2015_start_date_flag }
 	
 		#Russian Federation
 		OR = { government = democracy government = democracy1 government = presidential_dictatorship }
@@ -471,6 +476,7 @@ country_event = {
 	trigger = {
 		tag = RUS
 		year = 2009
+		NOT = { has_global_flag = 2015_start_date_flag }
 		NOT = { year = 2020 }
 		
 		#Russian Federation
@@ -759,6 +765,7 @@ country_event = {
 	trigger = {
     	tag = RUS
     	year = 2003
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		#Russian Federation
 		government = democracy
@@ -859,6 +866,7 @@ country_event = {
 	trigger = {
     	tag = RUS
     	year = 2006
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		#Russian Federation
 		government = democracy
@@ -956,6 +964,7 @@ country_event = {
 	trigger = {
     	tag = RUS
     	year = 2012
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		#Russian Federation
 		government = democracy

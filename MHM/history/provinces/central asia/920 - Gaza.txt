@@ -20,3 +20,9 @@ colonial = 0
     railroad = 1
     colonial = 0
 }
+2015.1.1 = { 
+    owner = GAZ
+    controller = GAZ
+    remove_core = ISR
+    life_rating = 15
+}

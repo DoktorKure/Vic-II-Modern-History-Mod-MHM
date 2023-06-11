@@ -2016,6 +2016,7 @@ country_event = {
 	trigger = {
 		tag = AFG
 		year = 2001
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { government = democracy government = democracy1 government = hms_government }
 		vassal_of = USA
@@ -2061,6 +2062,7 @@ country_event = {
 	trigger = {
 		tag = AFG
 		year = 2003
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		vassal_of = USA
@@ -2074,6 +2076,7 @@ country_event = {
 
 	option = {
 		name = "We must prepare to counter this propaganda."
+		set_country_flag = taliban_regroup_afg
 		any_pop = {
 			limit = { strata = rich }
 			ideology = { factor = 0.15 value = conservative }
@@ -2106,6 +2109,7 @@ country_event = {
 	trigger = {
 		tag = AFG
 		year = 2004
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		vassal_of = USA
@@ -2221,6 +2225,7 @@ country_event = {
 	trigger = {
 		tag = AFG
 		year = 2005
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { government = democracy government = democracy1 }
 		war = no
@@ -2265,6 +2270,7 @@ country_event = {
 	trigger = {
 		tag = AFG
 		year = 2006
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		vassal_of = USA
@@ -2358,6 +2364,7 @@ country_event = {
 	trigger = {
 		tag = AFG
 		year = 2011
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		vassal_of = USA
@@ -2394,6 +2401,7 @@ country_event = {
 		tag = AFG
 		year = 2014
 		NOT = { year = 2019 }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		vassal_of = USA

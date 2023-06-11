@@ -44,6 +44,7 @@ country_event = {
 		year = 2005
 		month = 6
 		has_global_flag = ira_founded
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}
 	
 	mean_time_to_happen = {
@@ -74,6 +75,7 @@ country_event = {
 		year = 1996
 		month = 1
 		has_global_flag = ira_founded
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}
 	
 	mean_time_to_happen = {

@@ -8303,6 +8303,7 @@ country_event = {
 		tag = ITA
 		year = 1991
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { government = democracy government = democracy1 }
 		
@@ -8381,6 +8382,7 @@ country_event = {
 		tag = ITA
 		year = 1991
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { government = democracy government = democracy1 }
 		

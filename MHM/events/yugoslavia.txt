@@ -569,6 +569,7 @@ country_event = {
 		tag = YUG
 		year = 1990
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		#USSR has adopted Gorbachev's reforms
 		RUS = { ruling_party_ideology = communist_social }
@@ -611,6 +612,7 @@ country_event = {
 		tag = YUG
 		year = 1991
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		#1974 Constitution
 		has_country_flag = YUG_federal_structure
@@ -720,6 +722,7 @@ country_event = {
 		tag = YUG
 		year = 1991
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		#1974 Constitution
 		has_country_flag = YUG_federal_structure
@@ -794,6 +797,7 @@ country_event = {
 		year = 1992
 		
 		has_global_flag = YUG_CRO_indy_war
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		war_with = CRO
 
@@ -834,6 +838,7 @@ country_event = {
 		year = 1991
 		
 		has_global_flag = YUG_CRO_indy_war
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		is_possible_vassal = SRK
 		
@@ -890,6 +895,7 @@ country_event = {
 		year = 1995
 		
 		has_global_flag = YUG_CRO_indy_war
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		CRO = {
 			exists = yes
@@ -931,6 +937,7 @@ country_event = {
 	trigger = {
 		tag = YUG
 		year = 1992
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		is_vassal = no
 		
@@ -1056,6 +1063,7 @@ country_event = {
 		tag = BOS
 		year = 1992
 		has_global_flag = bosnian_wars_flag
+		NOT = { has_global_flag = 2015_start_date_flag }
 		is_vassal = no
 		
 		CRO = { exists = yes is_vassal = no }
@@ -1116,6 +1124,7 @@ country_event = {
 		tag = HZB
 		year = 1994
 		has_global_flag = bosnian_wars_flag
+		NOT = { has_global_flag = 2015_start_date_flag }
 		BOS = { exists = yes is_vassal = no government = democracy }
 		CRO = { exists = yes is_vassal = no government = democracy }
 	}
@@ -1192,6 +1201,7 @@ country_event = {
 		year = 1995
 		government = sectarian_dictatorship
 		war_with = BOS
+		NOT = { has_global_flag = 2015_start_date_flag }
 	}
 
 	mean_time_to_happen = { months = 7 }
@@ -1222,6 +1232,7 @@ country_event = {
 		year = 1995
 		has_global_flag = federation_of_bosnia_flag
 		is_vassal = no
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		BOS = { 
 			exists = yes 
@@ -1304,6 +1315,7 @@ country_event = {
 	trigger = {
 		OR = { tag = SER tag = YUG }
 		year = 1998
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		NOT = {
 			OR = { 
@@ -1370,6 +1382,7 @@ country_event = {
 		OR = { tag = SER tag = YUG }
 		year = 1999
 		has_global_flag = KOS_war_flag
+		NOT = { has_global_flag = 2015_start_date_flag }
 
 		KOS = { exists = yes is_vassal = no }
 		
@@ -1427,6 +1440,7 @@ country_event = {
 		is_vassal = no
 		war = no
 		year = 2008
+		NOT = { has_global_flag = 2015_start_date_flag }
 		NOT = { ruling_party_ideology = liberal }
 		NOT = { ruling_party_ideology = progressive }
 		is_our_vassal = KOS
@@ -1467,6 +1481,7 @@ country_event = {
 		tag = YUG
 		year = 1991
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		#1974 Constitution
 		has_country_flag = YUG_federal_structure
@@ -1542,6 +1557,7 @@ country_event = {
 	trigger = {
 		tag = YUG
 		year = 1992
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { 
 			government = proletarian_dictatorship 
@@ -1584,6 +1600,7 @@ country_event = {
 	trigger = {
 		tag = YUG
 		year = 1999
+		NOT = { has_global_flag = 2015_start_date_flag }
 		war = no
 		is_vassal = no
 		NOT = { government = democracy }
@@ -1660,6 +1677,7 @@ country_event = {
 	trigger = {
 		tag = SER
 		year = 2003
+		NOT = { has_global_flag = 2015_start_date_flag }
 
 		OR = { 
 			government = democracy 
@@ -1724,6 +1742,7 @@ country_event = {
 	trigger = {
 		tag = SER
 		year = 2006
+		NOT = { has_global_flag = 2015_start_date_flag }
 		OR = { 
 			government = democracy 
 			government = democracy1 

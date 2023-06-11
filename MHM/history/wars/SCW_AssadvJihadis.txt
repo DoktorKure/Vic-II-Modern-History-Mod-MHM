@@ -1,0 +1,20 @@
+name = "Syrian Civil War"
+2014.1.1 = {
+	add_attacker = ISI
+	add_defender = SYR
+	war_goal = {
+		casus_belli = civil_war
+		actor = ISI
+		receiver = SYR
+	}
+	war_goal = {
+		casus_belli = acquire_any_state
+		actor = SYR
+		receiver = ISI
+		state_province_id = 907
+	}
+}
+2018.1.1 = {
+	rem_attacker = ISI
+	rem_defender = SYR
+}

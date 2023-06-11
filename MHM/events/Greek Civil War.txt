@@ -379,6 +379,7 @@ country_event = {
 			is_our_vassal = UGR
 		}
 		
+		NOT = { has_global_flag = 2015_start_date_flag }
 		NOT = { has_global_flag = 1992_start_date_flag }
 		NOT = { has_global_flag = 1950_start_date_flag }
 		

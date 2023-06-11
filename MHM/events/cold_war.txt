@@ -356,6 +356,7 @@ country_event = {
 	trigger = {
 		NOT = { has_global_flag =  blocsenabled }
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		OR = { 
 			has_global_flag = cold_warusa #USA victory
 			has_global_flag = cold_warussr #USSR victory

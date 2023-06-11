@@ -720,6 +720,7 @@ country_event = {
 	trigger = {
 		tag = FRA
 		year = 1998
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		war = no

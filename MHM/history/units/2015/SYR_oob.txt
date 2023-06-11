@@ -1,0 +1,103 @@
+army = {
+	name = "Syria Tiger Forces"
+	location = 904
+	regiment = {
+		name= "Regiment nr12"
+		type = infantry
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr13"
+		type = infantry
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr14"
+		type = infantry
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr15"
+		type = infantry
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr16"
+		type = infantry
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr17"
+		type = infantry
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr9"
+		type = cavalry
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr10"
+		type = cavalry
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr18"
+		type = tank
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr19"
+		type = tank
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr20"
+		type = tank
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = artillery
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = artillery
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = artillery
+		home = 904
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = artillery
+		home = 904
+	}
+}
+navy = {
+	name = "Syria Latakia Navy"
+	location = 905
+	ship = {
+		name= "Chip nr1"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr2"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr3"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr4"
+		type = frigate
+	}
+	ship = {
+		name= "Chip nr5"
+		type = frigate
+	}
+}

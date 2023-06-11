@@ -4,7 +4,7 @@ joincis = {
 	picture = "cisofnations"
 		potential = {
 			in_sphere = RUS
-OR = { tag = UKR tag = BYE tag = GEO tag = AZB tag = ARM tag = TKR tag = MOL tag = UZB tag = KYR tag = TAJ tag = KAZ tag = LIT tag = LAT tag = EST primary_culture = russian }
+			OR = { tag = UKR tag = BYE tag = GEO tag = AZB tag = ARM tag = TKR tag = MOL tag = UZB tag = KYR tag = TAJ tag = KAZ tag = LIT tag = LAT tag = EST primary_culture = russian }
 
 			NOT = { has_country_flag = cismember }
 			NOT = { tech_school = XEA_tech_school }
@@ -12,7 +12,7 @@ OR = { tag = UKR tag = BYE tag = GEO tag = AZB tag = ARM tag = TKR tag = MOL tag
 			NOT = { tech_school = XEU_tech_school1 }
 			is_greater_power = no
 
-	NOT = { has_country_modifier = cismember }
+			NOT = { has_country_modifier = cismember }
 
 			has_global_flag = cisofnations
 		}

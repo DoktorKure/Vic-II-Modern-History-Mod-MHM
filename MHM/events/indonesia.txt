@@ -9,6 +9,7 @@ country_event = {
 	trigger = {
 		tag = IDO
 		year = 2002
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		#Reformasi chosen
 		government = democracy
@@ -871,6 +872,7 @@ country_event = {
 	trigger = {
 		tag = IDO
 		year = 1998
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		#After the Asian Financial Crisis
 		has_country_flag = ido_thaw_trigger
@@ -952,6 +954,7 @@ country_event = {
 		tag = IDO
 		year = 1991
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		NOT = { OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive } }
 		war = no
 		is_possible_vassal = TIM

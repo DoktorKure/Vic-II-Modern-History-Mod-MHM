@@ -1,0 +1,44 @@
+army = {
+	name = "Yemeni Army"
+	location = 1412
+	regiment = {
+		name= "Regiment nr1"
+		type = irregular
+		home = 1412
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = irregular
+		home = 1412
+	}
+	regiment = {
+		name= "Regiment nr7"
+		type = irregular
+		home = 1412
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = infantry
+		home = 1412
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 1412
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = artillery
+		home = 1412
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = artillery
+		home = 1412
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = artillery
+		home = 1412
+	}
+}

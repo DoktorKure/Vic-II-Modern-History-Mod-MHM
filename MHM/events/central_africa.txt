@@ -33,6 +33,7 @@ country_event = {
 	trigger = {
 		tag = CAR
 		year = 2012 
+		NOT = { has_global_flag = 2015_start_date_flag }
 		is_greater_power = no
 		is_secondary_power = no
 		SEL = { exists = no }

@@ -1,5 +1,23 @@
 graphical_culture = ItalianGC
-color = { 229 150 87 }
+color = { 192 61 204 }
+hms_government = { 205 48 80 }
+hms_government1 = { 205 48 80 }
+absolute_monarchy = { 232 51 57 }
+proletarian_dictatorship = { 232 51 57 }
+proletarian_dictatorship1 = { 232 51 57 }
+socialist_democracy = { 232 51 57 }
+theocracy = { 255 255 164 }
+party = {
+		name = "Imperialists"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = moralism
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 1836.1.1
+		end_date = 2092.1.1
+}
 party = {
 		name = "party_big_tent"
 		citizenship_policy = full_citizenship

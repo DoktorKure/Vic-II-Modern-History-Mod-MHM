@@ -1,0 +1,19 @@
+name = "Syrian Civil War"
+2011.3.15 = {
+	add_attacker = SYR
+	add_defender = USY
+	war_goal = {
+		casus_belli = civil_war
+		actor = SYR
+		receiver = USY
+	}
+	war_goal = {
+		casus_belli = civil_war
+		actor = USY
+		receiver = SYR
+	}
+}
+2021.1.1 = {
+	rem_attacker = SYR
+	rem_defender = USY
+}

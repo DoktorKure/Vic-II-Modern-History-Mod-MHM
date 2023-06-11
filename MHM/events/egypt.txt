@@ -286,6 +286,7 @@ country_event = {
     tag = EGY
 	has_global_flag = arab_spring
 	government = presidential_dictatorship
+	NOT = { has_global_flag = 2015_start_date_flag }
   }
 
   mean_time_to_happen = { months = 6 }

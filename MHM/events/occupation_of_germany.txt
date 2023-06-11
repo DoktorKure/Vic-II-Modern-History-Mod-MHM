@@ -225,10 +225,10 @@ country_event = {
 	option = {
 		name = "I just want the Eastern half."
 		change_tag = DDR
-		any_country = { limit = { exists = yes tag = OG5 } any_owned = { add_core = DDR } country_event = 11106 }
+		any_country = { limit = { exists = yes tag = OG5 } country_event = 11106 }
 		government = proletarian_dictatorship
 		ruling_party_ideology = communist
-		country_event = 800052
+		country_event = 800050
 		capital = 3345
 		prestige = 50
 		

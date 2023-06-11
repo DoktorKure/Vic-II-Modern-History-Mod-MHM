@@ -1,0 +1,113 @@
+#Bahrain - Bahrain (506000/126500 POPS)
+1162 = {
+	capitalists = {
+		culture = white_anglo
+		religion = protestant 
+		size = 568
+	 } 
+	capitalists = {
+		culture = white_anglo
+		religion = secularism
+		size = 63
+	 } 
+	soldiers = {
+		culture = arab_gulf
+		religion = sunni 
+		size = 3892
+	 } 
+	aristocrats = {
+		culture = arab_gulf
+		religion = sunni 
+		size = 5060
+	 } 
+	clergymen = {
+		culture = arab_gulf
+		religion = sunni 
+		size = 1265
+	 } 
+	clerks = {
+		culture = arab_gulf
+		religion = sunni 
+		size = 4069
+	 } 
+	artisans = {
+		culture = arab_gulf
+		religion = sunni 
+		size = 3866
+	 } 
+	craftsmen = {
+		culture = white_anglo
+		religion = protestant 
+		size = 569
+	 } 
+	craftsmen = {
+		culture = white_anglo
+		religion = secularism
+		size = 63
+	 } 
+	craftsmen = {
+		culture = chinese
+		religion = taoism 
+		size = 1138
+	 } 
+	craftsmen = {
+		culture = chinese
+		religion = secularism
+		size = 126
+	 } 
+	craftsmen = {
+		culture = hindi
+		religion = hindu 
+		size = 8686
+	 } 
+	craftsmen = {
+		culture = hindi
+		religion = secularism
+		size = 965
+	 } 
+	farmers = {
+		culture = hindi
+		religion = hindu 
+		size = 2698
+	 } 
+	farmers = {
+		culture = hindi
+		religion = secularism
+		size = 299
+	 } 
+	farmers = {
+		culture = arab_gulf
+		religion = shiite 
+		size = 44275
+	 } 
+	farmers = {
+		culture = arab_gulf
+		religion = orthodox 
+		size = 1138
+	 } 
+	farmers = {
+		culture = arab_gulf
+		religion = secularism
+		size = 126
+	 } 
+	farmers = {
+		culture = filipino
+		religion = catholic 
+		size = 7969
+	 } 
+	farmers = {
+		culture = filipino
+		religion = secularism
+		size = 885
+	 } 
+	farmers = {
+		culture = punjabi
+		religion = sunni 
+		size = 25300
+	 } 
+	farmers = {
+		culture = bengali
+		religion = sunni 
+		size = 11385
+	 } 
+}

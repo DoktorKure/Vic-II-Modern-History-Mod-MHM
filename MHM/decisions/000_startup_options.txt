@@ -10,16 +10,26 @@ political_decisions = {
 				AND = {
 					NOT = { has_global_flag = 1950_start_date_flag }
 					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1947 }
 				}
 				AND = {
 					has_global_flag = 1950_start_date_flag
 					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1951 }
 				}
 				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
 					has_global_flag = 1992_start_date_flag
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1993 }
+				}
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					has_global_flag = 2015_start_date_flag
+					NOT = { year = 2016 }
 				}
 			}
 		}
@@ -46,16 +56,26 @@ political_decisions = {
 				AND = {
 					NOT = { has_global_flag = 1950_start_date_flag }
 					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1947 }
 				}
 				AND = {
 					has_global_flag = 1950_start_date_flag
 					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1951 }
 				}
 				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
 					has_global_flag = 1992_start_date_flag
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1993 }
+				}
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					has_global_flag = 2015_start_date_flag
+					NOT = { year = 2016 }
 				}
 			}
 		}
@@ -113,16 +133,26 @@ political_decisions = {
 				AND = {
 					NOT = { has_global_flag = 1950_start_date_flag }
 					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1947 }
 				}
 				AND = {
 					has_global_flag = 1950_start_date_flag
 					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1951 }
 				}
 				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
 					has_global_flag = 1992_start_date_flag
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1993 }
+				}
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					has_global_flag = 2015_start_date_flag
+					NOT = { year = 2016 }
 				}
 			}
 		}
@@ -149,16 +179,26 @@ political_decisions = {
 				AND = {
 					NOT = { has_global_flag = 1950_start_date_flag }
 					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1947 }
 				}
 				AND = {
 					has_global_flag = 1950_start_date_flag
 					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1951 }
 				}
 				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
 					has_global_flag = 1992_start_date_flag
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1993 }
+				}
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					has_global_flag = 2015_start_date_flag
+					NOT = { year = 2016 }
 				}
 			}
 		}
@@ -186,16 +226,26 @@ political_decisions = {
 				AND = {
 					NOT = { has_global_flag = 1950_start_date_flag }
 					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1947 }
 				}
 				AND = {
 					has_global_flag = 1950_start_date_flag
 					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1951 }
 				}
 				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
 					has_global_flag = 1992_start_date_flag
+					NOT = { has_global_flag = 2015_start_date_flag }
 					NOT = { year = 1993 }
+				}
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					has_global_flag = 2015_start_date_flag
+					NOT = { year = 2016 }
 				}
 			}
 		}

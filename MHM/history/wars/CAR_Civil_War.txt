@@ -1,0 +1,19 @@
+name = "Central African Civil War"
+2014.1.1 = {
+	add_attacker = CAR
+	add_defender = SEL
+	war_goal = {
+		casus_belli = civil_war
+		actor = CAR
+		receiver = SEL
+	}
+	war_goal = {
+		casus_belli = civil_war
+		actor = SEL
+		receiver = CAR
+	}
+}
+2023.1.1 = {
+	rem_attacker = CAR
+	rem_defender = SEL
+}

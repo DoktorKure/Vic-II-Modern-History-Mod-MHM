@@ -690,6 +690,7 @@ country_event = {
 		tag = SAF
     	year = 1990
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		has_country_flag = bothas_reforms_flag
 		
@@ -960,6 +961,7 @@ country_event = {
 		tag = SAF
     	year = 1963
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		primary_culture = afrikaaner
 		OR = {
 			citizenship_policy = residency
@@ -1040,6 +1042,7 @@ country_event = {
 		tag = SAF
     	year = 1973
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		primary_culture = afrikaaner
 		OR = {
 			citizenship_policy = residency
@@ -1148,6 +1151,7 @@ country_event = {
 		
 		year = 1973
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		primary_culture = afrikaaner
 		OR = {
@@ -1267,6 +1271,7 @@ country_event = {
 	trigger = {
 		OR = { tag = SAF tag = RSA }
 		NOT = { has_global_flag = 1992_start_date_flag }
+		NOT = { has_global_flag = 2015_start_date_flag }
 		OR = {
 			is_possible_vassal = NAM
 			is_our_vassal = NAM
@@ -1435,6 +1440,7 @@ country_event = {
 
 	trigger = {
 		tag = SAF
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { 
 			primary_culture = british 

@@ -3,6 +3,82 @@
 #End dates do matter somewhat - if the end date was in 1947 for example, the country will be independent in the 1950 and 1992 start date.
 #If the end date was in 1975, the country will be vassalized in 1946 and 1950 start dates but independent in 1992 start date.
 
+### 2015 ###
+
+vassal = {
+	first = RUS
+	second = NRO
+	start_date = 2014.2.12
+	end_date = 2022.9.1
+}
+vassal = {
+	first = RUS
+	second = ABK
+	start_date = 1993.2.12
+	end_date = 2025.9.1
+}
+vassal = {
+	first = RUS
+	second = SOT
+	start_date = 1993.2.12
+	end_date = 2025.9.1
+}
+vassal = {
+	first = RUS
+	second = BYE
+	start_date = 1993.2.12
+	end_date = 2025.9.1
+}
+
+vassal = {
+	first = ARM
+	second = NAK
+	start_date = 1993.2.12
+	end_date = 2025.9.1
+}
+
+vassal = {
+	first = BOS
+	second = RSR
+	start_date = 1993.2.12
+	end_date = 2030.9.1
+}
+
+vassal = {
+	first = MOL
+	second = GAG
+	start_date = 1993.2.12
+	end_date = 2025.9.1
+}
+
+vassal = {
+	first = PPN
+	second = BOU
+	start_date = 1993.2.12
+	end_date = 2025.9.1
+}
+
+vassal = {
+	first = USA
+	second = AFG
+	start_date = 2001.10.12
+	end_date = 2021.9.1
+}
+
+vassal = {
+	first = FRA
+	second = NCA
+	start_date = 1998.10.12
+	end_date = 2030.9.1
+}
+
+vassal = {
+	first = ISR
+	second = PAL
+	start_date = 1993.2.12
+	end_date = 2030.9.1
+}
+
 ### 1992 ###
 
 vassal = {

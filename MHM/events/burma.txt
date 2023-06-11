@@ -428,6 +428,7 @@ country_event = {
 	trigger = {
 		tag = BUR
 		year = 1990
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		has_country_flag = 8888_revolt_flag
 		
@@ -517,6 +518,7 @@ country_event = {
 	trigger = {
 		tag = BUR
 		year = 2007
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		has_country_flag = 1990_BUR_elections_flag
 		
@@ -565,6 +567,7 @@ country_event = {
 	trigger = {
 		tag = BUR
 		year = 2010
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		has_country_flag = 1990_BUR_elections_flag
 		

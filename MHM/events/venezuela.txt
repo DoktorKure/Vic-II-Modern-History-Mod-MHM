@@ -606,6 +606,7 @@ country_event = {
 	trigger = {
 		tag = VNZ
 		year = 1998
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { government = democracy government = democracy1 }
 		war = no
@@ -838,6 +839,7 @@ country_event = {
 	trigger = {
 		tag = VNZ
 		year = 2013
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = democracy
 		war = no

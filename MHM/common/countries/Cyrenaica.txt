@@ -101,6 +101,17 @@ party = {
 		trade_policy = protectionism
 		war_policy = jingoism
 		start_date = 1836.1.1
+		end_date = 2014.1.1
+}
+party = {
+		name = "Libyan National Army - Haftar"
+		citizenship_policy = residency
+		economic_policy = state_capitalism
+		ideology = nationalist
+		religious_policy = secularized
+		trade_policy = protectionism
+		war_policy = jingoism
+		start_date = 2014.1.1
 		end_date = 2300.1.1
 }
 party = {

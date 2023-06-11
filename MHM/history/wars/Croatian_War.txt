@@ -15,3 +15,7 @@ name = "Croatian War to Annex Serbian Krajina"
 		receiver = CRO
 	}
 }
+1994.12.24 = {
+	rem_attacker = CRO
+	rem_defender = SRK
+}

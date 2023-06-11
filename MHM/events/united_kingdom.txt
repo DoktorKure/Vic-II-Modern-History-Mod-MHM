@@ -1062,6 +1062,7 @@ country_event = {
 	trigger = {
 		tag = ENG
 		year = 1994
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 }
 		war = no
@@ -1103,6 +1104,7 @@ country_event = {
 	trigger = {
 		tag = ENG
 		year = 2007
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 }
 		war = no

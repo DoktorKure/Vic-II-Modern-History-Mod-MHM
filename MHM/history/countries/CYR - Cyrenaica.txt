@@ -57,16 +57,16 @@ schools = army_tech_school
 }
 
 1992.1.1 = {
-	capital = 1735
+	capital = 1737
 	religion = secularism
-	government = sectarian_dictatorship
+	government = nationalist_dictatorship
 	plurality = 12.0
 	nationalvalue = nv_order
 	literacy = 0.19
 	non_state_culture_literacy = 0.09
 	civilized = yes
 	prestige = 25
-	ruling_party = party_socialist_0_TRI
+	ruling_party = "Libyan National Army - Haftar"
 	upper_house = {
 		populist = 4
 		liberal = 21
@@ -125,4 +125,5 @@ schools = army_tech_school
 	ww2_aircraft_carrier = 1
 	ww2_command_system = 1
 	command_of_the_sea = 1
+	oob = "2015/CYR_oob.txt"
 }

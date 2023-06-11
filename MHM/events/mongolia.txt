@@ -114,6 +114,7 @@ country_event = {
 	trigger = {
 		tag = MGL
 		year = 1990
+		NOT = { has_global_flag = 2015_start_date_flag }
 		has_global_flag = autumn_of_nations
 		has_country_flag = mgl_batmonkh
 		
@@ -193,6 +194,7 @@ country_event = {
 	trigger = {
 		tag = MGL
 		year = 1992
+		NOT = { has_global_flag = 2015_start_date_flag }
 
 		government = socialist_democracy
 		war = no

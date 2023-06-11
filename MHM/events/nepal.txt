@@ -55,6 +55,7 @@ country_event = {
   trigger = {
     tag = NEP
     year = 2007
+		NOT = { has_global_flag = 2015_start_date_flag }
 OR = { government = hms_government government = absolute_monarchy }
   }
 

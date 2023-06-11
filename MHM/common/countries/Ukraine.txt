@@ -131,17 +131,6 @@ party = {
 		trade_policy = free_trade
 		war_policy = pacifism
 		start_date = 2012.1.1
-		end_date = 2014.1.1
-}
-party = {
-		name = "European Solidarity"
-		citizenship_policy = full_citizenship
-		economic_policy = laissez_faire
-		ideology = liberal
-		religious_policy = secularized
-		trade_policy = free_trade
-		war_policy = pacifism
-		start_date = 2014.1.1
 		end_date = 2092.1.1
 }
 party = {

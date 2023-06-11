@@ -1,96 +1,179 @@
 # GENERATED
 
+#MENA Wars
+
+alliance = {
+	first = KUR
+	second = ROJ
+	start_date = 2013.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = PER
+	second = SYR
+	start_date = 1991.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = PER
+	second = IRQ
+	start_date = 2014.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = PER
+	second = LEB
+	start_date = 2014.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = USA
+	second = IRQ
+	start_date = 2003.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = SYR
+	second = IRQ
+	start_date = 2014.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = LEB
+	second = IRQ
+	start_date = 2014.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = USA
+	second = JOR
+	start_date = 1991.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = USA
+	second = UAE
+	start_date = 1991.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = USA
+	second = SAA
+	start_date = 1991.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = USA
+	second = QAT
+	start_date = 1991.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = USA
+	second = BHR
+	start_date = 1991.1.1
+	end_date = 2030.1.1
+}
+
+
+alliance = {
+	first = BOS
+	second = RSR
+	start_date = 1993.1.1
+	end_date = 2030.1.1
+}
+
 #### WW2 allies ####
 
 alliance = {
 	first = ENG
 	second = USA
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = FRA
 	second = USA
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = ENG
 	second = FRA
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = FRA
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = FRA
 	second = ENG
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = ENG
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = BEL
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = NET
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = LUX
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = ENG
 	second = BEL
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = ENG
 	second = NET
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = ENG
 	second = LUX
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = FRA
 	second = BEL
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = FRA
 	second = NET
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = FRA
 	second = LUX
 	start_date = 1945.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 
 alliance = {
@@ -121,21 +204,21 @@ alliance = {
 	first = USA
 	second = KUW
 	start_date = 1990.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 
 alliance = {
 	first = USA
 	second = KMT
 	start_date = 1990.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 
 alliance = {
 	first = CHI
 	second = NKO
 	start_date = 1990.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 
 alliance = {
@@ -146,17 +229,43 @@ alliance = {
 }
 
 alliance = {
+	first = USA
+	second = KOS
+	start_date = 2008.1.1
+	end_date = 2030.1.1
+}
+
+alliance = {
+	first = SAA
+	second = YEM
+	start_date = 2014.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = UAE
+	second = YEM
+	start_date = 2014.1.1
+	end_date = 2030.1.1
+}
+alliance = {
+	first = SAA
+	second = UAE
+	start_date = 2014.1.1
+	end_date = 2030.1.1
+}
+
+alliance = {
 	first = ENG
 	second = AST
 	start_date = 1945.1.1
-	end_date = 1993.1.1
+	end_date = 2030.1.1
 }
 
 alliance = {
 	first = ENG
 	second = NZL
 	start_date = 1945.1.1
-	end_date = 1993.1.1
+	end_date = 2030.1.1
 }
 
 alliance = {
@@ -218,13 +327,13 @@ alliance = {
 	first = USA
 	second = AST
 	start_date = 1945.1.1
-	end_date = 1986.1.1
+	end_date = 2092.1.1
 }
 alliance = {
 	first = RUS
 	second = DAI
 	start_date = 1990.1.1
-	end_date = 2000.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = RUS
@@ -242,79 +351,79 @@ alliance = {
 	first = CAN
 	second = ENG
 	start_date = 1945.1.1
-	end_date = 1993.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = ENG
 	second = NET
 	start_date = 1945.1.1
-	end_date = 1986.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = CAN
 	start_date = 1945.1.1
-	end_date = 1986.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = BEL
 	start_date = 1945.1.1
-	end_date = 1986.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = DEN
 	start_date = 1945.1.1
-	end_date = 1986.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = ICL
 	start_date = 1945.1.1
-	end_date = 1986.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = ITA
 	start_date = 1945.1.1
-	end_date = 1986.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = LUX
 	start_date = 1945.1.1
-	end_date = 1986.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = NOR
 	start_date = 1945.1.1
-	end_date = 1986.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = POR
 	start_date = 1945.1.1
-	end_date = 1986.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = GRE
 	start_date = 1945.1.1
-	end_date = 1986.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = TUR
 	start_date = 1945.1.1
-	end_date = 1986.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA
 	second = AST
 	start_date = 1991.1.1
-	end_date = 2032.1.1
+	end_date = 2030.1.1
 }
 alliance = {
 	first = USA

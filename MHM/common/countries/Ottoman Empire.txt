@@ -1,8 +1,10 @@
 graphical_culture = OttomanGC
-color = { 255 80 65 }
-hms_government = { 170  206  162 }
-hms_government1 = { 170  206  162 }
-absolute_monarchy = { 170  206  162 }
+color = { 170  206  162 }
+absolute_monarchy = { 97 122 85 }
+theocracy = { 97 122 85 }
+proletarian_dictatorship = { 255 80 65 }
+proletarian_dictatorship1 = { 255 80 65 }
+socialist_democracy = { 255 80 65 }
 
 party = { # Cumhuriyet Halk Partisi
 		name = "Republican People's Party"

@@ -443,6 +443,7 @@ country_event = {
 
 	trigger = {
 		tag = SUD
+		NOT = { has_global_flag = 2015_start_date_flag }
 		year = 2003
 		
 		is_vassal = no
@@ -492,6 +493,7 @@ country_event = {
 
 	trigger = {
 		tag = SUD
+		NOT = { has_global_flag = 2015_start_date_flag }
 		year = 2005
 		
 		is_vassal = no
@@ -556,6 +558,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = SSU
 		year = 2013
 		war = no

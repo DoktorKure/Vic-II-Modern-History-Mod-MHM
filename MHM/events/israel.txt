@@ -2042,6 +2042,7 @@ country_event = {
 	trigger = {
 		tag = ISR
 		year = 2000
+		NOT = { has_global_flag = 2015_start_date_flag }
 	
 		is_vassal = no
 		war = no
@@ -2187,6 +2188,7 @@ country_event = {
 	trigger = {
 		tag = ISR
 		year = 2005
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		is_vassal = no
 		war = no
@@ -2254,6 +2256,7 @@ country_event = {
 	trigger = {
 		tag = PAL
 		year = 2006
+		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = sar_government
 		war = no

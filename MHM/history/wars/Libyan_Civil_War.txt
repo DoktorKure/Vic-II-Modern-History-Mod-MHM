@@ -1,0 +1,19 @@
+name = "Libyan Civil War"
+2014.1.1 = {
+	add_attacker = LBY
+	add_defender = CYR
+	war_goal = {
+		casus_belli = civil_war
+		actor = LBY
+		receiver = CYR
+	}
+	war_goal = {
+		casus_belli = civil_war
+		actor = CYR
+		receiver = LBY
+	}
+}
+2022.1.1 = {
+	rem_attacker = LBY
+	rem_defender = CYR
+}

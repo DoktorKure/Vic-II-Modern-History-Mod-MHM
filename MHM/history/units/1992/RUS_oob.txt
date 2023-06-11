@@ -130,6 +130,12 @@ ABK = {
 	influence_value = 25
 	military_access = yes
 }
+CAR = {
+	level = 5
+	value = 200
+	influence_value = 25
+	military_access = yes
+}
 SYR = {
 	level = 5
 	value = 200
@@ -157,147 +163,147 @@ army = {
 	location = 1008
 	regiment = {
 		name= "Regiment nr1"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr3"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr4"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr5"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr6"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr7"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr8"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr9"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr10"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr11"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr12"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr13"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr14"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr15"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr16"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr17"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr18"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr19"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr20"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr21"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr22"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr23"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr24"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr25"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr26"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr27"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr28"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr29"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
@@ -581,147 +587,147 @@ army = {
 	location = 1008
 	regiment = {
 		name= "Regiment nr1"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr3"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr4"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr5"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr6"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr7"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr8"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr9"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr10"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr11"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr12"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr13"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr14"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr15"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr16"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr17"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr18"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr19"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr20"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr21"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr22"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr23"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr24"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr25"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr26"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr27"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr28"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr29"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
@@ -1005,147 +1011,147 @@ army = {
 	location = 994
 	regiment = {
 		name= "Regiment nr1"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr3"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr4"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr5"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr6"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr7"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr8"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr9"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr10"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr11"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr12"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr13"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr14"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr15"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr16"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr17"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr18"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr19"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr20"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr21"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr22"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr23"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr24"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr25"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr26"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr27"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr28"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr29"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
@@ -1429,147 +1435,147 @@ army = {
 	location = 695
 	regiment = {
 		name= "Regiment nr1"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr3"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr4"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr5"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr6"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr7"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr8"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr9"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr10"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr11"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr12"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr13"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr14"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr15"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr16"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr17"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr18"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr19"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr20"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr21"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr22"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr23"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr24"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr25"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr26"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr27"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr28"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr29"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
@@ -1853,147 +1859,147 @@ army = {
 	location = 1085
 	regiment = {
 		name= "Regiment nr1"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr3"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr4"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr5"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr6"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr7"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr8"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr9"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr10"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr11"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr12"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr13"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr14"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr15"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr16"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr17"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr18"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr19"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr20"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr21"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr22"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr23"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr24"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr25"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr26"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr27"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr28"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr29"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
@@ -2277,147 +2283,147 @@ army = {
 	location = 1078
 	regiment = {
 		name= "Regiment nr1"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr3"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr4"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr5"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr6"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr7"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr8"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr9"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr10"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr11"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr12"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr13"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr14"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr15"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr16"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr17"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr18"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr19"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr20"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr21"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr22"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr23"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr24"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr25"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr26"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr27"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr28"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr29"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
@@ -2701,147 +2707,147 @@ army = {
 	location = 1049
 	regiment = {
 		name= "Regiment nr1"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr2"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr3"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr4"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr5"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr6"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr7"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr8"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr9"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr10"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr11"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr12"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr13"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr14"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr15"
-		type = irregular
+		type = infantry
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr16"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr17"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr18"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr19"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr20"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr21"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr22"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr23"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr24"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr25"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr26"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr27"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr28"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {
 		name= "Regiment nr29"
-		type = irregular
+		type = artillery
 		home = 1008
 	}
 	regiment = {

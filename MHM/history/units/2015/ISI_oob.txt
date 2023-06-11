@@ -1,0 +1,198 @@
+army = {
+	name = "Islamic State Raqqa Army"
+	location = 907
+	regiment = {
+		name= "Regiment nr1"
+		type = irregular
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = irregular
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = irregular
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = irregular
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = irregular
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr6"
+		type = irregular
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr7"
+		type = irregular
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = infantry
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = infantry
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = tank
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = tank
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = artillery
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = artillery
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = artillery
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = artillery
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = artillery
+		home = 907
+	}
+	regiment = {
+		name= "Regiment nr6"
+		type = artillery
+		home = 907
+	}
+}
+army = {
+	name = "Islamic State Mosul Army"
+	location = 923
+	regiment = {
+		name= "Regiment nr1"
+		type = irregular
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = irregular
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = irregular
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = irregular
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = irregular
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr6"
+		type = irregular
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr7"
+		type = irregular
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = infantry
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = infantry
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = tank
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = tank
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = tank
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = artillery
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = artillery
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = artillery
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr4"
+		type = artillery
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr5"
+		type = artillery
+		home = 923
+	}
+	regiment = {
+		name= "Regiment nr6"
+		type = artillery
+		home = 923
+	}
+}

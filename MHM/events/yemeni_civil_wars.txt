@@ -84,7 +84,8 @@ country_event = {
 
 	trigger = {
 		tag = YEM
-		year = 2015
+		year = 2014
+		NOT = { has_global_flag = 2015_start_date_flag }
 		has_global_flag = arab_spring
 		NOT = { year = 2025 }
 		

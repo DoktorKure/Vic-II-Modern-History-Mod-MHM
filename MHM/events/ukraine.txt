@@ -7,6 +7,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = UKR
 		year = 1994
 		OR = { has_country_modifier = hydrogen_nation has_country_modifier = atomic_nation }
@@ -132,8 +133,6 @@ country_event = {
 	
 	option = {
 		name = "Leonid Kravchuk clings on!"
-		#government = presidential_dictatorship  #Why????
-		#country_event = 800050
 		ruling_party_ideology = socialist
 		
 		add_country_modifier = { name = political_strife duration = 1825 }
@@ -300,6 +299,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = UKR
 		year = 2010
 		NOT = { year = 2020 }
@@ -439,6 +439,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
+		NOT = { has_global_flag = 2015_start_date_flag }
 		tag = UKR
 		year = 2014
 		NOT = { year = 2024 }
@@ -712,6 +713,7 @@ country_event = {
 	
 	trigger = {
 		tag = RUS
+		NOT = { has_global_flag = 2015_start_date_flag }
 		year = 2014
 		NOT = { year = 2024 }
 		
@@ -747,6 +749,7 @@ country_event = {
 		prestige_factor = 0.01
 		money = -500000
 		badboy = 5
+		set_global_flag = donbass_war_flag
 		
 		#Conservative gain
 		any_pop = {
@@ -830,4 +833,234 @@ country_event = {
 		
 		ai_chance = { factor = 0.1 }
 	}
+}
+
+#The 2019 election
+country_event = {
+	id = 1014203
+	title = "The $YEAR$ Presidential Election"
+	desc = EVTDESC1014203
+	picture = "Zelenskyy_UKR_2019"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = UKR
+		year = 2019
+		NOT = { year = 2022 }
+		
+		government = democracy
+		is_vassal = no
+		war = no
+		
+		#Not already in power
+		ruling_party_ideology = liberal
+	}
+
+	mean_time_to_happen = {
+		months = 4
+	}
+
+	option = {
+		name = "The comedian wins!"
+		
+		#Right wingers are angry
+		any_pop = {
+			scaled_militancy = {
+				factor = 10
+				ideology = traditionalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = conservative
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = nationalist
+			}
+			scaled_militancy = {
+				factor = 10
+				ideology = populist
+			}
+		}
+		
+		#Western powers gain influence in UKR
+		any_country = { 
+			limit = { 
+				exists = yes 
+				OR = { tag = GER tag = USA tech_school = XEU_tech_school tech_school = XEU_tech_school1 }
+				OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } 
+				is_greater_power = yes
+			}
+			relation = { who = THIS value = 50 }
+			diplomatic_influence = { who = THIS value = 50 }
+		}
+		
+		#Russia loses influence
+		random_country = {
+			limit = { tag = RUS is_greater_power = yes }
+			relation = { who = THIS value = -50 }
+			diplomatic_influence = { who = THIS value = -50 }
+		}
+
+		ruling_party_ideology = progressive
+		
+		ai_chance = { factor = 0.9 }
+	}
+	
+	option = {
+		name = "Petro Poroshenko wins!"
+		
+		ruling_party_ideology = liberal
+		
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+
+		ai_chance = { factor = 0.1 }
+	}
+	
+}
+
+#The Russian invasion - start
+country_event = {
+	id = 1014206
+	title = "The Russo-Ukrainian War"
+	desc = EVTDESC1014206
+	picture = "Russo_Ukrainian_War"
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = RUS
+		year = 2022
+		NOT = { year = 2025 }
+		
+		government = presidential_dictatorship
+		is_vassal = no
+		war = no
+		
+		NOT = { OR = { is_our_vassal = UKR is_sphere_leader_of = UKR } }
+		has_global_flag = euromaidan_UKR
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	option = {
+		name = "We shall install our own regime!"
+		badboy = 30
+		set_global_flag = RUS_UKR_war
+		FIN = { clr_country_flag = finlandization }
+		
+		inherit = NRO
+		
+		RUS = {
+			war = { 
+				target = UKR
+				attacker_goal = { casus_belli = make_puppet }
+				attacker_goal = { casus_belli = acquire_any_state state_province_id = 973 }
+				defender_goal = { casus_belli = acquire_any_state state_province_id = 975 }
+				defender_goal = { casus_belli = acquire_any_state state_province_id = 964 }
+				call_ally = no
+			}
+		}
+		
+		#Western powers gain influence in UKR
+		any_country = { 
+			limit = { 
+				exists = yes 
+				OR = { tag = GER tag = USA tech_school = XEU_tech_school tech_school = XEU_tech_school1 }
+				OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } 
+				is_greater_power = yes
+			}
+			relation = { who = UKR value = 200 }
+			diplomatic_influence = { who = UKR value = 100 }
+		}
+		
+		#Russia loses influence in Europe
+		any_country = {
+			limit = { capital_scope = { continent = europe } NOT = { tag = BYE } }
+			relation = { who = THIS value = -400 }
+		}
+		
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+		
+		ai_chance = { factor = 0.6 }
+	}
+	
+	option = {
+		name = "Satisfy ourselves with taking the south."
+		badboy = 20
+		
+		inherit = NRO
+		set_global_flag = RUS_UKR_war
+		
+		RUS = {
+			war = { 
+				target = UKR
+				attacker_goal = { casus_belli = acquire_any_state state_province_id = 973 }
+				defender_goal = { casus_belli = acquire_any_state state_province_id = 975 }
+				defender_goal = { casus_belli = acquire_any_state state_province_id = 964 }
+				call_ally = no
+			}
+		}
+		
+		#Western powers gain influence in UKR
+		any_country = { 
+			limit = { 
+				exists = yes 
+				OR = { tag = GER tag = USA tech_school = XEU_tech_school tech_school = XEU_tech_school1 }
+				OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } 
+				is_greater_power = yes
+			}
+			relation = { who = UKR value = 50 }
+			diplomatic_influence = { who = UKR value = 50 }
+		}
+		
+		#Russia loses influence in Europe
+		any_country = {
+			limit = { capital_scope = { continent = europe } NOT = { tag = BYE } }
+			relation = { who = THIS value = -400 }
+		}
+		
+		#Finland gets spooked
+		FIN = {
+			clr_country_flag = finlandization
+			remove_country_modifier = neutrality
+			clr_country_flag = renounced_war_rights
+			clr_country_flag = neutrality
+			country_event = 1512260
+			
+			#Remove capital marker
+			any_owned = {
+				remove_province_modifier = neutral_nation_marker
+			}
+		}
+		
+		#Sweden gets spooked
+		SWE = {
+			remove_country_modifier = neutrality
+			clr_country_flag = renounced_war_rights
+			clr_country_flag = neutrality
+			country_event = 1512260
+			
+			#Remove capital marker
+			any_owned = {
+				remove_province_modifier = neutral_nation_marker
+			}
+		}
+		
+		add_country_modifier = { name = revolution_chaos duration = 1825 }
+
+		ai_chance = { factor = 0.4 }
+	}
+	
+	option = {
+		name = "We cannot afford a war with Ukraine."
+		
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+
+		ai_chance = { factor = 0 }
+	}
+	
 }

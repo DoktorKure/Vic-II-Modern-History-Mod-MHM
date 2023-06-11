@@ -1,0 +1,59 @@
+army = {
+	name = "Houthi Army"
+	location = 1178
+	regiment = {
+		name= "Regiment nr1"
+		type = irregular
+		home = 1178
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = irregular
+		home = 1178
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = irregular
+		home = 1178
+	}
+	regiment = {
+		name= "Regiment nr6"
+		type = irregular
+		home = 1178
+	}
+	regiment = {
+		name= "Regiment nr7"
+		type = irregular
+		home = 1178
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = infantry
+		home = 1178
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = infantry
+		home = 1178
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = mechanized_infantry
+		home = 1178
+	}
+	regiment = {
+		name= "Regiment nr1"
+		type = artillery
+		home = 1178
+	}
+	regiment = {
+		name= "Regiment nr2"
+		type = artillery
+		home = 1178
+	}
+	regiment = {
+		name= "Regiment nr3"
+		type = artillery
+		home = 1178
+	}
+}
