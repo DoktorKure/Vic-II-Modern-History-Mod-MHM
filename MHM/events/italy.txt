@@ -7717,7 +7717,7 @@ country_event = {
 			ideology = { factor = 0.01 value = progressive }
 		}
 		any_pop = { 
-			limit = { strata = middle location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { strata = middle location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.04 value = populist }
 		}
 		any_pop = { 
@@ -7792,7 +7792,7 @@ country_event = {
 			scaled_consciousness = { factor = 1 ideology = socialist }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.03 value = populist }
 		}
 		
@@ -7812,7 +7812,7 @@ country_event = {
 			scaled_consciousness = { factor = 2 ideology = big_tent }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.03 value = populist }
 		}
 		
@@ -7937,7 +7937,7 @@ country_event = {
 			scaled_consciousness = { factor = 4 ideology = communist }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.03 value = populist }
 		}
 		
@@ -7989,7 +7989,7 @@ country_event = {
 			ideology = { factor = 0.01 value = progressive }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.02 value = populist }
 		}
 		
@@ -8007,7 +8007,7 @@ country_event = {
 			ideology = { factor = 0.01 value = progressive }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.02 value = populist }
 		}
 		
@@ -8025,7 +8025,7 @@ country_event = {
 			ideology = { factor = 0.01 value = progressive }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.02 value = populist }
 		}
 		
@@ -8140,7 +8140,7 @@ country_event = {
 			ideology = { factor = 0.01 value = progressive }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.03 value = populist }
 		}
 		
@@ -8158,7 +8158,7 @@ country_event = {
 			ideology = { factor = 0.01 value = progressive }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.02 value = populist }
 		}
 		
@@ -8360,7 +8360,7 @@ country_event = {
 			scaled_consciousness = { factor = 5 ideology = communist_social }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.07 value = populist }
 		}
 		
@@ -8401,7 +8401,7 @@ country_event = {
 			consciousness = 4
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.02 value = populist }
 		}
 		
@@ -8454,7 +8454,7 @@ country_event = {
 			ideology = { factor = 0.04 value = socialist }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.02 value = populist }
 		}
 		
@@ -8472,7 +8472,7 @@ country_event = {
 			ideology = { factor = 0.01 value = progressive }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.02 value = populist }
 		}
 		
@@ -8602,7 +8602,7 @@ country_event = {
 			scaled_consciousness = { factor = 4 ideology = communist }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.03 value = populist }
 		}
 		
@@ -8631,7 +8631,7 @@ country_event = {
 			scaled_consciousness = { factor = 2 ideology = progressive }		
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.01 value = populist }
 		}
 		
@@ -8651,7 +8651,7 @@ country_event = {
 			scaled_consciousness = { factor = -1 ideology = communist }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.02 value = populist }
 		}
 		
@@ -8705,7 +8705,7 @@ country_event = {
 			scaled_consciousness = { factor = 2 ideology = communist }		
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.01 value = populist }
 		}
 		
@@ -8848,7 +8848,7 @@ country_event = {
 			scaled_consciousness = { factor = 4 ideology = communist }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.03 value = populist }
 		}
 		
@@ -8908,7 +8908,7 @@ country_event = {
 			ideology = { factor = 0.01 value = communist }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.03 value = populist }
 		}
 		
@@ -8952,7 +8952,7 @@ country_event = {
 			ideology = { factor = 0.02 value = liberal }			
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.03 value = populist }
 		}
         
@@ -8984,7 +8984,7 @@ country_event = {
 			scaled_consciousness = { factor = 2 ideology = socialist }
 		}
 		any_pop = { 
-			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.04 value = populist }
 		}
 		

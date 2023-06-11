@@ -25,7 +25,7 @@ country_event = {
 		name = "Interesting..."
 
 		any_pop = { 
-			limit = { is_primary_culture = no location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 region = TRE_736 } } }
+			limit = { is_primary_culture = no location = { OR = { region = SAR_720 region = MOD_739 region = TUS_744 region = AUS_726 region = AUS_729 } } }
 			ideology = { factor = 0.07 value = populist }
 		}
  	}

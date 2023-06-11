@@ -51,10 +51,14 @@ country_event = {
 		OR = {
 			NOT = { exists = SUD }
 			SUD = { vassal_of = ENG government = colonial_government }
+			SUD = { vassal_of = FBU government = colonial_government }
 		}
 		NOT = { year = 1990 }
 		OR = { tag = EGY tag = UAR }
-		1827 = { owner = { capital_scope = { continent = europe } } } # Khartoum
+		OR = {
+			1827 = { owner = { capital_scope = { continent = europe } } } # Khartoum
+			SUD = { is_vassal = yes overlord = { capital_scope = { continent = europe } }
+		}
 		OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship }
 	}
 
