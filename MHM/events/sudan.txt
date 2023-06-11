@@ -57,7 +57,7 @@ country_event = {
 		OR = { tag = EGY tag = UAR }
 		OR = {
 			1827 = { owner = { capital_scope = { continent = europe } } } # Khartoum
-			SUD = { is_vassal = yes overlord = { capital_scope = { continent = europe } }
+			SUD = { is_vassal = yes overlord = { capital_scope = { continent = europe } } }
 		}
 		OR = { government = presidential_dictatorship government = sectarian_dictatorship government = nationalist_dictatorship }
 	}

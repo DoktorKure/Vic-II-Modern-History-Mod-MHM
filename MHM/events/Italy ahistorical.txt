@@ -1880,7 +1880,7 @@ country_event = {
 		tag = ITA
 		year = 2013
 		month = 4
-		NOT = { has_global_flag = 1992_start_date_flag 
+		NOT = { has_global_flag = 1992_start_date_flag }
 		NOT = { has_global_flag = 2015_start_date_flag }
 		
 		government = presidential_dictatorship
