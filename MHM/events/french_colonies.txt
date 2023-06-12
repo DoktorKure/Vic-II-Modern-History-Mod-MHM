@@ -756,8 +756,38 @@ country_event = {
 		war = no
 		is_vassal = no
 		
-		is_possible_vassal = DAI
-		is_possible_vassal = SVI
+		OR = {
+			#France directly owns all of Vietnam
+			AND = {
+				is_possible_vassal = DAI
+				is_possible_vassal = SVI
+			}
+			#France has vassalized both Vietnams
+			AND = {
+				is_our_vassal = DAI
+				DAI = { government = colonial_government }
+				is_our_vassal = SVI
+				SVI = { government = colonial_government }
+			}
+			#France owns the north but released the south as a colonial province
+			AND = {
+				is_possible_vassal = DAI
+				is_our_vassal = SVI
+				SVI = { government = colonial_government }
+			}
+			#Above, but reversed
+			AND = {
+				is_possible_vassal = SVI
+				is_our_vassal = DAI
+				DAI = { government = colonial_government }
+			}
+			#Vietnam owns all of Vietnam but is a colonial province
+			AND = {
+				is_our_vassal = DAI
+				DAI = { government = colonial_government }
+				DAI = { is_possible_vassal = SVI }
+			}
+		}
 	}
 	
 	mean_time_to_happen = { months = 6 }
