@@ -343,13 +343,13 @@ RUS_715 = { 715 711 713 716 703 } #West Galicia
 
 AUS_726 = { 726 727 728 } #Lombardia North Italy
 
-AUS_729 = { 729 730 731 732 733 736 737 } #Venetia
+AUS_729 = { 729 730 731 732 733 } #Venetia
 
 AUS_734 = { 734 735 } #South Tirol
 
-AUS_736 = { 770 778 } #Istria
+AUS_736 = { 736 737 769 770 778 } #Istria
 
-AUS_768 = { 767 768 769 } #Slovenia
+AUS_768 = { 767 768 } #Slovenia
 
 AUS_771 = { 771 772 773 774 775 776 } #Croatia
 
