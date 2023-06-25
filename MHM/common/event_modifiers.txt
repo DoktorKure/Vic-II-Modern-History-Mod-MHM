@@ -28,23 +28,43 @@ overpopulated_province5 = {
 ### Seasonal Effects ###
 
 winter_province_modifier = {
+	movement_cost = 0.20
+	supply_limit = -10.0
+	icon = 4
+}
+winter_farm_province_modifier = {
 	local_RGO_throughput = -0.06
 	icon = 4
 }
 
 spring_province_modifier = {
+	movement_cost = -0.1
+	supply_limit = 5.0
+	icon = 3
+}
+spring_farm_province_modifier = {
 	local_RGO_throughput = 0.02
 	icon = 3
 }
 
 summer_province_modifier = {
+	movement_cost = -0.2
+	supply_limit = 10.0
+	icon = 3
+}
+summer_farm_province_modifier = {
 	local_RGO_throughput = 0.04
 	icon = 3
 }
 
 autumn_province_modifier = {
-	local_RGO_throughput = 0.06
+	movement_cost = 0.1
+	supply_limit = -5.0
 	icon = 4
+}
+autumn_farm_province_modifier = {
+	local_RGO_throughput = 0.06
+	icon = 3
 }
 
 ### Generic Development Aid ###

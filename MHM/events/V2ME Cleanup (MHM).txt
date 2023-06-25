@@ -151,6 +151,282 @@ country_event = {
 		###					 ###
 		########################
 		
+		### General ###
+		# December - February
+		north_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					OR = {
+						month = 11
+						AND = {
+							month = 0
+							NOT = { month = 2 }
+						}
+					}
+				}
+				NOT = { has_province_modifier = winter_province_modifier }
+				NOT = {
+					OR = {
+						terrain = desert
+						terrain = desert_hills
+						terrain = desert_mountains
+						terrain = semi_desert
+						terrain = semi_desert_hills
+						terrain = semi_desert_mountains
+						terrain = semi_desert_mountains
+						
+						terrain = jungle
+						terrain = jungle_hills
+						terrain = jungle_mountains
+						terrain = seasonal_jungle
+						terrain = seasonal_jungle_hills
+						terrain = seasonal_jungle_mountains
+						terrain = swamp_jungle
+					}
+				}
+			}
+			remove_province_modifier = spring_province_modifier
+			remove_province_modifier = summer_province_modifier
+			remove_province_modifier = autumn_province_modifier
+			add_province_modifier = { name = winter_province_modifier duration = -1 }
+		}
+		south_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					OR = {
+						month = 11
+						AND = {
+							month = 0
+							NOT = { month = 2 }
+						}
+					}
+				}
+				NOT = { has_province_modifier = summer_province_modifier }
+				NOT = {
+					OR = {
+						terrain = desert
+						terrain = desert_hills
+						terrain = desert_mountains
+						terrain = semi_desert
+						terrain = semi_desert_hills
+						terrain = semi_desert_mountains
+						terrain = semi_desert_mountains
+						
+						terrain = jungle
+						terrain = jungle_hills
+						terrain = jungle_mountains
+						terrain = seasonal_jungle
+						terrain = seasonal_jungle_hills
+						terrain = seasonal_jungle_mountains
+						terrain = swamp_jungle
+					}
+				}
+			}
+			remove_province_modifier = spring_province_modifier
+			add_province_modifier = { name = summer_province_modifier duration = -1 }
+			remove_province_modifier = autumn_province_modifier
+			remove_province_modifier = winter_province_modifier
+		}
+		
+		# March - May
+		north_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					month = 2
+					NOT = { month = 5 }
+				}
+				NOT = { has_province_modifier = spring_province_modifier }
+				NOT = {
+					OR = {
+						terrain = desert
+						terrain = desert_hills
+						terrain = desert_mountains
+						terrain = semi_desert
+						terrain = semi_desert_hills
+						terrain = semi_desert_mountains
+						terrain = semi_desert_mountains
+						
+						terrain = jungle
+						terrain = jungle_hills
+						terrain = jungle_mountains
+						terrain = seasonal_jungle
+						terrain = seasonal_jungle_hills
+						terrain = seasonal_jungle_mountains
+						terrain = swamp_jungle
+					}
+				}
+			}
+			add_province_modifier = { name = spring_province_modifier duration = -1 }
+			remove_province_modifier = summer_province_modifier
+			remove_province_modifier = autumn_province_modifier
+			remove_province_modifier = winter_province_modifier
+		}
+		south_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					month = 2
+					NOT = { month = 5 }
+				}
+				NOT = { has_province_modifier = autumn_province_modifier }
+				NOT = {
+					OR = {
+						terrain = desert
+						terrain = desert_hills
+						terrain = desert_mountains
+						terrain = semi_desert
+						terrain = semi_desert_hills
+						terrain = semi_desert_mountains
+						terrain = semi_desert_mountains
+						
+						terrain = jungle
+						terrain = jungle_hills
+						terrain = jungle_mountains
+						terrain = seasonal_jungle
+						terrain = seasonal_jungle_hills
+						terrain = seasonal_jungle_mountains
+						terrain = swamp_jungle
+					}
+				}
+			}
+			remove_province_modifier = spring_province_modifier
+			remove_province_modifier = summer_province_modifier
+			add_province_modifier = { name = autumn_province_modifier duration = -1 }
+			remove_province_modifier = winter_province_modifier
+		}
+		
+		# June - August
+		north_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					month = 5
+					NOT = { month = 8 }
+				}
+				NOT = { has_province_modifier = summer_province_modifier }
+				NOT = {
+					OR = {
+						terrain = desert
+						terrain = desert_hills
+						terrain = desert_mountains
+						terrain = semi_desert
+						terrain = semi_desert_hills
+						terrain = semi_desert_mountains
+						terrain = semi_desert_mountains
+						
+						terrain = jungle
+						terrain = jungle_hills
+						terrain = jungle_mountains
+						terrain = seasonal_jungle
+						terrain = seasonal_jungle_hills
+						terrain = seasonal_jungle_mountains
+						terrain = swamp_jungle
+					}
+				}
+			}
+			remove_province_modifier = spring_province_modifier
+			add_province_modifier = { name = summer_province_modifier duration = -1 }
+			remove_province_modifier = autumn_province_modifier
+			remove_province_modifier = winter_province_modifier
+		}
+		south_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					month = 5
+					NOT = { month = 8 }
+				}
+				NOT = { has_province_modifier = winter_province_modifier }
+				NOT = {
+					OR = {
+						terrain = desert
+						terrain = desert_hills
+						terrain = desert_mountains
+						terrain = semi_desert
+						terrain = semi_desert_hills
+						terrain = semi_desert_mountains
+						terrain = semi_desert_mountains
+						
+						terrain = jungle
+						terrain = jungle_hills
+						terrain = jungle_mountains
+						terrain = seasonal_jungle
+						terrain = seasonal_jungle_hills
+						terrain = seasonal_jungle_mountains
+						terrain = swamp_jungle
+					}
+				}
+			}
+			remove_province_modifier = spring_province_modifier
+			remove_province_modifier = summer_province_modifier
+			remove_province_modifier = autumn_province_modifier
+			add_province_modifier = { name = winter_province_modifier duration = -1 }
+		}
+		
+		# September - November
+		north_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					month = 8
+					NOT = { month = 11 }
+				}
+				NOT = { has_province_modifier = autumn_province_modifier }
+				NOT = {
+					OR = {
+						terrain = desert
+						terrain = desert_hills
+						terrain = desert_mountains
+						terrain = semi_desert
+						terrain = semi_desert_hills
+						terrain = semi_desert_mountains
+						terrain = semi_desert_mountains
+						
+						terrain = jungle
+						terrain = jungle_hills
+						terrain = jungle_mountains
+						terrain = seasonal_jungle
+						terrain = seasonal_jungle_hills
+						terrain = seasonal_jungle_mountains
+						terrain = swamp_jungle
+					}
+				}
+			}
+			remove_province_modifier = spring_province_modifier
+			remove_province_modifier = summer_province_modifier
+			add_province_modifier = { name = autumn_province_modifier duration = -1 }
+			remove_province_modifier = winter_province_modifier
+		}
+		south_hemisphere_metaregion = {
+			limit = {
+				owner = {
+					month = 8
+					NOT = { month = 11 }
+				}
+				NOT = { has_province_modifier = spring_province_modifier }
+				NOT = {
+					OR = {
+						terrain = desert
+						terrain = desert_hills
+						terrain = desert_mountains
+						terrain = semi_desert
+						terrain = semi_desert_hills
+						terrain = semi_desert_mountains
+						terrain = semi_desert_mountains
+						
+						terrain = jungle
+						terrain = jungle_hills
+						terrain = jungle_mountains
+						terrain = seasonal_jungle
+						terrain = seasonal_jungle_hills
+						terrain = seasonal_jungle_mountains
+						terrain = swamp_jungle
+					}
+				}
+			}
+			add_province_modifier = { name = spring_province_modifier duration = -1 }
+			remove_province_modifier = summer_province_modifier
+			remove_province_modifier = autumn_province_modifier
+			remove_province_modifier = winter_province_modifier
+		}
+		
+		### Farms ###
 		# December - February
 		north_hemisphere_metaregion = {
 			limit = {
@@ -175,12 +451,12 @@ country_event = {
 						trade_goods = cotton
 					}
 				}
-				NOT = { has_province_modifier = winter_province_modifier }
+				NOT = { has_province_modifier = winter_farm_province_modifier }
 			}
-			remove_province_modifier = spring_province_modifier
-			remove_province_modifier = summer_province_modifier
-			remove_province_modifier = autumn_province_modifier
-			add_province_modifier = { name = winter_province_modifier duration = -1 }
+			remove_province_modifier = spring_farm_province_modifier
+			remove_province_modifier = summer_farm_province_modifier
+			remove_province_modifier = autumn_farm_province_modifier
+			add_province_modifier = { name = winter_farm_province_modifier duration = -1 }
 		}
 		south_hemisphere_metaregion = {
 			limit = {
@@ -205,12 +481,12 @@ country_event = {
 						trade_goods = cotton
 					}
 				}
-				NOT = { has_province_modifier = summer_province_modifier }
+				NOT = { has_province_modifier = summer_farm_province_modifier }
 			}
-			remove_province_modifier = spring_province_modifier
-			add_province_modifier = { name = summer_province_modifier duration = -1 }
-			remove_province_modifier = autumn_province_modifier
-			remove_province_modifier = winter_province_modifier
+			remove_province_modifier = spring_farm_province_modifier
+			add_province_modifier = { name = summer_farm_province_modifier duration = -1 }
+			remove_province_modifier = autumn_farm_province_modifier
+			remove_province_modifier = winter_farm_province_modifier
 		}
 		
 		# March - May
@@ -232,12 +508,12 @@ country_event = {
 						trade_goods = cotton
 					}
 				}
-				NOT = { has_province_modifier = spring_province_modifier }
+				NOT = { has_province_modifier = spring_farm_province_modifier }
 			}
-			add_province_modifier = { name = spring_province_modifier duration = -1 }
-			remove_province_modifier = summer_province_modifier
-			remove_province_modifier = autumn_province_modifier
-			remove_province_modifier = winter_province_modifier
+			add_province_modifier = { name = spring_farm_province_modifier duration = -1 }
+			remove_province_modifier = summer_farm_province_modifier
+			remove_province_modifier = autumn_farm_province_modifier
+			remove_province_modifier = winter_farm_province_modifier
 		}
 		south_hemisphere_metaregion = {
 			limit = {
@@ -257,12 +533,12 @@ country_event = {
 						trade_goods = cotton
 					}
 				}
-				NOT = { has_province_modifier = autumn_province_modifier }
+				NOT = { has_province_modifier = autumn_farm_province_modifier }
 			}
-			remove_province_modifier = spring_province_modifier
-			remove_province_modifier = summer_province_modifier
-			add_province_modifier = { name = autumn_province_modifier duration = -1 }
-			remove_province_modifier = winter_province_modifier
+			remove_province_modifier = spring_farm_province_modifier
+			remove_province_modifier = summer_farm_province_modifier
+			add_province_modifier = { name = autumn_farm_province_modifier duration = -1 }
+			remove_province_modifier = winter_farm_province_modifier
 		}
 		
 		# June - August
@@ -284,12 +560,12 @@ country_event = {
 						trade_goods = cotton
 					}
 				}
-				NOT = { has_province_modifier = summer_province_modifier }
+				NOT = { has_province_modifier = summer_farm_province_modifier }
 			}
-			remove_province_modifier = spring_province_modifier
-			add_province_modifier = { name = summer_province_modifier duration = -1 }
-			remove_province_modifier = autumn_province_modifier
-			remove_province_modifier = winter_province_modifier
+			remove_province_modifier = spring_farm_province_modifier
+			add_province_modifier = { name = summer_farm_province_modifier duration = -1 }
+			remove_province_modifier = autumn_farm_province_modifier
+			remove_province_modifier = winter_farm_province_modifier
 		}
 		south_hemisphere_metaregion = {
 			limit = {
@@ -309,12 +585,12 @@ country_event = {
 						trade_goods = cotton
 					}
 				}
-				NOT = { has_province_modifier = winter_province_modifier }
+				NOT = { has_province_modifier = winter_farm_province_modifier }
 			}
-			remove_province_modifier = spring_province_modifier
-			remove_province_modifier = summer_province_modifier
-			remove_province_modifier = autumn_province_modifier
-			add_province_modifier = { name = winter_province_modifier duration = -1 }
+			remove_province_modifier = spring_farm_province_modifier
+			remove_province_modifier = summer_farm_province_modifier
+			remove_province_modifier = autumn_farm_province_modifier
+			add_province_modifier = { name = winter_farm_province_modifier duration = -1 }
 		}
 		
 		# September - November
@@ -336,12 +612,12 @@ country_event = {
 						trade_goods = cotton
 					}
 				}
-				NOT = { has_province_modifier = autumn_province_modifier }
+				NOT = { has_province_modifier = autumn_farm_province_modifier }
 			}
-			remove_province_modifier = spring_province_modifier
-			remove_province_modifier = summer_province_modifier
-			add_province_modifier = { name = autumn_province_modifier duration = -1 }
-			remove_province_modifier = winter_province_modifier
+			remove_province_modifier = spring_farm_province_modifier
+			remove_province_modifier = summer_farm_province_modifier
+			add_province_modifier = { name = autumn_farm_province_modifier duration = -1 }
+			remove_province_modifier = winter_farm_province_modifier
 		}
 		south_hemisphere_metaregion = {
 			limit = {
@@ -361,12 +637,12 @@ country_event = {
 						trade_goods = cotton
 					}
 				}
-				NOT = { has_province_modifier = spring_province_modifier }
+				NOT = { has_province_modifier = spring_farm_province_modifier }
 			}
-			add_province_modifier = { name = spring_province_modifier duration = -1 }
-			remove_province_modifier = summer_province_modifier
-			remove_province_modifier = autumn_province_modifier
-			remove_province_modifier = winter_province_modifier
+			add_province_modifier = { name = spring_farm_province_modifier duration = -1 }
+			remove_province_modifier = summer_farm_province_modifier
+			remove_province_modifier = autumn_farm_province_modifier
+			remove_province_modifier = winter_farm_province_modifier
 		}
 		
 		#########################################################
