@@ -735,14 +735,6 @@ country_event = {
 			limit = { is_primary_culture = yes }
 			scaled_consciousness = { factor = 4 ideology = nationalist }
 		}
-		TRE_736 = {
-			any_pop = {
-		    		limit = { is_primary_culture = yes }
-		        	ideology = { factor = 0.08 value = nationalist }
-				consciousness = 4
-				militancy = 1
-			}
-		}
 		
 		random_country = {
 			limit = { tag = YUG is_vassal = no }

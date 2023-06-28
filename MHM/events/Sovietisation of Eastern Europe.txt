@@ -133,7 +133,7 @@ country_event = {
 		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy government = mandate_government government = sar_government } }
 		overlord = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		is_vassal = yes
-		has_global_flag = blocsenabled
+		#has_global_flag = blocsenabled
 		#NOT = { has_global_flag = coexistence_pledge }
 		
 		#Special cases
@@ -143,7 +143,19 @@ country_event = {
 	option = {
 		name = "The $MONARCHTITLE$ is supreme once more"
 		prestige_factor = -0.10
-		ruling_party_ideology = communist
+		clr_country_flag = market_communism
+		random_owned = {
+			limit = {
+				owner = { RUS = { ruling_party_ideology = communist } }
+			}
+			owner = { ruling_party_ideology = communist }
+		}
+		random_owned = {
+			limit = {
+				owner = { RUS = { ruling_party_ideology = communist_social } }
+			}
+			owner = { ruling_party_ideology = communist_social }
+		}
 		government = proletarian_dictatorship
 		country_event = 800050
 		overlord = { relation = { who = THIS value = 100 } }

@@ -1,7 +1,7 @@
 graphical_culture = ChineseGC
 color = { 221 168 82 }
 party = {
-		name = "Yunnan Patriotic Front"
+		name = "Yunnan Kuomintang"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = nationalist
@@ -23,7 +23,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Yunnan Kuomintang"
+		name = "Yunnan Kuomintang (Moderate)"
 		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative

@@ -346,7 +346,15 @@ political_decisions = {
 		picture = "reform_the_unsc"
 		potential = {
 			is_greater_power = yes
-			NOT = { has_global_flag = blocsenabled }
+			#Not during cold war or one of the chief UNSC member states doesn't exist anymore
+			OR = {
+				NOT = { has_global_flag = blocsenabled }
+				RUS = { exists = no }
+				CHI = { exists = no }
+				FRA = { exists = no }
+				ENG = { exists = no }
+				USA = { exists = no }
+			}
 			has_country_modifier = united_nations_ga_member
 			NOT = { has_country_modifier = unsc_permanent_member }
 			NOT = { has_country_flag = not_participating_UNSC }
@@ -354,7 +362,7 @@ political_decisions = {
 		allow = {
 			war = no
 			election = no
-			OR = { #2000 or a UNSC member is no longer a GP
+			OR = { #2000 or a chief UNSC member is no longer a GP
 				cultural_imperialism = 1
 				RUS = { has_country_modifier = unsc_permanent_member is_greater_power = no }
 				CHI = { has_country_modifier = unsc_permanent_member is_greater_power = no }

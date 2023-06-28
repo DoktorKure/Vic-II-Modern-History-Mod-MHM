@@ -329,7 +329,7 @@ country_event = {
 		is_vassal = no
 		
 		#KMT is in charge
-		ruling_party_ideology = conservative
+		OR = { ruling_party_ideology = conservative ruling_party_ideology = nationalist }
 		
 		#KMT won the Civil War
 		has_global_flag = KMT_won_civil_war
@@ -342,7 +342,7 @@ country_event = {
 		name = "Enact Martial Law to stamp out the Communists!"
 		
 		country_event = 800050
-		ruling_party_ideology = conservative
+		ruling_party_ideology = nationalist
 		set_country_flag = KMT_enacts_martial_law
 		set_global_flag = active_CCP_insurgency
 		
@@ -1058,24 +1058,24 @@ country_event = {
 		has_global_flag = KMT_won_civil_war
 		has_global_flag = active_CCP_insurgency
 		NOT = { has_country_flag = Mao_assassinated }
-		year = 1950
+		year = 1949
 		NOT = { year = 1971 }
 		NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } } # It is illogical for communists to rise up against their own government
 		is_vassal = no
-		average_militancy = 8 # Ripe conditions for a revolt
-		#pop_majority_ideology = communist # Majority or plurality of pops are communist
+		OR = { average_militancy = 8 pop_majority_ideology = communist } #Ripe conditions for a revolution
 	}
+	
+	immediate = { clr_global_flag = active_CCP_insurgency }
 	
 	mean_time_to_happen = { months = 3 }
 	
 	option = {
 		name = "Then let us have the war!"
-		clr_global_flag = active_CCP_insurgency
 		set_global_flag = third_KMT_CCP_war_fired
 		random_owned = {
 			limit = {
 				OR = { owned_by = CHI owned_by = SXI owned_by = YNN owned_by = GGX }
-				communist = 10
+				communist = 25
 				NOT = { province_id = 2221 }
 				NOT = { is_capital = yes }
 				NOT = { country_units_in_province = CHI }
@@ -1097,7 +1097,6 @@ country_event = {
 	
 	option = {
 		name = "Seek a compromise somewhere!"
-		clr_global_flag = active_CCP_insurgency
 		government = democracy
 		ruling_party_ideology = communist
 		country_event = 8004007
@@ -1144,7 +1143,6 @@ country_event = {
 	
 	option = {
 		name = "Give in to the communists..."
-		clr_global_flag = active_CCP_insurgency
 		government = proletarian_dictatorship
 		ruling_party_ideology = communist
 		country_event = 800052
@@ -1377,7 +1375,7 @@ country_event = {
 		is_vassal = no
 		
 		#KMT is in charge
-		ruling_party_ideology = conservative
+		OR = { ruling_party_ideology = conservative ruling_party_ideology = nationalist }
 		
 		OR = {
 			is_possible_vassal = FUJ
@@ -1441,19 +1439,19 @@ country_event = {
 		#Nationalists are not happy
 		any_pop = { scaled_militancy = { factor = 10 ideology = conservative } scaled_militancy = { factor = 10 ideology = nationalist } }
 
-		random_owned = { limit = { owner = { is_possible_vassal = FUJ } } owner = { release_vassal = FUJ diplomatic_influence = { who = FUJ value = 200 } FUJ = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = SXI } } owner = { release_vassal = SXI diplomatic_influence = { who = SXI value = 200 } SXI = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = SZC } } owner = { release_vassal = SZC diplomatic_influence = { who = SZC value = 200 } SZC = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = QHA } } owner = { release_vassal = QHA diplomatic_influence = { who = QHA value = 200 } QHA = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = MCK } } owner = { release_vassal = MCK diplomatic_influence = { who = MCK value = 200 } MCK = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = KWA } } owner = { release_vassal = KWA diplomatic_influence = { who = KWA value = 200 } KWA = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = YNN } } owner = { release_vassal = YNN diplomatic_influence = { who = YNN value = 200 } YNN = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = GGX } } owner = { release_vassal = GGX diplomatic_influence = { who = GGX value = 200 } GGX = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = FUJ } } owner = { release_vassal = FUJ diplomatic_influence = { who = FUJ value = 200 } FUJ = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = nationalist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = SXI } } owner = { release_vassal = SXI diplomatic_influence = { who = SXI value = 200 } SXI = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = nationalist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = SZC } } owner = { release_vassal = SZC diplomatic_influence = { who = SZC value = 200 } SZC = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = nationalist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = QHA } } owner = { release_vassal = QHA diplomatic_influence = { who = QHA value = 200 } QHA = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = nationalist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = MCK } } owner = { release_vassal = MCK diplomatic_influence = { who = MCK value = 200 } MCK = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = nationalist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = KWA } } owner = { release_vassal = KWA diplomatic_influence = { who = KWA value = 200 } KWA = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = nationalist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = YNN } } owner = { release_vassal = YNN diplomatic_influence = { who = YNN value = 200 } YNN = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = nationalist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = GGX } } owner = { release_vassal = GGX diplomatic_influence = { who = GGX value = 200 } GGX = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = nationalist } } }
 		random_owned = { limit = { owner = { is_possible_vassal = TIB } } owner = { release_vassal = TIB diplomatic_influence = { who = TIB value = 200 } TIB = { government = absolute_monarchy country_event = 800050 ruling_party_ideology = traditionalist } } }
-		random_owned = { limit = { owner = { is_possible_vassal = XIJ } } owner = { release_vassal = XIJ diplomatic_influence = { who = XIJ value = 200 } XIJ = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = IMN } } owner = { release_vassal = IMN diplomatic_influence = { who = IMN value = 200 } IMN = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = TAI } } owner = { release_vassal = TAI diplomatic_influence = { who = TAI value = 200 } TAI = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
-		random_owned = { limit = { owner = { is_possible_vassal = MGL } } owner = { release_vassal = MGL diplomatic_influence = { who = MGL value = 200 } MGL = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = conservative } } }
+		random_owned = { limit = { owner = { is_possible_vassal = XIJ } } owner = { release_vassal = XIJ diplomatic_influence = { who = XIJ value = 200 } XIJ = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = nationalist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = IMN } } owner = { release_vassal = IMN diplomatic_influence = { who = IMN value = 200 } IMN = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = nationalist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = TAI } } owner = { release_vassal = TAI diplomatic_influence = { who = TAI value = 200 } TAI = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = nationalist } } }
+		random_owned = { limit = { owner = { is_possible_vassal = MGL } } owner = { release_vassal = MGL diplomatic_influence = { who = MGL value = 200 } MGL = { government = nationalist_dictatorship country_event = 800054 ruling_party_ideology = nationalist } } }
 
 		ai_chance = { factor = 0.1 }
 	}
@@ -1743,7 +1741,7 @@ country_event = {
 	trigger = {
 		tag = CHI
 		government = nationalist_dictatorship
-		ruling_party_ideology = conservative
+		ruling_party_ideology = nationalist
 		SXI = {	exists = yes }
 		has_global_flag = KMT_won_civil_war
 		1612 = { owned_by = CHI }
@@ -1827,7 +1825,7 @@ country_event = {
 	trigger = {
 		tag = CHI
 		government = nationalist_dictatorship
-		ruling_party_ideology = conservative
+		ruling_party_ideology = nationalist
 		SXI = {	exists = yes }
 		has_global_flag = KMT_won_civil_war
 		is_possible_vassal = MCK
@@ -1840,7 +1838,7 @@ country_event = {
 		name = "We will restore the Fengtian Clique"
 		prestige = 50
 		release_vassal = MCK
-		MCK = { government = nationalist_dictatorship country_event = 800050 ruling_party_ideology = conservative }
+		MCK = { government = nationalist_dictatorship country_event = 800050 ruling_party_ideology = nationalist }
 		ai_chance = { factor = 0.8 }
 	}
 	
@@ -1877,7 +1875,7 @@ country_event = {
 	trigger = {
 		tag = CHI
 		government = nationalist_dictatorship
-		ruling_party_ideology = conservative
+		OR = { ruling_party_ideology = conservative ruling_party_ideology = nationalist }
 		has_global_flag = KMT_won_civil_war
 		MGL = {	exists = yes is_vassal = no part_of_sphere = no NOT = { alliance_with = RUS } } # poor relations with Soviets
 	}

@@ -18,10 +18,76 @@ country_event = {
 		name = "Excellent"
 		add_country_modifier = { name = atomic_nation duration = -1 }
 		prestige = 50
+		badboy = 2.5
 		clr_country_flag = atomic_bomb_developed
+		clr_country_flag = nuclear_program_discovered
+		
+		#Partial but no Comprehensive Nuclear Test Ban treaty
+		random_owned = { 
+			limit = { owner = { NOT = { has_country_flag = signed_partial_test_ban_treaty } has_global_flag = partial_test_ban_treaty } }
+			owner = { badboy = 2.5 }
+		}
+		#Partial and Comprehensive Nuclear Test Ban treaty
+		random_owned = {
+			limit = { owner = { NOT = { has_country_flag = signed_comprehensive_test_ban_treaty } has_global_flag = comprehensive_test_ban_treaty } }
+			owner = { badboy = 2.5 }
+		}
+	}
+}
+
+#### Discovered! ###
+country_event = {
+	id = 12314321
+	title = "$COUNTRY_ADJ$ Nuclear Program Discovered!"
+	desc = "Whether it be a leak from inside, a successful intelligence operation, or simple negligence, the $COUNTRY_ADJ$ nuclear program has been confirmed to be underway for all to see and know!"
+	picture = "atomic_bomb"
+	
+	major = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				has_country_flag = atomic_bomb_developed
+				has_country_modifier = develop_atomic_bomb
+				NOT = { has_country_modifier = atomic_nation }
+				NOT = { has_country_flag = nuclear_program_discovered }
+			}
+			AND = {
+				has_country_flag = hydrogen_bomb_developed
+				has_country_modifier = develop_hydrogen_bomb
+				NOT = { has_country_modifier = hydrogen_nation }
+				NOT = { has_country_flag = nuclear_program_discovered }
+			}
+		}
 	}
 	
+	mean_time_to_happen = {
+		months = 48
+		modifier = {
+			factor = 1.3
+			has_country_modifier = spy_high_gp
+		}
+	}
+	
+	option = {
+		name = "Damn it!"
+		prestige = -50
+		badboy = 7.5
+		set_country_flag = nuclear_program_discovered
+		
+		#Partial but no Comprehensive Nuclear Test Ban treaty
+		random_owned = { 
+			limit = { owner = { NOT = { has_country_flag = signed_partial_test_ban_treaty } has_global_flag = partial_test_ban_treaty } }
+			owner = { badboy = 2.5 }
+		}
+		#Partial and Comprehensive Nuclear Test Ban treaty
+		random_owned = {
+			limit = { owner = { NOT = { has_country_flag = signed_comprehensive_test_ban_treaty } has_global_flag = comprehensive_test_ban_treaty } }
+			owner = { badboy = 2.5 }
+		}
+	}
 }
+
 #### Gain the H bomb ###
 country_event = {
 	id = 1231433
@@ -42,6 +108,7 @@ country_event = {
 		add_country_modifier = { name = hydrogen_nation duration = -1 }
 		remove_country_modifier = atomic_nation
 		clr_country_flag = hydrogen_bomb_developed
+		clr_country_flag = nuclear_program_discovered
 		prestige = 50
 	}
 	

@@ -7105,7 +7105,7 @@ EVT_19003_NAME;$FROMCOUNTRY$ request permission to maintain their current form o
 EVT_19003_DESC;We have sphered $FROMCOUNTRY$. Their government form is different from ours - $GOVT$. Shall we insist that they change their form of government? If they refuse, we have assets within their govermnent that will attempt to instigate a coup, but we will lose our influence if it fails.;;;;;;;;;;;;;x
 EVT_19003_A;Accept our differences;;;;;;;;;;;;;x
 EVT_19003_B;Demand regime change outright (risk losing influence);;;;;;;;;;;;;x
-EVT_19006_NAME;Demand to install communists in power;;;;;;;;;;;;;x
+EVT_19006_NAME;Demand for regime change!;;;;;;;;;;;;;x
 EVT_19006_DESC;We have come under the sphere of influence of a $SPHEREMASTER$. Our $GOVT$ differs from theirs, and this is causing contention. The hegemony $SPHEREMASTER$ demands our submission and regime change. If we refuse, we risk a coup instigated by $SPHEREMASTER$, or an outright regime change war if the coup fails!;;;;;;;;;;;;;x
 EVT_19006_A;Refuse! (40% Chance of a coup!);;;;;;;;;;;;;x
 EVT_19006_B;Accept and give the communists power;;;;;;;;;;;;;x

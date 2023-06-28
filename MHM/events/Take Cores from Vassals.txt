@@ -90,13 +90,16 @@ country_event = {
     is_triggered_only = yes
 	
 	option = {
-		name = "Incorporate $FROMCOUNTRY$ as a state"
+		name = "Instate direct rule from $CAPITAL$"
 		badboy = 3.5
 		random_owned = { limit = { owner = { has_global_flag = un_committe_on_decolonisation } } owner = { badboy = 3.5 } }
 		FROM = {
+			any_pop = { militancy = 5 consciousness = 5 } 
 			clr_country_flag = interacted_with
+			civilized = no
 		}
 		inherit = FROM
+		FROM = { civilized = yes }
 		
 		any_country = {
 			limit = {
@@ -119,7 +122,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Next country"
+		name = "Next province"
 		random_country = {
 			limit = {
 				vassal_of = THIS

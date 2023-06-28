@@ -86,19 +86,7 @@ political_decisions = {
 			#### Badboy if treaties are unsigned ####
 
 			#Base infamy
-			badboy = 10
-
-			#Partial but no Comprehensive Nuclear Test Ban treaty
-			random_owned = { 
-				limit = { owner = { NOT = { has_country_flag = signed_partial_test_ban_treaty } has_global_flag = partial_test_ban_treaty } }
-				owner = { badboy = 2.5 }
-			}
-
-			#Partial and Comprehensive Nuclear Test Ban treaty
-			random_owned = { 
-				limit = { owner = { NOT = { has_country_flag = signed_comprehensive_test_ban_treaty } has_global_flag = comprehensive_test_ban_treaty } }
-				owner = { badboy = 2.5 }
-			}
+			badboy = 2.5
 
 			#### Nuclear Development Time ####
 
@@ -212,19 +200,7 @@ political_decisions = {
 			#### Badboy if treaties are unsigned ####
 
 			#Base infamy
-			badboy = 10
-
-			#Partial but no Comprehensive Nuclear Test Ban treaty
-			random_owned = { 
-				limit = { owner = { NOT = { has_country_flag = signed_partial_test_ban_treaty } has_global_flag = partial_test_ban_treaty } }
-				owner = { badboy = 2.5 }
-			}
-
-			#Partial and Comprehensive Nuclear Test Ban treaty
-			random_owned = { 
-				limit = { owner = { NOT = { has_country_flag = signed_comprehensive_test_ban_treaty } has_global_flag = comprehensive_test_ban_treaty } }
-				owner = { badboy = 2.5 }
-			}
+			badboy = 2.5
 
 			#### Nuclear Development Time ####
 

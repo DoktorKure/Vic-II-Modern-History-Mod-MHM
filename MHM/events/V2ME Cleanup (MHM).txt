@@ -961,6 +961,41 @@ country_event = {
 			}
 		}
 		
+		#Superstate province modifiers
+		any_country	= {
+			limit = {
+				capital_scope = { has_province_modifier = single_market }
+			}
+			any_owned = {
+				limit = {
+					NOT = { has_province_modifier = single_market }
+				}
+				add_province_modifier = { name = single_market duration = -1 }
+			}
+		}
+		any_country	= {
+			limit = {
+				capital_scope = { has_province_modifier = currency_union_province }
+			}
+			any_owned = {
+				limit = {
+					NOT = { has_province_modifier = currency_union_province }
+				}
+				add_province_modifier = { name = currency_union_province duration = -1 }
+			}
+		}
+		any_country	= {
+			limit = {
+				capital_scope = { has_province_modifier = defence_union }
+			}
+			any_owned = {
+				limit = {
+					NOT = { has_province_modifier = defence_union }
+				}
+				add_province_modifier = { name = defence_union duration = -1 }
+			}
+		}
+		
 		#Economic focus cleanup
 		any_country	= {
 			limit = {
@@ -3033,18 +3068,221 @@ country_event = {
 				}
 			}
 		}
+		
 		#Reduce non-accepted pops during genocides
 		any_country = {
 			limit = {
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
+				limit = { owner = { NOT = { cold_war_doctrine = 1 } NOT = { has_country_flag = death_camp_active } } }
 				any_pop = {
 					limit = {
 						location = { has_province_modifier = ethnic_cleansing_province_modifier }
 						AND = { is_primary_culture = no is_accepted_culture = no }
 					}
 					reduce_pop = 0.99
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { NOT = { cold_war_doctrine = 1 } has_country_flag = death_camp_active } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.99
+				}
+			}
+		}
+		
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { cold_war_doctrine = 1 NOT = { has_country_flag = death_camp_active } } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.99
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { cold_war_doctrine = 1 has_country_flag = death_camp_active } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.98
+				}
+			}
+		}
+		
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { assymetric_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.98
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { assymetric_warfare = 1 has_country_flag = death_camp_active } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.97
+				}
+			}
+		}
+		
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { fourth_generation_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.97
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { fourth_generation_warfare = 1 has_country_flag = death_camp_active } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.96
+				}
+			}
+		}
+		
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { modern_asymmetric_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.96
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { modern_asymmetric_warfare = 1 has_country_flag = death_camp_active } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.95
+				}
+			}
+		}
+		
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { full_spectrum_dominance = 1 NOT = { has_country_flag = death_camp_active } } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.95
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { full_spectrum_dominance = 1 has_country_flag = death_camp_active } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.90
+				}
+			}
+		}
+		
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { fifth_generation_warfare = 1 NOT = { has_country_flag = death_camp_active } } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.85
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
+			}
+			any_owned = {
+				limit = { owner = { fifth_generation_warfare = 1 has_country_flag = death_camp_active } }
+				any_pop = {
+					limit = {
+						location = { has_province_modifier = ethnic_cleansing_province_modifier }
+						AND = { is_primary_culture = no is_accepted_culture = no }
+					}
+					reduce_pop = 0.75
 				}
 			}
 		}

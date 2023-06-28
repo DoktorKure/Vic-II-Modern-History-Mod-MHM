@@ -2576,14 +2576,15 @@ prestige = -0.02
 icon = 16 
 }
 
-develop_bio_weapons = { 
+develop_bio_weapons = {
+badboy = 0.03
 tax_efficiency = -0.02
 icon = 16 
 }
 
 bio_nation = { 
 tax_efficiency = -0.01
-prestige = -0.02 
+badboy = 0.02
 icon = 16 
 }
 
@@ -4534,7 +4535,7 @@ icon = 18
 
 develop_chemical_bomb = {
 tax_efficiency = -0.01
-badboy = 0.01
+badboy = 0.03
 icon = 18
 }
 
@@ -4973,13 +4974,13 @@ icon = 24
 
 develop_atomic_bomb = {
 tax_efficiency = -0.04
-badboy = 0.01
+badboy = 0.03
 icon = 24
 }
 
 develop_hydrogen_bomb = {
 tax_efficiency = -0.08
-badboy = 0.01
+badboy = 0.03
 icon = 24
 }
 

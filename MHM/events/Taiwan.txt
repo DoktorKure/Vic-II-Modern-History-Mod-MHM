@@ -17,7 +17,7 @@ country_event = {
 		NOT = { year = 1990 }
 		
 		#KMT is in charge
-		ruling_party_ideology = conservative
+		ruling_party_ideology = nationalist
 	}
 
 	mean_time_to_happen = { months = 6 }
@@ -48,7 +48,7 @@ country_event = {
 		is_vassal = no
 		
 		#KMT is in charge
-		ruling_party_ideology = conservative
+		ruling_party_ideology = nationalist
 		
 		#PRC won the Civil War
 		CHI = { exists = yes ruling_party_ideology = communist }
@@ -63,14 +63,13 @@ country_event = {
 		name = "Announce the Martial Law!"
 		
 		country_event = 800050
-		ruling_party_ideology = conservative
 		
 		add_country_modifier = { name = kmt_white_terror duration = -1 }
 		
 		any_pop = { 
 			ideology = {
 				factor = 0.1
-				value = conservative
+				value = nationalist
 			}
 		}
 		
@@ -84,6 +83,7 @@ country_event = {
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		
 		government = democracy
+		ruling_party_ideology = conservative
 		country_event = 800054
 		
 		any_pop = { 
@@ -113,7 +113,7 @@ country_event = {
 		NOT = { year = 1990 }
 		
 		government = nationalist_dictatorship
-		ruling_party_ideology = conservative
+		ruling_party_ideology = nationalist
 		war = no
 		is_vassal = no
 	}
@@ -170,7 +170,7 @@ country_event = {
 		#KMT in Taiwan
 		capital = 1485 #Taipei
 		OR = { government = nationalist_dictatorship government = presidential_dictatorship }
-		ruling_party_ideology = conservative
+		ruling_party_ideology = nationalist
 		
 		war = no
 		is_vassal = no
@@ -184,6 +184,7 @@ country_event = {
 		remove_country_modifier = kmt_white_terror
 		
 		government = democracy
+		ruling_party_ideology = conservative
 		country_event = 800054
 		
 		#Voting system

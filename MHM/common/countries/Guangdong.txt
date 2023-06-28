@@ -1,7 +1,7 @@
 graphical_culture = ChineseGC
 color = { 72 61 139 }
 party = {
-		name = "Guangdong Patriotic Front"
+		name = "Guangdong Kuomintang"
 		citizenship_policy = limited_citizenship
 		economic_policy = state_capitalism
 		ideology = nationalist
@@ -23,7 +23,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Conservative Union"
+		name = "Guangdong Kuomintang (Moderate)"
 		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative

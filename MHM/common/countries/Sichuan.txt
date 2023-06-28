@@ -12,7 +12,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Kuomintang Faction"
+		name = "Sichuan Kuomintang (Moderate)"
 		citizenship_policy = limited_citizenship
 		economic_policy = interventionism
 		ideology = conservative
@@ -100,7 +100,7 @@ party = {
 		end_date = 2100.1.1
 }
 party = {
-		name = "Nationalist Front"
+		name = "Sichuan Kuomintang"
 		citizenship_policy = full_citizenship
 		economic_policy = planned_economy
 		ideology = nationalist
