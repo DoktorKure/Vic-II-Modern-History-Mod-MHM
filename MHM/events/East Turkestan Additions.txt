@@ -1484,14 +1484,8 @@ country_event = {
 			is_vassal = no 
 			
 			OR = {
-				#Xinjiang must border the KMT or a KMT vassal
+				#Xinjiang must border the KMT
 				neighbour = THIS
-				AND = {
-					QHA = {
-						exists = yes
-						OR = { vassal_of = KMT vassal_of = CHI }
-					}
-				}
 			}
 		}
 		
@@ -1515,7 +1509,9 @@ country_event = {
 		1600 = {
 			change_province_name = "Urumqi"
 		}
+		XIJ = { all_core = { remove_core = THIS } }
 		create_vassal = XIJ
+		XIJ = { all_core = { add_core = THIS } }
 		ai_chance = { factor = 0.75 }
 	}
 

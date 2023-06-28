@@ -795,6 +795,31 @@ country_event = {
 			owner = { inherit = TAI }
 		}
 		
+		random_owned = {
+			limit = { owner = { is_our_vassal = SXI } }
+			owner = { release_vassal = SXI }
+		}
+		random_owned = {
+			limit = { owner = { is_our_vassal = GGX } }
+			owner = { release_vassal = GGX }
+		}
+		random_owned = {
+			limit = { owner = { is_our_vassal = QHA } }
+			owner = { release_vassal = QHA }
+		}
+		random_owned = {
+			limit = { owner = { is_our_vassal = SZC } }
+			owner = { release_vassal = SZC }
+		}
+		random_owned = {
+			limit = { owner = { is_our_vassal = YNN } }
+			owner = { release_vassal = YNN }
+		}
+		random_owned = {
+			limit = { owner = { is_our_vassal = XIJ } }
+			owner = { release_vassal = XIJ }
+		}
+		
 		CHI = { government = nationalist_dictatorship } #So the tag switch will have the normal color instead of the communist color
 		
 		#Become China
