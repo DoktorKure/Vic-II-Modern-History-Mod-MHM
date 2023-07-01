@@ -644,7 +644,7 @@ country_event = {
 country_event = {
 	id = 19808
 	title = EVT_19808_NAME # EVT_19808_NAME;End of the Cold War
-	desc = EVT_19808_DESC # EVT_19808_DESC;With the fall of the USA, the Cold War has ended!
+	desc = EVT_19808_DESC # EVT_19808_DESC;With the fall of the USSR, the Cold War has ended!
 	picture = "endofcoldwarusa"
 	
 	fire_only_once = yes
@@ -688,16 +688,16 @@ country_event = {
 		#Communism has failed
 		any_pop = {
 			ideology = {
-				factor = -0.3
-				value = communist
+				factor = 0.3
+				value = liberal
 			}
 		}
 		any_country = {
 			limit = { exists = yes }
 			any_pop = {
 				ideology = {
-					factor = -0.3
-					value = communist
+					factor = 0.3
+					value = liberal
 				}
 			}
 		}
