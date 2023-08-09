@@ -1258,6 +1258,8 @@ country_event = {
   title = EVT_8002818_NAME
   desc = EVT_8002818_DESC
   picture = "nwo2_mao_with_khrushchev"
+  major = yes
+  
   is_triggered_only = yes # RUS
 
 	option = {

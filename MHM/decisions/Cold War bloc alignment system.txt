@@ -18,6 +18,7 @@ political_decisions = {
 				is_vassal = no
 				AND = {
 					is_vassal = yes
+					NOT = { OR = { government = colonial_government government = mandate_government } }
 					overlord = {
 						OR = {
 							has_country_flag = joindemo
@@ -121,6 +122,7 @@ political_decisions = {
 				is_vassal = no
 				AND = {
 					is_vassal = yes
+					NOT = { OR = { government = colonial_government government = mandate_government } }
 					overlord = {
 						OR = {
 							has_country_flag = joincomm
@@ -233,6 +235,7 @@ political_decisions = {
 				is_vassal = no
 				AND = {
 					is_vassal = yes
+					NOT = { OR = { government = colonial_government government = mandate_government } }
 					overlord = { has_country_flag = joinnam }
 				}
 			}
@@ -410,6 +413,7 @@ political_decisions = {
 			OR = {
 				is_vassal = no
 				AND = {
+					NOT = { OR = { government = colonial_government government = mandate_government } }
 					is_vassal = yes
 					overlord = { tag = RUS }
 				}
@@ -509,6 +513,7 @@ political_decisions = {
 			OR = {
 				is_vassal = no
 				AND = {
+					NOT = { OR = { government = colonial_government government = mandate_government } }
 					is_vassal = yes
 					overlord = { tag = CHI }
 				}
