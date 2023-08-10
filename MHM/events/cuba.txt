@@ -62,7 +62,7 @@ country_event = {
 			diplomatic_influence = { who = CUB value = 50 }
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.99 }
 	}
 
 	option = {
@@ -94,7 +94,7 @@ country_event = {
 			diplomatic_influence = { who = CUB value = -50 }
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.01 }
 	}
 	
 }
@@ -252,7 +252,7 @@ country_event = {
 			ideology = { factor = 0.10 value = communist }
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.95 }
 	}
 	
 	option = {
@@ -287,7 +287,7 @@ country_event = {
 			diplomatic_influence = { who = CUB value = -50 }
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
   
 }
@@ -378,7 +378,7 @@ country_event = {
 		#Mass reprisals against the Batista regime's members
 		add_country_modifier = { name = dirty_war duration = 1825 }
 
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.95 }
 	}
 
 	option = {
@@ -414,7 +414,7 @@ country_event = {
 		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
 
 }
@@ -575,7 +575,7 @@ country_event = {
 			ideology = { factor = 0.05 value = communist }
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.95 }
 	}
 
 	option = {
@@ -600,7 +600,7 @@ country_event = {
 			ideology = { factor = 0.10 value = nationalist }
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
 }
 
@@ -656,7 +656,7 @@ country_event = {
 		CUB = { country_event = 8003817 }
 		diplomatic_influence = { who = CUB value = -50 }
 
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.95 }
 	}
 
 	option = {
@@ -667,7 +667,7 @@ country_event = {
 		
 		relation = { who = CUB value = 50 } 
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
 
 }
@@ -745,7 +745,7 @@ country_event = {
 		relation = { who = USA value = -50 }
 		relation = { who = RUS value = 50 } 
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.95 }
 	}
 
 	option = {
@@ -771,7 +771,7 @@ country_event = {
 		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.05 }
 	}
 	
 }

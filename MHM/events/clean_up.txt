@@ -307,13 +307,16 @@ country_event = {
 	trigger = {
 		government = socialist_democracy
 		civilized = yes
-		NOT = { has_country_flag = disable_demo_event }
-		political_parties = parties_fair
-		vote_franschise = free_voting
-		political_opinions = democratic_state_opinion
+		NOT = { OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist_social ruling_party_ideology = communist } }
+		AND = {
+			has_country_flag = democracy_from_socialist_republic
+			political_parties = parties_fair
+			vote_franschise = free_voting
+			political_opinions = democratic_state_opinion
+		}
 	}
 	
-	mean_time_to_happen = { days = 1 }
+	mean_time_to_happen = { months = 2 }
 	
 	option = {
 		name = "EVTOPTA60050"

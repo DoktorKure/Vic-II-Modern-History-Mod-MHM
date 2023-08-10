@@ -83,7 +83,13 @@ political_decisions = {
 			#No gov restrictions
 			
 			war = no
-			is_vassal = no
+			OR = {
+				is_vassal = no
+				AND = {
+					is_vassal = yes
+					overlord = { has_country_flag = xea_ambition }
+				}
+			}
 		}
 		
 		effect = {
@@ -116,6 +122,10 @@ political_decisions = {
 			OR = { 
 				AND = { part_of_sphere = yes sphere_owner = { has_country_flag = deny_superstate NOT = { has_country_flag = xea_ambition } } }
 				has_country_modifier = in_bankrupcy
+				AND = {
+					is_vassal = yes
+					overlord = { NOT = { has_country_flag = xea_ambition } }
+				}
 			}
 			war = no
 		}

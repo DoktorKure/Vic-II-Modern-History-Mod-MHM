@@ -7,7 +7,7 @@ country_event = {
 
 	trigger = {
 		NOT = { tag = RUS }
-		has_global_flag = blocsenabled
+		OR = { has_global_flag = blocsenabled has_global_flag = cold_warussr }
 		is_vassal = no
 		war = no
 		exists = RUS
@@ -89,7 +89,7 @@ country_event = { # Soviet-$COUNTRY$ Friendship
 			government = proletarian_dictatorship1
 		}
 		NOT = { has_country_flag = soviet_friendship }
-		has_global_flag = blocsenabled
+		OR = { has_global_flag = blocsenabled has_global_flag = cold_warussr }
 		NOT = { in_sphere = RUS }
 		war = no
 		is_vassal = no

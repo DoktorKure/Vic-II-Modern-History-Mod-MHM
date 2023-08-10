@@ -481,6 +481,7 @@ country_event = { # More equality?
 		
 		add_accepted_culture = azerbaijani
 		add_accepted_culture = armenian
+		add_accepted_culture = byelorussian
 		add_accepted_culture = georgian
 		add_accepted_culture = latvian
 		add_accepted_culture = lithuanian
@@ -489,6 +490,7 @@ country_event = { # More equality?
 		add_accepted_culture = tajik
 		add_accepted_culture = turkmen
 		add_accepted_culture = uighur
+		add_accepted_culture = ukrainian
 		add_accepted_culture = kazak
 		add_accepted_culture = kirgiz
 		add_accepted_culture = tatar
@@ -496,6 +498,7 @@ country_event = { # More equality?
 		add_accepted_culture = chechen
 		add_accepted_culture = circassians
 		add_accepted_culture = abkhaz
+		add_accepted_culture = karakalpak
 		
 		any_pop = {
 			limit = { is_primary_culture = yes }
@@ -508,7 +511,7 @@ country_event = { # More equality?
 	}
 	
 	option = {
-		name = "It is Russian first!."
+		name = "Grant the SSRs autonomy."
 		prestige = 150
 		
 		any_pop = {
@@ -516,7 +519,23 @@ country_event = { # More equality?
 			consciousness = 2 
 			militancy = 3
 			ideology = { factor = 0.25 value = nationalist }
+			ideology = { factor = 0.25 value = communist_social }
 		}
+		
+		random_owned = { limit = { owner = { is_possible_vassal = AZB } } owner = { AZB = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = UKR } } owner = { UKR = { country_event = 1512103 set_country_flag = UKR_CRI_1991_claim_flag } } }
+		random_owned = { limit = { owner = { is_possible_vassal = BYE } } owner = { BYE = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = GEO } } owner = { GEO = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = ARM } } owner = { ARM = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = TKR } } owner = { TKR = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = MOL } } owner = { MOL = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = UZB } } owner = { UZB = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = KYR } } owner = { KYR = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = TAJ } } owner = { TAJ = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = KAZ } } owner = { KAZ = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = LAT } } owner = { LAT = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = LIT } } owner = { LIT = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = EST } } owner = { EST = { country_event = 1512103 } } }
 		
 		ai_chance = { factor = 0.1 }
 	}
