@@ -1,6 +1,6 @@
 political_decisions = {
 	
-	##### Reduces non-accepted pops in THIS #####
+	##### Reduces non-accepted pops in THIS and brings in accepted pops to replace them #####
 	
 	ethnic_cleansing = {
 		picture = "ethnic_cleansing"
@@ -60,6 +60,36 @@ political_decisions = {
 			add_country_modifier = { name = ethnic_cleansing duration = -1 }
 			#Stop exploit
 			add_country_modifier = { name = geno_cooldown duration = 365 }
+			
+			#Unaccepted pops go ballistic
+			any_pop = {
+				limit = { 
+					is_primary_culture = no 
+					is_accepted_culture = no 
+				}
+				militancy = 10
+				consciousness = 10
+				
+				ideology = { factor = 0.1 value = nationalist }
+			}
+			
+			#Accepted pops are happy to get more living space
+			any_pop = {
+				limit = { 
+					is_primary_culture = yes
+				}
+				militancy = -10
+				consciousness = -10
+				ideology = { factor = 0.1 value = nationalist }
+			}
+			any_pop = {
+				limit = { 
+					is_accepted_culture = yes
+				}
+				militancy = -5
+				consciousness = -5
+				ideology = { factor = 0.05 value = nationalist }
+			}
 		}
 		ai_will_do = { 
 			factor = 1
@@ -97,7 +127,6 @@ political_decisions = {
 				minorities_reform = minorities_affirmative_action 
 				government = theocracy
 			}
-			NOT = { has_country_modifier = geno_cooldown }
 		}
 
 		effect = {
@@ -106,264 +135,18 @@ political_decisions = {
 			remove_country_modifier = ethnic_cleansing
 			clr_country_flag = discovered_genocide 
 			clr_country_flag = discovered_genocide1
+			clr_country_flag = promote_colonial_migration_active
 			any_owned = { remove_province_modifier = ethnic_cleansing_province_modifier }
-		}
-		ai_will_do = { factor = 1 }
-	}
-	
-	##### Promote replacement of non-accepted pops in areas owned by THIS #####
-	
-	population_replacement = {
-		picture = "population_replacement"
-		alert = no
-		potential = {
-			OR = {
-				government = presidential_dictatorship
-				government = nationalist_dictatorship
-				government = sectarian_dictatorship
-				government = theocracy
-				government = proletarian_dictatorship
-				government = proletarian_dictatorship1
-				minorities_reform = minorities_oppression
-			}
-			NOT = { has_country_flag = population_replacement_underway }
-			NOT = { has_country_modifier = population_replacement_modifier }
-			#Not already doing a hard genocide
-			NOT = { has_country_flag = ethnic_cleansed }
-			NOT = { has_country_modifier = ethnic_cleansing }
-		}
-
-		allow = {
-			is_vassal = no
-			is_disarmed = no
-			election = no
-			OR = { ruling_party_ideology = nationalist ruling_party_ideology = traditionalist ruling_party_ideology = populist ruling_party_ideology = communist ruling_party_ideology = communist_social }
-			NOT = { citizenship_policy = full_citizenship }
-			NOT = { # Doesn't already have an angry populace or at war as they'll favor hard genocide instead
-				OR = {
-					ai = yes
-					AND = {
-						average_militancy = 7 
-						citizenship_policy = residency
-						has_recently_lost_war = yes
-					}
-					AND = {
-						average_militancy = 9 
-						citizenship_policy = residency
-						revolt_percentage = 0.80 
-					}
-					AND = {
-						jingoism = 24
-						citizenship_policy = residency
-						war = yes
-					}
-				}
-			}
-			NOT = { has_country_modifier = geno_cooldown }
-		}
-
-		effect = {
-			badboy = 5
-			set_country_flag = population_replacement_underway
-			add_country_modifier = { name = population_replacement_modifier duration = -1 }
-			add_country_modifier = { name = geno_cooldown duration = 365 }
-			country_event = 15120371
-		}
-		ai_will_do = { factor = 0 }
-	}
-	
-	end_population_replacement = {
-		picture = "population_replacement"
-		potential = {
-			OR = { 
-				has_country_flag = population_replacement_underway
-				has_country_modifier = population_replacement_modifier
-			}
-		}
-
-		allow = {
-			OR = { is_vassal = yes is_disarmed = yes NOT = { average_militancy = 5 } ai = no }
-			OR = { 
-				ai = no
-				NOT = { 
-					OR = { 
-						ruling_party_ideology = nationalist 
-						ruling_party_ideology = traditionalist 
-						ruling_party_ideology = populist
-						ruling_party_ideology = communist 
-						ruling_party_ideology = communist_social 
-					}
-				}
-				minorities_reform = minorities_equal_rights 
-				minorities_reform = minorities_affirmative_action
-				citizenship_policy = full_citizenship
-			}
-			NOT = { has_country_modifier = geno_cooldown }
-		}
-
-		effect = {
-			clr_country_flag = population_replacement_underway
-			remove_country_modifier = population_replacement_modifier
 			any_owned = { remove_province_modifier = pop_replacement_province_modifier }
+			random_owned = {
+				limit = { owner = { has_country_flag = revert_to_closed_borders } }
+				owner = {
+					political_reform = nobody_gets_out
+					clr_country_flag = revert_to_closed_borders
+				}
+			}
 		}
 		ai_will_do = { factor = 1 }
-	}
-	
-	##### Decision chases away unaccepted pops from THIS #####
-
-	pop_displacement_system_on = {
-		picture = "pop_displacement_system_on"
-		alert = no
-		potential = {
-			NOT = { has_country_flag = pop_displacement_system_active }
-			
-			#Government must be a non-socialist dictatorship
-			OR = {
-				government = presidential_dictatorship
-				government = nationalist_dictatorship
-				government = sectarian_dictatorship
-				government = absolute_monarchy
-				government = theocracy
-			}
-			is_vassal = no
-			
-			NOT = { has_country_modifier = geno_cooldown }
-		}
-		
-		allow = {
-		
-			#Ruling Party must love accepted pops only
-			citizenship_policy = residency
-		
-			#Laws must already be against minorities
-			minorities_reform = minorities_oppression
-			
-			is_vassal = no
-			war = no
-		}
-		
-		effect = {
-			set_country_flag = pop_displacement_system_active
-			
-			prestige_factor = -0.01
-			
-			badboy = 5
-			
-			#Unaccepted pops go ballistic
-			any_pop = {
-				limit = { 
-					is_primary_culture = no 
-					is_accepted_culture = no 
-				}
-				militancy = 10
-				consciousness = 10
-				
-				ideology = { factor = 0.1 value = nationalist }
-			}
-			
-			#Accepted pops are happy to get more living space
-			any_pop = {
-				limit = { 
-					is_primary_culture = yes
-				}
-				militancy = -10
-				consciousness = -10
-				ideology = { factor = 0.1 value = nationalist }
-			}
-			any_pop = {
-				limit = { 
-					is_accepted_culture = yes
-				}
-				militancy = -5
-				consciousness = -5
-				ideology = { factor = 0.05 value = nationalist }
-			}
-			
-			#Stop exploit
-			add_country_modifier = { name = geno_cooldown duration = 365 }
-		}
-		
-		ai_will_do = { 
-			factor = 1
-			
-			#AI will not take decision if infamy is high
-			modifier = { factor = 0 badboy = 0.5 }
-			
-			#AI will not take decision unless militancy is high
-			modifier = { factor = 0 NOT = { average_militancy = 8 } }
-		}
-		
-	}
-
-	pop_displacement_system_off = {
-		picture = "pop_displacement_system_off"
-		alert = no
-		potential = {
-			has_country_flag = pop_displacement_system_active
-			
-			NOT = { has_country_modifier = geno_cooldown }
-		}
-		
-		allow = {
-		
-			OR = {
-				ai = no
-				
-				NOT = {
-					OR = {
-						government = presidential_dictatorship
-						government = nationalist_dictatorship
-						government = sectarian_dictatorship
-						government = absolute_monarchy
-						government = theocracy
-					}
-				}
-				
-				NOT = { citizenship_policy = residency }
-				
-				NOT = { minorities_reform = minorities_oppression }
-				
-				#AI will stop this if it will otherwise lead to containment against THIS
-				badboy = 1
-			}
-			
-		}
-		
-		effect = {
-			clr_country_flag = pop_displacement_system_active
-			
-			#Unaccepted pops are happy
-			any_pop = {
-				limit = { 
-					is_primary_culture = no 
-					is_accepted_culture = no 
-				}
-				militancy = -5
-				consciousness = -5
-			}
-			
-			#Accepted pops are angry
-			any_pop = {
-				limit = { 
-					is_primary_culture = yes
-				}
-				militancy = 5
-				consciousness = 5
-			}
-			any_pop = {
-				limit = { 
-					is_accepted_culture = yes
-				}
-				militancy = 2.5
-				consciousness = 2.5
-			}
-			
-		}
-		
-		ai_will_do = { 
-			factor = 1
-		}
-		
 	}
 	
 	##### Promote migration to colonies to outnumber natives there #####

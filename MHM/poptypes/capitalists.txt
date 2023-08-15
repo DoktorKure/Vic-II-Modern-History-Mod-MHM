@@ -308,15 +308,8 @@ country_migration_target = {
 	
 	#Genocide - Primary and accepted culture
 	modifier = { 
-		factor = 0.1
+		factor = 0.2
 		has_country_flag = ethnic_cleansed
-		NOT = { is_culture_group = THIS }
-	}
-	
-	#Pop displacement system - Primary and accepted culture
-	modifier = { 
-		factor = 0.1
-		has_country_flag = pop_displacement_system_active
 		NOT = { is_culture_group = THIS }
 	}
 	

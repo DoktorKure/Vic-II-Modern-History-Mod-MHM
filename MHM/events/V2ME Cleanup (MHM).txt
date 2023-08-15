@@ -3042,7 +3042,7 @@ country_event = {
 		#Slightly increase primary culture pop growth during pop replacement
 		any_country = {
 			limit = {
-				has_country_flag = population_replacement_underway
+				has_country_flag = ethnic_cleansed
 			}
 			any_owned = {
 				any_pop = {

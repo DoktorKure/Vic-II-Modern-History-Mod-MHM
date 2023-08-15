@@ -4628,10 +4628,9 @@ country_event = {
 	trigger = {
 	
 		#Active attempt to artificially core provinces
-		OR = { 
-			has_country_flag = pop_displacement_system_active 
+		OR = {
 			has_country_flag = promote_colonial_migration_active
-			has_country_flag = population_replacement_underway
+			has_country_flag = ethnic_cleansed
 		}
 	
 		is_vassal = no
