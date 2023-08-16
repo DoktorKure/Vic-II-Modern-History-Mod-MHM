@@ -1,122 +1,167 @@
 #These decisions are temporarily disabled due to the cultures change
-# political_decisions = {
+political_decisions = {
 
-	# pink_tide = { 
-		# picture = pink_tide 
+	pink_tide = { 
+		picture = pink_tide 
 		
-		# potential = { 
-			# NOT = { tag = ARG }
-			# NOT = { tag = CHL }
-			# capital_scope = { 
-				# OR = { 
-					# continent = north_america 
-					# continent = south_america 
-				# }
-				# NOT = {
-					# OR = {
-						# pop_majority_culture = mesoamerican_white_spanish
-						# pop_majority_culture = andean_white_spanish
-						# pop_majority_culture = platinean_white_spanish
-						# pop_majority_culture = caribbean_white_spanish
-						# AND = { 
-							# is_core = BRZ 
-							# pop_majority_culture = white_portuguese 
-						# }
-					# }
-				# } 
-			# } 
-			# OR = {
-				# primary_culture = mesoamerican_white_spanish
-				# primary_culture = andean_white_spanish
-				# primary_culture = platinean_white_spanish
-				# primary_culture = caribbean_white_spanish
-				# tag = BRZ
-			# }
-			# NOT = { has_country_flag = pink_tide }
-		# } 
+		potential = { 
+			capital_scope = {
+				OR = {
+					continent = north_america 
+					continent = south_america 
+				}
+			}
+			OR = {
+				#Capital is full of nonwhites
+				capital_scope = {
+					NOT = {
+						OR = {
+							pop_majority_culture = white_spanish
+							pop_majority_culture = white_portuguese 
+						}
+					}
+				}
+				#Country is full of nonwhites
+				NOT = {
+					OR = {
+						pop_majority_culture = white_spanish
+						pop_majority_culture = white_portuguese 
+					}
+				}
+			}
+			OR = {
+				primary_culture = white_spanish
+				primary_culture = white_portuguese
+			}
+			NOT = { has_country_flag = pink_tide }
+		} 
 		
-		# allow = { 
-			# OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = socialist_democracy }
-			# OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } 
-			# minorities_reform = minorities_affirmative_action
-			# invention = indigenismo
-		# }
+		allow = {
+			NOT = { OR = { government = absolute_monarchy government = sectarian_dictatorship government = nationalist_dictatorship government = theocracy } }
+			OR = { ruling_party_ideology = progressive ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } 
+			minorities_reform = minorities_affirmative_action
+			invention = indigenismo
+		}
 		
-		# effect = { 
-			# prestige = 5
+		effect = {
+			prestige = 5
 			
-			# random_owned = {
-				# limit = {
-					# owner = { primary_culture = white_portuguese }
-				# }
-				# owner = {
-					# primary_culture = pardo_portuguese
-					# add_accepted_culture = white_portuguese
-				# }
-			# }  
-			# #Listing just 'primary_culture' is something I hope works since I had previously listed off every nation, which is suboptimal
-			# random_owned = {
-				# limit = {
-					# owner = { primary_culture = mesoamerican_white_spanish }
-				# }
-				# owner = {
-					# primary_culture = mestizo
-					# add_accepted_culture = mesoamerican_white_spanish
-				# }
-			# }  
+			#Brazil
+			random_owned = {
+				limit = {
+					owner = { primary_culture = white_portuguese }
+				}
+				owner = {
+					primary_culture = pardo_portuguese
+					add_accepted_culture = white_portuguese
+				}
+			}
+			#Not Brazil
+			random_owned = {
+				limit = {
+					owner = { primary_culture = white_spanish }
+				}
+				owner = {
+					primary_culture = mestizo
+					add_accepted_culture = white_spanish
+				}
+			}
 			
-			# random_owned = {
-				# limit = {
-					# owner = { primary_culture = andean_white_spanish }
-				# }
-				# owner = {
-					# primary_culture = mestizo
-					# add_accepted_culture = andean_white_spanish
-				# }
-			# }  
-			
-			# random_owned = {
-				# limit = {
-					# owner = { primary_culture = platinean_white_spanish }
-				# }
-				# owner = {
-					# primary_culture = mestizo
-					# add_accepted_culture = platinean_white_spanish
-				# }
-			# }
-			
-			# random_owned = {
-				# limit = {
-					# owner = { primary_culture = caribbean_white_spanish }
-				# }
-				# owner = {
-					# primary_culture = mestizo
-					# add_accepted_culture = caribbean_white_spanish
-				# }
-			# }
-			
-			# any_pop = { 
-				# limit = {
-					# OR = {
-						# culture = pardo_portuguese
-						# culture = mestizo
-						# culture = native_american_minor
-						# culture = mayan
-						# culture = aimara
-						# culture = mixtec
-						# culture = nahua
-						# culture = quechua
-						# culture = zapotec
-					# }
-				# }
-				# militancy = -2.0
-				# consciousness = 1.0
-			# } 
-			# set_country_flag = pink_tide
-		# } 
+			any_pop = { 
+				limit = {
+					OR = {
+						culture = pardo_portuguese
+						culture = mestizo
+						culture = native_american_minor
+					}
+				}
+				militancy = -2.0
+				consciousness = 1.0
+			}
+			set_country_flag = pink_tide
+		}
 		
-		# ai_will_do = { factor = 1 } 
-	# }
+		ai_will_do = { factor = 1 } 
+	}
+	
+	blue_tide = { 
+		picture = blue_tide 
+		
+		potential = {
+			capital_scope = {
+				OR = {
+					continent = north_america 
+					continent = south_america 
+				}
+			}
+			OR = {
+				capital_scope = {
+					OR = {
+						pop_majority_culture = white_spanish
+						pop_majority_culture = white_portuguese 
+					}
+				}
+				OR = {
+					pop_majority_culture = white_spanish
+					pop_majority_culture = white_portuguese
+				}
+			}
+			NOT = {
+				OR = {
+					primary_culture = white_spanish
+					primary_culture = white_portuguese
+				}
+			}
+			has_country_flag = pink_tide
+		}
+		
+		allow = { 
+			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }
+			OR = { ruling_party_ideology = conservative ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist } 
+			NOT = { minorities_reform = minorities_affirmative_action }
+			invention = indigenismo
+		}
+		
+		effect = {
+			prestige = 5
+			
+			#Brazil
+			random_owned = {
+				limit = {
+					owner = { primary_culture = pardo_portuguese }
+				}
+				owner = {
+					primary_culture = white_portuguese
+					add_accepted_culture = pardo_portuguese
+				}
+			}
+			#Not Brazil
+			random_owned = {
+				limit = {
+					owner = { primary_culture = mestizo }
+				}
+				owner = {
+					primary_culture = white_spanish
+					add_accepted_culture = mestizo
+				}
+			}
+			
+			any_pop = { 
+				limit = {
+					OR = {
+						culture = pardo_portuguese
+						culture = mestizo
+						culture = native_american_minor
+					}
+				}
+				militancy = 2.0
+				consciousness = 1.0
+			}
+			clr_country_flag = pink_tide
+		}
+		
+		ai_will_do = { factor = 1 } 
+	}
 
 	# cpcn_AFG = { picture = cpc alert = no potential = { tag = AFG primary_culture = pashtun government = sectarian_dictatorship } allow = { } effect = { prestige = -2 primary_culture = tajik  add_accepted_culture = uzbek } ai_will_do = { factor = 1 } }
 	# cpc_AFG = { picture = cpc alert = no potential = { tag = AFG primary_culture = tajik NOT = { government = sectarian_dictatorship } } allow = { } effect = { prestige = -2 primary_culture = pashtun  remove_accepted_culture = uzbek } ai_will_do = { factor = 1 } }

@@ -648,7 +648,7 @@ bio_fuel_factory = {
 		sugar = 2
 	} 
 	output_goods = fuel 
-	value = 2
+	value = 3
 	bonus = {
 		trigger = { 
 			country = { has_country_flag = spclow }
@@ -718,7 +718,7 @@ coal_liquefaction_factory = {
 	# Coal is turned into petroleum to reflect the added processing required
 	output_goods = petroleum
 	# Make this less profitable than other fuels to reflect the difficulty of making oil from coal compared to simply acquiring natural sources of oil
-	value = 1.5
+	value = 2.3
 	bonus = {
 		trigger = { 
 			country = { has_country_flag = spclow }
