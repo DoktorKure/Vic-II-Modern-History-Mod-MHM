@@ -33,10 +33,10 @@ political_decisions = {
 			OR = { 
 				is_greater_power = yes 
 				is_secondary_power = yes 
-				military_score = 600
+				OR = { military_score = 600 has_country_modifier = international_pariah }
 				AND = {
 					any_owned_province = { trade_goods = other_minerals } #Has uranium deposits
-					military_score = 300
+					OR = { military_score = 300  has_country_modifier = international_pariah }
 				}
 			}
 
@@ -177,7 +177,7 @@ political_decisions = {
 			OR = { 
 				is_greater_power = yes 
 				is_secondary_power = yes 
-				military_score = 600 
+				OR = { military_score = 600 has_country_modifier = international_pariah }
 			}
 
 			OR = { war_policy = jingoism war_policy = pro_military }
