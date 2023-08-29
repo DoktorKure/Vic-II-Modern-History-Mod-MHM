@@ -9427,3 +9427,40 @@
 		size = 5852
 	 } 
 }
+3381 = {
+	officers = {
+		culture = french
+		religion = catholic 
+		size = 1
+	 } 
+	soldiers = {
+		culture = french
+		religion = catholic 
+		size = 1
+	 } 
+	aristocrats = {
+		culture = french
+		religion = catholic 
+		size = 1
+	 } 
+	capitalists = {
+		culture = french
+		religion = catholic 
+		size = 1
+	 } 
+	clergymen = {
+		culture = french
+		religion = catholic 
+		size = 1
+	 } 
+	artisans = {
+		culture = french
+		religion = catholic 
+		size = 1
+	 } 
+	farmers = {
+		culture = french
+		religion = catholic 
+		size = 1
+	 }
+}

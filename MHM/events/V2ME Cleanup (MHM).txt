@@ -24,24 +24,6 @@
 #
 
 country_event = {
-	id = 47777789
-	title = "AI: Cleanup Setup"
-	desc = "AI: Cleanup Setup"
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = "Set up Cleanup"
-		CLN = {
-			country_event = 47777787
-			country_event = 47777790
-			country_event = 47777791
-			add_country_modifier = { name = neutrality duration = -1 }
-		}
-	}
-}
-
-country_event = {
 	id = 47777787
 	title = "AI: Daily Cleanup Check"
 	desc = "AI: Daily Cleanup Check"
@@ -50,6 +32,31 @@ country_event = {
 	
 	option = {
 		name = "Checking..."
+		
+		#This makes CLN not have to exist on the map
+		CLN = { change_variable = { which = days_till_monthly_cleanup value = -1 } }
+		random_country = {
+			limit = { 
+				NOT = {
+					CLN = { check_variable = { which = days_till_monthly_cleanup value = 0 } }
+				}
+			}
+			CLN = {	set_variable = { which = days_till_monthly_cleanup value = 31 } }
+			CLN = {	change_variable = { which = months_till_yearly_cleanup value = -1 } }
+			CLN = { country_event = 477877790 }
+		}
+		random_country = {
+			limit = { 
+				NOT = {
+					CLN = { check_variable = { which = months_till_yearly_cleanup value = 0 } }
+				}
+			}
+			CLN = {	set_variable = { which = months_till_yearly_cleanup value = 12 } }
+			CLN = { country_event = 477877791 }
+		}
+		
+		clr_global_flag = daily_cleanup_on
+		CLN = { country_event = { id = 477877787 days = 1 } }
 		
 		#Craftsmen, Soldiers, and Bureaucrats bugfix
 		any_country = {
@@ -168,6 +175,206 @@ country_event = {
 				is_our_vassal = CLN
 			}
 			release_vassal = CLN
+		}
+		
+		#Neutrality marker cleanup in case country changes capitals
+		any_country = {
+			limit = {
+				OR = { has_country_modifier = neutrality has_country_modifier = neutrality_AI }
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					NOT = { has_province_modifier = neutral_nation_marker }
+				}
+				add_province_modifier = { name = neutral_nation_marker duration = -1 }
+			}
+		}
+		any_country = {
+			limit = {
+				OR = { has_country_modifier = neutrality has_country_modifier = neutrality_AI }
+			}
+			any_owned = {
+				limit = {
+					is_capital = no
+					has_province_modifier = neutral_nation_marker
+				}
+				remove_province_modifier = neutral_nation_marker
+			}
+		}
+		#Neutrality modifier cleanup for AI nations
+		any_country = {
+			limit = {
+				has_country_modifier = neutrality
+				ai = yes
+				NOT = { has_country_modifier = neutrality_AI }
+			}
+			remove_country_modifier = neutrality
+			add_country_modifier = { name = neutrality_AI duration = -1 }
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = neutrality_AI
+				ai = no
+			}
+			remove_country_modifier = neutrality_AI
+			add_country_modifier = { name = neutrality duration = -1 }
+		}
+		
+		#Mark which countries have nukes
+		any_country = {
+			limit = {
+				OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					NOT = { has_province_modifier = nuclear_nation_marker }
+				}
+				add_province_modifier = { name = nuclear_nation_marker duration = -1 }
+			}
+		}
+		any_country = {
+			limit = {
+				OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
+			}
+			any_owned = {
+				limit = {
+					is_capital = no
+					has_province_modifier = nuclear_nation_marker
+				}
+				remove_province_modifier = nuclear_nation_marker
+			}
+		}
+		
+		#Mark which countries have chemical weapons
+		any_country = {
+			limit = {
+				has_country_modifier = chemical_nation
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					NOT = { has_province_modifier = chemical_nation_marker }
+				}
+				add_province_modifier = { name = chemical_nation_marker duration = -1 }
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = chemical_nation
+			}
+			any_owned = {
+				limit = {
+					is_capital = no
+					has_province_modifier = chemical_nation_marker
+				}
+				remove_province_modifier = chemical_nation_marker
+			}
+		}
+		
+		#Mark which countries have bioweapons
+		any_country = {
+			limit = {
+				has_country_modifier = bio_nation
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					NOT = { has_province_modifier = bio_nation_marker }
+				}
+				add_province_modifier = { name = bio_nation_marker duration = -1 }
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = bio_nation
+			}
+			any_owned = {
+				limit = {
+					is_capital = no
+					has_province_modifier = bio_nation_marker
+				}
+				remove_province_modifier = bio_nation_marker
+			}
+		}
+		
+		#Mark which countries are general UN members
+		any_country = {
+			limit = {
+				has_country_modifier = united_nations
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					NOT = { has_province_modifier = un_member_marker }
+				}
+				add_province_modifier = { name = un_member_marker duration = -1 }
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = united_nations
+			}
+			any_owned = {
+				limit = {
+					is_capital = no
+					has_province_modifier = un_member_marker
+				}
+				remove_province_modifier = un_member_marker
+			}
+		}
+		
+		#Mark which countries are UNGA members
+		any_country = {
+			limit = {
+				has_country_modifier = united_nations_ga_member
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					NOT = { has_province_modifier = unga_member_marker }
+				}
+				add_province_modifier = { name = unga_member_marker duration = -1 }
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = united_nations_ga_member
+			}
+			any_owned = {
+				limit = {
+					is_capital = no
+					has_province_modifier = unga_member_marker
+				}
+				remove_province_modifier = unga_member_marker
+			}
+		}
+		
+		#Mark which countries are UNSC permanent members
+		any_country = {
+			limit = {
+				has_country_modifier = unsc_permanent_member
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					NOT = { has_province_modifier = unsc_member_marker }
+				}
+				add_province_modifier = { name = unsc_member_marker duration = -1 }
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = unsc_permanent_member
+			}
+			any_owned = {
+				limit = {
+					is_capital = no
+					has_province_modifier = unsc_member_marker
+				}
+				remove_province_modifier = unsc_member_marker
+			}
 		}
 		
 		########################

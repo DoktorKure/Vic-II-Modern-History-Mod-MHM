@@ -4994,6 +4994,26 @@ min_military_spending = 0.20
 icon = 23
 }
 
+nuclear_nation_marker = {
+icon = 25
+}
+chemical_nation_marker = {
+icon = 25
+}
+bio_nation_marker = {
+icon = 25
+}
+
+un_member_marker = {
+icon = 9
+}
+unga_member_marker = {
+icon = 9
+}
+unsc_member_marker = {
+icon = 1
+}
+
 nuke_high = {
 immigrant_push = 10
 population_growth = -0.06
@@ -7832,7 +7852,10 @@ denied_independence = {
 }
 
 neutrality = {
-	diplomatic_points_modifier = -0.75
+	icon = 5
+}
+neutrality_AI = {
+	diplomatic_points_modifier = -1
 	icon = 5
 }
 

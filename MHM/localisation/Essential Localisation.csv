@@ -537,6 +537,9 @@ reset_bomb_title;Reset our Nuclear Delivery Options;;;;;;;;x
 reset_bomb_desc;Reset our Nuclear Delivery Options to create new nuclear delivery layouts. Nuclear warfare is a military conflict or political strategy in which nuclear weaponry is used to inflict damage on the enemy. In contrast to conventional warfare, nuclear warfare can produce destruction in a much shorter time-frame and can have a long lasting radiological warfare dimension. A major nuclear exchange would have long-term effects, primarily from the fallout released, and could also lead to a "nuclear winter" that could last for decades, centuries, or even millennia after the initial attack.;;;;;;;;x
 atomic_nation;Possess Atomic Weapons;;;;;;;;x
 hydrogen_nation;Possess Thermonuclear Weapons;;;;;;;;x
+nuclear_nation_marker;Owns Nuclear Weapons;;;;;;;;x
+chemical_nation_marker;Owns Chemical Weapons;;;;;;;;x
+bio_nation_marker;Owns Bioweapons;;;;;;;;x
 sub_bomb_title;Acquire Submarine Nuclear Delivery Means;;;;;;;;x
 air_bomb_title;Acquire Bomber Nuclear Delivery Means;;;;;;;;x
 icbm_bomb_title;Acquire ICBM Nuclear Delivery Means;;;;;;;;x
@@ -553,6 +556,9 @@ develop_the_hydrogen_bomb_desc;Such fusion weapons are generally referred to as 
 develop_atomic_bomb;Developing the Atomic Bomb;;;;;;;;x
 develop_hydrogen_bomb;Developing the Hydrogen Bomb;;;;;;;;x
 EVTDESC1400038;By authority of Her Majesty Queen Elizabeth II, by the Grace of God of the United Kingdom of Great Britain and Northern Ireland and of her other realms and territories Queen, Head of the Commonwealth, Defender of the Faith, and in accordance with Her Majesty's instructions dated the 14th day of September, 1955, a landing was effected this day upon this island of Rockall from HMS Vidal. The Union flag was hoisted and possession of the island was taken in the name of Her Majesty. [Signed] R H Connell, Captain, HMS Vidal, 18 September 1955.;;;;;;;;x
+unsc_member_marker;UNSC Permanent Member;;;;;;;;x
+un_member_marker;UN Member;;;;;;;;x
+unga_member_marker;UN General Assembly Member;;;;;;;;x
 claimrockall_title;Claim Rockall;;;;;;;;x
 claimrockall_desc;The initial incentive was the test-firing of the UK's first guided nuclear weapon, the American-made Corporal missile. The missile was to be launched from South Uist and over the North Atlantic. The Ministry of Defence was concerned that the unclaimed island would provide an opportunity for the Soviet Union to spy on the test. Consequently, in April 1955 a request was sent to the Admiralty to seize the island and declare UK sovereignty lest it become an outpost for foreign observers.;;;;;;;;x
 changenvorder_title;Change our National Value to Order;;;;;;;;x

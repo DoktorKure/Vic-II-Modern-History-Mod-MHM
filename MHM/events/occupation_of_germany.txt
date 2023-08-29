@@ -116,6 +116,7 @@ country_event = {
 			limit = { is_capital = yes }
 			add_province_modifier = { name = neutral_nation_marker duration = -1 }
 		}
+		add_country_modifier = { name = neutrality duration = -1 }
 		any_owned = {
 			remove_province_modifier = occupied_province
 		}
