@@ -3183,6 +3183,7 @@ country_event = {
 			}
 			set_country_flag = colonial_province
 			overlord = { set_country_flag = colonial_overlord }
+			overlord = { clr_country_flag = former_colonial_overlord }
 		}
 		
 		### Clear flags ###

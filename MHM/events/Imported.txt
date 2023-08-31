@@ -137,7 +137,7 @@ country_event = {
 	option = {
 		name = "We are now subjects of a different empire"
 		random_owned = {
-			limit = { owner = { is_vassal = no } }
+			limit = { owner = { is_vassal = no NOT = { has_country_flag = annex_to_new_overlord } } }
 			owner = {
 				clr_country_flag = transfer_to_new_overlord
 				any_country = {
@@ -197,113 +197,134 @@ country_event = {
 		#Event 6016822 fires immediately on day 1 while this event fires only on day 2 so there should be no issue with this flag being cleared before all potential vassals can be transferred.
 		clr_country_flag = new_overlord
 		
-		create_vassal = FROM
-		FROM = {
-			any_pop = {
-				limit = {
-					is_primary_culture = no
-					NOT = {
-						is_accepted_culture = yes
-						is_primary_culture = THIS
-					}
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = new_overlord_annexing }
 				}
-				militancy = 1
-				consciousness = 3
 			}
-			
-			#FROM returns any core that belongs to THIS to THIS
-			any_owned = { limit = { is_core = THIS NOT = { is_core = FROM } } secede_province = THIS }
+			owner = {
+				create_vassal = FROM
+				FROM = {
+					any_pop = {
+						limit = {
+							is_primary_culture = no
+							NOT = {
+								is_accepted_culture = yes
+								is_primary_culture = THIS
+							}
+						}
+						militancy = 1
+						consciousness = 3
+					}
+					
+					#FROM returns any core that belongs to THIS to THIS
+					any_owned = { limit = { is_core = THIS NOT = { is_core = FROM } } secede_province = THIS }
+				}
+				
+				#THIS returns any core that does not belong to THIS to FROM
+				any_owned = { limit = { is_core = FROM NOT = { is_core = THIS } } secede_province = FROM }
+
+				#Match Government
+
+				#Communist Dictatorship
+				random_owned = { 
+					limit = { owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } 
+					owner = { FROM = { government = proletarian_dictatorship country_event = 800052 } }
+				}
+
+				#Socialist Democracy
+				random_owned = { 
+					limit = { owner = { government = socialist_democracy } } 
+					owner = { FROM = { government = socialist_democracy country_event = 800054 } }
+				}
+
+				#Authoritarian Dictatorships
+				random_owned = {
+					limit = { owner = { government = presidential_dictatorship } }
+					owner = { FROM = { government = presidential_dictatorship country_event = 800050 } }
+				}
+				random_owned = { 
+					limit = { owner = { government = nationalist_dictatorship } }
+					owner = { FROM = { government = nationalist_dictatorship country_event = 800050 } }
+				}
+				random_owned = { 
+					limit = { owner = { government = sectarian_dictatorship } }
+					owner = { FROM = { government = sectarian_dictatorship country_event = 800050 } }
+				}
+
+				#Republic
+				random_owned = { 
+					limit = { owner = { OR = { government = democracy government = democracy1 } } } 
+					owner = { FROM = { government = democracy country_event = 800054 } }
+				}
+
+				#HM's Government
+				random_owned = { 
+					limit = { owner = { OR = { government = hms_government government = hms_government1 } } } 
+					owner = { FROM = { government = hms_government1 country_event = 800054 } }
+				}
+
+				#Absolute Monarchy
+				random_owned = { 
+					limit = { owner = { government = absolute_monarchy } } 
+					owner = { FROM = { government = absolute_monarchy country_event = 800050 } }
+				}
+				
+				#Match ruling party
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = traditionalist } }
+					owner = { FROM = { ruling_party_ideology = traditionalist } }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = conservative } }
+					owner = { FROM = { ruling_party_ideology = conservative } }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = liberal } }
+					owner = { FROM = { ruling_party_ideology = liberal } }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = big_tent } }
+					owner = { FROM = { ruling_party_ideology = big_tent } }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = progressive } }
+					owner = { FROM = { ruling_party_ideology = progressive } }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = socialist } }
+					owner = { FROM = { ruling_party_ideology = socialist } }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = communist } }
+					owner = { FROM = { ruling_party_ideology = communist } }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = communist_social } }
+					owner = { FROM = { ruling_party_ideology = communist_social } }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = populist } }
+					owner = { FROM = { ruling_party_ideology = populist } }
+				}
+				random_owned = {
+					limit = { owner = { ruling_party_ideology = nationalist } }
+					owner = { FROM = { ruling_party_ideology = nationalist } }
+				}
+			}
 		}
 		
-		#THIS returns any core that does not belong to THIS to FROM
-		any_owned = { limit = { is_core = FROM NOT = { is_core = THIS } } secede_province = FROM }
-
-		#Match Government
-
-		#Communist Dictatorship
-		random_owned = { 
-			limit = { owner = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } 
-			owner = { FROM = { government = proletarian_dictatorship country_event = 800052 } }
-		}
-
-		#Socialist Democracy
-		random_owned = { 
-			limit = { owner = { government = socialist_democracy } } 
-			owner = { FROM = { government = socialist_democracy country_event = 800054 } }
-		}
-
-		#Authoritarian Dictatorships
 		random_owned = {
-			limit = { owner = { government = presidential_dictatorship } }
-			owner = { FROM = { government = presidential_dictatorship country_event = 800050 } }
-		}
-		random_owned = { 
-			limit = { owner = { government = nationalist_dictatorship } }
-			owner = { FROM = { government = nationalist_dictatorship country_event = 800050 } }
-		}
-		random_owned = { 
-			limit = { owner = { government = sectarian_dictatorship } }
-			owner = { FROM = { government = sectarian_dictatorship country_event = 800050 } }
-		}
-
-		#Republic
-		random_owned = { 
-			limit = { owner = { OR = { government = democracy government = democracy1 } } } 
-			owner = { FROM = { government = democracy country_event = 800054 } }
-		}
-
-		#HM's Government
-		random_owned = { 
-			limit = { owner = { OR = { government = hms_government government = hms_government1 } } } 
-			owner = { FROM = { government = hms_government1 country_event = 800054 } }
-		}
-
-		#Absolute Monarchy
-		random_owned = { 
-			limit = { owner = { government = absolute_monarchy } } 
-			owner = { FROM = { government = absolute_monarchy country_event = 800050 } }
-		}
-		
-		#Match ruling party
-		random_owned = {
-			limit = { owner = { ruling_party_ideology = traditionalist } }
-			owner = { FROM = { ruling_party_ideology = traditionalist } }
-		}
-		random_owned = {
-			limit = { owner = { ruling_party_ideology = conservative } }
-			owner = { FROM = { ruling_party_ideology = conservative } }
-		}
-		random_owned = {
-			limit = { owner = { ruling_party_ideology = liberal } }
-			owner = { FROM = { ruling_party_ideology = liberal } }
-		}
-		random_owned = {
-			limit = { owner = { ruling_party_ideology = big_tent } }
-			owner = { FROM = { ruling_party_ideology = big_tent } }
-		}
-		random_owned = {
-			limit = { owner = { ruling_party_ideology = progressive } }
-			owner = { FROM = { ruling_party_ideology = progressive } }
-		}
-		random_owned = {
-			limit = { owner = { ruling_party_ideology = socialist } }
-			owner = { FROM = { ruling_party_ideology = socialist } }
-		}
-		random_owned = {
-			limit = { owner = { ruling_party_ideology = communist } }
-			owner = { FROM = { ruling_party_ideology = communist } }
-		}
-		random_owned = {
-			limit = { owner = { ruling_party_ideology = communist_social } }
-			owner = { FROM = { ruling_party_ideology = communist_social } }
-		}
-		random_owned = {
-			limit = { owner = { ruling_party_ideology = populist } }
-			owner = { FROM = { ruling_party_ideology = populist } }
-		}
-		random_owned = {
-			limit = { owner = { ruling_party_ideology = nationalist } }
-			owner = { FROM = { ruling_party_ideology = nationalist } }
+			limit = {
+				owner = {
+					has_country_flag = new_overlord_annexing
+				}
+			}
+			owner = {
+				clr_country_flag = new_overlord_annexing
+				FROM = { clr_country_flag = transfer_to_new_overlord_annex annex_to = THIS }
+			}
 		}
 
 	}

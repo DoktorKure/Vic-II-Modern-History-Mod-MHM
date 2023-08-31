@@ -23,6 +23,20 @@ political_decisions = {
 			
 			#Set global flag for new colonial mechanics, can be toggled in 000_startup_options.txt
 			set_global_flag = new_colonial_system
+			
+			#Set Colonial Overlord Flags
+			RUS = { set_country_flag = former_colonial_overlord }
+			BEL = { set_country_flag = colonial_overlord }
+			NET = { set_country_flag = colonial_overlord }
+			USA = { set_country_flag = former_colonial_overlord }
+			GER = { set_country_flag = former_colonial_overlord }
+			JAP = { set_country_flag = former_colonial_overlord }
+			DEN = { set_country_flag = colonial_overlord }
+			ITA = { set_country_flag = former_colonial_overlord }
+			FRA = { set_country_flag = colonial_overlord }
+			ENG = { set_country_flag = colonial_overlord }
+			SPA = { set_country_flag = colonial_overlord }
+			POR = { set_country_flag = colonial_overlord }
 
 			random_country = {
 				limit = {

@@ -11,7 +11,7 @@ country_event = {
 	}
 
 	option = {
-		name = "We are a colony once more"
+		name = "We are now a colony!"
 		
 		clr_country_flag = lost_colonial_war
 		
@@ -24,14 +24,14 @@ country_event = {
 #Colonial War CB - Option for the Overlord to annex - overlord
 country_event = {
 	id = 1610139
-	title = "Restoration of $COUNTRY_ADJ$ $FROMCOUNTRY$"
+	title = "Implementation of $COUNTRY_ADJ$ $FROMCOUNTRY$"
 	desc = EVTDESC1610139
 	picture = "failed_colonial_war"
 
 	is_triggered_only = yes
 
 	option = {
-		name = "Reinstate direct rule from $CAPITAL$!"
+		name = "Initiate direct rule from $CAPITAL$."
 
 		FROM = { any_pop = { militancy = 5 consciousness = 5 } }
 
@@ -49,7 +49,7 @@ country_event = {
 	}
 
 	option = {
-		name = "Grant the Colony some autonomy"
+		name = "Grant the colony some autonomy."
 		
 		badboy = -3
 		

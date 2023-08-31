@@ -52,6 +52,20 @@ political_decisions = {
 			#New colonial system - can be toggled via starting decision
 			set_global_flag = new_colonial_system
 			
+			#Set Former Colonial Overlord Flags
+			RUS = { set_country_flag = former_colonial_overlord }
+			BEL = { set_country_flag = former_colonial_overlord }
+			NET = { set_country_flag = former_colonial_overlord }
+			USA = { set_country_flag = former_colonial_overlord }
+			GER = { set_country_flag = former_colonial_overlord }
+			JAP = { set_country_flag = former_colonial_overlord }
+			DEN = { set_country_flag = former_colonial_overlord }
+			ITA = { set_country_flag = former_colonial_overlord }
+			FRA = { set_country_flag = former_colonial_overlord }
+			ENG = { set_country_flag = former_colonial_overlord }
+			SPA = { set_country_flag = former_colonial_overlord }
+			POR = { set_country_flag = former_colonial_overlord }
+			
 			#Set 2015 population sizes
 			southern_europe_metaregion = {
 				limit = { NOT = { is_core = RUS is_core = GER is_core = POL } }

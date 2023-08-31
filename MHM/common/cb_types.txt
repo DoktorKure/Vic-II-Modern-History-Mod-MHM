@@ -50,6 +50,7 @@ dismantle_cb_add_new
 free_dismantle_cb
 acquire_core_state 
 annex_core_country
+annex_colony
 acquire_substate_region
 annex_all_cores
 annex_all_colonial_cores
@@ -79,8 +80,10 @@ acquire_colonial_state
 conquest 
 civil_war
 rebel_civil_war
+make_colonial_province
 colonial_war
 cut_down_to_size 
+steal_colonial_puppet
 release_puppet
 make_puppet
 overthrow_gov_cb
@@ -534,7 +537,7 @@ conquest = {
 		is_independant = yes
 	}
 
-	badboy_factor = 2.2
+	badboy_factor = 3.0
 	prestige_factor = 5
 	peace_cost_factor = 1
 	penalty_factor = 1
@@ -1667,7 +1670,7 @@ annex_all_colonial_cores = {
 	badboy_factor = 0
 	prestige_factor = 3
 	peace_cost_factor = 0.7
-	penalty_factor = 1
+	penalty_factor = 35
 	is_civil_war = yes
 	always = yes
 
@@ -1780,6 +1783,8 @@ annex_all_colonial_cores = {
 		}
 		
 	}
+	
+	po_remove_prestige = yes
 
 	war_name = WAR_ANNEX_ALL_COLONIAL_CORE_NAME
 
@@ -1816,7 +1821,7 @@ annex_all_cores = { # acquire all core states in target's own hands
 	badboy_factor = 1.5
 	prestige_factor = 2
 	peace_cost_factor = 1.2
-	penalty_factor = 1
+	penalty_factor = 35
 
 	break_truce_prestige_factor = 1
 	break_truce_infamy_factor = 1
@@ -1927,6 +1932,8 @@ annex_all_cores = { # acquire all core states in target's own hands
 		}
 		
 	}
+	
+	po_remove_prestige = yes
 
 	war_name = WAR_ANNEX_ALL_CORE_NAME
 
@@ -2985,6 +2992,347 @@ steal_puppet = {
 		set_country_flag = this_lost_CB
 		
 	}
+}
+
+#Steal Colonial Puppet CB
+steal_colonial_puppet = {
+	sprite_index = 7
+	is_triggered_only = yes
+	months = 12
+	
+	badboy_factor = 2.0
+	prestige_factor = 1
+	peace_cost_factor = 10
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+
+		THIS = { NOT = { has_country_modifier = no_more_war } }
+		THIS = { NOT = { has_country_flag = renounced_war_rights } }
+		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
+
+		THIS = {
+			OR = { 
+				government = theocracy
+				government = absolute_monarchy
+				government = nationalist_dictatorship
+				government = sectarian_dictatorship
+				government = presidential_dictatorship
+
+				NOT = { war_policy = pacifism }
+				war = yes
+				has_country_flag = world_medium
+				has_country_flag = world_high
+				has_country_flag = cold_war_high
+				has_country_modifier = cold_war_hot
+				has_country_flag = colonial_overlord
+			}
+		}
+
+		NOT = { is_our_vassal = THIS }
+		num_of_vassals_no_substates = 1
+
+		OR = {
+			NOT = { has_country_flag = dismantle_declared }
+			THIS = { NOT = { has_country_flag = in_great_war } }
+			THIS = { ai = no }
+		}
+
+	}
+	
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	allowed_countries = {
+		is_our_vassal = FROM
+		FROM = {
+			is_substate = no
+			OR = { government = colonial_government government = mandate_government }
+			OR = {
+				num_of_ports = 1
+				neighbour = THIS
+				war_with = THIS
+				any_neighbor_country = {
+					OR = {
+						vassal_of = THIS
+						substate_of = THIS
+					}
+				}
+			}
+		}
+	}
+	
+	po_release_puppet = yes
+	po_add_to_sphere = yes
+
+	war_name = WAR_TAKE_PUPPET_NAME
+	
+	on_add = {
+	
+		set_country_flag = this_is_aggressor
+	
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = FROM
+				is_substate = no
+				OR = {
+					num_of_ports = 1
+					neighbour = THIS
+					any_neighbor_country = {
+						OR = {
+							vassal_of = THIS
+							substate_of = THIS
+						}
+					}
+				}
+			}
+			set_country_flag = transfer_to_new_overlord
+			set_country_flag = transfer_to_new_colonial_overlord
+		}
+	}
+	
+	on_po_accepted = {
+		THIS = { set_country_flag = new_overlord }
+		
+		THIS = { set_country_flag = this_won_CB }
+		set_country_flag = this_lost_CB
+		
+	}
+}
+
+#Annex existing colony with THIS cores into THIS
+annex_colony = {
+	sprite_index = 7
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 1.5
+	peace_cost_factor = 0.7
+	penalty_factor = 35
+	is_civil_war = yes
+	always = yes
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 12
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+
+		THIS = { NOT = { has_country_modifier = no_more_war } }
+		THIS = { NOT = { has_country_flag = renounced_war_rights } }
+		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
+
+		THIS = { 
+			OR = { 
+				government = theocracy
+				government = absolute_monarchy
+				government = nationalist_dictatorship
+				government = sectarian_dictatorship
+				government = presidential_dictatorship
+				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
+
+				NOT = { war_policy = pacifism } 
+				war = yes 
+				has_country_flag = world_medium 
+				has_country_flag = world_high 
+				has_country_flag = cold_war_high 
+				has_country_modifier = cold_war_hot 
+			} 
+		}
+
+		NOT = { is_our_vassal = THIS }
+		num_of_vassals_no_substates = 1
+
+		OR = {
+			NOT = { has_country_flag = dismantle_declared }
+			THIS = { NOT = { has_country_flag = in_great_war } }
+			THIS = { ai = no }
+		}
+
+	}
+	
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	allowed_countries = {
+		is_our_vassal = FROM
+		FROM = {
+			is_substate = no
+			OR = { government = colonial_government government = mandate_government }
+			AND = {
+				NOT = {
+					any_owned_province = {
+						NOT = {
+							is_core = THIS
+						}
+					}
+				}
+				any_owned_province = { is_core = THIS }
+			}
+		}
+	}
+	
+	po_release_puppet = yes
+	po_add_to_sphere = yes
+	po_remove_prestige = yes
+
+	war_name = WAR_ANNEX_ALL_COLONIAL_CORE_NAME
+	
+	on_add = {
+	
+		set_country_flag = this_is_aggressor
+	
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = FROM
+				is_substate = no
+				OR = { government = colonial_government government = mandate_government }
+				any_owned_province = { is_core = THIS }
+			}
+			set_country_flag = transfer_to_new_overlord
+			set_country_flag = transfer_to_new_overlord_annex
+		}
+	}
+	
+	on_po_accepted = {
+		THIS = { set_country_flag = new_overlord }
+		THIS = { set_country_flag = new_overlord_annexing }
+		
+		THIS = { set_country_flag = this_won_CB }
+		set_country_flag = this_lost_CB
+		
+	}
+}
+
+# Become Colony
+make_colonial_province = {
+	sprite_index = 7
+	is_triggered_only = yes
+	months = 12
+	
+	badboy_factor = 1.9
+	prestige_factor = 1
+	peace_cost_factor = 1.2
+	penalty_factor = 1
+
+	break_truce_prestige_factor = 1
+	break_truce_infamy_factor = 1
+	break_truce_militancy_factor = 1
+	truce_months = 48
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+	
+	can_use = {
+		THIS = { NOT = { has_country_modifier = no_more_war } }
+		THIS = { NOT = { has_country_flag = renounced_war_rights } }
+		NOT = { is_our_vassal = THIS }
+		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
+		OR = {
+			THIS = { # Only superpowers or dictatorships with nationalist ruling parties can puppet nations with more than 8 states
+				OR = {
+					has_country_modifier = un_king1
+					has_country_modifier = un_king2
+					AND = { ruling_party_ideology = nationalist OR = { colonial_nation = yes has_country_flag = colonial_overlord has_country_flag = former_colonial_overlord } OR = { is_greater_power = yes is_secondary_power = yes number_of_states = 9 } } # Tiny countries cannot puppet large countries
+				}
+			}
+			NOT = { number_of_states = 9 }
+		}
+		#Target must not be a European nation
+		NOT = { capital_scope = { continent = europe } }
+
+
+		THIS = { 
+			OR = {
+				#Only right-wing dictatorships can make new colonies
+				AND = {
+					OR = {
+						government = absolute_monarchy
+						government = nationalist_dictatorship
+						government = sectarian_dictatorship
+						government = presidential_dictatorship
+					}
+					OR = {
+						ruling_party_ideology = conservative
+						ruling_party_ideology = populist
+						ruling_party_ideology = nationalist
+						ruling_party_ideology = traditionalist
+					}
+				}
+
+				war_policy = jingoism
+				war = yes
+				
+				has_country_flag = world_medium
+				has_country_flag = world_high
+				has_country_flag = cold_war_high
+				has_country_modifier = cold_war_hot 
+			} 
+		}
+
+
+		is_greater_power = no
+		is_vassal = no
+	}
+
+	po_make_puppet = yes
+	
+	po_disarmament = yes
+	po_reparations = yes
+	
+	war_name = WAR_COLONIAL_NAME
+	
+	on_add = {
+	
+		set_country_flag = this_is_aggressor
+		
+		#Identify attacking nation as a colonial overlord
+		set_country_flag = colonial_overlord_at_war
+	
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+	}
+	
+	on_po_accepted = {
+		THIS = { set_country_flag = this_won_CB }
+		set_country_flag = this_lost_CB
+		
+		set_country_flag = lost_colonial_war
+	}
+	
 }
 
 # Make Puppet

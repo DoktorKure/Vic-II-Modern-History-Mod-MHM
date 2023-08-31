@@ -1,4 +1,16 @@
 CODE;ENGLISH;FRENCH;GERMAN;POLISH;SPANISH;HUNGARIAN;CZECH;HUNGARIAN;DUTCH;PORTUGUESE;RUSSIAN;FINNISH;;x;;;;;;;;;;;;;;;;
+annex_colony;Gain Cored Colony;;;;;;;;;;;;;
+annex_colony_desc;Gain Colony with Cores;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+annex_colony_setup;$RECIPIENT$ gives up colony with $ACTOR$ cores;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+annex_colony_short;Liberate Colony from $RECIPIENT$;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+make_colonial_province;Become Colony;;;;;;;;;;;;;
+make_colonial_province_desc;Become a Colonial Province;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+make_colonial_province_setup;$RECIPIENT$ becomes a Colony of $ACTOR$;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+make_colonial_province_short;Colonize $RECIPIENT$;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+steal_colonial_puppet;Take Colony;;;;;;;;;;;;;
+steal_colonial_puppet_desc;Take a §Ypuppet§W from a third country and make it our Colony.;;;;;;;;;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+steal_colonial_puppet_setup;Take $THIRD$ from $RECIPIENT$.;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+steal_colonial_puppet_short;Colonize $THIRD$;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
 liberate_puppet;Liberate and Puppet Country;;;;;;;;;;;;;
 liberate_puppet_desc;Liberate an §Yentire country§W from its oppressors and puppet it\n\n§YNOTE: §RDo not use it with normal Free people or Liberate Country CBs for other non existent countries.§W;;;;;;;;;;;;;
 liberate_puppet_short;$THIRD$ acquires $STATE$ and becomes our puppet;;;;;;;;;;;;;
@@ -23,8 +35,8 @@ EVTDESC6016828;'For four miserable months they had endured a searing drought tha
 EVTOPTA6016828;When will it rain?;;;;;;;;;;;;;
 EVTDESC6016822;As result of a recent war, $COUNTRY$ is to be transferred to the victorious country in vassalage. Officials in $CAPITAL$ are finishing the preparations to welcome the new governor of the $COUNTRY_ADJ$ people.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVTDESCEVTDESC6016823;As result of a recent war, a vassal nation of our overlord is to be transferred to the victorious country in vassalage. Thankfully $COUNTRY$ was not included in the vassalisation treaty hence we remain proud members of our current overlord's empire.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-EVTNAME6016824;The Vassalisation of $FROMCOUNTRY$;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-EVTDESC6016824;As result of a recent war, $FROMCOUNTRY$ was transferred to us in vassalage. Officials in $CAPITAL$ are finishing the preparations to welcome the $FROMCOUNTRY_ADJ$ people into the $COUNTRY_ADJ$ empire. This event will puppet $FROMCOUNTRY$ and return all $FROMCOUNTRY_ADJ$ but not $COUNTRY_ADJ$ cores. The $FROMCOUNTRY_ADJ$ Government will also be replaced to match the $COUNTRY_ADJ$ Government.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTNAME6016824;The Transfer of $FROMCOUNTRY$;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+EVTDESC6016824;As result of a recent war, $FROMCOUNTRY$ was transferred to us in vassalage. Officials in $CAPITAL$ are finishing the preparations to welcome the $FROMCOUNTRY_ADJ$ people into the $COUNTRY_ADJ$ empire. This event will annex $FROMCOUNTRY$ if their entire nation has our cores. If not, it will return all $FROMCOUNTRY_ADJ$ but not $COUNTRY_ADJ$ cores and the $FROMCOUNTRY_ADJ$ Government will also be replaced to match the $COUNTRY_ADJ$ Government.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 EVT6016824OPTA;We welcome the $FROMCOUNTRY_ADJ$.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 transfer_vassalage_title;Transfer Vassalage;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 transfer_vassalage_desc;The time has come to align ourselves to our new masters.;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
