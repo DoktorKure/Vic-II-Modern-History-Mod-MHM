@@ -181,3 +181,5 @@ NORMAL_WAR_UNIFICATION_ANNEX_NAME;$ORDER$ $FIRST$ Liberation of $SECOND_COUNTRY$
 NORMAL_WAR_UNIFICATION_NAME;$ORDER$ $FIRST$ Liberation of $STATE$;$ORDER$$FIRST$ libération de $STATE$;$ORDER$$FIRST$e Befreiung von $STATE$;;$ORDER$ Liberación $FIRST$ de $STATE$;;;;;;;;;x;;;;;;;;;;;;;;;;
 AGRESSION_WAR_REVANCHISM_NAME;$ORDER$ War to Recover $FIRST$ Lands;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;;
 NORMAL_WAR_REVANCHISM_NAME;$ORDER$ War to Recover $FIRST$ Lands;;;;;;;;;;;;x,,,;;;;;;;;;;;;;;;;;
+NORMAL_WAR_LIBERATE_PUPPET_NAME;$ORDER$$FIRST$ War to Liberate and Puppet $COUNTRY$;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+AGRESSION_WAR_LIBERATE_PUPPET_NAME;$ORDER$$FIRST$ War to Liberate and Puppet $COUNTRY$;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
