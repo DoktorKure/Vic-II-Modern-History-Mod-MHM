@@ -91,6 +91,7 @@ decision = jointheunga
 decision = jointheunsc
 
 decision = jointheimf
+decision = 1946_start_decision
 
 oob = "/USA_oob.txt"
 
@@ -104,6 +105,7 @@ oob = "/USA_oob.txt"
 	union_rights = restricted_unions
 	
 	decision = jointheibrd
+	decision = 1950_start_decision
 	
 	oob = "1950/USA_oob.txt"
 }
@@ -271,6 +273,8 @@ oob = "/USA_oob.txt"
 	power_projection = 1
 	green_blue_water_navies = 1
 	carrier_battle_groups = 1
+
+	decision = 1992_start_decision
 	
 	oob = "1992/USA_oob.txt"
 }
@@ -505,6 +509,8 @@ oob = "/USA_oob.txt"
 	green_blue_water_navies = 1
 	carrier_battle_groups = 1
 	salvo_combat_model = 1
+
+	decision = 2015_start_decision
 	
 	oob = "2015/USA_oob.txt"
 }
