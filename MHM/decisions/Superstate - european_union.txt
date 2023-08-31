@@ -53,7 +53,8 @@ political_decisions = {
 			OR = { 
 				ruling_party_ideology = progressive 
 				ruling_party_ideology = liberal
-				NOT = { has_country_flag = brexit_option } 
+				NOT = { has_country_flag = brexit_option }
+				in_sphere = XEU
 			}
 		}
 

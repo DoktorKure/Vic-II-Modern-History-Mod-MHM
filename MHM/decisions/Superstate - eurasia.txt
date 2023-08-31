@@ -10,6 +10,7 @@ political_decisions = {
 		picture = "xea_ambition"
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
+			NOT = { ruling_party_ideology = liberal ruling_party_ideology = progressive } 
 			
 			OR = {
 				#Open up to all eligible neighbouring nations once one nation has adopted XEA ambitions
@@ -126,6 +127,7 @@ political_decisions = {
 					is_vassal = yes
 					overlord = { NOT = { has_country_flag = xea_ambition } }
 				}
+				OR = { ruling_party_ideology = liberal ruling_party_ideology = progressive } 
 			}
 			war = no
 		}
