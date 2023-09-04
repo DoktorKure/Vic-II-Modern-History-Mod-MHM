@@ -215,6 +215,7 @@ country_event = {
 				add_core = HND
 				remove_core = BNG
 			}
+			add_accepted_culture = bengali
 		}
 		set_global_flag = united_HND_bangladesh
 		ai_chance = { factor = 0.05 }
@@ -1236,6 +1237,7 @@ country_event = {
 		government = hms_government1 # So they don't get the union jack stamp flag
 		country_event = { id = 1412200 days = 10 }
 		PAK = { all_core = { add_core = HND } }
+		BNG = { all_core = { add_core = HND } }
 		random_owned = { #Inherit Pakistan if Britain went for the united India option
 			limit = {
 				owner = {
@@ -1251,6 +1253,7 @@ country_event = {
 		add_accepted_culture = bengali
 		add_accepted_culture = sindi
 		add_accepted_culture = kashmiri
+		add_accepted_culture = tripuri
 		set_country_flag = united_HND_PAK
 	}
 
