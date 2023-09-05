@@ -8,8 +8,6 @@ political_decisions = {
 				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
-				has_country_modifier = commonwealthmember
-				has_country_modifier = commonwealthmembereng
 			}
 			NOT = { has_country_flag = xac_ambition } 
 			NOT = { has_country_flag = xal_ambition } 
@@ -69,33 +67,6 @@ political_decisions = {
 						ENG = { government = absolute_monarchy }
 						ENL = { government = absolute_monarchy }
 						IMP = { government = absolute_monarchy }
-					}
-				}
-			}
-			
-			OR = {
-				#Either don't be India or Pakistan
-				NOT = {
-					tag = HND
-					tag = PAK
-				}
-				#Or be one of them and a vassal of one of those countries
-				OR = {
-					AND = {
-						tag = HND
-						OR = {
-							vassal_of = ENL
-							vassal_of = ENG
-							vassal_of = IMP
-						}
-					}
-					AND = {
-						tag = PAK
-						OR = {
-							vassal_of = ENL
-							vassal_of = ENG
-							vassal_of = IMP
-						}
 					}
 				}
 			}
@@ -191,27 +162,11 @@ political_decisions = {
 				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
-				vassal_of = ENG
-				vassal_of = ENL
-				vassal_of = IMP
-				has_country_modifier = commonwealthmember
-				has_country_modifier = commonwealthmembereng
 			}
 			has_country_flag = imp_ambition
 			has_country_flag = trade_block_ambition 
 		}
 		allow = {
-			OR = {
-				primary_culture = white_anglo
-				primary_culture = anglo_oceanian
-				primary_culture = anglo_canadian
-				primary_culture = british
-				vassal_of = ENG
-				vassal_of = ENL
-				vassal_of = IMP
-				has_country_modifier = commonwealthmember
-				has_country_modifier = commonwealthmembereng
-			}
 			# Must be compatible with superstate leader gov type
 			OR = {
 				AND = {
@@ -251,11 +206,6 @@ political_decisions = {
 				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
-				vassal_of = ENG
-				vassal_of = ENL
-				vassal_of = IMP
-				has_country_modifier = commonwealthmember
-				has_country_modifier = commonwealthmembereng
 			}
 			has_country_flag = imp_ambition
 		}
@@ -299,11 +249,6 @@ political_decisions = {
 				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
-				vassal_of = ENG
-				vassal_of = ENL
-				vassal_of = IMP
-				has_country_modifier = commonwealthmember
-				has_country_modifier = commonwealthmembereng
 			}
 			has_country_flag = imp_ambition
 		}
@@ -351,11 +296,6 @@ political_decisions = {
 				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
-				vassal_of = ENG
-				vassal_of = ENL
-				vassal_of = IMP
-				has_country_modifier = commonwealthmember
-				has_country_modifier = commonwealthmembereng
 			}
 			has_country_flag = imp_ambition
 		}
@@ -430,10 +370,6 @@ political_decisions = {
 				add_core = IMP
 			}
 			change_tag = IMP
-			add_accepted_culture = white_anglo
-			add_accepted_culture = anglo_oceanian
-			add_accepted_culture = anglo_canadian
-			add_accepted_culture = british
 		}
 		ai_will_do = {
 			factor = 1
