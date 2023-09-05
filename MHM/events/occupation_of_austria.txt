@@ -611,10 +611,11 @@ country_event = {
 		relation = { who = SGF value = 200 }
 		diplomatic_influence = { who = SGF value = 200 }
 		
-		#South Germany gets claims over Austria
+		#South Germany & Germany get claims over Austria
 		AUS = { 
 			all_core = { 
 				add_core = SGF 
+				add_core = GER 
 				remove_core = ROA 
 			} 
 		}
