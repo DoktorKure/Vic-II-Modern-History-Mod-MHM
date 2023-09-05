@@ -246,6 +246,18 @@ country_event = {
 				remove_province_modifier = nuclear_nation_marker
 			}
 		}
+		#Cleanup Markers
+		any_country = {
+			limit = {
+				NOT = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
+			}
+			any_owned = {
+				limit = {
+					has_province_modifier = nuclear_nation_marker
+				}
+				remove_province_modifier = nuclear_nation_marker
+			}
+		}
 		
 		#Mark which countries have chemical weapons
 		any_country = {
@@ -272,6 +284,18 @@ country_event = {
 				remove_province_modifier = chemical_nation_marker
 			}
 		}
+		#Cleanup Markers
+		any_country = {
+			limit = {
+				NOT = { has_country_modifier = chemical_nation }
+			}
+			any_owned = {
+				limit = {
+					has_province_modifier = chemical_nation_marker
+				}
+				remove_province_modifier = chemical_nation_marker
+			}
+		}
 		
 		#Mark which countries have bioweapons
 		any_country = {
@@ -293,6 +317,18 @@ country_event = {
 			any_owned = {
 				limit = {
 					is_capital = no
+					has_province_modifier = bio_nation_marker
+				}
+				remove_province_modifier = bio_nation_marker
+			}
+		}
+		#Cleanup Markers
+		any_country = {
+			limit = {
+				NOT = { has_country_modifier = bio_nation }
+			}
+			any_owned = {
+				limit = {
 					has_province_modifier = bio_nation_marker
 				}
 				remove_province_modifier = bio_nation_marker
