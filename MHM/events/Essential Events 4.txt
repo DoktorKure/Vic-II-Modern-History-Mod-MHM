@@ -10884,42 +10884,32 @@ ai_chance = { factor = 0.5 }
 #Puppets join the sphere of the overlord
 country_event = {
 	id = 1512352
-title = "Shift in Geopolitics"
+	title = "Shift in Geopolitics"
 	desc = "Our overlord's sphere has changed and so we have to follow the change because we are their puppet."
 	picture = "un_tension_reduction_summit"
 
-trigger = {
-is_vassal = yes
-
-NOT = { AND = { tag = VAN vassal_of = ENG in_sphere = FRA } }
-
-NOT = { government = sar_government government = mandate_government }
-
-OR = {
-overlord = { 
-is_greater_power = no part_of_sphere = yes
-sphere_owner = { NOT = { is_sphere_leader_of = THIS } } 
-}
-
-overlord = { 
-is_greater_power = yes
-NOT = { is_sphere_leader_of = THIS } 
-}
+	trigger = {
+		is_vassal = yes
+		NOT = { AND = { tag = VAN vassal_of = ENG in_sphere = FRA } }
+		NOT = { government = sar_government government = mandate_government }
+		OR = {
+			overlord = { 
+				is_greater_power = no part_of_sphere = yes
+				sphere_owner = { NOT = { is_sphere_leader_of = THIS } }
+			}
+			overlord = { 
+				is_greater_power = yes
+				NOT = { is_sphere_leader_of = THIS } 
+			}
+		}
 	}
 
-}
-
-mean_time_to_happen = { 
-months = 1
-}
-
-option = {
-name = "This is the new reality"
-
-any_greater_power = { limit = { is_our_vassal = THIS } diplomatic_influence = { who = THIS value = 200 } }
-
-overlord = { sphere_owner = { diplomatic_influence = { who = THIS value = 300 } } }
-		}
+	option = {
+		name = "This is the new reality"
+		sphere_owner = { diplomatic_influence = { who = THIS value = -100 } }
+		any_greater_power = { limit = { is_our_vassal = THIS } diplomatic_influence = { who = THIS value = 300 } }
+		overlord = { sphere_owner = { diplomatic_influence = { who = THIS value = 300 } } }
+	}
 
 }
 
