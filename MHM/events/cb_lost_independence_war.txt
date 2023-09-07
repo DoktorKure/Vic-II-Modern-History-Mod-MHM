@@ -27,6 +27,8 @@ country_event = {
 	title = "Implementation of $COUNTRY_ADJ$ $FROMCOUNTRY$"
 	desc = EVTDESC1610139
 	picture = "failed_colonial_war"
+	
+	allow_multiple_instances = yes
 
 	is_triggered_only = yes
 
@@ -95,6 +97,8 @@ country_event = {
 	title = "Restoration of $COUNTRY_ADJ$ $FROMCOUNTRY$"
 	desc = EVTDESC1610141
 	picture = "failed_indy_war"
+	
+	allow_multiple_instances = yes
 
 	is_triggered_only = yes
 
