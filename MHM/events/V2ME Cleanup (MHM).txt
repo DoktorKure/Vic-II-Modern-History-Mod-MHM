@@ -24,6 +24,23 @@
 #
 
 country_event = {
+	id = 47777786
+	title = "AI: Daily Cleanup Bugfix"
+	desc = "This event restarts the cleanup mechanic."
+	
+	trigger = {
+		ai = yes
+		has_global_flag = daily_cleanup_on
+	}
+	
+	option = {
+		name = "Restart the mechanism!"
+		clr_global_flag = daily_cleanup_on
+	}
+}
+	
+
+country_event = {
 	id = 47777787
 	title = "AI: Daily Cleanup Check"
 	desc = "AI: Daily Cleanup Check"
@@ -167,14 +184,6 @@ country_event = {
 				neighbour = UNO
 			}
 			inherit = UNO
-		}
-		
-		#Release CLN if it gets vassalized for any reason at all
-		any_country = {
-			limit = {
-				is_our_vassal = CLN
-			}
-			release_vassal = CLN
 		}
 		
 		#Neutrality marker cleanup in case country changes capitals
