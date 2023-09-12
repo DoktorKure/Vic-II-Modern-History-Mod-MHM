@@ -5358,16 +5358,39 @@ political_decisions = {
 		}
 
 		effect = {
-			#Less than 20% higher education
+			#For sectarian regimes or regimes that are hostile to minorities
 			any_owned = {
 				limit = {
-					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
+					owner = {
+						OR = {
+							government = sectarian_dictatorship
+							AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+						}
+					}
+					OR = { is_primary_culture = yes is_accepted_culture = yes } # Only apply if the nation's primary/accepted cultures are the majority
+					NOT = { has_province_modifier = natalism_1 }
+				}
+				add_province_modifier = { name = natalism_1 duration = 1825 } 
+			}
+			any_owned = {
+				limit = {
+					owner = {
+						NOT = {
+							OR = {
+								government = sectarian_dictatorship
+								AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+							}
+							
+						}
+					}
+					OR = { is_core = yes is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores or if the nation's primary/accepted cultures are the majority
 					NOT = { has_province_modifier = natalism_1 }
 				}
 				add_province_modifier = { name = natalism_1 duration = 1825 } 
 			}
 
 			add_country_modifier = { name = fertility_timer duration = 3650 } # to prevent decision spam
+			add_country_modifier = { name = contraception_decay duration = 1825 } # for cleanup mechanic
 		
 			#Accepted pops are happy
 			any_pop = { 
