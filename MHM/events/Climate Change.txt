@@ -916,3 +916,289 @@ country_event = {
 		}
 	}
 }
+
+#Deforestation level 1
+country_event = {
+	id = 1410174
+	title = "Light deforestation"
+	desc = EVTDESC1410174
+	picture = "deforestation"
+	
+	
+	trigger = {
+		NOT = { has_global_flag = climate_change_disabled }
+		OR = { year = 1980 has_country_flag = unlock_the_amazon }
+
+		NOT = { has_country_flag = deforestation1 }
+		NOT = { has_country_flag = deforestation2 }
+		NOT = { has_country_flag = deforestation3 }
+		NOT = { has_country_flag = deforestation4 }
+		NOT = { has_country_flag = deforestation5 }
+
+		any_owned_province = { NOT = { has_province_modifier = deforestation2 } }
+		any_owned_province = { NOT = { has_province_modifier = deforestation3 } }
+		any_owned_province = { NOT = { has_province_modifier = deforestation4 } }
+		any_owned_province = { NOT = { has_province_modifier = deforestation5 } }
+
+		any_owned_province = { trade_goods = timber }
+		any_owned_province = { trade_goods = timber NOT = { has_province_modifier = deforestation1 } }
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+		modifier = { factor = 0.5 has_country_flag = unlock_the_amazon }
+	}
+	
+	option = {
+		name = "A loss to $COUNTRY$'s biodiversity"
+		any_owned = { remove_province_modifier = deforestation1 }
+		any_owned = { remove_province_modifier = deforestation2 }
+		any_owned = { remove_province_modifier = deforestation3 }
+		any_owned = { remove_province_modifier = deforestation4 }
+		any_owned = { remove_province_modifier = deforestation5 }
+		set_country_flag = deforestation1
+		any_owned = { limit = { OR = { trade_goods = timber trade_goods = lumber } } add_province_modifier = { name = deforestation1 duration = -1 } }
+	}
+}
+
+#Deforestation level 2
+country_event = {
+	id = 1410175
+	title = "Minor deforestation"
+	desc = EVTDESC1410174
+	picture = "deforestation"
+	
+	
+	trigger = {
+
+		OR = { year = 2010 has_country_flag = unlock_the_amazon }
+
+		has_country_flag = deforestation1
+
+		NOT = { has_country_flag = deforestation2 }
+		NOT = { has_country_flag = deforestation3 }
+		NOT = { has_country_flag = deforestation4 }
+		NOT = { has_country_flag = deforestation5 }
+
+		any_owned_province = { trade_goods = timber }
+		any_owned_province = { trade_goods = timber NOT = { has_province_modifier = deforestation2 } }
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+		modifier = { factor = 0.5 has_country_flag = unlock_the_amazon }
+	}
+	
+	option = {
+		name = "A loss to $COUNTRY$'s biodiversity"
+		set_country_flag = deforestation2
+		any_owned = { remove_province_modifier = deforestation1 }
+		any_owned = { remove_province_modifier = deforestation2 }
+		any_owned = { remove_province_modifier = deforestation3 }
+		any_owned = { remove_province_modifier = deforestation4 }
+		any_owned = { remove_province_modifier = deforestation5 }
+		any_owned = { limit = { OR = { trade_goods = timber trade_goods = lumber } } add_province_modifier = { name = deforestation2 duration = -1 } }
+	}
+}
+
+#Deforestation level 3
+country_event = {
+	id = 1410176
+	title = "Moderate deforestation"
+	desc = EVTDESC1410174
+	picture = "deforestation"
+	
+	
+	trigger = {
+		OR = { year = 2030 has_country_flag = unlock_the_amazon }
+
+		has_country_flag = deforestation1
+		has_country_flag = deforestation2
+		NOT = { has_country_flag = deforestation3 }
+		NOT = { has_country_flag = deforestation4 }
+		NOT = { has_country_flag = deforestation5 }
+
+		any_owned_province = { trade_goods = timber }
+		any_owned_province = { trade_goods = timber NOT = { has_province_modifier = deforestation3 } }
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+		modifier = { factor = 0.5 has_country_flag = unlock_the_amazon }
+	}
+	
+	option = {
+		name = "A loss to $COUNTRY$'s biodiversity"
+		set_country_flag = deforestation3
+		any_owned = { remove_province_modifier = deforestation1 }
+		any_owned = { remove_province_modifier = deforestation2 }
+		any_owned = { remove_province_modifier = deforestation3 }
+		any_owned = { remove_province_modifier = deforestation4 }
+		any_owned = { remove_province_modifier = deforestation5 }
+		any_owned = { limit = { OR = { trade_goods = timber trade_goods = lumber } } add_province_modifier = { name = deforestation3 duration = -1 } }
+	}
+}
+
+#Deforestation level 4
+country_event = {
+	id = 1410177
+	title = "Heavy deforestation"
+	desc = EVTDESC1410174
+	picture = "deforestation"
+	
+	
+	trigger = {
+		OR = { year = 2050 has_country_flag = unlock_the_amazon }
+
+		has_country_flag = deforestation1
+		has_country_flag = deforestation2
+		has_country_flag = deforestation3
+		NOT = { has_country_flag = deforestation4 }
+		NOT = { has_country_flag = deforestation5 }
+
+		any_owned_province = { trade_goods = timber }
+		any_owned_province = { trade_goods = timber NOT = { has_province_modifier = deforestation4 } }
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+		modifier = { factor = 0.5 has_country_flag = unlock_the_amazon }
+	}
+	
+	option = {
+		name = "A loss to $COUNTRY$'s biodiversity"
+		set_country_flag = deforestation4
+		any_owned = { remove_province_modifier = deforestation1 }
+		any_owned = { remove_province_modifier = deforestation2 }
+		any_owned = { remove_province_modifier = deforestation3 }
+		any_owned = { remove_province_modifier = deforestation4 }
+		any_owned = { remove_province_modifier = deforestation5 }
+		any_owned = { limit = { OR = { trade_goods = timber trade_goods = lumber } } add_province_modifier = { name = deforestation4 duration = -1 } }
+	}
+}
+
+#Deforestation level 5
+country_event = {
+	id = 1410178
+	title = "Massive deforestation"
+	desc = EVTDESC1410174
+	picture = "deforestation"
+	
+	
+	trigger = {
+		OR = { year = 2060 has_country_flag = unlock_the_amazon }
+
+		has_country_flag = deforestation1
+		has_country_flag = deforestation2
+		has_country_flag = deforestation3
+		has_country_flag = deforestation4
+		NOT = { has_country_flag = deforestation5 }
+
+		any_owned_province = { trade_goods = timber }
+		any_owned_province = { trade_goods = timber NOT = { has_province_modifier = deforestation5 } }
+	}
+
+	mean_time_to_happen = { 
+		months = 120
+		modifier = { factor = 0.5 has_country_flag = unlock_the_amazon }
+	}
+	
+	option = {
+		name = "A loss to $COUNTRY$'s biodiversity"
+		set_country_flag = deforestation5
+		any_owned = { remove_province_modifier = deforestation1 }
+		any_owned = { remove_province_modifier = deforestation2 }
+		any_owned = { remove_province_modifier = deforestation3 }
+		any_owned = { remove_province_modifier = deforestation4 }
+		any_owned = { remove_province_modifier = deforestation5 }
+		any_owned = { limit = { OR = { trade_goods = timber trade_goods = lumber } } add_province_modifier = { name = deforestation5 duration = -1 } }
+	}
+}
+
+#Greenpeace protests
+country_event = {
+	id = 1610054
+	title = "Climate Change Protests"
+	desc = EVTDESC1610054
+	picture = "climate_change_protests"
+
+	trigger = {
+		age_of_protests = 1
+		war = no
+		NOT = { public_meetings = no_meetings }
+		NOT = { pollution = good_envir }
+		NOT = { has_global_flag = climate_change_disabled }
+	}
+
+	mean_time_to_happen = { 
+		months = 12
+		modifier = { factor = 2 public_meetings = limited_meetings }
+		modifier = { factor = 1.25 pollution = trinket_envir }
+		modifier = { factor = 1.50 pollution = low_envir }
+		modifier = { factor = 2.00 pollution = acceptable_envir }
+	}
+
+	option = {
+		name = "Promise some action, in the future"
+		any_pop = { limit = { strata = middle } ideology = { factor = 0.01 value = progressive } }
+
+		random_owned = {
+			limit = { owner = { pollution = no_controls } }
+			owner = {
+				any_pop = {
+					dominant_issue = {
+						value = trinket_envir
+						factor = 0.10
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { pollution = trinket_envir } }
+			owner = {
+				any_pop = {
+					dominant_issue = {
+						value = low_envir
+						factor = 0.10
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { pollution = low_envir } }
+			owner = {
+				any_pop = {
+					dominant_issue = {
+						value = acceptable_envir
+						factor = 0.10
+					}
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { pollution = acceptable_envir } }
+			owner = {
+				any_pop = {
+					dominant_issue = {
+						value = good_envir
+						factor = 0.10
+					}
+				}
+			}
+		}
+
+		any_pop = { limit = { strata = rich } militancy = 2 }
+		any_pop = { limit = { strata = poor } militancy = 1 }
+		ai_chance = { factor = 0.6 }
+	}
+
+	option = {
+		name = "Tell them to chill and watch a movie"
+		any_pop = { limit = { strata = middle } ideology = { factor = 0.02 value = progressive } }
+		any_pop = { limit = { strata = poor } ideology = { factor = 0.01 value = progressive } }
+		any_pop = { limit = { strata = rich } militancy = -2 }
+		any_pop = { limit = { strata = poor } militancy = -1 }
+		ai_chance = { factor = 0.4 }
+	}
+
+}
