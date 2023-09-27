@@ -209,7 +209,9 @@ political_decisions = {
 				any_pop = { 
 					limit = { 
 						location = { is_colonial = yes }
-						is_accepted_culture = no 
+						is_accepted_culture = no
+						type = farmers
+						type = labourers
 					}
 					
 					#Increase militancy and consciousness to encourage pops to revolt
@@ -217,8 +219,8 @@ political_decisions = {
 					consciousness = 2.5
 					
 					#Give money to pops so they can buy weapons to revolt
-					farmers = { money = 50 }
-					labourers = { money = 50 }
+					money = 50
+					money = 50
 				}
 			}
 			
@@ -231,13 +233,17 @@ political_decisions = {
 				
 				#All pops are angry
 				any_pop = {
+					limit = {
+						type = farmers
+						type = labourers
+					}
 					#Increase militancy and consciousness to encourage pops to revolt
 					militancy = 1
 					consciousness = 1
 					
 					#Give money to pops so they can buy weapons to revolt
-					farmers = { money = 50 }
-					labourers = { money = 50 }
+					money = 50
+					money = 50
 				}
 				
 				add_country_modifier = { name = unhappy_natives duration = 365 }

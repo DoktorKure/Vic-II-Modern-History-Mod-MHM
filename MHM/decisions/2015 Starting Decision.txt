@@ -771,7 +771,7 @@ political_decisions = {
 			set_global_flag = arab_spring
 			set_global_flag = iraqi_civil_war
 			set_global_flag = syrian_civil_war
-			has_global_flag = yemeni_civil_war
+			set_global_flag = yemeni_civil_war
 			set_global_flag = SAA_PER_cold_war_flag
 			
 			#ISIS cores

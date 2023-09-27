@@ -1003,7 +1003,7 @@ country_event = {
 		prestige = 10
 		any_owned = { limit = { is_core = IDO NOT = { is_core = WPA } } secede_province = IDO }
 		create_vassal = IDO
-		IDO = { ruling_party_ideology = conservative government = colonial_government event = 800054 }
+		IDO = { ruling_party_ideology = conservative government = colonial_government country_event = 800054 }
 		diplomatic_influence = { who = IDO value = 200 }
 		ai_chance = { factor = 0.6 }
 	}
@@ -1028,7 +1028,7 @@ country_event = {
 		badboy = 5
 		any_owned = { limit = { is_core = IDO NOT = { is_core = WPA } } secede_province = IDO }
 		create_vassal = IDO
-		IDO = { ruling_party_ideology = conservative government = colonial_government event = 800054 }
+		IDO = { ruling_party_ideology = conservative government = colonial_government country_event = 800054 }
 		diplomatic_influence = { who = IDO value = 200 }
 		
 		IDO = {
@@ -1038,15 +1038,15 @@ country_event = {
 			change_tag = JAV
 		}
 		create_vassal = EID
-		EID = { ruling_party_ideology = conservative government = colonial_government event = 800054 }
+		EID = { ruling_party_ideology = conservative government = colonial_government country_event = 800054 }
 		NET = { diplomatic_influence = { who = EID value = 200 } }
 		
 		create_vassal = DYA
-		DYA = { ruling_party_ideology = conservative government = colonial_government event = 800054 }
+		DYA = { ruling_party_ideology = conservative government = colonial_government country_event = 800054 }
 		NET = { diplomatic_influence = { who = DYA value = 200 } }
 		
 		create_vassal = SUM
-		SUM = { ruling_party_ideology = conservative government = colonial_government event = 800054 }
+		SUM = { ruling_party_ideology = conservative government = colonial_government country_event = 800054 }
 		NET = { diplomatic_influence = { who = SUM value = 200 } }
 		ai_chance = { factor = 0.1 }
 	}

@@ -2664,17 +2664,17 @@ separatist_rebels = {
 		
 		modifier = {
 		    factor = 1.25
-		    location = { average_militancy = 5 }
+		    average_militancy = 5
 		}
 		
 		modifier = {
 		    factor = 1.25
-			location = { average_militancy = 7.5 }
+			average_militancy = 7.5
 		}
 		
 		modifier = {
 		    factor = 1.5
-			location = { average_militancy = 10 }
+			average_militancy = 10
 		}
 		
 		modifier = {
@@ -2878,8 +2878,8 @@ separatist_rebels = {
                 any_core = {
                     exists = yes
                     NOT = { is_primary_culture = THIS }
-                    NOT = { has_province_modifier = patriot_uprising }
                 }
+                NOT = { has_province_modifier = patriot_uprising }
             }
             add_province_modifier = {
                 name = patriot_uprising
@@ -3202,18 +3202,18 @@ superstate_separatist_rebels = {
 		}
 		
 		modifier = {
-		        factor = 1.25
-		        location = { average_militancy = 5 }
+		    factor = 1.25
+		    average_militancy = 5
 		}
 		
 		modifier = {
-		        factor = 1.25
-			location = { average_militancy = 7.5 }
+		    factor = 1.25
+			average_militancy = 7.5
 		}
 		
 		modifier = {
-		        factor = 1.5
-			location = { average_militancy = 10 }
+		    factor = 1.5
+			average_militancy = 10
 		}
 		
 		modifier = {

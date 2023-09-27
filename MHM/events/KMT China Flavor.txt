@@ -1557,10 +1557,12 @@ country_event = {
 
 		election = yes
 
-		ai_chance = { factor = 0.2 }
-		modifier = {
-			factor = 1
-			has_country_flag = KMT_allows_free_elections
+		ai_chance = {
+			factor = 0.2
+			modifier = {
+				factor = 1
+				has_country_flag = KMT_allows_free_elections
+			}
 		}
 	}
 
@@ -1606,10 +1608,12 @@ country_event = {
 
 		election = yes
 
-		ai_chance = { factor = 0.3 }
-		modifier = {
-			factor = 2
-			has_country_flag = KMT_excludes_communists
+		ai_chance = {
+			factor = 0.3
+			modifier = {
+				factor = 2
+				has_country_flag = KMT_excludes_communists
+			}
 		}
 	}
 

@@ -14,7 +14,7 @@ the_imf = {
 		}
 		modifier = {
 			factor = -6
-			goverment = proletarian_dictatorship
+			government = proletarian_dictatorship
 		}
 	}
 	effect = {
@@ -225,7 +225,7 @@ financial_deregulation = {
 		}
 		modifier = {
 			factor = -1
-			goverment = proletarian_dictatorship
+			government = proletarian_dictatorship
 		}
 	}
 	effect = {

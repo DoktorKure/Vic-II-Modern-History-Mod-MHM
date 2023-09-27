@@ -5138,7 +5138,7 @@ political_decisions = {
 			1329 = { add_core = TIB	} #Bhutan
 			1593 = { add_core = TIB	} #Tawang
 			3281 = { add_core = TIB	} #Aksai Chin
-			NEP_1326 = { add_core = TIB	} #Nepal
+			NEP = { all_core = { add_core = TIB	} } #Nepal
 		}
 
 	}

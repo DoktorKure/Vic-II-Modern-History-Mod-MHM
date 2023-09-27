@@ -2541,7 +2541,7 @@ average_militancy = 5
 
 OR = { 
 
-any_pop = { type = bureaucrats average_militancy = 8 }
+any_pop = { type = bureaucrats militancy = 8 }
 
 AND = { ruling_party_ideology = traditionalist NOT = { pop_majority_ideology = traditionalist } }
 

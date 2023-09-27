@@ -1294,22 +1294,22 @@ country_event = {
 	desc = "The Chairmanship of the EU is rotating and we get the first one as we are the founder. The Chairmanship only lasts 5 years." 
 	picture = "eu_chairman"
 	
-trigger = { 
-is_greater_power = yes
-economic_globalization = 1
-any_greater_power = { limit = { tech_school = XEU_tech_school } NOT = { has_country_modifier = xeu_chairmanship } }
-any_neighbor_country = { limit = { tech_school = XEU_tech_school } NOT = { has_country_modifier = xeu_chairmanship } }
-has_country_modifier = xeu_member
-NOT = { has_global_flag = eufirst }
-}
+	trigger = { 
+		is_greater_power = yes
+		economic_globalization = 1
+		any_greater_power = { tech_school = XEU_tech_school NOT = { has_country_modifier = xeu_chairmanship } }
+		any_neighbor_country = { tech_school = XEU_tech_school NOT = { has_country_modifier = xeu_chairmanship } }
+		has_country_modifier = xeu_member
+		NOT = { has_global_flag = eufirst }
+	}
 	major = yes
 	option = {
-	name = "Splendid!"
-prestige = 10
-add_country_modifier = { name = xeu_chairmanship duration = 1825 }
-set_country_flag = xeu_chairmanship
-set_global_flag = eufirst
-		}
+		name = "Splendid!"
+		prestige = 10
+		add_country_modifier = { name = xeu_chairmanship duration = 1825 }
+		set_country_flag = xeu_chairmanship
+		set_global_flag = eufirst
+	}
 }
 
 #UN Sanctions for high Infamy nations - Start
@@ -1894,7 +1894,7 @@ allow_multiple_instances = no
 
 trigger = {
 has_country_flag = disabled_for_now
-has_province_flag = disease
+#has_province_flag = disease
 		NOT = { 
 			has_province_modifier = nuke_low
 			has_province_modifier = nuke_medium
@@ -1903,7 +1903,7 @@ has_province_flag = disease
 			has_province_modifier = chemical_medium
 			has_province_modifier = chemical_high
 			}
-OR = { has_province_flag = nuked_before has_province_flag = chemical_before }
+#OR = { has_province_flag = nuked_before has_province_flag = chemical_before }
 		}
 
 	option = {

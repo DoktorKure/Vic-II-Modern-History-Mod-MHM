@@ -1730,9 +1730,6 @@ country_event = {
 		
 		government = democracy
 		
-		#Location of incident
-		region = SIC_763
-		
 		#Sicily Autonomy, last decree signed by the King
 		762 = { has_province_modifier = devolved_local_government } #Palermo
 		763 = { has_province_modifier = devolved_local_government } #Messina

@@ -206,6 +206,7 @@ country_event = {
 	trigger = {
 		tag = SYR
 		year = 2015
+		NOT = { has_global_flag = 2015_start_date_flag }
 		has_global_flag = arab_spring
 		NOT = { year = 2024 }
 		
@@ -236,9 +237,7 @@ country_event = {
 		name = "We shall crush the Caliphate!"
 		
 		#Initialise ISIS
-		907 = { add_core = ISI }
-		
-		secede_province = ISI
+		907 = { add_core = ISI secede_province = ISI }
 		ISI = {
 			government = theocracy
 			country_event = 800050

@@ -1081,58 +1081,37 @@ add_country_modifier = { name = revolution_chaos duration = 1825 }
 #UN Peace Making - Invite countries into the Peace Mission
 country_event = {
 	id = 1512032
-title = "UN Peace Mission to restore order in $FROMCOUNTRY$"
+	title = "UN Peace Mission to restore order in $FROMCOUNTRY$"
 	desc = EVTDESC1512032
 	picture = "un_peace_making_unsc_invite"
+	is_triggered_only = yes
 
-trigger = {
-has_country_flag = un_peace_making_marker
-has_country_modifier = peace_making_veoted
-has_country_modifier = requested_un_peacemaking
-}
-
-mean_time_to_happen = { 
-months = 1
-
-modifier = { factor = 0.5 has_global_flag = UNSG_aggressive }
-modifier = { factor = 0.75 has_global_flag = UNSG_normal }
-
+	option = {
+		name = "Join the mission!"
+		clr_country_flag = un_peace_making_marker
+		prestige = 25
+		relation = { who = FROM value = 200 }
+		create_alliance = FROM
+		military_access = FROM
+		FROM = { military_access = THIS }
+		ai_chance = { 
+			factor = 1
+			modifier = { factor = 0 NOT = { relation = { who = FROM value = 0 } } }
+			modifier = { factor = 0 war_policy = pacifism }
+		}
 	}
 
-option = {
-name = "Join the mission!"
-
-clr_country_flag = un_peace_making_marker
-
-prestige = 25
-relation = { who = FROM value = 200 }
-create_alliance = FROM
-military_access = FROM
-FROM = { military_access = THIS }
-
-ai_chance = { 
-factor = 1
-modifier = { factor = 0 NOT = { relation = { who = FROM value = 0 } } }
-modifier = { factor = 0 war_policy = pacifism }
-}
-
+	option = {
+		name = "Don't interfere in $FROMCOUNTRY_ADJ$ politics!"
+		clr_country_flag = un_peace_making_marker
+		prestige = -25
+		relation = { who = FROM value = -25 }
+		ai_chance = {
+			factor = 1
+			modifier = { factor = 0 relation = { who = FROM value = 0 } }
+			modifier = { factor = 0 NOT = { war_policy = pacifism } }
 		}
-
-option = {
-name = "Don't interfere in $FROMCOUNTRY_ADJ$ politics!"
-
-clr_country_flag = un_peace_making_marker
-
-prestige = -25
-relation = { who = FROM value = -25 }
-ai_chance = { 
-factor = 1
-modifier = { factor = 0 relation = { who = FROM value = 0 } }
-modifier = { factor = 0 NOT = { war_policy = pacifism } }
-}
-		}
-
-
+	}
 }
 
 #Catalan independence movement
@@ -9698,34 +9677,30 @@ country_event = {
 	option = {
 		name = "Remain as a protectorate"
 		prestige = -50
-	
-		FROM = {
 
-			#Constitutional Monarchy
-			random_owned = { limit = { owner = { overlord = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } } } } owner = { government = hms_government1 } }
+		#Constitutional Monarchy
+		random_owned = { limit = { owner = { overlord = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } } } } owner = { government = hms_government1 } }
 
-			#Democracy
-			random_owned = { limit = { owner = { overlord = { OR = { government = democracy government = democracy } } } } owner = { government = democracy } }
+		#Democracy
+		random_owned = { limit = { owner = { overlord = { OR = { government = democracy government = democracy } } } } owner = { government = democracy } }
 
-			#Socialist Democracy
-			random_owned = { limit = { owner = { overlord = { government = socialist_democracy } } } owner = { government = socialist_democracy ruling_party_ideology = socialist } }
+		#Socialist Democracy
+		random_owned = { limit = { owner = { overlord = { government = socialist_democracy } } } owner = { government = socialist_democracy ruling_party_ideology = socialist } }
 
-			#Communist Dictatorships
-			random_owned = { limit = { owner = { overlord = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { government = proletarian_dictatorship ruling_party_ideology = communist country_event = 800052 } }
+		#Communist Dictatorships
+		random_owned = { limit = { owner = { overlord = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { government = proletarian_dictatorship ruling_party_ideology = communist country_event = 800052 } }
 
-			#Theocracy
-			random_owned = { limit = { owner = { overlord = { government = theocracy } } } owner = { government = theocracy country_event = 800050 ruling_party_ideology = traditionalist } }
+		#Theocracy
+		random_owned = { limit = { owner = { overlord = { government = theocracy } } } owner = { government = theocracy country_event = 800050 ruling_party_ideology = traditionalist } }
 
-			#Presidential Dictatorship
-			random_owned = { limit = { owner = { overlord = { government = presidential_dictatorship } } } owner = { government = presidential_dictatorship country_event = 800050 } }
+		#Presidential Dictatorship
+		random_owned = { limit = { owner = { overlord = { government = presidential_dictatorship } } } owner = { government = presidential_dictatorship country_event = 800050 } }
 
-			#Nationalist Dictatorship
-			random_owned = { limit = { owner = { overlord = { government = nationalist_dictatorship } } } owner = { government = nationalist_dictatorship country_event = 800050 ruling_party_ideology = nationalist } }
+		#Nationalist Dictatorship
+		random_owned = { limit = { owner = { overlord = { government = nationalist_dictatorship } } } owner = { government = nationalist_dictatorship country_event = 800050 ruling_party_ideology = nationalist } }
 
-			#Sectarian Dictatorship
-			random_owned = { limit = { owner = { overlord = { government = sectarian_dictatorship } } } owner = { government = sectarian_dictatorship country_event = 800050 } }
-
-		}
+		#Sectarian Dictatorship
+		random_owned = { limit = { owner = { overlord = { government = sectarian_dictatorship } } } owner = { government = sectarian_dictatorship country_event = 800050 } }
 
 		clr_country_flag = great_war_mandate_un
 		

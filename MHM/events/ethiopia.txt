@@ -52,8 +52,7 @@ country_event = {
 				}
 			}
 			owner = {
-				any_owned = { limit = { is_core = SOM } }
-				secede_province = SML
+				any_owned = { limit = { is_core = SOM } secede_province = SML }
 			}
 		}
 		random_owned = {
@@ -64,8 +63,7 @@ country_event = {
 				}
 			}
 			owner = {
-				any_owned = { limit = { is_core = SOM } }
-				secede_province = SOM
+				any_owned = { limit = { is_core = SOM } secede_province = SOM }
 			}
 		}
 		random_owned = {
@@ -76,8 +74,7 @@ country_event = {
 				}
 			}
 			owner = {
-				any_owned = { limit = { is_core = SOM } }
-				secede_province = SML
+				any_owned = { limit = { is_core = SOM } secede_province = SML }
 			}
 		}
 		

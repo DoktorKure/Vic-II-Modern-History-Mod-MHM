@@ -101,7 +101,7 @@ country_event = { # Rwanda Independence
 		
 		relation = { who = BRN value = -200 }
 		
-		ai_will_do = { factor = 0.5 }
+		ai_chance = { factor = 0.5 }
 	}
 	
 	option = {
@@ -113,7 +113,7 @@ country_event = { # Rwanda Independence
 			consciousness = 5 
 		}
 		
-		ai_will_do = { factor = 0.5 }
+		ai_chance = { factor = 0.5 }
 	}
 
 }

@@ -161,7 +161,7 @@ country_event = {
 		
 		#Release all non-existent nations
 		any_country = { 
-			limit = { exists = no capital_scope = { owned_by = THIS } is_culture_group = no } 
+			limit = { exists = no capital_scope = { owned_by = THIS } NOT = { is_culture_group = THIS } } 
 			country_event = 1400074
 		}
 

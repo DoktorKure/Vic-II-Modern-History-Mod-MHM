@@ -60,7 +60,7 @@ political_decisions = {
 			SLO = { all_core = { add_core = KUK } }
 			BOS = { all_core = { add_core = KUK } }
 			AUS_2538 = { add_core = KUK } # Vojvodina
-			TRE_736 = { add_core = KUK } # Trieste
+			AUS_736 = { add_core = KUK } # Trieste
 		}
 	}
 
@@ -93,6 +93,7 @@ political_decisions = {
 		potential = {
 			tag = KUK
 			NOT = { has_country_flag = kuk_claim_transylvania }
+		}
 		allow = {
 			war = no
 			is_vassal = no

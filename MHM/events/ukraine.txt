@@ -54,7 +54,7 @@ country_event = {
 		any_country = {
 			limit = { has_country_modifier = unsc_permanent_member }
 			relation = { who = THIS value = -300 }
-			influence = { who = THIS value = -300 }
+			diplomatic_influence = { who = THIS value = -300 }
 			add_casus_belli = {
 				target = THIS
 				type = destroy_wmd

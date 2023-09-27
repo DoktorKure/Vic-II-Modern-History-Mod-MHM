@@ -1445,12 +1445,14 @@ country_event = {
 				}
 			}
 			owner = {
-				any_owned = { 
+				any_owned = {
 					limit = { NOT = { is_core = POR } } 
-					militancy = 10
-					consciousness = 10
-					ideology = { factor = 0.2 value = communist }
-					ideology = { factor = 0.2 value = nationalist }
+					any_pop = {
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.2 value = communist }
+						ideology = { factor = 0.2 value = nationalist }
+					}
 					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
 				}
 			}
@@ -1753,10 +1755,12 @@ country_event = {
 			owner = {
 				any_owned = { 
 					limit = { NOT = { is_core = POR } } 
-					militancy = 10
-					consciousness = 10
-					ideology = { factor = 0.25 value = communist }
-					ideology = { factor = 0.25 value = nationalist }
+					any_pop = {
+						militancy = 10
+						consciousness = 10
+						ideology = { factor = 0.25 value = communist }
+						ideology = { factor = 0.25 value = nationalist }
+					}
 					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
 				}
 			}

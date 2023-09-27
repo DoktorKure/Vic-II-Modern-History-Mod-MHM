@@ -119,16 +119,33 @@ citizenship_policy = full_citizenship
 war_policy = pro_military
 }
 unit_names = {
-dreadnought = {}
-battleship = {}
-ironclad = {}
-manowar = {}
-cruiser = {}
-frigate = {}
-monitor = {}
-clipper_transport = {}
-steam_transport = {}
-commerce_raider = {}
+	carrier = {
+		Alia Aurangabad Devki Fatimah Godvari Gulbargah Jalsena "Kala Jahazi" Khan "Lal Jahazi" Nausena "Nav ka Yudh" Niknaz "Nila Jahazi" Niloufa Sagar Salima Suhalia Shameena Yasmine
+	}
+	transportship = {
+	}
+	modern_frigate = {
+		Alia Aurangabad Devki Fatimah Godvari Gulbargah Jalsena "Kala Jahazi" Khan "Lal Jahazi" Nausena "Nav ka Yudh" Niknaz "Nila Jahazi" Niloufa Sagar Salima Suhalia Shameena Yasmine
+	}
+	cruiser = {
+		Alia Aurangabad Devki Fatimah Godvari Gulbargah Jalsena "Kala Jahazi" Khan "Lal Jahazi" Nausena "Nav ka Yudh" Niknaz "Nila Jahazi" Niloufa Sagar Salima Suhalia Shameena Yasmine
+	}
+	modern_cruiser = {
+		Alia Aurangabad Devki Fatimah Godvari Gulbargah Jalsena "Kala Jahazi" Khan "Lal Jahazi" Nausena "Nav ka Yudh" Niknaz "Nila Jahazi" Niloufa Sagar Salima Suhalia Shameena Yasmine
+	}
+	frigate = {
+		Alia Aurangabad Devki Fatimah Godvari Gulbargah Jalsena "Kala Jahazi" Khan "Lal Jahazi" Nausena "Nav ka Yudh" Niknaz "Nila Jahazi" Niloufa Sagar Salima Suhalia Shameena Yasmine
+	}
+	modern_destroyer = {
+		Alia Aurangabad Devki Fatimah Godvari Gulbargah Jalsena "Kala Jahazi" Khan "Lal Jahazi" Nausena "Nav ka Yudh" Niknaz "Nila Jahazi" Niloufa Sagar Salima Suhalia Shameena Yasmine
+	}
+	destroyer = {
+		Alia Aurangabad Devki Fatimah Godvari Gulbargah Jalsena "Kala Jahazi" Khan "Lal Jahazi" Nausena "Nav ka Yudh" Niknaz "Nila Jahazi" Niloufa Sagar Salima Suhalia Shameena Yasmine
+	}
+	submarine = {
+		Alia Aurangabad Devki Fatimah Godvari Gulbargah Jalsena "Kala Jahazi" Khan "Lal Jahazi" Nausena "Nav ka Yudh" Niknaz "Nila Jahazi" Niloufa Sagar Salima Suhalia Shameena Yasmine
+	}
+
 }
 
 

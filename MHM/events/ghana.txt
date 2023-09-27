@@ -82,7 +82,7 @@ country_event = { # Independence of Ghana
 						consciousness = 10
 						ideology = { factor = 0.25 value = nationalist }
 					}
-					add_province_modifier = { name = nationalist_agitation duration = 3650 } 
+					any_owned = { add_province_modifier = { name = nationalist_agitation duration = 3650 } }
 				}
 			}
 		}

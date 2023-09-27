@@ -3257,7 +3257,6 @@ country_event = {
 			random_owned = { limit = { province_id = 176 } owner = { USA_176 = { secede_province = CUA } } } #Michigan
 			random_owned = { limit = { province_id = 201 } owner = { USA_201 = { secede_province = CUA } } } #Georgia
 			random_owned = { limit = { province_id = 219 } owner = { USA_219 = { secede_province = CUA } } } #Maryland
-			random_owned = { limit = { province_id = 222 } owner = { USA_222 = { secede_province = CUA } } } #Delaware
 			random_owned = { limit = { province_id = 223 } owner = { USA_223 = { secede_province = CUA } } } #Pennsylvania
 			random_owned = { limit = { province_id = 231 } owner = { USA_231 = { secede_province = CUA } } } #New Jersey
 			random_owned = { limit = { province_id = 232 } owner = { USA_232 = { secede_province = CUA } } } #New York

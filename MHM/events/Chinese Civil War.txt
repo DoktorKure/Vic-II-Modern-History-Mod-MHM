@@ -218,15 +218,7 @@ country_event = {
 		ai_chance = { factor = 0.4 }
 		modifier = { 
 			factor = 1 
-			tag = QHA
-		}
-		modifier = { 
-			factor = 1 
-			tag = SXI
-		}
-		modifier = { 
-			factor = 1 
-			tag = GGX
+			OR = { tag = QHA tag = SXI tag = GGX }
 		}
 	}
 	
@@ -247,11 +239,7 @@ country_event = {
 		ai_chance = { factor = 0.6 }
 		modifier = { 
 			factor = 1 
-			tag = YNN
-		}
-		modifier = { 
-			factor = 1 
-			tag = SZC
+			OR = { tag = QHA tag = SXI tag = GGX }
 		}
 	}
 }
@@ -281,7 +269,6 @@ country_event = {
 		prestige = -500
 		capital = 1577
 		war_exhaustion = 75
-		land_organization = -0.35
 		any_country = {
 			limit = { tag = SXI exists = yes }
 			SXI = { country_event = 90911 }
@@ -322,15 +309,7 @@ country_event = {
 		ai_chance = { factor = 0.3 }
 		modifier = { 
 			factor = 1 
-			tag = QHA
-		}
-		modifier = { 
-			factor = 1 
-			tag = SXI
-		}
-		modifier = { 
-			factor = 1
-			tag = GGX
+			OR = { tag = QHA tag = SXI tag = GGX }
 		}
 	}
 	
@@ -340,11 +319,7 @@ country_event = {
 		ai_chance = { factor = 0.7 }
 		modifier = { 
 			factor = 1 
-			tag = YNN
-		}
-		modifier = { 
-			factor = 1 
-			tag = SZC
+			OR = { tag = YNN tag = SZC }
 		}
 	}
 }

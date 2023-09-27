@@ -678,15 +678,15 @@ province_event = {
 	}
 	option = {
 		name = "EVTOPTA10130"
+		any_pop = {
+			ideology = {
+				value = liberal
+				factor = 0.02
+			}
+		}
 		add_province_modifier = {
 			name = liberal_agitation
 			duration = 730
-			any_pop = {
-				ideology = {
-					value = liberal
-					factor = 0.02
-				}
-			}
 		}
 	}
 	option = {

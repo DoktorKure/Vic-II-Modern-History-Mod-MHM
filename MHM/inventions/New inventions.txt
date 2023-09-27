@@ -118,7 +118,7 @@ indigenismo = {
 		base = 1
 		modifier = {
 			factor = 1
-			OR = { has_pop_culture = mestizo has_pop_culture = quechua has_pop_culture = aimara }
+			OR = { has_pop_culture = mestizo has_pop_culture = native_american_minor }
 		}
 		modifier = {
 			factor = 1
@@ -540,7 +540,7 @@ web_2 = {
 
 
 web_3 = {
-	limit = { uni_network = 1 } #Ultra-High Speed Internet
+	limit = { high_speed_uni_network = 1 } #Ultra-High Speed Internet
 	news = no
 	chance = {
 		base = 1
