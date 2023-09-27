@@ -5318,11 +5318,7 @@ political_decisions = {
 		picture = "population_growth"
 		potential = {
 			NOT = { has_country_flag = hide_civil_decisions }
-			any_owned_province = {
-				NOT = {
-					has_province_modifier = natalism_1
-				}
-			}
+			NOT = { has_country_modifier = contraception_decay }
 			NOT = { has_country_flag = demographic_transition_stage_6_flag } #Not stable population after demographic crunch
 		}
 
@@ -5358,37 +5354,6 @@ political_decisions = {
 		}
 
 		effect = {
-			#For sectarian regimes or regimes that are hostile to minorities
-			any_owned = {
-				limit = {
-					owner = {
-						OR = {
-							government = sectarian_dictatorship
-							AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
-						}
-					}
-					OR = { is_primary_culture = yes is_accepted_culture = yes } # Only apply if the nation's primary/accepted cultures are the majority
-					NOT = { has_province_modifier = natalism_1 }
-				}
-				add_province_modifier = { name = natalism_1 duration = 1825 } 
-			}
-			any_owned = {
-				limit = {
-					owner = {
-						NOT = {
-							OR = {
-								government = sectarian_dictatorship
-								AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
-							}
-							
-						}
-					}
-					OR = { is_core = yes is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores or if the nation's primary/accepted cultures are the majority
-					NOT = { has_province_modifier = natalism_1 }
-				}
-				add_province_modifier = { name = natalism_1 duration = 1825 } 
-			}
-
 			add_country_modifier = { name = fertility_timer duration = 3650 } # to prevent decision spam
 			add_country_modifier = { name = contraception_decay duration = 1825 } # for cleanup mechanic
 		

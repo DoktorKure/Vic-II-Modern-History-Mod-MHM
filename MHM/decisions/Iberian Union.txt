@@ -1,54 +1,95 @@
 political_decisions = {
 
-form_ibu = {
+	form_ibu = {
 		picture = "form_ibu"
-	potential = {
-		OR = { tag = SPA tag = POR }
-		IBU = { exists = no }
-					}
+		potential = {
+			OR = { tag = SPA tag = POR tag = PBU }
+			IBU = { exists = no }
+		}
 		allow = {
 			war = no
 			is_vassal = no
-
-SPA = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
-
-POR = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
-
-		OR = { 
-
-		AND = { 
-		SPA = { all_core = { owned_by = THIS } }
-		POR = { all_core = { owned_by = THIS } }
-		}
-
-AND = { 
-OR = { is_sphere_leader_of = SPA is_our_vassal = SPA tag = SPA }
-OR = { is_sphere_leader_of = POR is_our_vassal = POR tag = POR }
-}
- 
-		}
+			SPA = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
+			OR = { 
+				POR = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
+				PBU = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
+			}
+			OR = { 
+				AND = { 
+					SPA = { all_core = { owned_by = THIS } }
+					OR = {
+						POR = { all_core = { owned_by = THIS } }
+						PBU = { all_core = { owned_by = THIS } }
 					}
-		effect = {
-		prestige = 100
-		SPA = { all_core = { add_core = IBU } }
-		POR = { all_core = { add_core = IBU } }
-
-change_tag = IBU
-
-add_accepted_culture = spanish
-add_accepted_culture = portuguese
-add_accepted_culture = catalan
-add_accepted_culture = basque
-		
-any_country = { limit = { exists = yes OR = { tag = SPA tag = POR } } country_event = 11101 }
-
 				}
+				AND = { 
+					OR = { is_sphere_leader_of = SPA is_our_vassal = SPA tag = SPA }
+					OR = {
+						OR = { is_sphere_leader_of = POR is_our_vassal = POR tag = POR }
+						OR = { is_sphere_leader_of = PBU is_our_vassal = PBU tag = PBU }
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 100
+			SPA = { all_core = { add_core = IBU } }
+			POR = { all_core = { add_core = IBU } }
+			PBU = { all_core = { add_core = IBU } }
+			add_accepted_culture = spanish
+			add_accepted_culture = portuguese
+			add_accepted_culture = catalan
+			add_accepted_culture = basque
+			add_accepted_culture = castizo
+			change_tag = IBU
+			any_country = { limit = { exists = yes OR = { tag = SPA tag = POR tag = PBU } } country_event = 11101 }
+		}
 		ai_will_do = { 
 			factor = 1 
-modifier = { 
-factor = 0 
-OR = { SPA = { ai = no } POR = { ai = no } } 
-}
+			modifier = { 
+				factor = 0 
+				OR = { SPA = { ai = no } POR = { ai = no } PBU = { ai = no } } 
 			}
+		}
+	}
+
+	form_pbu = {
+		picture = "form_pbu"
+		potential = {
+			OR = { tag = POR tag = BRZ }
+			PBU = { exists = no }
+		}
+		allow = {
+			war = no
+			is_vassal = no
+			POR = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
+			BRZ = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
+			OR = { 
+				AND = { 
+					POR = { all_core = { owned_by = THIS } }
+					BRZ = { all_core = { owned_by = THIS } }
+				}
+				AND = { 
+					OR = { is_sphere_leader_of = POR is_our_vassal = POR tag = POR }
+					OR = { is_sphere_leader_of = BRZ is_our_vassal = BRZ tag = BRZ }
+				}
+			}
+		}
+		effect = {
+			prestige = 100
+			BRZ = { all_core = { add_core = PBU } }
+			POR = { all_core = { add_core = PBU } }
+			change_tag = PBU
+			add_accepted_culture = portuguese
+			add_accepted_culture = white_portuguese
+			any_country = { limit = { exists = yes OR = { tag = POR tag = BRZ } } country_event = 11101 }
+		}
+		ai_will_do = { 
+			factor = 1 
+			modifier = { 
+				factor = 0 
+				OR = { POR = { ai = no } BRZ = { ai = no } } 
+			}
+		}
 	}
 }

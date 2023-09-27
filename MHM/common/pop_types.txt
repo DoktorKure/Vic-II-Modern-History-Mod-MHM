@@ -568,6 +568,13 @@ colonialmigration_chance = {
 			location = { has_province_modifier = pop_replacement_province_modifier }
 		}
     }
+    modifier = {
+        factor = 1.2
+		AND = {
+			location = { NOT = { culture = THIS } }
+			country = { has_country_flag = promote_colonial_migration_active }
+		}
+    }
     group = {
         modifier = {
             factor = -0.2
@@ -1173,7 +1180,7 @@ assimilation_chance = { # 1
 
 	modifier = {
 		factor = 20
-		is_culture_group = regional_arabic_1
+		is_culture_group = arabic
 		country = { has_country_flag = arab_national_identity }
 	}
 

@@ -75,58 +75,6 @@ country_event = {
 		clr_global_flag = daily_cleanup_on
 		CLN = { country_event = { id = 47777787 days = 1 } }
 		
-		
-		### Natalism ###
-		
-		#Apply Natalism modifiers - sectarian/oppressive towards minorities regimes
-		any_country = {
-			limit = {
-				has_country_modifier = contraception_decay
-				OR = {
-					government = sectarian_dictatorship
-					AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
-				}
-			}
-			any_owned = {
-				limit = {
-					OR = { is_primary_culture = yes is_accepted_culture = yes } # Only apply if the nation's primary/accepted cultures are the majority
-					NOT = { has_province_modifier = natalism_1 }
-				}
-				add_province_modifier = { name = natalism_1 duration = -1 } 
-			}
-		}
-		#Apply Natalism modifiers - all others
-		any_country = {
-			limit = {
-				has_country_modifier = contraception_decay
-				NOT = {
-					OR = {
-						government = sectarian_dictatorship
-						AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
-					}
-				}
-			}
-			any_owned = {
-				limit = {
-					OR = { is_core = THIS is_primary_culture = yes is_accepted_culture = yes } # Only apply to cores, or if the nation's primary/accepted cultures are the majority
-					NOT = { has_province_modifier = natalism_1 }
-				}
-				add_province_modifier = { name = natalism_1 duration = -1 } 
-			}
-		}
-		#Cleanup Natalism modifiers
-		any_country = {
-			limit = {
-				NOT = { has_country_modifier = contraception_decay }
-			}
-			any_owned = {
-				limit = {
-					has_province_modifier = natalism_1
-				}
-				remove_province_modifier = natalism_1
-			}
-		}
-		
 		#Craftsmen, Soldiers, and Bureaucrats bugfix
 		any_country = {
 			any_owned = {
@@ -1540,6 +1488,33 @@ country_event = {
 			set_country_flag = superstate_flag
 		}
 		
+		#Clean up gov types for Soviet Republics
+		any_country = {
+			limit = {
+				OR = {
+					tag = AZB
+					tag = ARM
+					tag = GEO
+					tag = UKR
+					tag = BYE
+					tag = MOL
+					tag = LAT
+					tag = EST
+					tag = LIT
+					tag = KAZ
+					tag = UZB
+					tag = TAJ
+					tag = TKR
+					tag = KYR
+				}
+				exists = yes
+				vassal_of = RUS
+				RUS = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+				government = proletarian_dictatorship
+			}
+			government = proletarian_dictatorship1
+		}
+		
 		################################
 		### Population Growth Trends ###
 		################################
@@ -1553,6 +1528,7 @@ country_event = {
 		
 		#Base growth rates
 		any_country = {
+			limit = { NOT = { has_country_modifier = contraception_decay } }
 			any_owned = {
 				limit = {
 					has_province_modifier = dev_1
@@ -1567,6 +1543,7 @@ country_event = {
 			}
 		}
 		any_country = {
+			limit = { NOT = { has_country_modifier = contraception_decay } }
 			any_owned = {
 				limit = {
 					has_province_modifier = dev_2
@@ -1581,6 +1558,7 @@ country_event = {
 			}
 		}
 		any_country = {
+			limit = { NOT = { has_country_modifier = contraception_decay } }
 			any_owned = {
 				limit = {
 					has_province_modifier = dev_3
@@ -1595,6 +1573,7 @@ country_event = {
 			}
 		}
 		any_country = {
+			limit = { NOT = { has_country_modifier = contraception_decay } }
 			any_owned = {
 				limit = {
 					has_province_modifier = dev_5
@@ -1609,6 +1588,7 @@ country_event = {
 			}
 		}
 		any_country = {
+			limit = { NOT = { has_country_modifier = contraception_decay } }
 			any_owned = {
 				limit = {
 					has_province_modifier = dev_6
@@ -1621,6 +1601,38 @@ country_event = {
 				}
 				any_pop = { reduce_pop = 0.998 }
 			}
+		}
+		
+		### Natalism ###
+		
+		#sectarian governments and other governments that are oppressive towards minorities grow only primary and accepted pops
+		any_country = {
+			limit = {
+				has_country_modifier = contraception_decay
+				OR = {
+					government = sectarian_dictatorship
+					AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+				}
+			}
+			any_owned = {
+				any_pop = {
+					limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
+					reduce_pop = 1.0017
+				}
+			}
+		}
+		#All others have a universal pop growth
+		any_country = {
+			limit = {
+				has_country_modifier = contraception_decay
+				NOT = {
+					OR = {
+						government = sectarian_dictatorship
+						AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+					}
+				}
+			}
+			any_owned = { any_pop = { reduce_pop = 1.0017 } }
 		}
 		
 		##########################################

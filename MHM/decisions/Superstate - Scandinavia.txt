@@ -152,23 +152,15 @@ political_decisions = {
 		
 		effect = {
 			prestige = 100
-			FIN = { any_owned = { add_core = SCA } }
-			SWE = { any_owned = { add_core = SCA } }
-			NOR = { any_owned = { add_core = SCA } }
-			DEN = { any_owned = { add_core = SCA } }
-			FAR = { any_owned = { add_core = SCA } }
-			ICL = { any_owned = { add_core = SCA } }
-			ALA = { any_owned = { add_core = SCA } }
-			GRN = { any_owned = { add_core = SCA } }
+			FIN = { all_core = { add_core = SCA } }
+			SWE = { all_core = { add_core = SCA } }
+			NOR = { all_core = { add_core = SCA } }
+			DEN = { all_core = { add_core = SCA } }
+			FAR = { all_core = { add_core = SCA } }
+			ICL = { all_core = { add_core = SCA } }
+			ALA = { all_core = { add_core = SCA } }
+			GRN = { all_core = { add_core = SCA } }
 			change_tag = SCA
-			add_accepted_culture = danish
-			add_accepted_culture = finnish
-			add_accepted_culture = swedish
-			add_accepted_culture = norwegian
-			add_accepted_culture = estonian
-			add_accepted_culture = latvian
-			add_accepted_culture = lithuanian
-			add_accepted_culture = scottish
 			any_country = {
 				limit = {
 					exists = yes

@@ -2688,16 +2688,15 @@ political_decisions = {
 		effect = {
 			badboy = 12
 			set_country_flag = claim_greater_hungary
-			638 = { add_core = HUN }
-			637 = { add_core = HUN }
-			950 = { add_core = HUN }
-			2538 = { add_core = HUN }
-			647 = { add_core = HUN }
-			651 = { add_core = HUN }
-			654 = { add_core = HUN }
-			660 = { add_core = HUN }
-			661 = { add_core = HUN }
-			2533 = { add_core = HUN }
+			AUS_633 = { add_core = HUN }
+			AUS_652 = { add_core = HUN }
+			AUS_654 = { add_core = HUN }
+			AUS_657 = { add_core = HUN }
+			AUS_771 = { add_core = HUN }
+			AUS_777 = { add_core = HUN }
+			AUS_2538 = { add_core = HUN }
+			778 = { add_core = HUN }
+			624 = { add_core = HUN }
 		}
 
 	}
@@ -2733,16 +2732,15 @@ political_decisions = {
 				limit = { 
 					NOT = { owned_by = THIS }
 					OR = {
-						province_id = 638
-						province_id = 637
-						province_id = 950
-						province_id = 2538
-						province_id = 647
-						province_id = 651
-						province_id = 654
-						province_id = 660
-						province_id = 661
-						province_id = 2533
+						region = AUS_633
+						region = AUS_652
+						region = AUS_654
+						region = AUS_657
+						region = AUS_771
+						region = AUS_777
+						region = AUS_2538
+						province_id = 778
+						province_id = 624
 					}
 				}
 				remove_core = THIS
@@ -5459,7 +5457,8 @@ political_decisions = {
 
 		allow = {
 			part_of_sphere = no
-			has_unclaimed_cores = no
+			#has_unclaimed_cores = no
+			OR = { is_secondary_power = yes is_greater_power = yes }
 			NOT = { 
 				OR = { 
 					ruling_party_ideology = socialist
@@ -5501,7 +5500,8 @@ political_decisions = {
 
 		allow = {
 			part_of_sphere = no
-			has_unclaimed_cores = no
+			#has_unclaimed_cores = no
+			OR = { is_secondary_power = yes is_greater_power = yes }
 			NOT = { 
 				OR = { 
 					ruling_party_ideology = socialist
@@ -5543,7 +5543,8 @@ political_decisions = {
 
 		allow = {
 			part_of_sphere = no
-			has_unclaimed_cores = no
+			#has_unclaimed_cores = no
+			OR = { is_secondary_power = yes is_greater_power = yes }
 			NOT = { 
 				OR = { 
 					ruling_party_ideology = socialist
@@ -5584,7 +5585,8 @@ political_decisions = {
 
 		allow = {
 			part_of_sphere = no
-			has_unclaimed_cores = no
+			#has_unclaimed_cores = no
+			OR = { is_secondary_power = yes is_greater_power = yes }
 			NOT = { 
 				OR = { 
 					ruling_party_ideology = socialist
@@ -5629,7 +5631,8 @@ political_decisions = {
 
 		allow = {
 			part_of_sphere = no
-			has_unclaimed_cores = no
+			#has_unclaimed_cores = no
+			OR = { is_secondary_power = yes is_greater_power = yes }
 			NOT = { 
 				OR = {
 					ruling_party_ideology = progressive
@@ -5671,7 +5674,8 @@ political_decisions = {
 
 		allow = {
 			part_of_sphere = no
-			has_unclaimed_cores = no
+			#has_unclaimed_cores = no
+			OR = { is_secondary_power = yes is_greater_power = yes }
 			NOT = { 
 				OR = { 
 					ruling_party_ideology = socialist

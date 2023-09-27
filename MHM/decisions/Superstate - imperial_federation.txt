@@ -8,6 +8,8 @@ political_decisions = {
 				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
+				#Monarchist Ireland
+				AND = { primary_culture = irish has_country_flag = IRE_republic_day_flag OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
 			}
 			NOT = { has_country_flag = xac_ambition } 
 			NOT = { has_country_flag = xal_ambition } 
@@ -162,6 +164,8 @@ political_decisions = {
 				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
+				#Monarchist Ireland
+				AND = { primary_culture = irish has_country_flag = IRE_republic_day_flag OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
 			}
 			has_country_flag = imp_ambition
 			has_country_flag = trade_block_ambition 
@@ -206,6 +210,8 @@ political_decisions = {
 				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
+				#Monarchist Ireland
+				AND = { primary_culture = irish has_country_flag = IRE_republic_day_flag OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
 			}
 			has_country_flag = imp_ambition
 		}
@@ -249,6 +255,8 @@ political_decisions = {
 				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
+				#Monarchist Ireland
+				AND = { primary_culture = irish has_country_flag = IRE_republic_day_flag OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
 			}
 			has_country_flag = imp_ambition
 		}
@@ -296,6 +304,8 @@ political_decisions = {
 				primary_culture = anglo_oceanian
 				primary_culture = anglo_canadian
 				primary_culture = british
+				#Monarchist Ireland
+				AND = { primary_culture = irish has_country_flag = IRE_republic_day_flag OR = { government = hms_government government = hms_government1 government = absolute_monarchy } }
 			}
 			has_country_flag = imp_ambition
 		}

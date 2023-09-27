@@ -17,8 +17,8 @@ political_decisions = {
 			relation = { who = AUS value = 100 }
 			OR = {
 				AND = {
-					OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist }
-					AUS = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist } }
+					OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = traditionalist }
+					AUS = { OR = { ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = traditionalist } }
 				}
 				AND = {
 					government = absolute_monarchy

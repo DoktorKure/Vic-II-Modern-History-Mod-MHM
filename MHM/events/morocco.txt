@@ -141,6 +141,8 @@ country_event = {
 			owner = {
 				1773 = { secede_province = MOR } 
 				1774 = { secede_province = MOR }
+				1695 = { secede_province = MOR } 
+				1696 = { secede_province = MOR }
 			}
 		}
 		random_owned = {

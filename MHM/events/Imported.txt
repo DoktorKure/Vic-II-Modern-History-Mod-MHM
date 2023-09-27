@@ -219,11 +219,11 @@ country_event = {
 					}
 					
 					#FROM returns any core that belongs to THIS to THIS
-					any_owned = { limit = { is_core = THIS NOT = { is_core = FROM } } secede_province = THIS }
+					#any_owned = { limit = { is_core = THIS NOT = { is_core = FROM } } secede_province = THIS }
 				}
 				
 				#THIS returns any core that does not belong to THIS to FROM
-				any_owned = { limit = { is_core = FROM NOT = { is_core = THIS } } secede_province = FROM }
+				#any_owned = { limit = { is_core = FROM NOT = { is_core = THIS } } secede_province = FROM }
 
 				#Match Government
 

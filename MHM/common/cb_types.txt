@@ -3127,7 +3127,6 @@ annex_colony = {
 	peace_cost_factor = 0.7
 	penalty_factor = 35
 	is_civil_war = yes
-	always = yes
 
 	break_truce_prestige_factor = 5
 	break_truce_infamy_factor = 2
@@ -3216,6 +3215,122 @@ annex_colony = {
 				vassal_of = FROM
 				is_substate = no
 				OR = { government = colonial_government government = mandate_government }
+				any_owned_province = { is_core = THIS }
+			}
+			set_country_flag = transfer_to_new_overlord
+			set_country_flag = transfer_to_new_overlord_annex
+		}
+	}
+	
+	on_po_accepted = {
+		THIS = { set_country_flag = new_overlord }
+		THIS = { set_country_flag = new_overlord_annexing }
+		
+		THIS = { set_country_flag = this_won_CB }
+		set_country_flag = this_lost_CB
+		
+	}
+}
+
+#Annex existing vassal with THIS cores into THIS
+annex_vassal = {
+	sprite_index = 15
+	is_triggered_only = yes
+	months = 12
+	crisis = no
+
+	badboy_factor = 0
+	prestige_factor = 1.5
+	peace_cost_factor = 0.7
+	penalty_factor = 35
+
+	break_truce_prestige_factor = 5
+	break_truce_infamy_factor = 2
+	break_truce_militancy_factor = 2
+	truce_months = 12
+	
+	good_relation_prestige_factor = 1
+	good_relation_infamy_factor = 1
+	good_relation_militancy_factor = 1
+
+	can_use = {
+
+		THIS = { NOT = { has_country_modifier = no_more_war } }
+		THIS = { NOT = { has_country_flag = renounced_war_rights } }
+		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
+
+		THIS = { 
+			OR = { 
+				government = theocracy
+				government = absolute_monarchy
+				government = nationalist_dictatorship
+				government = sectarian_dictatorship
+				government = presidential_dictatorship
+				government = proletarian_dictatorship
+				government = proletarian_dictatorship1
+
+				NOT = { war_policy = pacifism } 
+				war = yes 
+				has_country_flag = world_medium 
+				has_country_flag = world_high 
+				has_country_flag = cold_war_high 
+				has_country_modifier = cold_war_hot 
+			} 
+		}
+
+		NOT = { is_our_vassal = THIS }
+		num_of_vassals_no_substates = 1
+
+		OR = {
+			NOT = { has_country_flag = dismantle_declared }
+			THIS = { NOT = { has_country_flag = in_great_war } }
+			THIS = { ai = no }
+		}
+
+	}
+	
+	# THIS - us
+	# FROM - country scope is possible match?
+	# war target country of goal is scope
+	allowed_countries = {
+		is_our_vassal = FROM
+		FROM = {
+			is_substate = no
+			NOT = { OR = { government = colonial_government government = mandate_government } }
+			AND = {
+				NOT = {
+					any_owned_province = {
+						NOT = {
+							is_core = THIS
+						}
+					}
+				}
+				any_owned_province = { is_core = THIS }
+			}
+		}
+	}
+	
+	po_release_puppet = yes
+	po_add_to_sphere = yes
+	po_remove_prestige = yes
+
+	war_name = WAR_RESTORE_ORDER_NAME
+	
+	on_add = {
+	
+		set_country_flag = this_is_aggressor
+	
+		move_issue_percentage = { 
+			from = jingoism 
+			to = pro_military
+			value = 0.25
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = FROM
+				is_substate = no
+				NOT = { OR = { government = colonial_government government = mandate_government } }
 				any_owned_province = { is_core = THIS }
 			}
 			set_country_flag = transfer_to_new_overlord

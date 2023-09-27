@@ -83,6 +83,7 @@ country_event = {
 		name = "Deutschland, Deutschland über alles..."
 		set_global_flag = player_choice_GER_occupation
 		overlord = { release_vassal = THIS diplomatic_influence = { who = THIS value = -200 } }
+		money = 850000
 		change_tag = GER
 		any_country = { limit = { exists = yes OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 tag = OG5 } } country_event = 11106 }
 		any_country = { limit = { OR = { tag = RUS tag = FRA tag = ENG tag = USA tag = POL } } remove_country_flag = occupation_zones_in_germany }

@@ -346,14 +346,14 @@ political_decisions = {
 		picture = "reform_the_unsc"
 		potential = {
 			is_greater_power = yes
-			#Not during cold war or one of the chief UNSC member states doesn't exist anymore
+			#Not during cold war or a chief UNSC member is no longer a major power/doesn't exist anymore
 			OR = {
 				NOT = { has_global_flag = blocsenabled }
-				RUS = { exists = no }
-				CHI = { exists = no }
-				FRA = { exists = no }
-				ENG = { exists = no }
-				USA = { exists = no }
+				RUS = { OR = { exists = no AND = { is_greater_power = no is_secondary_power = no } } }
+				CHI = { OR = { exists = no AND = { is_greater_power = no is_secondary_power = no } } }
+				FRA = { OR = { exists = no AND = { is_greater_power = no is_secondary_power = no } } }
+				ENG = { OR = { exists = no AND = { is_greater_power = no is_secondary_power = no } } }
+				USA = { OR = { exists = no AND = { is_greater_power = no is_secondary_power = no } } }
 			}
 			has_country_modifier = united_nations_ga_member
 			NOT = { has_country_modifier = unsc_permanent_member }
@@ -362,13 +362,13 @@ political_decisions = {
 		allow = {
 			war = no
 			election = no
-			OR = { #2000 or a chief UNSC member is no longer a GP
+			OR = { #2000 or a chief UNSC member is no longer a major power/doesn't exist anymore
 				cultural_imperialism = 1
-				RUS = { has_country_modifier = unsc_permanent_member is_greater_power = no }
-				CHI = { has_country_modifier = unsc_permanent_member is_greater_power = no }
-				FRA = { has_country_modifier = unsc_permanent_member is_greater_power = no }
-				ENG = { has_country_modifier = unsc_permanent_member is_greater_power = no }
-				USA = { has_country_modifier = unsc_permanent_member is_greater_power = no }
+				RUS = { OR = { exists = no AND = { has_country_modifier = unsc_permanent_member is_greater_power = no is_secondary_power = no } } }
+				CHI = { OR = { exists = no AND = { has_country_modifier = unsc_permanent_member is_greater_power = no is_secondary_power = no } } }
+				FRA = { OR = { exists = no AND = { has_country_modifier = unsc_permanent_member is_greater_power = no is_secondary_power = no } } }
+				ENG = { OR = { exists = no AND = { has_country_modifier = unsc_permanent_member is_greater_power = no is_secondary_power = no } } }
+				USA = { OR = { exists = no AND = { has_country_modifier = unsc_permanent_member is_greater_power = no is_secondary_power = no } } }
 			}
 			NOT = { badboy = 0.2 }
 			NOT = { 

@@ -634,6 +634,22 @@ country_event = { # New Civil War
 			}
 			country_event = 9001010
 		}
+
+		any_country = {
+			limit = { 
+				OR = {
+					tag = POL
+					tag = PCC
+					tag = CZH
+					tag = HUN 
+					tag = ROM 
+					tag = BUL 
+					tag = ALB
+				}
+				vassal_of = RUS
+			}
+			country_event = 9001013
+		}
 		ai_chance = { factor = 1 }
 	}
 }
@@ -681,6 +697,37 @@ country_event = { # Who Support ?
 		}
 		
 		ai_chance = { factor = 0.8 }
+	}
+	
+}
+
+country_event = { # Who Support ?
+	id = 9001013
+	title = "Who Support ?"
+	desc = EVT_9001013_DESC
+	picture = "ussr_civil_war_beria"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Let's fight for our Independence!"
+		
+		government = democracy
+		ruling_party_ideology = nationalist
+		country_event = 800054
+		
+		#Start war of independence
+		RUS = { release_vassal = THIS }
+		war = {
+			target = RUS
+			attacker_goal = {
+				casus_belli = become_independent
+			}
+			defender_goal = {
+				
+			}
+			call_ally = no
+		}
 	}
 	
 }

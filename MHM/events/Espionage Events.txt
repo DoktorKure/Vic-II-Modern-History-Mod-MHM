@@ -177,12 +177,12 @@ country_event = {
 
 	trigger = {
 		has_country_modifier = spy_low_gp
-		is_greater_power = yes
-		any_greater_power = { alliance_with = THIS }
+		OR = { is_greater_power = yes is_secondary_power = yes }
+		OR = { any_greater_power = { alliance_with = THIS } any_secondary_power = { alliance_with = THIS } }
 	}
 
 	mean_time_to_happen = {
-		months = 64
+		months = 48
 	}
 
 	option = {
@@ -190,7 +190,7 @@ country_event = {
 		years_of_research = 0.2
 		
 		random_country = { 
-			limit = { alliance_with = THIS is_greater_power = yes } 
+			limit = { alliance_with = THIS OR = { is_greater_power = yes is_secondary_power = yes } }
 			relation = { who = THIS value = 25 } 
 			years_of_research = 0.1
 		}

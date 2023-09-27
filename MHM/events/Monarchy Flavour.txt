@@ -761,6 +761,7 @@ country_event = {
 
 	trigger = {
 		NOT = { OR = { government = absolute_monarchy government = hms_government government = hms_government1 } }
+		NOT = { has_country_flag = hnd_republic_flag }
 
 		OR = {
 			has_country_modifier = centrist_king #Big tent

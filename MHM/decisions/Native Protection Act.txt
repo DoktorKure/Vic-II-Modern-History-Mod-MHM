@@ -1,148 +1,147 @@
 political_decisions = {
-
-native_protection_act = {
+	native_protection_act = {
 		picture = "add_accepted"
 		potential = {
 			capital_scope = { continent = africa }
-		NOT = { has_country_modifier = apartheid }
+			NOT = { has_country_modifier = apartheid }
 			OR = {
-			is_culture_group = african_diaspora_cultures
+				is_culture_group = african_diaspora_cultures
 				is_culture_group = african
-							}
+			}
 			NOT = { has_country_flag = native_protection_act_enacted }
 			any_owned_province = {
 				any_core = {
 					any_pop = {
 						OR = {
-has_pop_culture = akan	
-has_pop_culture = bambara 
-has_pop_culture = black_muslim 	
-has_pop_culture = dyula 
-has_pop_culture = edo 
-has_pop_culture = ewe 	
-has_pop_culture = fon	
-has_pop_culture = fula	
-has_pop_culture = fulbe 	
-has_pop_culture = gur	
-has_pop_culture = hausa 	
-has_pop_culture = ibibio 	
-has_pop_culture = ibo 	
-has_pop_culture = ijaw 	
-has_pop_culture = itsekari 	
-has_pop_culture = jola 	
-has_pop_culture = kru 	
-has_pop_culture = mande 	
-has_pop_culture = mossi 	
-has_pop_culture = nupe 	
-has_pop_culture = nyakole 	
-has_pop_culture = senufo 	
-has_pop_culture = soga 	
-has_pop_culture = songhai 	
-has_pop_culture = soussou 	
-has_pop_culture = tiv 	
-has_pop_culture = toubou 	
-has_pop_culture = tuareg 	
-has_pop_culture = wolof 	
-has_pop_culture = yoruba 	
-has_pop_culture = zaghawa 	
-has_pop_culture = zarma 	
-has_pop_culture = african_minor 	
-has_pop_culture = bakongo 	
-has_pop_culture = balanta 	
-has_pop_culture = banda 	
-has_pop_culture = baya_mandjia 	
-has_pop_culture = bemba 	
-has_pop_culture = biko 	
-has_pop_culture = chokwe 	
-has_pop_culture = comore 	
-has_pop_culture = damara 	
-has_pop_culture = fang 	
-has_pop_culture = ga_adangbe 	
-has_pop_culture = ganda 	
-has_pop_culture = ganguela 	
-has_pop_culture = igbo 	
-has_pop_culture = iteso 	
-has_pop_culture = kabye 	
-has_pop_culture = kalenjin 
-has_pop_culture = kamba 	
-has_pop_culture = kanem_bornou 	
-has_pop_culture = kanuri 	
-has_pop_culture = kavango 	
-has_pop_culture = kiga 
-has_pop_culture = kimbundu 	
-has_pop_culture = kisii 	
-has_pop_culture = kpelle 	
-has_pop_culture = kuba 	
-has_pop_culture = langi 	
-has_pop_culture = lendu 
-has_pop_culture = lingala 
-has_pop_culture = lozi 
-has_pop_culture = luba 
-has_pop_culture = luhya 
-has_pop_culture = lunda 
-has_pop_culture = mayo_kebbi 
-has_pop_culture = mbaka 
-has_pop_culture = mbochi 
-has_pop_culture = mende 
-has_pop_culture = merida 
-has_pop_culture = mongo 
-has_pop_culture = mushunguli 
-has_pop_culture = ndau 
-has_pop_culture = ovambo 
-has_pop_culture = sangha 
-has_pop_culture = sara 
-has_pop_culture = teda 
-has_pop_culture = voltaic 
-has_pop_culture = afar 
-has_pop_culture = amhara 
-has_pop_culture = azande 
-has_pop_culture = bari 
-has_pop_culture = beja 
-has_pop_culture = dinka 
-has_pop_culture = fur 
-has_pop_culture = hadjarai 
-has_pop_culture = hutu 
-has_pop_culture = kikuyu 
-has_pop_culture = luo 
-has_pop_culture = maasai 
-has_pop_culture = makonde 
-has_pop_culture = meru 
-has_pop_culture = nuba 
-has_pop_culture = nuer 
-has_pop_culture = oromo 
-has_pop_culture = shilluk 
-has_pop_culture = somali 
-has_pop_culture = nyamwezi 
-has_pop_culture = sukuma 
-has_pop_culture = swahili 
-has_pop_culture = teke 
-has_pop_culture = temne 
-has_pop_culture = tigray 
-has_pop_culture = tigre 
-has_pop_culture = tsonga 
-has_pop_culture = tuposa 
-has_pop_culture = tutsi 
-has_pop_culture = chewa 
-has_pop_culture = coloured 
-has_pop_culture = herero 
-has_pop_culture = khoisan 
-has_pop_culture = lomwe 
-has_pop_culture = makua 
-has_pop_culture = nama 
-has_pop_culture = nguni 
-has_pop_culture = ovimbundu 
-has_pop_culture = sena
-has_pop_culture = sepedi
-has_pop_culture = serer 
-has_pop_culture = shona
-has_pop_culture = sotho 
-has_pop_culture = swazi
-has_pop_culture = tonga 
-has_pop_culture = tswana 
-has_pop_culture = venda
-has_pop_culture = xhosa
-has_pop_culture = yao	
-has_pop_culture = zulu
+							has_pop_culture = akan	
+							has_pop_culture = bambara 
+							has_pop_culture = black_muslim 	
+							has_pop_culture = dyula 
+							has_pop_culture = edo 
+							has_pop_culture = ewe 	
+							has_pop_culture = fon	
+							has_pop_culture = fula	
+							has_pop_culture = fulbe 	
+							has_pop_culture = gur	
+							has_pop_culture = hausa 	
+							has_pop_culture = ibibio 	
+							has_pop_culture = ibo 	
+							has_pop_culture = ijaw 	
+							has_pop_culture = itsekari 	
+							has_pop_culture = jola 	
+							has_pop_culture = kru 	
+							has_pop_culture = mande 	
+							has_pop_culture = mossi 	
+							has_pop_culture = nupe 	
+							has_pop_culture = nyakole 	
+							has_pop_culture = senufo 	
+							has_pop_culture = soga 	
+							has_pop_culture = songhai 	
+							has_pop_culture = soussou 	
+							has_pop_culture = tiv 	
+							has_pop_culture = toubou 	
+							has_pop_culture = tuareg 	
+							has_pop_culture = wolof 	
+							has_pop_culture = yoruba 	
+							has_pop_culture = zaghawa 	
+							has_pop_culture = zarma 	
+							has_pop_culture = african_minor 	
+							has_pop_culture = bakongo 	
+							has_pop_culture = balanta 	
+							has_pop_culture = banda 	
+							has_pop_culture = baya_mandjia 	
+							has_pop_culture = bemba 	
+							has_pop_culture = biko 	
+							has_pop_culture = chokwe 	
+							has_pop_culture = comore 	
+							has_pop_culture = damara 	
+							has_pop_culture = fang 	
+							has_pop_culture = ga_adangbe 	
+							has_pop_culture = ganda 	
+							has_pop_culture = ganguela 	
+							has_pop_culture = igbo 	
+							has_pop_culture = iteso 	
+							has_pop_culture = kabye 	
+							has_pop_culture = kalenjin 
+							has_pop_culture = kamba 	
+							has_pop_culture = kanem_bornou 	
+							has_pop_culture = kanuri 	
+							has_pop_culture = kavango 	
+							has_pop_culture = kiga 
+							has_pop_culture = kimbundu 	
+							has_pop_culture = kisii 	
+							has_pop_culture = kpelle 	
+							has_pop_culture = kuba 	
+							has_pop_culture = langi 	
+							has_pop_culture = lendu 
+							has_pop_culture = lingala 
+							has_pop_culture = lozi 
+							has_pop_culture = luba 
+							has_pop_culture = luhya 
+							has_pop_culture = lunda 
+							has_pop_culture = mayo_kebbi 
+							has_pop_culture = mbaka 
+							has_pop_culture = mbochi 
+							has_pop_culture = mende 
+							has_pop_culture = merida 
+							has_pop_culture = mongo 
+							has_pop_culture = mushunguli 
+							has_pop_culture = ndau 
+							has_pop_culture = ovambo 
+							has_pop_culture = sangha 
+							has_pop_culture = sara 
+							has_pop_culture = teda 
+							has_pop_culture = voltaic 
+							has_pop_culture = afar 
+							has_pop_culture = amhara 
+							has_pop_culture = azande 
+							has_pop_culture = bari 
+							has_pop_culture = beja 
+							has_pop_culture = dinka 
+							has_pop_culture = fur 
+							has_pop_culture = hadjarai 
+							has_pop_culture = hutu 
+							has_pop_culture = kikuyu 
+							has_pop_culture = luo 
+							has_pop_culture = maasai 
+							has_pop_culture = makonde 
+							has_pop_culture = meru 
+							has_pop_culture = nuba 
+							has_pop_culture = nuer 
+							has_pop_culture = oromo 
+							has_pop_culture = shilluk 
+							has_pop_culture = somali 
+							has_pop_culture = nyamwezi 
+							has_pop_culture = sukuma 
+							has_pop_culture = swahili 
+							has_pop_culture = teke 
+							has_pop_culture = temne 
+							has_pop_culture = tigray 
+							has_pop_culture = tigre 
+							has_pop_culture = tsonga 
+							has_pop_culture = tuposa 
+							has_pop_culture = tutsi 
+							has_pop_culture = chewa 
+							has_pop_culture = coloured 
+							has_pop_culture = herero 
+							has_pop_culture = khoisan 
+							has_pop_culture = lomwe 
+							has_pop_culture = makua 
+							has_pop_culture = nama 
+							has_pop_culture = nguni 
+							has_pop_culture = ovimbundu 
+							has_pop_culture = sena
+							has_pop_culture = sepedi
+							has_pop_culture = serer 
+							has_pop_culture = shona
+							has_pop_culture = sotho 
+							has_pop_culture = swazi
+							has_pop_culture = tonga 
+							has_pop_culture = tswana 
+							has_pop_culture = venda
+							has_pop_culture = xhosa
+							has_pop_culture = yao	
+							has_pop_culture = zulu
 						}
 					}
 				}
@@ -151,21 +150,16 @@ has_pop_culture = zulu
 	
 		allow = {
 			war = no
-
-			NOT = { citizenship_policy = residency }
+			citizenship_policy = full_citizenship
 			NOT = { government = sectarian_dictatorship }
-
 			election = no
-
 			NOT = { ruling_party_ideology = nationalist }
+			NOT = { ruling_party_ideology = populist }
 			NOT = { ruling_party_ideology = traditionalist }
-
 		}
 		
 		effect = {
-
-clr_country_flag = native_discrimination_act_enacted
-			
+			clr_country_flag = native_discrimination_act_enacted
 			set_country_flag = native_protection_act_enacted
 			random_owned = {
 				limit = { continent = africa }
@@ -174,7 +168,6 @@ clr_country_flag = native_discrimination_act_enacted
 						scaled_militancy = { factor = 3 ideology = nationalist }
 						scaled_consciousness = { factor = 3 ideology = conservative }
 					}
-					
 					any_pop = { limit = { is_culture_group = african }
 						consciousness = 4
 						militancy = -2
@@ -251,102 +244,82 @@ clr_country_flag = native_discrimination_act_enacted
 				limit = { is_core = THIS any_pop = { has_pop_culture = kru } NOT = { owner = { accepted_culture = kru } } }
 				owner = { add_accepted_culture = kru }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = mande } NOT = { owner = { accepted_culture = mande } } }
 				owner = { add_accepted_culture = mande }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = mossi } NOT = { owner = { accepted_culture = mossi } } }
 				owner = { add_accepted_culture = mossi }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = nupe } NOT = { owner = { accepted_culture = nupe } } }
 				owner = { add_accepted_culture = nupe }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = nyakole } NOT = { owner = { accepted_culture = nyakole } } }
 				owner = { add_accepted_culture = nyakole }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = senufo } NOT = { owner = { accepted_culture = senufo } } }
 				owner = { add_accepted_culture = senufo }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = soga } NOT = { owner = { accepted_culture = soga } } }
 				owner = { add_accepted_culture = soga }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = songhai } NOT = { owner = { accepted_culture = songhai } } }
 				owner = { add_accepted_culture = songhai }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = soussou } NOT = { owner = { accepted_culture = soussou } } }
 				owner = { add_accepted_culture = soussou }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = tiv } NOT = { owner = { accepted_culture = tiv } } }
 				owner = { add_accepted_culture = tiv }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = toubou } NOT = { owner = { accepted_culture = toubou } } }
 				owner = { add_accepted_culture = toubou }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = tuareg } NOT = { owner = { accepted_culture = tuareg } } }
 				owner = { add_accepted_culture = tuareg }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = wolof } NOT = { owner = { accepted_culture = wolof } } }
 				owner = { add_accepted_culture = wolof }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = yoruba } NOT = { owner = { accepted_culture = yoruba } } }
 				owner = { add_accepted_culture = yoruba }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = zaghawa } NOT = { owner = { accepted_culture = zaghawa } } }
 				owner = { add_accepted_culture = zaghawa }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = zarma } NOT = { owner = { accepted_culture = zarma } } }
 				owner = { add_accepted_culture = zarma }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = african_minor } NOT = { owner = { accepted_culture = african_minor } } }
 				owner = { add_accepted_culture = african_minor }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = bakongo } NOT = { owner = { accepted_culture = bakongo } } }
 				owner = { add_accepted_culture = bakongo }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = balanta } NOT = { owner = { accepted_culture = balanta } } }
 				owner = { add_accepted_culture = balanta }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = banda } NOT = { owner = { accepted_culture = banda } } }
 				owner = { add_accepted_culture = banda }
 			}
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = baya_mandjia } NOT = { owner = { accepted_culture = baya_mandjia } } }
 				owner = { add_accepted_culture = baya_mandjia }
@@ -491,8 +464,6 @@ clr_country_flag = native_discrimination_act_enacted
 				limit = { is_core = THIS any_pop = { has_pop_culture = mongo } NOT = { owner = { accepted_culture = mongo } } }
 				owner = { add_accepted_culture = mongo }
 			}
-
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = mushunguli } NOT = { owner = { accepted_culture = mushunguli } } }
 				owner = { add_accepted_culture = mushunguli }
@@ -581,12 +552,6 @@ clr_country_flag = native_discrimination_act_enacted
 				limit = { is_core = THIS any_pop = { has_pop_culture = nuba } NOT = { owner = { accepted_culture = nuba } } }
 				owner = { add_accepted_culture = nuba }
 			}
-
-
-
-
-
-
 			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = nuer  } NOT = { owner = { accepted_culture = nuer  } } }
 				owner = { add_accepted_culture = nuer  }
@@ -687,49 +652,47 @@ clr_country_flag = native_discrimination_act_enacted
 				limit = { is_core = THIS any_pop = { has_pop_culture = sepedi } NOT = { owner = { accepted_culture = sepedi } } }
 				owner = { add_accepted_culture = sepedi }
 			}
-
-
-		random_owned = {
+			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = serer } NOT = { owner = { accepted_culture = serer } } }
 				owner = { add_accepted_culture = serer }
 			}
-		random_owned = {
+			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = shona } NOT = { owner = { accepted_culture = shona } } }
 				owner = { add_accepted_culture = shona }
 			}
-		random_owned = {
+			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = sotho } NOT = { owner = { accepted_culture = sotho } } }
 				owner = { add_accepted_culture = sotho }
 			}
-		random_owned = {
+			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = swazi } NOT = { owner = { accepted_culture = swazi } } }
 				owner = { add_accepted_culture = swazi }
 			}
-		random_owned = {
+			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = tonga } NOT = { owner = { accepted_culture = tonga } } }
 				owner = { add_accepted_culture = tonga }
 			}
-		random_owned = {
+			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = tswana } NOT = { owner = { accepted_culture = tswana } } }
 				owner = { add_accepted_culture = tswana }
 			}
-		random_owned = {
+			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = venda } NOT = { owner = { accepted_culture = venda } } }
 				owner = { add_accepted_culture = venda }
 			}
-		random_owned = {
+			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = xhosa } NOT = { owner = { accepted_culture = xhosa } } }
 				owner = { add_accepted_culture = xhosa }
 			}
-		random_owned = {
+			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = yao } NOT = { owner = { accepted_culture = yao } } }
 				owner = { add_accepted_culture = yao }
 			}
-		random_owned = {
+			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = zulu } NOT = { owner = { accepted_culture = zulu } } }
 				owner = { add_accepted_culture = zulu }
 			}
-random_owned = {
+			random_owned = {
 				limit = { is_core = THIS any_pop = { has_pop_culture = arab } NOT = { owner = { accepted_culture = arab } } }
 				owner = { add_accepted_culture = arab }
 			}		
