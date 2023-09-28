@@ -87,6 +87,14 @@ schools = commonwealth
 decision = united_nations
 decision = jointheunga
 decision = jointheunsc
+
+foreign_investment = { 
+	SAF = 10000
+	CAN = 10000
+	NZL = 10000
+	AST = 10000
+	RAJ = 5000
+}
 oob = "/ENG_oob.txt"
 
 1950.1.1 = {
