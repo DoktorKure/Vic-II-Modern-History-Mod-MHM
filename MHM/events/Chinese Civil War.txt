@@ -215,10 +215,12 @@ country_event = {
 	option = {
 		name = "We accept their demands, the war must come to an end."
 		CHI = { inherit = THIS }
-		ai_chance = { factor = 0.4 }
-		modifier = { 
-			factor = 1 
-			OR = { tag = QHA tag = SXI tag = GGX }
+		ai_chance = {
+			factor = 0.4
+			modifier = { 
+				factor = 1 
+				OR = { tag = QHA tag = SXI tag = GGX }
+			}
 		}
 	}
 	
@@ -236,10 +238,12 @@ country_event = {
 				casus_belli = civil_war
 			}
 		}
-		ai_chance = { factor = 0.6 }
-		modifier = { 
-			factor = 1 
-			OR = { tag = QHA tag = SXI tag = GGX }
+		ai_chance = {
+			factor = 0.6
+			modifier = { 
+				factor = 1 
+				OR = { tag = QHA tag = SXI tag = GGX }
+			}
 		}
 	}
 }
@@ -306,20 +310,24 @@ country_event = {
 	option = {
 		name = "The winds of fortune are changing and so must our loyalty."
 		CHI = { inherit = THIS }
-		ai_chance = { factor = 0.3 }
-		modifier = { 
-			factor = 1 
-			OR = { tag = QHA tag = SXI tag = GGX }
+		ai_chance = {
+			factor = 0.3
+			modifier = { 
+				factor = 1 
+				OR = { tag = QHA tag = SXI tag = GGX }
+			}
 		}
 	}
 	
 	option = {
 		name = "No compromise with the communists!"
 		prestige = 100
-		ai_chance = { factor = 0.7 }
-		modifier = { 
-			factor = 1 
-			OR = { tag = YNN tag = SZC }
+		ai_chance = {
+			factor = 0.7
+			modifier = { 
+				factor = 1 
+				OR = { tag = YNN tag = SZC }
+			}
 		}
 	}
 }
@@ -381,7 +389,7 @@ country_event = {
 		name = "I am the leader of China!"
 		release_vassal = GGX
 		relation = { who = GGX value = -100 }
-		influence = { who = GGX value = -200 }
+		diplomatic_influence = { who = GGX value = -200 }
 		GGX = { end_war = CHI }
 		GGX = { country_event = 90911 }
 		ai_chance = { factor = 0.1 }

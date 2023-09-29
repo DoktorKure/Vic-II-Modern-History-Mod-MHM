@@ -31,7 +31,7 @@ country_event = {
 			#Poor Class
 			craftsmen = { money = 50 }
 			farmers = { money = 50 }
-			laborers = { money = 50 }
+			labourers = { money = 50 }
 			soldiers = { money = 65 }
 		}
 		any_country = {
@@ -54,7 +54,7 @@ country_event = {
 			#Poor Class
 			craftsmen = { money = 100 }
 			farmers = { money = 100 }
-			laborers = { money = 100 }
+			labourers = { money = 100 }
 			soldiers = { money = 75 }
 		}
 		any_country = {
@@ -77,7 +77,7 @@ country_event = {
 			#Poor Class
 			craftsmen = { money = 150 }
 			farmers = { money = 150 }
-			laborers = { money = 150 }
+			labourers = { money = 150 }
 			soldiers = { money = 200 }
 		}
 		any_country = { # Balance for USSR having the most provinces
@@ -100,7 +100,7 @@ country_event = {
 			#Poor Class
 			craftsmen = { money = 50 }
 			farmers = { money = 50 }
-			laborers = { money = 50 }
+			labourers = { money = 50 }
 			soldiers = { money = 65 }
 		}
 		
@@ -125,7 +125,7 @@ country_event = {
 			#Poor Class
 			craftsmen = { money = 50 }
 			farmers = { money = 50 }
-			laborers = { money = 50 }
+			labourers = { money = 50 }
 			soldiers = { money = 65 }
 		}
 		any_owned = {
@@ -148,7 +148,7 @@ country_event = {
 			#Poor Class
 			craftsmen = { money = 100 }
 			farmers = { money = 100 }
-			laborers = { money = 100 }
+			labourers = { money = 100 }
 			soldiers = { money = 75 }
 		}
 		any_owned = {
@@ -171,7 +171,7 @@ country_event = {
 			#Poor Class
 			craftsmen = { money = 150 }
 			farmers = { money = 150 }
-			laborers = { money = 150 }
+			labourers = { money = 150 }
 			soldiers = { money = 200 }
 		}
 		any_owned = { # Balance for USSR having the most provinces
@@ -194,7 +194,7 @@ country_event = {
 			#Poor Class
 			craftsmen = { money = 50 }
 			farmers = { money = 50 }
-			laborers = { money = 50 }
+			labourers = { money = 50 }
 			soldiers = { money = 65 }
 		}
 		country_event = 124156 #MHM National Values

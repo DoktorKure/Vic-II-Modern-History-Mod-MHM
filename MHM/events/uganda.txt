@@ -248,8 +248,8 @@ country_event = {
 		FROM = {
 			war = {
 				target = THIS
-				attacker_goal = colonial_war
-				defender_goal = become_independent_colony
+				attacker_goal = { casus_belli = colonial_war }
+				defender_goal = { casus_belli = become_independent_colony }
 				call_ally = no
 			}
 		}

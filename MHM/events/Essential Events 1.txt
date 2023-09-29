@@ -5437,7 +5437,7 @@ random_owned = {
 	}
 	owner = { 
 		release_vassal = HKG
-		HKG = { government = colonial_government event = 800054 }
+		HKG = { government = colonial_government country_event = 800054 }
 		diplomatic_influence = { who = HKG value = 200 }
 	}
 }
@@ -5447,7 +5447,7 @@ random_owned = {
 		is_our_vassal = HKG
 	}
 	owner = { 
-		HKG = { government = mandate_government event = 800054 }
+		HKG = { government = mandate_government country_event = 800054 }
 	}
 }
 ai_chance = { factor = 0.05 }

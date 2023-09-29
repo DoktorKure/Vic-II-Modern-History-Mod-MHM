@@ -178,7 +178,13 @@ country_event = {
 	trigger = {
 		has_country_modifier = spy_low_gp
 		OR = { is_greater_power = yes is_secondary_power = yes }
-		OR = { any_greater_power = { alliance_with = THIS } any_secondary_power = { alliance_with = THIS } }
+		any_land_metaregion = {
+			owner = {
+				OR = { is_greater_power = yes is_secondary_power = yes }
+				NOT = { tag = THIS }
+				alliance_with = THIS
+			}
+		}
 	}
 
 	mean_time_to_happen = {

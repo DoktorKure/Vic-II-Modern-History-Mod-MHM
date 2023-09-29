@@ -453,7 +453,15 @@ country_event = {
 		any_pop = { limit = { culture = german } consciousness = -3 militancy = -3 }
 		
 		#Become NGF if SGF exists as its existence is a fait accompli for partition
-		OG3 = { any_owned = { limit = { owner = { exists = SGF } } owner = { add_core = NGF change_tag = NGF } } }
+		OG3 = {
+			any_owned = {
+				limit = {
+					owner = { exists = SGF }
+				}
+				add_core = NGF
+				owner = { change_tag = NGF }
+			}
+		}
 		
 		FRA = { country_event = 82040102 }
 		ai_chance = { factor = 0.8 }

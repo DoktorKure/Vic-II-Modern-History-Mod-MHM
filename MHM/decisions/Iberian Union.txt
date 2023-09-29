@@ -40,7 +40,7 @@ political_decisions = {
 			add_accepted_culture = portuguese
 			add_accepted_culture = catalan
 			add_accepted_culture = basque
-			add_accepted_culture = castizo
+			add_accepted_culture = white_spanish
 			change_tag = IBU
 			any_country = { limit = { exists = yes OR = { tag = SPA tag = POR tag = PBU } } country_event = 11101 }
 		}

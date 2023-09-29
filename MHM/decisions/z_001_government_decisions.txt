@@ -2143,13 +2143,25 @@ political_decisions = {
 			has_global_flag = epidemic_start
 			OR = {
 				has_country_flag = enable_virus_controls
-				has_province_modifier = virus_outbreak
-				has_province_modifier = virus_outbreak_deadly
+				any_owned_province = {
+					limit = {
+						OR = {
+							has_province_modifier = virus_outbreak
+							has_province_modifier = virus_outbreak_deadly
+						}
+					}
+				}
 			}
 			OR = { 
-				has_country_modifier = virushigh
-				has_country_modifier = virusmedium
 				has_country_flag = virusno
+				any_owned_province = {
+					limit = {
+						OR = {
+							has_country_modifier = virushigh
+							has_country_modifier = virusmedium
+						}
+					}
+				}
 			}
 		}
 		alert = no
@@ -2173,14 +2185,26 @@ political_decisions = {
 			has_global_flag = epidemic_start
 			OR = {
 				has_country_flag = enable_virus_controls
-				has_province_modifier = virus_outbreak
-				has_province_modifier = virus_outbreak_deadly
+				any_owned_province = {
+					limit = {
+						OR = {
+							has_province_modifier = virus_outbreak
+							has_province_modifier = virus_outbreak_deadly
+						}
+					}
+				}
 			}
 			NOT = {
-				OR = { 
-					has_country_modifier = virushigh
-					has_country_modifier = virusmedium
+				OR = {
 					has_country_flag = virusno
+					any_owned_province = {
+						limit = {
+							OR = {
+								has_country_modifier = virushigh
+								has_country_modifier = virusmedium
+							}
+						}
+					}
 				}
 			}
 		}
@@ -2200,14 +2224,26 @@ political_decisions = {
 			has_global_flag = epidemic_start
 			OR = {
 				has_country_flag = enable_virus_controls
-				has_province_modifier = virus_outbreak
-				has_province_modifier = virus_outbreak_deadly
+				any_owned_province = {
+					limit = {
+						OR = {
+							has_province_modifier = virus_outbreak
+							has_province_modifier = virus_outbreak_deadly
+						}
+					}
+				}
 			}
 			NOT = {
-				OR = { 
-					has_country_modifier = virushigh
-					has_country_modifier = virusmedium
+				OR = {
 					has_country_flag = virusno
+					any_owned_province = {
+						limit = {
+							OR = {
+								has_country_modifier = virushigh
+								has_country_modifier = virusmedium
+							}
+						}
+					}
 				}
 			}
 		}
@@ -2227,14 +2263,26 @@ political_decisions = {
 			has_global_flag = epidemic_start
 			OR = {
 				has_country_flag = enable_virus_controls
-				has_province_modifier = virus_outbreak
-				has_province_modifier = virus_outbreak_deadly
+				any_owned_province = {
+					limit = {
+						OR = {
+							has_province_modifier = virus_outbreak
+							has_province_modifier = virus_outbreak_deadly
+						}
+					}
+				}
 			}
 			NOT = {
-				OR = { 
-					has_country_modifier = virushigh
-					has_country_modifier = virusmedium
+				OR = {
 					has_country_flag = virusno
+					any_owned_province = {
+						limit = {
+							OR = {
+								has_country_modifier = virushigh
+								has_country_modifier = virusmedium
+							}
+						}
+					}
 				}
 			}
 		}
