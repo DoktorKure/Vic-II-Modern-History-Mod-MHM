@@ -364,11 +364,63 @@ political_decisions = {
 			election = no
 			OR = { #2000 or a chief UNSC member is no longer a major power/doesn't exist anymore
 				cultural_imperialism = 1
-				RUS = { OR = { exists = no AND = { has_country_modifier = unsc_permanent_member is_greater_power = no is_secondary_power = no } } }
-				CHI = { OR = { exists = no AND = { has_country_modifier = unsc_permanent_member is_greater_power = no is_secondary_power = no } } }
-				FRA = { OR = { exists = no AND = { has_country_modifier = unsc_permanent_member is_greater_power = no is_secondary_power = no } } }
-				ENG = { OR = { exists = no AND = { has_country_modifier = unsc_permanent_member is_greater_power = no is_secondary_power = no } } }
-				USA = { OR = { exists = no AND = { has_country_modifier = unsc_permanent_member is_greater_power = no is_secondary_power = no } } }
+				RUS = {
+					OR = {
+						exists = no
+						AND = {
+							has_country_modifier = unsc_permanent_member
+							is_greater_power = no
+							is_secondary_power = no
+						}
+					}
+				}
+				CHI = {
+					OR = {
+						exists = no
+						AND = {
+							OR = {
+								has_country_modifier = unsc_permanent_member
+								#Annexed Taiwan but doesn't have UNSC member
+								AND = {
+									KMT = { exists = no }
+									NOT = { has_country_modifier = unsc_permanent_member }
+								}
+							}
+							is_greater_power = no
+							is_secondary_power = no
+						}
+					}
+				}
+				FRA = {
+					OR = {
+						exists = no
+						AND = {
+							has_country_modifier = unsc_permanent_member
+							is_greater_power = no
+							is_secondary_power = no
+						}
+					}
+				}
+				ENG = {
+					OR = {
+						exists = no
+						AND = {
+							has_country_modifier = unsc_permanent_member
+							is_greater_power = no
+							is_secondary_power = no
+						}
+					}
+				}
+				USA = {
+					OR = {
+						exists = no
+						AND = {
+							has_country_modifier = unsc_permanent_member
+							is_greater_power = no
+							is_secondary_power = no
+						}
+					}
+				}
 			}
 			NOT = { badboy = 0.2 }
 			NOT = { 
