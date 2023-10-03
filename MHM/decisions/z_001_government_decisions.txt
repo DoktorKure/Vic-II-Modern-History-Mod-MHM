@@ -2152,12 +2152,8 @@ political_decisions = {
 			}
 			OR = { 
 				has_country_flag = virusno
-				any_owned_province = {
-					OR = {
-						has_country_modifier = virushigh
-						has_country_modifier = virusmedium
-					}
-				}
+				has_country_modifier = virushigh
+				has_country_modifier = virusmedium
 			}
 		}
 		alert = no
@@ -2191,12 +2187,8 @@ political_decisions = {
 			NOT = {
 				OR = {
 					has_country_flag = virusno
-					any_owned_province = {
-						OR = {
-							has_country_modifier = virushigh
-							has_country_modifier = virusmedium
-						}
-					}
+					has_country_modifier = virushigh
+					has_country_modifier = virusmedium
 				}
 			}
 		}
@@ -2226,12 +2218,8 @@ political_decisions = {
 			NOT = {
 				OR = {
 					has_country_flag = virusno
-					any_owned_province = {
-						OR = {
-							has_country_modifier = virushigh
-							has_country_modifier = virusmedium
-						}
-					}
+					has_country_modifier = virushigh
+					has_country_modifier = virusmedium
 				}
 			}
 		}
@@ -2261,12 +2249,8 @@ political_decisions = {
 			NOT = {
 				OR = {
 					has_country_flag = virusno
-					any_owned_province = {
-						OR = {
-							has_country_modifier = virushigh
-							has_country_modifier = virusmedium
-						}
-					}
+					has_country_modifier = virushigh
+					has_country_modifier = virusmedium
 				}
 			}
 		}
