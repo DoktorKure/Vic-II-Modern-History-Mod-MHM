@@ -4291,6 +4291,21 @@ months = 7
 
 #ICJ Sea Dispute Result
 country_event = {
+	id = 14120231
+	title = "$FROMCOUNTRY$ disputes our maritime borders!"
+	desc = "The $FROMCOUNTRY_ADJ$ government has submitted a case the ICJ over the extent of their exclusive sea territory in the hopes the ICJ will rule in their favor. We will have to wait for abritration to decide."
+	picture = "icj_ruling"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Blast them! We have the rightful authority!"
+		relation = { who = FROM value = -25 }
+	}
+}
+
+#ICJ Sea Dispute Result
+country_event = {
 	id = 1412023
 	title = "Dispute over territorial waters ICJ result"
 	desc = "The ICJ is ready to give their verdict on the dispute that we had with another nation over the extent of our exclusive sea territory that we brought up to the ICJ for arbitration."
@@ -4298,23 +4313,37 @@ country_event = {
 
 	trigger = {
 		has_country_flag = sea_dispute_underway
-NOT = { has_country_modifier = sea_dispute }
-num_of_ports = 1
+		NOT = { has_country_modifier = sea_dispute }
+		any_owned_province = {
+			port = yes
+			any_neighbor_province = {
+				port = yes
+				owner = { NOT = { tag = THIS } }
+			}
 		}
-
-mean_time_to_happen = { 
-months = 7
-}
+		any_neighbor_country = {
+			has_country_flag = sea_dispute_underway
+			is_vassal = no
+			any_owned_province = {
+				port = yes
+				any_neighbor_province = {
+					owner = { tag = THIS }
+					port = yes
+				}
+			}
+			OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
+		}
+	}
 
 	option = {
 		name = "We hope for the best"
-clr_country_flag = sea_dispute_underway
-random_list = {
-	50 = { country_event = 1412024 } #Win
-	50 = { country_event = 1412025 } #Lose
-	}
+		clr_country_flag = sea_dispute_underway
+		random_list = {
+			50 = { country_event = 1412024 } #Win
+			50 = { country_event = 1412025 } #Lose
 		}
 	}
+}
 
 #ICJ Sea Dispute Result - Win
 country_event = {
@@ -4328,8 +4357,25 @@ country_event = {
 	option = {
 		name = "A victory!"
 		prestige = 100
+		random_country = {
+			limit = {
+				has_country_flag = sea_dispute_underway
+				is_vassal = no
+				any_owned_province = {
+					port = yes
+					any_neighbor_province = {
+						owner = { tag = THIS }
+						port = yes
+					}
+				}
+				OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
+			}
+			clr_country_flag = sea_dispute_underway
+			country_event = 1412025
 		}
 	}
+}
+
 #ICJ Sea Dispute Result - Lose
 country_event = {
 	id = 1412025
@@ -4342,6 +4388,22 @@ country_event = {
 	option = {
 		name = "We will get them next time!"
 		prestige = -50
+		random_country = {
+			limit = {
+				has_country_flag = sea_dispute_underway
+				is_vassal = no
+				any_owned_province = {
+					port = yes
+					any_neighbor_province = {
+						owner = { tag = THIS }
+						port = yes
+					}
+				}
+				OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
+			}
+			clr_country_flag = sea_dispute_underway
+			country_event = 1412024
+		}
 	}
 }
 

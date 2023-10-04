@@ -641,8 +641,8 @@ province_event = {
 						is_overseas = yes
 					}
 					controlled_by = REB
-				NOT = { country_units_in_province = THIS }
-				has_province_modifier = colonial_chaos
+					NOT = { country_units_in_province = THIS }
+					has_province_modifier = colonial_chaos
 				}
 				add_province_modifier = {
 					name = loss_of_control
@@ -654,7 +654,7 @@ province_event = {
 			limit = {
 				any_core = {
 					owned_by = THIS
-				has_province_modifier = loss_of_control
+					has_province_modifier = loss_of_control
 				}
 				is_cultural_union = no
 				exists = no
@@ -673,8 +673,8 @@ country_event = {
 	
 	option = {
 		name = "EVTDESC97182"
-		owner = {
-			FROM = {
+		FROM = {
+			owner = {
 				any_owned = {
 					limit = {
 						is_core = THIS
@@ -683,7 +683,9 @@ country_event = {
 					secede_province = THIS
 				}
 			}
-			FROM = { 
+		}
+		FROM = { 
+			owner = {
 				war = {
 					target = THIS
 					attacker_goal = { casus_belli = colonial_war }

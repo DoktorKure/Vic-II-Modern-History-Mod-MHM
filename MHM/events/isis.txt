@@ -13,7 +13,7 @@ country_event = {
 				any_owned = {
 					add_core = ISI
 					secede_province = ISI
-				remove_province_modifier = salafi_movement
+					remove_province_modifier = salafi_movement
 				}
 			}
 		}
@@ -21,12 +21,15 @@ country_event = {
 			limit = { is_core = ISI } 
 			remove_core = ISI
 		}
-		casus_belli = {
+		war = {
 			target = ISI
-			type = acquire_core_state
-			months = 60
+			attacker_goal = {
+				casus_belli = acquire_core_state
+			}
+			defender_goal = {
+				casus_belli = conquest
+			}
 		}
-		war = ISI
 	}
 }
 

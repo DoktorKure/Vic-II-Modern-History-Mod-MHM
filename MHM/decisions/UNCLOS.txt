@@ -78,12 +78,10 @@ political_decisions = {
 	dispute_sea = {
 		picture = "dispute_sea"
 		potential = {
-			num_of_ports = 1
 			has_country_flag = international_court_of_justice
 			NOT = { has_country_modifier = sea_dispute }
+			NOT = { has_country_flag = sea_dispute_underway }
 			OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
-			any_neighbor_country = { is_vassal = no num_of_ports = 1 OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 } 
-				NOT = { relation = { who = THIS value = -50 } } }
 		}
 		alert = no
 		allow = {
@@ -91,6 +89,25 @@ political_decisions = {
 			is_vassal = no
 			election = no
 			has_country_modifier = united_nations_ga_member
+			any_owned_province = {
+				port = yes
+				any_neighbor_province = {
+					port = yes
+					owner = { NOT = { tag = THIS } }
+				}
+			}
+			any_neighbor_country = {
+				is_vassal = no
+				any_owned_province = {
+					port = yes
+					any_neighbor_province = {
+						owner = { tag = THIS }
+						port = yes
+					}
+				}
+				OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
+				NOT = { relation = { who = THIS value = -100 } }
+			}
 		}
 		effect = {
 			add_country_modifier = { name = sea_dispute duration = 1825 }
@@ -98,23 +115,28 @@ political_decisions = {
 			set_country_flag = sea_dispute_underway
 			badboy = 1
 
-			random_country = { 
-				limit = { 
-
-					any_country = { limit = { neighbour = THIS is_vassal = no num_of_ports = 1 
-							NOT = { relation = { who = THIS value = -50 } }
-							OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 } }
-
-						NOT = { relation = { who = THIS value = -50 } } 
-
+			random_country = {
+				limit = {
+					is_vassal = no
+					any_owned_province = {
+						port = yes
+						any_neighbor_province = {
+							port = yes
+							owner = { tag = THIS }
+						}
 					}
-				}  
+					OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
+					NOT = { relation = { who = THIS value = -100 } }
+				}
+				set_country_flag = sea_dispute_underway
+				add_country_modifier = { name = sea_dispute duration = 1825 }
+				country_event = 14120231
 			}
-
 		}
 		ai_will_do = { 
 			factor = 100 
 		}
+	}
 	}
 
 }

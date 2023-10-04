@@ -1062,7 +1062,7 @@ country_event = {
 		NOT = { year = 1971 }
 		NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } } # It is illogical for communists to rise up against their own government
 		is_vassal = no
-		OR = { average_militancy = 8 pop_majority_ideology = communist } #Ripe conditions for a revolution
+		OR = { average_militancy = 7 pop_majority_ideology = communist } #Ripe conditions for a revolution
 	}
 	
 	immediate = { clr_global_flag = active_CCP_insurgency }
