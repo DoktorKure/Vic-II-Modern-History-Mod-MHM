@@ -86,20 +86,14 @@ political_decisions = {
 				port = yes
 				any_neighbor_province = {
 					port = yes
-					owner = { NOT = { tag = THIS } }
-				}
-			}
-			any_neighbor_country = {
-				is_vassal = no
-				any_owned_province = {
-					port = yes
-					any_neighbor_province = {
-						owner = { tag = THIS }
-						port = yes
+					owner = {
+						NOT = { tag = THIS }
+						NOT = { has_country_flag = sea_dispute_underway }
+						is_vassal = no
+						OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
+						NOT = { relation = { who = THIS value = -50 } }
 					}
 				}
-				OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
-				NOT = { relation = { who = THIS value = -50 } }
 			}
 		}
 		alert = no
@@ -107,33 +101,11 @@ political_decisions = {
 			war = no
 			is_vassal = no
 			election = no
-			has_country_modifier = united_nations_ga_member
-			any_owned_province = {
-				port = yes
-				any_neighbor_province = {
-					port = yes
-					owner = { NOT = { tag = THIS } }
-				}
-			}
-			any_neighbor_country = {
-				is_vassal = no
-				any_owned_province = {
-					port = yes
-					any_neighbor_province = {
-						owner = { tag = THIS }
-						port = yes
-					}
-				}
-				OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
-				NOT = { relation = { who = THIS value = -50 } }
-			}
 		}
 		effect = {
 			add_country_modifier = { name = sea_dispute duration = 1825 }
-
 			set_country_flag = sea_dispute_underway
 			badboy = 1
-
 			random_country = {
 				limit = {
 					is_vassal = no
@@ -146,6 +118,7 @@ political_decisions = {
 					}
 					OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
 					NOT = { relation = { who = THIS value = -50 } }
+					NOT = { has_country_flag = sea_dispute_underway }
 				}
 				set_country_flag = sea_dispute_underway
 				add_country_modifier = { name = sea_dispute duration = 1825 }
@@ -155,7 +128,6 @@ political_decisions = {
 		ai_will_do = { 
 			factor = 100 
 		}
-	}
 	}
 
 }

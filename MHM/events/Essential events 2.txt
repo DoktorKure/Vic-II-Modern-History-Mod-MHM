@@ -4318,20 +4318,13 @@ country_event = {
 			port = yes
 			any_neighbor_province = {
 				port = yes
-				owner = { NOT = { tag = THIS } }
-			}
-		}
-		any_neighbor_country = {
-			has_country_flag = sea_dispute_underway
-			is_vassal = no
-			any_owned_province = {
-				port = yes
-				any_neighbor_province = {
-					owner = { tag = THIS }
-					port = yes
+				owner = {
+					NOT = { tag = THIS }
+					has_country_flag = sea_dispute_underway
+					is_vassal = no
+					OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
 				}
 			}
-			OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
 		}
 	}
 
