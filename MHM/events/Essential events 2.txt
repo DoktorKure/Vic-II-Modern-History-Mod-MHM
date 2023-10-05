@@ -4327,6 +4327,8 @@ country_event = {
 			}
 		}
 	}
+	
+	mean_time_to_happen = { months = 7 }
 
 	option = {
 		name = "We hope for the best"
