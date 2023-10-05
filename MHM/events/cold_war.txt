@@ -450,6 +450,13 @@ country_event = {
 		remove_country_modifier = joint_nuclear_controls
 		remove_country_modifier = open_borders
 		remove_country_modifier = joint_aid
+		
+		#Remove bloc markers
+		any_owned = {
+			remove_province_modifier = non_align_member
+			remove_province_modifier = demo_bloc_member
+			remove_province_modifier = comm_bloc_member
+		}
 
 		#Clear ongoing Cold War Crisis flags
 		clr_global_flag = cwcrisis_initiated

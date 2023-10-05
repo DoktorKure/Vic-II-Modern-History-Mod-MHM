@@ -60,6 +60,11 @@ political_decisions = {
 			remove_country_modifier = demohigh
 			remove_country_modifier = demomedium
 			remove_country_modifier = demolow
+			
+			any_owned = {
+				remove_province_modifier = non_align_member
+				remove_province_modifier = demo_bloc_member
+			}
 		
 			#Leave the NAM
 			clr_country_flag = joinnam
@@ -172,6 +177,11 @@ political_decisions = {
 			remove_country_modifier = commhigh
 			remove_country_modifier = commmedium
 			remove_country_modifier = commlow
+			
+			any_owned = {
+				remove_province_modifier = non_align_member
+				remove_province_modifier = comm_bloc_member
+			}
 		
 			#Leave the NAM
 			clr_country_flag = joinnam
@@ -444,6 +454,11 @@ political_decisions = {
 					remove_country_modifier = commhigh
 					remove_country_modifier = commmedium
 					remove_country_modifier = commlow
+			
+					any_owned = {
+						remove_province_modifier = demo_bloc_member
+						remove_province_modifier = comm_bloc_member
+					}
 				}
 			}
 

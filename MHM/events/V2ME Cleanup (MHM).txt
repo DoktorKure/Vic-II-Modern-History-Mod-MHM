@@ -422,6 +422,86 @@ country_event = {
 			}
 		}
 		
+		### Bloc Alignment Markers ###
+		
+		#Mark which countries are Democratic Bloc Members
+		any_country = {
+			limit = {
+				has_country_flag = joindemo
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					NOT = { has_province_modifier = demo_bloc_member }
+				}
+				add_province_modifier = { name = demo_bloc_member duration = -1 }
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = joindemo
+			}
+			any_owned = {
+				limit = {
+					is_capital = no
+					has_province_modifier = demo_bloc_member
+				}
+				remove_province_modifier = demo_bloc_member
+			}
+		}
+		
+		#Mark which countries are Communist Bloc Members
+		any_country = {
+			limit = {
+				has_country_flag = joincomm
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					NOT = { has_province_modifier = comm_bloc_member }
+				}
+				add_province_modifier = { name = comm_bloc_member duration = -1 }
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = joincomm
+			}
+			any_owned = {
+				limit = {
+					is_capital = no
+					has_province_modifier = comm_bloc_member
+				}
+				remove_province_modifier = comm_bloc_member
+			}
+		}
+		
+		#Mark which countries are Non-Aligned Bloc Members
+		any_country = {
+			limit = {
+				has_country_flag = joinnam
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					NOT = { has_province_modifier = non_align_member }
+				}
+				add_province_modifier = { name = non_align_member duration = -1 }
+			}
+		}
+		any_country = {
+			limit = {
+				has_country_flag = joinnam
+			}
+			any_owned = {
+				limit = {
+					is_capital = no
+					has_province_modifier = non_align_member
+				}
+				remove_province_modifier = non_align_member
+			}
+		}
+		
 		########################
 		###					 ###
 		### Seasonal Effects ###

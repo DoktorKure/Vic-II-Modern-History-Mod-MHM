@@ -2,6 +2,17 @@
 # scriptable and usable for event-system below.
 ##################################################################################################
 
+### Bloc Alignment Markers ###
+non_align_member = {
+	icon = 1
+}
+demo_bloc_member = {
+	icon = 23
+}
+comm_bloc_member = {
+	icon = 22
+}
+
 ### Overpopulated provinces ###
 
 overpopulated_province1 = {
@@ -1128,7 +1139,7 @@ local_RGO_output = 0.1
 local_RGO_throughput = 0.1
 middle_everyday_needs = 0.2
 rich_everyday_needs = 0.4
-icon = 13
+icon = 21
 }
 
 collectivisation_setup = {
@@ -1136,7 +1147,7 @@ poor_everyday_needs = 0.2
 middle_everyday_needs = 0.3
 rich_everyday_needs = 0.5
 population_growth = -0.002
-icon = 14
+icon = 22
 }
 
 ### Crisis Control ###
@@ -3052,6 +3063,7 @@ one_china_policy = {
 
 urbanisation = {
 global_assimilation_rate = 0.1
+global_population_growth = -0.001
 factory_output = 0.05
 RGO_output = -0.05
 icon = 13
@@ -3060,6 +3072,7 @@ icon = 13
 ruralisation = {
 
 factory_output = -0.05
+global_population_growth = 0.001
 RGO_output = 0.05
 icon = 13
 }
@@ -6744,7 +6757,7 @@ flood_barrier = {
 hero_city = {
 	local_factory_output = 0.1
 	local_RGO_throughput = 0.1
-	icon = 1
+	icon = 21
 }
 
 rocket_test = {
