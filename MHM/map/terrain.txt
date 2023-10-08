@@ -835,7 +835,7 @@ categories =  {
 
 	urban = {
 		movement_cost = 1.2
-		defense = 3
+		defence = 4
 		attrition = 1
 		color = { 22 44 66 }
 		farm_rgo_size = 0.33
