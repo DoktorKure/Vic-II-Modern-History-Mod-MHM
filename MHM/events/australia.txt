@@ -968,7 +968,7 @@ country_event = {
 			relation = { who = THIS	value = 50 }
 		}
 		random_country = {
-			limit = { tag = ENG has_country_modifier = democratic_bloc }
+			limit = { OR = { tag = ENG tag = FBU tag = IMP } has_country_modifier = democratic_bloc }
 			relation = { who = THIS	value = 50 }
 		}
 		set_country_flag = uranium_AST_flag

@@ -1073,6 +1073,7 @@ country_event = {
 	picture = "parade"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		is_greater_power = yes
 		colonial_nation = yes
 		prestige = 100
@@ -1131,6 +1132,7 @@ province_event = {
 	desc = "EVTDESC19020"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		owner = {
 			is_greater_power = yes
 		}

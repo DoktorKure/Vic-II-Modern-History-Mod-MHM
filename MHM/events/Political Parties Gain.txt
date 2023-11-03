@@ -6,6 +6,7 @@ country_event = {
 	picture = "conservative_surge"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 
 		conservative = 10
 
@@ -77,6 +78,7 @@ country_event = {
 	picture = "traditionalist_surge"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 	
 		traditionalist = 10
 
@@ -140,6 +142,7 @@ country_event = {
 	picture = "populist_surge"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 	
 		populist = 5
 
@@ -203,6 +206,7 @@ country_event = {
 	picture = "socialist_surge"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 	
 		socialist = 10
 
@@ -265,6 +269,7 @@ country_event = {
 	picture = "big_tent_surge"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 
 		big_tent = 10
 
@@ -327,6 +332,7 @@ country_event = {
 	picture = "liberal_surge"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 
 		liberal = 5
 
@@ -389,6 +395,7 @@ country_event = {
 	picture = "progressive_surge"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 
 		progressive = 5
 
@@ -451,6 +458,7 @@ country_event = {
 	picture = "nationalist_surge"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 
 		OR = { 
 			nationalist = 5 
@@ -517,6 +525,7 @@ country_event = {
 	picture = "communist_surge"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 
 		OR = {
 			communist = 5
@@ -589,6 +598,7 @@ country_event = {
 	picture = "communist_social_surge"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 
 		OR = {
 			communist_social = 5

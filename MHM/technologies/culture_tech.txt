@@ -853,7 +853,7 @@ containment = {
 	year = 1945
 	cost = 3600
 
-	max_national_focus = 1
+	max_national_focus = 2
 	
 	war_exhaustion = -0.02
 	
@@ -950,7 +950,7 @@ colour_revolution = {
 	year = 1990
 	cost = 12600
 
-	max_national_focus = 1
+	max_national_focus = 2
 	
 	war_exhaustion = -0.02
 	
@@ -972,7 +972,7 @@ globalization = {
 	year = 2000
 	cost = 12600
 
-	max_national_focus = 1 
+	max_national_focus = 2 
 	
 	war_exhaustion = -0.02
 	
@@ -1007,7 +1007,7 @@ war_on_terror = {
 	year = 2010
 	cost = 14400
 
-	max_national_focus = 1
+	max_national_focus = 2
 	
 	war_exhaustion = -0.02
 	
@@ -1042,7 +1042,7 @@ age_of_protests = {
 	year = 2020
 	cost = 14400
 
-	max_national_focus = 1
+	max_national_focus = 2
 	
 	war_exhaustion = -0.02
 	
@@ -1089,7 +1089,7 @@ political_polarization = {
 	year = 2040
 	cost = 18000
 
-	max_national_focus = 1
+	max_national_focus = 2
 	
 	war_exhaustion = -0.02
 	
@@ -1121,7 +1121,7 @@ new_world_order = {
 	year = 2060
 	cost = 25200
 
-	max_national_focus = 1 
+	max_national_focus = 4 
 	
 	war_exhaustion = -0.02
 	

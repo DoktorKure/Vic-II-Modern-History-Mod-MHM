@@ -12,6 +12,7 @@ country_event = {
 	picture = "news"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		NOT = {
 			publishing_rights = state_publishing
@@ -184,6 +185,7 @@ country_event = {
 	picture = "news"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		NOT = {
 			publishing_rights = state_publishing
@@ -371,6 +373,7 @@ country_event = {
 	picture = "news"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		NOT = {
 			publishing_rights = state_publishing
@@ -543,6 +546,7 @@ country_event = {
 	picture = "news"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		is_ideology_enabled = progressive
 		NOT = {
@@ -716,6 +720,7 @@ country_event = {
 	picture = "news"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		is_ideology_enabled = socialist
 		NOT = {
@@ -890,6 +895,7 @@ country_event = {
 	picture = "news"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		is_ideology_enabled = communist
 		NOT = {
@@ -1063,6 +1069,7 @@ country_event = {
 	picture = "news"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		is_ideology_enabled = communist_social
 		NOT = {
@@ -1236,6 +1243,7 @@ country_event = {
 	picture = "news"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		is_ideology_enabled = traditionalist
 		NOT = {
@@ -1409,6 +1417,7 @@ country_event = {
 	picture = "news"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		is_ideology_enabled = nationalist
 		NOT = {

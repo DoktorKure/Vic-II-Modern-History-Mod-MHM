@@ -8,6 +8,7 @@ country_event = {
 	picture = "Killerdrug"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		NOT = {
 			OR = {
@@ -67,6 +68,7 @@ country_event = {
 	picture = "Prohibition"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		NOT = {
 			poor_strata_life_needs = 0.95
@@ -126,6 +128,7 @@ province_event = {
 	desc = "EVTDESC120"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		has_province_modifier = gangs
 	}
 
@@ -163,6 +166,7 @@ province_event = {
 	desc = "EVTDESC130"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		has_province_modifier = gangs
 		state_scope = {
 			any_owned_province = {
@@ -232,6 +236,7 @@ province_event = {
 	desc = "EVTDESC140"
 		
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		has_province_modifier = gangs
 	}
 
@@ -308,6 +313,7 @@ country_event = {
 	picture = "pagad"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		OR = {
 			religion = sunni
@@ -379,6 +385,7 @@ country_event = {
 	picture = "war_on_drugs"
 		
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		NOT = {
 			OR = {
@@ -451,6 +458,7 @@ country_event = {
 	picture = "Demonstration"	
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		progressive = 20
 	}
@@ -514,6 +522,7 @@ country_event = {
 	picture = "drug_liberalization"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		has_country_modifier = anti_drug
 	}
 

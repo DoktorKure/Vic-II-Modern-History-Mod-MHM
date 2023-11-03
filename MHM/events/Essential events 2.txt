@@ -819,19 +819,26 @@ country_event = {
 	picture = "sterlingarea"
 
 	trigger = {
-		NOT = { tag = ENG }
-		ENG = { is_our_vassal = THIS }
-		in_sphere = ENG
-		NOT = { has_country_modifier = sterling_area }
+		NOT = { OR = { tag = ENG tag = IMP } }
+		OR = {
+			ENG = { is_our_vassal = THIS }
+			IMP = { is_our_vassal = THIS }
 		}
+		OR = {
+			in_sphere = ENG
+			in_sphere = IMP
+		}
+		NOT = { has_country_modifier = sterling_area }
+	}
 	
 	option = {
-	name = "Our currency is now pegged to the Pound Sterling"
+		name = "Our currency is now pegged to the Pound Sterling"
 		prestige = 10
-add_country_modifier = { name = sterling_area duration = -1 }
+		add_country_modifier = { name = sterling_area duration = -1 }
 		
-			}
-		}
+	}
+}
+
 #Sterling Area - leave
 country_event = {
 	id = 1400019
@@ -840,18 +847,18 @@ country_event = {
 	picture = "sterlingarea"
 
 	trigger = {
-		NOT = { tag = ENG }
+		NOT = { OR = { tag = ENG tag = IMP } }
 		is_vassal = no
-		NOT = { in_sphere = ENG }
+		NOT = { OR = { in_sphere = ENG in_sphere = IMP } }
 		has_country_modifier = sterling_area
-			}
+	}
 	
 	option = {
-	name = "Excellent"
+		name = "Excellent"
 		prestige = 20
-remove_country_modifier = sterling_area
-			}
-		}
+		remove_country_modifier = sterling_area
+	}
+}
 
 #Gaulism
 country_event = {
@@ -3362,7 +3369,7 @@ NOT = { has_country_modifier = develop_hydrogen_bomb }
 NOT = { has_country_modifier = hydrogen_nation }
 NOT = { has_country_modifier = atomic_nation }
 OR = { 
-AND = { tag = ENG ai = yes year = 1949 }
+AND = { OR = { tag = ENG tag = IMP } ai = yes year = 1949 }
 AND = { tag = FRA ai = yes year = 1956 }
 AND = { tag = CHI ai = yes year = 1960 }
 
@@ -3382,7 +3389,7 @@ months = 4
 option = {
 name = "Onwards!"
 set_country_flag = nuke_money_aid
-money = 2000000
+money = 2500000
 badboy = -10
 		}
 
@@ -3924,8 +3931,8 @@ add_country_modifier = { name = closer_union_push duration = -1 }
 #Push for Superstate Union
 country_event = {
 	id = 1410170
-	title = "Calls for more integration into Superstate"
-	desc = "As the world is increasingly unstable there have been an uptick in demands for superstate integration in $COUNTRY$. This will help us to get the technologies required to join a superstate faster."
+	title = "Reduced calls for more integration into Superstate"
+	desc = "As the world is increasingly stable there have been an decline in demands for superstate integration in $COUNTRY$. This will delay the technologies required to join a superstate."
 	picture = "superstate_push"
 	
 trigger = {

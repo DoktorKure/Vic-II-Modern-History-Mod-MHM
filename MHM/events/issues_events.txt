@@ -15,6 +15,7 @@ country_event = {
 	picture = "slums"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		health_care = no_health_care
 		NOT = {
@@ -102,6 +103,7 @@ country_event = {
 	picture = "Hospital"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		health_care = acceptable_health_care
 		OR = { 
@@ -182,6 +184,7 @@ country_event = {
 	picture = "Countryside"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		health_care = low_health_care
 	}
@@ -218,6 +221,7 @@ country_event = {
 	picture = "Workers"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		health_care = trinket_health_care
 		NOT = {
@@ -298,6 +302,7 @@ country_event = {
 	picture = "Poor"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		health_care = low_health_care
 		NOT = {
@@ -360,6 +365,7 @@ country_event = {
 	picture = "Hospital"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		health_care = acceptable_health_care
 	}
@@ -436,6 +442,7 @@ country_event = {
 	picture = "Dental"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		health_care = good_health_care
 		civilized = yes
 		NOT = {
@@ -506,6 +513,7 @@ country_event = {
 	picture = "Finepeople"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		pensions = no_pensions
 	}
@@ -589,6 +597,7 @@ country_event = {
 	picture = "Elderly"	
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		pensions = trinket_pensions
 		civilized = yes
 	}
@@ -644,6 +653,7 @@ country_event = {
 	picture = "Finepeople"	
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		pensions = low_pensions
 		acceptable_pensions = 5
@@ -702,6 +712,7 @@ country_event = {
 	picture = "Poor"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		pensions = acceptable_pensions
 	}
@@ -767,6 +778,7 @@ country_event = {
 	picture = "Finepeople"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		pensions = good_pensions
 		OR = { conservative = 0.2 big_tent = 0.2}
@@ -823,6 +835,7 @@ country_event = {
 	picture = "Oldsoldiers"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		social_reform_want = 0.05
 		liberal = 0.1
@@ -923,6 +936,7 @@ country_event = {
 	picture = "Oldsoldiers"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		pensions = no_pensions
 		civilized = yes
 		OR = {
@@ -984,6 +998,7 @@ country_event = {
 	picture = "Oldsoldiers"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		has_country_flag = promised_post_war_pensions
 		war = no
 	}
@@ -1031,6 +1046,7 @@ country_event = {
 	picture = "Poor"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		unemployment_subsidies = no_subsidies
 	}
@@ -1099,6 +1115,7 @@ country_event = {
 	picture = "Poor"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		unemployment = 0.05
 		unemployment_subsidies = low_subsidies
@@ -1167,6 +1184,7 @@ country_event = {
 	picture = "Poor"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		unemployment_subsidies = extended_subsidies
 		unemployment = 0.05
@@ -1223,6 +1241,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		unemployment_subsidies = low_subsidies
 		wage_reform = low_minimum_wage
@@ -1298,6 +1317,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		unemployment_subsidies = extended_subsidies
 		NOT = {
@@ -1351,6 +1371,7 @@ country_event = {
 	picture = "Workers"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		safety_regulations = no_safety
 		trinket_safety = 1
@@ -1410,6 +1431,7 @@ country_event = {
 	
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		safety_regulations = trinket_safety
 	}
@@ -1461,6 +1483,7 @@ country_event = {
 	picture = "Workers"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		safety_regulations = low_safety
 		social_reform_want = 0.2
@@ -1531,6 +1554,7 @@ country_event = {
 	picture = "Workers"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		safety_regulations = acceptable_safety
 	}
@@ -1589,6 +1613,7 @@ country_event = {
 	picture = "Spies"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		NOT = {
 			union_rights = free_trade_unions
@@ -1641,6 +1666,7 @@ country_event = {
 	picture = "Police"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		safety_regulations = low_safety
 		health_care = low_health_care
@@ -1699,6 +1725,7 @@ country_event = {
 	picture = "Workers"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		safety_regulations = acceptable_safety
 		health_care = acceptable_health_care
@@ -1749,6 +1776,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		safety_regulations = good_safety
 		health_care = good_health_care
@@ -1795,6 +1823,7 @@ country_event = {
 	picture = "Childlabor2"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		security_reform = basic_security
 	}
@@ -1846,6 +1875,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		security_reform = weak_security
 	}
@@ -1904,6 +1934,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		security_reform = acceptable_security
 		NOT = {
@@ -1972,6 +2003,7 @@ country_event = {
 	picture = "Upperhouse"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		security_reform = good_security
 		OR = { conservative = 0.3 big_tent = 0.3 }
@@ -2028,6 +2060,7 @@ country_event = {
 	picture = "Workers"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		wage_reform = unregulated_hours
 		social_reform_want = 0.1
@@ -2099,6 +2132,7 @@ country_event = {
 	picture = "Upperhouse"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		wage_reform = trinket_wage
 		NOT = {
@@ -2167,6 +2201,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		wage_reform = low_minimum_wage
 		average_consciousness = 5
@@ -2241,6 +2276,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		wage_reform = good_minimum_wage
 		has_pop_type = capitalists
@@ -2281,6 +2317,7 @@ country_event = {
 	picture = "Demonstration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		union_rights = no_trade_unions
 		state_controlled_unions = 10
@@ -2354,6 +2391,7 @@ country_event = {
 	picture = "Demonstration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		union_rights = state_controlled_unions
 		OR = {
@@ -2425,6 +2463,7 @@ country_event = {
 	picture = "Demonstration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		union_rights = restricted_unions
 	}
@@ -2481,6 +2520,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		union_rights = free_trade_unions
 		civilized = yes
 		NOT = {

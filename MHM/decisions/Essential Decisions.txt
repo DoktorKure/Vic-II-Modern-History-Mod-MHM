@@ -141,31 +141,40 @@ political_decisions = {
 		}
 	}
 
-commonwealth_align = {
+	commonwealth_align = {
 		picture = "commonwealthofnations"
 		potential = {
-		NOT = { tag = ENG }
-OR = { government = hms_government government = hms_government1 }
-ENG = { is_greater_power = yes }
-ENG = { government = hms_government }
-		has_country_modifier = commonwealthmember
-NOT = { has_country_modifier = commonwealth_timer }
-ENG = { is_sphere_leader_of = THIS }
-is_greater_power = no
+			NOT = { OR = { tag = IMP tag = ENG } }
+			OR = { government = hms_government government = hms_government1 }
+			OR = {
+				AND = {
+					ENG = { is_greater_power = yes }
+					ENG = { government = hms_government }
+					ENG = { is_sphere_leader_of = THIS }
 				}
-		allow = {
-		war = no
-election = no
-NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = nationalist ruling_party_ideology = populist } }
+				AND = {
+					IMP = { is_greater_power = yes }
+					IMP = { government = hms_government }
+					IMP = { is_sphere_leader_of = THIS }
+				}
 			}
+			has_country_modifier = commonwealthmember
+			NOT = { has_country_modifier = commonwealth_timer }
+			is_greater_power = no
+		}
+		allow = {
+			war = no
+			election = no
+			NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = nationalist ruling_party_ideology = populist } }
+		}
 		effect = {
-			
-ENG = { diplomatic_influence = { who = THIS value = 20 } }
-add_country_modifier = { name = commonwealth_timer duration = 730 }
-					}
+			ENG = { diplomatic_influence = { who = THIS value = 20 } }
+			IMP = { diplomatic_influence = { who = THIS value = 20 } }
+			add_country_modifier = { name = commonwealth_timer duration = 730 }
+		}
 		ai_will_do = { 
 			factor = 1 
-			}
+		}
 	}
 
 	becomearepublicire = {

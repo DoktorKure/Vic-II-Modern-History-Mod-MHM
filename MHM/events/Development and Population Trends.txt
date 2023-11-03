@@ -110,18 +110,49 @@ country_event = {
 	trigger = {
 		NOT = { has_country_flag = demographic_transition_stage_2_flag }
 		
-		#Low development
-		literacy = 0.20
-		NOT = { literacy = 0.30 }
+		OR = {
+			#Address the issue of these three countries becoming severely overpopulated due to very slow literacy gain
+			AND = { 
+				capital_scope = { NOT = { continent = africa } }
+				year = 1960
+			}
+			AND = { 
+				year = 1980
+				capital_scope = { continent = africa }
+			}
+			AND = {
+				#Low development
+				literacy = 0.20
+				NOT = { literacy = 0.30 }
+			}
+		}
 		war = no
 	}
 	
-	mean_time_to_happen = { months = 6 }
+	mean_time_to_happen = {
+		months = 6
+		modifier = { factor = 0.50 literacy = 0.25 }
+	}
 	
 	option = {
 		name = "Great, our people can be more productive!"
 		
-		add_country_modifier = { name = industrial_pop_boom duration = 7305 }
+		#Prevent overpopulation in the future
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = {
+						OR = {
+							year = 1980
+							continent = europe
+							tag = USA
+							tag = CAN
+						}
+					}
+				}
+			}
+			owner = { add_country_modifier = { name = industrial_pop_boom duration = 7305 } }
+		}
 		set_country_flag = demographic_transition_stage_2_flag
 	}
 	
@@ -137,14 +168,27 @@ country_event = {
 	trigger = {
 		NOT = { has_country_flag = demographic_transition_stage_3_flag }
 		
-		has_country_modifier = industrial_pop_boom
-		
-		#Medium development
-		literacy = 0.30
-		NOT = { literacy = 0.40 }
+		OR = {
+			AND = {
+				year = 1980
+				capital_scope = { NOT = { continent = africa } }
+			}
+			AND = {
+				year = 2000
+				capital_scope = { continent = africa }
+			}
+			AND = {
+				#Medium development
+				literacy = 0.30
+				NOT = { literacy = 0.40 }
+			}
+		}
 	}
 	
-	mean_time_to_happen = { months = 6 }
+	mean_time_to_happen = {
+		months = 6
+		modifier = { factor = 0.50 literacy = 0.35 }
+	}
 	
 	option = {
 		name = "What's next, an ageing population?"
@@ -168,14 +212,21 @@ country_event = {
 		NOT = { has_country_modifier = industrial_pop_boom }
 		
 		#21st Century problem
-		year = 2000
+		year = 2010
 		
-		#High development
-		literacy = 0.40
-		NOT = { literacy = 0.50 }
+		OR = {
+			capital_scope = { NOT = { continent = africa } }
+			AND = {
+				capital_scope = { continent = africa }
+				year = 2030
+			}
+		}
 	}
 	
-	mean_time_to_happen = { months = 60 }
+	mean_time_to_happen = {
+		months = 6
+		modifier = { factor = 0.50 literacy = 0.45 }
+	}
 	
 	option = {
 		name = "We must care for our seniors"
@@ -197,20 +248,27 @@ country_event = {
 		NOT = { has_country_flag = demographic_transition_stage_5_flag }
 		
 		#21st Century problem
-		year = 2000
+		year = 2030
 		
-		#Very High development
-		literacy = 0.50
-		NOT = { literacy = 0.60 }
+		OR = {
+			capital_scope = { NOT = { continent = africa } }
+			AND = {
+				capital_scope = { continent = africa }
+				year = 2050
+			}
+		}
 	}
 	
-	mean_time_to_happen = { months = 60 }
+	mean_time_to_happen = {
+		months = 6
+		modifier = { factor = 0.50 literacy = 0.55 }
+	}
 	
 	option = {
 		name = "Our nation's elderly are dying off..."
 		
 		remove_country_modifier = ageing_population
-		add_country_modifier = { name = demographic_crunch duration = -1 }
+		add_country_modifier = { name = demographic_crunch duration = 7305 }
 		
 		set_country_flag = demographic_transition_stage_5_flag
 	}
@@ -224,18 +282,16 @@ country_event = {
 	picture = "demographic_transition"
 
 	trigger = {
+		has_country_flag = demographic_transition_stage_5_flag
 		NOT = { has_country_flag = demographic_transition_stage_6_flag }
 		
-		has_country_modifier = demographic_crunch
+		NOT = { has_country_modifier = demographic_crunch }
 		
 		#21st Century problem
-		year = 2000
-		
-		#Extremely High development
-		literacy = 0.60
+		year = 2060
 	}
 	
-	mean_time_to_happen = { months = 60 }
+	mean_time_to_happen = { months = 3 }
 	
 	option = {
 		name = "At last, we have stabilized our nation's birthrates!"

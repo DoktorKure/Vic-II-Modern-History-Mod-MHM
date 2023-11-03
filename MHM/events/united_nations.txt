@@ -1621,7 +1621,7 @@ country_event = { # called in falkland wars
 	picture = "nwo2_un_security_council"
 
 	trigger = {
-		NOT = { tag = ENG }
+		NOT = { OR = { tag = ENG tag = IMP tag = FBU } }
 		has_global_flag = falklands_war_FLK
 		has_country_modifier = unsc_permanent_member
 		NOT = { has_global_flag = 1992_start_date_flag }
@@ -1645,7 +1645,7 @@ country_event = { # called in falkland wars
 		money = -200000
 		
 		random_country = {
-			limit = { tag = ENG NOT = { has_country_modifier = requested_un_peacemaking } }
+			limit = { OR = { tag = ENG tag = FBU tag = IMP } NOT = { has_country_modifier = requested_un_peacemaking } }
 			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
 			set_country_flag = un_peace_making_marker
 			
@@ -1689,7 +1689,7 @@ country_event = { # called in falkland wars
 		money = -100000
 		
 		random_country = {
-			limit = { tag = ENG NOT = { has_country_modifier = requested_un_peacemaking } }
+			limit = { OR = { tag = ENG tag = FBU tag = IMP } NOT = { has_country_modifier = requested_un_peacemaking } }
 			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
 			add_country_modifier = { name = peace_making_veoted duration = 730 }
 			set_country_flag = un_peace_making_marker
@@ -1727,7 +1727,7 @@ country_event = { # called in falkland wars
 		name = EVT_85101XX_C
 		
 		random_country = {
-			limit = { tag = ENG NOT = { has_country_modifier = requested_un_peacemaking } }
+			limit = { OR = { tag = ENG tag = FBU tag = IMP } NOT = { has_country_modifier = requested_un_peacemaking } }
 			add_country_modifier = { name = requested_un_peacemaking duration = 1825 }
 			add_country_modifier = { name = peace_making_veoted duration = 730 }
 			set_country_flag = un_peace_making_marker

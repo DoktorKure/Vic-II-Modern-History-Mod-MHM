@@ -1826,11 +1826,9 @@ political_decisions = {
 			OR = {
 				#Specific conditions for populists in order to keep France from regularly going over the infamy limit whenever populists get elected as AI France
 				OR = {
-					AND = { ruling_party_ideology = populist ai = yes NOT = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = socialist_democracy } } }
-					AND = { ruling_party_ideology = populist ai = no }
+					AND = { OR = { ruling_party_ideology = populist ruling_party_ideology = traditionalist ruling_party_ideology = nationalist } ai = yes NOT = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = socialist_democracy } } }
+					AND = { ruling_party_ideology = populist ruling_party_ideology = traditionalist ruling_party_ideology = nationalist ai = no }
 				}
-				ruling_party_ideology = nationalist
-				ruling_party_ideology = traditionalist
 				jingoism = 24
 			}
 		}
@@ -3748,28 +3746,34 @@ political_decisions = {
 		effect = {
 			badboy = 12
 			set_country_flag = claim_greater_iran
-			IRQ = { all_core = { limit = { NOT = { province_id = 931 } } add_core = PER } }
+			IRQ = { all_core = { add_core = PER } }
 			ARM = { all_core = { add_core = PER } }
+			GEO = { all_core = { add_core = PER } }
 			AFG = { all_core = { add_core = PER } }
 			AZB = { all_core = { add_core = PER } }
 			TAJ = { all_core = { add_core = PER } }
 			TKR = { all_core = { add_core = PER } }
 			UZB = { all_core = { add_core = PER } }
-			890 = { add_core = PER }
-			891 = { add_core = PER }
-			892 = { add_core = PER }
-			1090 = { add_core = PER }
-			1091 = { add_core = PER }
+			TUR = { all_core = { add_core = PER } }
+			BLO = { all_core = { add_core = PER } }
+			AZK = { all_core = { add_core = PER } }
+			SYR = { all_core = { add_core = PER } }
+			TUR = { all_core = { add_core = PER } }
+			CYP = { all_core = { add_core = PER } }
+			EGY = { all_core = { add_core = PER } }
+			CYR = { all_core = { add_core = PER } }
+			JOR = { all_core = { add_core = PER } }
+			ISR = { all_core = { add_core = PER } }
+			PAL = { all_core = { add_core = PER } }
+			OMA = { all_core = { add_core = PER } }
+			UAE = { all_core = { add_core = PER } }
+			BHR = { all_core = { add_core = PER } }
+			KUW = { all_core = { add_core = PER } }
 			1057 = { add_core = PER }
+			1154 = { add_core = PER }
+			1163 = { add_core = PER }
+			1194 = { add_core = PER }
 			1203 = { add_core = PER }
-			1223 = { add_core = PER }
-			2653 = { add_core = PER }
-			1218 = { add_core = PER }
-			1219 = { add_core = PER }
-			1220 = { add_core = PER }
-			1221 = { add_core = PER }
-			1222 = { add_core = PER }
-			3340 = { add_core = PER }
 		}
 
 	}
@@ -3807,17 +3811,32 @@ political_decisions = {
 					OR = {
 						is_core = IRQ
 						is_core = ARM
+						is_core = GEO
 						is_core = AFG
 						is_core = AZB
 						is_core = TAJ
 						is_core = TKR
 						is_core = UZB
-						province_id = 890
-						province_id = 891
-						province_id = 892
-						province_id = 1090
-						province_id = 1091
+						is_core = TUR
+						is_core = BLO
+						is_core = AZK
+						is_core = SYR
+						is_core = TUR
+						is_core = CYP
+						is_core = EGY
+						is_core = CYR
+						is_core = JOR
+						is_core = ISR
+						is_core = PAL
+						is_core = OMA
+						is_core = UAE
+						is_core = BHR
+						is_core = KUW
 						province_id = 1057
+						province_id = 1154 
+						province_id = 1163 
+						province_id = 1194 
+						province_id = 1203
 						province_id = 1203
 						province_id = 1223
 						province_id = 2653

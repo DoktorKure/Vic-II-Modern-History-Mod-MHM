@@ -71,6 +71,7 @@ country_event = {
 	picture = "five_year_plan"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		NOT = { crime_fighting = 0.5 }
 		has_country_modifier = five_year_plan
 		NOT = { has_country_modifier = central_planning_inflexibility }
@@ -100,6 +101,7 @@ country_event = {
 	picture = "five_year_plan"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		NOT = { crime_fighting = 0.75 }
 		has_country_modifier = five_year_plan
 		has_country_modifier = central_planning_inflexibility
@@ -131,6 +133,7 @@ country_event = {
 	picture = "News"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		publishing_rights = state_publishing
 		average_consciousness = 3
@@ -195,6 +198,7 @@ country_event = {
 	picture = "Lover"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		NOT = {
 			publishing_rights = free_publishing
@@ -268,6 +272,7 @@ country_event = {
 	picture = "News"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		publishing_rights = free_publishing
 		has_pop_type = capitalists
@@ -362,6 +367,7 @@ country_event = {
 	picture = "News"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		political_parties = parties_not_allowed
 	}
@@ -438,6 +444,7 @@ country_event = {
 	picture = "Harassment"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		political_parties = parties_restricted 
 	}
@@ -517,6 +524,7 @@ country_event = {
 	picture = "constituencies"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		political_parties = parties_fair
 		OR = { ruling_party_ideology = conservative ruling_party_ideology = big_tent }
@@ -609,6 +617,7 @@ country_event = {
 	picture = "voting"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		political_parties = parties_short
 	}
@@ -676,6 +685,7 @@ country_event = {
 	picture = "voting"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		political_parties = parties_rigged
 	}
@@ -766,6 +776,7 @@ country_event = {
 	picture = "Revolution"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		union_rights = no_trade_unions
 		civilized = yes
 		is_ideology_enabled = socialist
@@ -838,6 +849,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		union_rights = state_controlled_unions
 	}
@@ -895,6 +907,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		union_rights = restricted_unions
 		has_pop_type = capitalists
@@ -952,6 +965,7 @@ country_event = {
 	picture = "Demonstration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		union_rights = free_trade_unions
 		is_ideology_enabled = socialist
@@ -1022,6 +1036,7 @@ country_event = {
 	picture = "Policeaction"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		public_meetings = no_meetings
 	}
@@ -1079,6 +1094,7 @@ country_event = {
 	picture = "Revolution"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		public_meetings = no_meetings
 		plurality = 7
@@ -1127,6 +1143,7 @@ country_event = {
 	picture = "Finepeople"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		NOT = { public_meetings = no_meetings }
 		plurality = 4
 		civilized = yes
@@ -1207,6 +1224,7 @@ country_event = {
 	picture = "Demonstration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		average_militancy = 5
 		NOT = { public_meetings = no_meetings }
@@ -1263,6 +1281,7 @@ country_event = {
 	picture = "meeting3"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		NOT = { public_meetings = no_meetings }
 		NOT = {
@@ -1320,6 +1339,7 @@ country_event = {
 	picture = "Factoryattack"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		OR = {
 			unemployment_subsidies = no_subsidies
@@ -1392,6 +1412,7 @@ country_event = {
 	picture = "Unite"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		NOT = { public_meetings = no_meetings }
 		political_reform_want = 0.15
@@ -1479,6 +1500,7 @@ country_event = {
 	picture = "Unite"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		political_opinions = ruling_party_opinion
 		political_reform_want = 0.3
@@ -1536,6 +1558,7 @@ country_event = {
 	picture = "Demonstration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		political_opinions = appointed_opinion
 		political_reform_want = 0.2
@@ -1610,6 +1633,7 @@ country_event = {
 	picture = "Demonstration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		political_opinions = democratic_state_opinion
 		political_reform_want = 0.2
@@ -1673,6 +1697,7 @@ country_event = {
 	picture = "Prosper"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		political_opinions = popular_opinion
 	}
@@ -1753,6 +1778,7 @@ country_event = {
 	picture = "meeting3"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		voting_system = first_past_the_post
 		civilized = yes
 	}
@@ -1796,6 +1822,7 @@ country_event = {
 	picture = "meeting3"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		voting_system = jefferson_method
 	}
@@ -1847,6 +1874,7 @@ country_event = {
 	picture = "Administration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		voting_system = proportional_representation
 		upper_house = {
@@ -1913,6 +1941,7 @@ country_event = {
 	picture = "Demonstration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		vote_franschise = none_voting
 		average_militancy = 8
@@ -1982,6 +2011,7 @@ country_event = {
 	picture = "Administration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		vote_franschise = harassed_voting
 		middle_strata_everyday_needs = 0.9
@@ -2044,6 +2074,7 @@ country_event = {
 	picture = "Administration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		vote_franschise = rigged_voting
 	}
@@ -2105,6 +2136,7 @@ country_event = {
 	picture = "Revolution"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		vote_franschise = rigged_voting
 	}
@@ -2159,6 +2191,7 @@ country_event = {
 	picture = "Administration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		vote_franschise = rigged_voting
 		gerrymandered_voting = 15
@@ -2225,6 +2258,7 @@ country_event = {
 	picture = "Celebration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		vote_franschise = gerrymandered_voting
 		average_militancy = 3
@@ -2285,6 +2319,7 @@ country_event = {
 	picture = "Prosper"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		trade_policy = free_trade
 		rich_strata_everyday_needs = 0.9
@@ -2353,6 +2388,7 @@ country_event = {
 	picture = "Riot"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		trade_policy = protectionism
 		NOT = {
@@ -2401,6 +2437,7 @@ country_event = {
     picture = "Merchants"
     
     trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
         trade_policy = free_trade
         any_neighbor_country = {
@@ -2460,6 +2497,7 @@ country_event = {
 	picture = "Bankruptcy"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		economic_policy = interventionism
 	}
@@ -2516,6 +2554,7 @@ country_event = {
 	picture = "Poor"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		economic_policy = state_capitalism
 		NOT = {
@@ -2559,6 +2598,7 @@ country_event = {
 	picture = "Administration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		economic_policy = planned_economy
 	}
@@ -2601,6 +2641,7 @@ country_event = {
 	picture = "news"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		war_policy = jingoism
 		publishing_rights = free_publishing
@@ -2642,6 +2683,7 @@ country_event = {
 	picture = "Recruits"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		war_policy = pro_military
 		war_exhaustion = 1
@@ -2687,6 +2729,7 @@ country_event = {
 		picture = "Artillery"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		war_policy = pacifism
 	}
@@ -2727,6 +2770,7 @@ country_event = {
 	picture = "Administration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		war_policy = pacifism
 		pacifism = 10
@@ -2774,6 +2818,7 @@ country_event = {
 	picture = "secularism"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		religious_policy = pro_atheism
 	}
@@ -2816,6 +2861,7 @@ country_event = {
 	picture = "Administration"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		religious_policy = secularized
 	}
@@ -2889,6 +2935,7 @@ country_event = {
 	picture = "Prosper"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		religious_policy = secularized
 		average_militancy = 6
@@ -2944,6 +2991,7 @@ country_event = {
 	picture = "Prosper"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		religious_policy = moralism
 	}
@@ -3005,6 +3053,7 @@ country_event = {
 	picture = "Merchants"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		protectionism = 15
 	}
@@ -3070,6 +3119,7 @@ country_event = {
 	picture = "Merchants"
 		
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		trade_policy = protectionism
 		protectionism = 10
@@ -3137,6 +3187,7 @@ country_event = {
 	picture = "Merchants"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		economic_policy = laissez_faire
 		laissez_faire = 10
@@ -3210,6 +3261,7 @@ country_event = {
 	picture = "supportwar"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		OR = {
 			pro_military = 10
@@ -3322,6 +3374,7 @@ country_event = {
 	picture = "Poor"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		OR = {
 			economic_policy = state_capitalism
@@ -3459,6 +3512,7 @@ country_event = {
 	picture = "Harassment"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		political_parties = parties_restricted
 		NOT = {
@@ -3530,6 +3584,7 @@ country_event = {
 	picture = "strike"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		pacifism = 7.5
 		union_rights = free_trade_unions
@@ -3604,6 +3659,7 @@ country_event = {
 	picture = "censorship"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		publishing_rights = censored_publishing
 		free_publishing = 5
@@ -3660,6 +3716,7 @@ country_event = {
 	picture = "Upperhouse"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		unemployment = 0.1
 		NOT = {
@@ -3719,6 +3776,7 @@ country_event = {
 	picture = "news"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		religious_policy = moralism
 		OR = {
@@ -3791,6 +3849,7 @@ country_event = {
 	picture = "Upperhouse"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		political_opinions = ruling_party_opinion
 		political_reform_want = 0.15

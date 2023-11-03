@@ -29,7 +29,7 @@ country_event = {
 
 		#UK's reaction
 		random_country = {
-			limit = { tag = ENG is_sphere_leader_of = YEM }
+			limit = { OR = { tag = ENG tag = IMP tag = FBU } is_sphere_leader_of = YEM }
 			diplomatic_influence = { who = YEM value = -200 }
 			relation = { who = YEM value = -200 }
 			leave_alliance = YEM
@@ -189,7 +189,7 @@ country_event = {
 
 		#UK limited support
 		random_country = { 
-			limit = { tag = ENG government = hms_government is_vassal = no ai = yes }
+			limit = { OR = { tag = ENG tag = IMP tag = FBU } government = hms_government is_vassal = no ai = yes }
 			leave_alliance = SAA 
 			relation = { who = SAA value = 200 }
 		}
@@ -454,7 +454,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-    	tag = ENG
+    	OR = { tag = ENG tag = IMP tag = FBU }
 		year = 1962 
 		NOT = { year = 1990 }
 		
@@ -589,7 +589,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = IMP tag = FBU }
 		year = 1967 
 		NOT = { year = 1990 }
 		

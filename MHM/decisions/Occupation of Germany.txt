@@ -103,7 +103,7 @@ political_decisions = {
 					572 = { owned_by = OG2 } 
 				}
 				AND = { 
-					tag = ENG
+					OR = { tag = ENG tag = IMP }
 					369 = { owned_by = OG3 }
 				}
 				AND = { 
@@ -122,7 +122,7 @@ political_decisions = {
 					572 = { owned_by = OG2 } 
 				}
 				AND = { 
-					tag = ENG
+					OR = { tag = ENG tag = IMP }
 					369 = { owned_by = OG3 }
 				}
 				AND = { 
@@ -148,6 +148,7 @@ political_decisions = {
 			#Release vassal and have USA vassalize FRG to prevent interference with historical event chains
 			random_owned = { limit = { owner = { tag = USA has_country_flag = establish_west_germany } } owner = { USA = { release_vassal = OG4 } OG4 = { change_tag = FRG } } }
 			random_owned = { limit = { owner = { tag = ENG has_country_flag = establish_west_germany } } owner = { ENG = { release_vassal = OG3 } OG3 = { change_tag = FRG } } }
+			random_owned = { limit = { owner = { tag = IMP has_country_flag = establish_west_germany } } owner = { IMP = { release_vassal = OG3 } OG3 = { change_tag = FRG } } }
 			random_owned = { limit = { owner = { tag = FRA has_country_flag = establish_west_germany } } owner = { FRA = { release_vassal = OG2 } OG2 = { change_tag = FRG } } }
 			USA = { create_vassal = FRG }
 			FRG = {
@@ -321,6 +322,10 @@ political_decisions = {
 			random_owned = {
 				limit = { owner = { tag = ENG } }
 				owner = { any_owned = { limit = { is_core = GER } secede_province = OG3 } create_vassal = OG3 OG3 = { civilized = yes government = mandate_government country_event = 800054 ruling_party_ideology = big_tent primary_culture = german } ENG = { diplomatic_influence = { who = OG3 value = 200 } } }
+			}
+			random_owned = {
+				limit = { owner = { tag = IMP } }
+				owner = { any_owned = { limit = { is_core = GER } secede_province = OG3 } create_vassal = OG3 OG3 = { civilized = yes government = mandate_government country_event = 800054 ruling_party_ideology = big_tent primary_culture = german } IMP = { diplomatic_influence = { who = OG3 value = 200 } } }
 			}
 
 			#FRA occupied zone

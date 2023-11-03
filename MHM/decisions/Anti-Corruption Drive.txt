@@ -9,7 +9,7 @@ political_decisions = {
 			NOT = { has_country_modifier = reducing_corruption }
 		} 
 		
-		alert = no
+		alert = yes
 
 		allow = {
 			war = no

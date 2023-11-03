@@ -13,7 +13,7 @@ country_event = {
 			literacy = 0.30
 
 			#Western European Economies
-			AND = { tag = ENG austrian_school = 1 } 
+			AND = { OR = { tag = ENG tag = IMP tag = FBU } austrian_school = 1 } 
 			AND = { tag = FRA has_country_modifier = dirigisme } 
 			AND = { tag = ITA has_country_modifier = dirigisme }
 
@@ -5411,7 +5411,7 @@ title = "Hong Kong as a British Dependent Territory?"
 fire_only_once = yes
 
 trigger = {
-tag = ENG
+OR = { tag = ENG tag = IMP tag = FBU }
 OR = { is_possible_vassal = HKG is_our_vassal = HKG }
 government = hms_government
 year = 1981
@@ -5464,7 +5464,7 @@ title = "Hong Kong Independence?"
 fire_only_once = yes
 
 trigger = {
-tag = ENG
+OR = { tag = ENG tag = IMP tag = FBU }
 government = hms_government
 HKG = { vassal_of = ENG }
 year = 1996

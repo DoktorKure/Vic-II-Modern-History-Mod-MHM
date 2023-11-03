@@ -8,7 +8,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = IMP tag = FBU }
 		any_owned_province = { is_core = IRE }
 		exists = IRE
 		year = 1996
@@ -38,7 +38,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = IMP tag = FBU }
 		any_owned_province = { is_core = IRE }
 		exists = IRE
 		year = 2005
@@ -69,7 +69,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = IMP tag = FBU }
 		any_owned_province = { is_core = IRE }
 		exists = IRE
 		year = 1996

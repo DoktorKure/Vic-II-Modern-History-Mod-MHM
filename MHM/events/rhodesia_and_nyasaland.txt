@@ -7,7 +7,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		capital_scope = { continent = europe } # ENG or FBU
+		OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1953
 		NOT = { year = 1990 }
 		AND = { is_our_vassal = RHO exists = RHO }
@@ -122,7 +122,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		capital_scope = { continent = europe } # ENG or FBU
+		OR = { tag = ENG tag = FBU tag = IMP }
 		OR = { is_our_vassal = ZAM is_possible_vassal = ZAM }
 		OR = { is_our_vassal = ZIM is_possible_vassal = ZIM }
 		OR = {
@@ -328,7 +328,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		capital_scope = { continent = europe } # ENG or FBU
+		OR = { tag = ENG tag = FBU tag = IMP }
 		exists = CAF
 		is_our_vassal = CAF
 		CAF = { primary_culture = british }
@@ -551,11 +551,11 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		primary_culture = british
 		OR = {
 			tag = RHO
 			tag = CAF
 		}
+		primary_culture = british
 		OR = {
 			year = 1978
 			NOT = { minorities_reform = minorities_oppression }
@@ -654,7 +654,7 @@ country_event = {
 
 	trigger = {
 	
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		government = hms_government
 		is_vassal = no
 		war = no

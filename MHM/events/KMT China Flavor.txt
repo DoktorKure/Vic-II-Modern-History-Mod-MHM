@@ -13,7 +13,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-		OR = { tag = ENG tag = FBU }
+		OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1997
 		NOT = { has_global_flag = 1992_start_date_flag }
 		1496 = { OR = { owned_by = ENG owned_by = FBU } }

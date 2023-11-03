@@ -14,19 +14,7 @@ political_decisions = {
 
 			NOT = { has_country_modifier = king_timer }
 			
-			OR = {
-				is_vassal = no
-				AND = {
-					is_vassal = yes
-					NOT = { OR = { government = colonial_government government = mandate_government } }
-					overlord = {
-						OR = {
-							has_country_flag = joindemo
-							has_country_modifier = democratic_bloc
-						}
-					}
-				}
-			}
+			is_vassal = no
 			
 			#Not a communist dictatorship - that uses a different system
 			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
@@ -78,7 +66,7 @@ political_decisions = {
 				relation = { who = THIS value = -20 }
 			}
 
-			#Democratic leader is angry
+			#Democratic leader is happy
 			random_country = { 
 				limit = { has_country_modifier = democratic_bloc_leader } 
 				diplomatic_influence =  { who = THIS value = 20 }
@@ -118,19 +106,7 @@ political_decisions = {
 
 			NOT = { has_country_modifier = king_timer }
 			
-			OR = {
-				is_vassal = no
-				AND = {
-					is_vassal = yes
-					NOT = { OR = { government = colonial_government government = mandate_government } }
-					overlord = {
-						OR = {
-							has_country_flag = joincomm
-							has_country_modifier = communist_bloc
-						}
-					}
-				}
-			}
+			is_vassal = no
 			
 			#Use a different system if the Sino soviet split is ongoing
 			NOT = { 
@@ -231,14 +207,7 @@ political_decisions = {
 
 			NOT = { has_country_modifier = king_timer }
 			
-			OR = {
-				is_vassal = no
-				AND = {
-					is_vassal = yes
-					NOT = { OR = { government = colonial_government government = mandate_government } }
-					overlord = { has_country_flag = joinnam }
-				}
-			}
+			is_vassal = no
 			
 			NOT = { has_country_modifier = democratic_bloc_leader }
 			NOT = { has_country_modifier = communist_bloc_leader }
@@ -304,12 +273,10 @@ political_decisions = {
 					#Democratic bloc members are glad to see a communist bloc member drift away
 					random_country = {
 						limit = { has_country_modifier = democratic_bloc_leader }
-						diplomatic_influence = { who = THIS value = 10 }
 						relation = { who = THIS value = 10 }
 					}
 					any_country = {
 						limit = { has_country_flag = democratic_bloc }
-						diplomatic_influence = { who = THIS value = 5 }
 						relation = { who = THIS value = 5 }
 					}
 				}
@@ -337,12 +304,10 @@ political_decisions = {
 					#Communist bloc members are glad to see a democratic bloc member drift away
 					random_country = {
 						limit = { has_country_modifier = communist_bloc_leader }
-						diplomatic_influence = { who = THIS value = 10 }
 						relation = { who = THIS value = 10 }
 					}
 					any_country = {
 						limit = { has_country_flag = communist_bloc }
-						diplomatic_influence = { who = THIS value = 5 }
 						relation = { who = THIS value = 5 }
 					}
 				}
@@ -373,14 +338,44 @@ political_decisions = {
 						relation = { who = THIS value = -20 } 
 					}
 				}
-			
 			}
 			
-			#All NAM GPs gain influence in THIS
-			any_country = { 
-				limit = { is_greater_power = yes has_country_flag = joinnam } 
-				diplomatic_influence =  { who = THIS value = 20 }
-				relation = { who = THIS value = 20 } 
+			#All NAM GPs gain influence in THIS if THIS isn't part of any NAM GP spheres
+			random_owned = {
+				limit = {
+					owner = {
+						OR = {
+							part_of_sphere = no
+							AND = {
+								part_of_sphere = yes
+								sphere_owner = { NOT = { has_country_flag = joinnam } }
+							}
+						}
+					}
+				}
+				owner = {
+					any_country = { 
+						limit = { is_greater_power = yes has_country_flag = joinnam } 
+						diplomatic_influence =  { who = THIS value = 20 }
+						relation = { who = THIS value = 20 } 
+					}
+				}
+			}
+			
+			#Only the sphere owner gets influence in THIS if the sphere owner is part of NAM
+			random_owned = {
+				limit = {
+					owner = {
+						part_of_sphere = yes
+						sphere_owner = { has_country_flag = joinnam }
+					}
+				}
+				owner = {
+					sphere_owner = {
+						diplomatic_influence =  { who = THIS value = 20 }
+						relation = { who = THIS value = 20 } 
+					}
+				}
 			}
 
 		}

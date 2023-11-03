@@ -170,7 +170,10 @@ political_decisions = {
 		allow = {
 		
 			#Ruling Party must love accepted pops only
-			citizenship_policy = residency
+			OR = {
+				AND = { ai = yes citizenship_policy = residency }
+				AND = { ai = no NOT = { citizenship_policy = full_citizenship } }
+			}
 		
 			#Laws must already be against minorities
 			minorities_reform = minorities_oppression

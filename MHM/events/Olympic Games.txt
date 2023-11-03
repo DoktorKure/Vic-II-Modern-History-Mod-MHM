@@ -63,7 +63,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = IMP }
 		year = 1948
 		NOT = { year = 1949 }
 		month = 7

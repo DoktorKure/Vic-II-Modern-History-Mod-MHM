@@ -29,7 +29,7 @@ country_event = {
 		
 		#Option for the UK to go to war or surrender
 		random_country = {
-			limit = { tag = ENG }
+			limit = { OR = { tag = ENG tag = IMP } }
 			country_event = 8234001
 			relation = { who = THIS value = -200 }
 		}
@@ -109,7 +109,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = IMP }
 		war_with = ARG
 		ARG = { controls = 2131 }
 		has_global_flag = falklands_war_FLK
@@ -173,7 +173,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = IMP }
 		war_with = ARG
 		ARG = { controls = 2131 }
 		has_global_flag = falklands_war_FLK
@@ -221,7 +221,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = IMP }
 		war_with = ARG
 		ARG = { controls = 2131 }
 		has_global_flag = falklands_war_FLK
@@ -245,7 +245,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = IMP }
 		war_with = ARG
 		ARG = { controls = 2131 }
 		has_global_flag = falklands_war_FLK
@@ -294,7 +294,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = IMP }
 		year = 1982
 		has_recently_lost_war = yes
 		has_global_flag = falklands_war_FLK

@@ -10,7 +10,7 @@ country_event = {
 	trigger = {
 		year = 1964
 		NOT = { year = 1990 }
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		government = hms_government
 		war = no
 		OR = { 
@@ -300,7 +300,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		government = hms_government
 		year = 1970
 		NOT = { year = 1990 }
@@ -348,7 +348,7 @@ country_event = {
 	trigger = {
 		year = 1973
 		NOT = { year = 1990 }
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		government = hms_government
 		war = no
 		owns = 2219
@@ -398,7 +398,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		is_our_vassal = GRD
 		year = 1974
 		NOT = { year = 1990 }
@@ -437,7 +437,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1951
 		NOT = { year = 1990 }
 		government = hms_government
@@ -479,7 +479,7 @@ country_event = {
 	trigger = {
 		year = 1980
 		NOT = { year = 1990 }
-		OR = { tag = FRA tag = ENG }
+		OR = { tag = FRA tag = ENG tag = FBU tag = IMP }
 		OR = { government = hms_government government = democracy }
 		is_our_vassal = VAN
 	}
@@ -495,7 +495,7 @@ country_event = {
 		VAN = { government = democracy country_event = 800054 }
 		diplomatic_influence = { who = VAN value = 200 }
 		FRA = { diplomatic_influence = { who = VAN value = -110 } } 
-		random_country = { limit = { is_our_vassal = VAN OR = { tag = FRA tag = ENG } } relation = { who = THIS value = -25 } }
+		random_country = { limit = { is_our_vassal = VAN OR = { tag = FRA tag = ENG tag = IMP } } relation = { who = THIS value = -25 } }
 		ai_chance = { factor = 0.9 }
 	}
 

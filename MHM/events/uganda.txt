@@ -104,7 +104,7 @@ country_event = {
 	trigger = {
 		OR = {
 			AND = {
-				tag = ENG
+				OR = { tag = ENG tag = FBU tag = IMP }
 				owns = 2019 # Entebbe Kampala
 				year = 1953 NOT = { year = 1990 }
 			}
@@ -144,7 +144,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = IMP tag = FBU }
 		OR = {
 			owns = 2019 # Entebbe Kampala
 			exists = UGA

@@ -26,8 +26,6 @@ country_event = {
 		
 		RUS = { diplomatic_influence = { who = EGY value = 50 } }
 
-		leave_alliance = ENG
-
 		government = presidential_dictatorship
 		political_reform = none_voting
 		political_reform = ruling_party_opinion
@@ -36,6 +34,12 @@ country_event = {
 		#Loss of British Influence
 		random_country = {
 			limit = { tag = ENG is_sphere_leader_of = EGY }
+			leave_alliance = THIS
+			country_event = 8004906
+		}
+		random_country = {
+			limit = { tag = IMP is_sphere_leader_of = EGY }
+			leave_alliance = THIS
 			country_event = 8004906
 		}
 		

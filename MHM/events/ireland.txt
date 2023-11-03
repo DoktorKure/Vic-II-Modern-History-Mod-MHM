@@ -48,7 +48,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-    	tag = ENG
+    	OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1956 NOT = { year = 1957 }
 		has_global_flag = ira_founded
     	NOT = { war_with = IRE }
@@ -78,7 +78,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-    	tag = ENG
+    	OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1957 NOT = { year = 1958 }
 		has_global_flag = ira_founded
 		any_owned_province = { is_core = IRE }
@@ -158,7 +158,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-    	tag = ENG
+    	OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1959 NOT = { year = 1960 }
 		any_owned_province = { is_core = IRE }
     	NOT = { IRE = { war_with = ENG } }
@@ -201,7 +201,7 @@ country_event = {
 	fire_only_once = yes
   
   	trigger = {
-    	tag = ENG
+    	OR = { tag = ENG tag = FBU tag = IMP }
 		
 		has_country_flag = NIR_home_rule_flag
 		
@@ -293,7 +293,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-    	tag = ENG
+    	OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1960 NOT = { year = 1961 }
 		any_owned_province = { is_core = IRE }
     	NOT = { IRE = { war_with = ENG } }
@@ -335,7 +335,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-    	tag = ENG
+    	OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1961 NOT = { year = 1962 }
 		any_owned_province = { is_core = IRE }
     	NOT = { IRE = { war_with = ENG } }
@@ -377,7 +377,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-    	tag = ENG
+    	OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1962 NOT = { year = 1963 }
 		any_owned_province = { is_core = IRE }
     	NOT = { IRE = { war_with = ENG } }
@@ -467,7 +467,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-    	tag = ENG
+    	OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1960 NOT = { year = 1961 }
 		any_owned_province = { is_core = IRE }
 		NIR = { exists = yes }

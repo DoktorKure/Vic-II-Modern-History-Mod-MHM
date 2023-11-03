@@ -1,4 +1,8 @@
 CODE;ENGLISH;FRENCH;GERMAN;POLISH;SPANISH;HUNGARIAN;CZECH;HUNGARIAN;DUTCH;PORTUGUESE;RUSSIAN;FINNISH;;x;;;;;;;;;;;;;;;;
+disable_recurring_event_spam_title;Disable Recurring Flavor Events;;;;;;;;;;X;;;;;;;
+disable_recurring_event_spam_desc;Disables random popup province/political events that fire every now and then relating to issues such as immigration, mining efficiency, safaris, etc., in order to slightly boost performance and greatly increase the speed of playthroughs at the cost of some random flavor.;;;;;;;;;;X;;;;;;;
+enable_recurring_event_spam_title;Re-enable Recurring Flavor Events;;;;;;;;;;X;;;;;;;
+enable_recurring_event_spam_desc;Re-enables random popup province/political events that fire every now and then relating to issues such as immigration, mining efficiency, safaris, etc., in order to improve random flavor at the cost of minor performance and greatly reduced playthrough speeds.;;;;;;;;;;X;;;;;;;
 show_startup_decisions_title;Show Startup Options;;;;;;;;;;X;;;;;;;
 show_startup_decisions_desc;Show options to toggle various features in the mod at the start for an optimal run for the player's preference. The player has §Rone year§! to make their choices, then these decisions will disapper for the rest of the game.;;;;;;;;;;X;;;;;;;
 hide_startup_decisions_title;Hide Startup Options;;;;;;;;;;X;;;;;;;

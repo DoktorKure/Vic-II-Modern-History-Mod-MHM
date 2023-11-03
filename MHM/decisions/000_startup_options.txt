@@ -93,6 +93,97 @@ political_decisions = {
 		
 	}
 	
+	disable_recurring_event_spam = {
+		picture = "performance_mode"
+		alert = no
+		potential = {
+			has_country_flag = show_startup_decisions
+			OR = {
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
+					NOT = { year = 1947 }
+				}
+				AND = {
+					has_global_flag = 1950_start_date_flag
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
+					NOT = { year = 1951 }
+				}
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					has_global_flag = 1992_start_date_flag
+					NOT = { has_global_flag = 2015_start_date_flag }
+					NOT = { year = 1993 }
+				}
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					has_global_flag = 2015_start_date_flag
+					NOT = { year = 2016 }
+				}
+			}
+			NOT = { has_country_flag = disable_recurring_event_spam }
+			ai = no
+		}
+		
+		allow = { }
+		
+		effect = {
+			set_country_flag = disable_recurring_event_spam
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+	}
+	enable_recurring_event_spam = {
+		picture = "performance_mode"
+		alert = no
+		potential = {
+			has_country_flag = show_startup_decisions
+			OR = {
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
+					NOT = { year = 1947 }
+				}
+				AND = {
+					has_global_flag = 1950_start_date_flag
+					NOT = { has_global_flag = 1992_start_date_flag }
+					NOT = { has_global_flag = 2015_start_date_flag }
+					NOT = { year = 1951 }
+				}
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					has_global_flag = 1992_start_date_flag
+					NOT = { has_global_flag = 2015_start_date_flag }
+					NOT = { year = 1993 }
+				}
+				AND = {
+					NOT = { has_global_flag = 1950_start_date_flag }
+					NOT = { has_global_flag = 1992_start_date_flag }
+					has_global_flag = 2015_start_date_flag
+					NOT = { year = 2016 }
+				}
+			}
+			has_country_flag = disable_recurring_event_spam
+			ai = no
+		}
+		
+		allow = { }
+		
+		effect = {
+			clr_country_flag = disable_recurring_event_spam
+		}
+		
+		ai_will_do = { 
+			factor = 0
+		}
+	}
+	
 	toggle_ussr_railroading = {
 		picture = "glasnost_intention"
 		alert = no
@@ -209,53 +300,6 @@ political_decisions = {
 		
 		effect = {
 			country_event = 14111000
-		}
-		
-		ai_will_do = { 
-			factor = 0
-		}
-		
-	}
-	
-	toggle_performance = {
-		picture = "performance_mode"
-		potential = {
-			has_country_flag = show_startup_decisions
-			NOT = { has_global_flag = performance_mode_set }
-			OR = {
-				AND = {
-					NOT = { has_global_flag = 1950_start_date_flag }
-					NOT = { has_global_flag = 1992_start_date_flag }
-					NOT = { has_global_flag = 2015_start_date_flag }
-					NOT = { year = 1947 }
-				}
-				AND = {
-					has_global_flag = 1950_start_date_flag
-					NOT = { has_global_flag = 1992_start_date_flag }
-					NOT = { has_global_flag = 2015_start_date_flag }
-					NOT = { year = 1951 }
-				}
-				AND = {
-					NOT = { has_global_flag = 1950_start_date_flag }
-					has_global_flag = 1992_start_date_flag
-					NOT = { has_global_flag = 2015_start_date_flag }
-					NOT = { year = 1993 }
-				}
-				AND = {
-					NOT = { has_global_flag = 1950_start_date_flag }
-					NOT = { has_global_flag = 1992_start_date_flag }
-					has_global_flag = 2015_start_date_flag
-					NOT = { year = 2016 }
-				}
-			}
-		}
-		
-		alert = no
-		
-		allow = { }
-		
-		effect = {
-			country_event = 669966
 		}
 		
 		ai_will_do = { 

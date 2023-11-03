@@ -102,7 +102,7 @@ country_event = {
 		
 		#Call for UK assistance
 		random_country = {
-			limit = { OR = { is_sphere_leader_of = THIS alliance_with = THIS } OR = { tag = ENG tag = FBU } NOT = { ruling_party_ideology = communist } NOT = { ruling_party_ideology = communist_social } }
+			limit = { OR = { is_sphere_leader_of = THIS alliance_with = THIS } OR = { tag = ENG tag = FBU tag = IMP } NOT = { ruling_party_ideology = communist } NOT = { ruling_party_ideology = communist_social } }
 			country_event = 8010806
 		}
 		

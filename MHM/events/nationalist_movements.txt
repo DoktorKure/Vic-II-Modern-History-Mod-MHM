@@ -5,6 +5,7 @@ province_event = { #Boy shot by police!
 	picture = "geronimo"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		controlled_by = owner
@@ -107,6 +108,7 @@ province_event = { #Directive on trade in the provinces
 	desc = "EVT_15010_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		average_militancy = 2
@@ -219,6 +221,7 @@ province_event = { #Local Poet
 	desc = "EVT_15020_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		average_consciousness = 3
@@ -335,6 +338,7 @@ province_event = { #Discrimination in the school system
 	desc = "EVT_15030_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		owner = {
@@ -438,6 +442,7 @@ province_event = {
 	desc = "EVTDESC15040"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		is_colonial = no
@@ -540,6 +545,7 @@ province_event = { # Underground Newspaper
 	desc = "EVT_15050_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		literacy = 0.03
@@ -642,6 +648,7 @@ province_event = { #Farmer's bank supports cause of independence
 	desc = "EVT_15060_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		has_pop_type = farmers
@@ -754,6 +761,7 @@ province_event = { #Sons of $PROVINCECULTURE$ Labour
 	desc = "EVT_15070_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		owner = {
@@ -867,6 +875,7 @@ province_event = { # A coordinated affair
 	desc = "EVT_15080_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		average_militancy = 4
@@ -950,6 +959,7 @@ province_event = { #The Battered boy
 	desc = "EVT_15090_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		NOT = {
@@ -1038,6 +1048,7 @@ province_event = { # Educated Natives in $PROVINCENAME$ Incite The Peasantry
 	desc = "EVT_15100_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		is_colonial = yes
@@ -1144,6 +1155,7 @@ province_event = { #Annals of $PROVINCECULTURE$ History
 	desc = "EVT_15110_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_accepted_culture = no
 		is_primary_culture = no
 		average_consciousness = 3
@@ -1268,6 +1280,7 @@ province_event = { #$PROVINCECULTURE$ congress
 	desc = "EVT_15120_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		average_militancy = 6
@@ -1356,6 +1369,7 @@ province_event = { # All roads lead to $CAPITAL$
 	desc = "EVT_15130_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_accepted_culture = no
 		is_primary_culture = no
 		average_consciousness = 4
@@ -1448,6 +1462,7 @@ province_event = { # Local Merchants Upset
 	desc = "EVT_15140_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		owner = {
@@ -1570,6 +1585,7 @@ province_event = { #Kulturkampf
 	title = "EVT_15150_NAME"
 	desc = "EVT_15150_DESC"
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		owner = {
@@ -1668,6 +1684,7 @@ province_event = { #Partisans raid weapons-cache
 	desc = "EVT_15160_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		average_militancy = 6
@@ -1779,6 +1796,7 @@ province_event = { #Sabotage
 	desc = "EVT_15170_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		average_militancy = 6
@@ -1854,7 +1872,7 @@ province_event = { #Sabotage
 					is_primary_culture = no
 					militancy = 6
 				}
-				reduce_pop = 0.99
+				reduce_pop = 0.98
 				militancy = -0.5
 			}
 		}
@@ -1884,6 +1902,7 @@ province_event = { #Benefit of Empire
 	desc = "EVT_15180_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		average_consciousness = 3
@@ -2012,6 +2031,7 @@ province_event = { # The $PROVINCENAME$ Slaughter
 	desc = "EVT_15190_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		owner = {
@@ -2142,6 +2162,7 @@ province_event = { #Nationalist Sympathies among the officers
 	desc = "EVT_15200_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		owner = {
@@ -2255,6 +2276,7 @@ province_event = { #National Martyr
 	desc = "EVT_15210_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		controlled_by = owner
@@ -2357,6 +2379,7 @@ province_event = { #Upset Soldiers
 	desc = "EVT_15220_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		any_pop = {
@@ -2464,6 +2487,7 @@ province_event = { #Literary Association
 	desc = "EVT_15230_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		owner = {
@@ -2582,6 +2606,7 @@ province_event = { #Patriotic Society
 	desc = "EVT_15240_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		average_consciousness = 4
@@ -2682,6 +2707,7 @@ province_event = { #Building permits
 	desc = "EVT_15260_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		owner = {
@@ -2788,6 +2814,7 @@ province_event = { #Violation of $COUNTRY_ADJ$ ban on the erection of permanent 
 	desc = "EVT_15270_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		owner = {
@@ -2901,6 +2928,7 @@ province_event = { #Foreign Journalist visits slums
 	desc = "EVT_15274_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		has_province_modifier = dryzymalas_wagon
 		controlled_by = owner
 	}
@@ -2980,6 +3008,7 @@ province_event = { # School Language
 	desc = "EVT_15280_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		owner = {
@@ -3089,6 +3118,7 @@ province_event = { #School Strike
 	desc = "EVT_15290_DESC"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_primary_culture = no
 		is_accepted_culture = no
 		owner = {
@@ -3186,7 +3216,8 @@ province_event = { #Flying University
 	desc = "EVT_15310_DESC"
 	
 	trigger = {
-		not = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
+		NOT = {
 			has_province_modifier = flying_university
 		}
 		is_primary_culture = no

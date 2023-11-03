@@ -6,6 +6,7 @@ country_event = {
 	picture = "jacktheripper"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		NOT = {
 			poor_strata_life_needs = 0.9
 		}
@@ -73,6 +74,7 @@ country_event = {
 	picture = "prisoners"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		crime_fighting = 0.5
 		NOT = {
 			poor_strata_everyday_needs = 0.9
@@ -126,6 +128,7 @@ country_event = {
 	picture = "wanted"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		NOT = {
 			poor_strata_everyday_needs = 0.8
 		}
@@ -181,6 +184,7 @@ country_event = {
 	picture = "prisoners"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		NOT = {
 			rich_strata_life_needs = 0.9
 		}
@@ -228,6 +232,7 @@ country_event = {
 	picture = "Execution"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		blended_learning = 1
 		liberal = 0.1
 		capital_scope = {

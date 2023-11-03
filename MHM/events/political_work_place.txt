@@ -7,6 +7,7 @@ country_event = {
 	picture = "Mining"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		produces = coal
 		has_pop_type = capitalists
 	}
@@ -68,6 +69,7 @@ country_event = {
 	picture = "Mining"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		produces = coal
 		plurality = 5
 		OR = {
@@ -120,6 +122,7 @@ country_event = {
 	picture = "Childlabor2"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		NOT = { safety_regulations = low_safety }
 		NOT = {	has_country_modifier = national_tragedy }			
@@ -182,6 +185,7 @@ province_event = {
 	desc = "EVTDESC12030"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = weaponry
 		owner = {
 			weaponry = 50
@@ -242,6 +246,7 @@ province_event = {
 	desc = "EVTDESC12040"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = plastics
 		has_pop_type = capitalists
 	}
@@ -290,6 +295,7 @@ province_event = {
 	desc = "EVTDESC12050"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = tea
 		has_pop_type = bureaucrats
 		owner = {
@@ -360,6 +366,7 @@ province_event = {
 	desc = "EVTDESC12060"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		owner = {
 			war = yes
 		}
@@ -408,6 +415,7 @@ province_event = {
 	desc = "EVTDESC12070"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = canned_food
 		owner = {
 			canned_food = 15
@@ -452,6 +460,7 @@ province_event = {
 	desc = "EVTDESC12080"
 	picture = "cattle"	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = cattle
 		owner = {
 			cattle = 15
@@ -501,6 +510,7 @@ province_event = {
 	picture = "farming"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = fabric
 		owner = {
 			fabric = 10
@@ -555,6 +565,7 @@ province_event = {
 	desc = "EVTDESC12100"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		has_province_modifier = silk_famine
 	}
 	
@@ -611,6 +622,7 @@ province_event = {
 	picture = "farming"
 		
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = cotton
 	}
 		
@@ -683,7 +695,8 @@ province_event = {
 	desc = "EVTDESC12120"
 	picture = "mining"
 		
-	trigger = {
+	trigger = 
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }{
 		produces = iron
 		NOT = { has_province_modifier = blood_and_iron_mine }
 	}
@@ -730,6 +743,7 @@ province_event = {
 	picture = "colonial_factory"
 		
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = wool
 	}
 	
@@ -784,6 +798,7 @@ province_event = {
 	picture = "americascup"
 		
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = ships
 		is_coastal = yes
 	}
@@ -831,6 +846,7 @@ province_event = {
 	picture = "Christiansborgs"
 		
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = ships
 		owner = {
 			ships = 2
@@ -879,6 +895,7 @@ province_event = {
 	picture = "factory"
 
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = cement
 		has_pop_type = capitalists
 	}
@@ -933,6 +950,7 @@ country_event = {
 	picture = "factory_workers"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		civilized = yes
 		any_state = { has_building = inorganic_chemicals_factory }
 	}
@@ -997,6 +1015,7 @@ province_event = {
 	picture = "Christiansborgs"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = fuel
 		owner = {
 			fuel = 50
@@ -1049,6 +1068,7 @@ province_event = {
 	desc = "EVTDESC12190"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = fuel
 		owner = {
 			OR = {
@@ -1098,6 +1118,7 @@ province_event = {
 	desc = "EVTDESC12200"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = iron
 		has_pop_type = capitalists
 		owner = {
@@ -1156,6 +1177,7 @@ province_event = {
 	picture = "americascup"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = fish
 		is_coastal = yes
 	}
@@ -1200,6 +1222,7 @@ province_event = {
 	picture = "farming"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = tea
 	}
 	
@@ -1237,6 +1260,7 @@ province_event = {
 	desc = "EVTDESC12230"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		owner = {
 			telecommunications = 5
 			war = yes
@@ -1301,6 +1325,7 @@ province_event = {
 	desc = "EVTDESC12240"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		OR = {
 			produces = beverage_tobacco
 			produces = beverages
@@ -1355,6 +1380,7 @@ province_event = {
 	desc = "EVTDESC12250"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = ammunition #weaponry
 		is_capital = no
 	}
@@ -1414,6 +1440,7 @@ province_event = {
 	desc = "EVTDESC12260"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = furniture_houseware
 		has_pop_type = bureaucrats
 		owner = {
@@ -1473,6 +1500,7 @@ province_event = {
 	desc = "EVTDESC12270"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = clothes_footwear
 		has_pop_type = capitalists
 		owner = {
@@ -1517,6 +1545,7 @@ province_event = {
 	desc = "EVTDESC12280"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = clothes
 		owner = {
 			clothes = 30

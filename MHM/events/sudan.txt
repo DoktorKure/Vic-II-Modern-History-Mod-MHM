@@ -9,7 +9,7 @@ country_event = {
 
 	trigger = {
 		war = no
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		is_vassal = no
 		government = hms_government
 		is_our_vassal = SUD

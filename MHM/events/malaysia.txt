@@ -129,7 +129,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1959
 		NOT = { year = 1990 }
 		
@@ -198,7 +198,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1957
 		NOT = { year = 1963 }
 		is_our_vassal = FMS
@@ -250,7 +250,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1951
 		NOT = { year = 1960 }
 		is_our_vassal = FMS
@@ -296,7 +296,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1948
 		NOT = { year = 1960 }
 		NOT = { has_global_flag = 1950_start_date_flag }
@@ -366,7 +366,7 @@ country_event = {
   fire_only_once = yes
 
 	trigger = {
-    	tag = ENG
+    	OR = { tag = ENG tag = FBU tag = IMP }
     	year = 1963
 		NOT = { year = 1970 }
 		
@@ -2121,7 +2121,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1959
 		NOT = { year = 1990 }
 		OR = { 
@@ -2173,7 +2173,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1962
 		NOT = { year = 1990 }
 		
@@ -2262,7 +2262,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1962
 		NOT = { year = 1990 }
 		
@@ -2424,7 +2424,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1946
 		NOT = { has_global_flag = 1950_start_date_flag }
 		NOT = { year = 1990 }

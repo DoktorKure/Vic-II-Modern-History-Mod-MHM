@@ -255,7 +255,7 @@ country_event = {
 
 	trigger = {
 		NOT = { year = 1980 }
-		OR = { tag = USA tag = RUS tag = ENG tag = FRA tag = POL }
+		OR = { tag = USA tag = RUS tag = ENG tag = IMP tag = FBU tag = FRA tag = POL }
 	
 		OR = { 
 			AND = {
@@ -2201,7 +2201,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = IMP }
 		year = 1946
 		NOT = { year = 1990 }
 		government = hms_government
@@ -2363,7 +2363,9 @@ country_event = {
 		OR = {
 			AND = { tag = USA is_vassal = no }
 			AND = { tag = FRA is_vassal = no }
+			AND = { tag = FBU is_vassal = no }
 			AND = { tag = ENG is_vassal = no }
+			AND = { tag = IMP is_vassal = no }
 			AND = { tag = RUS is_vassal = no }
 			AND = { tag = DDR is_vassal = no }
 		}

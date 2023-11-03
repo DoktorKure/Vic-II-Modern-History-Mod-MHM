@@ -985,6 +985,7 @@ province_event = {
 	picture = "earthquake"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		OR = { 
 			continent = mena 
 			continent = asia 
@@ -1033,6 +1034,7 @@ province_event = {
 	picture = "tropical_cyclone"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		continent = north_america 
 		is_coastal = yes
 		NOT = { is_core = CAN } 
@@ -1074,6 +1076,7 @@ province_event = {
 	picture = "cyclone_nargis"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		continent = asia 
 		is_coastal = yes
 		OR = { is_core = HND is_core = BNG is_core = BUR }
@@ -1115,6 +1118,7 @@ province_event = {
 	picture = "typhoon"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_coastal = yes
 		OR = { 
 			AND = { continent = asia OR = { is_core = IDO is_core = DAI is_core = PHI is_core = CHI is_core = KMT is_core = JAP } }

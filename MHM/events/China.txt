@@ -39,7 +39,7 @@ country_event = {
 		any_country = {
 			limit = { 
 				is_greater_power = yes 
-				OR = { tag = ENG tag = FBU government = democracy government = democracy1 government = hms_government government = hms_government1 } 
+				OR = { tag = ENG tag = FBU tag = IMP government = democracy government = democracy1 government = hms_government government = hms_government1 } 
 			}
 			relation = { who = THIS value = 50 }
 		}
@@ -60,7 +60,7 @@ country_event = {
 		any_country = {
 			limit = { 
 				is_greater_power = yes 
-				OR = { tag = ENG tag = FBU government = democracy government = democracy1 government = hms_government government = hms_government1 } 
+				OR = { tag = ENG tag = FBU tag = IMP government = democracy government = democracy1 government = hms_government government = hms_government1 } 
 			}
 			relation = { who = THIS value = 100 }
 		}
@@ -138,7 +138,7 @@ country_event = {
 		any_country = {
 			limit = { 
 				is_greater_power = yes 
-				OR = { tag = ENG tag = FBU government = democracy government = democracy1 government = hms_government government = hms_government1 } 
+				OR = { tag = ENG tag = FBU tag = IMP government = democracy government = democracy1 government = hms_government government = hms_government1 } 
 			}
 			relation = { who = THIS value = 200 }
 		}
@@ -431,7 +431,7 @@ country_event = {
 
 	trigger = {
 		NOT = { has_global_flag = 2015_start_date_flag }
-		OR = { tag = ENG tag = FBU }
+		OR = { tag = ENG tag = FBU tag = IMP }
 		year = 1997
 		NOT = { year = 2010 }
 		OR = {
@@ -1149,6 +1149,9 @@ country_event = {
 		name = "Begin the reforms!"
 		prestige = 1000
 		
+		#Color change
+		government = proletarian_dictatorship1
+		
 		#Open borders
 		political_reform = naturalization
 		
@@ -1818,7 +1821,7 @@ country_event = {
 
 	trigger = {
 		war = no
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		is_vassal = no
 		government = hms_government
 		OR = { owns = 1496 is_our_vassal = HKG }

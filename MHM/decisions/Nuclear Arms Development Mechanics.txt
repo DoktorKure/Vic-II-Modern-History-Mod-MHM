@@ -48,7 +48,7 @@ political_decisions = {
 				
 				#Historical nuclear powers
 				AND = { tag = RUS ai = yes year = 1945 }
-				AND = { tag = ENG ai = yes year = 1949 money = 2000000 }
+				AND = { OR = { tag = ENG tag = IMP } ai = yes year = 1949 money = 2000000 }
 				AND = { tag = FRA ai = yes year = 1956 money = 2000000 }
 				AND = { tag = CHI ai = yes year = 1960 money = 2000000 }
 

@@ -8,6 +8,7 @@
 
 #Labor Union
 province_event = {
+	owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 	id = 17500
 	title = "EVTNAME17500"
 	desc = "EVTDESC17500"
@@ -204,6 +205,7 @@ country_event = {
 	picture = "Revolution"
 	
 	trigger = {
+	NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = socialist
 		civilized = yes
 		socialist = 5
@@ -364,6 +366,7 @@ province_event = {
 	picture = "Factoryattack"
 	
 	trigger = {
+	owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_ideology_enabled = socialist
 		civilized = yes
 		socialist = 10
@@ -557,6 +560,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+	NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = socialist
 		civilized = yes
 		socialist = 15
@@ -703,6 +707,7 @@ province_event = {
 	picture = "Strike"
 	
 	trigger = {
+	owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_ideology_enabled = socialist
 		is_colonial = no
 		civilized = yes
@@ -926,6 +931,7 @@ country_event = {
 	picture = "Workers"
 	
 	trigger = {
+	NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = socialist
 		civilized = yes
 		OR = {
@@ -1067,6 +1073,7 @@ country_event = {
 	picture = "may_day"
 	
 	trigger = {
+	NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = socialist
 		civilized = yes
 		year = 1990
@@ -1211,6 +1218,7 @@ country_event = {
 	picture = "Unite"
 	
 	trigger = {
+	NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = socialist
 		civilized = yes
 		OR = {
@@ -1346,6 +1354,7 @@ country_event = {
 	picture = "union_busting"
 	
 	trigger = {
+	NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = socialist
 		civilized = yes
 		OR = {
@@ -1536,6 +1545,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+	NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = socialist
 		civilized = yes
 		socialist = 5
@@ -1706,6 +1716,7 @@ country_event = {
 	picture = "Fascist"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		OR = { pop_majority_religion = sunni pop_majority_religion = shiite }
 		is_ideology_enabled = nationalist
 		socialist = 5
@@ -1894,6 +1905,7 @@ country_event = {
 	picture = "Fascist"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = nationalist
 		OR = { pop_majority_religion = sunni pop_majority_religion = shiite }
 		civilized = yes
@@ -2080,6 +2092,7 @@ country_event = {
 	picture = "propaganda"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = nationalist
 		civilized = yes
 		publishing_rights = free_publishing
@@ -2244,6 +2257,7 @@ country_event = {
 	picture = "Riot"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = nationalist
 		civilized = yes
 		OR = {
@@ -2415,6 +2429,7 @@ country_event = {
 	picture = "propaganda"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = populist
 		civilized = yes
 		nationalist = 10
@@ -2602,6 +2617,7 @@ country_event = {
 	picture = "islamist_march"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = nationalist
 		NOT = {
 			has_country_flag = paramilitaries_outlawed
@@ -2776,6 +2792,7 @@ country_event = {
 	picture = "Strike"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = nationalist
 		is_ideology_enabled = socialist
 		civilized = yes
@@ -2969,6 +2986,7 @@ country_event = {
 	picture = "communist_crowd"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = communist
 		civilized = yes
 		any_owned_province = {
@@ -3195,6 +3213,7 @@ country_event = {
 	picture = "communist_crowd"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = communist
 		civilized = yes
 		any_owned_province = {
@@ -3386,6 +3405,7 @@ country_event = {
 	picture = "communist_riot"
 	
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		is_ideology_enabled = communist
 		civilized = yes
 		any_owned_province = {
@@ -3592,6 +3612,7 @@ province_event = {
 	desc = "EVTDESC17730"
 	
 	trigger = {
+	owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_ideology_enabled = communist
 		is_colonial = no
 		owner = { NOT = {	OR = { pop_majority_religion = sunni pop_majority_religion = shiite } } }

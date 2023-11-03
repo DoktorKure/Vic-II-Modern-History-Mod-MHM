@@ -47,20 +47,23 @@ country_event = {
 		}
 		civilized = yes
 		vote_franschise = none_voting
-		OR = {
-			ruling_party_ideology = nationalist
-			AND = { # jingoist ruling parties gets nationalist dictatorship, otherwise it's presidential dictatorship
-				OR = {
-					ruling_party_ideology = socialist
-					ruling_party_ideology = conservative
-					ruling_party_ideology = populist
-				}
-				war_policy = jingoism
+		AND = { # jingoist ruling parties gets nationalist dictatorship, otherwise it's presidential dictatorship
+			OR = {
+				ruling_party_ideology = nationalist
+				ruling_party_ideology = socialist
+				ruling_party_ideology = conservative
+				ruling_party_ideology = populist
+				AND = { ruling_party_ideology = traditionalist NOT = { religious_policy = moralism } }
 			}
+			war_policy = jingoism
 		}
-		OR = { # good attitude towards minorities leads to nationalist dictatorship instead of sectarian regime
+		# good/tolerant attitude towards minorities leads to nationalist dictatorship instead of sectarian regime
+		OR = {
 			NOT = { minorities_reform = minorities_oppression }
-			NOT = { citizenship_policy = residency }
+			AND = {
+				minorities_reform = minorities_oppression
+				NOT = { citizenship_policy = residency }
+			}
 		}
 	}
 	
@@ -79,6 +82,7 @@ country_event = {
 	picture = "populist_cleanup"
 	
 	trigger = {
+		has_country_flag = is_disabled_for_now #Keep disabled as the game doesn't seem to like having this entry be functional
 
 		NOT = {
 			government = presidential_dictatorship
@@ -88,7 +92,6 @@ country_event = {
 		civilized = yes
 		vote_franschise = none_voting
 		ruling_party_ideology = nationalist
-		has_country_flag = is_disabled_for_now #Keep disabled as the game doesn't seem to like having this entry be functional
 	}
 	
 	mean_time_to_happen = { days = 1 }
@@ -363,11 +366,21 @@ country_event = {
 					ruling_party_ideology = conservative 
 					ruling_party_ideology = populist
 					ruling_party_ideology = socialist
+					ruling_party_ideology = traditionalist
+					ruling_party_ideology = nationalist
 				}
 				NOT = { war_policy = jingoism } # must not be jingoist or they get nationalist dictatorship instead
 				NOT = { religious_policy = moralism } # must be secular or they get reactionary regime instead
 			}
 			ruling_party_ideology = big_tent
+		}
+		#Must have favorable or tolerant attitude towards minorities or they get sectarian regime instead
+		OR = {
+			NOT = { minorities_reform = minorities_oppression }
+			AND = {
+				minorities_reform = minorities_oppression
+				NOT = { citizenship_policy = residency }
+			}
 		}
 	}
 	
@@ -389,10 +402,16 @@ country_event = {
 
 		OR = { government = democracy government = democracy1 government = socialist_democracy }
 		vote_franschise = none_voting
-		OR = { ruling_party_ideology = socialist ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = conservative }
+		OR = {
+			ruling_party_ideology = socialist
+			ruling_party_ideology = populist
+			ruling_party_ideology = nationalist
+			ruling_party_ideology = conservative
+			AND = { ruling_party_ideology = traditionalist NOT = { religious_policy = moralism } }
+		}
 		AND = { # poor attitude towards minorities leads to sectarian regime
 			minorities_reform = minorities_oppression
-			NOT = { citizenship_policy = full_citizenship }
+			citizenship_policy = residency
 		}
 		civilized = yes
 	}

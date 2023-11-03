@@ -299,7 +299,7 @@ country_event = {
 		
 		#Gain relations with the Western Powers
 		any_country = {
-			limit = { OR = { tag = USA tag = FRA tag = ENG } OR = { government = hms_government government = democracy } is_greater_power = yes }
+			limit = { OR = { tag = USA tag = FRA tag = ENG tag = FBU tag = IMP } OR = { government = hms_government government = democracy } is_greater_power = yes }
 			relation = { who = THIS value = 200 }
 			diplomatic_influence = { who = THIS value = 50 }
 		}

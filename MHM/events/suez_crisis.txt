@@ -26,7 +26,10 @@ country_event = {
 		is_vassal = no
 		war = no
 		
-		ENG = { is_vassal = no owns = 1755 }
+		OR = {
+			ENG = { is_vassal = no owns = 1755 }
+			IMP = { is_vassal = no owns = 1755 }
+		}
 		
 		#EGY owns Aswan
 		owns = 1766
@@ -123,7 +126,26 @@ country_event = {
 		name = "Nationalise the Suez Canal to pay for the Aswan Dam!"
 		
 		#Send notification to the owners of the Suez canal
-		ENG = { country_event = 8500305 } # Province owner
+		random_owned = {
+			limit = {
+				owner = {
+					exists = ENG
+				}
+			}
+			owner = {
+				ENG = { country_event = 8500305 } # Province owner
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = IMP
+				}
+			}
+			owner = {
+				IMP = { country_event = 8500305 } # Province owner
+			}
+		}
 		
 		#Involve France
 		random_country = {
@@ -173,6 +195,7 @@ country_event = {
 		name = "The Suez Canal is ours!"
 		1755 = { 
 			remove_core = ENG
+			remove_core = IMP
 			add_core = EGY
 			secede_province = EGY 
 		}
@@ -324,7 +347,7 @@ country_event = {
 		#Send the request
 		any_country = {
 			limit = {
-				OR = { tag = ENG tag = FRA tag = ISR }
+				OR = { tag = ENG tag = IMP tag = FRA tag = ISR }
 				war_with = EGY
 			}
 			country_event = 8500309 #Pressure to withdraw
@@ -342,7 +365,7 @@ country_event = {
 		#War participants are happy
 		any_country = {
 			limit = {
-				OR = { tag = ENG tag = FRA tag = ISR }
+				OR = { tag = ENG tag = IMP tag = FRA tag = ISR }
 				war_with = EGY
 			}
 			relation = { who = THIS value = 100 }
@@ -403,7 +426,7 @@ country_event = {
 		#Send the request
 		any_country = {
 			limit = {
-				OR = { tag = ENG tag = FRA tag = ISR }
+				OR = { tag = ENG tag = IMP tag = FRA tag = ISR }
 				war_with = EGY
 			}
 			country_event = 8500311 #Pressure to withdraw
@@ -421,7 +444,7 @@ country_event = {
 		#War participants are happy
 		any_country = {
 			limit = {
-				OR = { tag = ENG tag = FRA tag = ISR }
+				OR = { tag = ENG tag = IMP tag = FRA tag = ISR }
 				war_with = EGY
 			}
 			relation = { who = THIS value = 100 }

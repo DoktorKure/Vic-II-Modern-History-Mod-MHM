@@ -1511,10 +1511,16 @@ country_event = {
 		
 		#Base growth rates
 		any_country = {
-			limit = { NOT = { has_country_modifier = contraception_decay } }
+			limit = {
+				NOT = { has_country_modifier = contraception_decay }
+				NOT = { has_country_flag = demographic_transition_stage_2_flag }
+				NOT = { has_country_flag = demographic_transition_stage_3_flag }
+				NOT = { has_country_flag = demographic_transition_stage_4_flag }
+				NOT = { has_country_flag = demographic_transition_stage_5_flag }
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+			}
 			any_owned = {
 				limit = {
-					has_province_modifier = dev_1
 					NOT = {
 						OR = {
 							has_province_modifier = family_values1
@@ -1526,10 +1532,16 @@ country_event = {
 			}
 		}
 		any_country = {
-			limit = { NOT = { has_country_modifier = contraception_decay } }
+			limit = {
+				NOT = { has_country_modifier = contraception_decay }
+				has_country_flag = demographic_transition_stage_2_flag
+				NOT = { has_country_flag = demographic_transition_stage_3_flag }
+				NOT = { has_country_flag = demographic_transition_stage_4_flag }
+				NOT = { has_country_flag = demographic_transition_stage_5_flag }
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+			}
 			any_owned = {
 				limit = {
-					has_province_modifier = dev_2
 					NOT = {
 						OR = {
 							has_province_modifier = family_values1
@@ -1541,10 +1553,15 @@ country_event = {
 			}
 		}
 		any_country = {
-			limit = { NOT = { has_country_modifier = contraception_decay } }
+			limit = {
+				NOT = { has_country_modifier = contraception_decay }
+				has_country_flag = demographic_transition_stage_3_flag
+				NOT = { has_country_flag = demographic_transition_stage_4_flag }
+				NOT = { has_country_flag = demographic_transition_stage_5_flag }
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+			}
 			any_owned = {
 				limit = {
-					has_province_modifier = dev_3
 					NOT = {
 						OR = {
 							has_province_modifier = family_values1
@@ -1556,10 +1573,14 @@ country_event = {
 			}
 		}
 		any_country = {
-			limit = { NOT = { has_country_modifier = contraception_decay } }
+			limit = {
+				NOT = { has_country_modifier = contraception_decay }
+				has_country_flag = demographic_transition_stage_4_flag
+				NOT = { has_country_flag = demographic_transition_stage_5_flag }
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+			}
 			any_owned = {
 				limit = {
-					has_province_modifier = dev_5
 					NOT = {
 						OR = {
 							has_province_modifier = family_values1
@@ -1571,10 +1592,13 @@ country_event = {
 			}
 		}
 		any_country = {
-			limit = { NOT = { has_country_modifier = contraception_decay } }
+			limit = {
+				NOT = { has_country_modifier = contraception_decay }
+				has_country_flag = demographic_transition_stage_5_flag
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+			}
 			any_owned = {
 				limit = {
-					has_province_modifier = dev_6
 					NOT = {
 						OR = {
 							has_province_modifier = family_values1
@@ -3373,7 +3397,7 @@ country_event = {
 						location = { has_province_modifier = pop_replacement_province_modifier }
 						OR = { is_primary_culture = yes is_accepted_culture = yes }
 					}
-					reduce_pop = 1.02
+					reduce_pop = 1.025
 				}
 			}
 		}
@@ -3387,7 +3411,7 @@ country_event = {
 						location = { is_colonial = yes }
 						OR = { is_primary_culture = yes is_accepted_culture = yes }
 					}
-					reduce_pop = 1.01
+					reduce_pop = 1.015
 				}
 			}
 		}

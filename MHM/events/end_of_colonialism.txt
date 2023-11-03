@@ -130,6 +130,7 @@ province_event = {
 				tag = AST
 				tag = ENG
 				tag = FBU
+				tag = IMP
 				
 				colonial_nation = yes
 				minorities_reform = minorities_oppression
@@ -585,7 +586,7 @@ province_event = {
 		NOT = { province_id = 1723 }
 		NOT = { province_id = 1303 }
 		NOT = { province_id = 1312 }
-		NOT = { AND = { is_core = ALG NOT = { year = 1970 } OR = { owner = { tag = FRA } owner = { tag = FBU } } } }
+		NOT = { AND = { is_core = ALG NOT = { year = 1970 } OR = { owner = { tag = FRA } owner = { tag = FBU } owner = { tag = IMP } } } }
 	}
   
 	mean_time_to_happen = { months = 365 }

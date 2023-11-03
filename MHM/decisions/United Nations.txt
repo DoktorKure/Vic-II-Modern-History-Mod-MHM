@@ -374,20 +374,39 @@ political_decisions = {
 						}
 					}
 				}
-				CHI = {
-					OR = {
-						exists = no
-						AND = {
-							OR = {
-								has_country_modifier = unsc_permanent_member
-								#Annexed Taiwan but doesn't have UNSC member
-								AND = {
-									KMT = { exists = no }
-									NOT = { has_country_modifier = unsc_permanent_member }
+				OR = {
+					KMT = {
+						OR = {
+							exists = no
+							AND = {
+								OR = {
+									has_country_modifier = unsc_permanent_member
+									#Annexed China but doesn't have UNSC member
+									AND = {
+										CHI = { exists = no }
+										NOT = { has_country_modifier = unsc_permanent_member }
+									}
 								}
+								is_greater_power = no
+								is_secondary_power = no
 							}
-							is_greater_power = no
-							is_secondary_power = no
+						}
+					}
+					CHI = {
+						OR = {
+							exists = no
+							AND = {
+								OR = {
+									has_country_modifier = unsc_permanent_member
+									#Annexed Taiwan but doesn't have UNSC member
+									AND = {
+										KMT = { exists = no }
+										NOT = { has_country_modifier = unsc_permanent_member }
+									}
+								}
+								is_greater_power = no
+								is_secondary_power = no
+							}
 						}
 					}
 				}

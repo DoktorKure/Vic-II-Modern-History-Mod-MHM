@@ -7,7 +7,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		tag = ENG
+		OR = { tag = ENG tag = FBU tag = IMP }
 		owns = 2237 # Trinidad
 		OR = { TAN = { is_vassal = no } GHA = { is_vassal = no } year = 1958 }
 		NOT = { year = 1990 }

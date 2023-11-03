@@ -6,6 +6,7 @@ country_event = {
 	picture = "Demonstration"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 			ai = no
 			OR = {
 				publishing_rights = state_publishing
@@ -60,6 +61,7 @@ country_event = {
 	picture = "Demonstration"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 			OR = {
 				publishing_rights = state_publishing
 				publishing_rights = censored_publishing
@@ -91,6 +93,7 @@ country_event = {
 	picture = "Demonstration"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 			ai = no
 			public_meetings = no_meetings
 			consciousness = 5
@@ -142,6 +145,7 @@ country_event = {
 	picture = "Demonstration"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 		public_meetings = no_meetings
 		consciousness = 5
 		literacy = 0.20
@@ -170,6 +174,7 @@ country_event = {
 	picture = "Demonstration"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 			ai = no
 			union_rights = no_trade_unions
 			consciousness = 5
@@ -241,6 +246,7 @@ country_event = {
 	picture = "Demonstration"
 
 	trigger = {
+		NOT = { has_country_flag = disable_recurring_event_spam }
 			union_rights = no_trade_unions
 			consciousness = 5
 			literacy = 0.20

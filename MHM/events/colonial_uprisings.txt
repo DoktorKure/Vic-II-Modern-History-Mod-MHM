@@ -520,6 +520,7 @@ province_event = {
 	desc = "EVTDESC14580"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_colonial = yes
 		is_state_religion = no
 	}
@@ -577,6 +578,7 @@ province_event = {
 	desc = "EVTDESC14590"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_colonial = yes
 		is_primary_culture = no
 		average_militancy = 2
@@ -695,6 +697,7 @@ province_event = {
 	desc = "EVTDESC14610"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_colonial = yes
 		average_militancy = 4
 	}
@@ -744,6 +747,7 @@ province_event = {
 	desc = "EVTDESC14620"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
         is_colonial = yes
         OR = { 
 			average_militancy = 4 
@@ -976,6 +980,7 @@ province_event = {
 	desc = "EVTDESC14650"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		NOT = { has_country_modifier = recent_safari2 }
 		is_colonial = yes
 		continent = africa
@@ -1052,6 +1057,7 @@ province_event = {
 	desc = "EVTDESC14660"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		year = 1860
 		NOT = { has_country_modifier = recent_safari }
 		is_colonial = yes
