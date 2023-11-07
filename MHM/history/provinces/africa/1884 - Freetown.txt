@@ -12,5 +12,5 @@ colonial = 0
     add_core = SRN
     life_rating = 35
     colonial = 0
-    state_building = { level = 2 building = canned_meat_factory upgrade = yes } 
+    state_building = { level = 2 building = canned_food_factory upgrade = yes } 
 }

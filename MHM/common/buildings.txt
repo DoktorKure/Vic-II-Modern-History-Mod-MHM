@@ -138,7 +138,7 @@ weaponry_factory = {
 #
 # CANNED FOOD
 #
-canned_vegetables_factory = {
+canned_food_factory = {
 	type = factory
 	on_completion = factory
 	completion_size = 0.2
@@ -155,28 +155,7 @@ canned_vegetables_factory = {
 	visibility = yes
 	onmap = yes
 
-	production_type = canned_vegetables_factory
-	pop_build_factory = yes
-	default_enabled = yes
-}
-canned_meat_factory = {
-	type = factory
-	on_completion = factory
-	completion_size = 0.2
-	max_level = 584
-	cost = 0
-	goods_cost = 
-	{
-		electric_gear = 7
-		cement = 20
-		steel = 20
-		machine_parts = 7
-	}
-	time = 30
-	visibility = yes
-	onmap = yes
-
-	production_type = canned_meat_factory
+	production_type = canned_food_factory
 	pop_build_factory = yes
 	default_enabled = yes
 }
