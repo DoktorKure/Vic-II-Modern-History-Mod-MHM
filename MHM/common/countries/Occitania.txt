@@ -1,5 +1,8 @@
 graphical_culture = FrenchGC
 color = { 130  130  50 }
+proletarian_dictatorship = { 183 11 13 }
+proletarian_dictatorship1 = { 183 11 13 }
+socialist_democracy = { 183 11 13 }
 party = {
 		name = "Jeune Nation"
 		citizenship_policy = residency

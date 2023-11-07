@@ -1,7 +1,9 @@
 graphical_culture = Generic
 color = { 78 75 39 }
 colonial_government = { 255 175 175 }
-
+proletarian_dictatorship = { 255 120 86 }
+proletarian_dictatorship1 = { 255 120 86 }
+socialist_democracy = { 255 120 86 }
 party = {
 		name = "EOKA"
 		citizenship_policy = residency

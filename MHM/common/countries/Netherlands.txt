@@ -1,6 +1,8 @@
 graphical_culture = EuropeanGC
 color = { 230 112 0 }
-
+proletarian_dictatorship = { 255 68 115 }
+proletarian_dictatorship1 = { 255 68 115 }
+socialist_democracy = { 255 68 115 }
 party = {
 		name = "party_communist_0_NET"
 		citizenship_policy = full_citizenship

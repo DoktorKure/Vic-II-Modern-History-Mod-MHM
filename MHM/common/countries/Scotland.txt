@@ -1,6 +1,9 @@
 graphical_culture = EuropeanGC
 color = { 0 101 189 }
 sar_government = { 255 195 195 }
+proletarian_dictatorship = { 255 109 170 }
+proletarian_dictatorship1 = { 255 109 170 }
+socialist_democracy = { 255 109 170 }
 party = {
 		name = "Scottish National Party"
 		citizenship_policy = limited_citizenship

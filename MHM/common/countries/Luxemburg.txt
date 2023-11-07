@@ -1,5 +1,8 @@
 graphical_culture = EuropeanGC
 color = { 139 136 120 }
+proletarian_dictatorship = { 255 146 124 }
+proletarian_dictatorship1 = { 255 146 124 }
+socialist_democracy = { 255 146 124 }
 party = {
 		name = "National Movement"
 		citizenship_policy = limited_citizenship

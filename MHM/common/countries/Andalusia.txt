@@ -1,5 +1,8 @@
 graphical_culture = SpanishGC
 color = { 240 220 150 }
+proletarian_dictatorship = { 255 124 142 }
+proletarian_dictatorship1 = { 255 124 142 }
+socialist_democracy = { 255 124 142 }
 party = {
 		name = "party_nationalist"
 		citizenship_policy = limited_citizenship

@@ -1,6 +1,8 @@
 graphical_culture = SpanishGC
 color = { 255 196 0 }
-
+proletarian_dictatorship = { 255 89 84 }
+proletarian_dictatorship1 = { 255 89 84 }
+socialist_democracy = { 255 89 84 }
 party = {
 		name = "FET y de las JONS"
 		citizenship_policy = residency

@@ -1,5 +1,8 @@
 graphical_culture = SwedishGC
 color = { 25 88 217 }
+proletarian_dictatorship = { 255 109 204 }
+proletarian_dictatorship1 = { 255 109 204 }
+socialist_democracy = { 255 109 204 }
 party = {
 		name = "New Swedish Movement"
 		citizenship_policy = residency

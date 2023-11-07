@@ -1,5 +1,8 @@
 graphical_culture = ItalianGC
 color = { 0 128 0 }
+proletarian_dictatorship = { 255 109 129 }
+proletarian_dictatorship1 = { 255 109 129 }
+socialist_democracy = { 255 109 129 }
 party = {
 		name = "Lib Dems - Forza Padania"
 		citizenship_policy = limited_citizenship

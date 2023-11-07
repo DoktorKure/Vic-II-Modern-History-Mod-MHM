@@ -1,5 +1,8 @@
 graphical_culture = EuropeanGC
 color = { 100 100 100 }
+proletarian_dictatorship = { 255 79 234 }
+proletarian_dictatorship1 = { 255 79 234 }
+socialist_democracy = { 255 79 234 }
 party = {
 		name = "Breton Liberation Front"
 		citizenship_policy = limited_citizenship

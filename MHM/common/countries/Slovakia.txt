@@ -1,5 +1,8 @@
 graphical_culture = EuropeanGC
 color = { 158 161 188 }
+proletarian_dictatorship = { 250 128 114 }
+proletarian_dictatorship1 = { 250 128 114 }
+socialist_democracy = { 250 128 114 }
 party = {
 		name = "Slovak National Party"
 		citizenship_policy = limited_citizenship

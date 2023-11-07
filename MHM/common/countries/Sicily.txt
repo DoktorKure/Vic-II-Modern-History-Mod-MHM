@@ -1,5 +1,8 @@
 graphical_culture = ItalianGC
 color = { 160 30 154 }
+proletarian_dictatorship = { 255 86 95 }
+proletarian_dictatorship1 = { 255 86 95 }
+socialist_democracy = { 255 86 95 }
 party = {
 		name = "party_conservative_0_SCI"
 		citizenship_policy = limited_citizenship

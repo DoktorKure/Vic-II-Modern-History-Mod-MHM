@@ -1,5 +1,8 @@
 graphical_culture = EuropeanGC
-color = { 170  13  13 }
+color = { 202  172  229 }
+proletarian_dictatorship = { 170  13  13 }
+proletarian_dictatorship1 = { 170  13  13 }
+socialist_democracy = { 170  13  13 }
 party = {
 		name = "Volkspartei der Schweiz"
 		citizenship_policy = residency

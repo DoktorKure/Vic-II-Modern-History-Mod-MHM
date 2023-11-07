@@ -1,5 +1,8 @@
 graphical_culture = FrenchGC
 color = { 65 105 225 }
+proletarian_dictatorship = { 242 159 196 }
+proletarian_dictatorship1 = { 242 159 196 }
+socialist_democracy = { 242 159 196 }
 party = {
 		name = "PCA (NC)"
 		citizenship_policy = limited_citizenship

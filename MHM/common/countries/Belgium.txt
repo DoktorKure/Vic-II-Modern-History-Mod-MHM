@@ -1,5 +1,8 @@
 graphical_culture = EuropeanGC
 color = { 255 248 220 }
+proletarian_dictatorship = { 255 192 191 }
+proletarian_dictatorship1 = { 255 192 191 }
+socialist_democracy = { 255 192 191 }
 party = {
 		name = "Christian Social Rally"
 		citizenship_policy = residency

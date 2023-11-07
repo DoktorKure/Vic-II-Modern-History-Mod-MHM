@@ -1,5 +1,8 @@
 graphical_culture = EuropeanGC
 color = { 139 134 130 }
+proletarian_dictatorship = { 255 107 112 }
+proletarian_dictatorship1 = { 255 107 112 }
+socialist_democracy = { 255 107 112 }
 party = {
 		name = "Kosovo Liberation Army"
 		citizenship_policy = residency

@@ -1,5 +1,8 @@
 graphical_culture = SpanishGC
 color = { 189 183 107 }
+proletarian_dictatorship = { 255 124 142 }
+proletarian_dictatorship1 = { 255 124 142 }
+socialist_democracy = { 255 124 142 }
 party = {
 		name = "party_big_tent"
 		citizenship_policy = full_citizenship

@@ -1,6 +1,9 @@
 graphical_culture = BritishGC
 color = { 112 138 144 }
 sar_government = { 255 195 195 }
+proletarian_dictatorship = { 255 107 96 }
+proletarian_dictatorship1 = { 255 107 96 }
+socialist_democracy = { 255 107 96 }
 party = {
 		name = "Plaid Cymru"
 		citizenship_policy = limited_citizenship
