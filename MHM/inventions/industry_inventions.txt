@@ -1115,23 +1115,6 @@ intensive_fruit_crop_farming = {
         rgo_goods_output = { fruit = 1 }
 	}
 }
-intensive_oil_seeds_crop_farming = {
-	limit = { intensive_farming = 1 }
-	chance = {
-		base = 2
-		modifier = {
-			factor = 2
-			invention = asphalt_paving
-		}
-		modifier = {
-			factor = 2
-			modern_roads = 1
-		}
-	}
-	effect = {
-        rgo_goods_output = { oil_seeds = 1 }
-	}
-}
 # mineral_processing
 automated_ore_sorting = {
 	limit = { mineral_processing = 1 }

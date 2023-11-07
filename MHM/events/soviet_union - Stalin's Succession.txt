@@ -1774,7 +1774,6 @@ country_event = { # Agricultural Problem - Malenkov
 		
 		grain = 2000
 		cattle = 2000
-		wool = 2000
 		
 		ai_chance = { factor = 0.2 }
 	}
@@ -1812,7 +1811,6 @@ country_event = { # More Autonomous Farms?
 		
 		grain = 2000
 		cattle = 2000
-		wool = 2000
 		any_pop = { consciousness = -1 }
 		
 		ai_chance = { factor = 0.7 }
@@ -1822,8 +1820,7 @@ country_event = { # More Autonomous Farms?
 		name = "Introduce the Family Contract."
 		
 		grain = 1000
-		cattle = 1000
-		wool = 1000
+		cattle = 2000
 		any_pop = { consciousness = -2 militancy = -1 }
 		
 		ai_chance = { factor = 0.3 }
@@ -2138,7 +2135,6 @@ country_event = { # Agricultural Problem - Molotov
 		money = -1500000
 		grain = 2000
 		cattle = 2000
-		wool = 2000
 		
 		any_pop = { consciousness = -1 }
 		
@@ -3046,8 +3042,7 @@ country_event = { # Agricultural Problem - Zhukov
 		prestige_factor = 0.01
 		money = -1500000
 		grain = 1000
-		cattle = 1000
-		wool = 1000
+		cattle = 2000
 		any_pop = { consciousness = -1 }
 		
 		ai_chance = { factor = 0.4 }
@@ -3059,7 +3054,6 @@ country_event = { # Agricultural Problem - Zhukov
 		money = -2000000
 		grain = 2000
 		cattle = 2000
-		wool = 2000
 		any_pop = { consciousness = -2 militancy = -1 }
 		
 		ai_chance = { factor = 0.5 }

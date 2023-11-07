@@ -308,7 +308,6 @@ country_event = { # Restart of the Virgin Lands Campaign
 				OR = {
 					trade_goods = fruit
 					trade_goods = grain
-					trade_goods = oil_seeds
 					trade_goods = sugar
 					trade_goods = tea
 					trade_goods = tobacco

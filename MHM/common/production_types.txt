@@ -267,7 +267,6 @@ canned_meat_factory = {
 	template = factory_template	
 	input_goods = { 
 		cattle = 2
-		wool = 1
 		fish = 1
 		iron = 1	
 	}
@@ -283,13 +282,7 @@ canned_meat_factory = {
 		trigger = {
 			trade_goods_in_state = cattle 
 		}
-		value = 0.125
-	}
-	bonus = {
-		trigger = {
-			trade_goods_in_state = wool 
-		}
-		value = 0.125
+		value = 0.25
 	}
 	bonus = {
 		trigger = { 
@@ -309,8 +302,7 @@ canned_vegetables_factory = {
 	template = factory_template	
 	input_goods = { 
 		grain = 2
-		fruit = 1
-		oil_seeds = 1
+		fruit = 2
 		iron = 1	
 	}
 	output_goods = canned_food 
@@ -333,15 +325,9 @@ canned_vegetables_factory = {
 		trigger = { 
 			trade_goods_in_state = fruit 
 		}
-		value = 0.125
+		value = 0.25
 	}
 
-	bonus = {
-		trigger = { 
-			trade_goods_in_state = oil_seeds 
-		}
-		value = 0.125
-	}
 	bonus = {
 		trigger = { 
 				trade_goods_in_state = iron
@@ -643,8 +629,7 @@ bio_fuel_factory = {
 	template = fuel_template
 	input_goods = {    
 		grain = 2
-		oil_seeds = 1
-		fruit = 1
+		fruit = 2
 		sugar = 2
 	} 
 	output_goods = fuel 
@@ -663,15 +648,9 @@ bio_fuel_factory = {
 	}
 	bonus = {
 		trigger = {
-			trade_goods_in_state = oil_seeds
-		}
-		value = 0.125
-	}
-	bonus = {
-		trigger = {
 			trade_goods_in_state = fruit
 		}
-		value = 0.125
+		value = 0.25
 	}
 	bonus = {
 		trigger = {
@@ -758,8 +737,7 @@ fabric_factory = {
 	template = factory_template
 	input_goods = {    
 		cotton = 2
-		wool = 1
-		cattle = 1.5
+		cattle = 2
 	}
 	output_goods = fabric 
 	value = 5
@@ -772,10 +750,6 @@ fabric_factory = {
 
 	bonus = {
 		trigger = { trade_goods_in_state = cotton }
-		value = 0.25
-	}
-	bonus = {
-		trigger = { trade_goods_in_state = wool }
 		value = 0.25
 	}
 	bonus = {
@@ -1865,13 +1839,6 @@ cattle_ranch = {
 	farm = yes
 }
 
-sheep_ranch = {
-	template = RGO_template_farmers
-	output_goods = wool 
-	value = 2.0
-	farm = yes
-}
-
 orchard = {
 	template = RGO_template_farmers
 	output_goods = fruit 
@@ -1890,13 +1857,6 @@ timber_lodge = {
 	template = RGO_template_farmers
 	output_goods = timber 
 	value = 2.0
-	farm = yes
-}
-
-oil_seeds_ranch = {
-	template = RGO_template_farmers
-	output_goods = oil_seeds 
-	value = 1.0
 	farm = yes
 }
 
@@ -2011,7 +1971,7 @@ credit_mine = {
 
 artisan_fabric_weaver = {       
 	input_goods = { 
-		wool = 1
+		cattle = 1
 		cotton = 1
 	}
 	output_goods = fabric 

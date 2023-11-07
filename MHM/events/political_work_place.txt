@@ -744,7 +744,7 @@ province_event = {
 		
 	trigger = {
 		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
-		produces = wool
+		produces = cattle
 	}
 	
 	mean_time_to_happen = {
