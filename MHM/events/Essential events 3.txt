@@ -1901,6 +1901,8 @@ title = "Siezed Weapons of Mass Destruction"
 	desc = EVTDESC1610034
 	picture = "sieze_wmd_cb"
 
+	allow_multiple_instances = yes
+
 is_triggered_only = yes
 
 option = {
