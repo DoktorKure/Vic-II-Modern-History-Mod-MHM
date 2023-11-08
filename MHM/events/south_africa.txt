@@ -357,7 +357,7 @@ country_event = {
 				}
 				
 				#Release truncated Namibia and capital to avoid capital shifting
-				2078 = { secede_province = NAM } #Capital
+				2080 = { secede_province = NAM } #Capital
 				2082 = { secede_province = NAM }
 				
 				any_owned = {
@@ -416,7 +416,7 @@ country_event = {
 						limit = {
 							NOT = {
 								OR = {
-									province_id = 2078
+									province_id = 2080
 									province_id = 2082
 									any_neighbor_province = { is_core = ANG }
 								}
@@ -506,25 +506,6 @@ country_event = {
 			ruling_party_ideology = communist
 			country_event = 800052
 			primary_culture = ovambo
-		}
-		
-		#NAM incorporates East Capriv and the Bantustans
-		any_country = {
-			limit = {
-				vassal_of = SAF
-				OR = {
-					tag = ECA
-					tag = KAV
-					tag = OVA
-					tag = KAO
-					tag = HRO
-					tag = SAN
-					tag = DAM
-					tag = BST
-					tag = NML
-				}
-			}
-			country_event = 8012624
 		}
 		
 		#Afrikaaners become unhappy
@@ -982,23 +963,22 @@ country_event = {
 		badboy = 5
 		
 		#Form the Bantustans
-		any_country = {
-			limit = { 
-				exists = no 
+		any_owned = {
+			limit = {
 				OR = {
-					AND = { THIS = { is_possible_vassal = BOP } tag = BOP }
-					AND = { THIS = { is_possible_vassal = CIS } tag = CIS }
-					AND = { THIS = { is_possible_vassal = TRK } tag = TRK }
-					AND = { THIS = { is_possible_vassal = QWA } tag = QWA }
-					AND = { THIS = { is_possible_vassal = NDB } tag = NDB }
-					AND = { THIS = { is_possible_vassal = NGW } tag = NGW }
-					AND = { THIS = { is_possible_vassal = GZA } tag = GZA }
-					AND = { THIS = { is_possible_vassal = LBW } tag = LBW }
-					AND = { THIS = { is_possible_vassal = VED } tag = VED }
-					AND = { THIS = { is_possible_vassal = ZUL } tag = ZUL }
+					province_id = 2095
+					province_id = 2100
+					province_id = 2102
+					province_id = 2103
+					province_id = 2107
+					province_id = 2108
+					province_id = 2110
+					province_id = 2111
+					province_id = 2113
+					province_id = 2672
 				}
 			}
-			country_event = 8012623
+			add_province_modifier = { name = devolved_local_government duration = -1 } 
 		}
 		
 		ai_chance = { factor = 0.9 }
@@ -1077,16 +1057,16 @@ country_event = {
 				owner = { NOT = { exists = NAM } }
 			}
 			owner = {
-				any_country = {
-					limit = { 
-						exists = no 
+				#Form the Bantustans
+				any_owned = {
+					limit = {
 						OR = {
-							AND = { THIS = { is_possible_vassal = ECA } tag = ECA }
-							AND = { THIS = { is_possible_vassal = KAV } tag = KAV }
-							AND = { THIS = { is_possible_vassal = OVA } tag = OVA }
+							province_id = 2079
+							province_id = 2081
+							province_id = 3351
 						}
 					}
-					country_event = 8012623
+					add_province_modifier = { name = devolved_local_government duration = -1 } 
 				}
 			}
 		}
@@ -1099,13 +1079,18 @@ country_event = {
 			}
 			owner = {
 				NAM = {
-					2081 = { secede_province = ECA }
-					3350 = { secede_province = KAV }
-					3351 = { secede_province = OVA }
+					#Form the Bantustans
+					any_owned = {
+						limit = {
+							OR = {
+								province_id = 2079
+								province_id = 2081
+								province_id = 3351
+							}
+						}
+						add_province_modifier = { name = devolved_local_government duration = -1 } 
+					}
 				}
-				create_vassal = ECA
-				create_vassal = KAV
-				create_vassal = OVA
 			}
 		}
 		
@@ -1189,19 +1174,15 @@ country_event = {
 				}
 			}
 			owner = {
-				any_country = {
-					limit = { 
-						exists = no 
+				#Form the Bantustans
+				any_owned = {
+					limit = {
 						OR = {
-							AND = { THIS = { is_possible_vassal = KAO } tag = KAO }
-							AND = { THIS = { is_possible_vassal = HRO } tag = HRO }
-							AND = { THIS = { is_possible_vassal = SAN } tag = SAN }
-							AND = { THIS = { is_possible_vassal = DAM } tag = DAM }
-							AND = { THIS = { is_possible_vassal = BST } tag = BST }
-							AND = { THIS = { is_possible_vassal = NML } tag = NML }
+							province_id = 2082
+							province_id = 2085
 						}
 					}
-					country_event = 8012623
+					add_province_modifier = { name = devolved_local_government duration = -1 } 
 				}
 			}
 		}
@@ -1214,20 +1195,17 @@ country_event = {
 			}
 			owner = {
 				NAM = {
-					3352 = { secede_province = KAO }
-					2082 = { secede_province = HRO }
-					3354 = { secede_province = SAN }
-					3353 = { secede_province = DAM }
-					2078 = { secede_province = BST }
-					3355 = { secede_province = NML }
-					capital = 2080
+					#Form the Bantustans
+					any_owned = {
+						limit = {
+							OR = {
+								province_id = 2082
+								province_id = 2085
+							}
+						}
+						add_province_modifier = { name = devolved_local_government duration = -1 } 
+					}
 				}
-				create_vassal = KAO
-				create_vassal = HRO
-				create_vassal = SAN
-				create_vassal = DAM
-				create_vassal = BST
-				create_vassal = NML
 			}
 		}
 		
@@ -1307,6 +1285,7 @@ country_event = {
 			}
 			owner = {
 				release_vassal = NAM
+				NAM = { any_owned = { remove_province_modifier = devolved_local_government } }
 			}
 		}
 		relation = { who = NAM value = 100 }
@@ -1316,25 +1295,6 @@ country_event = {
 			government = democracy 
 			ruling_party_ideology = socialist 
 			country_event = 800054
-		}
-		
-		#NAM incorporates East Capriv and the Bantustans
-		any_country = {
-			limit = {
-				vassal_of = SAF
-				OR = {
-					tag = ECA
-					tag = KAV
-					tag = OVA
-					tag = KAO
-					tag = HRO
-					tag = SAN
-					tag = DAM
-					tag = BST
-					tag = NML
-				}
-			}
-			annex_to = NAM
 		}
 		
 		#Wavis Bay
@@ -1497,49 +1457,7 @@ country_event = {
 		
 		#Remove Bantustans
 		set_country_flag = bantustans_removed
-		any_country = {
-			limit = { 
-				OR = { vassal_of = THIS vassal_of = SAF }
-				ai = yes
-				OR = {
-				
-					#South African Bantustans
-					
-					#tag = BOP
-					tag = CIS
-					tag = TRK
-					tag = QWA
-					tag = NDB
-					tag = NGW
-					tag = GZA
-					tag = LBW
-					tag = VED
-					tag = ZUL
-					
-					#Namibian Bantustans
-					
-					tag = ECA
-					tag = KAV
-					tag = OVA
-					tag = KAO
-					tag = HRO
-					tag = SAN
-					tag = DAM
-					tag = BST
-					tag = NML
-					
-				}
-			}
-			country_event = 8012624
-		}
-		
-		random_country = {
-			limit = { 
-				OR = { vassal_of = THIS vassal_of = SAF }
-				tag = BOP 
-			}
-			country_event = 5076
-		}
+		any_owned = { remove_province_modifier = devolved_local_government }
 		
 		#If the greater federation was formed
 		random_owned = {
@@ -1627,49 +1545,7 @@ country_event = {
 		
 		#Remove Bantustans
 		set_country_flag = bantustans_removed
-		any_country = { 
-			limit = { 
-				vassal_of = SAF
-				ai = yes
-				OR = {
-				
-					#South African Bantustans
-					
-					#tag = BOP
-					tag = CIS
-					tag = TRK
-					tag = QWA
-					tag = NDB
-					tag = NGW
-					tag = GZA
-					tag = LBW
-					tag = VED
-					tag = ZUL
-					
-					#Namibian Bantustans
-					
-					tag = ECA
-					tag = KAV
-					tag = OVA
-					tag = KAO
-					tag = HRO
-					tag = SAN
-					tag = DAM
-					tag = BST
-					tag = NML
-					
-				}
-			}
-			country_event = 8012624
-		}
-		
-		random_country = {
-			limit = { 
-				OR = { vassal_of = THIS vassal_of = SAF }
-				tag = BOP 
-			}
-			country_event = 5076
-		}
+		any_owned = { remove_province_modifier = devolved_local_government }
 		
 		#If the greater federation was formed
 		random_owned = {

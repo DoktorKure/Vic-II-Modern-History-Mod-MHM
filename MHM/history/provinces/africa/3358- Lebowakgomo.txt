@@ -1,23 +1,16 @@
-owner = SAF
-controller = SAF
-add_core = SAF
-add_core = LBW
+owner = RUS
+controller = RUS
+add_core = UKR
+add_core =  NRO
 trade_goods = cattle
-life_rating = 15
-terrain = hilly_grassland
+life_rating = 35
+terrain = dry_grassland
 colonial = 0
 1992.1.1 = {
-owner = LBW
-controller = LBW
-add_core = SAF
-add_core = LBW
-life_rating = 15
+owner = UKR
+controller = UKR
+add_core = UKR
+add_core =  NRO
+life_rating = 35
 colonial = 0
-}
-2015.1.1 = { 
-    owner = RSA
-    controller = RSA
-    add_core = RSA
-    life_rating = 15
-    colonial = 0
 }

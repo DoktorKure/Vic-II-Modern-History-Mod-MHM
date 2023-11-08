@@ -1256,7 +1256,7 @@ political_decisions = {
 			}
 
 			#Chernobyl
-			959 = { add_province_modifier = { name = nuke_accident duration = 3650 } }
+			3357 = { add_province_modifier = { name = nuke_accident duration = 3650 } }
 
 			#Name accuracy
 			1600 = {

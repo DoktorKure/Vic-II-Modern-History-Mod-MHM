@@ -5385,6 +5385,8 @@ country_event = {
 		1391 = { remove_core = THI }
 		1389 = { remove_core = THI }
 		1340 = { remove_core = THI }
+		3353 = { remove_core = THI }
+		2098 = { remove_core = THI }
 		ai_chance = { factor = 0.9 }
 	}
 

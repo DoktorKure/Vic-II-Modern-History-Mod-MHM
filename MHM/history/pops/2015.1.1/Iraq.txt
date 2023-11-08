@@ -1,3 +1,46 @@
+#Haditha - Anbar (825000/206250 POPS)
+2649 = {
+	soldiers = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 1391
+	 } 
+	aristocrats = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 7218
+	 } 
+	capitalists = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 1237
+	 } 
+	clergymen = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 2062
+	 } 
+	clerks = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 5140
+	 } 
+	artisans = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 4883
+	 } 
+	craftsmen = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 15679
+	 } 
+	farmers = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 107468
+	 } 
+}
 #Mosul - Nineveh (1726000/431500 POPS)
 923 = {
 	soldiers = {
@@ -140,6 +183,64 @@
 		culture = assyrian
 		religion = catholic 
 		size = 50000 #Unclear estimates from nation wide demographics
+	 } 
+	
+}#Sulaymaniyah (1447000/361750 POPS)
+2647 = {
+	soldiers = {
+		culture = kurdish
+		religion = sunni 
+		size = 2441
+	 } 
+	aristocrats = {
+		culture = kurdish
+		religion = sunni 
+		size = 12661
+	 } 
+	bureaucrats = {
+		culture = kurdish
+		religion = sunni 
+		size = 1447
+	 } 
+	capitalists = {
+		culture = kurdish
+		religion = sunni 
+		size = 2170
+	 } 
+	clergymen = {
+		culture = kurdish
+		religion = sunni 
+		size = 3617
+	 } 
+	clerks = {
+		culture = kurdish
+		religion = sunni 
+		size = 9016
+	 } 
+	artisans = {
+		culture = kurdish
+		religion = sunni 
+		size = 8565
+	 } 
+	craftsmen = {
+		culture = kurdish
+		religion = sunni 
+		size = 27500
+	 } 
+	farmers = {
+		culture = kurdish
+		religion = sunni 
+		size = 190105
+	 } 
+	farmers = {
+		culture = arab_mashriqi
+		religion = orthodox 
+		size = 3074
+	 } 
+	farmers = {
+		culture = arab_mashriqi
+		religion = secularism
+		size = 542
 	 } 
 	
 }
@@ -521,7 +622,7 @@
 	farmers = {
 		culture = arab_mashriqi
 		religion = sunni 
-		size = 167468
+		size = 67468
 	 } 
 }
 #Basra - Basra (1337000/334250 POPS)

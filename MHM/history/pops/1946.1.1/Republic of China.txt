@@ -6474,6 +6474,119 @@
 		religion = secularism
 		size = 340
 	 } 
+	labourers = {
+		culture = hani
+		religion = protestant 
+		size = 31071
+	 } 
+	labourers = {
+		culture = hani
+		religion = secularism
+		size = 3645
+	 } 
+	labourers = {
+		culture = chinese_hakka
+		religion = taoism 
+		size = 56626
+	 } 
+	labourers = {
+		culture = chinese_hakka
+		religion = secularism
+		size = 6643
+	 } 
+	labourers = {
+		culture = taiwanese
+		religion = taoism 
+		size = 497056
+	 } 
+	labourers = {
+		culture = taiwanese
+		religion = secularism
+		size = 58313
+	 } 
+}
+#Taichung (2812000/703000 POPS)
+3350 = {
+	officers = {
+		culture = chinese
+		religion = taoism 
+		size = 1258
+	 } 
+	officers = {
+		culture = chinese
+		religion = secularism
+		size = 147
+	 } 
+	soldiers = {
+		culture = chinese
+		religion = taoism 
+		size = 5033
+	 } 
+	soldiers = {
+		culture = chinese
+		religion = secularism
+		size = 590
+	 } 
+	artisans = {
+		culture = chinese
+		religion = taoism 
+		size = 25167
+	 } 
+	artisans = {
+		culture = chinese
+		religion = secularism
+		size = 2952
+	 } 
+	bureaucrats = {
+		culture = chinese
+		religion = taoism 
+		size = 629
+	 } 
+	bureaucrats = {
+		culture = chinese
+		religion = secularism
+		size = 73
+	 } 
+	capitalists = {
+		culture = chinese
+		religion = taoism 
+		size = 3145
+	 } 
+	capitalists = {
+		culture = chinese
+		religion = secularism
+		size = 369
+	 } 
+	clergymen = {
+		culture = chinese
+		religion = taoism 
+		size = 2516
+	 } 
+	clergymen = {
+		culture = chinese
+		religion = secularism
+		size = 295
+	 } 
+	clergymen = {
+		culture = hani
+		religion = protestant 
+		size = 3775
+	 } 
+	clergymen = {
+		culture = hani
+		religion = secularism
+		size = 442
+	 } 
+	artisans = {
+		culture = hani
+		religion = protestant 
+		size = 2904
+	 } 
+	artisans = {
+		culture = hani
+		religion = secularism
+		size = 340
+	 } 
 	farmers = {
 		culture = hani
 		religion = protestant 
@@ -6503,6 +6616,119 @@
 		culture = taiwanese
 		religion = secularism
 		size = 58313
+	 } 
+}
+#Hualien (2812000/703000 POPS)
+2078 = {
+	officers = {
+		culture = chinese
+		religion = taoism 
+		size = 1258
+	 } 
+	officers = {
+		culture = chinese
+		religion = secularism
+		size = 147
+	 } 
+	soldiers = {
+		culture = chinese
+		religion = taoism 
+		size = 5033
+	 } 
+	soldiers = {
+		culture = chinese
+		religion = secularism
+		size = 590
+	 } 
+	artisans = {
+		culture = chinese
+		religion = taoism 
+		size = 25167
+	 } 
+	artisans = {
+		culture = chinese
+		religion = secularism
+		size = 2952
+	 } 
+	bureaucrats = {
+		culture = chinese
+		religion = taoism 
+		size = 629
+	 } 
+	bureaucrats = {
+		culture = chinese
+		religion = secularism
+		size = 73
+	 } 
+	capitalists = {
+		culture = chinese
+		religion = taoism 
+		size = 3145
+	 } 
+	capitalists = {
+		culture = chinese
+		religion = secularism
+		size = 369
+	 } 
+	clergymen = {
+		culture = chinese
+		religion = taoism 
+		size = 2516
+	 } 
+	clergymen = {
+		culture = chinese
+		religion = secularism
+		size = 295
+	 } 
+	clergymen = {
+		culture = hani
+		religion = protestant 
+		size = 3775
+	 } 
+	clergymen = {
+		culture = hani
+		religion = secularism
+		size = 442
+	 } 
+	artisans = {
+		culture = hani
+		religion = protestant 
+		size = 2904
+	 } 
+	artisans = {
+		culture = hani
+		religion = secularism
+		size = 340
+	 } 
+	farmers = {
+		culture = hani
+		religion = protestant 
+		size = 31071
+	 } 
+	farmers = {
+		culture = hani
+		religion = secularism
+		size = 3645
+	 } 
+	farmers = {
+		culture = chinese_hakka
+		religion = taoism 
+		size = 56626
+	 } 
+	farmers = {
+		culture = chinese_hakka
+		religion = secularism
+		size = 6643
+	 } 
+	farmers = {
+		culture = taiwanese
+		religion = taoism 
+		size = 97056
+	 } 
+	farmers = {
+		culture = taiwanese
+		religion = secularism
+		size = 8313
 	 } 
 }
 #Natuna - South China Sea (1000/250 POPS)

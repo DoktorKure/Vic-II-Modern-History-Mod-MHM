@@ -1,3 +1,43 @@
+#Deir ez-Zor (184000/46000 POPS)
+3352 = {
+	aristocrats = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 1840
+	 } 
+	farmers = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 37952
+	 } 
+
+	#For Pan-Arab
+	farmers = {
+		culture = arab
+		religion = sunni 
+		size = 2000
+	 } 
+}
+#Palmyra - Palmyra (97000/24250 POPS)
+2643 = {
+	aristocrats = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 1840
+	} 
+	farmers = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 22745
+	} 
+
+	#For Pan-Arab
+	farmers = {
+		culture = arab
+		religion = sunni 
+		size = 2000
+	} 
+}
 #Amderma - Golan (20000/5000 POPS)
 2687 = {
 	officers = {

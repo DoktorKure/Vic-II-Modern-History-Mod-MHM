@@ -1,17 +1,15 @@
 owner = SAF
 controller = SAF
 add_core = SAF
-add_core = ZUL
 trade_goods = cattle
 life_rating = 35
 terrain = deciduous_forest_hills
 naval_base = 1
 colonial = 0
 1992.1.1 = {
-owner = ZUL
-controller = ZUL
+owner = SAF
+controller = SAF
 add_core = SAF
-add_core = ZUL
 life_rating = 35
 colonial = 0
 }

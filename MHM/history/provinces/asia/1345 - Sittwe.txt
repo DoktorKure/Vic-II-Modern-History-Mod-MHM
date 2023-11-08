@@ -1,7 +1,6 @@
 owner = BUR
 controller = BUR
 add_core = BUR
-add_core = CHS
 add_core = RAK
 add_core = ROH
 trade_goods = grain
@@ -13,7 +12,6 @@ colonial = 0
     owner = BUR
     controller = BUR
     add_core = BUR
-    add_core = CHS
     add_core = RAK
     add_core = ROH
     life_rating = 35

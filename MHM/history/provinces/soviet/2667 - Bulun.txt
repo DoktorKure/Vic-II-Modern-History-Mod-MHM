@@ -1,23 +1,25 @@
-owner = SAF
-controller = SAF
-add_core = SAF
-add_core =  GZA
-trade_goods = other_minerals
-life_rating = 15
-terrain = plains
+owner = RUS
+controller = RUS
+add_core =  SFD
+#add_core = UKR
+
+add_core = RUS
+add_core = CRI
+trade_goods = fish
+life_rating = 35
+terrain = deciduous_forest_hills
 colonial = 0
 1992.1.1 = {
-owner = GZA
-controller = GZA
-add_core = SAF
-add_core =  GZA
-life_rating = 15
+owner = CRI
+controller = CRI
+add_core = UKR
+add_core = RUS
+add_core = CRI
+life_rating = 35
 colonial = 0
 }
+
 2015.1.1 = { 
-    owner = RSA
-    controller = RSA
-    add_core = RSA
-    life_rating = 15
-    colonial = 0
+    owner = RUS
+    controller = RUS
 }

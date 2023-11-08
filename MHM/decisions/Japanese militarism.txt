@@ -150,11 +150,9 @@ political_decisions = {
 		effect = {
 			badboy = 20
 
-			1485 = { add_core = JAP }
-			2562 = { add_core = JAP }
-
+			TAI = { all_core = { add_core = JAP } }
 			3342 = { add_core = JAP }
-			3343 = { add_core = JAP }
+			2576 = { add_core = JAP }
 
 			any_country = { 
 				limit = { OR = { tag = CHI tag = NKO tag = SKO tag = KOR tag = TAI tag = KMT } } 
@@ -182,12 +180,15 @@ political_decisions = {
 		}
 		effect = {
 			badboy = -5
-
-			1485 = { remove_core = JAP }
-			2562 = { remove_core = JAP }
+			all_core = { 
+				limit = {
+					is_core = TAI
+				}
+				remove_core = JAP
+			}
 
 			3342 = { remove_core = JAP }
-			3343 = { remove_core = JAP }
+			2576 = { remove_core = JAP }
 
 			any_country = { 
 				limit = { OR = { tag = CHI tag = NKO tag = SKO tag = KOR tag = TAI tag = KMT } } 

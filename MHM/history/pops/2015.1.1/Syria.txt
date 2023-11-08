@@ -1,3 +1,66 @@
+#Deir ez-Zor (661000/165250 POPS)
+3352 = {
+	officers = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 2412
+	 } 
+	soldiers = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 9650
+	 } 
+	aristocrats = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 5783
+	 } 
+	clergymen = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 1652
+	 } 
+	clerks = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 3248
+	 } 
+	artisans = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 3085
+	 } 
+	craftsmen = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 9907
+	 } 
+	farmers = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 127861
+	 } 
+}
+#Palmyra - Palmyra (97000/24250 POPS)
+2643 = {
+	aristocrats = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 1840
+	} 
+	farmers = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 77551
+	} 
+
+	#For Pan-Arab
+	farmers = {
+		culture = arab
+		religion = sunni 
+		size = 2000
+	} 
+}
 #Aleppo - Aleppo (3399000/849750 POPS)
 897 = {
 	officers = {

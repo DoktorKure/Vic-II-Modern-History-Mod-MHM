@@ -1,3 +1,29 @@
+#Haditha - Anbar (235000/58750 POPS)
+2649 = {
+	aristocrats = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 2350
+	 } 
+	artisans = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 1395
+	 } 
+	farmers = {
+		culture = arab_mashriqi
+		religion = sunni 
+		size = 47749
+	 } 
+
+	#For Pan-Arab
+	farmers = {
+		culture = arab
+		religion = sunni 
+		size = 2000
+	 } 
+
+}
 #Mosul - Nineveh (491000/122750 POPS)
 923 = {
 	aristocrats = {
@@ -66,6 +92,43 @@
 		culture = kurdish
 		religion = sunni 
 		size = 83509
+	 } 
+	 
+	farmers = {
+		culture = assyrian
+		religion = catholic 
+		size = 10000 #Unclear estimates from the time period
+	 } 
+
+	#For Pan-Arab
+	farmers = {
+		culture = arab
+		religion = sunni 
+		size = 2000
+	 } 
+
+}
+#Sulaymaniyah - Kurdistan (825000/206250 POPS)
+2647 = {
+	aristocrats = {
+		culture = kurdish
+		religion = sunni 
+		size = 4110
+	 } 
+	clergymen = {
+		culture = kurdish
+		religion = sunni 
+		size = 1027
+	 } 
+	artisans = {
+		culture = kurdish
+		religion = sunni 
+		size = 2439
+	 } 
+	farmers = {
+		culture = kurdish
+		religion = sunni 
+		size = 53509
 	 } 
 	 
 	farmers = {
@@ -313,7 +376,7 @@
 	farmers = {
 		culture = arab_mashriqi
 		religion = sunni 
-		size = 47749
+		size = 17749
 	 } 
 
 	#For Pan-Arab

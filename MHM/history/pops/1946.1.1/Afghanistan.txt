@@ -114,12 +114,50 @@
 	farmers = {
 		culture = uzbek
 		religion = sunni 
-		size = 142488
+		size = 72488
 	 } 
 	farmers = {
 		culture = tajik
 		religion = sunni 
-		size = 68375
+		size = 38375
+	 }
+}
+#Maymana (1094000/273500 POPS)
+3359 = {
+	soldiers = {
+		culture = uzbek
+		religion = sunni 
+		size = 3221
+	 } 
+	aristocrats = {
+		culture = uzbek
+		religion = sunni 
+		size = 10940
+	 } 
+	capitalists = {
+		culture = uzbek
+		religion = sunni 
+		size = 1367
+	 } 
+	clergymen = {
+		culture = uzbek
+		religion = sunni 
+		size = 2735
+	 } 
+	artisans = {
+		culture = uzbek
+		religion = sunni 
+		size = 2271
+	 } 
+	farmers = {
+		culture = uzbek
+		religion = sunni 
+		size = 72488
+	 } 
+	farmers = {
+		culture = pashtun
+		religion = sunni 
+		size = 38375
 	 } 
 	farmers = {
 		culture = turkmen
@@ -215,6 +253,34 @@
 }
 #Farrah - Nimruz,Helmand,Daykundi (522000/130500 POPS)
 1214 = {
+	soldiers = {
+		culture = pashtun
+		religion = sunni 
+		size = 1537
+	 } 
+	aristocrats = {
+		culture = pashtun
+		religion = sunni 
+		size = 5220
+	 } 
+	clergymen = {
+		culture = pashtun
+		religion = sunni 
+		size = 1305
+	 } 
+	artisans = {
+		culture = pashtun
+		religion = sunni 
+		size = 1083
+	 } 
+	farmers = {
+		culture = pashtun
+		religion = sunni 
+		size = 79734
+	 }
+}
+#Lashkar Gah
+2652 = {
 	soldiers = {
 		culture = pashtun
 		religion = sunni 

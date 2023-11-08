@@ -1,11 +1,11 @@
 owner = TAI
 controller = TAI
 add_core = KMT
-add_core =  CHI
+add_core = CHI
 add_core = TAI
-trade_goods = grain
+trade_goods = timber
 life_rating = 35
-terrain = mountain_farmland
+terrain = seasonal_jungle_mountains
 colonial = 0
 
 1950.1.1 = {

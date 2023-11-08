@@ -1298,6 +1298,89 @@
 		size = 2179
 	 } 
 }
+#Hkamti - Sagaing (1299000/324750 POPS)
+2099 = {
+	officers = {
+		culture = burmese
+		religion = buddhist 
+		size = 966
+	 } 
+	officers = {
+		culture = burmese
+		religion = secularism
+		size = 7
+	 } 
+	soldiers = {
+		culture = burmese
+		religion = buddhist 
+		size = 3867
+	 } 
+	soldiers = {
+		culture = burmese
+		religion = secularism
+		size = 29
+	 } 
+	aristocrats = {
+		culture = burmese
+		religion = buddhist 
+		size = 12892
+	 } 
+	aristocrats = {
+		culture = burmese
+		religion = secularism
+		size = 97
+	 } 
+	bureaucrats = {
+		culture = burmese
+		religion = buddhist 
+		size = 321
+	 } 
+	bureaucrats = {
+		culture = burmese
+		religion = secularism
+		size = 2
+	 } 
+	capitalists = {
+		culture = burmese
+		religion = buddhist 
+		size = 1610
+	 } 
+	capitalists = {
+		culture = burmese
+		religion = secularism
+		size = 12
+	 } 
+	clergymen = {
+		culture = burmese
+		religion = buddhist 
+		size = 3222
+	 } 
+	clergymen = {
+		culture = burmese
+		religion = secularism
+		size = 24
+	 } 
+	artisans = {
+		culture = burmese
+		religion = buddhist 
+		size = 3757
+	 } 
+	artisans = {
+		culture = burmese
+		religion = secularism
+		size = 28
+	 } 
+	farmers = {
+		culture = burmese
+		religion = buddhist 
+		size = 58415
+	 } 
+	farmers = {
+		culture = naga
+		religion = protestant
+		size = 2179
+	 } 
+}
 #Lashio - Shan (1909000/477250 POPS)
 1340 = {
 	officers = {
@@ -1381,6 +1464,99 @@
 		size = 2639
 	 } 
 	farmers = {
+		culture = burmese
+		religion = buddhist 
+		size = 36700
+	 } 
+	farmers = {
+		culture = burmese
+		religion = secularism
+		size = 277
+	 } 
+}
+#Taunggyi - Shan (1909000/477250 POPS)
+3353 = {
+	officers = {
+		culture = shan
+		religion = buddhist 
+		size = 1420
+	 } 
+	officers = {
+		culture = shan
+		religion = secularism
+		size = 10
+	 } 
+	soldiers = {
+		culture = shan
+		religion = buddhist 
+		size = 5684
+	 } 
+	soldiers = {
+		culture = shan
+		religion = secularism
+		size = 42
+	 } 
+	aristocrats = {
+		culture = shan
+		religion = buddhist 
+		size = 18946
+	 } 
+	aristocrats = {
+		culture = shan
+		religion = secularism
+		size = 143
+	 } 
+	bureaucrats = {
+		culture = shan
+		religion = buddhist 
+		size = 473
+	 } 
+	bureaucrats = {
+		culture = shan
+		religion = secularism
+		size = 3
+	 } 
+	capitalists = {
+		culture = shan
+		religion = buddhist 
+		size = 2368
+	 } 
+	capitalists = {
+		culture = shan
+		religion = secularism
+		size = 17
+	 } 
+	clergymen = {
+		culture = shan
+		religion = buddhist 
+		size = 4736
+	 } 
+	clergymen = {
+		culture = shan
+		religion = secularism
+		size = 35
+	 } 
+	artisans = {
+		culture = shan
+		religion = buddhist 
+		size = 5522
+	 } 
+	artisans = {
+		culture = shan
+		religion = secularism
+		size = 41
+	 } 
+	farmers = {
+		culture = shan
+		religion = buddhist 
+		size = 149258
+	 } 
+	farmers = {
+		culture = shan
+		religion = secularism
+		size = 2639
+	 } 
+	farmers = {
 		culture = karen
 		religion = protestant 
 		size = 37893
@@ -1399,6 +1575,89 @@
 		culture = burmese
 		religion = secularism
 		size = 277
+	 } 
+}
+#Kengtung - Shan (1909000/477250 POPS)
+2098 = {
+	officers = {
+		culture = shan
+		religion = buddhist 
+		size = 1420
+	 } 
+	officers = {
+		culture = shan
+		religion = secularism
+		size = 10
+	 } 
+	soldiers = {
+		culture = shan
+		religion = buddhist 
+		size = 5684
+	 } 
+	soldiers = {
+		culture = shan
+		religion = secularism
+		size = 42
+	 } 
+	aristocrats = {
+		culture = shan
+		religion = buddhist 
+		size = 18946
+	 } 
+	aristocrats = {
+		culture = shan
+		religion = secularism
+		size = 143
+	 } 
+	bureaucrats = {
+		culture = shan
+		religion = buddhist 
+		size = 473
+	 } 
+	bureaucrats = {
+		culture = shan
+		religion = secularism
+		size = 3
+	 } 
+	capitalists = {
+		culture = shan
+		religion = buddhist 
+		size = 2368
+	 } 
+	capitalists = {
+		culture = shan
+		religion = secularism
+		size = 17
+	 } 
+	clergymen = {
+		culture = shan
+		religion = buddhist 
+		size = 4736
+	 } 
+	clergymen = {
+		culture = shan
+		religion = secularism
+		size = 35
+	 } 
+	artisans = {
+		culture = shan
+		religion = buddhist 
+		size = 5522
+	 } 
+	artisans = {
+		culture = shan
+		religion = secularism
+		size = 41
+	 } 
+	farmers = {
+		culture = shan
+		religion = buddhist 
+		size = 149258
+	 } 
+	farmers = {
+		culture = shan
+		religion = secularism
+		size = 2639
 	 } 
 }
 #Putao - Kashin (263000/65750 POPS)
@@ -1874,6 +2133,79 @@
 		culture = rohingya
 		religion = sunni 
 		size = 72967
+	 }
+}
+#Hakha - Chin (1269000/317250 POPS)
+2619 = {
+	officers = {
+		culture = chin
+		religion = buddhist 
+		size = 943
+	 } 
+	officers = {
+		culture = chin
+		religion = secularism
+		size = 7
+	 } 
+	soldiers = {
+		culture = chin
+		religion = buddhist 
+		size = 3778
+	 } 
+	soldiers = {
+		culture = chin
+		religion = secularism
+		size = 28
+	 } 
+	aristocrats = {
+		culture = chin
+		religion = buddhist 
+		size = 12594
+	 } 
+	aristocrats = {
+		culture = chin
+		religion = secularism
+		size = 95
+	 } 
+	bureaucrats = {
+		culture = chin
+		religion = buddhist 
+		size = 314
+	 } 
+	bureaucrats = {
+		culture = chin
+		religion = secularism
+		size = 2
+	 } 
+	capitalists = {
+		culture = chin
+		religion = buddhist 
+		size = 1574
+	 } 
+	capitalists = {
+		culture = chin
+		religion = secularism
+		size = 11
+	 } 
+	clergymen = {
+		culture = chin
+		religion = buddhist 
+		size = 3148
+	 } 
+	clergymen = {
+		culture = chin
+		religion = secularism
+		size = 23
+	 } 
+	artisans = {
+		culture = chin
+		religion = buddhist 
+		size = 3671
+	 } 
+	artisans = {
+		culture = chin
+		religion = secularism
+		size = 27
 	 } 
 	farmers = {
 		culture = chin

@@ -114,7 +114,9 @@ From;To;Type;Through;Data;Comment
 1420;1438;sea;2811;0;Bali Strait
 1438;1442;sea;2811;0;Lombok Strait
 1442;1440;sea;2811;0;Sumbawa Strait
-1485;3343;sea;2825;0;Taiwan Strait
+1482;3342;sea;2825;0;Taiwan Strait
+3342;3343;sea;2825;0;Taiwan Strait
+2562;3343;sea;2825;0;Taiwan Strait
 1495;1499;sea;2823;0;Hainan Strait
 1452;1454;sea;2826;0;Biak Strait
 1457;1461;sea;2849;0;Tacloban Strait

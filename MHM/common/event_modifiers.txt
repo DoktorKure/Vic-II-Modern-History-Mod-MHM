@@ -1612,6 +1612,7 @@ immigrant_attract = -0.60
 core_pop_militancy_modifier = 0.01
 local_RGO_throughput = -0.25
 local_factory_output = -0.25
+supply_limit = -30.0
 icon = 26
 }
 
@@ -5030,6 +5031,7 @@ immigrant_attract = -3
 pop_militancy_modifier = 0.20
 local_RGO_throughput = -0.75
 local_factory_output = -1.70
+supply_limit = -100.0
 icon = 26
 }
 
@@ -5040,6 +5042,7 @@ immigrant_attract = -2
 pop_militancy_modifier = 0.10
 local_RGO_throughput = -0.50
 local_factory_output = -0.90
+supply_limit = -75.0
 icon = 26
 }
 
@@ -5050,6 +5053,7 @@ immigrant_attract = -1
 pop_militancy_modifier = 0.05
 local_RGO_throughput = -0.25
 local_factory_output = -0.30
+supply_limit = -50.0
 icon = 26
 }
 
@@ -5060,6 +5064,7 @@ immigrant_attract = -1
 pop_militancy_modifier = 0.05
 local_RGO_throughput = -0.25
 local_factory_output = -0.30
+supply_limit = -25.0
 icon = 26
 }
 

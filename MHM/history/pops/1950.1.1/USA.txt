@@ -12682,6 +12682,109 @@
 		size = 31941
 	 } 
 }
+#Miami - Miami (4056000/1014000 POPS)
+2665 = {
+	capitalists = {
+		culture = dixie
+		religion = protestant 
+		size = 5536
+	 } 
+	capitalists = {
+		culture = white_anglo
+		religion = secularism
+		size = 547
+	 } 
+	officers = {
+		culture = dixie
+		religion = protestant 
+		size = 7583
+	 } 
+	officers = {
+		culture = white_anglo
+		religion = secularism
+		size = 749
+	 } 
+	soldiers = {
+		culture = dixie
+		religion = protestant 
+		size = 30332
+	 } 
+	soldiers = {
+		culture = white_anglo
+		religion = secularism
+		size = 2999
+	 } 
+	aristocrats = {
+		culture = dixie
+		religion = protestant 
+		size = 23068
+	 } 
+	aristocrats = {
+		culture = white_anglo
+		religion = secularism
+		size = 2281
+	 } 
+	bureaucrats = {
+		culture = dixie
+		religion = protestant 
+		size = 5536
+	 } 
+	bureaucrats = {
+		culture = white_anglo
+		religion = secularism
+		size = 547
+	 } 
+	clergymen = {
+		culture = dixie
+		religion = protestant 
+		size = 18454
+	 } 
+	clergymen = {
+		culture = white_anglo
+		religion = secularism
+		size = 1825
+	 } 
+	clerks = {
+		culture = dixie
+		religion = protestant 
+		size = 30871
+	 } 
+	clerks = {
+		culture = white_anglo
+		religion = secularism
+		size = 3053
+	 } 
+	artisans = {
+		culture = dixie
+		religion = protestant 
+		size = 29328
+	 } 
+	artisans = {
+		culture = white_anglo
+		religion = secularism
+		size = 2900
+	 } 
+	craftsmen = {
+		culture = dixie
+		religion = protestant 
+		size = 94160
+	 } 
+	craftsmen = {
+		culture = white_anglo
+		religion = secularism
+		size = 9312
+	 } 
+	farmers = {
+		culture = dixie
+		religion = protestant 
+		size = 354909
+	 } 
+	farmers = {
+		culture = white_anglo
+		religion = secularism
+		size = 35100
+	 }
+}
 #Atlanta - Atlanta (3167000/791750 POPS)
 201 = {
 	capitalists = {

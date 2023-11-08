@@ -1,23 +1,15 @@
-owner = SAF
-controller = SAF
-add_core = SAF
-add_core = ZUL
-trade_goods = grain
+owner = BUR
+controller = BUR
+add_core = BUR
+trade_goods = timber
 life_rating = 35
-terrain = dry_forest_hills
+terrain = seasonal_jungle_mountains
 colonial = 0
-1992.1.1 = {
-owner = ZUL
-controller = ZUL
-add_core = SAF
-add_core = ZUL
-life_rating = 35
-colonial = 0
-}
-2015.1.1 = { 
-    owner = RSA
-    controller = RSA
-    add_core = RSA
-    life_rating = 15
+1950.1.1 = { owner = BUR controller = BUR colonial = 0 } 
+1992.1.1 = { 
+    owner = BUR
+    controller = BUR
+    add_core = BUR
+    life_rating = 35
     colonial = 0
 }

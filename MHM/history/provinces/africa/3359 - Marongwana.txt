@@ -1,23 +1,14 @@
-owner = SAF
-controller = SAF
-add_core = SAF
-add_core = GZA
-trade_goods = sugar
-life_rating = 15
-terrain = hilly_grassland
+owner = AFG
+controller = AFG
+add_core = AFG
+trade_goods = grain
+life_rating = 35
+terrain = semi_desert_hills
 colonial = 0
 1992.1.1 = {
-owner = GZA
-controller = GZA
-add_core = SAF
-add_core = GZA
-life_rating = 15
+owner = AFG
+controller = AFG
+add_core = AFG
+life_rating = 35
 colonial = 0
-}
-2015.1.1 = { 
-    owner = RSA
-    controller = RSA
-    add_core = RSA
-    life_rating = 15
-    colonial = 0
 }

@@ -109,6 +109,7 @@
 		size = 108250
 	 } 
 }
+
 #Balkh - Kunar, Faryab,Jowzjan, Sar-e Pol,Balkh,Samangan (1822000/455500 POPS)
 1211 = {
 	officers = {
@@ -159,7 +160,60 @@
 	farmers = {
 		culture = uzbek
 		religion = sunni 
-		size = 273300
+		size = 203300
+	 }
+}
+#Maymana (1822000/455500 POPS)
+3359 = {
+	officers = {
+		culture = tajik
+		religion = sunni 
+		size = 2543
+	 } 
+	soldiers = {
+		culture = tajik
+		religion = sunni 
+		size = 10175
+	 } 
+	aristocrats = {
+		culture = tajik
+		religion = sunni 
+		size = 18220
+	 } 
+	capitalists = {
+		culture = tajik
+		religion = sunni 
+		size = 2277
+	 } 
+	clergymen = {
+		culture = tajik
+		religion = sunni 
+		size = 4555
+	 } 
+	clerks = {
+		culture = tajik
+		religion = sunni 
+		size = 3929
+	 } 
+	artisans = {
+		culture = tajik
+		religion = sunni 
+		size = 3732
+	 } 
+	craftsmen = {
+		culture = tajik
+		religion = sunni 
+		size = 11983
+	 } 
+	farmers = {
+		culture = pashtun
+		religion = sunni 
+		size = 56006
+	 } 
+	farmers = {
+		culture = uzbek
+		religion = sunni 
+		size = 73300
 	 } 
 	farmers = {
 		culture = turkmen
@@ -288,8 +342,62 @@
 		size = 19975
 	 } 
 }
+
 #Farrah - Nimruz,Helmand,Daykundi (870000/217500 POPS)
 1214 = {
+	officers = {
+		culture = pashtun
+		religion = sunni 
+		size = 1214
+	 } 
+	soldiers = {
+		culture = pashtun
+		religion = sunni 
+		size = 4858
+	 } 
+	aristocrats = {
+		culture = pashtun
+		religion = sunni 
+		size = 8700
+	 } 
+	capitalists = {
+		culture = pashtun
+		religion = sunni 
+		size = 1087
+	 } 
+	clergymen = {
+		culture = pashtun
+		religion = sunni 
+		size = 2175
+	 } 
+	clerks = {
+		culture = pashtun
+		religion = sunni 
+		size = 1876
+	 } 
+	artisans = {
+		culture = pashtun
+		religion = sunni 
+		size = 1782
+	 } 
+	craftsmen = {
+		culture = pashtun
+		religion = sunni 
+		size = 5722
+	 } 
+	farmers = {
+		culture = baluchi
+		religion = sunni 
+		size = 39794
+	 } 
+	farmers = {
+		culture = pashtun
+		religion = sunni 
+		size = 150075
+	 } 
+}
+#Lashkar Gah (870000/217500 POPS)
+2652 = {
 	officers = {
 		culture = baluchi
 		religion = sunni 

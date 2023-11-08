@@ -1,25 +1,17 @@
-owner = SAF
-controller = SAF
-add_core = SAF
-add_core =  NGW
-add_core = SWA
-trade_goods = gold_silver
-life_rating = 15
-terrain = plains
+owner = BUR
+controller = BUR
+add_core = BUR
+add_core = CHS
+trade_goods = timber
+life_rating = 35
+terrain = seasonal_jungle_mountains
 colonial = 0
-1992.1.1 = {
-owner = NGW
-controller = NGW
-add_core = SAF
-add_core = NGW
-add_core = SWA
-life_rating = 15
-colonial = 0
-}
-2015.1.1 = { 
-    owner = RSA
-    controller = RSA
-    add_core = RSA
-    life_rating = 15
+1950.1.1 = { owner = BUR controller = BUR colonial = 0 } 
+1992.1.1 = { 
+    owner = BUR
+    controller = BUR
+    add_core = BUR
+    add_core = CHS
+    life_rating = 35
     colonial = 0
 }

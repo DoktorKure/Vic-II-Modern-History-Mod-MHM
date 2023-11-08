@@ -2342,6 +2342,11 @@ country_event = {
 			set_country_flag = icbm_bomb
 		}
 		
+		#Chernobyl
+		UKR = {
+			3357 = { add_province_modifier = { name = nuke_accident duration = 9125 } }
+		}
+		
 		#Tartarstan situation
 		random_owned = { limit = { owner = { is_possible_vassal = TAR } } owner = { release = TAR TAR = { government = socialist_democracy country_event = 800054 ruling_party_ideology = socialist set_country_flag = TAR_formed_by_event } } }
 		

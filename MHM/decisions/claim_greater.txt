@@ -2344,35 +2344,11 @@ political_decisions = {
 		effect = {
 			badboy = 12
 			set_country_flag = claim_greater_india
-			1256 = { add_core = THIS }
-			1257 = { add_core = THIS }
-			1254 = { add_core = THIS }
-			1255 = { add_core = THIS }
-			1290 = { add_core = THIS }
-			1288 = { add_core = THIS }
-			1289 = { add_core = THIS }
-			1222 = { add_core = THIS }
-			1221 = { add_core = THIS }
-			1220 = { add_core = THIS }
-			1219 = { add_core = THIS }
-			1218 = { add_core = THIS }
-			1223 = { add_core = THIS }
-			1231 = { add_core = THIS }
-			1228 = { add_core = THIS }
-			1232 = { add_core = THIS }
-			1227 = { add_core = THIS }
-			1229 = { add_core = THIS }
-			1230 = { add_core = THIS }
-			2673 = { add_core = THIS } # Lyallpar 
-			2653 = { add_core = THIS } # Tribal Areas
-			2692 = { add_core = THIS } # Rangpur
-			2666 = { add_core = THIS } # Mymensingh
-			1070 = { add_core = THIS } # Sylhet
-			2637 = { add_core = THIS } # Narayanganj
-			2657 = { add_core = THIS } # Khulna
-			2658 = { add_core = THIS } # Comilla
-			2680 = { add_core = THIS } # Chittagong Hill Tracts
-			3340 = { add_core = THIS } # Gwadar
+			PAK = { all_core = { add_core = THIS } }
+			BNG = { all_core = { add_core = THIS } }
+			BHU = { all_core = { add_core = THIS } }
+			SIK = { all_core = { add_core = THIS } }
+			NEP = { all_core = { add_core = THIS } }
 		}
 
 	}
@@ -2408,35 +2384,11 @@ political_decisions = {
 				limit = { 
 					NOT = { owned_by = THIS }
 					OR = {
-						province_id = 1256
-						province_id = 1257
-						province_id = 1254
-						province_id = 1255
-						province_id = 1290
-						province_id = 1288
-						province_id = 1289
-						province_id = 1222
-						province_id = 1221
-						province_id = 1220
-						province_id = 1219
-						province_id = 1218
-						province_id = 1223
-						province_id = 1231
-						province_id = 1228
-						province_id = 1232
-						province_id = 1227
-						province_id = 1229
-						province_id = 1230
-						province_id = 2673
-						province_id = 2653
-						province_id = 2692
-						province_id = 2666
-						province_id = 1070
-						province_id = 2637
-						province_id = 2657
-						province_id = 2658
-						province_id = 2680
-						province_id = 3340
+						is_core = PAK
+						is_core = BNG
+						is_core = BHU
+						is_core = SIK
+						is_core = NEP
 					}
 				}
 				remove_core = THIS
@@ -3887,6 +3839,8 @@ political_decisions = {
 			678 = { add_core = ROM }
 			2589 = { add_core = ROM }
 			818 = { add_core = ROM }
+			3354 = { add_core = ROM }
+			3356 = { add_core = ROM }
 		}
 
 	}
@@ -3928,6 +3882,8 @@ political_decisions = {
 						province_id = 678
 						province_id = 2589
 						province_id = 818
+						province_id = 3354
+						province_id = 3356
 					}
 				}
 				remove_core = THIS
@@ -3989,6 +3945,7 @@ political_decisions = {
 			974 = { add_core = RUS }
 			978 = { add_core = RUS }
 			980 = { add_core = RUS }
+			3358 = { add_core = RUS }
 		}
 
 	}
@@ -4046,6 +4003,7 @@ political_decisions = {
 						province_id = 974
 						province_id = 978
 						province_id = 980
+						province_id = 3358
 					}
 				}
 				remove_core = THIS
@@ -5245,6 +5203,7 @@ political_decisions = {
 			1101 = { add_core = TUR	}
 			897 = { add_core = TUR }
 			907 = { add_core = TUR }
+			3352 = { add_core = TUR }
 			901 = { add_core = TUR }
 			1110 = { add_core = TUR }
 			1109 = { add_core = TUR	}
@@ -5254,6 +5213,7 @@ political_decisions = {
 			829 = { add_core = TUR }
 			823 = { add_core = TUR }
 			822 = { add_core = TUR }
+			2647 = { add_core = TUR }
 		}
 
 	}
