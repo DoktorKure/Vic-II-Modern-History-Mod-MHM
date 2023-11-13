@@ -186,6 +186,9 @@ country_event = {
 
 			has_country_modifier = international_pariah
 			
+			#Would prefer to embargo rather than risk all-out nuclear war
+			NOT = { OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation } }
+			
 			NOT = { has_country_modifier = punitive_effects }
 			NOT = { has_country_flag = ultimatum_accepted }
 			

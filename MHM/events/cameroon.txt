@@ -87,12 +87,13 @@ country_event = { # Southern Cameroons Plebiscite
 	fire_only_once = yes
 
 	trigger = {
-		capital_scope = { continent = europe } # ENG or FBU
+		OR = { tag = ENG tag = FBU tag = IMP }
 		OR = {
 			is_possible_vassal = ABZ
 			NGE = { is_possible_vassal = ABZ }
 		}
 		exists = CMR
+		CMR = { NOT = { government = colonial_government } }
 		NOT = { 1957 = { is_core = NGE } } # In case Nigeria was chosen but does not yet exist
 		war = no
 		is_vassal = no
@@ -107,20 +108,16 @@ country_event = { # Southern Cameroons Plebiscite
 	option = {
 		name = "EVT_8002500_A"
 		ABZ = { all_core = { add_core = CMR } }
-		any_owned = {
+		random_owned = {
 			limit = {
 				owner = { exists = NGE }
 			}
 			owner = {
-				NGE = {
-					any_owned = {
-						limit = { is_core = CMR }
-						secede_province = CMR
-					}
-				}
+				NGE = { release = ABZ }
+				CMR = { inherit = ABZ }
 			}
 		}
-		any_owned = {
+		random_owned = {
 			limit = {
 				owner = { is_possible_vassal = ABZ }
 			}
@@ -151,9 +148,9 @@ country_event = { # Southern Cameroons Plebiscite
 		badboy = 1
 		prestige = -10
 		
-		any_owned = {
+		random_owned = {
 			limit = {
-				owner = { exists = NGE has_global_flag = new_colonial_system }
+				owner = { exists = NGE }
 			}
 			owner = {
 				NGE = {
@@ -164,20 +161,8 @@ country_event = { # Southern Cameroons Plebiscite
 				}
 			}
 		}
-		any_owned = {
-			limit = {
-				owner = { exists = NGE has_global_flag = old_colonial_system }
-			}
-			owner = {
-				any_owned = {
-					limit = { is_core = ABZ }
-					add_core = NGE
-					secede_province = NGE
-				}
-			}
-		}
 		
-		any_owned = {
+		random_owned = {
 			limit = {
 				owner = { NOT = { exists = NGE } }
 			}
@@ -217,7 +202,7 @@ country_event = { # Southern Cameroons Plebiscite
 		ABZ = { all_core = { add_core = CMR } }
 		badboy = 1
 		prestige = -10
-		any_owned = {
+		random_owned = {
 			limit = {
 				owner = { exists = NGE has_global_flag = new_colonial_system }
 			}
@@ -227,7 +212,7 @@ country_event = { # Southern Cameroons Plebiscite
 				}
 			}
 		}
-		any_owned = {
+		random_owned = {
 			limit = {
 				owner = {
 					OR = {
@@ -263,22 +248,41 @@ country_event = { # Southern Cameroons Plebiscite
 		ABZ = { all_core = { add_core = CMR } }
 		badboy = 3
 		prestige = -15
-		release = ABZ
-		any_owned = {
-			limit = { OR = { province_id = 1937 province_id = 1950 province_id = 1953 } }
-			secede_province = ABZ
-			add_province_modifier = { name = nationalist_agitation duration = 1095 }
-		}
-		random_country = {
+		
+		random_owned = {
 			limit = {
-				tag = NGE
-				is_vassal = yes
-				overlord = { tag = THIS }
+				owner = { exists = NGE }
 			}
-			any_owned = {
-				limit = { OR = { province_id = 1937 province_id = 1950 province_id = 1953 } }
-				secede_province = ABZ
-				add_province_modifier = { name = nationalist_agitation duration = 1095 }
+			owner = {
+				NGE = {
+					any_owned = {
+						limit = { OR = { province_id = 1937 province_id = 1950 province_id = 1953 } }
+						add_core = ABZ
+					}
+					release = ABZ
+				}
+			}
+			owner = {
+				NGE = { any_owned = { add_province_modifier = { name = nationalist_agitation duration = 1095 } } }
+			}
+		}
+		
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = NGE } }
+			}
+			owner = {
+				any_owned = {
+					limit = { OR = { province_id = 1937 province_id = 1950 province_id = 1953 } }
+					add_core = ABZ
+				}
+				release = ABZ
+			}
+			owner = {
+				any_owned = {
+					limit = { is_core = NGE }
+					add_province_modifier = { name = nationalist_agitation duration = 1095 }
+				}
 			}
 		}
 		diplomatic_influence = { who = ABZ value = 200 }

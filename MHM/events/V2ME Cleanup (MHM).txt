@@ -75,8 +75,9 @@ country_event = {
 		clr_global_flag = daily_cleanup_on
 		CLN = { country_event = { id = 47777787 days = 1 } }
 		
-		#Craftsmen, Soldiers, and Bureaucrats bugfix
+		#Craftsmen, Soldiers, and Bureaucrats bugfix - dependent on minorities reforms
 		any_country = {
+			limit = { OR = { government = sectarian_dictatorship minorities_reform = minorities_oppression } }
 			any_owned = {
 				limit = {
 					OR = {
@@ -94,6 +95,26 @@ country_event = {
 							type = officers
 							type = bureaucrats
 						}
+					}
+					pop_type = farmers
+				}
+			}
+		}
+		any_country = {
+			limit = { NOT = { OR = { government = sectarian_dictatorship minorities_reform = minorities_oppression } } }
+			any_owned = {
+				limit = {
+					OR = {
+						is_primary_culture = yes
+						is_accepted_culture = yes
+					}
+				}
+				any_pop = {
+					limit = {
+						is_primary_culture = no
+						is_accepted_culture = no
+						type = bureaucrats
+						type = officers
 					}
 					pop_type = farmers
 				}

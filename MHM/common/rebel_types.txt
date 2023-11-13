@@ -1734,10 +1734,10 @@ populist_rebels = {
 			}
 		}
 
-		#Rebels dont spawn in a nationalist_dictatorship
+		#Rebels dont spawn in a nationalist_dictatorship or sectarian_dictatorship
 		modifier = {
 			factor = 0
-			country = { government = nationalist_dictatorship }
+			country = { OR = { government = nationalist_dictatorship government = sectarian_dictatorship } }
 		}
 		
 		#Rebels spawn less if ruling party is nationalist or populist
@@ -1991,10 +1991,10 @@ sectarian_rebels = {
 			}
 		}
 
-		#Rebels dont spawn in a sectarian regime
+		#Rebels dont spawn in a sectarian regime or nationalist regime
 		modifier = {
 			factor = 0
-			country = { government = sectarian_dictatorship }
+			country = { OR = { government = sectarian_dictatorship government = nationalist_dictatorship } }
 		}
 		
 		#Rebels spawn less if ruling party is nationalist or populist

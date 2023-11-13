@@ -124,38 +124,15 @@ country_event = {
 
 				#British Overseas Territories
 				any_owned = { limit = { OR = { is_core = CYI is_core = TCI province_id = 2225 is_core = VIR } } add_core = ENG secede_province = ENG }
-
-				release = AAB
-				release = BAR
-				release = JAM
-				release = GRD
-				release = STL
-				release = SVG
-				release = SKN
-				release = DMC
-
-				sphere_owner = {
-					diplomatic_influence = { who = AAB value = 200 }
-					diplomatic_influence = { who = BAR value = 200 }
-					diplomatic_influence = { who = JAM value = 200 }
-					diplomatic_influence = { who = GRD value = 200 }
-					diplomatic_influence = { who = STL value = 200 }
-					diplomatic_influence = { who = SVG value = 200 }
-					diplomatic_influence = { who = SKN value = 200 }
-					diplomatic_influence = { who = DMC value = 200 }
-					diplomatic_influence = { who = TAT value = 200 }
+				
+				#Release everyone
+				any_country = {
+					limit = {
+						OR = { tag = AAB tag = BAR tag = JAM tag = GRD tag = STL tag = SVG tag = SKN tag = DMC tag = BAH tag = GUY tag = BLZ tag = BEU }
+						exists = no
+					}
+					country_event = 10027011
 				}
-
-				#Constitutional Monarchy
-				AAB = { government = hms_government1 }
-				BAR = { government = hms_government1 }
-				JAM = { government = hms_government1 }
-				GRD = { government = hms_government1 }
-				STL = { government = hms_government1 }
-				SVG = { government = hms_government1 }
-				SKN = { government = hms_government }
-				DMC = { government = hms_government1 }
-				TAT = { government = hms_government1 }
 
 			}
 		}
@@ -173,6 +150,56 @@ country_event = {
 		any_pop = { limit = { culture = black_anglo } militancy = 5  consciousness = 2 }
 		XCC = { set_country_flag = full_independance }
 		ai_chance = { factor = 0.20 }
+	}
+
+}
+
+#Direct release
+country_event = {
+	id = 10027011
+	title = "Collapse of West Indes Federation"
+	desc = "As the West Indes Federation has collapsed, we have achieved independence from our colonial overlords!"
+	picture = "west_indies_federation_end"
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We are free to run our own affairs!"
+		FROM = {
+			release = THIS
+			sphere_owner = { diplomatic_influence = { who = THIS value = 200 } }
+		}
+		government = hms_government1
+		country_event = 800054
+		ruling_party_ideology = conservative
+		
+		ai_chance = { factor = 0.2 }
+	}
+
+}
+
+#Vassalized release
+country_event = {
+	id = 10027012
+	title = "Collapse of West Indes Federation"
+	desc = "As the West Indes Federation has collapsed, our overlords have decided to grant us some independence!"
+	picture = "west_indies_federation_end"
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We are (mostly) free to run our own affairs!"
+		FROM = {
+			release_vassal = THIS
+			sphere_owner = { diplomatic_influence = { who = THIS value = 200 } }
+		}
+		government = hms_government1
+		country_event = 800054
+		ruling_party_ideology = conservative
+		
+		ai_chance = { factor = 0.2 }
 	}
 
 }
@@ -195,39 +222,24 @@ country_event = {
 			#British Overseas Territories
 			any_owned = { limit = { OR = { is_core = CYI is_core = TCI province_id = 2225 is_core = VIR } } add_core = ENG secede_province = ENG }
 		}
-					
+		
 		inherit = XCC
-
-		release_vassal = AAB
-		release_vassal = BAR
+		
 		release = JAM
-		release_vassal = GRD
-		release_vassal = STL
-		release_vassal = SVG
-		release_vassal = SKN
-		release_vassal = DMC
 		release = TAT
-
-		diplomatic_influence = { who = AAB value = 200 }
-		diplomatic_influence = { who = BAR value = 200 }
-		diplomatic_influence = { who = JAM value = 200 }
-		diplomatic_influence = { who = GRD value = 200 }
-		diplomatic_influence = { who = STL value = 200 }
-		diplomatic_influence = { who = SVG value = 200 }
-		diplomatic_influence = { who = SKN value = 200 }
-		diplomatic_influence = { who = DMC value = 200 }
-		diplomatic_influence = { who = TAT value = 200 }
+		
+		#Release everyone
+		any_country = {
+			limit = {
+				OR = { tag = AAB tag = BAR tag = GRD tag = STL tag = SVG tag = SKN tag = DMC tag = BAH tag = GUY tag = BLZ tag = BEU }
+				exists = no
+			}
+			country_event = 10027012
+		}
 
 		#Constitutional Monarchy
-		AAB = { government = hms_government1 }
-		BAR = { government = hms_government1 }
 		JAM = { government = hms_government }
-		GRD = { government = hms_government1 }
-		STL = { government = hms_government1 }
-		SVG = { government = hms_government1 }
 		SKN = { government = hms_government }
-		DMC = { government = hms_government1 }
-		TAT = { government = hms_government1 }
 
 	}
 

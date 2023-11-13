@@ -237,8 +237,6 @@ country_event = {
 		country_event = 800054
 		ruling_party_ideology = conservative
 		set_country_flag = former_devolved_nation
-		
-		ai_chance = { factor = 0.2 }
 	}
 
 }
