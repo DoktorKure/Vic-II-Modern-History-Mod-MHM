@@ -45,20 +45,10 @@ country_event = {
 	major = yes
 	
 	trigger = {
-		OR = {
-			AND = {
-				has_country_flag = atomic_bomb_developed
-				has_country_modifier = develop_atomic_bomb
-				NOT = { has_country_modifier = atomic_nation }
-				NOT = { has_country_flag = nuclear_program_discovered }
-			}
-			AND = {
-				has_country_flag = hydrogen_bomb_developed
-				has_country_modifier = develop_hydrogen_bomb
-				NOT = { has_country_modifier = hydrogen_nation }
-				NOT = { has_country_flag = nuclear_program_discovered }
-			}
-		}
+		has_country_flag = atomic_bomb_developed
+		has_country_modifier = develop_atomic_bomb
+		NOT = { has_country_modifier = atomic_nation }
+		NOT = { has_country_flag = nuclear_program_discovered }
 	}
 	
 	mean_time_to_happen = {

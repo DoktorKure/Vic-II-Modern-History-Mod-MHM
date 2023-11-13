@@ -45,7 +45,6 @@ country_event = {
 	
 	option = {
 		name = "Damn it!"
-		add_country_modifier = { name = chemical_nation duration = -1 }
 		prestige = -50
 		badboy = 7.5
 		set_country_flag = chemical_program_discovered
