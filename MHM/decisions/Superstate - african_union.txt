@@ -225,5 +225,56 @@ political_decisions = {
 			limit = { has_country_flag = xau_ambition OR = { vassal_of = THIS is_vassal = no } OR = { vassal_of = THIS in_sphere = THIS } } country_event = 11106 }
 		}
 		ai_will_do = { factor = 1 }
-	}		
+	}
+	
+	xau_form_union_early = {
+		picture = "xau_ambition"
+		potential = {
+			NOT = { has_country_flag = hide_superstate }
+			NOT = { has_global_flag = xau_formed_early }
+			XAU = { exists = no }
+			capital_scope = { continent = africa }
+		}
+		allow = {
+			NOT = {
+				any_land_metaregion = {
+					owner = {
+						exists = yes
+						NOT = { tag = THIS }
+						capital_scope = { continent = africa }
+						NOT = {
+							OR = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 500
+			set_global_flag = xau_formed_early
+			set_country_flag = xau_ambition
+			set_country_flag = in_trade_block
+			capital_scope = { add_province_modifier = { name = currency_union_province duration = -1 } }
+			capital_scope = { add_province_modifier = { name = single_market duration = -1 } }
+			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
+			all_core = { add_core = XAU }
+			change_tag = XAU
+			add_accepted_culture = afro_american
+			add_accepted_culture = black_anglo
+			add_accepted_culture = black_french
+			add_accepted_culture = black_portuguese
+			any_country = {
+				limit = {
+					exists = yes
+					NOT = { tag = THIS }
+					capital_scope = { continent = africa }
+				}
+				country_event = 11106
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
 }

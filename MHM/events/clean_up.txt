@@ -431,7 +431,7 @@ country_event = {
 	picture = "communist_cleanup"
 	
 	trigger = {
-
+		has_country_flag = is_disabled_for_now
 		vote_franschise = none_voting
 		NOT = { government = proletarian_dictatorship }
 		NOT = { government = proletarian_dictatorship1 }

@@ -327,5 +327,52 @@ political_decisions = {
 		}
 		effect = { any_neighbor_country = { limit = { has_country_flag = xsu_ambition OR = { vassal_of = THIS in_sphere = THIS } OR = { vassal_of = THIS is_vassal = no } } country_event = 11106 } }
 		ai_will_do = { factor = 1 }
-	}		
+	}
+	
+	xsu_form_union_early = {
+		picture = "xsu_parlament"
+		potential = {
+			NOT = { has_country_flag = hide_superstate }
+			NOT = { has_global_flag = xsu_formed_early }
+			XSU = { exists = no }
+			capital_scope = { region = latin_america_metaregion }
+		}
+		allow = {
+			NOT = {
+				any_land_metaregion = {
+					owner = {
+						exists = yes
+						NOT = { tag = THIS }
+						capital_scope = { region = latin_america_metaregion }
+						NOT = {
+							OR = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 500
+			set_global_flag = xsu_formed_early
+			set_country_flag = xsu_ambition
+			set_country_flag = in_trade_block
+			capital_scope = { add_province_modifier = { name = currency_union_province duration = -1 } }
+			capital_scope = { add_province_modifier = { name = single_market duration = -1 } }
+			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
+			all_core = { add_core = XSU }
+			change_tag = XSU
+			any_country = {
+				limit = {
+					exists = yes
+					NOT = { tag = THIS }
+					capital_scope = { region = latin_america_metaregion }
+				}
+				country_event = 11106
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
 }

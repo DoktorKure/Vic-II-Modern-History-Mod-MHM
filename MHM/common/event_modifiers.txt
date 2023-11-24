@@ -5174,7 +5174,7 @@ icon = 16
 
 spy_medium_gp = {
 diplomatic_points_modifier = 0.5
-culture_tech_research_bonus = 0.2
+influence_modifier = 0.25
 icon = 16
 }
 

@@ -1508,6 +1508,132 @@ country_event = {
 			government = proletarian_dictatorship1
 		}
 		
+		#Set flags for gov type
+		any_country = {
+			limit = { NOT = { has_country_flag = communist_dictatorship } OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+			set_country_flag = communist_dictatorship
+		}
+		any_country = {
+			limit = { has_country_flag = communist_dictatorship NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } }
+			clr_country_flag = communist_dictatorship
+		}
+		any_country = {
+			limit = { NOT = { has_country_flag = socialist_republic } government = socialist_democracy }
+			set_country_flag = socialist_republic
+		}
+		any_country = {
+			limit = { has_country_flag = socialist_republic NOT = { government = socialist_democracy } }
+			clr_country_flag = socialist_republic
+		}
+		any_country = {
+			limit = { NOT = { has_country_flag = absolute_monarchy } government = absolute_monarchy }
+			set_country_flag = absolute_monarchy
+		}
+		any_country = {
+			limit = { has_country_flag = absolute_monarchy NOT = { government = absolute_monarchy } }
+			clr_country_flag = absolute_monarchy
+		}
+		any_country = {
+			limit = { NOT = { has_country_flag = hms_republic } OR = { government = hms_government government = hms_government1 } }
+			set_country_flag = hms_republic
+		}
+		any_country = {
+			limit = { has_country_flag = hms_republic NOT = { OR = { government = hms_government government = hms_government1 } } }
+			clr_country_flag = hms_republic
+		}
+		any_country = {
+			limit = { NOT = { has_country_flag = republic } OR = { government = democracy government = democracy1 } }
+			set_country_flag = republic
+		}
+		any_country = {
+			limit = { has_country_flag = republic NOT = { OR = { government = democracy government = democracy1 } } }
+			clr_country_flag = republic
+		}
+		any_country = {
+			limit = { NOT = { has_country_flag = nationalist_dictatorship } government = nationalist_dictatorship }
+			set_country_flag = nationalist_dictatorship
+		}
+		any_country = {
+			limit = { has_country_flag = nationalist_dictatorship NOT = { government = nationalist_dictatorship } }
+			clr_country_flag = nationalist_dictatorship
+		}
+		any_country = {
+			limit = { NOT = { has_country_flag = sectarian_dictatorship } government = sectarian_dictatorship }
+			set_country_flag = sectarian_dictatorship
+		}
+		any_country = {
+			limit = { has_country_flag = sectarian_dictatorship NOT = { government = sectarian_dictatorship } }
+			clr_country_flag = sectarian_dictatorship
+		}
+		any_country = {
+			limit = { NOT = { has_country_flag = theocracy } government = theocracy }
+			set_country_flag = theocracy
+		}
+		any_country = {
+			limit = { has_country_flag = theocracy NOT = { government = theocracy } }
+			clr_country_flag = theocracy
+		}
+		
+		#Discern between democratic and non-democratic gov type
+		any_country = {
+			limit = {
+				NOT = { has_country_flag = authoritarian_state }
+				OR = {
+					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
+					government = absolute_monarchy
+					government = nationalist_dictatorship
+					government = sectarian_dictatorship
+					government = theocracy
+				}
+			}
+			set_country_flag = authoritarian_state
+		}
+		any_country = {
+			limit = {
+				has_country_flag = authoritarian_state
+				NOT = {
+					OR = {
+						government = proletarian_dictatorship
+						government = proletarian_dictatorship1
+						government = absolute_monarchy
+						government = nationalist_dictatorship
+						government = sectarian_dictatorship
+						government = theocracy
+					}
+				}
+			}
+			clr_country_flag = authoritarian_state
+		}
+		any_country = {
+			limit = {
+				NOT = { has_country_flag = democratic_state }
+				OR = {
+					government = democracy
+					government = democracy1
+					government = hms_government
+					government = hms_government1
+					government = socialist_democracy
+				}
+			}
+			set_country_flag = democratic_state
+		}
+		any_country = {
+			limit = {
+				has_country_flag = democratic_state
+				NOT = {
+					OR = {
+						government = democracy
+						government = democracy1
+						government = hms_government
+						government = hms_government1
+						government = socialist_democracy
+					}
+				}
+			}
+			clr_country_flag = democratic_state
+		}
+		
 		################################
 		### Population Growth Trends ###
 		################################

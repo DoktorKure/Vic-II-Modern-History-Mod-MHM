@@ -270,5 +270,52 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 
 	}
+	
+	xan_form_union_early = {
+		picture = "xan_parlament"
+		potential = {
+			NOT = { has_country_flag = hide_superstate }
+			NOT = { has_global_flag = xan_formed_early }
+			XAN = { exists = no }
+			capital_scope = { region = southeastern_asia_metaregion }
+		}
+		allow = {
+			NOT = {
+				any_land_metaregion = {
+					owner = {
+						exists = yes
+						NOT = { tag = THIS }
+						capital_scope = { region = southeastern_asia_metaregion }
+						NOT = {
+							OR = {
+								in_sphere = THIS
+								vassal_of = THIS
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			prestige = 500
+			set_global_flag = xan_formed_early
+			set_country_flag = xan_ambition
+			set_country_flag = in_trade_block
+			capital_scope = { add_province_modifier = { name = currency_union_province duration = -1 } }
+			capital_scope = { add_province_modifier = { name = single_market duration = -1 } }
+			capital_scope = { add_province_modifier = { name = defence_union duration = -1 } }
+			all_core = { add_core = XAN }
+			change_tag = XAN
+			any_country = {
+				limit = {
+					exists = yes
+					NOT = { tag = THIS }
+					capital_scope = { region = southeastern_asia_metaregion }
+				}
+				country_event = 11106
+			}
+		}
+		ai_will_do = { factor = 0 }
+	}
 
 }

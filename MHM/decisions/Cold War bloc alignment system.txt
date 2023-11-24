@@ -40,6 +40,7 @@ political_decisions = {
 				ruling_party_ideology = conservative
 				ruling_party_ideology = liberal
 				ruling_party_ideology = progressive
+				ruling_party_ideology = big_tent
 				
 				#By dictatorship government
 				AND = { 
@@ -71,6 +72,13 @@ political_decisions = {
 				limit = { has_country_modifier = democratic_bloc_leader } 
 				diplomatic_influence =  { who = THIS value = 20 }
 				relation = { who = THIS value = 20 } 
+			}
+			
+			#All Democratic Bloc members are happy
+			any_country = { 
+				limit = { has_country_modifier = democratic_bloc } 
+				diplomatic_influence =  { who = THIS value = 10 }
+				relation = { who = THIS value = 20 }
 			}
 			
 			#All Communist Bloc members are not happy
@@ -172,6 +180,13 @@ political_decisions = {
 				relation = { who = THIS value = 20 } 
 			}
 			
+			#All Communist Bloc members are happy
+			any_country = { 
+				limit = { has_country_modifier = communist_bloc } 
+				diplomatic_influence =  { who = THIS value = 10 }
+				relation = { who = THIS value = 20 }
+			}
+			
 			#All Democratic Bloc members are not happy
 			any_country = { 
 				limit = { has_country_modifier = democratic_bloc } 
@@ -226,7 +241,7 @@ political_decisions = {
 				#By ideology
 				ruling_party_ideology = nationalist
 				ruling_party_ideology = populist
-				ruling_party_ideology = big_tent
+				ruling_party_ideology = traditionalist
 				
 				#By democratic government
 				AND = { 
@@ -464,6 +479,13 @@ political_decisions = {
 			RUS = { diplomatic_influence = { who = THIS value = 25 } }
 			CHI = { diplomatic_influence = { who = THIS value = -25 } }
 			
+			#All Communist Bloc members are happy - this is because China is usually an NAM member after the Sino-Soviet Split
+			any_country = { 
+				limit = { has_country_modifier = communist_bloc } 
+				diplomatic_influence =  { who = THIS value = 10 }
+				relation = { who = THIS value = 20 }
+			}
+			
 			#Democratic leader is angry
 			random_country = { 
 				limit = { has_country_modifier = democratic_bloc_leader } 
@@ -575,6 +597,13 @@ political_decisions = {
 			#All Democratic Bloc members are not happy
 			any_country = { 
 				limit = { has_country_modifier = democratic_bloc } 
+				diplomatic_influence =  { who = THIS value = -10 }
+				relation = { who = THIS value = -20 }
+			}
+			
+			#All Communist Bloc members are not happy - this is because China is usually an NAM member after the Sino-Soviet Split
+			any_country = { 
+				limit = { has_country_modifier = communist_bloc } 
 				diplomatic_influence =  { who = THIS value = -10 }
 				relation = { who = THIS value = -20 }
 			}

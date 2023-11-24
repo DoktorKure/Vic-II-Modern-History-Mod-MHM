@@ -919,14 +919,13 @@ social_reforms = {
 		administrative = yes
 		next_step_only = yes
 		unregulated_hours = { # no_minimum_wage
-			global_population_growth = -0.002
+			global_population_growth = -0.001
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
 			}
 		}
 		trinket_wage = { # trinket_wage
 			minimum_wage = 1
-			global_population_growth = -0.001
 			factory_throughput = -0.05
 			poor_everyday_needs = 0.05
 			middle_luxury_needs = 0.05
@@ -1195,7 +1194,6 @@ social_reforms = {
 			}
 		}
 		adequate_child_care = {
-			global_population_growth = 0.001
 			factory_throughput = -0.10
 			global_immigrant_attract = 0.2
 			tax_efficiency = -0.02
@@ -1212,7 +1210,7 @@ social_reforms = {
 			}
 		}
 		good_child_care = {
-			global_population_growth = 0.002
+			global_population_growth = 0.001
 			factory_throughput = -0.15
 			global_immigrant_attract = 0.3
 			tax_efficiency = -0.03
@@ -1230,7 +1228,7 @@ social_reforms = {
 			}
 		}
 		generous_child_care = {
-			global_population_growth = 0.003
+			global_population_growth = 0.002
 			factory_throughput = -0.20
 			global_immigrant_attract = 0.4
 			tax_efficiency = -0.04
@@ -1465,6 +1463,7 @@ social_reforms = {
 			}
 		}
 		competent_public_education = {
+			global_population_growth = -0.001 # more time in school means less reproducing
 			education_efficiency_modifier = 0.10
 			research_points_modifier = 0.10
 			global_immigrant_attract = 0.2
@@ -1481,6 +1480,7 @@ social_reforms = {
 			}
 		}
 		good_public_education = {
+			global_population_growth = -0.002 # more time in school means less reproducing
 			education_efficiency_modifier = 0.15
 			research_points_modifier = 0.15
 			global_immigrant_attract = 0.3
@@ -1503,7 +1503,7 @@ social_reforms = {
 			global_immigrant_attract = 0.4
 			global_pop_consciousness_modifier = 0.03
 			administrative_multiplier = 4
-			global_population_growth = -0.001 # more time in school means less reproducing
+			global_population_growth = -0.003 # more time in school means less reproducing
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = {
