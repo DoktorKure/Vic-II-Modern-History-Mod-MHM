@@ -2,6 +2,8 @@ political_decisions = {
 	call_for_un_intervention = {
 		picture = "callun"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 		
 			is_vassal = no
 			war = yes
@@ -85,6 +87,8 @@ political_decisions = {
 	uniting_for_peace = {
 		picture = "uniting_for_peace"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			is_vassal = no
 			year = 1953
 			war = yes

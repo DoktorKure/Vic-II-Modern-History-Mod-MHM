@@ -16,7 +16,7 @@ country_event = {
 			limit = { NOT = { tag = REB } war_with = THIS }
 			country_event = 1331432
 		}
-		
+
 		#Allow others to launch nukes
 		clr_global_flag = someone_is_firing_nukes
 
@@ -34,7 +34,7 @@ country_event = {
 			limit = { NOT = { tag = REB } war_with = THIS }
 			country_event = 13314322
 		}
-		
+
 		#Allow others to launch nukes
 		clr_global_flag = someone_is_firing_nukes
 
@@ -43,176 +43,354 @@ country_event = {
 
 }
 
+### ATOMIC NATIONS ###
 ### Nuclear Strike (LOW CAPABILITY) ###
 country_event = {
 	id = 1331429
-	title = "$COUNTRY_ADJ$ Cities Struck by Nuclear Weapons"
+	title = "$COUNTRY_ADJ$ Capital and Metros Struck by Atomic Bombs"
 	desc = "$CAPITAL$ and some cities have been annihilated."
 	picture = "nuclear_strike"
-	
-allow_multiple_instances = yes	
-
-is_triggered_only = yes
+	allow_multiple_instances = yes	
+	is_triggered_only = yes
+	major = yes
 	
 	option = {
-name = "We must retaliate!"
+		name = "We must retaliate!"
+		prestige_factor = -0.06
+		add_country_modifier = { name = recently_attacked_nuke duration = 31 }
+		add_country_modifier = { name = nuke_fallout duration = 1825 }
+		set_country_flag = has_nuke_clouds
+		set_country_flag = nuked_low
 
-prestige_factor = -0.06
-
-add_country_modifier = { name = recently_attacked_nuke duration = 31 }
-
-add_country_modifier = { name = nuke_fallout duration = 18250 }
-
-#any_pop = { reduce_pop = 0.90 }
-
-set_country_flag = has_nuke_clouds
-
-any_owned = { limit = { is_capital = yes }
-add_province_modifier = { name = nuke_low duration = 18250 }
-set_province_flag = disease
-set_province_flag = nuked_before
-infrastructure = -2
-naval_base = -2
-fort = -2
-}
-
-any_owned = { limit = { total_pops = 1000000 }
-add_province_modifier = { name = nuke_low duration = 18250 }
-set_province_flag = disease
-set_province_flag = nuked_before
-infrastructure = -2
-naval_base = -2
-fort = -2
-}
-
-any_pop = { reduce_pop = 0.90 }
-
+		any_owned = {
+			limit = { is_capital = yes }
+			any_pop = { reduce_pop = 0.90 }
+			infrastructure = -2
+			naval_base = -2
+			fort = -2
 		}
 
+		any_owned = {
+			limit = {
+				AND = {
+					NOT = { is_capital = yes }
+					total_pops = 1000000
+				}
+			}
+			any_pop = { reduce_pop = 0.90 }
+			infrastructure = -2
+			naval_base = -2
+			fort = -2
+		}
+	}
 }
 
 ### Nuclear Strike (MEDIUM CAPABILITY) ###
 country_event = {
 	id = 1331430
-	title = "$COUNTRY_ADJ$ Cities Struck by Nuclear Weapons"
+	title = "$COUNTRY_ADJ$ Capital and Cities Struck by Atomic Bombs"
 	desc = "$CAPITAL$ and most cities have been annihilated."
 	picture = "nuclear_strike"
-
-allow_multiple_instances = yes
-	
-is_triggered_only = yes
+	allow_multiple_instances = yes
+	is_triggered_only = yes
+	major = yes
 	
 	option = {
-name = "We must retaliate!"
+		name = "We must retaliate!"
+		prestige_factor = -0.125
+		add_country_modifier = { name = recently_attacked_nuke duration = 31 }
+		add_country_modifier = { name = nuke_fallout duration = 3650 }
+		set_country_flag = has_nuke_clouds
+		set_country_flag = nuked_medium
 
-prestige_factor = -0.125
-
-add_country_modifier = { name = recently_attacked_nuke duration = 31 }
-
-add_country_modifier = { name = nuke_fallout duration = 27375 }
-
-#any_pop = { reduce_pop = 0.80 }
-
-set_country_flag = has_nuke_clouds
-
-any_owned = { limit = { is_capital = yes }
-add_province_modifier = { name = nuke_medium duration = 27375 }
-set_province_flag = disease
-set_province_flag = nuked_before
-infrastructure = -4
-naval_base = -4
-fort = -4
-}
-
-any_owned = { limit = { AND = { total_pops = 500000 NOT = { total_pops = 1000000 } } }
-add_province_modifier = { name = nuke_low duration = 18250 }
-set_province_flag = disease
-set_province_flag = nuked_before
-infrastructure = -2
-naval_base = -2
-fort = -2
-}
-
-any_owned = { limit = { total_pops = 1000000 }
-add_province_modifier = { name = nuke_medium duration = 27375 }
-set_province_flag = disease
-set_province_flag = nuked_before
-infrastructure = -4
-naval_base = -4
-fort = -4
-}
-
-any_pop = { reduce_pop = 0.80 }
-
+		any_owned = {
+			limit = { is_capital = yes }
+			any_pop = { reduce_pop = 0.80 }
+			infrastructure = -4
+			naval_base = -4
+			fort = -4
 		}
 
-}
+		any_owned = {
+			limit = {
+				AND = {
+					NOT = { is_capital = yes }
+					total_pops = 500000
+					NOT = { total_pops = 1000000 }
+				}
+			}
+			any_pop = { reduce_pop = 0.90 }
+			infrastructure = -2
+			naval_base = -2
+			fort = -2
+		}
 
+		any_owned = {
+			limit = {
+				AND = {
+					NOT = { is_capital = yes }
+					total_pops = 1000000
+				}
+			}
+			any_pop = { reduce_pop = 0.80 }
+			infrastructure = -4
+			naval_base = -4
+			fort = -4
+		}
+	}
+}
 
 ### Nuclear Strike (MAX CAPABILITY) ###
 country_event = {
 	id = 1331431
-	title = "$COUNTRY_ADJ$ Cities Struck by Nuclear Weapons"
+	title = "$COUNTRY_ADJ$ Capital, Cities, and Towns Struck by Atomic Bombs"
 	desc = "$CAPITAL$, cities, major towns and smaller towns have been annihilated."
 	picture = "nuclear_strike"
-	
-allow_multiple_instances = yes
-	
-is_triggered_only = yes
+	allow_multiple_instances = yes
+	is_triggered_only = yes
+	major = yes
 	
 	option = {
-name = "We must retaliate!"
+		name = "We must retaliate!"
+		prestige_factor = -0.25
+		add_country_modifier = { name = recently_attacked_nuke duration = 31 }
+		add_country_modifier = { name = nuke_fallout duration = 7300 }
+		set_country_flag = has_nuke_clouds
+		set_country_flag = nuked_high
 
-prestige_factor = -0.25
-
-add_country_modifier = { name = recently_attacked_nuke duration = 31 }
-
-add_country_modifier = { name = nuke_fallout duration = 36500 }
-
-#any_pop = { reduce_pop = 0.70 }
-
-set_country_flag = has_nuke_clouds
-
-any_owned = { limit = { is_capital = yes }
-add_province_modifier = { name = nuke_high duration = 36500 }
-set_province_flag = disease
-set_province_flag = nuked_before
-infrastructure = -6
-naval_base = -6
-fort = -6
-}
-
-any_owned = { limit = { AND = { total_pops = 250000 NOT = { total_pops = 500000 } } }
-add_province_modifier = { name = nuke_low duration = 18250 }
-set_province_flag = disease
-set_province_flag = nuked_before
-infrastructure = -2
-naval_base = -2
-fort = -2
-}
-
-any_owned = { limit = { AND = { total_pops = 500000 NOT = { total_pops = 1000000 } } }
-add_province_modifier = { name = nuke_medium duration = 27375 }
-set_province_flag = disease
-set_province_flag = nuked_before
-infrastructure = -4
-naval_base = -4
-fort = -4
-}
-
-any_owned = { limit = { total_pops = 1000000 }
-add_province_modifier = { name = nuke_high duration = 36500 }
-set_province_flag = disease
-set_province_flag = nuked_before
-infrastructure = -6
-naval_base = -6
-fort = -6
-}
-
-any_pop = { reduce_pop = 0.70 }
-
+		any_owned = {
+			limit = { is_capital = yes }
+			any_pop = { reduce_pop = 0.70 }
+			infrastructure = -6
+			naval_base = -6
+			fort = -6
 		}
 
+		any_owned = {
+			limit = {
+				AND = {
+					NOT = { is_capital = yes }
+					total_pops = 250000
+					NOT = { total_pops = 500000 }
+				}
+			}
+			any_pop = { reduce_pop = 0.90 }
+			infrastructure = -2
+			naval_base = -2
+			fort = -2
+		}
+
+		any_owned = {
+			limit = {
+				AND = {
+					NOT = { is_capital = yes }
+					total_pops = 500000
+					NOT = { total_pops = 1000000 }
+				}
+			}
+			any_pop = { reduce_pop = 0.80 }
+			infrastructure = -4
+			naval_base = -4
+			fort = -4
+		}
+
+		any_owned = {
+			limit = {
+				AND = {
+					NOT = { is_capital = yes }
+					total_pops = 1000000
+				}
+			}
+			any_pop = { reduce_pop = 0.70 }
+			infrastructure = -6
+			naval_base = -6
+			fort = -6
+		}
+	}
+}
+
+### HYDROGEN NATIONS ###
+### Nuclear Strike (LOW CAPABILITY) ###
+country_event = {
+	id = 13314291
+	title = "$COUNTRY_ADJ$ Capital and Metros Struck by Hydrogen Bombs"
+	desc = "$CAPITAL$ and some cities have been annihilated."
+	picture = "nuclear_strike"
+	allow_multiple_instances = yes	
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "We must retaliate!"
+		prestige_factor = -0.06
+		add_country_modifier = { name = recently_attacked_nuke duration = 31 }
+		add_country_modifier = { name = nuke_fallout duration = 18250 }
+		set_country_flag = has_nuke_clouds
+		set_country_flag = nuked_low
+
+		any_owned = {
+			limit = { is_capital = yes }
+			add_crime = nuke_province
+			set_province_flag = disease
+			any_pop = { reduce_pop = 0.50 }
+			infrastructure = -2
+			naval_base = -2
+			fort = -2
+		}
+
+		any_owned = {
+			limit = {
+				AND = {
+					NOT = { is_capital = yes }
+					total_pops = 1000000
+				}
+			}
+			add_crime = nuke_province
+			set_province_flag = disease
+			any_pop = { reduce_pop = 0.50 }
+			infrastructure = -2
+			naval_base = -2
+			fort = -2
+		}
+	}
+}
+
+### Nuclear Strike (MEDIUM CAPABILITY) ###
+country_event = {
+	id = 13314301
+	title = "$COUNTRY_ADJ$ Capital and Cities Struck by Hydrogen Bombs"
+	desc = "$CAPITAL$ and most cities have been annihilated."
+	picture = "nuclear_strike"
+	allow_multiple_instances = yes
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "We must retaliate!"
+		prestige_factor = -0.125
+		add_country_modifier = { name = recently_attacked_nuke duration = 31 }
+		add_country_modifier = { name = nuke_fallout duration = 27375 }
+		set_country_flag = has_nuke_clouds
+		set_country_flag = nuked_medium
+
+		any_owned = {
+			limit = { is_capital = yes }
+			any_pop = { reduce_pop = 0.50 }
+			add_crime = nuke_province
+			set_province_flag = disease
+			infrastructure = -4
+			naval_base = -4
+			fort = -4
+		}
+
+		any_owned = {
+			limit = {
+				AND = {
+					NOT = { is_capital = yes }
+					total_pops = 500000
+					NOT = { total_pops = 1000000 }
+				}
+			}
+			any_pop = { reduce_pop = 0.60 }
+			add_crime = nuke_province
+			set_province_flag = disease
+			infrastructure = -2
+			naval_base = -2
+			fort = -2
+		}
+
+		any_owned = {
+			limit = {
+				AND = {
+					NOT = { is_capital = yes }
+					total_pops = 1000000
+				}
+			}
+			any_pop = { reduce_pop = 0.50 }
+			add_crime = nuke_province
+			set_province_flag = disease
+			infrastructure = -4
+			naval_base = -4
+			fort = -4
+		}
+	}
+}
+
+### Nuclear Strike (MAX CAPABILITY) ###
+country_event = {
+	id = 13314311
+	title = "$COUNTRY_ADJ$ Capital, Cities, and Towns Struck by Hydrogen Bombs"
+	desc = "$CAPITAL$, cities, major towns and smaller towns have been annihilated."
+	picture = "nuclear_strike"
+	allow_multiple_instances = yes
+	is_triggered_only = yes
+	major = yes
+	
+	option = {
+		name = "We must retaliate!"
+		prestige_factor = -0.25
+		add_country_modifier = { name = recently_attacked_nuke duration = 31 }
+		add_country_modifier = { name = nuke_fallout duration = 36500 }
+		set_country_flag = has_nuke_clouds
+		set_country_flag = nuked_high
+
+		any_owned = {
+			limit = { is_capital = yes }
+			any_pop = { reduce_pop = 0.50 }
+			add_crime = nuke_province
+			set_province_flag = disease
+			infrastructure = -6
+			naval_base = -6
+			fort = -6
+		}
+
+		any_owned = {
+			limit = {
+				AND = {
+					NOT = { is_capital = yes }
+					total_pops = 250000
+					NOT = { total_pops = 500000 }
+				}
+			}
+			any_pop = { reduce_pop = 0.70 }
+			add_crime = nuke_province
+			set_province_flag = disease
+			infrastructure = -2
+			naval_base = -2
+			fort = -2
+		}
+
+		any_owned = {
+			limit = {
+				AND = {
+					NOT = { is_capital = yes }
+					total_pops = 500000
+					NOT = { total_pops = 1000000 }
+				}
+			}
+			any_pop = { reduce_pop = 0.60 }
+			add_crime = nuke_province
+			set_province_flag = disease
+			infrastructure = -4
+			naval_base = -4
+			fort = -4
+		}
+
+		any_owned = {
+			limit = {
+				AND = {
+					NOT = { is_capital = yes }
+					total_pops = 1000000
+				}
+			}
+			add_crime = nuke_province
+			set_province_flag = disease
+			any_pop = { reduce_pop = 0.50 }
+			infrastructure = -6
+			naval_base = -6
+			fort = -6
+		}
+	}
 }
 
 ### Capitulation Ultimatum (Target Nations) ###
@@ -221,185 +399,353 @@ country_event = {
 	title = "The $FROMCOUNTRY_ADJ$ Nuclear Ultimatum"
 	desc = "If we do not agree to end the war with $FROMCOUNTRY$ on their terms, they will launch a nuclear strike!"
 	picture = "nuclear_ultimatum"
+	is_triggered_only = yes
 
-is_triggered_only = yes
-	
 	option = {
-name = "Accept the ultimatum"
+		name = "Accept the ultimatum"
+		prestige_factor = -0.25
+		any_owned = { change_controller = FROM }
 
-prestige_factor = -0.25
+		#Inform of country surrender
+		FROM = { country_event = 1331436 }
 
-any_owned = { change_controller = FROM }
-
-#Inform of country surrender
-FROM = { country_event = 1331436 }
-
-ai_chance = { 
-	factor = 0.9
-modifier = { factor = 0 war_policy = jingoism }
-modifier = { factor = 0 NOT = { war_exhaustion = 75 } }
-modifier = { factor = 0 NOT = { national_provinces_occupied = 0.70 } }
-}
+		ai_chance = { 
+			factor = 0.9
+			modifier = { factor = 0 war_policy = jingoism }
+			modifier = { factor = 0 NOT = { war_exhaustion = 75 } }
+			modifier = { factor = 0 NOT = { national_provinces_occupied = 0.70 } }
+		}
 	}
 
-option = {
-name = "Reject the ultimatum (Face Nuclear Armageddon)"
+	option = {
+		name = "Reject the ultimatum (Face Nuclear Armageddon)"
+		FROM = { country_event = 1331437 }
+		set_global_flag = nuclear_war
+		set_global_flag = nuke_shelters_activate
 
-FROM = { country_event = 1331437 }
-
-#FROM has High Nuke Cap and no ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_high }
-THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
-} }
-owner = {
-#High Damage
-country_event = 1331431
-	}
-}
-
-#FROM has Medium Nuke Cap and no ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_medium }
-THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } } 
-} }
-owner = {
-#Medium Damage
-country_event = 1331430
-	}
-}
-
-#FROM has Low Nuke Cap and no ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_low }
-THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
-} }
-owner = {
-#Low Damage
-country_event = 1331429
-	}
-}
-
-####### ABM #######
-
-#FROM has High Nuke Cap and THIS has High ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_high } 
-THIS = { has_country_modifier = abmhigh }
-} }
-owner = {
-#Medium Damage
-country_event = 1331430
-	}
-}
-
-#FROM has High Nuke Cap and THIS has Medium ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_high } 
-THIS = { has_country_modifier = abmmedium }
-} }
-owner = {
-#High Damage
-country_event = 1331431
-	}
-}
-
-#FROM has High Nuke Cap and THIS has Low ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_high } 
-THIS = { has_country_modifier = abmlow }
-} }
-owner = {
-#High Damage
-country_event = 1331431
-	}
-}
-
-###
-
-#FROM has Medium Nuke Cap and THIS has High ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_medium } 
-THIS = { has_country_modifier = abmhigh }
-} }
-owner = {
-#Low Damage
-country_event = 1331429
-	}
-}
-
-#FROM has Medium Nuke Cap and THIS has Medium ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_medium } 
-THIS = { has_country_modifier = abmmedium }
-} }
-owner = {
-#Medium Damage
-country_event = 1331430
-	}
-}
-
-#FROM has Medium Nuke Cap and THIS has Low ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_medium } 
-THIS = { has_country_modifier = abmlow }
-} }
-owner = {
-#Medium Damage
-country_event = 1331430
-	}
-}
-
-###
-
-#FROM has Low Nuke Cap and THIS has High ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_low } 
-THIS = { has_country_modifier = abmhigh }
-} }
-owner = {
-#No Damage
-country_event = 1331435
-	}
-}
-
-#FROM has Low Nuke Cap and THIS has Medium ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_low } 
-THIS = { has_country_modifier = abmmedium }
-} }
-owner = {
-#Low Damage
-country_event = 1331429
-	}
-}
-
-#FROM has Low Nuke Cap and THIS has Low ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_low } 
-THIS = { has_country_modifier = abmlow }
-} }
-owner = {
-#Low Damage
-country_event = 1331429
-	}
-}
-
-ai_chance = { factor = 0.1 }
+		#FROM has High Nuke Cap and THIS has no ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
+				}
+			}
+			owner = {
+				#High Atomic Damage
+				country_event = 1331431
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
+				}
+			}
+			owner = {
+				#High Hydrogen Damage
+				country_event = 13314311
+			}
 		}
 
+		#FROM has Medium Nuke Cap and THIS has no ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } } 
+				}
+			}
+			owner = {
+				#Medium Atomic Damage
+				country_event = 1331430
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } } 
+				}
+			}
+			owner = {
+				#Medium Hydrogen Damage
+				country_event = 13314301
+			}
+		}
+
+		#FROM has Low Nuke Cap and THIS has no ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
+				}
+			}
+			owner = {
+				#Low Atomic Damage
+				country_event = 1331429
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
+				}
+			}
+			owner = {
+				#Low Hydrogen Damage
+				country_event = 13314291
+			}
+		}
+
+		####### ABM #######
+		### High Nuke Cap
+		
+		#FROM has High Nuke Cap and THIS has High ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#Medium Atomic Damage
+				country_event = 1331430
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#Medium Hydrogen Damage
+				country_event = 13314301
+			}
+		}
+
+		#FROM has High Nuke Cap and THIS has Medium ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#High Atomic Damage
+				country_event = 1331431
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#High Hydrogen Damage
+				country_event = 13314311
+			}
+		}
+
+		#FROM has High Nuke Cap and THIS has Low ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#High Atomic Damage
+				country_event = 1331431
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#High Hydrogen Damage
+				country_event = 13314311
+			}
+		}
+
+		### Medium Nuke Cap
+
+		#FROM has Medium Nuke Cap and THIS has High ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#Low Atomic Damage
+				country_event = 1331429
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#Low Hydrogen Damage
+				country_event = 13314291
+			}
+		}
+
+		#FROM has Medium Nuke Cap and THIS has Medium ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#Medium Atomic Damage
+				country_event = 1331430
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#Medium Hydrogen Damage
+				country_event = 13314301
+			}
+		}
+
+		#FROM has Medium Nuke Cap and THIS has Low ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#Medium Atomic Damage
+				country_event = 1331430
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#Medium Hydrogen Damage
+				country_event = 13314301
+			}
+		}
+
+		### Low Nuke Cap
+
+		#FROM has Low Nuke Cap and THIS has High ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#No Damage
+				country_event = 1331435
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#No Damage
+				country_event = 1331435
+			}
+		}
+
+		#FROM has Low Nuke Cap and THIS has Medium ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#Low Atomic Damage
+				country_event = 1331429
+			}
+		}
+		#FROM has Low Nuke Cap and THIS has Medium ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#Low Hydrogen Damage
+				country_event = 13314291
+			}
+		}
+
+		#FROM has Low Nuke Cap and THIS has Low ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#Low Atomic Damage
+				country_event = 1331429
+			}
+		}
+		#FROM has Low Nuke Cap and THIS has Low ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#Low Hydrogen Damage
+				country_event = 13314291
+			}
+		}
+
+		ai_chance = { factor = 0.1 }
+	}
 }
 
 ### White Peace Ultimatum (Target Nations) ###
@@ -408,203 +754,354 @@ country_event = {
 	title = "The $FROMCOUNTRY_ADJ$ Nuclear Ultimatum"
 	desc = "If we do not agree to end the war with $FROMCOUNTRY$ in a white peace, they will launch a nuclear strike!"
 	picture = "nuclear_ultimatum"
-
-is_triggered_only = yes
+	is_triggered_only = yes
 	
 	option = {
-name = "Accept the ultimatum"
+		name = "Accept the ultimatum"
+		war_exhaustion = 50
+		badboy = -5
+		prestige_factor = -0.05
+		FROM = { end_war = THIS }
 
-war_exhaustion = 50
-badboy = -5
+		#Inform everyone of armistice
+		FROM = { country_event = 1331438 }
 
-prestige_factor = -0.05
-FROM = { end_war = THIS }
-
-#Inform everyone of armistice
-FROM = { country_event = 1331438 }
-
-ai_chance = { 
-	factor = 0.9
-modifier = { factor = 0 war_policy = jingoism }
-}
+		ai_chance = { 
+			factor = 0.9
+			modifier = { factor = 0 war_policy = jingoism }
 		}
-
-option = {
-name = "Reject the ultimatum (Face Nuclear Armageddon)"
-
-FROM = { country_event = 1331437 }
-
-#FROM has High Nuke Cap and no ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_high }
-THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } } 
-} }
-owner = {
-#High Damage
-country_event = 1331431
 	}
-}
 
-#FROM has Medium Nuke Cap and no ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_medium }
-THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
-} }
-owner = {
-#Medium Damage
-country_event = 1331430
-	}
-}
-
-#FROM has Low Nuke Cap and no ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_low }
-THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
-} }
-owner = {
-#Low Damage
-country_event = 1331429
-	}
-}
-
-####### ABM #######
-
-#FROM has High Nuke Cap and THIS has High ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_high } 
-THIS = { has_country_modifier = abmhigh }
-} }
-owner = {
-#Medium Damage
-country_event = 1331430
-	}
-}
-
-#FROM has High Nuke Cap and THIS has Medium ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_high } 
-THIS = { has_country_modifier = abmmedium }
-} }
-owner = {
-#High Damage
-country_event = 1331431
-	}
-}
-
-#FROM has High Nuke Cap and THIS has Low ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_high } 
-THIS = { has_country_modifier = abmlow }
-} }
-owner = {
-#High Damage
-country_event = 1331431
-	}
-}
-
-###
-
-#FROM has Medium Nuke Cap and THIS has High ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_medium } 
-THIS = { has_country_modifier = abmhigh }
-} }
-owner = {
-#Low Damage
-country_event = 1331429
-	}
-}
-
-#FROM has Medium Nuke Cap and THIS has Medium ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_medium } 
-THIS = { has_country_modifier = abmmedium }
-} }
-owner = {
-#Medium Damage
-country_event = 1331430
-	}
-}
-
-#FROM has Medium Nuke Cap and THIS has Low ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_medium } 
-THIS = { has_country_modifier = abmlow }
-} }
-owner = {
-#Medium Damage
-country_event = 1331430
-	}
-}
-
-###
-
-#FROM has Low Nuke Cap and THIS has High ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_low } 
-THIS = { has_country_modifier = abmhigh }
-} }
-owner = {
-#No Damage
-country_event = 1331435
-	}
-}
-
-#FROM has Low Nuke Cap and THIS has Medium ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_low } 
-THIS = { has_country_modifier = abmmedium }
-} }
-owner = {
-#Low Damage
-country_event = 1331429
-	}
-}
-
-#FROM has Low Nuke Cap and THIS has Low ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_low } 
-THIS = { has_country_modifier = abmlow }
-} }
-owner = {
-#Low Damage
-country_event = 1331429
-	}
-}
-
-ai_chance = { factor = 0.1 }
-		}
-
-}
-
-### Nuclear Strike (Target Nations) ###
-country_event = {
-	id = 1331433
-	title = "Struck by $FROMCOUNTRY_ADJ$ Nuclear Weapons"
-	desc = "We have had our population centres destroyed by $FROMCOUNTRY$'s nuclear bombs."
-	picture = "nuclear_strike"
-
-is_triggered_only = yes
-	
-	major = yes
 	option = {
-name = "Terrible!"
-prestige = -50
-any_pop = { militancy = 10 }
+		name = "Reject the ultimatum (Face Nuclear Armageddon)"
+		FROM = { country_event = 1331437 }
+		set_global_flag = nuclear_war
+		set_global_flag = nuke_shelters_activate
+
+		#FROM has High Nuke Cap and THIS has no ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
+				}
+			}
+			owner = {
+				#High Atomic Damage
+				country_event = 1331431
+			}
 		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
+				}
+			}
+			owner = {
+				#High Hydrogen Damage
+				country_event = 13314311
+			}
+		}
+
+		#FROM has Medium Nuke Cap and THIS has no ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } } 
+				}
+			}
+			owner = {
+				#Medium Atomic Damage
+				country_event = 1331430
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } } 
+				}
+			}
+			owner = {
+				#Medium Hydrogen Damage
+				country_event = 13314301
+			}
+		}
+
+		#FROM has Low Nuke Cap and THIS has no ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
+				}
+			}
+			owner = {
+				#Low Atomic Damage
+				country_event = 1331429
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
+				}
+			}
+			owner = {
+				#Low Hydrogen Damage
+				country_event = 13314291
+			}
+		}
+
+		####### ABM #######
+		### High Nuke Cap
+		
+		#FROM has High Nuke Cap and THIS has High ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#Medium Atomic Damage
+				country_event = 1331430
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#Medium Hydrogen Damage
+				country_event = 13314301
+			}
+		}
+
+		#FROM has High Nuke Cap and THIS has Medium ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#High Atomic Damage
+				country_event = 1331431
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#High Hydrogen Damage
+				country_event = 13314311
+			}
+		}
+
+		#FROM has High Nuke Cap and THIS has Low ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#High Atomic Damage
+				country_event = 1331431
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#High Hydrogen Damage
+				country_event = 13314311
+			}
+		}
+
+		### Medium Nuke Cap
+
+		#FROM has Medium Nuke Cap and THIS has High ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#Low Atomic Damage
+				country_event = 1331429
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#Low Hydrogen Damage
+				country_event = 13314291
+			}
+		}
+
+		#FROM has Medium Nuke Cap and THIS has Medium ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#Medium Atomic Damage
+				country_event = 1331430
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#Medium Hydrogen Damage
+				country_event = 13314301
+			}
+		}
+
+		#FROM has Medium Nuke Cap and THIS has Low ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#Medium Atomic Damage
+				country_event = 1331430
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#Medium Hydrogen Damage
+				country_event = 13314301
+			}
+		}
+
+		### Low Nuke Cap
+
+		#FROM has Low Nuke Cap and THIS has High ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#No Damage
+				country_event = 1331435
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#No Damage
+				country_event = 1331435
+			}
+		}
+
+		#FROM has Low Nuke Cap and THIS has Medium ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#Low Atomic Damage
+				country_event = 1331429
+			}
+		}
+		#FROM has Low Nuke Cap and THIS has Medium ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#Low Hydrogen Damage
+				country_event = 13314291
+			}
+		}
+
+		#FROM has Low Nuke Cap and THIS has Low ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#Low Atomic Damage
+				country_event = 1331429
+			}
+		}
+		#FROM has Low Nuke Cap and THIS has Low ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#Low Hydrogen Damage
+				country_event = 13314291
+			}
+		}
+
+		ai_chance = { factor = 0.1 }
 	}
+}
 
 ### Nuclear Second Strike Launch by Target Nation ###
 country_event = {
@@ -612,11 +1109,8 @@ country_event = {
 	title = "$FROMCOUNTRY_ADJ$ Nuclear Retaliation"
 	desc = "We have had our population centres destroyed by $FROMCOUNTRY$'s nuclear bombs."
 	picture = "nuclear_strike"
-
 	allow_multiple_instances = yes
-
 	is_triggered_only = yes
-	
 	major = yes
 	
 	option = {
@@ -625,158 +1119,327 @@ country_event = {
 		war_exhaustion = 50
 		any_pop = { militancy = 10 }
 		
-#FROM has High Nuke Cap and no ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_high }
-THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } } 
-} }
-owner = {
-#High Damage
-country_event = 1331431
-	}
-}
+		#FROM has High Nuke Cap and THIS has no ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
+				}
+			}
+			owner = {
+				#High Atomic Damage
+				country_event = 1331431
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
+				}
+			}
+			owner = {
+				#High Hydrogen Damage
+				country_event = 13314311
+			}
+		}
 
-#FROM has Medium Nuke Cap and no ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_medium }
-THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
-} }
-owner = {
-#Medium Damage
-country_event = 1331430
-	}
-}
+		#FROM has Medium Nuke Cap and THIS has no ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } } 
+				}
+			}
+			owner = {
+				#Medium Atomic Damage
+				country_event = 1331430
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } } 
+				}
+			}
+			owner = {
+				#Medium Hydrogen Damage
+				country_event = 13314301
+			}
+		}
 
-#FROM has Low Nuke Cap and no ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_low }
-THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
-} }
-owner = {
-#Low Damage
-country_event = 1331429
-	}
-}
+		#FROM has Low Nuke Cap and THIS has no ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
+				}
+			}
+			owner = {
+				#Low Atomic Damage
+				country_event = 1331429
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation }
+					THIS = { NOT = { OR = { has_country_modifier = abmlow has_country_modifier = abmmedium has_country_modifier = abmhigh } } }
+				}
+			}
+			owner = {
+				#Low Hydrogen Damage
+				country_event = 13314291
+			}
+		}
 
-####### ABM #######
-
-#FROM has High Nuke Cap and THIS has High ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_high } 
-THIS = { has_country_modifier = abmhigh }
-} }
-owner = {
-#Medium Damage
-country_event = 1331430
-	}
-}
-
-#FROM has High Nuke Cap and THIS has Medium ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_high } 
-THIS = { has_country_modifier = abmmedium }
-} }
-owner = {
-#High Damage
-country_event = 1331431
-	}
-}
-
-#FROM has High Nuke Cap and THIS has Low ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_high } 
-THIS = { has_country_modifier = abmlow }
-} }
-owner = {
-#High Damage
-country_event = 1331431
-	}
-}
-
-###
-
-#FROM has Medium Nuke Cap and THIS has High ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_medium } 
-THIS = { has_country_modifier = abmhigh }
-} }
-owner = {
-#Low Damage
-country_event = 1331429
-	}
-}
-
-#FROM has Medium Nuke Cap and THIS has Medium ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_medium } 
-THIS = { has_country_modifier = abmmedium }
-} }
-owner = {
-#Medium Damage
-country_event = 1331430
-	}
-}
-
-#FROM has Medium Nuke Cap and THIS has Low ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_medium } 
-THIS = { has_country_modifier = abmlow }
-} }
-owner = {
-#Medium Damage
-country_event = 1331430
-	}
-}
-
-###
-
-#FROM has Low Nuke Cap and THIS has High ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_low } 
-THIS = { has_country_modifier = abmhigh }
-} }
-owner = {
-#No Damage
-country_event = 1331435
-	}
-}
-
-#FROM has Low Nuke Cap and THIS has Medium ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_low } 
-THIS = { has_country_modifier = abmmedium }
-} }
-owner = {
-#Low Damage
-country_event = 1331429
-	}
-}
-
-#FROM has Low Nuke Cap and THIS has Low ABM
-random_owned = {
-limit = { owner = { 
-FROM = { has_country_modifier = nuclear_cap_low } 
-THIS = { has_country_modifier = abmlow }
-} }
-owner = {
-#Low Damage
-country_event = 1331429
-	}
-}
+		####### ABM #######
+		### High Nuke Cap
 		
+		#FROM has High Nuke Cap and THIS has High ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#Medium Atomic Damage
+				country_event = 1331430
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#Medium Hydrogen Damage
+				country_event = 13314301
+			}
+		}
+
+		#FROM has High Nuke Cap and THIS has Medium ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#High Atomic Damage
+				country_event = 1331431
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#High Hydrogen Damage
+				country_event = 13314311
+			}
+		}
+
+		#FROM has High Nuke Cap and THIS has Low ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#High Atomic Damage
+				country_event = 1331431
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#High Hydrogen Damage
+				country_event = 13314311
+			}
+		}
+
+		### Medium Nuke Cap
+
+		#FROM has Medium Nuke Cap and THIS has High ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#Low Atomic Damage
+				country_event = 1331429
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#Low Hydrogen Damage
+				country_event = 13314291
+			}
+		}
+
+		#FROM has Medium Nuke Cap and THIS has Medium ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#Medium Atomic Damage
+				country_event = 1331430
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#Medium Hydrogen Damage
+				country_event = 13314301
+			}
+		}
+
+		#FROM has Medium Nuke Cap and THIS has Low ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#Medium Atomic Damage
+				country_event = 1331430
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#Medium Hydrogen Damage
+				country_event = 13314301
+			}
+		}
+
+		### Low Nuke Cap
+
+		#FROM has Low Nuke Cap and THIS has High ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#No Damage
+				country_event = 1331435
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmhigh }
+				}
+			}
+			owner = {
+				#No Damage
+				country_event = 1331435
+			}
+		}
+
+		#FROM has Low Nuke Cap and THIS has Medium ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#Low Atomic Damage
+				country_event = 1331429
+			}
+		}
+		#FROM has Low Nuke Cap and THIS has Medium ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmmedium }
+				}
+			}
+			owner = {
+				#Low Hydrogen Damage
+				country_event = 13314291
+			}
+		}
+
+		#FROM has Low Nuke Cap and THIS has Low ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#Low Atomic Damage
+				country_event = 1331429
+			}
+		}
+		#FROM has Low Nuke Cap and THIS has Low ABM
+		random_owned = {
+			limit = {
+				owner = { 
+					FROM = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation } 
+					THIS = { has_country_modifier = abmlow }
+				}
+			}
+			owner = {
+				#Low Hydrogen Damage
+				country_event = 13314291
+			}
+		}
 	}
-	
 }
 
 ### Nuclear Strike Successfully deflected ###
@@ -785,11 +1448,8 @@ country_event = {
 	title = "Deflected Nuclear Strikes"
 	desc = "Our ABM system has successfully deflected all nuclear warheads from our enemies."
 	picture = "nuclear_deflection_abm"
-
 	allow_multiple_instances = yes
-
 	is_triggered_only = yes
-	
 	major = yes
 
 	option = {
@@ -799,7 +1459,6 @@ country_event = {
 		any_pop = { militancy = -10 }
 		add_country_modifier = { name = recently_attacked_nuke duration = 31 }
 	}
-
 }
 
 ### Capitulation accepted ###
@@ -808,11 +1467,8 @@ country_event = {
 	title = "$FROMCOUNTRY$ Surrenders!"
 	desc = EVTDESC1331436
 	picture = "nuclear_deflection_abm"
-
 	allow_multiple_instances = yes
-
 	major = yes
-
 	is_triggered_only = yes
 	
 	option = {
@@ -820,9 +1476,8 @@ country_event = {
 		prestige_factor = 0.025
 		war_exhaustion = -10
 		any_pop = { militancy = -2.5 }
-any_owned = { limit = { controlled_by = FROM } change_controller = THIS }
-		}
-
+		any_owned = { limit = { controlled_by = FROM } change_controller = THIS }
+	}
 }
 
 ### Launched Nuclear Strike ###
@@ -831,20 +1486,15 @@ country_event = {
 	title = "Nuclear Strike on $FROMCOUNTRY$"
 	desc = EVTDESC1331437
 	picture = "nuclear_deflection_abm"
-
 	allow_multiple_instances = yes
-
 	is_triggered_only = yes
-	
 	major = yes
-
+	
 	option = {
 		name = "This is it!"
-		}
-
+		add_country_modifier = { name = nukes_used_recently duration = 1825 }
+	}
 }
-
-
 
 #Use Tactical Nukes
 country_event = {
@@ -852,31 +1502,22 @@ country_event = {
 	title = "Struck by $FROMCOUNTRY_ADJ$ Tactical Nuclear Weapons"
 	desc = EVTDESC1610031
 	picture = "disarm_tactical_nukes"
-	
 	major = yes
-
 	is_triggered_only = yes
 
 	option = {
 		name = "We must retaliate!"
 		prestige_factor = -0.025
-
-		FROM = { set_country_flag = has_nuke_clouds }
-
-		set_country_flag = has_nuke_clouds
-
 		war_exhaustion = 50
-
 		any_pop = { limit = { type = soldiers } reduce_pop = 0.15 }
 
 		any_owned = { 
-		limit = { units_in_province = 1 } 
-		set_province_flag = disease
-		add_province_modifier = { name = tactical_nuked duration = 1825 }
-		any_pop = { reduce_pop = 0.95 }
-		infrastructure = -2
-		naval_base = -2
-		fort = -2
+			limit = { units_in_province = 1 }
+			add_province_modifier = { name = tactical_nuked duration = 1825 }
+			any_pop = { reduce_pop = 0.95 }
+			infrastructure = -2
+			naval_base = -2
+			fort = -2
 		}
 	}
 }
@@ -887,17 +1528,770 @@ country_event = {
 	title = "$FROMCOUNTRY_ADJ$ Accepts Ceasefire"
 	desc = EVTDESC1331438
 	picture = "nuclear_deflection_abm"
-
 	allow_multiple_instances = yes
-
 	is_triggered_only = yes
-	
 	major = yes
 
 	option = {
-name = "Nuclear war with $FROMCOUNTRY$ has been avoided"
-relation = { who = FROM value = 100 }
-FROM = { set_country_flag = nobel_peace_prize_recipient }
+		name = "Nuclear war with $FROMCOUNTRY$ has been avoided"
+		relation = { who = FROM value = 100 }
+		FROM = { set_country_flag = nobel_peace_prize_recipient }
+	}
+}
+
+#Nuclear False Warning - USA
+country_event = {
+	id = 1410153
+	title = "Nuclear Attack Imminent"
+	desc = EVTDESC1410153
+	picture = "1410153"
+	
+	trigger = { 
+		tag = USA
+		OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
+		USA = {
+			OR = { #A non-socialist type of democracy or a right-wing authoritarian state
+				AND = {
+					has_country_flag = democratic_state
+					NOT = { government = socialist_democracy }
+				}
+				AND = {
+					has_country_flag = authoritarian_state
+					NOT = { OR = { ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } }
+				}
+			}
+		}
+		RUS = { OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation } }
+		assymetric_warfare = 1
+		RUS = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+		has_country_modifier = cold_war_high
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "Unleash Nuclear Armaggeddon!"
+		set_global_flag = nuclear_war
+		set_global_flag = nuke_shelters_activate
+		war = { 
+			target = RUS
+			attacker_goal = { casus_belli = dismantle_cb } 
+			defender_goal = { casus_belli = dismantle_cb }
+			call_ally = yes
+		}
+		add_country_modifier = { name = nukes_used_recently duration = 1825 }
+		
+		#Warsaw Pact gets nuked
+		#High Nuke Capability
+		random_owned = {
+			limit = { owner = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation } }
+			owner = {
+				any_country = {
+					limit = { has_country_modifier = warsaw_pact }
+					country_event = 1331431
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation } }
+			owner = {
+				any_country = {
+					limit = { has_country_modifier = warsaw_pact }
+					country_event = 13314311
+				}
+			}
+		}
+		
+		#Medium Nuke Capability
+		random_owned = {
+			limit = { owner = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation } }
+			owner = {
+				any_country = {
+					limit = { has_country_modifier = warsaw_pact }
+					country_event = 1331430
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation } }
+			owner = {
+				any_country = {
+					limit = { has_country_modifier = warsaw_pact }
+					country_event = 13314301
+				}
+			}
+		}
+		
+		#Low Nuke Capability
+		random_owned = {
+			limit = { owner = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation } }
+			owner = {
+				any_country = {
+					limit = { has_country_modifier = warsaw_pact }
+					country_event = 1331429
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation } }
+			owner = {
+				any_country = {
+					limit = { has_country_modifier = warsaw_pact }
+					country_event = 13314291
+				}
+			}
 		}
 
+		ai_chance = { factor = 0.01 }
+	}
+
+	option = {
+		name = "Ignore it"
+		ai_chance = { factor = 0.99 }
+	}
+}
+
+#Nuclear False Warning - RUS
+country_event = {
+	id = 1410154
+	title = "Nuclear Attack Imminent"
+	desc = EVTDESC1410153
+	picture = "1410154"
+	
+	trigger = { 
+		tag = RUS
+		OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
+		USA = { OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation } }
+		USA = {
+			OR = { #A non-socialist type of democracy or a right-wing authoritarian state
+				AND = {
+					has_country_flag = democratic_state
+					NOT = { government = socialist_democracy }
+				}
+				AND = {
+					has_country_flag = authoritarian_state
+					NOT = { OR = { ruling_party_ideology = socialist ruling_party_ideology = communist ruling_party_ideology = communist_social } }
+				}
+			}
+		}
+		assymetric_warfare = 1
+		RUS = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+		has_country_modifier = cold_war_high
+	}
+
+	mean_time_to_happen = { 
+		months = 60
+	}
+
+	option = {
+		name = "Unleash Nuclear Armaggeddon!"
+		set_global_flag = nuclear_war
+		set_global_flag = nuke_shelters_activate
+		war = { 
+			target = USA
+			attacker_goal = { casus_belli = dismantle_cb } 
+			defender_goal = { casus_belli = dismantle_cb }
+			call_ally = yes
+		}
+		add_country_modifier = { name = nukes_used_recently duration = 1825 }
+		
+		### NATO gets nuked ###
+		#High Nuke Capability
+		random_owned = {
+			limit = { owner = { has_country_modifier = nuclear_cap_high has_country_modifier = atomic_nation } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = nato_flag_member }
+					country_event = 1331431
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { has_country_modifier = nuclear_cap_high has_country_modifier = hydrogen_nation } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = nato_flag_member }
+					country_event = 13314311
+				}
+			}
+		}
+		
+		#Medium Nuke Capability
+		random_owned = {
+			limit = { owner = { has_country_modifier = nuclear_cap_medium has_country_modifier = atomic_nation } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = nato_flag_member }
+					country_event = 1331430
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { has_country_modifier = nuclear_cap_medium has_country_modifier = hydrogen_nation } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = nato_flag_member }
+					country_event = 13314301
+				}
+			}
+		}
+		
+		#Low Nuke Capability
+		random_owned = {
+			limit = { owner = { has_country_modifier = nuclear_cap_low has_country_modifier = atomic_nation } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = nato_flag_member }
+					country_event = 1331429
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { has_country_modifier = nuclear_cap_low has_country_modifier = hydrogen_nation } }
+			owner = {
+				any_country = {
+					limit = { has_country_flag = nato_flag_member }
+					country_event = 13314291
+				}
+			}
+		}
+
+		ai_chance = { factor = 0.01 }
+	}
+
+	option = {
+		name = "Ignore it"
+		ai_chance = { factor = 0.99 }
+	}
+}
+
+#Dictatorship after a nuclear strike
+country_event = {
+	id = 1610133
+	title = "The Continuity of Government"
+	desc = EVTDESC1610133
+	picture = "post_nuke_cog"
+
+	trigger = {
+	
+		#Democratic government
+		OR = {
+			government = democracy
+			government = democracy1
+			
+			government = hms_government
+			government = hms_government1
+			
+			government = socialist_democracy
+		}
+		
+		is_vassal = no
+	
+		#Country has been hit by nuclear weapons
+		has_country_modifier = nuke_fallout
+		
+		#Has some proper Civil Defence
+		OR = { 
+			has_country_modifier = cdhigh 
+			has_country_modifier = cdmedium 
+		}
+		
+		#Civil Defence shelters activated
+		has_country_flag = nuke_protection
+		
+		NOT = { has_country_flag = post_nuke_government }
+	}
+
+	mean_time_to_happen = { 
+		months = 0.1
+	}
+
+	option = {
+		name = "Grant the regional administrators absolute power"
+		
+		set_country_flag = post_nuke_government
+		
+		random_owned = {
+			limit = { owner = { OR = { government = hms_government government = hms_government1 } } }
+			owner = { government = absolute_monarchy }
+		}
+		
+		random_owned = {
+			limit = { owner = { OR = { government = democracy government = democracy1 } } }
+			owner = { government = presidential_dictatorship }
+		}
+		
+		random_owned = {
+			limit = { owner = { government = socialist_democracy } }
+			owner = { government = proletarian_dictatorship }
+		}
+		
+		#Set dictatorial reform
+		political_reform = none_voting 
+		political_reform = ruling_party_opinion
+		political_reform = no_meetings
+		political_reform = politicised_service
+		political_reform = state_publishing
+		political_reform = no_trade_unions
+		political_reform = parties_not_allowed
+		political_reform = open_immigration
+		political_reform = mandatory_service
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "Try to preserve the pre-war order"
+		
+		set_country_flag = post_nuke_government
+		
+		add_country_modifier = { name = political_strife duration = 3650 }
+		
+		any_owned = {
+			add_province_modifier = { name = generic_uprising duration = 730 }
+		}
+		
+		ai_chance = { factor = 0.1 }
+	}
+
+}
+
+#Civil Defence - Nuke Protection - Start
+country_event = {
+	id = 1412169
+	title = "Nuclear Shelters Activated"
+	desc = EVTDESC1412169
+	picture = "nuclear_shelter"
+
+	trigger = {
+	
+		#Country has been hit by nuclear weapons or its fallout
+		OR = {
+			has_country_modifier = nuke_fallout
+			has_country_modifier = nuke_neighbour_fallout
+			has_country_modifier = nuke_distant_fallout
+		}
+		
+		#Has some proper Civil Defence
+		OR = { 
+			has_country_modifier = cdhigh 
+			has_country_modifier = cdmedium 
+		}
+		
+		NOT = { has_country_flag = nuke_protection }
+	}
+
+	option = {
+		name = "A moment of silence for those who didn't make it"
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = cdhigh
+				}
+			}
+			owner = {
+				set_country_flag = good_nuke_shelters
+			}
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					has_country_modifier = cdmedium
+				}
+			}
+			owner = {
+				set_country_flag = okay_nuke_shelters
+			}
+		}
+		set_country_flag = nuke_protection
+	}
+
+}
+
+#Civil Defence - No Nuke Protection - Total Anarchy!
+country_event = {
+	id = 14121691
+	title = "Anarchy in $COUNTRY$"
+	desc = EVTDESC14121691
+	picture = "nuclear_fallout_anarchy"
+
+	trigger = { 
+		#Country has been hit by nuclear weapons or its fallout
+		OR = {
+			has_country_modifier = nuke_fallout
+			has_country_modifier = nuke_neighbour_fallout
+			has_country_modifier = nuke_distant_fallout
+		}
+		
+		#Has no Civil Defence
+		NOT = { 
+			OR = { 
+				has_country_modifier = cdhigh 
+				has_country_modifier = cdmedium 
+			}
+		}
+		
+		NOT = { 
+			has_country_modifier = nuclear_anarchy 
+		}
+		
+		NOT = { has_country_flag = nuke_protection }
+	}
+	
+	mean_time_to_happen = { 
+		months = 6
+		modifier = { factor = 0.1 NOT = { has_country_modifier = nuclear_anarchy } }
+	}
+
+	option = {
+		name = "It's every man for himself!"
+		
+		add_country_modifier = { name = nuclear_anarchy duration = 7300 }
+
+		#All provinces get transferred to rebels
+		any_owned = {
+			limit = { controlled_by = THIS }
+			change_controller = REB
+		}
+
+	}
+
+}
+
+#Civil Defence - states occassionally fall to rebels
+country_event = {
+	id = 14121692
+	title = "Government Control Weakens"
+	desc = EVTDESC14121692
+	picture = "nuclear_fallout_anarchy_2"
+
+	trigger = { 
+	
+		#Country has been hit by nuclear weapons or its fallout
+		OR = {
+			has_country_modifier = nuke_fallout
+			has_country_modifier = nuke_neighbour_fallout
+			has_country_modifier = nuke_distant_fallout
+		}
+		
+		any_owned_province = { 
+			controlled_by = THIS
+			average_militancy = 9
+		}
+		
+		#Has weak civil defence
+		NOT = { has_country_modifier = cdhigh }
+		
+		#Post nuclear government
+		has_country_flag = nuke_protection
+	}
+	
+	mean_time_to_happen = { 
+		months = 6
+	}
+
+	option = {
+		name = "At this rate we might lose the whole country!"
+		prestige_factor = -0.01
+		
+		#Transfer states to rebels
+		any_owned = { 
+			limit = {
+				controlled_by = THIS
+				average_militancy = 9
+			}
+			state_scope = {
+				any_owned = {
+					limit = { 
+						is_state_capital = no 
+						controlled_by = THIS 
+					}
+					change_controller = REB
+				}
+			}
+		}
+	}
+
+}
+
+#Civil Defence - End Nuke Protection
+country_event = {
+	id = 1412170
+	title = "Nuclear Fallout has Subsided"
+	desc = "It is now safe to leave the nuclear shelters, if there were any, so our population can start to slowly restore the nuclear hit wasteland back to its glory days."
+	picture = "nuclear_shelter_clear"
+
+	trigger = { 
+		#No more nuke damage
+		NOT = { has_global_flag = nuclear_winter }
+		
+		has_country_flag = nuke_protection
+	}
+
+	option = {
+		name = "We will rebuild the $COUNTRY_ADJ$ civilisation!"
+		clr_country_flag = nuke_protection
+		clr_country_flag = post_nuke_government
+		clr_country_flag = good_nuke_shelters
+		clr_country_flag = okay_nuke_shelters
+		clr_global_flag = nuke_shelters_activate
+		any_owned = {
+			remove_province_modifier = nuke_shelter
+		}
+	}
+
+}
+
+#Nuclear fallout spread - Immediate Neighbours
+country_event = {
+	id = 1412056
+	title = nuke_fallout_spread
+	desc = "A nation that was nuked is generating significant nuclear fallout and it has spread to $COUNTRY$ due to our proximity to them."
+	picture = "fallout_spreads"
+
+	trigger = {
+		NOT = { any_owned_province = { has_crime = nuke_province } }
+		NOT = { has_country_modifier = nuke_fallout }
+		NOT = { has_country_modifier = nuke_neighbour_fallout }
+		NOT = { has_country_modifier = nuke_distant_fallout }
+		any_neighbor_country = { has_country_modifier = nuke_fallout }
+	}
+
+	option = {
+		name = "Brace ourselves for the fallout"
+		set_global_flag = nuke_fallout_spread
+		prestige = -50
+		add_country_modifier = { name = nuke_neighbour_fallout duration = 3650 }
+		random_owned = {
+			limit = { owner = { capital_scope = { continent = europe } } }
+			owner = {
+				any_country = {
+					limit = { capital_scope = { continent = europe } NOT = { has_country_modifier = nuke_neighbour_fallout has_country_modifier = nuke_fallout } }
+					country_event = 1412056
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { capital_scope = { continent = north_america } } }
+			owner = {
+				any_country = {
+					limit = { capital_scope = { continent = north_america } NOT = { has_country_modifier = nuke_neighbour_fallout has_country_modifier = nuke_fallout } }
+					country_event = 1412056
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { capital_scope = { continent = mena } } }
+			owner = {
+				any_country = {
+					limit = { capital_scope = { continent = mena } NOT = { has_country_modifier = nuke_neighbour_fallout has_country_modifier = nuke_fallout } }
+					country_event = 1412056
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { capital_scope = { continent = south_america } } }
+			owner = {
+				any_country = {
+					limit = { capital_scope = { continent = south_america } NOT = { has_country_modifier = nuke_neighbour_fallout has_country_modifier = nuke_fallout } }
+					country_event = 1412056
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { capital_scope = { continent = oceania } } }
+			owner = {
+				any_country = {
+					limit = { capital_scope = { continent = oceania } NOT = { has_country_modifier = nuke_neighbour_fallout has_country_modifier = nuke_fallout } }
+					country_event = 1412056
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { capital_scope = { continent = africa } } }
+			owner = {
+				any_country = {
+					limit = { capital_scope = { continent = africa } NOT = { has_country_modifier = nuke_neighbour_fallout has_country_modifier = nuke_fallout } }
+					country_event = 1412056
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { capital_scope = { continent = asia } } }
+			owner = {
+				any_country = {
+					limit = { capital_scope = { continent = asia } NOT = { has_country_modifier = nuke_neighbour_fallout has_country_modifier = nuke_fallout } }
+					country_event = 1412056
+				}
+			}
+		}
+	}
+}
+
+#Nuclear fallout spread - General world at large
+country_event = {
+	id = 1412057
+	title = nuke_fallout_spread
+	desc = "A nation that was nuked is generating significant nuclear fallout and it has spread to $COUNTRY$ via the gradual spread of nuclear fallout across the world."
+	picture = "fallout_spreads"
+
+	trigger = {
+		has_global_flag = nuke_fallout_spread
+		NOT = { has_country_modifier = nuke_fallout }
+		NOT = { has_country_modifier = nuke_neighbour_fallout }
+		NOT = { has_country_modifier = nuke_distant_fallout }
+	}
+
+	option = {
+		name = "Brace ourselves for the fallout"
+		prestige = -25
+		add_country_modifier = { name = nuke_distant_fallout duration = 3650 }
+	}
+}
+
+#Nuclear winter
+country_event = {
+	id = 14120561
+	title = "Nuclear Winter"
+	desc = NUKEWINTERDESC
+	picture = "nuclear_winter"
+	fire_only_once = yes
+	major = yes
+
+	trigger = {
+		NOT = { has_country_modifier = nuclear_winter }
+		NOT = { has_global_flag = nuclear_winter }
+		#requires an all-out nuclear exchange
+		has_global_flag = nuke_fallout_spread
+	}
+	
+	mean_time_to_happen = {
+		months = 3
+		modifier = { factor = 0.1 any_owned_province = { has_province_modifier = winter_province_modifier } }
+	}
+
+	option = {
+		name = "We must do anything we can to survive!"
+		set_global_flag = nuclear_winter
+		add_country_modifier = { name = nuclear_winter duration = -1 }
+		any_country = { limit = { exists = yes NOT = { has_country_modifier = nuclear_winter } } add_country_modifier = { name = nuclear_winter duration = -1 } }
+		#Nuclear winter interrupts population trends via apocalyptic kill-off
+		set_country_flag = demographic_transition_stage_1_flag
+		set_country_flag = demographic_transition_stage_2_flag
+		set_country_flag = demographic_transition_stage_3_flag
+		set_country_flag = demographic_transition_stage_4_flag
+		set_country_flag = demographic_transition_stage_5_flag
+		set_country_flag = demographic_transition_stage_6_flag
+		any_country = {
+			set_country_flag = demographic_transition_stage_1_flag
+			set_country_flag = demographic_transition_stage_2_flag
+			set_country_flag = demographic_transition_stage_3_flag
+			set_country_flag = demographic_transition_stage_4_flag
+			set_country_flag = demographic_transition_stage_5_flag
+			set_country_flag = demographic_transition_stage_6_flag
+		}
+	}
+}
+
+#Nuclear winter - Lose ownership of empty provinces
+province_event = {
+	id = 14120562
+	title = "Nuclear Winter"
+	desc = "As a result of everyone dying off in $PROVINCENAME$, we have lost complete control over it!"
+	picture = "nuclear_winter"
+	
+	trigger = {
+		owner = { has_global_flag = nuclear_winter NOT = { tag = WAS } }
+		NOT = { total_pops = 5 }
+	}
+
+	option = {
+		name = "We must save our people!"
+		prestige = -25
+		life_rating = -15
+		secede_province = WAS
+	}
+}
+
+#Remove Nuke Clouds
+country_event = {
+	id = 1512209
+	title = "Fallout has Subsided"
+	desc = "The level of radioactive fallout has subsided to pre-war levels in some of our provinces"
+	picture = "no_more_fallout"
+	major = yes
+
+	trigger = {
+		has_country_flag = has_nuke_clouds
+		OR = {
+			NOT = { has_country_modifier = nuke_fallout }
+			year = 2082 #Give 10 years of recolonizing before gameover
+		}
+	}
+
+	option = {
+		name = "We can begin rebuilding our civilisation"
+		clr_global_flag = nuke_fallout_spread
+		clr_global_flag = nuclear_winter
+		clr_country_flag = has_nuke_clouds
+		remove_country_modifier = nuclear_winter
+		remove_country_modifier = nuke_fallout
+		remove_country_modifier = nuke_neighbour_fallout
+		remove_country_modifier = nuke_distant_fallout
+		any_owned = {
+			remove_province_modifier = nuclear_winter_province
+			remove_province_modifier = nuclear_winter_farm_province
+		}
+		all_core = {
+			limit = { has_crime = nuke_province }
+			add_crime = no_crime
+			clr_province_flag = disease
+			life_rating = 15 #Make recolonization possible
+		}
+		any_country = {
+			limit = { exists = yes }
+			any_owned = {
+				remove_province_modifier = nuclear_winter_province
+				remove_province_modifier = nuclear_winter_farm_province
+			}
+			any_owned = {
+				limit = { NOT = { life_rating = 35 } }
+				life_rating = 15
+			}
+			any_owned = {
+				limit = { has_crime = nuke_province }
+				add_crime = no_crime
+				clr_province_flag = disease
+			}
+		}
+		any_country = {
+			limit = { exists = yes }
+			clr_country_flag = has_nuke_clouds
+			remove_country_modifier = nuclear_winter
+			remove_country_modifier = nuke_fallout
+			remove_country_modifier = nuke_neighbour_fallout
+			remove_country_modifier = nuke_distant_fallout
+		}
+	}
+}
+
+#Remove Nuke Clouds
+country_event = {
+	id = 15122091
+	title = "Fallout has Subsided"
+	desc = "The level of radioactive fallout has subsided to pre-war levels in some of our provinces"
+	picture = "no_more_fallout"
+
+	trigger = {
+		tag = WAS
+		NOT = { has_global_flag = nuclear_winter }
+	}
+
+	option = {
+		name = "The Wasteland is no more."
+		#Annex to null and turn all of WAS' lands into proper uncolonized land
+		annex_to = ---
+	}
 }

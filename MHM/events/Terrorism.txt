@@ -558,10 +558,6 @@ province_event = {
 			factor = 0.4
 			average_militancy = 10
 		}
-		modifier = {
-			factor = 0.8
-			has_crime = terrorist_cells #requires militancy 6
-		}
 
 		#Reduce, province police
 		modifier = {

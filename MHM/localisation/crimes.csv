@@ -1,12 +1,15 @@
 CODE;ENGLISH;FRENCH;GERMAN;POLISH;SPANISH;HUNGARIAN;CZECH;HUNGARIAN;DUTCH;PORTUGUESE;RUSSIAN;FINNISH;;x;;;;;;;;;;;;;;;;
-anarchic_bomb_throwers;Anarchic Bomb Throwers;Lanceurs de bombes anarchistes;Anarchistische Bombenleger;;Bombas anarquistas;;;;;;;;;x;;;;;;;;;;;;;;;;
-citizen_guard;Citizen Guard;Garde citoyenne;Bürgerwache;;Guardia ciudadana;;;;;;;;;x;;;;;;;;;;;;;;;;
-immoral_business;Immoral Business;Activité immorale;Unmoralische Geschäfte;;Negocios inmorales;;;;;;;;;x;;;;;;;;;;;;;;;;
-machine_politics;Machine Politics;Clientélisme;Politikmaschinerie;;Clientelismo;;;;;;;;;x;;;;;;;;;;;;;;;;
-mafia;Mafia;Mafia;Mafia;;Mafia;;;;;;;;;x;;;;;;;;;;;;;;;;
-desc_mafia;If the crime fighting institutions in a province become overstretched, organized crime in form of a mafia would develop. Such organizations resulted in lowered productivity in the province.;Si les institutions de lutte contre le crime d'une province sont trop sollicitées, le crime organisé se transforme en mafia. Et la productivité de la province baisse.;Wenn die Institutionen zur Verbrechensbekämpfung in einer Provinz überlastet sind, entwickelt sich organisiertes Verbrechen in Form einer Mafia. Solche Organisationen verringern die Produktion in der Provinz.;;Si las fuerzas de seguridad de una provincia estaban al límite, solía aparecer la delincuencia organizada en forma de mafias. Tales organizaciones conllevaban una merma de la productividad de la provincia.;;;;;;;;;x;;;;;;;;;;;;;;;;
-police_brutality;Police Brutality;;;;;;;;;;x
-desc_police_brutality;Police brutality is the intentional use of excessive force by a police officer. Though usually physical, it has the potential to arise in the form of verbal attacks or psychological intimidation. It is often used against those who cannot fight back, such as minorities or the poor.;;;;;;;;;;x
-rotten_boroughs;Rotten Boroughs;Bourgs pourris;Rotten Boroughs;;Burgos podridos;;;;;;;;;x;;;;;;;;;;;;;;;;
-spoil_system;Spoil System;Système des dépouilles;Verdorbenes System;;Chupar del bote;;;;;;;;;x;;;;;;;;;;;;;;;;
-terrorist_cells;Terrorist Cells;Cellules terroristes;Terroristenzellen;;Grupúsculos terroristas;;;;;;;;;x;;;;;;;;;;;;;;;;
+no_crime;No Status;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+desc_no_crime;No Major Status Effects are in place for this province;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+nuke_province;Nuclear Contamination;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+desc_nuke_province;This province was struck by nuclear weapons that caused significant radioactive contamination. It will take a long time for radition levels to return to normal.;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+bio_province;Bioweapon Epidemic;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+desc_bio_province;This province was struck by bioweapons that caused a significant epidemic. Only a vaccine will remove this modifier.;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+chem_province;Chemical Contamination;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+desc_chem_province;This province was struck by chemical weapons that caused significant contamination. Only time can clean this province.;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+war_damaged;Ravaged by War;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+desc_war_damaged;This province was recently destroyed by a devastating war. Recovery will take time.;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+natural_disaster;Natural Disaster;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+desc_natural_disaster;This province was struck by a natural disaster.;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+nuke_accident;Nuclear Reactor Accident;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;
+desc_nuke_accident;This province was contaminated following a nuclear reactor meltdown. It will take a long time for radition levels to return to normal.;;;;;;;;;;;;;x;;;;;;;;;;;;;;;;

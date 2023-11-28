@@ -1,110 +1,107 @@
 #Setting up the Trust - loser nation
 country_event = {
 	id = 10020
-title = "UN Resolution on $COUNTRY_ADJ$ Aggression"
+	title = "UN Resolution on $COUNTRY_ADJ$ Aggression"
 	desc = EVTDESC10020
 	picture = "un_trust_vote"
 
-is_triggered_only = yes
+	is_triggered_only = yes
 
-option = {
-name = "We are now at the mercy of the UN"
-set_country_flag = un_trust_ongoing
-any_country = { limit = { has_country_modifier = unsc_permanent_member } country_event = 10021 }
-		}
+	option = {
+		name = "We are now at the mercy of the UN"
+		set_country_flag = un_trust_ongoing
+		any_country = { limit = { has_country_modifier = unsc_permanent_member } country_event = 10021 }
+	}
 
 }
 
 #Setting up the Trust - UNSC votes
 country_event = {
 	id = 10021
-title = "UN Resolution on $FROMCOUNTRY_ADJ$ Aggression"
+	title = "UN Resolution on $FROMCOUNTRY_ADJ$ Aggression"
 	desc = EVTDESC10021
 	picture = "un_trust_vote"
 
-is_triggered_only = yes
+	is_triggered_only = yes
 
-option = {
-name = "Support the resolution!"
-FROM = { prestige_factor = -0.05 relation = { who = THIS value = -100 } }
-ai_chance = { factor = 1 modifier = { factor = 0 relation = { who = FROM value = 100 } } }
-		}
+	option = {
+		name = "Support the resolution!"
+		FROM = { prestige_factor = -0.05 relation = { who = THIS value = -100 } }
+		ai_chance = { factor = 1 modifier = { factor = 0 relation = { who = FROM value = 100 } } }
+	}
 
-option = {
-name = "Veto the resolution!"
-diplomatic_influence = { who = FROM value = 25 }
-FROM = { relation = { who = THIS value = 100 } }
-FROM = { add_country_modifier = { name = unsc_veto_trust duration = -1 } }
-ai_chance = { factor = 1 modifier = { factor = 0 NOT = { relation = { who = FROM value = 100 } } } }
-		}
-
+	option = {
+		name = "Veto the resolution!"
+		diplomatic_influence = { who = FROM value = 25 }
+		FROM = { relation = { who = THIS value = 100 } }
+		FROM = { add_country_modifier = { name = unsc_veto_trust duration = -1 } }
+		ai_chance = { factor = 1 modifier = { factor = 0 NOT = { relation = { who = FROM value = 100 } } } }
+	}
 }
 
 #Check resolution result - win
 country_event = {
 	id = 10022
-title = "UN Resolution Passes"
+	title = "UN Resolution Passes"
 	desc = EVTDESC10022
 	picture = "un_trust_win"
 
-trigger = {
-NOT = { has_country_modifier = unsc_veto_trust }
-has_recently_lost_war = yes
-has_country_flag = un_trust_ongoing
-}
-
-mean_time_to_happen = { 
-months = 1
+	trigger = {
+		#The UN ceases to exist after a nuclear war
+		NOT = { has_global_flag = nuclear_war }
+		NOT = { has_country_modifier = unsc_veto_trust }
+		has_recently_lost_war = yes
+		has_country_flag = un_trust_ongoing
 	}
 
-option = {
-name = "The UN will now dismember $COUNTRY$"
-clr_country_flag = un_trust_ongoing
-remove_country_modifier = unsc_veto_trust
-prestige_factor = -0.25
+	mean_time_to_happen = { 
+		months = 1
+	}
 
+	option = {
+		name = "The UN will now dismember $COUNTRY$"
+		clr_country_flag = un_trust_ongoing
+		remove_country_modifier = unsc_veto_trust
+		prestige_factor = -0.25
 
-any_country = { 
-limit = { exists = no any_core = { NOT = { is_core = THIS } owned_by = THIS } } 
-country_event = 10025
-}
-
-
-country_event = { id = 10026 days = 2 }
-
-
-UNT = { civilized = yes }
-
-UNT = { government = sar_government 
-country_event = 800054 ruling_party_ideology = big_tent }
-
+		any_country = { 
+			limit = { exists = no any_core = { NOT = { is_core = THIS } owned_by = THIS } } 
+			country_event = 10025
 		}
 
+		country_event = { id = 10026 days = 2 }
+
+		UNT = { civilized = yes }
+
+		UNT = { government = sar_government 
+		country_event = 800054 ruling_party_ideology = big_tent }
+	}
 }
 
 #Check resolution result - Lose
 country_event = {
 	id = 10023
-title = "UN Resolution Veoted"
+	title = "UN Resolution Veoted"
 	desc = EVTDESC10023
 	picture = "un_trust_win"
 
-trigger = {
-has_country_modifier = unsc_veto_trust
-has_recently_lost_war = yes
-has_country_flag = un_trust_ongoing
-}
-
-mean_time_to_happen = { 
-months = 1
+	trigger = {
+		#The UN ceases to exist after a nuclear war
+		NOT = { has_global_flag = nuclear_war }
+		has_country_modifier = unsc_veto_trust
+		has_recently_lost_war = yes
+		has_country_flag = un_trust_ongoing
 	}
 
-option = {
-name = "Our national sovereignty is safe"
-clr_country_flag = un_trust_ongoing
-remove_country_modifier = unsc_veto_trust
-		}
+	mean_time_to_happen = { 
+		months = 1
+	}
 
+	option = {
+		name = "Our national sovereignty is safe"
+		clr_country_flag = un_trust_ongoing
+		remove_country_modifier = unsc_veto_trust
+	}
 }
 
 #Look for a sphere owner for UNT

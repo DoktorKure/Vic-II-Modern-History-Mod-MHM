@@ -149,6 +149,9 @@ country_event = {
 		
 		#Cold war going hot kills the UN
 		NOT = { has_country_modifier = cold_war_hot }
+		
+		#Nuclear war kills the UN
+		NOT = { has_global_flag = nuclear_war }
 	}
 	
 	mean_time_to_happen = { 

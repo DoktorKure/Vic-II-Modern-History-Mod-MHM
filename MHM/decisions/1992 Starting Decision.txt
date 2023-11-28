@@ -1,6 +1,6 @@
 political_decisions = {
 
-	#Fired on day 0 through decision entry in CLN's history file
+	#Fired on day 0 through decision entry in USA's history file
 	1992_start_decision = {
 		picture = "defcon1"
 		potential = {
@@ -53,6 +53,7 @@ political_decisions = {
 			#Nuclear weapons nations
 			USA = {
 				add_country_modifier = { name = hydrogen_nation duration = -1 }
+				remove_country_modifier = atomic_nation
 				add_country_modifier = { name = tactical_nukes duration = -1 }
 				set_country_flag = air_bomb
 				set_country_flag = sub_bomb
@@ -60,6 +61,7 @@ political_decisions = {
 			}
 			RUS = {
 				add_country_modifier = { name = hydrogen_nation duration = -1 }
+				remove_country_modifier = atomic_nation
 				add_country_modifier = { name = tactical_nukes duration = -1 }
 				set_country_flag = air_bomb
 				set_country_flag = sub_bomb

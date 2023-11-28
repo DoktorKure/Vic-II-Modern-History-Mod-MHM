@@ -3,6 +3,8 @@ political_decisions = {
 	1963_un_terror_convention = {
 		picture = "1963_un_terror_convention"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations_ga_member
 			NOT = { government = theocracy }
 			has_global_flag = 1963_un_terror_convention
@@ -26,6 +28,8 @@ political_decisions = {
 	1970_un_terror_convention = {
 		picture = "1970_un_terror_convention"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations_ga_member
 			NOT = { government = theocracy }
 			has_global_flag = 1970_un_terror_convention
@@ -49,6 +53,8 @@ political_decisions = {
 	1971_un_terror_convention = {
 		picture = "1971_un_terror_convention"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations_ga_member
 			NOT = { government = theocracy }
 			has_global_flag = 1971_un_terror_convention
@@ -72,6 +78,8 @@ political_decisions = {
 	1973_un_terror_convention = {
 		picture = "1973_un_terror_convention"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations_ga_member
 			NOT = { government = theocracy }
 			has_global_flag = 1973_un_terror_convention
@@ -95,6 +103,8 @@ political_decisions = {
 	1979_un_terror_convention = {
 		picture = "1979_un_terror_convention"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations_ga_member
 			NOT = { government = theocracy }
 			has_global_flag = 1979_un_terror_convention
@@ -118,6 +128,8 @@ political_decisions = {
 	1988_un_terror_convention = {
 		picture = "1988_un_terror_convention"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations_ga_member
 			NOT = { government = theocracy }
 			has_global_flag = 1988_un_terror_convention
@@ -141,6 +153,8 @@ political_decisions = {
 	1991_un_terror_convention = {
 		picture = "1991_un_terror_convention"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations_ga_member
 			NOT = { government = theocracy }
 			has_global_flag = 1991_un_terror_convention
@@ -164,6 +178,8 @@ political_decisions = {
 	1997_un_terror_convention = {
 		picture = "1997_un_terror_convention"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations_ga_member
 			NOT = { government = theocracy }
 			has_global_flag = 1997_un_terror_convention
@@ -187,6 +203,8 @@ political_decisions = {
 	1999_un_terror_convention = {
 		picture = "1999_un_terror_convention"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations_ga_member
 			NOT = { government = theocracy }
 			has_global_flag = 1999_un_terror_convention
@@ -210,6 +228,8 @@ political_decisions = {
 	un_counter_terrorism_committee = {
 		picture = "un_counter_terrorism_committee"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations_ga_member
 			NOT = { government = theocracy }
 			has_global_flag = un_counter_terrorism_committee
@@ -234,6 +254,8 @@ political_decisions = {
 	join_interpol = {
 		picture = "interpol"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			is_vassal = no
 			year = 1956
 			NOT = { has_country_modifier = interpol }
@@ -257,6 +279,8 @@ political_decisions = {
 	leave_interpol = {
 		picture = "interpol"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			year = 1956
 			has_country_modifier = interpol
 		}
@@ -277,6 +301,8 @@ political_decisions = {
 	regional_anti_terror_coop = {
 		picture = "regional_anti_terror_coop"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			globalization = 1
 			is_vassal = no
 			has_country_modifier = interpol
@@ -300,6 +326,8 @@ political_decisions = {
 	define_freedom_fighters = {
 		picture = "define_freedom_fighters"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_global_flag = 1963_un_terror_convention
 			OR = {
 				AND = {
@@ -325,6 +353,8 @@ political_decisions = {
 	define_terrorists = {
 		picture = "define_terrorists"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_global_flag = 1963_un_terror_convention
 			OR = {
 				AND = {

@@ -3,6 +3,8 @@ political_decisions = {
 	join_isa = {
 		picture = "isa"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			is_vassal = no
 			num_of_ports = 1
 			contemporary_agriculture = 1
@@ -28,6 +30,8 @@ political_decisions = {
 	unclos_1 = {
 		picture = "unclos_1"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			num_of_ports = 1
 			has_global_flag = unclos_1
 			NOT = { has_global_flag = unclos_3 }
@@ -53,6 +57,8 @@ political_decisions = {
 	unclos_3 = {
 		picture = "unclos_3"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			num_of_ports = 1
 			has_global_flag = unclos_3
 			NOT = { has_country_flag = unclos_3 }
@@ -78,6 +84,8 @@ political_decisions = {
 	dispute_sea = {
 		picture = "dispute_sea"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_flag = international_court_of_justice
 			NOT = { has_country_modifier = sea_dispute }
 			NOT = { has_country_flag = sea_dispute_underway }

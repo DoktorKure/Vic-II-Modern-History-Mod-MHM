@@ -1,205 +1,58 @@
-anarchic_bomb_throwers = {
-	
-	active = yes
+#Special note: crime icons are useless - the game ignores them and assigns the graphical icons in gfx/interface/crime_strip.dds based on order entry in this file. First entry is icon = 1, second entry is icon = 2, etc.
+#active = yes means this crime gets assigned randomly by the game. Scripted crimes that are manually assigned or removed like this crime rework features should NEVER have active = yes in the entry
+#There is no way to remove crime as remove_crime does not work, so a no_crime crime has to be added to remove a crime.
 
-	pop_consciousness_modifier = 0.05
+no_crime = {
+}
+
+nuke_province = {
+	population_growth = -0.1
+	immigrant_push = 10
+	immigrant_attract = -5
+	pop_militancy_modifier = -1.00 #Who wants to rise up in a nuclear wasteland?
+	local_RGO_throughput = -0.99
+	local_factory_output = -0.99
+	supply_limit = -99.0
+}
+
+bio_province = {
+	immigrant_attract = -0.50
+	immigrant_push = 0.30
+	local_RGO_output = -0.50
+	local_factory_throughput = -0.50
+	population_growth = -0.01
+}
+
+chem_province = {
+	population_growth = -0.025
+	immigrant_push = 0.5
+	immigrant_attract = -1
+	pop_militancy_modifier = 0.5
+	local_RGO_throughput = -0.75
+	local_factory_output = -0.90
+}
+
+war_damaged = {
+	immigrant_push = 0.05
+	local_artisan_output = -0.25
 	pop_militancy_modifier = 0.05
-	local_rgo_throughput = -0.2
-	local_factory_output = -0.1
-	local_ruling_party_support = -1.0
-
-	icon = 2
-
-	trigger = {
-		OR = { average_militancy = 5 controlled_by_rebels = yes NOT = { crime_fighting = 0.20 } }
-	}	
+	local_factory_throughput = -0.25
+	social_reform_desire = 0.5
+	population_growth = -0.001
+	local_factory_input = 0.20
 }
 
-citizen_guard = {
-	
-	pop_consciousness_modifier = 0.02
-	local_rgo_output = -0.1
-	local_factory_throughput = -0.1
-	local_artisan_throughput = -0.1
-
-	icon = 3
-	
-	trigger = {
-		OR = { is_colonial = yes average_militancy = 5 controlled_by_rebels = yes NOT = { crime_fighting = 0.40 } }
-	}		
+natural_disaster = {
+	local_RGO_output = -0.5
+	population_growth = -0.002
 }
 
-immoral_business = {
-
-	active = yes
-	
-	local_rgo_throughput = -0.2
-	local_factory_output = -0.1
-	local_artisan_output = -0.1
-
-	icon = 4
-	
-	trigger = {
-		NOT = { average_militancy = 3 }
-		OR = { is_colonial = yes NOT = { crime_fighting = 0.50 } }
-	}		
-}
-
-machine_politics = {
-
-	active = yes
-
-	local_rgo_throughput = -0.2
-	local_factory_output = -0.1
-	boost_strongest_party = 3
-	
-	icon = 5
-	
-	trigger = {
-		is_colonial = no
-		NOT = { crime_fighting = 0.50 }
-	}		
-}
-
-mafia = {
-
-	active = yes
-
-	pop_militancy_modifier = 0.05
-	pop_consciousness_modifier = 0.05
-	local_factory_output = -0.1
-	local_rgo_output = -0.1
-	local_artisan_output = -0.1
-	local_rgo_throughput = -0.1
-
-	icon = 6	
-	
-	trigger = {
-		NOT = { crime_fighting = 0.50 }
-	}		
-}
-
-rotten_boroughs = {
-	
-	active = yes
-	
-	number_of_voters = 1.0	#double voters.
-	
-	icon = 7
-	
-	trigger = {
-		is_colonial = no
-		NOT = { crime_fighting = 0.50 }
-	}
-
-}
-
-spoil_system = {
-	
-	active = yes
-	
-	number_of_voters = 1.0	#double voters	
-	local_ruling_party_support = 2.0
-	
-	icon = 8
-	
-	trigger = {
-		is_colonial = no
-		NOT = { crime_fighting = 0.50 }
-	}
-
-}
-
-terrorist_cells = {
-
-	active = yes
-
-	local_ruling_party_support = -0.25
-	pop_militancy_modifier = 0.1
-	pop_consciousness_modifier = 0.05
-	local_rgo_throughput = -0.2
-	local_factory_output = -0.2
-
-	icon = 3
-
-	trigger = {
-		OR = { controlled_by_rebels = yes average_militancy = 6 }
-	}	
-}
-
-police_brutality = {
-
-	active = yes
-
-	local_ruling_party_support = -1.0
-	pop_militancy_modifier = 0.05
-	pop_consciousness_modifier = 0.05
-	assimilation_rate = -0.5
-	poor_income_modifier = -0.1
-	middle_income_modifier = -0.5
-	
-	icon = 9
-
-	trigger = {
-		crime_fighting = 0.8
-		average_militancy = 5
-	}
-
-}
-
-vote_rigging_crime = {
-	
-	active = yes
-		
-	local_ruling_party_support = 0.5
-	
-	icon = 11
-	
-	trigger = {
-		is_colonial = no
-		NOT = { crime_fighting = 0.70 }
-		country = { election = yes }
-	}
-
-}
-
-kleptocrats = {
-	active = yes
-	
-	local_factory_input = 0.05
-	rich_income_modifier = 0.2
-	middle_income_modifier = -0.1
-	poor_income_modifier = -0.1
-	
-	icon = 12
-	
-	trigger = {
-		NOT = { crime_fighting = 0.40 }
-		is_colonial = no
-	}
-	
-}
-
-offshore_haven = {
-	active = yes
-	
-	rich_income_modifier = 0.1
-	local_factory_input = -0.05
-	local_factory_throughput = 0.05
-	local_RGO_throughput = 0.05
-	
-	icon = 10
-	
-	trigger = {
-		NOT = { average_militancy = 2 }
-		crime_fighting = 0.50
-		country = { 
-			NOT = { rich_tax = 0.25 }
-			NOT = { ruling_party_ideology = communist }
-			NOT = { ruling_party_ideology = communist_social }
-		}
-		is_overseas = yes
-		is_state_capital = yes
-	}
-
+nuke_accident = {
+	immigrant_push = 1.25
+	population_growth = -0.03
+	immigrant_attract = -0.60
+	core_pop_militancy_modifier = 0.01
+	local_RGO_throughput = -0.25
+	local_factory_output = -0.25
+	supply_limit = -30.0
 }

@@ -1,7 +1,7 @@
 political_decisions = {
 
-nuclear_ultimatum = {
-	picture = "nuclear_ultimatum"
+	nuclear_ultimatum = {
+		picture = "nuclear_ultimatum"
 		potential = {
 
 			war = yes
@@ -64,8 +64,6 @@ nuclear_ultimatum = {
 			#Choose what kind of ultimatum
 			country_event = 1331427
 
-			add_country_modifier = { name = nukes_used_recently duration = 365 }
-
 			badboy = 15
 			
 			set_global_flag = someone_is_firing_nukes
@@ -86,8 +84,8 @@ nuclear_ultimatum = {
 
 	}
 
-fire_tactical_nuke = {
-	picture = "fire_tactical_nuke"
+	fire_tactical_nuke = {
+		picture = "fire_tactical_nuke"
 		potential = {
 			OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
 			has_country_modifier = tactical_nukes
@@ -96,8 +94,12 @@ fire_tactical_nuke = {
 
 		allow = {
 		
-			#Pacifists will never choose to blow up the world
-			NOT = { war_policy = pacifism }
+			#Pacifists will never choose to blow up the world unless they're being genocided or struck with tactical nukes
+			OR = {
+				NOT = { war_policy = pacifism }
+				has_country_flag = under_existential_threat
+				any_owned_province = { has_province_modifier = tactical_nuked } 
+			}
 	
 			NOT = { has_country_modifier = nuclear_system_down }
 
@@ -123,9 +125,13 @@ fire_tactical_nuke = {
 			}
 
 			NOT = { has_country_modifier = tactical_nukes_used_recently }
+			#Not already fired strategic nukes - the final step in the escalation ladder
+			NOT = { has_country_modifier = nukes_used_recently }
 		}
 
 		effect = {
+			set_global_flag = nuclear_war
+			set_global_flag = nuke_shelters_activate
 			add_country_modifier = { name = tactical_nukes_used_recently duration = 92 }
 			badboy = 25
 			any_country = { limit = { war_with = THIS } country_event = 1610031 }
@@ -137,8 +143,8 @@ fire_tactical_nuke = {
 
 	}
 
-nuclear_second_strike = {
-	picture = "nuclear_second_strike"
+	nuclear_second_strike = {
+		picture = "nuclear_second_strike"
 		potential = {
 			war = yes
 			has_country_modifier = recently_attacked_nuke
@@ -162,7 +168,7 @@ nuclear_second_strike = {
 	
 			remove_country_modifier = recently_attacked_nuke
 			
-			add_country_modifier = { name = nukes_used_recently duration = 365 }
+			add_country_modifier = { name = nukes_used_recently duration = 1825 }
 		
 			#Inform of retaliatory strike
 			any_country = { 
@@ -170,6 +176,10 @@ nuclear_second_strike = {
 				country_event = 1331434
 			}
 
+		}
+	
+		ai_will_do = { 
+			factor = 1
 		}
 
 	}

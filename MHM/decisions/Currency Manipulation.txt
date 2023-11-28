@@ -3,6 +3,7 @@ political_decisions = {
 	currency_manipulation = {
 		picture = "currency_manipulation"
 		potential = {
+		NOT = { has_global_flag = nuclear_war }
 NOT = { has_country_modifier = imf_chairmanship }
 			economic_globalization = 1
 NOT = { OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } }
@@ -29,6 +30,7 @@ any_country = { limit = { OR = { government = hms_government government = hms_go
 	stop_currency_manipulation = {
 		picture = "stop_currency_manipulation"
 		potential = {
+		NOT = { has_global_flag = nuclear_war }
 			economic_globalization = 1
 is_vassal = no
 	has_country_modifier = currency_manipulation
@@ -55,6 +57,7 @@ any_country = { limit = { OR = { government = hms_government government = hms_go
 label_currency_manipulation = {
 		picture = "label_currency_manipulation"
 		potential = {
+		NOT = { has_global_flag = nuclear_war }
 
 any_greater_power = { is_greater_power = yes NOT = { relation = { who = THIS value = -100 } } NOT = { has_country_modifier = currency_manipulation_sanctions } has_country_modifier = currency_manipulation }
 

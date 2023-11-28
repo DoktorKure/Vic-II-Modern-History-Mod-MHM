@@ -3,6 +3,8 @@ political_decisions = {
 end_armistice = {
 	picture = "end_armistice"
 	potential = {
+		#The UN ceases to exist after a nuclear war
+		NOT = { has_global_flag = nuclear_war }
 		has_country_flag = un_armistice
 		is_vassal = no
 		NOT = { has_country_modifier = un_armistice }

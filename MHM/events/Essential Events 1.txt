@@ -481,8 +481,9 @@ country_event = {
 	picture = "g8_join_image"
 	
 	trigger = {
+		NOT = { has_global_flag = nuclear_war }
 		year = 1975
-		is_greater_power = yes
+		rank = 8
 		NOT = { has_country_flag = gg }
 		NOT = { AND = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist } }
 	}
@@ -1863,6 +1864,7 @@ title = "UN demands punishment for $COUNTRY$ war crimes"
 	picture = "defeat_day"
 	
 trigger = { 
+NOT = { has_global_flag = nuclear_war }
 war = no
 is_vassal = no
 has_recently_lost_war = yes
@@ -1923,6 +1925,7 @@ title = "War Trial for $COUNTRY_ADJ$ War Crimes"
 	picture = "war_crimes_tribunal"
 	
 trigger = { 
+NOT = { has_global_flag = nuclear_war }
 NOT = { has_country_modifier = trials_vetoed }
 NOT = { has_country_modifier = war_crimes_trial }
 has_country_modifier = un_watch_list
@@ -1958,6 +1961,45 @@ name = "May peace come soon"
 prestige = -25
 any_owned = { limit = { NOT = { controlled_by = THIS } } add_province_modifier = { name = war_bombed duration = 1750 } }
 		}
+}
+
+#Remove war damage from WWII
+country_event = {
+	id = 14121391
+	title = "Recovery from WWII"
+	desc = "Through the diligent efforts of our people, we have finally recovered from the war!"
+	picture = "war_damage"
+	
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					tag = RUS
+					vassal_of = RUS
+				}
+				year = 1956
+			}
+			AND = {
+				NOT = {
+					tag = RUS
+					vassal_of = RUS
+				}
+				year = 1951
+			}
+		}
+		war = no
+		any_owned_province = { has_crime = war_damaged }
+	}
+
+	mean_time_to_happen = {
+		months = 6
+	}
+
+	option = {
+		name = "Peace has returned!"
+		prestige = 25
+		any_owned = { limit = { has_crime = war_damaged } add_crime = no_crime }
+	}
 }
 
 #Loss of Arctic Trading Route participation
@@ -2004,6 +2046,7 @@ title = "$YEAR$ World Economic Forum"
 	picture = "wef"
 	
 trigger = { 
+NOT = { has_global_flag = nuclear_war }
 NOT = { any_greater_power = { OR = { has_country_modifier = wef_1 has_country_modifier = wef_2 has_country_modifier = wef_3 } } }
 year = 1971
 has_country_modifier = g8
@@ -2053,6 +2096,8 @@ country_event = {
 	major = yes
 
 	trigger = {
+		#UN collapse results in neutrality becoming meaningless
+		NOT = { has_global_flag = nuclear_war }
 		#Country is neutral
 		has_country_flag = neutrality
 		
@@ -2115,6 +2160,8 @@ country_event = {
 	picture = "neutrality_violated"
 
 	trigger = { 
+		#UN collapse results in neutrality becoming meaningless
+		NOT = { has_global_flag = nuclear_war }
 		war = no
 		has_country_flag = declared_neutrality_active
 		has_country_flag = neutrality
@@ -2464,6 +2511,7 @@ title = "We are now a G20 member"
 	picture = "g20"
 
 trigger = {
+NOT = { has_global_flag = nuclear_war }
 year = 1999
 rank = 20
 NOT = { has_country_modifier = g20 }
@@ -2478,6 +2526,7 @@ remove_country_modifier = g77
 
 #G77
 country_event = {
+NOT = { has_global_flag = nuclear_war }
 	id = 1412158
 title = "We are now a G77 member"
 	desc = EVTDESC1412158
@@ -3042,216 +3091,6 @@ owner = { any_pop = { ideology = { factor = -0.05 value = communist_social } } }
 
 }
 
-#Civil Defence - Nuke Protection - Start
-country_event = {
-	id = 1412169
-	title = "Nuclear Shelters Activated"
-	desc = EVTDESC1412169
-	picture = "nuclear_shelter"
-
-	trigger = { 
-	
-		#Country has been hit by nuclear weapons
-		any_owned_province = { 
-			OR = { 
-				has_province_modifier = nuke_high 
-				has_province_modifier = nuke_medium 
-				has_province_modifier = nuke_low 
-			} 
-		}
-		
-		#Has some proper Civil Defence
-		OR = { 
-			has_country_modifier = cdhigh 
-			has_country_modifier = cdmedium 
-		}
-		
-		NOT = { has_country_flag = nuke_protection }
-	}
-
-	option = {
-		name = "A moment of silence for those who didn't make it"
-		
-		set_country_flag = nuke_protection
-
-		#High Civil Defence
-		random_owned = { 
-			limit = { owner = { has_country_modifier = cdhigh } } 
-			owner = { 
-				any_owned = { 
-					limit = { has_province_modifier = nuke_low } 
-					remove_province_modifier = nuke_low
-					add_province_modifier = { name = nuke_low duration = 9125 } 
-				} 
-				any_owned = { 
-					limit = { has_province_modifier = nuke_medium } 
-					remove_province_modifier = nuke_medium
-					add_province_modifier = { name = nuke_low duration = 18250 } 
-				} 
-				any_owned = { 
-					limit = { has_province_modifier = nuke_high } 
-					remove_province_modifier = nuke_high
-					add_province_modifier = { name = nuke_medium duration = 18250 } 
-				} 
-			} 
-		}
-		
-		#Medium Civil Defence - Only protects against medium nuke damage at best
-		random_owned = { 
-			limit = { owner = { has_country_modifier = cdhigh } } 
-			owner = { 
-				any_owned = { 
-					limit = { has_province_modifier = nuke_low } 
-					remove_province_modifier = nuke_low
-					add_province_modifier = { name = nuke_low duration = 9125 } 
-				} 
-				any_owned = { 
-					limit = { has_province_modifier = nuke_medium } 
-					remove_province_modifier = nuke_medium
-					add_province_modifier = { name = nuke_low duration = 18250 } 
-				} 
-			} 
-		}
-
-	}
-
-}
-
-#Civil Defence - No Nuke Protection - Total Anarchy!
-country_event = {
-	id = 14121691
-	title = "Anarchy in $COUNTRY$"
-	desc = EVTDESC14121691
-	picture = "nuclear_fallout_anarchy"
-
-	trigger = { 
-	
-		#Country has been hit by nuclear weapons
-		any_owned_province = { 
-			OR = { 
-				has_province_modifier = nuke_high 
-				has_province_modifier = nuke_medium 
-				has_province_modifier = nuke_low 
-			} 
-		}
-		
-		#Has no Civil Defence
-		NOT = { 
-			OR = { 
-				has_country_modifier = cdhigh 
-				has_country_modifier = cdmedium 
-			}
-		}
-		
-		NOT = { has_country_flag = nuke_protection }
-	}
-
-	option = {
-		name = "A moment of silence for those who didn't make it"
-		
-		set_country_flag = nuke_protection
-
-		#All provinces get transferred to rebels
-		any_owned = {
-			limit = { controlled_by = THIS }
-			change_controller = REB
-		}
-
-	}
-
-}
-
-#Civil Defence - states occassionally fall to rebels
-country_event = {
-	id = 14121692
-	title = "Government Control Weakens"
-	desc = EVTDESC14121692
-	picture = "nuclear_fallout_anarchy_2"
-
-	trigger = { 
-	
-		#Country has been hit by nuclear weapons
-		any_owned_province = { 
-			OR = { 
-				has_province_modifier = nuke_high 
-				has_province_modifier = nuke_medium 
-				has_province_modifier = nuke_low 
-			} 
-			controlled_by = THIS
-			average_militancy = 9
-		}
-		
-		#Has weak civil defence
-		NOT = { has_country_modifier = cdhigh }
-		
-		#Post nuclear government
-		has_country_flag = nuke_protection
-	}
-	
-	mean_time_to_happen = { 
-		months = 6
-	}
-
-	option = {
-		name = "At this rate we might lose the whole country!"
-		prestige_factor = -0.01
-		
-		#Transfer states to rebels
-		any_owned = { 
-			limit = {
-				OR = { 
-					has_province_modifier = nuke_high 
-					has_province_modifier = nuke_medium 
-					has_province_modifier = nuke_low 
-				} 
-				controlled_by = THIS
-				average_militancy = 9
-			}
-			state_scope = {
-				any_owned = {
-					limit = { 
-						is_state_capital = no 
-						controlled_by = THIS 
-					}
-					change_controller = REB
-				}
-			}
-		}
-	}
-
-}
-
-#Civil Defence - ENL Nuke Protection
-country_event = {
-	id = 1412170
-	title = "Nuclear Fallout has Subsided"
-	desc = "It is now safe to leave the nuclear shelters, if there were any, so our population can start to slowly restore the nuclear hit wasteland back to its glory days."
-	picture = "nuclear_shelter_clear"
-
-	trigger = { 
-	
-		#No more nuke damage
-		NOT = {
-			any_owned_province = { 
-				OR = { 
-					has_province_modifier = nuke_high 
-					has_province_modifier = nuke_medium 
-					has_province_modifier = nuke_low 
-				} 
-			}
-		}
-		
-		has_country_flag = nuke_protection
-	}
-
-	option = {
-		name = "We will rebuild the $COUNTRY_ADJ$ civilisation!"
-		clr_country_flag = nuke_protection
-		clr_country_flag = post_nuke_government
-	}
-
-}
-
 #UN Sanctions - Diplomatic
 country_event = {
 	id = 1412175
@@ -3260,6 +3099,7 @@ title = "Diplomatic Sanctions imposed on $COUNTRY$"
 	picture = "un_sanctions_diplo"
 
 trigger = { 
+	NOT = { has_global_flag = nuclear_war }
 	year = 1956
 	
 	#THIS is an aggressor
@@ -3298,6 +3138,7 @@ title = "Political Sanctions imposed on $COUNTRY$"
 	picture = "un_sanctions_polit"
 
 trigger = { 
+	NOT = { has_global_flag = nuclear_war }
 	year = 1956
 	
 	#THIS is an aggressor
@@ -3339,6 +3180,7 @@ title = "Economic Sanctions imposed on $COUNTRY$"
 	picture = "un_sanctions_econ"
 
 trigger = { 
+	NOT = { has_global_flag = nuclear_war }
 	year = 1956
 	
 	#THIS is an aggressor
@@ -3378,6 +3220,7 @@ title = "UN Sanctions on $COUNTRY$ lifted"
 	picture = "un_sanctions_lifting"
 
 trigger = { 
+	NOT = { has_global_flag = nuclear_war }
 	year = 1956
 
 OR = { has_country_modifier = un_econ_sanc has_country_modifier = un_polit_sanc has_country_modifier = un_diplo_sanc }
@@ -3500,6 +3343,7 @@ title = "Universal Declaration of Human Rights"
 fire_only_once = yes
 
 trigger = { 
+	NOT = { has_global_flag = nuclear_war }
 any_owned_province = { has_province_modifier = un_headquarters }
 year = 1948
 NOT = { has_global_flag = UNDHR }
@@ -3524,6 +3368,7 @@ title = "Poor Human Rights in $COUNTRY$"
 	picture = "UNDHR_poor"
 
 trigger = { 
+	NOT = { has_global_flag = nuclear_war }
 year = 1948
 has_global_flag = UNDHR
 OR = { any_greater_power = { cultural_imperialism = 1 } has_global_flag = human_rights_watch }
@@ -3551,6 +3396,7 @@ title = "Restoration of Human Rights in $COUNTRY$"
 	picture = "UNDHR_good"
 
 trigger = { 
+	NOT = { has_global_flag = nuclear_war }
 year = 1948
 has_global_flag = UNDHR
 OR = { any_greater_power = { cultural_imperialism = 1 } has_global_flag = human_rights_watch }
@@ -3684,29 +3530,27 @@ ai_chance = { factor = 0.1 }
 #Nuclear Accident
 country_event = {
 	id = 1412190
-title = "Nuclear Accident"
+	title = "Nuclear Accident"
 	desc = EVTDESC1412190
 	picture = "nuclear_accident"
 
-trigger = { 
-OR = { has_country_flag = nuclear_power_ge any_owned_province = { has_building = nuclear_fuel_factory } }
-OR = { safety_regulations = no_safety safety_regulations = trinket_safety safety_regulations = low_safety }
+	trigger = { 
+		OR = { has_country_flag = nuclear_power_ge any_owned_province = { has_building = nuclear_fuel_factory } }
+		OR = { safety_regulations = no_safety safety_regulations = trinket_safety safety_regulations = low_safety }
 	}
 
-mean_time_to_happen = { 
-months = 300
-modifier = { factor = 1.5 
-safety_regulations = trinket_safety }
-modifier = { factor = 2 
-safety_regulations = low_safety }
-}
+	mean_time_to_happen = { 
+		months = 300
+		modifier = { factor = 1.5 safety_regulations = trinket_safety }
+		modifier = { factor = 2 safety_regulations = low_safety }
+	}
 
-option = {
-name = "Do all we can to contain the radioactive fallout!"
-prestige_factor = -0.1
-add_country_modifier = { name = stock_market_crash duration = 400 }
-random_province = { limit = { is_colonial = no NOT = { total_pops = 50000 } } add_province_modifier = { name = nuke_accident duration = 1825 } }
-		}
+	option = {
+		name = "Do all we can to contain the radioactive fallout!"
+		prestige_factor = -0.1
+		add_country_modifier = { name = stock_market_crash duration = 400 }
+		random_province = { limit = { is_colonial = no NOT = { is_capital = yes is_state_capital = yes } } add_province_modifier = { name = nuke_accident duration = 1825 } }
+	}
 }
 
 #State Visit
@@ -4008,7 +3852,9 @@ title = "Preserving our Neutrality"
 	desc = "As we are a neutral country, we will not have alliances with other nations. This is to ensure that we will not be accidentally brought into a third party war."
 	picture = "gurantee_ally_free"
 
-trigger = { 
+trigger = {
+#UN collapse results in neutrality becoming meaningless
+NOT = { has_global_flag = nuclear_war }
 has_country_flag = neutrality
 num_of_allies = 1
 war = no

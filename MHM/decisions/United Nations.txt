@@ -3,6 +3,8 @@ political_decisions = {
 	host_un_hq = {
 		picture = "host_un_hq"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations
 			has_country_modifier = united_nations_ga_member
 			has_global_flag = host_un_hq
@@ -57,6 +59,8 @@ political_decisions = {
 	rebuild_un_hq = {
 		picture = "rebuild_un_hq"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_flag = un_hq_host_country 
 			NOT = { any_owned_province = { has_province_modifier = un_headquarters } }
 		}
@@ -79,6 +83,8 @@ political_decisions = {
 	united_nations = {
 		picture = "united_nations"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_modifier = united_nations }
 			NOT = { OR = { tag = OG1 tag = OG2 tag = OG3 tag = OG4 } }
 		}
@@ -112,6 +118,8 @@ political_decisions = {
 	jointheunga = {
 		picture = "united_nations_general_assembly"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations
 			NOT = { has_country_modifier = united_nations_ga_member }
 		}
@@ -211,6 +219,8 @@ political_decisions = {
 	united_nations_security_council = {
 		picture = "united_nations_security_council"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			is_greater_power = yes
 			has_country_modifier = unsc_permanent_member
 			crisis_exist = yes
@@ -236,6 +246,8 @@ political_decisions = {
 	jointheunsc = {
 		picture = "united_nations_security_council"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			has_country_modifier = united_nations
 			has_country_modifier = united_nations_ga_member
 			OR = {
@@ -280,6 +292,8 @@ political_decisions = {
 	china_joins_unsc = {
 		picture = "china_joins_unsc"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			tag = CHI
 			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
 			
@@ -325,6 +339,8 @@ political_decisions = {
 	taiwan_joins_un = {
 		picture = "taiwan_joins_un"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			OR = { tag = KMT tag = TAI }
     		has_country_flag = not_participating_UNSC
 		}
@@ -345,6 +361,8 @@ political_decisions = {
 	reform_the_unsc = {
 		picture = "reform_the_unsc"
 		potential = {
+			#The UN ceases to exist after a nuclear war
+			NOT = { has_global_flag = nuclear_war }
 			is_greater_power = yes
 			#Not during cold war or a chief UNSC member is no longer a major power/doesn't exist anymore
 			OR = {

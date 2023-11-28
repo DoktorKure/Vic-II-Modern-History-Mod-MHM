@@ -42,6 +42,7 @@ political_decisions = {
 	declare_outbreak = {
 		picture = "who_declare"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_global_flag = epidemic_start
 			any_owned_province = {
@@ -76,6 +77,7 @@ political_decisions = {
 	request_un_humanitarian_aid = {
 		picture = "request_un_humanitarian_aid"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = united_nations
 			is_greater_power = no
@@ -112,6 +114,7 @@ political_decisions = {
 	request_un_development_aid = {
 		picture = "request_un_development_aid"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = united_nations
 			NOT = { has_country_modifier = un_development_aid }
@@ -146,6 +149,7 @@ political_decisions = {
 	changeg8 = {
 		picture = "changeg8"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = g8_chairmanship
 			OR = { has_country_modifier = g8high
@@ -198,6 +202,7 @@ political_decisions = {
 	g8high = {
 		picture = "g8high"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = g8_chairmanship
 			NOT = {
@@ -237,6 +242,7 @@ political_decisions = {
 	g8medium = {
 		picture = "g8medium"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = g8_chairmanship
 			NOT = {
@@ -273,6 +279,7 @@ political_decisions = {
 	g8low = {
 		picture = "g8low"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = g8_chairmanship
 			NOT = {
@@ -312,6 +319,7 @@ political_decisions = {
 		picture = "international_court_of_justice"
 		alert = no
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			year = 1947
 			NOT = { has_country_flag = international_court_of_justice }
@@ -333,6 +341,7 @@ political_decisions = {
 	leave_icj = {
 		picture = "international_court_of_justice"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_flag = international_court_of_justice
 			NOT = { OR = { government = socialist_democracy government = democracy government = democracy1 government = hms_government government = hms_government1 } }
@@ -354,6 +363,7 @@ political_decisions = {
 	icj_start = {
 		picture = "icj_start"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			NOT = { tag = UNT }
 			NOT = { has_country_modifier = icj_timer_land }			
@@ -429,6 +439,7 @@ political_decisions = {
 	jointheida = {
 		picture = "jointheida"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			year = 1960
 			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
@@ -451,6 +462,7 @@ political_decisions = {
 	leavetheida = {
 		picture = "jointheida"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 			has_country_modifier = ida_member
@@ -471,6 +483,7 @@ political_decisions = {
 	ida_loan = {
 		picture = "ida_loan"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			election = no
 			war = no
@@ -508,6 +521,7 @@ political_decisions = {
 	ratify_refugee_convention = {
 		picture = "ratify_refugee_convention"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			year = 1951
 			has_country_modifier = united_nations_ga_member
@@ -552,6 +566,7 @@ political_decisions = {
 	jointheimf = {
 		picture = "jointheimf"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			NOT = { has_country_modifier = imf_member }
 		}
@@ -577,6 +592,7 @@ political_decisions = {
 	leavetheimf = {
 		picture = "jointheimf"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			OR = { 
 				ruling_party_ideology = communist 
@@ -605,6 +621,7 @@ political_decisions = {
 	changeimf = {
 		picture = "changeimf"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = imf_chairmanship
 			OR = { 
@@ -657,6 +674,7 @@ political_decisions = {
 		news_desc_short = "imfhigh_NEWS_SHORT"
 
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = imf_chairmanship
 			NOT = { 
@@ -699,6 +717,7 @@ political_decisions = {
 		news_desc_short = "imfmedium_NEWS_SHORT"
 
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = imf_chairmanship
 			NOT = { 
@@ -737,6 +756,7 @@ political_decisions = {
 		news_desc_short = "imflow_NEWS_SHORT"
 
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = imf_chairmanship
 			NOT = { 
@@ -770,6 +790,7 @@ political_decisions = {
 	imf_loan = {
 		picture = "imf_loan"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			#In the IMF
 			has_country_modifier = imf_member
@@ -810,6 +831,7 @@ political_decisions = {
 	the_imf = {
 		picture = "the_imf"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			capital_scope = { continent = europe }
 			NOT = { has_country_flag = the_imf }
@@ -843,6 +865,7 @@ political_decisions = {
 	special_imf_dr = {
 		picture = "special_imf_dr"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			year = 1968
 			any_owned_province = { trade_goods = credit }
@@ -873,6 +896,7 @@ political_decisions = {
 	joingatt = {
 		picture = "gatt"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			is_vassal = no
 			has_country_modifier = ibrd_member
@@ -895,6 +919,7 @@ political_decisions = {
 	leavegatt = {
 		picture = "gatt"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			NOT = { has_global_flag = wto_created }
 			has_country_flag = gatt_member
@@ -916,6 +941,7 @@ political_decisions = {
 	jointhewto = {
 		picture = "jointhewto"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			year = 1995
 			
@@ -960,6 +986,7 @@ political_decisions = {
 	leavethewto = {
 		picture = "jointhewto"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			OR = {
 				#Communists leave the WTO
@@ -995,6 +1022,7 @@ political_decisions = {
 	changewto = {
 		picture = "changewto"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = wto_chairmanship
 			OR = { 
@@ -1044,6 +1072,7 @@ political_decisions = {
 		news_desc_short = "wtohigh_NEWS_SHORT"
 
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = wto_chairmanship
 			NOT = { 
@@ -1081,6 +1110,7 @@ political_decisions = {
 		news_desc_short = "wtomedium_NEWS_SHORT"
 
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = wto_chairmanship
 			NOT = { 
@@ -1115,6 +1145,7 @@ political_decisions = {
 		news_desc_short = "wtolow_NEWS_SHORT"
 
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = wto_chairmanship
 			NOT = { 
@@ -1150,6 +1181,7 @@ political_decisions = {
 	jointheibrd = {
 		picture = "jointheibrd"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			year = 1947
 			NOT = { has_country_modifier = ibrd_member }
@@ -1177,6 +1209,7 @@ political_decisions = {
 	leavetheibrd = {
 		picture = "jointheibrd"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			OR = { 
 				ruling_party_ideology = communist 
@@ -1208,6 +1241,7 @@ political_decisions = {
 	changeibrd = {
 		picture = "changeibrd"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = ibrd_chairmanship
 			OR = { 
@@ -1263,6 +1297,7 @@ political_decisions = {
 		news_desc_short = "ibrdhigh_NEWS_SHORT"
 
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = ibrd_chairmanship
 			NOT = { 
@@ -1306,6 +1341,7 @@ political_decisions = {
 		news_desc_short = "ibrdmedium_NEWS_SHORT"
 
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = ibrd_chairmanship
 			NOT = { 
@@ -1343,6 +1379,7 @@ political_decisions = {
 		news_desc_short = "ibrdlow_NEWS_SHORT"
 
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = ibrd_chairmanship
 			NOT = { 
@@ -1379,6 +1416,7 @@ political_decisions = {
 	joinopec = {
 		picture = "opec"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			year = 1960
 			NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
@@ -1420,6 +1458,7 @@ political_decisions = {
 	opec_oil_crisis = {
 		picture = "opec_oil_crisis"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			capital_scope = { continent = mena }
 			year = 1960
@@ -1468,6 +1507,7 @@ political_decisions = {
 	oil_high = {
 		picture = "opec"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = opecmember
 			NOT = {
@@ -1500,6 +1540,7 @@ political_decisions = {
 	oil_medium = {
 		picture = "opec"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = opecmember
 			NOT = {
@@ -1534,6 +1575,7 @@ political_decisions = {
 	oil_low = {
 		picture = "opec"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = opecmember
 			NOT = {
@@ -1565,6 +1607,7 @@ political_decisions = {
 	oil_reset = {
 		picture = "opec"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = opecmember
 			OR = {
@@ -1604,6 +1647,7 @@ political_decisions = {
 	formtheafb = {
 		picture = "jointheafb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			capital_scope = { continent = africa }
 			year = 1964
@@ -1654,6 +1698,7 @@ political_decisions = {
 	jointheafb = {
 		picture = "jointheafb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			capital_scope = { continent = africa }
 			has_global_flag = afbformed
@@ -1718,6 +1763,7 @@ political_decisions = {
 	leavetheafb = {
 		picture = "jointheafb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = afb_member
 		}
@@ -1792,6 +1838,7 @@ political_decisions = {
 	changeafb = {
 		picture = "jointheafb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = afb_chairmanship
 			OR = { 
@@ -1837,6 +1884,7 @@ political_decisions = {
 	afbhigh = {
 		picture = "jointheafb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = afb_chairmanship
 			NOT = { 
@@ -1864,6 +1912,7 @@ political_decisions = {
 	afbmedium = {
 		picture = "jointheafb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = afb_chairmanship
 			NOT = { 
@@ -1890,6 +1939,7 @@ political_decisions = {
 	afblow = {
 		picture = "jointheafb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = afb_chairmanship
 			NOT = { 
@@ -1919,6 +1969,7 @@ political_decisions = {
 	formtheadb = {
 		picture = "jointheadb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			tag = JAP
 			year = 1966
@@ -1964,6 +2015,7 @@ political_decisions = {
 	jointheadb = {
 		picture = "jointheadb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			OR = { 
 				capital_scope = { continent = asia } 
@@ -2028,6 +2080,7 @@ political_decisions = {
 	leavetheadb = {
 		picture = "jointheadb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_global_flag = adbformed
 			has_country_modifier = adb_member
@@ -2103,6 +2156,7 @@ political_decisions = {
 	changeadb = {
 		picture = "jointheadb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = adb_chairmanship
 			OR = { 
@@ -2148,6 +2202,7 @@ political_decisions = {
 	adbhigh = {
 		picture = "jointheadb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = adb_chairmanship
 			OR = { 
@@ -2189,6 +2244,7 @@ political_decisions = {
 	adbmedium = {
 		picture = "jointheadb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = adb_chairmanship
 			OR = { 
@@ -2218,6 +2274,7 @@ political_decisions = {
 	adblow = {
 		picture = "jointheadb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = adb_chairmanship
 			OR = { 
@@ -2257,6 +2314,7 @@ political_decisions = {
 	formtheaiib = {
 		picture = "jointheaiib"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			tag = CHI
 			
@@ -2305,6 +2363,7 @@ political_decisions = {
 	jointheaiib = {
 		picture = "jointheaiib"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			OR = { 
 				capital_scope = { continent = asia } 
@@ -2375,6 +2434,7 @@ political_decisions = {
 	leavetheaiib = {
 		picture = "jointheaiib"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_global_flag = aiibformed
 			has_country_modifier = aiib_member
@@ -2451,6 +2511,7 @@ political_decisions = {
 	changeaiib = {
 		picture = "jointheaiib"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = aiib_chairmanship
 			OR = { 
@@ -2496,6 +2557,7 @@ political_decisions = {
 	aiibhigh = {
 		picture = "jointheaiib"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = aiib_chairmanship
 			NOT = { 
@@ -2539,6 +2601,7 @@ political_decisions = {
 	aiibmedium = {
 		picture = "jointheaiib"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = aiib_chairmanship
 			NOT = { 
@@ -2568,6 +2631,7 @@ political_decisions = {
 	aiiblow = {
 		picture = "jointheaiib"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = aiib_chairmanship
 			NOT = { 
@@ -2606,6 +2670,7 @@ political_decisions = {
 	formtheiab = {
 		picture = "jointheiab"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			tag = USA
 			year = 1959
@@ -2653,6 +2718,7 @@ political_decisions = {
 	jointheiab = {
 		picture = "jointheiab"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			OR = { tag = USA tag = MEX capital_scope = { continent = south_america } }
 			has_global_flag = iabformed
@@ -2716,6 +2782,7 @@ political_decisions = {
 	leavetheiab = {
 		picture = "jointheiab"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = iab_member
 		}
@@ -2790,6 +2857,7 @@ political_decisions = {
 	changeiab = {
 		picture = "jointheiab"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = iab_chairmanship
 			OR = { 
@@ -2835,6 +2903,7 @@ political_decisions = {
 	iabhigh = {
 		picture = "jointheiab"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = iab_chairmanship
 			NOT = { 
@@ -2862,6 +2931,7 @@ political_decisions = {
 	iabmedium = {
 		picture = "jointheiab"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = iab_chairmanship
 			NOT = { 
@@ -2888,6 +2958,7 @@ political_decisions = {
 	iablow = {
 		picture = "jointheiab"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = iab_chairmanship
 			NOT = { 
@@ -2917,6 +2988,7 @@ political_decisions = {
 	formtheidb = {
 		picture = "jointheidb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			capital_scope = { continent = mena }
 			year = 1975
@@ -2965,6 +3037,7 @@ political_decisions = {
 	jointheidb = {
 		picture = "jointheidb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = oic_member
 			
@@ -3024,6 +3097,7 @@ political_decisions = {
 	leavetheidb = {
 		picture = "jointheidb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = idb_member
 			has_global_flag = idbformed
@@ -3085,6 +3159,7 @@ political_decisions = {
 	changeidb = {
 		picture = "jointheidb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = idb_chairmanship
 			OR = { 
@@ -3130,6 +3205,7 @@ political_decisions = {
 	idbhigh = {
 		picture = "jointheidb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = idb_chairmanship
 			NOT = { 
@@ -3160,6 +3236,7 @@ political_decisions = {
 	idbmedium = {
 		picture = "jointheidb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = idb_chairmanship
 			NOT = { 
@@ -3186,6 +3263,7 @@ political_decisions = {
 	idblow = {
 		picture = "jointheidb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = idb_chairmanship
 			NOT = { 
@@ -3218,6 +3296,7 @@ political_decisions = {
 	joineib = {
 		picture = "joineib"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			OR = { tech_school = XEU_tech_school tech_school = XEU_tech_school1 }
 			year = 1958
@@ -3245,6 +3324,7 @@ political_decisions = {
 	eib_principal_member = {
 		picture = "joineib"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			OR = { tech_school = XEU_tech_school tech_school = XEU_tech_school1 }
 			has_country_modifier = eib_member
@@ -3274,6 +3354,7 @@ political_decisions = {
 	join_dbla = {
 		picture = "join_dbla"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			capital_scope = { continent = south_america }
 			year = 1970
@@ -3326,6 +3407,7 @@ political_decisions = {
 	leave_dbla = {
 		picture = "join_dbla"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = dbla_member
 		}
@@ -3358,6 +3440,7 @@ political_decisions = {
 	formthecdb = {
 		picture = "jointhecdb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			OR = { tag = JAM tag = AAB tag = BAH tag = BAR tag = BLZ tag = VIR tag = CYI tag = DMC tag = GRD tag = GUY tag = HAI tag = SKN tag = STL tag = SVG tag = SUR tag = TAT tag = TCI } 
 			year = 1969
@@ -3416,6 +3499,7 @@ political_decisions = {
 	jointhecdb = {
 		picture = "jointhecdb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			OR = { tag = JAM tag = AAB tag = BAH tag = BAR tag = BLZ tag = VIR tag = CYI tag = DMC tag = GRD tag = GUY tag = HAI tag = SKN tag = STL tag = SVG tag = SUR tag = TAT tag = TCI } 
 			has_global_flag = cdbformed
@@ -3472,6 +3556,7 @@ political_decisions = {
 	leavethecdb = {
 		picture = "jointhecdb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = cdb_member
 		}
@@ -3546,6 +3631,7 @@ political_decisions = {
 	changecdb = {
 		picture = "jointhecdb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = cdb_chairmanship
 			OR = { 
@@ -3591,6 +3677,7 @@ political_decisions = {
 	cdbhigh = {
 		picture = "jointhecdb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = cdb_chairmanship
 			NOT = { 
@@ -3618,6 +3705,7 @@ political_decisions = {
 	cdbmedium = {
 		picture = "jointhecdb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = cdb_chairmanship
 			NOT = { 
@@ -3644,6 +3732,7 @@ political_decisions = {
 	cdblow = {
 		picture = "jointhecdb"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = cdb_chairmanship
 			NOT = { 
@@ -3673,6 +3762,7 @@ political_decisions = {
 	unesco = {
 		picture = "unesco"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = united_nations_ga_member
 			NOT = { has_country_modifier = unesco }
@@ -3706,6 +3796,7 @@ political_decisions = {
 	leave_unesco = {
 		picture = "unesco"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = unesco
 		}
@@ -3741,6 +3832,7 @@ political_decisions = {
 	unesco_whs_others = {
 		picture = "unesco_whs"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = unesco
 			NOT = { OR = { capital_scope = { continent = asia } capital_scope = { continent = mena } capital_scope = { continent = europe } } }
@@ -3763,6 +3855,7 @@ political_decisions = {
 	unesco_whs_asia = {
 		picture = "unesco_whs"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = unesco
 			capital_scope = { continent = asia }
@@ -3785,6 +3878,7 @@ political_decisions = {
 	unesco_whs_europe = {
 		picture = "unesco_whs"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = unesco
 			capital_scope = { continent = europe }
@@ -3807,6 +3901,7 @@ political_decisions = {
 	unesco_whs_mena = {
 		picture = "unesco_whs"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = unesco
 			capital_scope = { continent = mena }
@@ -3830,6 +3925,7 @@ political_decisions = {
 	internationalism = {
 		picture = "internationalism"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			NOT = { has_country_modifier = internationalism }
 			OR = { tag = XEU tag = XCC tag = XAU tag = XEW tag = XEC tag = XSA tag = XSU tag = XMS tag = XAC tag = XAL tag = XMU tag = XAN tag = XCI tag = XNA tag = XPI tag = XEA tag = XTC }	
@@ -3850,6 +3946,7 @@ political_decisions = {
 	peace_mission = {
 		picture = "peace_mission"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_flag = international_court_of_justice
 			OR = {
@@ -3903,6 +4000,7 @@ political_decisions = {
 	formtheoecd = {
 		picture = "jointheoecd"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			tag = USA
 			is_greater_power = yes
@@ -3927,6 +4025,7 @@ political_decisions = {
 	jointheoecd = {
 		picture = "jointheoecd"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			NOT = { has_country_modifier = oecd_member }
 			has_global_flag = oecdformed
@@ -3949,6 +4048,7 @@ political_decisions = {
 	leavetheoecd = {
 		picture = "jointheoecd"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_modifier = oecd_member
 			has_global_flag = oecdformed
@@ -3974,6 +4074,7 @@ political_decisions = {
 	dev_bank = {
 		picture = "dev_bank"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			NOT = { has_country_flag = dev_bank }
 			has_country_modifier = special_drawing_rights
@@ -4007,6 +4108,7 @@ political_decisions = {
 	world_bank = {
 		picture = "world_bank"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			rank = 1
 			NOT = { has_country_flag = world_bank }
@@ -4042,6 +4144,7 @@ political_decisions = {
 	wb_loan = {
 		picture = "wb_loan"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			# these institution may move - but hard coded of performance reasons
 			USA = { is_greater_power = yes has_country_flag = world_bank money = 220000 }
@@ -4063,6 +4166,7 @@ political_decisions = {
 	wb_credit_facillity = {
 		picture = "wb_credit_facillity"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			tag = USA
 			rank = 1
@@ -4087,6 +4191,7 @@ political_decisions = {
 	bretton_system = {
 		picture = "bretton_system"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			NOT = { year = 1992 }
 			
@@ -4127,9 +4232,10 @@ political_decisions = {
 	end_of_bretton_system = {
 		picture = "bwsend"
 		potential = {
+			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			tag = USA
-			rank = 2
+			rank = 3 #Not rank 2 because sometimes the US and USSR flips ranks and sometimes frequently
 			government = democracy
 			has_country_modifier = bretton_system
 			NOT = { has_global_flag = end_of_bretton_system }

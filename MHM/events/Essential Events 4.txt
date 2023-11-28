@@ -4405,46 +4405,6 @@ ai_chance = { factor = 0.4 }
 
 }
 
-#Fukushima Daiichi Nuclear Disaster
-country_event = {
-	id = 1512155
-	title = "Fukushima Daiichi Nuclear Disaster"
-	desc = EVTDESC1512155
-	picture = "fukushima_nuke_disaster"
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = JAP
-		year = 2011
-		NOT = { year = 2013 }
-		has_country_flag = nuclear_power_ge
-		OR = { safety_regulations = no_safety safety_regulations = trinket_safety safety_regulations = low_safety }
-		owns = 1669
-		has_country_flag = 2011_japan_earthquake
-	}
-
-	mean_time_to_happen = { 
-		months = 3
-	}
-
-	option = {
-		name = "Do all we can to contain the fallout"
-		add_country_modifier = { name = stock_market_crash duration = 365 }
-		1669 = { add_province_modifier = { name = nuke_accident duration = 1825 } }
-		social_reform = good_safety
-		ai_chance = { factor = 0.9 }
-	}
-
-	option = {
-		name = "Cover up the incident"
-		prestige = -100
-		1669 = { add_province_modifier = { name = nuke_accident duration = 1825 } }
-		ai_chance = { factor = 0.1 }
-	}
-
-}
-
 #Wang Lijun incident
 country_event = {
 	id = 1512156
@@ -5988,34 +5948,6 @@ badboy = 10
 diplomatic_influence = { who = ICL value = 50 }
 ICL = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
 ai_chance = { factor = 0.1 }
-		}
-
-}
-
-#Remove Nuke Clouds
-country_event = {
-	id = 1512209
-title = "Fallout has Subsided"
-	desc = "The level of radioactive fallout has subsided to pre-war levels in some of our provinces"
-	picture = "no_more_fallout"
-
-trigger = {
-
-has_country_flag = has_nuke_clouds
-
-NOT = { any_owned_province = { 
-OR = { has_province_modifier = nuke_high has_province_modifier = nuke_medium has_province_modifier = nuke_low has_province_modifier = tactical_nuked }
-} }
-
-}
-
-option = {
-name = "We can begin rebuilding our civilisation"
-clr_country_flag = has_nuke_clouds
-any_owned = {
-limit = { NOT = { OR = { has_province_modifier = nuke_high has_province_modifier = nuke_medium has_province_modifier = nuke_low } } }
-clr_province_flag = disease
-}
 		}
 
 }

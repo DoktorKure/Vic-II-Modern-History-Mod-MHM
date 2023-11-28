@@ -322,10 +322,6 @@ province_event = {
 			NOT ={
 				poor_strata_life_needs = 0.9
 			}
-		}			
-		modifier = {
-			factor = 0.8
-			has_crime = mafia
 		}
 		modifier = {
 			factor = 1.5
@@ -695,8 +691,8 @@ province_event = {
 	desc = "EVTDESC12120"
 	picture = "mining"
 		
-	trigger = 
-		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }{
+	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		produces = iron
 		NOT = { has_province_modifier = blood_and_iron_mine }
 	}

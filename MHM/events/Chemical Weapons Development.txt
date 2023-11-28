@@ -210,6 +210,7 @@ country_event = {
 	
 	
 	trigger = {
+NOT = { has_global_flag =  nuclear_war }
 has_country_modifier = chemical_nation 
 NOT = { has_country_modifier = chemical_sanctions }
 NOT = { sphere_owner = { relation = { who = THIS value = 0 } } }
@@ -264,6 +265,7 @@ country_event = {
 	
 	
 	trigger = {
+NOT = { has_global_flag = nuclear_war }
 
 has_country_modifier = chemical_nation 
 
@@ -297,6 +299,7 @@ country_event = {
 	
 	
 	trigger = {
+NOT = { has_global_flag = nuclear_war }
 has_country_modifier = chemical_nation
 NOT = { has_country_modifier = chemical_sanctions }
 OR = { government = theocracy government = nationalist_dictatorship government = sectarian_dictatorship government = presidential_dictatorship  }

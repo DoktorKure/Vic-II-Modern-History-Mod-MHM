@@ -1,6 +1,6 @@
 political_decisions = {
 
-	#Fired on day 0 through decision entry in CLN's history file
+	#Fired on day 0 through decision entry in USA's history file
 	1946_start_decision = {
 		picture = "defcon1"
 		
@@ -20,6 +20,11 @@ political_decisions = {
 		
 			#Indicate that this is the MHM mod
 			set_global_flag = MHM_MOD_ACTIVE
+			
+			any_owned = { add_crime = no_crime }
+			any_country = {
+				any_owned = { add_crime = no_crime }
+			}
 			
 			#Set global flag for new colonial mechanics, can be toggled in 000_startup_options.txt
 			set_global_flag = new_colonial_system
@@ -1501,7 +1506,7 @@ political_decisions = {
 							AND = { is_core = JAP OR = { is_state_capital = yes province_id = 1661 province_id = 1638 } }
 						} 
 					}
-					add_province_modifier = { name = war_bombed duration = 1825 }
+					add_crime = war_damaged
 				}
 				any_owned = {
 					limit = { 
@@ -1526,7 +1531,7 @@ political_decisions = {
 							is_core = ALB
 						} 
 					}
-					add_province_modifier = { name = war_bombed duration = 1825 }
+					add_crime = war_damaged
 				}
 			}
 
@@ -1542,7 +1547,7 @@ political_decisions = {
 							AND = { is_core = JAP OR = { is_state_capital = yes province_id = 1661 province_id = 1638 } }
 						} 
 					}
-					add_province_modifier = { name = war_bombed duration = 1825 }
+					add_crime = war_damaged
 				}
 			}
 			any_country = {
@@ -1572,7 +1577,7 @@ political_decisions = {
 							is_core = ALB
 						} 
 					}
-					add_province_modifier = { name = war_bombed duration = 1825 }
+					add_crime = war_damaged
 				}
 			}
 			any_country = {
@@ -1589,9 +1594,9 @@ political_decisions = {
 							is_core = LIT
 							is_core = LAT
 							is_core = EST
-						} 
+						}
 					}
-					add_province_modifier = { name = war_bombed duration = 3650 }
+					add_crime = war_damaged
 				}
 			}
 

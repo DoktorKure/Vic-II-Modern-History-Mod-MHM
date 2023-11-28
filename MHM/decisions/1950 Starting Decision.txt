@@ -1,8 +1,8 @@
 political_decisions = {
 
-#Fired on day 0 through decision entry in CLN's history file
-1950_start_decision = {
-	picture = "defcon1"
+	#Fired on day 0 through decision entry in USA's history file
+	1950_start_decision = {
+		picture = "defcon1"
 		potential = {
 			ai = no
 			ai = yes

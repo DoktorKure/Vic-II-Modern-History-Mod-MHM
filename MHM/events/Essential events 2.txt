@@ -1364,6 +1364,7 @@ country_event = {
 	picture = "nuclear_disarmament_un"
 	
 trigger = {
+NOT = { has_global_flag =  nuclear_war }
 OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
 NOT = { has_country_modifier = unsc_permanent_member }
 NOT = { has_country_modifier = nuke_sanctions }
@@ -2931,6 +2932,7 @@ country_event = {
 	picture = "united_nations_sanctions"
 	
 	trigger = {
+		NOT = { has_global_flag =  nuclear_war }
 		has_country_modifier = acquired_bomb
 		NOT = { has_country_modifier = acquired_bomb_sanctions }
 	}
@@ -3024,6 +3026,7 @@ country_event = {
 	picture = "united_nations_sanctions"
 	
 	trigger = {
+		NOT = { has_global_flag =  nuclear_war }
 		NOT = { has_country_modifier = acquired_bomb }
 		has_country_modifier = acquired_bomb_sanctions
 	}	
@@ -3415,116 +3418,6 @@ months = 2
 option = {
 name = "Welcome to $COUNTRY$!"
 political_reform = quota_immigration
-		}
-
-}
-
-#Nuclear False Warning - USA
-country_event = {
-	id = 1410153
-	title = "Nuclear Attack Imminent"
-	desc = EVTDESC1410153
-	picture = "1410153"
-	
-trigger = { 
-tag = USA
-OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
-USA = { government = democracy }
-RUS = { OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation } }
-assymetric_warfare = 1
-RUS = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-has_country_modifier = cold_war_high
-}
-
-mean_time_to_happen = { 
-months = 60
-}
-
-option = {
-name = "Unleash Nuclear Armaggeddon!"
-	war = { 
-target = RUS
-attacker_goal = { casus_belli = dismantle_cb } 
-defender_goal = { casus_belli = dismantle_cb }
-call_ally = yes }
-
-add_country_modifier = { name = nukes_used_recently duration = 30 }
-
-random_country = { 
-limit = { tag = RUS has_country_modifier = nuclear_cap_high } 
-country_event = 1331431 
-}
-random_country = { 
-limit = { tag = RUS has_country_modifier = nuclear_cap_medium } 
-country_event = 1331430 
-}
-random_country = { 
-limit = { tag = RUS has_country_modifier = nuclear_cap_low } 
-country_event = 1331429 
-} 
-
-ai_chance = { factor = 0.01 }
-		}
-
-option = {
-name = "Ignore it"
-ai_chance = { factor = 0.99 }
-		}
-
-}
-
-#Nuclear False Warning - RUS
-country_event = {
-	id = 1410154
-	title = "Nuclear Attack Imminent"
-	desc = EVTDESC1410153
-	picture = "1410154"
-	
-trigger = { 
-tag = RUS
-OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
-
-USA = { OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation } }
-
-USA = { government = democracy }
-assymetric_warfare = 1
-RUS = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
-has_country_modifier = cold_war_high
-}
-
-mean_time_to_happen = { 
-months = 60
-}
-
-option = {
-name = "Unleash Nuclear Armaggeddon!"
-	war = { 
-target = USA
-attacker_goal = { casus_belli = dismantle_cb } 
-defender_goal = { casus_belli = dismantle_cb }
-call_ally = yes }
-
-add_country_modifier = { name = nukes_used_recently duration = 30 }
-
-random_country = { 
-limit = { tag = RUS has_country_modifier = nuclear_cap_high } 
-country_event = 1331431 
-}
-random_country = { 
-limit = { tag = RUS has_country_modifier = nuclear_cap_medium } 
-country_event = 1331430 
-}
-random_country = { 
-limit = { tag = RUS has_country_modifier = nuclear_cap_low } 
-country_event = 1331429 
-} 
-
-ai_chance = { factor = 0.01 }
-		}
-
-option = {
-name = "Ignore it"
-ai_chance = { factor = 0.99 }
 		}
 
 }
@@ -5245,76 +5138,6 @@ any_owned = { limit = { trade_goods = petroleum } add_province_modifier = { name
 					}
 		}
 
-#Nuclear fallout spread - Immediate Neighbours
-country_event = {
-	id = 1412056
-	title = nuke_fallout_spread
-	desc = "A neighbouring nation has been struck by nuclear weapons and the nuclear fallout has spread to $COUNTRY$ due to our proximity to the struck nation."
-	picture = "fallout_spreads"
-
-trigger = {
-
-NOT = { 
-any_owned_province = {
-OR = { has_province_modifier = nuke_high has_province_modifier = nuke_medium has_province_modifier = nuke_low } 
-} 
-}
-
-NOT = { has_country_modifier = nuke_neighbour_fallout }
-any_greater_power = {
-neighbour = THIS
-has_country_modifier = nuke_fallout
-}
-
-}
-	
-mean_time_to_happen = { 
-months = 6
-}
-
-	option = {
-		name = "Brace ourselves for the fallout"
-prestige = -50
-add_country_modifier = { name = nuke_neighbour_fallout duration = 3650 }
-					}
-		}
-
-#Nuclear fallout spread - Neighbouring Neighbours
-country_event = {
-	id = 1412057
-	title = nuke_fallout_spread
-	desc = "A nation has been struck by nuclear weapons and the nuclear fallout has spread to $COUNTRY$ via the gradual spread of nuclear fallout across the world."
-	picture = "fallout_spreads"
-
-trigger = {
-
-NOT = { 
-any_neighbor_country = { 
-has_country_modifier = nuke_fallout 
-} 
-}
-
-NOT = { 
-any_owned_province = {
-OR = { has_province_modifier = nuke_high has_province_modifier = nuke_medium has_province_modifier = nuke_low } 
-} 
-}
-
-NOT = { has_country_modifier = nuke_distant_fallout }
-any_neighbor_country = { has_country_modifier = nuke_neighbour_fallout }
-}
-	
-mean_time_to_happen = { 
-months = 6
-}
-
-	option = {
-		name = "Brace ourselves for the fallout"
-prestige = -25
-add_country_modifier = { name = nuke_distant_fallout duration = 1825 }
-					}
-		}
-
 #Cyber Attack Economic
 country_event = {
 	id = 1412058
@@ -6670,6 +6493,7 @@ country_event = {
 	picture = "UNSG_sanctions"
 
 	trigger = {
+		NOT = { has_global_flag =  nuclear_war }
 		war = yes
 		has_country_modifier = united_nations_ga_member
 		NOT = { has_country_modifier = unsc_permanent_member }
@@ -6696,6 +6520,7 @@ country_event = {
 	picture = "UNSG_sanctions"
 
 	trigger = {
+		NOT = { has_global_flag =  nuclear_war }
 		war = yes
 		has_country_modifier = united_nations_ga_member
 		NOT = { has_country_modifier = unsc_permanent_member }

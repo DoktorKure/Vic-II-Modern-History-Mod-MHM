@@ -75,9 +75,442 @@ country_event = {
 		clr_global_flag = daily_cleanup_on
 		CLN = { country_event = { id = 47777787 days = 1 } }
 		
+		### Nuke Shelters keep provinces from being completely depopulated by nuked province modifiers
+		#Good Nuke Shelters
+		any_country = {
+			limit = { exists = yes  has_country_flag = good_nuke_shelters }
+			any_owned = {
+				limit = {
+					AND = {
+						AND = {
+							has_crime = nuke_province
+							is_capital = yes
+						}
+						#Not inhospitable climate
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { total_pops = 12500 }
+				}
+				any_pop = { reduce_pop = 1.02 }
+			}
+		}
+		any_country = {
+			limit = { exists = yes has_country_flag = good_nuke_shelters }
+			any_owned = {
+				limit = {
+					AND = {
+						has_crime = nuke_province
+						is_state_capital = yes
+						is_capital = no
+						#Not inhospitable climate
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { total_pops = 10000 }
+				}
+				any_pop = { reduce_pop = 1.02 }
+			}
+		}
+		any_country = {
+			limit = { exists = yes has_country_flag = good_nuke_shelters }
+			any_owned = {
+				limit = {
+					AND = {
+						has_crime = nuke_province
+						is_state_capital = no
+						is_capital = no
+						#Not inhospitable climate
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { total_pops = 5000 }
+				}
+				any_pop = { reduce_pop = 1.02 }
+			}
+		}
+		any_country = {
+			limit = { exists = yes has_country_flag = good_nuke_shelters }
+			any_owned = {
+				limit = {
+					AND = {
+						NOT = { has_crime = nuke_province }
+						is_capital = yes
+						#Not inhospitable climate
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { total_pops = 12500 }
+				}
+				any_pop = { reduce_pop = 1.02 }
+			}
+		}
+		any_country = {
+			limit = { exists = yes has_country_flag = good_nuke_shelters }
+			any_owned = {
+				limit = {
+					AND = {
+						NOT = { has_crime = nuke_province }
+						is_state_capital = yes
+						is_capital = no
+						#Not inhospitable climate
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { total_pops = 10000 }
+				}
+				any_pop = { reduce_pop = 1.02 }
+			}
+		}
+		any_country = {
+			limit = { exists = yes has_country_flag = good_nuke_shelters }
+			any_owned = {
+				limit = {
+					AND = {
+						NOT = { has_crime = nuke_province }
+						is_state_capital = no
+						is_capital = no
+						#Not inhospitable climate
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { total_pops = 5000 }
+				}
+				any_pop = { reduce_pop = 1.02 }
+			}
+		}
+		#Markers
+		any_country = {
+			limit = { exists = yes  has_country_flag = good_nuke_shelters }
+			any_owned = {
+				limit = {
+					OR = {
+						has_crime = nuke_province
+						is_state_capital = yes
+						is_capital = yes
+						#Not inhospitable climate
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { has_province_modifier = nuke_shelter }
+				}
+				add_province_modifier = { name = nuke_shelter duration = -1 }
+			}
+		}
+		
+		#Okay Nuke Shelters
+		any_country = {
+			limit = { exists = yes has_country_flag = okay_nuke_shelters }
+			any_owned = {
+				limit = {
+					AND = {
+						AND = {
+							has_crime = nuke_province
+							is_capital = yes
+						}
+						#Not inhospitable climate
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { total_pops = 7500 }
+				}
+				any_pop = { reduce_pop = 1.02 }
+			}
+		}
+		any_country = {
+			limit = { exists = yes has_country_flag = okay_nuke_shelters }
+			any_owned = {
+				limit = {
+					AND = {
+						has_crime = nuke_province
+						is_state_capital = yes
+						is_capital = no
+						#Not inhospitable climate
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { total_pops = 5000 }
+				}
+				any_pop = { reduce_pop = 1.02 }
+			}
+		}
+		any_country = {
+			limit = { exists = yes has_country_flag = okay_nuke_shelters }
+			any_owned = {
+				limit = {
+					AND = {
+						has_crime = nuke_province
+						is_state_capital = no
+						is_capital = no
+						#Not inhospitable climate
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { total_pops = 2500 }
+				}
+				any_pop = { reduce_pop = 1.02 }
+			}
+		}
+		any_country = {
+			limit = { exists = yes has_country_flag = okay_nuke_shelters }
+			any_owned = {
+				limit = {
+					AND = {
+						NOT = { has_crime = nuke_province }
+						is_capital = yes
+						#Not inhospitable climate
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { total_pops = 7500 }
+				}
+				any_pop = { reduce_pop = 1.02 }
+			}
+		}
+		any_country = {
+			limit = { exists = yes has_country_flag = okay_nuke_shelters }
+			any_owned = {
+				limit = {
+					AND = {
+						NOT = { has_crime = nuke_province }
+						is_state_capital = yes
+						is_capital = no
+						#Not inhospitable climate
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { total_pops = 5000 }
+				}
+				any_pop = { reduce_pop = 1.02 }
+			}
+		}
+		any_country = {
+			limit = { exists = yes  has_country_flag = okay_nuke_shelters }
+			any_owned = {
+				limit = {
+					AND = {
+						OR = {
+							has_crime = nuke_province
+							is_state_capital = yes
+							is_capital = yes
+							#Not inhospitable climate
+						}
+						NOT = {
+							OR = {
+								terrain = arctic
+								terrain = tundra
+								terrain = tundra_hills
+								terrain = tundra_mountains
+
+								terrain = desert
+								terrain = desert_hills
+								terrain = desert_mountains
+								terrain = semi_desert
+								terrain = semi_desert_hills
+								terrain = semi_desert_mountains
+								terrain = semi_desert_mountains
+							}
+						}
+					}
+					NOT = { has_province_modifier = nuke_shelter }
+				}
+				add_province_modifier = { name = nuke_shelter duration = -1 }
+			}
+		}
+		
+		any_country = {
+			limit = {
+				exists = yes 
+				has_global_flag = nuclear_winter
+			}
+			any_owned = {
+				limit = {
+					NOT = { total_pops = 100 }
+				}
+				any_pop = { reduce_pop = 0 }
+			}
+		}
+		
+		any_country = {
+			limit = {
+				tag = WAS
+			}
+			any_owned = {
+				any_pop = { reduce_pop = 0 }
+			}
+		}
+		
 		#Craftsmen, Soldiers, and Bureaucrats bugfix - dependent on minorities reforms
 		any_country = {
-			limit = { OR = { government = sectarian_dictatorship minorities_reform = minorities_oppression } }
+			limit = { exists = yes OR = { government = sectarian_dictatorship minorities_reform = minorities_oppression } }
 			any_owned = {
 				limit = {
 					OR = {
@@ -101,7 +534,7 @@ country_event = {
 			}
 		}
 		any_country = {
-			limit = { NOT = { OR = { government = sectarian_dictatorship minorities_reform = minorities_oppression } } }
+			limit = { exists = yes NOT = { OR = { government = sectarian_dictatorship minorities_reform = minorities_oppression } } }
 			any_owned = {
 				limit = {
 					OR = {
@@ -199,6 +632,7 @@ country_event = {
 		#Clean up UNO tag if it exists
 		any_country = {
 			limit = {
+				exists = yes
 				UNO = { exists = yes }
 				neighbour = UNO
 			}
@@ -208,6 +642,7 @@ country_event = {
 		#Neutrality marker cleanup in case country changes capitals
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_modifier = neutrality has_country_modifier = neutrality_AI }
 			}
 			any_owned = {
@@ -220,6 +655,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_modifier = neutrality has_country_modifier = neutrality_AI }
 			}
 			any_owned = {
@@ -233,6 +669,7 @@ country_event = {
 		#Neutrality modifier cleanup for AI nations
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = neutrality
 				ai = yes
 				NOT = { has_country_modifier = neutrality_AI }
@@ -242,6 +679,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = neutrality_AI
 				ai = no
 			}
@@ -252,6 +690,7 @@ country_event = {
 		#Mark which countries have nukes
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
 			}
 			any_owned = {
@@ -264,6 +703,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
 			}
 			any_owned = {
@@ -277,6 +717,7 @@ country_event = {
 		#Cleanup Markers
 		any_country = {
 			limit = {
+				exists = yes
 				NOT = { has_country_modifier = atomic_nation has_country_modifier = hydrogen_nation }
 			}
 			any_owned = {
@@ -290,6 +731,7 @@ country_event = {
 		#Mark which countries have chemical weapons
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = chemical_nation
 			}
 			any_owned = {
@@ -302,6 +744,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = chemical_nation
 			}
 			any_owned = {
@@ -315,6 +758,7 @@ country_event = {
 		#Cleanup Markers
 		any_country = {
 			limit = {
+				exists = yes
 				NOT = { has_country_modifier = chemical_nation }
 			}
 			any_owned = {
@@ -328,6 +772,7 @@ country_event = {
 		#Mark which countries have bioweapons
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = bio_nation
 			}
 			any_owned = {
@@ -340,6 +785,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = bio_nation
 			}
 			any_owned = {
@@ -353,6 +799,7 @@ country_event = {
 		#Cleanup Markers
 		any_country = {
 			limit = {
+				exists = yes
 				NOT = { has_country_modifier = bio_nation }
 			}
 			any_owned = {
@@ -366,6 +813,7 @@ country_event = {
 		#Mark which countries are general UN members
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = united_nations
 			}
 			any_owned = {
@@ -378,6 +826,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = united_nations
 			}
 			any_owned = {
@@ -392,6 +841,7 @@ country_event = {
 		#Mark which countries are UNGA members
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = united_nations_ga_member
 			}
 			any_owned = {
@@ -404,6 +854,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = united_nations_ga_member
 			}
 			any_owned = {
@@ -418,6 +869,7 @@ country_event = {
 		#Mark which countries are UNSC permanent members
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = unsc_permanent_member
 			}
 			any_owned = {
@@ -430,6 +882,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = unsc_permanent_member
 			}
 			any_owned = {
@@ -446,6 +899,7 @@ country_event = {
 		#Mark which countries are Democratic Bloc Members
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_flag = joindemo
 			}
 			any_owned = {
@@ -458,6 +912,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_flag = joindemo
 			}
 			any_owned = {
@@ -472,6 +927,7 @@ country_event = {
 		#Mark which countries are Communist Bloc Members
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_flag = joincomm
 			}
 			any_owned = {
@@ -484,6 +940,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_flag = joincomm
 			}
 			any_owned = {
@@ -498,6 +955,7 @@ country_event = {
 		#Mark which countries are Non-Aligned Bloc Members
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_flag = joinnam
 			}
 			any_owned = {
@@ -510,6 +968,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_flag = joinnam
 			}
 			any_owned = {
@@ -532,6 +991,7 @@ country_event = {
 		north_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					OR = {
 						month = 11
 						AND = {
@@ -569,6 +1029,7 @@ country_event = {
 		south_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					OR = {
 						month = 11
 						AND = {
@@ -608,6 +1069,7 @@ country_event = {
 		north_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					month = 2
 					NOT = { month = 5 }
 				}
@@ -640,6 +1102,7 @@ country_event = {
 		south_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					month = 2
 					NOT = { month = 5 }
 				}
@@ -674,6 +1137,7 @@ country_event = {
 		north_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					month = 5
 					NOT = { month = 8 }
 				}
@@ -706,6 +1170,7 @@ country_event = {
 		south_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					month = 5
 					NOT = { month = 8 }
 				}
@@ -740,6 +1205,7 @@ country_event = {
 		north_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					month = 8
 					NOT = { month = 11 }
 				}
@@ -772,6 +1238,7 @@ country_event = {
 		south_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					month = 8
 					NOT = { month = 11 }
 				}
@@ -807,6 +1274,7 @@ country_event = {
 		north_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					OR = {
 						month = 11
 						AND = {
@@ -836,6 +1304,7 @@ country_event = {
 		south_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					OR = {
 						month = 11
 						AND = {
@@ -867,6 +1336,7 @@ country_event = {
 		north_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					month = 2
 					NOT = { month = 5 }
 				}
@@ -891,6 +1361,7 @@ country_event = {
 		south_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					month = 2
 					NOT = { month = 5 }
 				}
@@ -917,6 +1388,7 @@ country_event = {
 		north_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					month = 5
 					NOT = { month = 8 }
 				}
@@ -941,6 +1413,7 @@ country_event = {
 		south_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					month = 5
 					NOT = { month = 8 }
 				}
@@ -967,6 +1440,7 @@ country_event = {
 		north_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					month = 8
 					NOT = { month = 11 }
 				}
@@ -991,6 +1465,7 @@ country_event = {
 		south_hemisphere_metaregion = {
 			limit = {
 				owner = {
+					exists = yes
 					month = 8
 					NOT = { month = 11 }
 				}
@@ -1013,6 +1488,40 @@ country_event = {
 			remove_province_modifier = winter_farm_province_modifier
 		}
 		
+		any_land_metaregion = {
+			limit = {
+				owner = {
+					exists = yes
+					has_country_modifier = nuclear_winter
+				}
+				AND = {
+					OR = {
+						trade_goods = fruit
+						trade_goods = grain
+						trade_goods = sugar
+						trade_goods = tea
+						trade_goods = tobacco
+						trade_goods = coffee
+						trade_goods = cotton
+					}
+				}
+				NOT = { has_province_modifier = nuclear_winter_farm_province }
+				NOT = { has_province_modifier = nuke_province_marker }
+			}
+			add_province_modifier = { name = nuclear_winter_farm_province duration = -1 }
+		}
+		any_land_metaregion = {
+			limit = {
+				owner = {
+					exists = yes
+					has_country_modifier = nuclear_winter
+				}
+				NOT = { has_province_modifier = nuclear_winter_province }
+				NOT = { has_province_modifier = nuke_province_marker }
+			}
+			add_province_modifier = { name = nuclear_winter_province duration = -1 }
+		}
+		
 		#########################################################
 		#														#
 		#				DEVELOPMENT LEVELS						#
@@ -1027,6 +1536,7 @@ country_event = {
 		#########################################################
 		
 		any_country = {
+			limit = { exists = yes }
 			any_owned = {
 				limit = { #Less than 10% or less than 30K pops
 					OR = { NOT = { total_pops = 30000 } NOT = { literacy = 0.10 } }
@@ -1044,6 +1554,7 @@ country_event = {
 		}
 		
 		any_country = {
+			limit = { exists = yes }
 			any_owned = {
 				limit = { #Between 10% to 20%
 					total_pops = 30000
@@ -1062,6 +1573,7 @@ country_event = {
 		}
 		
 		any_country = {
+			limit = { exists = yes }
 			any_owned = {
 				limit = { #Between 20% to 30%
 					total_pops = 30000
@@ -1080,6 +1592,7 @@ country_event = {
 		}
 		
 		any_country = {
+			limit = { exists = yes }
 			any_owned = {
 				limit = { #Between 30% to 40%
 					total_pops = 30000
@@ -1098,6 +1611,7 @@ country_event = {
 		}
 		
 		any_country = {
+			limit = { exists = yes }
 			any_owned = {
 				limit = { #Between 40% to 50%
 					total_pops = 30000
@@ -1116,6 +1630,7 @@ country_event = {
 		}
 		
 		any_country = {
+			limit = { exists = yes }
 			any_owned = {
 				limit = { #Between 50% to 60%
 					total_pops = 30000
@@ -1134,6 +1649,7 @@ country_event = {
 		}
 		
 		any_country = {
+			limit = { exists = yes }
 			any_owned = {
 				limit = { #Above 60%
 					total_pops = 30000
@@ -1155,9 +1671,30 @@ country_event = {
 		### END DEVELOPMENT LEVELS BLOCK ###
 		####################################
 		
+		#Nuked province marker cleanup
+		any_country	= {
+			limit = { exists = yes }
+			any_owned = {
+				limit = {
+					AND = { has_crime = nuke_province NOT = { has_province_modifier = nuke_province_marker } }
+				}
+				add_province_modifier = { name = nuke_province_marker duration = -1 }
+			}
+		}
+		any_country	= {
+			limit = { exists = yes }
+			any_owned = {
+				limit = {
+					AND = { has_province_modifier = nuke_province_marker NOT = { has_crime = nuke_province } }
+				}
+				remove_province_modifier = nuke_province_marker
+			}
+		}
+		
 		#Collectivisation
 		any_country	= {
 			limit = {
+				exists = yes
 				has_country_flag = collectivise_farms
 			}
 			any_owned = {
@@ -1184,6 +1721,7 @@ country_event = {
 		#Remove all capitalists in fully planned economies (communist dictatorships)
 		any_country	= {
 			limit = {
+				exists = yes
 				OR = {
 					government = proletarian_dictatorship
 					government = proletarian_dictatorship1
@@ -1210,6 +1748,7 @@ country_event = {
 		#Concentration Camps
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_flag = death_camp_active
 			}
 			any_owned = { 
@@ -1221,6 +1760,7 @@ country_event = {
 		#Bretton Woods Cleanup
 		any_country	= {
 			limit = {
+				exists = yes
 				has_country_modifier = bretton_system
 			}
 			any_owned = {
@@ -1234,6 +1774,7 @@ country_event = {
 		#Superstate province modifiers
 		any_country	= {
 			limit = {
+				exists = yes
 				capital_scope = { has_province_modifier = single_market }
 			}
 			any_owned = {
@@ -1245,6 +1786,7 @@ country_event = {
 		}
 		any_country	= {
 			limit = {
+				exists = yes
 				capital_scope = { has_province_modifier = currency_union_province }
 			}
 			any_owned = {
@@ -1256,6 +1798,7 @@ country_event = {
 		}
 		any_country	= {
 			limit = {
+				exists = yes
 				capital_scope = { has_province_modifier = defence_union }
 			}
 			any_owned = {
@@ -1269,6 +1812,7 @@ country_event = {
 		#Economic focus cleanup
 		any_country	= {
 			limit = {
+				exists = yes
 				has_country_flag = existing_country
 				has_country_flag = exportfocus
 			}
@@ -1445,6 +1989,23 @@ country_event = {
 	
 	option = {
 		name = "Checking..."
+		
+		any_country = {
+			limit = {
+				exists = yes
+				has_global_flag = nuclear_winter
+				NOT = { has_country_modifier = nuclear_winter }
+			}
+			add_country_modifier = { name = nuclear_winter duration = -1 }
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = nuclear_winter
+				NOT = { has_global_flag = nuclear_winter }
+			}
+			remove_country_modifier = nuclear_winter
+		}
 		
 		#Superstate Flags
 		any_country = {
@@ -1648,6 +2209,8 @@ country_event = {
 		#Base growth rates
 		any_country = {
 			limit = {
+				exists = yes
+				NOT = { has_global_flag = nuclear_winter }
 				NOT = { has_country_modifier = contraception_decay }
 				NOT = { has_country_flag = demographic_transition_stage_2_flag }
 				NOT = { has_country_flag = demographic_transition_stage_3_flag }
@@ -1661,6 +2224,7 @@ country_event = {
 						OR = {
 							has_province_modifier = family_values1
 							has_province_modifier = natalism_1
+							has_crime = nuke_province
 						}
 					}
 				}
@@ -1669,6 +2233,8 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
+				NOT = { has_global_flag = nuclear_winter }
 				NOT = { has_country_modifier = contraception_decay }
 				has_country_flag = demographic_transition_stage_2_flag
 				NOT = { has_country_flag = demographic_transition_stage_3_flag }
@@ -1682,6 +2248,7 @@ country_event = {
 						OR = {
 							has_province_modifier = family_values1
 							has_province_modifier = natalism_1
+							has_crime = nuke_province
 						}
 					}
 				}
@@ -1690,6 +2257,8 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
+				NOT = { has_global_flag = nuclear_winter }
 				NOT = { has_country_modifier = contraception_decay }
 				has_country_flag = demographic_transition_stage_3_flag
 				NOT = { has_country_flag = demographic_transition_stage_4_flag }
@@ -1702,6 +2271,7 @@ country_event = {
 						OR = {
 							has_province_modifier = family_values1
 							has_province_modifier = natalism_1
+							has_crime = nuke_province
 						}
 					}
 				}
@@ -1710,6 +2280,8 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
+				NOT = { has_global_flag = nuclear_winter }
 				NOT = { has_country_modifier = contraception_decay }
 				has_country_flag = demographic_transition_stage_4_flag
 				NOT = { has_country_flag = demographic_transition_stage_5_flag }
@@ -1721,6 +2293,7 @@ country_event = {
 						OR = {
 							has_province_modifier = family_values1
 							has_province_modifier = natalism_1
+							has_crime = nuke_province
 						}
 					}
 				}
@@ -1729,6 +2302,8 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
+				NOT = { has_global_flag = nuclear_winter }
 				NOT = { has_country_modifier = contraception_decay }
 				has_country_flag = demographic_transition_stage_5_flag
 				NOT = { has_country_flag = demographic_transition_stage_6_flag }
@@ -1739,6 +2314,7 @@ country_event = {
 						OR = {
 							has_province_modifier = family_values1
 							has_province_modifier = natalism_1
+							has_crime = nuke_province
 						}
 					}
 				}
@@ -1751,6 +2327,7 @@ country_event = {
 		#sectarian governments and other governments that are oppressive towards minorities grow only primary and accepted pops
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = contraception_decay
 				OR = {
 					government = sectarian_dictatorship
@@ -1758,6 +2335,15 @@ country_event = {
 				}
 			}
 			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							has_province_modifier = family_values1
+							has_province_modifier = natalism_1
+							has_crime = nuke_province
+						}
+					}
+				}
 				any_pop = {
 					limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
 					reduce_pop = 1.0017
@@ -1767,6 +2353,7 @@ country_event = {
 		#All others have a universal pop growth
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_modifier = contraception_decay
 				NOT = {
 					OR = {
@@ -1775,7 +2362,18 @@ country_event = {
 					}
 				}
 			}
-			any_owned = { any_pop = { reduce_pop = 1.0017 } }
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							has_province_modifier = family_values1
+							has_province_modifier = natalism_1
+							has_crime = nuke_province
+						}
+					}
+				}
+				any_pop = { reduce_pop = 1.0017 }
+			}
 		}
 		
 		##########################################
@@ -3525,6 +4123,7 @@ country_event = {
 		#Slightly increase primary culture pop growth during pop replacement
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_flag = ethnic_cleansed
 			}
 			any_owned = {
@@ -3539,6 +4138,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				has_country_flag = promote_colonial_migration_active
 			}
 			any_owned = {
@@ -3555,6 +4155,7 @@ country_event = {
 		#Reduce non-accepted pops during genocides
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3570,6 +4171,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3586,6 +4188,7 @@ country_event = {
 		
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3601,6 +4204,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3617,6 +4221,7 @@ country_event = {
 		
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3632,6 +4237,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3648,6 +4254,7 @@ country_event = {
 		
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3663,6 +4270,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3679,6 +4287,7 @@ country_event = {
 		
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3694,6 +4303,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3710,6 +4320,7 @@ country_event = {
 		
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3725,6 +4336,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3741,6 +4353,7 @@ country_event = {
 		
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3756,6 +4369,7 @@ country_event = {
 		}
 		any_country = {
 			limit = {
+				exists = yes
 				OR = { has_country_flag = ethnic_cleansed has_country_modifier = ethnic_cleansing }
 			}
 			any_owned = {
@@ -3860,74 +4474,86 @@ country_event = {
 		name = "Checking..."
 		
 		#upgrade rebels
-		random_owned = {
-			limit = {
+		any_country = {
+			limit = { exists = yes }
+			random_owned = {
+				limit = {
+					owner = {
+						year = 1960
+						NOT = { has_global_flag = rebel_tech_1960 }
+					}
+				}
 				owner = {
-					year = 1960
-					NOT = { has_global_flag = rebel_tech_1960 }
-				}
-			}
-			owner = {
-				REB = {
-					activate_technology = strategic_bomber
-					activate_technology = icbm
-					activate_technology = guerrilla
-					activate_technology = antitank_weapons
-					activate_technology = second_generation_jet_fighters
-					activate_technology = proxy_war
-				}
-				set_global_flag = rebel_tech_1960
-			}
-		}
-		random_owned = {
-			limit = {
-				owner = {
-					year = 1980
-					NOT = { has_global_flag = rebel_tech_1980 }
-				}
-			}
-			owner = {
-				set_global_flag = rebel_tech_1980
-				REB = {
-					activate_technology = submarine_launched_ballistic_missile
-					activate_technology = mechanized_infantry
-					activate_technology = main_battle_tank
-					activate_technology = surface_to_air_missile
-					activate_technology = close_air_support
-					activate_technology = mutual_assured_destruction
+					REB = {
+						activate_technology = strategic_bomber
+						activate_technology = icbm
+						activate_technology = guerrilla
+						activate_technology = antitank_weapons
+						activate_technology = second_generation_jet_fighters
+						activate_technology = proxy_war
+					}
+					set_global_flag = rebel_tech_1960
 				}
 			}
 		}
-		random_owned = {
-			limit = {
-				owner = {
-					year = 2000
-					NOT = { has_global_flag = rebel_tech_2000 }
+		any_country = {
+			limit = { exists = yes }
+			random_owned = {
+				limit = {
+					owner = {
+						year = 1980
+						NOT = { has_global_flag = rebel_tech_1980 }
+					}
 				}
-			}
-			owner = {
-				set_global_flag = rebel_tech_2000
-				REB = {
-					activate_technology = missile_launch_facility
-					activate_technology = special_forces
-					activate_technology = modern_rifles
-					activate_technology = assymetric_warfare
-					activate_technology = arms_race_doctrine
+				owner = {
+					set_global_flag = rebel_tech_1980
+					REB = {
+						activate_technology = submarine_launched_ballistic_missile
+						activate_technology = mechanized_infantry
+						activate_technology = main_battle_tank
+						activate_technology = surface_to_air_missile
+						activate_technology = close_air_support
+						activate_technology = mutual_assured_destruction
+					}
 				}
 			}
 		}
-		random_owned = {
-			limit = {
+		any_country = {
+			limit = { exists = yes }
+			random_owned = {
+				limit = {
+					owner = {
+						year = 2000
+						NOT = { has_global_flag = rebel_tech_2000 }
+					}
+				}
 				owner = {
-					year = 2020
-					NOT = { has_global_flag = rebel_tech_2020 }
+					set_global_flag = rebel_tech_2000
+					REB = {
+						activate_technology = missile_launch_facility
+						activate_technology = special_forces
+						activate_technology = modern_rifles
+						activate_technology = assymetric_warfare
+						activate_technology = arms_race_doctrine
+					}
 				}
 			}
-			owner = {
-				set_global_flag = rebel_tech_2020
-				REB = {
-					activate_technology = military_gps_system
-					activate_technology = fourth_generation_warfare
+		}
+		any_country = {
+			limit = { exists = yes }
+			random_owned = {
+				limit = {
+					owner = {
+						year = 2020
+						NOT = { has_global_flag = rebel_tech_2020 }
+					}
+				}
+				owner = {
+					set_global_flag = rebel_tech_2020
+					REB = {
+						activate_technology = military_gps_system
+						activate_technology = fourth_generation_warfare
+					}
 				}
 			}
 		}

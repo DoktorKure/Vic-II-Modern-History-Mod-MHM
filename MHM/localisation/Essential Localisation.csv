@@ -371,6 +371,10 @@ minimal_societal_corruption;Minimum Social Corruption;;;;;;;;x
 nuke_low;Low damage from Nuclear Strike;;;;;;;;x
 nuke_medium;Moderate damage from Nuclear Strike;;;;;;;;x
 nuke_high;Extensive damage from Nuclear Strike;;;;;;;;x
+nuke_province_marker;Contaminated from Nuclear Strike;;;;;;;;x
+nuke_shelter;Nuclear Bunkers;;;;;;;;x
+nuclear_winter_province;Nuclear Winter;;;;;;;;x
+nuclear_winter_farm_province;Nuclear Winter (Farms);;;;;;;;x
 chemical_low;Low damage from Chemical Attack;;;;;;;;x
 chemical_medium;Moderate damage from Chemical Attack;;;;;;;;x
 chemical_high;Extensive damage from Chemical Attack;;;;;;;;x

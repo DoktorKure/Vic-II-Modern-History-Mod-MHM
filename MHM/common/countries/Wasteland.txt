@@ -1,0 +1,20 @@
+graphical_culture = Generic
+color = { 255 255 255 }
+
+unit_names = {
+}
+
+party = {
+	name = "Wasteland"
+	start_date = 1800.1.1
+	end_date = 2100.1.1
+
+	ideology = nationalist
+
+	citizenship_policy = full_citizenship
+	economic_policy = laissez_faire
+	ideology = nationalist
+	religious_policy = secularized
+	trade_policy = protectionism
+	war_policy = jingoism
+}

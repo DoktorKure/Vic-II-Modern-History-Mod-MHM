@@ -1133,7 +1133,7 @@ country_event = {
 					limit = { is_core = THIS }
 					remove_province_modifier = patriot_uprising
 					add_province_modifier = { 
-						name = war_torn
+						name = war_bombed
 						duration = 730
 					}
 					any_pop = {

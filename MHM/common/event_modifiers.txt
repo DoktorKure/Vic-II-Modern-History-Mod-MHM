@@ -5024,6 +5024,37 @@ unsc_member_marker = {
 icon = 1
 }
 
+nuke_province_marker = {
+icon = 26
+}
+
+#Nuclear Winter province modifiers
+
+nuclear_winter_farm_province = {
+	local_RGO_output = -0.99
+	local_RGO_throughput = -0.99
+	icon = 26
+}
+nuclear_winter_province = {
+	movement_cost = 0.50
+	supply_limit = -50.0
+	icon = 26
+}
+nuke_shelter = {
+	icon = 25
+}
+nuclear_winter = {
+	global_population_growth = -1.0
+	core_pop_militancy_modifier = 0.1
+	RGO_output = -0.90
+	factory_output = -0.50
+	icon = 24
+}
+nuclear_anarchy = {
+	core_pop_militancy_modifier = 0.4
+	icon = 24
+}
+
 nuke_high = {
 immigrant_push = 10
 population_growth = -0.06
@@ -5070,7 +5101,7 @@ icon = 26
 
 nuke_fallout = {
 immigrant_push = 0.20
-global_population_growth = -0.003
+global_population_growth = -0.01
 immigrant_attract = -0.50
 core_pop_militancy_modifier = 0.03
 RGO_throughput = -0.30
@@ -5080,7 +5111,7 @@ icon = 24
 
 nuke_neighbour_fallout = {
 immigrant_push = 0.10
-global_population_growth = -0.002
+global_population_growth = -0.007
 immigrant_attract = -0.25
 core_pop_militancy_modifier = 0.02
 RGO_throughput = -0.20
@@ -5090,7 +5121,7 @@ icon = 24
 
 nuke_distant_fallout = {
 immigrant_push = 0.05
-global_population_growth = -0.001
+global_population_growth = -0.005
 immigrant_attract = -0.125
 core_pop_militancy_modifier = 0.01
 RGO_throughput = -0.20
