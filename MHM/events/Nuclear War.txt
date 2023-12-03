@@ -2209,7 +2209,7 @@ province_event = {
 
 	option = {
 		name = "We must save our people!"
-		prestige = -25
+		owner = { prestige = -25 }
 		life_rating = -15
 		secede_province = WAS
 	}
