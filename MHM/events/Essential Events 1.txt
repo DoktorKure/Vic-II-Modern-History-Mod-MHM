@@ -2526,7 +2526,6 @@ remove_country_modifier = g77
 
 #G77
 country_event = {
-NOT = { has_global_flag = nuclear_war }
 	id = 1412158
 title = "We are now a G77 member"
 	desc = EVTDESC1412158
@@ -2534,6 +2533,7 @@ title = "We are now a G77 member"
 	picture = "g77"
 
 trigger = {
+NOT = { has_global_flag = nuclear_war }
 year = 1964
 NOT = { rank = 20 }
 NOT = { has_country_modifier = g77 }
