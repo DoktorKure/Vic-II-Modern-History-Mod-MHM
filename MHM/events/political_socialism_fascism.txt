@@ -8,13 +8,13 @@
 
 #Labor Union
 province_event = {
-	owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 	id = 17500
 	title = "EVTNAME17500"
 	desc = "EVTDESC17500"
 	picture = "Revolution"
 	
 	trigger = {
+		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_ideology_enabled = socialist
 		civilized = yes
 		is_colonial = no
