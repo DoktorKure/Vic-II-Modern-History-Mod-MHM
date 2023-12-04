@@ -413,7 +413,7 @@ country_event = {
 	picture = "united_nations"
 
 	trigger = {
-
+NOT = { has_global_flag = nuclear_war }
 NOT = { has_country_flag = founding_member_of_un }
 NOT = { has_country_modifier = not_member_of_united_nations }
 		NOT = { has_country_modifier = united_nations }

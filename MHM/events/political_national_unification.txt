@@ -137,17 +137,6 @@ country_event = {
 			limit = {
 				owner = {
 					FROM = {
-						primary_culture = padanian
-					}
-				}
-			}
-			owner = { add_accepted_culture = padanian }
-		}
-
-		random_owned = {
-			limit = {
-				owner = {
-					FROM = {
 						primary_culture = insular_mediterranean
 					}
 				}
@@ -439,17 +428,6 @@ country_event = {
 				}
 			}
 			owner = { add_accepted_culture = german }
-		}
-
-		random_owned = {
-			limit = {
-				owner = {
-					FROM = {
-						primary_culture = south_german
-					}
-				}
-			}
-			owner = { add_accepted_culture = south_german }
 		}
 
 		random_owned = {
@@ -3923,17 +3901,6 @@ country_event = {
 			limit = {
 				owner = {
 					FROM = {
-						accepted_culture = padanian
-					}
-				}
-			}
-			owner = { add_accepted_culture = padanian }
-		}
-
-		random_owned = {
-			limit = {
-				owner = {
-					FROM = {
 						accepted_culture = insular_mediterranean
 					}
 				}
@@ -4225,17 +4192,6 @@ country_event = {
 				}
 			}
 			owner = { add_accepted_culture = german }
-		}
-
-		random_owned = {
-			limit = {
-				owner = {
-					FROM = {
-						accepted_culture = south_german
-					}
-				}
-			}
-			owner = { add_accepted_culture = south_german }
 		}
 
 		random_owned = {

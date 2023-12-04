@@ -3643,7 +3643,7 @@ country_event = {
 		
 		AUS_734 = {
 			any_pop = { 
-				limit = { OR = { culture = german culture = south_german } }			 
+				limit = { culture = german }			 
 				consciousness = 5
 				militancy = 2
 			}

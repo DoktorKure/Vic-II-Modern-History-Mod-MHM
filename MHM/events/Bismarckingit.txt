@@ -97,9 +97,8 @@ country_event = {
 		
 		KUK = {
 			government = hms_government
-			primary_culture = south_german
+			primary_culture = german
 			add_accepted_culture = hungarian
-			add_accepted_culture = german
 
 			AUS = { all_core = { add_core = KUK } }
 			HUN = { all_core = { add_core = KUK } }

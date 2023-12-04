@@ -378,8 +378,8 @@ country_event = {
 		relation = { who = RUS value = 10 }
 		relation = { who = ENG value = 25 } 
 		relation = { who = FRA value = 50 } # The US supports a complete partition of Germany, pleasing the USSR, France, the UK and Poland while angering German nationalists
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } consciousness = 5 militancy = 5 } } }
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } ideology = { factor = 0.25 value = communist } ideology = { factor = 0.25 value = nationalist } } } }
+		GER_metaregion = { any_pop = { limit = { culture = german } consciousness = 5 militancy = 5 } }
+		GER_metaregion = { any_pop = { limit = { culture = german } ideology = { factor = 0.25 value = communist } ideology = { factor = 0.25 value = nationalist } } }
 		
 		OG4 = {
 			change_tag = SGF
@@ -474,8 +474,8 @@ country_event = {
 		relation = { who = RUS value = 10 }
 		relation = { who = USA value = -50 } 
 		relation = { who = FRA value = 50 } 
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } consciousness = 5 militancy = 5 } } }
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } ideology = { factor = 0.25 value = communist } ideology = { factor = 0.25 value = nationalist } } } }
+		GER_metaregion = { any_pop = { limit = { culture = german } consciousness = 5 militancy = 5 } }
+		GER_metaregion = { any_pop = { limit = { culture = german } ideology = { factor = 0.25 value = communist } ideology = { factor = 0.25 value = nationalist } } }
 		
 		#Form the NGF
 		OG3 = {
@@ -537,8 +537,8 @@ country_event = {
 		relation = { who = RUS value = 10 }
 		relation = { who = USA value = -50 } 
 		relation = { who = FRA value = 50 } 
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } consciousness = 5 militancy = 5 } } }
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } ideology = { factor = 0.25 value = communist } ideology = { factor = 0.25 value = nationalist } } } }
+		GER_metaregion = { any_pop = { limit = { culture = german } consciousness = 5 militancy = 5 } }
+		GER_metaregion = { any_pop = { limit = { culture = german } ideology = { factor = 0.25 value = communist } ideology = { factor = 0.25 value = nationalist } } }
 		
 		OG3 = {
 			change_tag = NGF
@@ -652,7 +652,7 @@ country_event = {
 		relation = { who = RUS value = -20 } 
 		relation = { who = USA value = 50 } 
 		relation = { who = ENG value = 50 } 
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } consciousness = -3 militancy = -3 } } }
+		GER_metaregion = { any_pop = { limit = { culture = german } consciousness = -3 militancy = -3 } }
 		
 		#Release all cores to North Germany and South Germany
 		
@@ -690,7 +690,7 @@ country_event = {
 		relation = { who = RUS value = -15 } 
 		relation = { who = USA value = 25 } 
 		relation = { who = ENG value = 25 }  
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } consciousness = 0.5 militancy = 0.5 } } }
+		GER_metaregion = { any_pop = { limit = { culture = german } consciousness = 0.5 militancy = 0.5 } }
 		
 		#Release all cores to North Germany and South Germany
 		
@@ -730,8 +730,8 @@ country_event = {
 		relation = { who = RUS value = -10 }
 		relation = { who = USA value = -50 } 
 		relation = { who = ENG value = -50 } 
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } consciousness = 2 militancy = 2 } } }
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } ideology = { factor = 0.15 value = communist } ideology = { factor = 0.15 value = nationalist } } } }
+		GER_metaregion = { any_pop = { limit = { culture = german } consciousness = 2 militancy = 2 } }
+		GER_metaregion = { any_pop = { limit = { culture = german } ideology = { factor = 0.15 value = communist } ideology = { factor = 0.15 value = nationalist } } }
 
 		570 = { add_core = RHL }
 		571 = { add_core = RHL }
@@ -828,7 +828,7 @@ country_event = {
 		relation = { who = ENG value = 25 } 
 		relation = { who = FRA value = -25 } 	 
 
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } consciousness = -3 militancy = -3 } } }
+		GER_metaregion = { any_pop = { limit = { culture = german } consciousness = -3 militancy = -3 } }
 
 		#NGF inherits Berlin
 		random_country = {
@@ -864,9 +864,9 @@ country_event = {
 		relation = { who = ENG value = -25 } 
 		relation = { who = FRA value = 50 } 	  
 
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } consciousness = 3 militancy = 3 } } }
+		GER_metaregion = { any_pop = { limit = { culture = german } consciousness = 3 militancy = 3 } }
 
-		DDR = { all_core = { any_pop = { limit = { culture = german culture = south_german } ideology = { factor = 0.25 value = communist } } } }
+		DDR = { all_core = { any_pop = { limit = { culture = german } ideology = { factor = 0.25 value = communist } } } }
 
 		#Become DDR early if NGF exists and therefore meaning complete partition of Germany
 		OG1 = { any_owned = { limit = { owner = { exists = NGF } } owner = { change_tag = DDR } } }
@@ -911,7 +911,7 @@ country_event = {
 		relation = { who = ENG value = 25 } 
 		relation = { who = FRA value = -25 } 	 
 
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } consciousness = -3 militancy = -3 } } }
+		GER_metaregion = { any_pop = { limit = { culture = german } consciousness = -3 militancy = -3 } }
 		
 		#East Germany gains cores on OG5
 		OG5 = { any_owned = { add_core = DDR } }
@@ -954,9 +954,9 @@ country_event = {
 		relation = { who = ENG value = -25 } 
 		relation = { who = FRA value = 50 } 	  
 
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } consciousness = 1 militancy = 1 } } }
+		GER_metaregion = { any_pop = { limit = { culture = german } consciousness = 1 militancy = 1 } }
 
-		OG5 = { any_owned = { any_pop = { limit = { culture = german culture = south_german } ideology = { factor = 0.25 value = communist } } } }
+		OG5 = { any_owned = { any_pop = { limit = { culture = german } ideology = { factor = 0.25 value = communist } } } }
 
 		OG5 = {
 			any_owned = { add_core = POL remove_core = GER }
@@ -997,7 +997,7 @@ country_event = {
 
 	option = {
 		name = "We will allow some reconstruction in Germany"
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } consciousness = 2.5 } } }
+		GER_metaregion = { any_pop = { limit = { culture = german } consciousness = 2.5 } }
 	
 		any_country = { any_owned = { limit = { is_core = GER vassal_of = THIS } add_province_modifier = { name = province_monnet_plan duration = -1 } } }
 
@@ -1009,7 +1009,7 @@ country_event = {
 
 	option = {
 		name = "Keep Germany poor and weak"
-		GER = { all_core = { any_pop = { limit = { culture = german culture = south_german } militancy = 2 } } }
+		GER_metaregion = { any_pop = { limit = { culture = german } militancy = 2 } }
 
 		any_country = { any_owned = { limit = { is_core = GER vassal_of = THIS } add_province_modifier = { name = province_morgenthau_plan duration = -1 } } }
 
@@ -1739,15 +1739,13 @@ country_event = {
 		relation = { who = ENG value = 50 }
 		relation = { who = ITA value = 50 }
 		
-		GER = { 
-			all_core = { 
-				any_pop = { 
-					limit = { culture = german culture = south_german } 
-					ideology = { factor = 0.10 value = conservative }
-					militancy = -5
-					consciousness = 5
-				} 
-			} 
+		GER_metaregion = {
+			any_pop = { 
+				limit = { culture = german } 
+				ideology = { factor = 0.10 value = conservative }
+				militancy = -5
+				consciousness = 5
+			}
 		}
 		
 		ai_chance = { factor = 0.7 }
@@ -1758,16 +1756,14 @@ country_event = {
 		prestige = 25
 		badboy = -2
 		
-		GER = { 
-			all_core = { 
-				any_pop = { 
-					limit = { culture = german culture = south_german } 
-					ideology = { factor = 0.05 value = conservative }
-					ideology = { factor = 0.05 value = nationalist }
-					militancy = -5
-					consciousness = 5
-				} 
-			} 
+		GER_metaregion = {
+			any_pop = { 
+				limit = { culture = german } 
+				ideology = { factor = 0.05 value = conservative }
+				ideology = { factor = 0.05 value = nationalist }
+				militancy = -5
+				consciousness = 5
+			}
 		}
 		
 		ai_chance = { factor = 0.1 }
@@ -1783,15 +1779,13 @@ country_event = {
 		relation = { who = ENG value = -50 }
 		relation = { who = ITA value = -50 }
 		
-		GER = { 
-			all_core = { 
-				any_pop = { 
-					limit = { culture = german culture = south_german } 
-					ideology = { factor = 0.25 value = nationalist }
-					militancy = -5
-					consciousness = 5
-				} 
-			} 
+		GER_metaregion = {
+			any_pop = { 
+				limit = { culture = german } 
+				ideology = { factor = 0.25 value = nationalist }
+				militancy = -5
+				consciousness = 5
+			}
 		}
 		
 		ai_chance = { factor = 0.2 }
@@ -2259,7 +2253,7 @@ country_event = {
 	option = {
 		name = "Unite Germany"
 		relation = { who = NGF value = 200 }
-		NGF = { add_accepted_culture = south_german change_tag = FRG inherit = SGF }
+		NGF = { change_tag = FRG inherit = SGF }
 		ai_chance = { factor = 0.9 }
 	}
 

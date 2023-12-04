@@ -507,7 +507,7 @@ country_event = {
 	
 	trigger = {
 		has_country_flag = gg
-		OR = { is_greater_power = no AND = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist } }
+		OR = { NOT = { rank = 8 } AND = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } ruling_party_ideology = communist } }
 	}
 	
 	mean_time_to_happen = { months = 6 }

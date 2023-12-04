@@ -59,7 +59,7 @@ country_event = {
 		name = "Worrisome developments"
 		
 		any_pop = { 
-			limit = { culture = padanian }
+			limit = { culture = italian }
 			militancy = 3
 			consciousness = 3
 			ideology = { factor = 0.05 value = populist }
@@ -98,7 +98,7 @@ country_event = {
 		name = "Italy is indivisible!"
 		
 		any_pop = { 
-			limit = { culture = padanian }
+			limit = { culture = italian }
 			consciousness = 5
 			militancy = 2
 			ideology = { factor = 0.05 value = populist }
@@ -118,7 +118,7 @@ country_event = {
 			ruling_party_ideology = conservative
 			
 			any_pop = { 
-				limit = { culture = padanian }
+				limit = { culture = italian }
 				ideology = { factor = 0.17 value = populist }
 			}
 		}

@@ -668,7 +668,7 @@ political_decisions = {
 	changecd = {
 		picture = "changecd"
 		potential = {
-			NOT = { has_global_flag = nuke_shelters_activate } #Too late, nuclear war already happened, this is the future you chose
+			NOT = { has_global_flag = nuke_shelters_activate }
 			NOT = { has_country_flag = hide_military_decisions }
 			NOT = { has_country_modifier = cd_timer }
 			mutual_assured_destruction = 1
