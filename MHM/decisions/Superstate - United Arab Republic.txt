@@ -38,11 +38,16 @@ political_decisions = {
 				ruling_party_ideology = communist
 				ruling_party_ideology = communist_social
 			}
-
-			any_neighbor_country = {
-				ai = yes 
-				primary_culture = arab 
-				OR = { in_sphere = THIS vassal_of = THIS AND = { is_vassal = no relation = { who = THIS value = 200 } } } 
+			
+			arabia_metaregion = {
+				owner = {
+					primary_culture = arab 
+					capital_scope = { continent = mena }
+					OR = { in_sphere = THIS vassal_of = THIS AND = { is_vassal = no relation = { who = THIS value = 200 } } }
+					ai = yes 
+					NOT = { tag = THIS }
+					exists = yes
+				}
 			}
 
 		}
@@ -71,11 +76,16 @@ political_decisions = {
 		potential = {
 			tag = UAR
 
-			any_neighbor_country = {
-				primary_culture = arab 
-				OR = { in_sphere = THIS vassal_of = THIS AND = { is_vassal = no relation = { who = THIS value = 200 } } } 
+			arabia_metaregion = {
+				owner = {
+					primary_culture = arab 
+					capital_scope = { continent = mena }
+					OR = { in_sphere = THIS vassal_of = THIS AND = { is_vassal = no relation = { who = THIS value = 200 } } }
+					ai = yes 
+					NOT = { tag = THIS }
+					exists = yes
+				}
 			}
-
 		}
 
 		allow = {
@@ -103,10 +113,15 @@ political_decisions = {
 				ruling_party_ideology = communist_social
 			}
 
-			any_neighbor_country = {
-				ai = yes 
-				primary_culture = arab 
-				OR = { in_sphere = THIS vassal_of = THIS AND = { is_vassal = no relation = { who = THIS value = 200 } } } 
+			arabia_metaregion = {
+				owner = {
+					primary_culture = arab 
+					capital_scope = { continent = mena }
+					OR = { in_sphere = THIS vassal_of = THIS AND = { is_vassal = no relation = { who = THIS value = 200 } } }
+					ai = yes 
+					NOT = { tag = THIS }
+					exists = yes
+				}
 			}
 
 			NOT = { has_country_modifier = relations_timer }
