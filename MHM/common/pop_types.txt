@@ -393,15 +393,23 @@ migration_chance = { # 1
 	
 	#Increase movement towards provinces undergoing population replacement but only when the country is actively doing so
 	modifier = {
-        factor = 1.2
+        factor = 0.5
 		OR = { is_primary_culture = yes is_accepted_culture = yes }
 		location = { AND = { OR = { is_primary_culture = yes is_accepted_culture = yes } NOT = { has_province_modifier = pop_replacement_province_modifier } } }
 		country = { has_country_flag = ethnic_cleansed }
     }
 	
+	#Increase movement towards overseas provinces but only when the country is actively doing so
+	modifier = {
+        factor = 0.5
+		OR = { is_primary_culture = yes is_accepted_culture = yes }
+		location = { AND = { OR = { is_primary_culture = yes is_accepted_culture = yes } is_overseas = no } }
+		country = { has_country_flag = ethnic_cleansed }
+    }
+	
 	#Increase movement towards colonial provinces but only when the country is actively promoting colonial migration
 	modifier = {
-        factor = 1.1
+        factor = 0.5
 		OR = { is_primary_culture = yes is_accepted_culture = yes }
 		location = { AND = { OR = { is_primary_culture = yes is_accepted_culture = yes } is_colonial = no } }
 		country = { has_country_flag = promote_colonial_migration_active }

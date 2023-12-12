@@ -464,11 +464,11 @@ TUR_934 = { 934 926 929 935 } #Middle Euphrates
 
 RUS_1090 = { 1090 1093 1091 1092 1094 1095 } #Georgia
 
-RUS_1098 = { 1098 1099 1100 } #Armenia Armenia_Azerbaijan
+RUS_1098 = { 1098 1099 } #Armenia Armenia_Azerbaijan
 
-RUS_1102 = { 1101 1102 1105 1104 1107 1103 } #Azerbaijan Armenia_Azerbaijan
+RUS_1102 = { 1102 1105 1104 1107 1103 } #Azerbaijan Armenia_Azerbaijan
 
-RUS_1106 = { 1106 } #Nagorno-Karabakh
+RUS_1106 = { 1100 1101 1106 } #Zangezur
 
 PER_1110 = { 1110 1111 1109 } #West Azerbaijan
 

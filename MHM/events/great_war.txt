@@ -932,6 +932,42 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = 960101
+	title = "$COUNTRY_ADJ$ Sphere is dismantled!"
+	desc = "As a result of $COUNTRY$ being forced to dismantle itself by unfair treaty, our sphere was the first to be dismantled!"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A disaster!"
+		any_country = {
+			limit = {
+				exists = yes
+				in_sphere = THIS
+			}
+			country_event = 960102 #Notify sphere members
+		}
+	}
+}
+
+country_event = {
+	id = 960102
+	title = "$SPHEREMASTER$ loses influence in $COUNTRY$" #The $FROMCOUNTRY_ADJ$ Colonies
+	desc = "As a result of $SPHEREMASTER$ losing a dismantle war, their sphere of influence was also dismantled. We are free from their sphere now!"
+	picture = "treaty"
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Good riddance!"
+		FROM = {
+			diplomatic_influence = { who = THIS value = -300 }
+		}
+	}
+}
+
 # Player GP's get first pick of colonies/overseas territories
 country_event = {
 	

@@ -121,6 +121,13 @@ gunboat = {
 	can_use = {
 	
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 		
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 		NOT = { is_our_vassal = THIS }
@@ -179,6 +186,13 @@ acquire_substate_region = {
 	can_use = {
 	
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		#MHM conditions
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
@@ -284,6 +298,13 @@ dismantle_forts = {
 	can_use = {
 	
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		#MHM conditions
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
@@ -483,6 +504,13 @@ conquest = {
 	can_use = {
 	
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -900,6 +928,13 @@ take_from_sphere = {
 	can_use = {
 	
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -988,6 +1023,13 @@ acquire_core_state = {
 	can_use = {
 	
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 		
 		NOT = { is_our_vassal = THIS }
 
@@ -1212,6 +1254,13 @@ acquire_state = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -1332,6 +1381,13 @@ acquire_colonial_state = {
 	can_use = {
 	
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -1447,6 +1503,13 @@ acquire_naval_base = {
 	can_use = {
 	
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -1552,6 +1615,13 @@ cut_down_to_size = {
 	can_use = {
 	
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -2140,7 +2210,13 @@ free_allied_cores = {
 				military_score = 1
 			}
 		}
-		NOT = { has_country_flag = neutrality }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 		OR = {
 			war_with = THIS
 			THIS = { NOT = { has_country_modifier = no_more_war } }
@@ -2234,6 +2310,13 @@ free_peoples = {
 	can_use = {
 	
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -2350,6 +2433,13 @@ liberate_country = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 		
@@ -2503,8 +2593,17 @@ liberate_puppet = {
 	
 	
 	can_use = {
+		#Stop AI from using this CB
+		ai = no
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 		
@@ -2666,6 +2765,13 @@ assisted_unification = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
@@ -3369,6 +3475,13 @@ make_colonial_province = {
 	good_relation_militancy_factor = 1
 	
 	can_use = {
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
 		NOT = { is_our_vassal = THIS }
@@ -3474,6 +3587,13 @@ make_puppet = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
@@ -3764,6 +3884,13 @@ humiliate = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 	
 		#Reduce AI trigger happiness
 		THIS = { OR = { ai = no war = yes } }
@@ -3934,6 +4061,13 @@ territorial_dispute = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -4153,6 +4287,13 @@ war_reparations = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 		
 		war_with = THIS
 		NOT = {
@@ -4210,6 +4351,13 @@ support_insurgency = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
@@ -4276,6 +4424,13 @@ install_democracy = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -4360,7 +4515,7 @@ install_authoritarian_regime = {
 	construction_speed = 1.5
 	crisis = no
 
-	badboy_factor = 1.5
+	badboy_factor = 3.75
 	prestige_factor = 5
 	peace_cost_factor = 50
 	penalty_factor = 1
@@ -4377,6 +4532,13 @@ install_authoritarian_regime = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -4433,7 +4595,7 @@ install_absolute_monarchy = {
 	construction_speed = 1.5
 	crisis = no
 
-	badboy_factor = 1.5
+	badboy_factor = 3.75
 	prestige_factor = 5
 	peace_cost_factor = 50
 	penalty_factor = 1
@@ -4450,6 +4612,13 @@ install_absolute_monarchy = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -4521,6 +4690,13 @@ install_socialist_democracy = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -4600,7 +4776,7 @@ install_theocratic_regime = {
 	construction_speed = 1.5
 	crisis = no
 
-	badboy_factor = 1.5
+	badboy_factor = 3.75
 	prestige_factor = 5
 	peace_cost_factor = 50
 	penalty_factor = 1
@@ -4617,6 +4793,13 @@ install_theocratic_regime = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 
 		THIS = { NOT = { has_country_modifier = no_more_war } }
 
@@ -4691,6 +4874,13 @@ install_communist_gov_cb = {
 	can_use = {
 		
 		NOT = { tag = CLN }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 	
 		NOT = { tag = UNT }
 
@@ -4947,6 +5137,9 @@ free_dismantle_cb = {
 		
 		#Enforce an unconditional surrender
 		country_event = 1610129
+		
+		#Dismantle sphere
+		country_event = 960101
 
 		THIS = { set_country_flag = this_won_CB }
 		set_country_flag = this_lost_CB
@@ -5058,7 +5251,7 @@ dismantle_cb = {
 		
 		OR = {
 			war = yes
-			AND = { NOT = { has_country_modifier = neutrality } THIS = { NOT = { has_country_modifier = neutrality } } }
+			AND = { NOT = { has_country_flag = neutrality } THIS = { NOT = { has_country_flag = neutrality } } }
 		}
 		
 		#Bloc members do not contain each other
@@ -5114,6 +5307,9 @@ dismantle_cb = {
 		
 		#Enforce an unconditional surrender
 		country_event = 1610129
+		
+		#Dismantle sphere
+		country_event = 960101
 
 		THIS = { set_country_flag = this_won_CB }
 		set_country_flag = this_lost_CB
@@ -5151,7 +5347,13 @@ dismantle_cb_add = {
 		THIS = { NOT = { has_country_flag = renounced_war_rights } }
 		NOT = { AND = { has_country_flag = un_armistice THIS = { has_country_flag = un_armistice } } }
 		NOT = { is_our_vassal = THIS }
-		NOT = { has_country_modifier = neutrality }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 		NOT = { has_country_flag = dismantle_declared }
 
 		THIS = { 
@@ -5180,7 +5382,7 @@ dismantle_cb_add = {
 		is_vassal = no
 		war_with = THIS
 		THIS = {
-			NOT = { has_country_modifier = neutrality }
+			NOT = { has_country_flag = neutrality }
 			has_country_flag = in_great_war
 			is_greater_power = yes
 			is_disarmed = no
@@ -5237,6 +5439,9 @@ dismantle_cb_add = {
 		#Enforce an unconditional surrender
 		country_event = 1610129
 		
+		#Dismantle sphere
+		country_event = 960101
+		
 		THIS = { set_country_flag = this_won_CB }
 		set_country_flag = this_lost_CB
 		
@@ -5289,13 +5494,19 @@ dismantle_cb_add_new = {
 
 		NOT = { is_our_vassal = THIS }
 		NOT = { has_country_flag = dismantle_declared }
-		NOT = { has_country_modifier = neutrality }
+		OR = {
+			NOT = { has_country_flag = neutrality }
+			AND = {
+				has_country_flag = neutrality
+				THIS = { war_policy = jingoism }
+			}
+		}
 		is_greater_power = yes		
 		is_disarmed = no
 		is_vassal = no
 		war_with = THIS
 		THIS = {
-			NOT = { has_country_modifier = neutrality }
+			NOT = { has_country_flag = neutrality }
 			NOT = { has_country_flag = in_great_war }
 			is_greater_power = yes
 			is_disarmed = no
@@ -5353,6 +5564,9 @@ dismantle_cb_add_new = {
 		
 		#Enforce an unconditional surrender
 		country_event = 1610129
+		
+		#Dismantle sphere
+		country_event = 960101
 		
 		THIS = { set_country_flag = this_won_CB }
 		set_country_flag = this_lost_CB
@@ -5495,6 +5709,9 @@ rude_boy = {
 		
 		#Enforce an unconditional surrender
 		country_event = 1610129
+		
+		#Dismantle sphere
+		country_event = 960101
 
 		THIS = { set_country_flag = this_won_CB }
 		set_country_flag = this_lost_CB

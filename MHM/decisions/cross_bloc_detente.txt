@@ -137,6 +137,11 @@ political_decisions = {
 				has_country_modifier = communist_bloc_leader
 				rank = 1
 			}
+			modifier = {
+				factor = 0
+				has_country_modifier = democratic_bloc_leader
+				rank = 2
+			}
 		}
 	}
 

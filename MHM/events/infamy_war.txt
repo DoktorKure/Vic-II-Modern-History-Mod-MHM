@@ -347,6 +347,10 @@ country_event = {
 			}
 			set_country_flag = coalition_member
 		}
+		
+		#Dismantle sphere
+		country_event = 960101
+		
 		ai_chance = { 
 			factor = 0.50 
 			modifier = { factor = 0 AND = { rank = 2 is_disarmed = no NOT = { war_policy = pacifism } } }

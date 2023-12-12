@@ -49,8 +49,15 @@ country_event = {
 			}
 			
 		}
-		
+
 		#Bengal Genocide
+		any_owned = { 
+			limit = { is_core = BNG } 
+			any_pop = {
+				limit = { culture = bengali }
+				reduce_pop = 0.95
+			}
+		}
 		set_country_flag = ethnic_cleansed
 		country_event = 1512037
 		clr_country_flag = discovered_genocide 
@@ -102,13 +109,28 @@ country_event = {
 		name = "Fight to free Bangladesh!"
 	
 		#Pakistan goes to war with HND
-		PAK = { 
+		PAK = {
 			war = { 
 				target = HND
 				attacker_goal = { casus_belli = acquire_any_state state_province_id = 1224 }
 				attacker_goal = { casus_belli = territorial_dispute_internal }
-				defender_goal = { casus_belli = liberate_country country = BNG }
+				defender_goal = { casus_belli = cut_down_to_size }
 			}
+		}
+	
+		#Pakistan goes to war with BNG
+		PAK = { 
+			release = BNG
+			war = { 
+				target = BNG
+				attacker_goal = { casus_belli = civil_war }
+				defender_goal = { casus_belli = humiliate }
+			}
+		}
+		BNG = { 
+			government = democracy 
+			country_event = 800054 
+			ruling_party_ideology = nationalist 
 		}
 		
 		ai_chance = { factor = 0.95 }

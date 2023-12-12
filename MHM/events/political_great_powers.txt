@@ -117,6 +117,22 @@ country_event = { # Country is sphered change government
 			}
 		}
 		modifier = {
+			factor = 0.7
+			sphere_owner = {
+				NOT = { rank = 2 }
+				has_country_modifier = spy_medium_gp
+			}
+		}
+		modifier = {
+			factor = 0.6
+			AND = {
+				sphere_owner = {
+					OR = { rank = 1 rank = 2 }
+					has_country_modifier = spy_medium_gp
+				}
+			}
+		}
+		modifier = {
 			factor = 0.6
 			AND = {
 				sphere_owner = {

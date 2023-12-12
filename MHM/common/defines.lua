@@ -502,7 +502,7 @@ diplomacy = {
 	-- PO_TRANSFER_PROVINCES_BADBOY = 1,
 	-- PO_REDUCE_PRESTIGE_BADBOY = 1,
 	
-	MIN_WARSCORE_TO_INTERVENE = -1,
+	MIN_WARSCORE_TO_INTERVENE = -25,
 	MIN_MONTHS_TO_INTERVENE = 0,
 	MAX_WARSCORE_FROM_BATTLES = 50,
 	
@@ -600,8 +600,8 @@ diplomacy = {
 	RANK_7_TENSION_DECAY = -0.04,
 	RANK_8_TENSION_DECAY = -0.02,
 
-	TWS_FULFILLED_SPEED = 0.1, -- Ticking War Score grows up with this speed daily once CB is fulfilled
-	TWS_NOT_FULFILLED_SPEED = 0.1, -- Ticking War Score falls down when CB is not fulfilled (or after grace period)
+	TWS_FULFILLED_SPEED = 0.40, -- Ticking War Score grows up with this speed daily once CB is fulfilled
+	TWS_NOT_FULFILLED_SPEED = 0.40, -- Ticking War Score falls down when CB is not fulfilled (or after grace period)
 	TWS_GRACE_PERIOD_DAYS = 730, -- Ticking War Score delay before it starts falling down for not fulfilling CB.
 	TWS_CB_LIMIT_DEFAULT = 100,
 	TWS_FULFILLED_IDLE_SPACE = 0.75, -- How much % the CB fulfillment must done, so TWS starts ticking.
