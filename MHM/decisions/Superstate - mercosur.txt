@@ -7,7 +7,7 @@ political_decisions = {
 		picture = "xms_ambition"
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
-			 OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ }
+			 OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ tag = LPL }
 			NOT = { has_country_flag = xms_ambition } 
 		}
 		allow = {
@@ -85,7 +85,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ }
+			OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ tag = LPL }
 		}
 		allow = {
 			has_country_flag = xms_ambition
@@ -103,7 +103,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ }
+			OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ tag = LPL }
 		}
 		allow = {
 			has_country_flag = xms_ambition
@@ -123,7 +123,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { is_core = XMS } }
-			OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ }
+			OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ tag = LPL }
 		}
 		allow = {
 			has_country_flag = xms_ambition
@@ -142,7 +142,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ }
+			OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ tag = LPL }
 		}
 		allow = {
 			has_country_flag = xms_ambition
@@ -165,7 +165,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			XMS = { exists = no }
-			 OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ }
+			 OR = { tag = ARG tag = URU tag = PRG tag = BRZ tag = VNZ tag = LPL }
 		}
 		allow = {
 			has_country_flag = xms_ambition

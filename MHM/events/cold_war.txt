@@ -299,7 +299,10 @@ country_event = {
 		war = no
 		
 		#Cold War Ongoing
-		has_global_flag = blocsenabled
+		OR = {
+			has_global_flag = blocsenabled
+			has_global_flag = blocsenabled2
+		}
 
 		#THIS is not in a superpower bloc
 		NOT = { 
@@ -309,6 +312,9 @@ country_event = {
 				
 				has_country_modifier = democratic_bloc_leader 
 				has_country_modifier = democratic_bloc
+				
+				has_country_modifier = authoritarian_bloc_leader 
+				has_country_modifier = authoritarian_bloc
 			} 
 		}
 	}
@@ -335,6 +341,9 @@ country_event = {
 						
 						has_country_modifier = democratic_bloc_leader 
 						has_country_modifier = democratic_bloc 
+				
+						has_country_modifier = authoritarian_bloc_leader 
+						has_country_modifier = authoritarian_bloc
 					} 
 				} 
 			}

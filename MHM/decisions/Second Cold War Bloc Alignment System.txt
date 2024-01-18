@@ -156,18 +156,37 @@ political_decisions = {
 			OR = { 
 				ai = no 
 
-				#Either extremist ideologies in democratic states or is some kind of dictatorshiop
-				AND = {
-					has_country_flag = democratic_state
-					OR = {
-						ruling_party_ideology = communist
-						ruling_party_ideology = communist_social
-						ruling_party_ideology = traditionalist
-						ruling_party_ideology = nationalist
-						ruling_party_ideology = populist
+				#Far-right regimes will never align with far-left regimes, and vice versa; both like a centrist bloc leader
+				OR = {
+					AND = {
+						any_greater_power = { has_country_modifier = authoritarian_bloc_leader ruling_party_ideology = centrist }
+						OR = {
+							ruling_party_ideology = traditionalist
+							ruling_party_ideology = nationalist
+							ruling_party_ideology = populist
+							AND = { has_country_flag = authoritarian_state OR = { ruling_party_ideology = conservative ruling_party_ideology = centrist ruling_party_ideology = socialist } }
+							ruling_party_ideology = communist_social
+							ruling_party_ideology = communist
+						}
+					}
+					AND = {
+						any_greater_power = { has_country_modifier = authoritarian_bloc_leader OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist } }
+						OR = {
+							AND = { has_country_flag = authoritarian_state ruling_party_ideology = socialist }
+							ruling_party_ideology = communist_social
+							ruling_party_ideology = communist
+						}
+					}
+					AND = {
+						any_greater_power = { has_country_modifier = authoritarian_bloc_leader OR = { ruling_party_ideology = conservative ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist } }
+						OR = {
+							AND = { has_country_flag = authoritarian_state ruling_party_ideology = conservative }
+							ruling_party_ideology = populist
+							ruling_party_ideology = nationalist
+							ruling_party_ideology = traditionalist
+						}
 					}
 				}
-				has_country_flag = authoritarian_state
 			}
 			
 		}
@@ -276,7 +295,7 @@ political_decisions = {
 		allow = {
 			NOT = { has_country_modifier = king_timer }
 
-			OR = { 
+			OR = {
 			
 				ai = no 
 				
@@ -301,6 +320,25 @@ political_decisions = {
 					any_greater_power = { 
 						has_country_modifier = democratic_bloc_leader
 						NOT = { relation = { who = THIS value = 50 } }
+					}
+				}
+
+				#Far-right regimes will never align with far-left regimes, and vice versa
+				AND = {
+					any_greater_power = { has_country_modifier = authoritarian_bloc_leader OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist } }
+					OR = {
+						AND = { has_country_flag = authoritarian_state ruling_party_ideology = conservative }
+						ruling_party_ideology = populist
+						ruling_party_ideology = nationalist
+						ruling_party_ideology = traditionalist
+					}
+				}
+				AND = {
+					any_greater_power = { has_country_modifier = authoritarian_bloc_leader OR = { ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist } }
+					OR = {
+						AND = { has_country_flag = authoritarian_state ruling_party_ideology = socialist }
+						ruling_party_ideology = communist_social
+						ruling_party_ideology = communist
 					}
 				}
 				
@@ -484,15 +522,37 @@ political_decisions = {
 				has_country_modifier = democratic_bloc_leader
 				NOT = { relation = { who = THIS value = 150 } }
 			}
-			
-			#Has the right ideology or government type (not liberal or status-quo ideologies)
+				
+			#Far-right regimes will never align with far-left regimes, and vice versa; both like a centrist bloc leader
 			OR = {
-				has_country_flag = authoritarian_state
-				ruling_party_ideology = populist
-				ruling_party_ideology = nationalist
-				ruling_party_ideology = traditionalist
-				ruling_party_ideology = communist
-				ruling_party_ideology = communist_social
+				AND = {
+					any_greater_power = { has_country_modifier = authoritarian_bloc_leader ruling_party_ideology = centrist }
+					OR = {
+						ruling_party_ideology = traditionalist
+						ruling_party_ideology = nationalist
+						ruling_party_ideology = populist
+						AND = { has_country_flag = authoritarian_state OR = { ruling_party_ideology = conservative ruling_party_ideology = centrist ruling_party_ideology = socialist } }
+						ruling_party_ideology = communist_social
+						ruling_party_ideology = communist
+					}
+				}
+				AND = {
+					any_greater_power = { has_country_modifier = authoritarian_bloc_leader OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist } }
+					OR = {
+						AND = { has_country_flag = authoritarian_state ruling_party_ideology = socialist }
+						ruling_party_ideology = communist_social
+						ruling_party_ideology = communist
+					}
+				}
+				AND = {
+					any_greater_power = { has_country_modifier = authoritarian_bloc_leader OR = { ruling_party_ideology = conservative ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist } }
+					OR = {
+						AND = { has_country_flag = authoritarian_state ruling_party_ideology = conservative }
+						ruling_party_ideology = populist
+						ruling_party_ideology = nationalist
+						ruling_party_ideology = traditionalist
+					}
+				}
 			}
 
 		}
@@ -604,11 +664,11 @@ political_decisions = {
 			
 			#Has the right ideology (liberal or status-quo in democratic nations)
 			OR = {
-				ruling_party_ideology = progressive
+				ruling_party_ideology = liberal
 				AND = { ruling_party_ideology = conservative has_country_flag = democratic_state }
 				AND = { ruling_party_ideology = big_tent has_country_flag = democratic_state }
 				AND = { ruling_party_ideology = socialist has_country_flag = democratic_state }
-				ruling_party_ideology = liberal
+				ruling_party_ideology = progressive
 			}
 
 		}
@@ -707,7 +767,6 @@ political_decisions = {
 
 			is_vassal = no
 			
-			
 			OR = { 
 			
 				#Have good relations with both blocs and is not in a sphere of influence of a bloc leader
@@ -741,6 +800,25 @@ political_decisions = {
 						has_country_modifier = authoritarian_bloc_leader
 						NOT = { is_sphere_leader_of = THIS }
 						NOT = { relation = { who = THIS value = 0 } }
+					}
+				}
+
+				#Far-right regimes will never align with far-left regimes, and vice versa
+				AND = {
+					any_greater_power = { has_country_modifier = authoritarian_bloc_leader OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist } }
+					OR = {
+						AND = { has_country_flag = authoritarian_state ruling_party_ideology = conservative }
+						ruling_party_ideology = populist
+						ruling_party_ideology = nationalist
+						ruling_party_ideology = traditionalist
+					}
+				}
+				AND = {
+					any_greater_power = { has_country_modifier = authoritarian_bloc_leader OR = { ruling_party_ideology = populist ruling_party_ideology = nationalist ruling_party_ideology = traditionalist } }
+					OR = {
+						AND = { has_country_flag = authoritarian_state ruling_party_ideology = socialist }
+						ruling_party_ideology = communist_social
+						ruling_party_ideology = communist
 					}
 				}
 			
