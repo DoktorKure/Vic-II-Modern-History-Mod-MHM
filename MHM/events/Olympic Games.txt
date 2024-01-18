@@ -280,15 +280,17 @@ country_event = {
 	}
 }
 
-#Olympics change city if at war
+#Olympics change city if at war and it's going poorly
 country_event = {
 	id = 123428
 	title = "IOC has decided to move the Olympics to another city"
 	desc = "Due to the war we are in, the olympics will be moved to another city."
 	picture = "olympics_bid"
 	trigger = {
-		war = yes
 		has_country_flag = next_olympics_host_nation
+		war = yes
+		#Country is being invaded or its capital was bombed
+		OR = { national_provinces_occupied = 0.15 capital_scope = { OR = { NOT = { controlled_by = THIS } has_province_modifier = aerial_bombed } } }
 	}
 
 	option = {

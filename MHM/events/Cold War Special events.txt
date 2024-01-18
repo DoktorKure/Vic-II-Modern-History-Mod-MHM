@@ -84,6 +84,7 @@ country_event = {
 			#Cold War superpower
 			has_country_modifier = communist_bloc_leader 
 			has_country_modifier = democratic_bloc_leader
+			has_country_modifier = authoritarian_bloc_leader
 		}
 		
 		#Has a rival superpower
@@ -93,6 +94,9 @@ country_event = {
 			
 			AND = { has_country_modifier = communist_bloc_leader any_greater_power = { has_country_modifier = democratic_bloc_leader } }
 			AND = { has_country_modifier = democratic_bloc_leader any_greater_power = { has_country_modifier = communist_bloc_leader } }
+			
+			AND = { has_country_modifier = democratic_bloc_leader any_greater_power = { has_country_modifier = authoritarian_bloc_leader } }
+			AND = { has_country_modifier = authoritarian_bloc_leader any_greater_power = { has_country_modifier = democratic_bloc_leader } }
 		}
 		
 		#Not at war
@@ -102,7 +106,7 @@ country_event = {
 		OR = {
 			#High tensions
 			any_greater_power = { 
-				OR = { has_country_modifier = un_king1 has_country_modifier = un_king2 has_country_modifier = communist_bloc_leader has_country_modifier = democratic_bloc_leader } 
+				OR = { has_country_modifier = un_king1 has_country_modifier = un_king2 has_country_modifier = communist_bloc_leader has_country_modifier = democratic_bloc_leader has_country_modifier = authoritarian_bloc_leader } 
 				OR = { has_country_modifier = world_high has_country_modifier = cold_war_high }
 				NOT = { relation = { who = THIS value = 0 } }
 				
@@ -112,7 +116,7 @@ country_event = {
 		
 			#Medium tensions
 			any_greater_power = { 
-				OR = { has_country_modifier = un_king1 has_country_modifier = un_king2 has_country_modifier = communist_bloc_leader has_country_modifier = democratic_bloc_leader } 
+				OR = { has_country_modifier = un_king1 has_country_modifier = un_king2 has_country_modifier = communist_bloc_leader has_country_modifier = democratic_bloc_leader has_country_modifier = authoritarian_bloc_leader } 
 				OR = { has_country_modifier = world_medium has_country_modifier = cold_war_medium }
 				NOT = { relation = { who = THIS value = 25 } }
 				
@@ -122,7 +126,7 @@ country_event = {
 			
 			#Low tensions
 			any_greater_power = { 
-				OR = { has_country_modifier = un_king1 has_country_modifier = un_king2 has_country_modifier = communist_bloc_leader has_country_modifier = democratic_bloc_leader } 
+				OR = { has_country_modifier = un_king1 has_country_modifier = un_king2 has_country_modifier = communist_bloc_leader has_country_modifier = democratic_bloc_leader has_country_modifier = authoritarian_bloc_leader } 
 				OR = { has_country_modifier = world_low has_country_modifier = cold_war_low }
 				NOT = { relation = { who = THIS value = 75 } }
 				
@@ -166,6 +170,7 @@ country_event = {
 					#Cold War superpower
 					has_country_modifier = communist_bloc_leader 
 					has_country_modifier = democratic_bloc_leader
+					has_country_modifier = authoritarian_bloc_leader
 				} 
 			}
 			relation = { who = THIS value = 25 }

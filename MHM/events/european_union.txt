@@ -35,6 +35,24 @@ country_event = {
 		relation = { who = ENG value = 200 }
 		ai_chance = { factor = 0.9 }
 	}
+
+	option = {
+		name = "Go even further and propose a full union!"
+		badboy = 5
+		relation = { who = USA value = -200 }
+		set_country_flag = european_cultural_identity
+		tech_school = XEU_tech_school1
+		set_country_flag = maastricht_treaty
+		set_country_flag = trade_block_ambition
+		set_country_flag = xeu_ambition
+		set_country_flag = in_trade_block
+		any_owned = { add_province_modifier = { name = single_market duration = -1 } }	
+		any_owned = { add_province_modifier = { name = currency_union_province duration = -1 } }
+		all_core = { add_core = XEU }
+		change_tag = XEU
+		any_country = { limit = { exists = yes OR = { tag = GER tag = FRG tag = ITA tag = NET tag = BEL tag = LUX } } country_event = 11106 }
+		ai_chance = { factor = 0.0 }
+	}
 }
 
 #European Defence Community - receiver

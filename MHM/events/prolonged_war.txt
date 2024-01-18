@@ -1,0 +1,190 @@
+#Prolonged War Events
+country_event = {
+	id = 1300037
+	title = "The Costs of Prolonged War"
+	desc = "EVTDESC1300037"
+	picture = "war_fatigue"
+
+	trigger = {
+		has_country_flag = new_war
+		NOT = { has_country_modifier = new_war }
+	}
+	
+	option = {
+		name = "We will persevere!"
+		clr_country_flag = new_war
+		set_country_flag = prolonged_war_1
+		add_country_modifier = { name = prolonged_war_1 duration = 365 }
+	}
+}
+
+country_event = {
+	id = 1300038
+	title = "The Costs of Prolonged War"
+	desc = "EVTDESC1300037"
+	picture = "war_fatigue"
+
+	trigger = {
+		has_country_flag = prolonged_war_1
+		NOT = { has_country_modifier = prolonged_war_1 }
+	}
+	
+	option = {
+		name = "We will persevere!"
+		clr_country_flag = prolonged_war_1
+		set_country_flag = prolonged_war_2
+		add_country_modifier = { name = prolonged_war_2 duration = 365 }
+	}
+}
+
+country_event = {
+	id = 1300039
+	title = "The Costs of Prolonged War"
+	desc = "EVTDESC1300037"
+	picture = "war_fatigue"
+
+	trigger = {
+		has_country_flag = prolonged_war_2
+		NOT = { has_country_modifier = prolonged_war_2 }
+	}
+	
+	option = {
+		name = "We will persevere!"
+		clr_country_flag = prolonged_war_2
+		set_country_flag = prolonged_war_3
+		add_country_modifier = { name = prolonged_war_3 duration = 365 }
+	}
+}
+
+country_event = {
+	id = 1300040
+	title = "The Costs of Prolonged War"
+	desc = "EVTDESC1300037"
+	picture = "war_fatigue"
+
+	trigger = {
+		has_country_flag = prolonged_war_3
+		NOT = { has_country_modifier = prolonged_war_3 }
+	}
+	
+	option = {
+		name = "We will persevere!"
+		clr_country_flag = prolonged_war_3
+		set_country_flag = prolonged_war_4
+		add_country_modifier = { name = prolonged_war_4 duration = 365 }
+	}
+}
+
+country_event = {
+	id = 1300041
+	title = "The Costs of Prolonged War"
+	desc = "EVTDESC1300037"
+	picture = "war_fatigue"
+
+	trigger = {
+		has_country_flag = prolonged_war_4
+		NOT = { has_country_modifier = prolonged_war_4 }
+	}
+	
+	option = {
+		name = "We will persevere!"
+		clr_country_flag = prolonged_war_4
+		set_country_flag = prolonged_war_5
+		add_country_modifier = { name = prolonged_war_5 duration = 365 }
+	}
+}
+
+country_event = {
+	id = 1300042
+	title = "The Costs of Prolonged War"
+	desc = "EVTDESC1300037"
+	picture = "war_fatigue"
+
+	trigger = {
+		has_country_flag = prolonged_war_5
+		NOT = { has_country_modifier = prolonged_war_5 }
+	}
+	
+	option = {
+		name = "We will persevere!"
+		clr_country_flag = prolonged_war_5
+		set_country_flag = prolonged_war_6
+		add_country_modifier = { name = prolonged_war_6 duration = 365 }
+	}
+}
+
+country_event = {
+	id = 1300043
+	title = "The Costs of Prolonged War"
+	desc = "EVTDESC1300037"
+	picture = "war_fatigue"
+
+	trigger = {
+		has_country_flag = prolonged_war_6
+		NOT = { has_country_modifier = prolonged_war_6 }
+	}
+	
+	option = {
+		name = "We will persevere!"
+		clr_country_flag = prolonged_war_6
+		set_country_flag = prolonged_war_7
+		add_country_modifier = { name = prolonged_war_7 duration = 365 }
+	}
+}
+
+country_event = {
+	id = 1300044
+	title = "The Costs of Prolonged War"
+	desc = "EVTDESC1300037"
+	picture = "war_fatigue"
+
+	trigger = {
+		has_country_flag = prolonged_war_7
+		NOT = { has_country_modifier = prolonged_war_7 }
+	}
+	
+	option = {
+		name = "We will persevere!"
+		clr_country_flag = prolonged_war_7
+		set_country_flag = prolonged_war_8
+		add_country_modifier = { name = prolonged_war_8 duration = 365 }
+	}
+}
+
+country_event = {
+	id = 1300045
+	title = "The Costs of Prolonged War"
+	desc = "EVTDESC1300037"
+	picture = "war_fatigue"
+
+	trigger = {
+		has_country_flag = prolonged_war_8
+		NOT = { has_country_modifier = prolonged_war_8 }
+	}
+	
+	option = {
+		name = "We will persevere!"
+		clr_country_flag = prolonged_war_8
+		set_country_flag = prolonged_war_9
+		add_country_modifier = { name = prolonged_war_9 duration = 365 }
+	}
+}
+
+country_event = {
+	id = 1300046
+	title = "The Costs of Prolonged War"
+	desc = "EVTDESC1300037"
+	picture = "war_fatigue"
+
+	trigger = {
+		has_country_flag = prolonged_war_9
+		NOT = { has_country_modifier = prolonged_war_9 }
+	}
+	
+	option = {
+		name = "We will persevere!"
+		clr_country_flag = prolonged_war_9
+		set_country_flag = prolonged_war_10
+		add_country_modifier = { name = prolonged_war_10 duration = -1 }
+	}
+}

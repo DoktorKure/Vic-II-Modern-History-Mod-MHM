@@ -21,4 +21,25 @@ political_decisions = {
 		}
 	}
 
+	end_war_with_THIS = {
+		picture = "end_war_nec"
+		potential = {
+			war = yes
+			war_with = THIS
+		}
+
+		allow = {
+			
+		}
+
+		alert = no
+
+		effect = {
+			end_war = THIS
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
 }

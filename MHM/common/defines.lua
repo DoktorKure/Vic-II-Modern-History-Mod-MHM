@@ -560,7 +560,9 @@ diplomacy = {
 	GW_CB_CONSTRUCTION_SPEED = 0.25, -- faster CB construction against enemies while at great war
 	GW_WARGOAL_JINGOISM_REQUIREMENT_MOD = 1, -- % deduction of required jingoists in country
 	GW_WARSCORE_COST_MOD = 0.65, -- cost reduction factor on warscore needed to fulfill goal if great war
-
+	GW_WARSCORE_COST_MOD_2 = 0.3, -- cost reduction factor on warscore needed to fulfill goal if late game great war
+	GW_WARSCORE_2_THRESHOLD = 25, -- warscore threshold where a GW turns into a world war for winner side
+	
 	TENSION_DECAY = -0.8,
 	TENSION_FROM_CB = 0.04,
 	TENSION_FROM_MOVEMENT = 0.01, -- tension per 1000 in nationalist movement
@@ -603,7 +605,7 @@ diplomacy = {
 	TWS_FULFILLED_SPEED = 0.40, -- Ticking War Score grows up with this speed daily once CB is fulfilled
 	TWS_NOT_FULFILLED_SPEED = 0.40, -- Ticking War Score falls down when CB is not fulfilled (or after grace period)
 	TWS_GRACE_PERIOD_DAYS = 730, -- Ticking War Score delay before it starts falling down for not fulfilling CB.
-	TWS_CB_LIMIT_DEFAULT = 100,
+	TWS_CB_LIMIT_DEFAULT = 200,
 	TWS_FULFILLED_IDLE_SPACE = 0.75, -- How much % the CB fulfillment must done, so TWS starts ticking.
 	TWS_BATTLE_MIN_COUNT = 5, -- At least X battles before the aspect of wins will count
 	TWS_BATTLE_MAX_ASPECT = 8.0, -- Max allowed battle wins aspect for TWS

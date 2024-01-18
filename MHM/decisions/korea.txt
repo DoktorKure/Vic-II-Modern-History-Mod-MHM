@@ -21,6 +21,8 @@ political_decisions = {
 		}
 		effect = {
 			set_country_flag = allow_form_korea
+			NKO = { set_country_flag = allow_form_korea }
+			SKO = { set_country_flag = allow_form_korea }
 			prestige = 50
 
 			#Instant unification if NKO and SKO is our puppet

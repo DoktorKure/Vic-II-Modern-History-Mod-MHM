@@ -12,6 +12,9 @@ demo_bloc_member = {
 comm_bloc_member = {
 	icon = 22
 }
+auth_bloc_member = {
+	icon = 47
+}
 
 ### Overpopulated provinces ###
 
@@ -34,6 +37,52 @@ overpopulated_province4 = {
 overpopulated_province5 = {
 	immigrant_push = 5
 	icon = 38
+}
+
+### Prolonged War ###
+
+new_war = {
+	icon = 43
+}
+prolonged_war_1 = {
+	icon = 44
+	war_exhaustion = 1
+}
+prolonged_war_2 = {
+	icon = 44
+	war_exhaustion = 2
+}
+prolonged_war_3 = {
+	icon = 44
+	war_exhaustion = 3
+}
+prolonged_war_4 = {
+	icon = 44
+	war_exhaustion = 4
+}
+prolonged_war_5 = {
+	icon = 44
+	war_exhaustion = 5
+}
+prolonged_war_6 = {
+	icon = 44
+	war_exhaustion = 6
+}
+prolonged_war_7 = {
+	icon = 44
+	war_exhaustion = 7
+}
+prolonged_war_8 = {
+	icon = 44
+	war_exhaustion = 8
+}
+prolonged_war_9 = {
+	icon = 44
+	war_exhaustion = 9
+}
+prolonged_war_10 = {
+	icon = 44
+	war_exhaustion = 10
 }
 
 ### Seasonal Effects ###
@@ -296,8 +345,10 @@ ageing_population = {
 }
 
 demographic_crunch = {
-	global_population_growth = -0.005
 	icon = 18
+	social_reform_desire = 0.25
+	factory_input = 0.25
+	tax_efficiency = -0.05
 }
 
 depressed_population = {
@@ -5740,6 +5791,78 @@ demolow = {
 	icon = 21
 }
 
+### Authoritarian Bloc Leader Options ###
+
+authhigh_gp = {
+	rich_income_modifier = -0.10
+	middle_income_modifier = -0.10
+	poor_income_modifier = -0.10
+	org_regain = 0.2
+	land_organisation = 0.2
+	land_unit_start_experience = 10
+	leadership_modifier = 0.1
+	min_military_spending = 0.60
+	supply_consumption = 0.10
+	icon = 45
+}
+
+authmedium_gp = {
+	min_military_spending = 0.40
+	factory_owner_cost = -0.010
+	factory_throughput = 0.10
+	research_points_modifier = 0.05
+	icon = 45
+}
+
+authlow_gp = {
+	min_military_spending = 0.20
+	social_reform_desire = 0.20
+	factory_owner_cost = -0.020
+	factory_throughput = 0.20
+	research_points_modifier = 0.10
+	factory_input = -0.05
+	tax_efficiency = -0.05
+	supply_consumption = -0.05
+	icon = 45
+}
+
+authhigh = {
+	rich_income_modifier = -0.10
+	middle_income_modifier = -0.10
+	poor_income_modifier = -0.10
+	org_regain = 0.2
+	land_organisation = 0.2
+	land_unit_start_experience = 10
+	leadership_modifier = 0.1
+	min_military_spending = 0.60
+	supply_consumption = 0.05
+	icon = 45
+}
+
+authmedium = {
+	min_military_spending = 0.40
+	factory_owner_cost = -0.01
+	factory_throughput = 0.10
+	RGO_throughput = 0.10
+	import_cost = -0.1
+	tax_efficiency = 0.025
+	research_points_modifier = 0.025
+	icon = 45
+}
+
+authlow = {
+	min_military_spending = 0.20
+	factory_owner_cost = -0.02
+	factory_throughput = 0.20
+	RGO_throughput = 0.20
+	import_cost = -0.2
+	tax_efficiency = 0.05
+	research_points_modifier = 0.05
+	factory_input = -0.025
+	supply_consumption = -0.05
+	icon = 45
+}
+
 ### Islamic Development Bank ###
 
 idbhigh_gp = {
@@ -6684,6 +6807,75 @@ independent_bloc = {
 	commerce_tech_research_bonus = -0.5
 	
 	icon = 39
+	
+}
+
+authoritarian_bloc_leader = {
+
+	#Pops effects
+    global_pop_consciousness_modifier = -0.05
+    global_pop_militancy_modifier = -0.05
+	non_accepted_pop_militancy_modifier = 0.05
+	political_reform_desire = -0.50
+	social_reform_desire = 0.50
+	
+	#Government
+	prestige = 0.05
+	tax_efficiency = 0.10
+	loan_interest = -0.20
+	supply_consumption = 0.20
+	suppression_points_modifier = 1.0
+	education_efficiency_modifier = 0.10
+	administrative_efficiency_modifier = 0.10
+	tariff_efficiency_modifier = 0.10
+	
+	#Economic effects
+	RGO_output = 0.20
+	factory_output = 0.20
+	factory_owner_cost = -0.020
+
+	#Research points
+	research_points = 1.50
+	research_points_modifier = 0.20
+	army_tech_research_bonus = 0.50
+	navy_tech_research_bonus = 0.50
+	industry_tech_research_bonus = -0.25
+	commerce_tech_research_bonus = -0.25
+	
+	icon = 45
+}
+
+authoritarian_bloc = {
+
+	#Pops effects
+    global_pop_consciousness_modifier = -0.025
+    global_pop_militancy_modifier = -0.025
+	non_accepted_pop_militancy_modifier = 0.025
+	political_reform_desire = -0.25
+	social_reform_desire = 0.25
+	
+	#Government
+	prestige = 0.025
+	tax_efficiency = 0.05
+	loan_interest = -0.10
+	supply_consumption = 0.10
+	suppression_points_modifier = 0.5
+	education_efficiency_modifier = 0.05
+	administrative_efficiency_modifier = 0.05
+	tariff_efficiency_modifier = 0.05
+	
+	#Economic effects
+	RGO_output = 0.10
+	factory_output = 0.10
+	factory_owner_cost = -0.010
+
+	#Research points
+	army_tech_research_bonus = 0.25
+	navy_tech_research_bonus = 0.25
+	industry_tech_research_bonus = -0.25
+	commerce_tech_research_bonus = -0.25
+	
+	icon = 45
 	
 }
 

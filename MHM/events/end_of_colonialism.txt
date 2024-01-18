@@ -816,8 +816,8 @@ country_event = 800054 } }
 random_owned = { limit = { owner = { THIS = { government = democracy1 } } } owner = { government = democracy
 country_event = 800054 } }
 
-random_owned = { limit = { owner = { THIS = { government = absolute_monarchy } } } owner = { government = hms_government1
-country_event = 800054 } }
+random_owned = { limit = { owner = { THIS = { government = absolute_monarchy } } } owner = { government = absolute_monarchy
+country_event = 800050 } }
 
 random_owned = { limit = { owner = { THIS = { government = socialist_democracy } } } owner = { government = socialist_democracy country_event = 800054 } }
 

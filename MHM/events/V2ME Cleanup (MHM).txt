@@ -949,6 +949,19 @@ country_event = {
 				remove_province_modifier = demo_bloc_member
 			}
 		}
+		any_country = {
+			limit = {
+				exists = yes
+				NOT = { has_country_flag = joindemo }
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					has_province_modifier = demo_bloc_member
+				}
+				remove_province_modifier = demo_bloc_member
+			}
+		}
 		
 		#Mark which countries are Communist Bloc Members
 		any_country = {
@@ -977,6 +990,60 @@ country_event = {
 				remove_province_modifier = comm_bloc_member
 			}
 		}
+		any_country = {
+			limit = {
+				exists = yes
+				NOT = { has_country_flag = joincomm }
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					has_province_modifier = comm_bloc_member
+				}
+				remove_province_modifier = comm_bloc_member
+			}
+		}
+		
+		#Mark which countries are Authoritarian Bloc Members
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = joinauth
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					NOT = { has_province_modifier = auth_bloc_member }
+				}
+				add_province_modifier = { name = auth_bloc_member duration = -1 }
+			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = joinauth
+			}
+			any_owned = {
+				limit = {
+					is_capital = no
+					has_province_modifier = auth_bloc_member
+				}
+				remove_province_modifier = auth_bloc_member
+			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				NOT = { has_country_flag = joinauth }
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
+					has_province_modifier = auth_bloc_member
+				}
+				remove_province_modifier = auth_bloc_member
+			}
+		}
 		
 		#Mark which countries are Non-Aligned Bloc Members
 		any_country = {
@@ -1000,6 +1067,19 @@ country_event = {
 			any_owned = {
 				limit = {
 					is_capital = no
+					has_province_modifier = non_align_member
+				}
+				remove_province_modifier = non_align_member
+			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				NOT = { has_country_flag = joinnam }
+			}
+			any_owned = {
+				limit = {
+					is_capital = yes
 					has_province_modifier = non_align_member
 				}
 				remove_province_modifier = non_align_member
@@ -2033,6 +2113,248 @@ country_event = {
 			remove_country_modifier = nuclear_winter
 		}
 		
+		#Gradual propaganda rather than a one-off instant big increase in support
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = government_propaganda
+				ruling_party_ideology = conservative
+			}
+			random_owned = {
+				limit = { owner = { wars_of_national_liberation = 1 } }
+				owner = {
+					any_pop = {
+						limit = { literacy = 0.15 }
+						ideology = { factor = 0.005 value = conservative }
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { publishing_rights = state_publishing } }
+				owner = {
+					any_pop = {
+						ideology = { factor = 0.005 value = conservative }
+					}
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = government_propaganda
+				ruling_party_ideology = big_tent
+			}
+			random_owned = {
+				limit = { owner = { wars_of_national_liberation = 1 } }
+				owner = {
+					any_pop = {
+						limit = { literacy = 0.15 }
+						ideology = { factor = 0.005 value = big_tent }
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { publishing_rights = state_publishing } }
+				owner = {
+					any_pop = {
+						ideology = { factor = 0.005 value = big_tent }
+					}
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = government_propaganda
+				ruling_party_ideology = liberal
+			}
+			random_owned = {
+				limit = { owner = { wars_of_national_liberation = 1 } }
+				owner = {
+					any_pop = {
+						limit = { literacy = 0.15 }
+						ideology = { factor = 0.005 value = liberal }
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { publishing_rights = state_publishing } }
+				owner = {
+					any_pop = {
+						ideology = { factor = 0.005 value = liberal }
+					}
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = government_propaganda
+				ruling_party_ideology = progressive
+			}
+			random_owned = {
+				limit = { owner = { wars_of_national_liberation = 1 } }
+				owner = {
+					any_pop = {
+						limit = { literacy = 0.15 }
+						ideology = { factor = 0.005 value = progressive }
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { publishing_rights = state_publishing } }
+				owner = {
+					any_pop = {
+						ideology = { factor = 0.005 value = progressive }
+					}
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = government_propaganda
+				ruling_party_ideology = socialist
+			}
+			random_owned = {
+				limit = { owner = { wars_of_national_liberation = 1 } }
+				owner = {
+					any_pop = {
+						limit = { literacy = 0.15 }
+						ideology = { factor = 0.005 value = socialist }
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { publishing_rights = state_publishing } }
+				owner = {
+					any_pop = {
+						ideology = { factor = 0.005 value = socialist }
+					}
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = government_propaganda
+				ruling_party_ideology = communist_social
+			}
+			random_owned = {
+				limit = { owner = { wars_of_national_liberation = 1 } }
+				owner = {
+					any_pop = {
+						limit = { literacy = 0.15 }
+						ideology = { factor = 0.005 value = communist_social }
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { publishing_rights = state_publishing } }
+				owner = {
+					any_pop = {
+						ideology = { factor = 0.005 value = communist_social }
+					}
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = government_propaganda
+				ruling_party_ideology = communist
+			}
+			random_owned = {
+				limit = { owner = { wars_of_national_liberation = 1 } }
+				owner = {
+					any_pop = {
+						limit = { literacy = 0.15 }
+						ideology = { factor = 0.005 value = communist }
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { publishing_rights = state_publishing } }
+				owner = {
+					any_pop = {
+						ideology = { factor = 0.005 value = communist }
+					}
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = government_propaganda
+				ruling_party_ideology = populist
+			}
+			random_owned = {
+				limit = { owner = { wars_of_national_liberation = 1 } }
+				owner = {
+					any_pop = {
+						limit = { literacy = 0.15 }
+						ideology = { factor = 0.005 value = populist }
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { publishing_rights = state_publishing } }
+				owner = {
+					any_pop = {
+						ideology = { factor = 0.005 value = populist }
+					}
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = government_propaganda
+				ruling_party_ideology = nationalist
+			}
+			random_owned = {
+				limit = { owner = { wars_of_national_liberation = 1 } }
+				owner = {
+					any_pop = {
+						limit = { literacy = 0.15 }
+						ideology = { factor = 0.005 value = nationalist }
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { publishing_rights = state_publishing } }
+				owner = {
+					any_pop = {
+						ideology = { factor = 0.005 value = nationalist }
+					}
+				}
+			}
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = government_propaganda
+				ruling_party_ideology = traditionalist
+			}
+			random_owned = {
+				limit = { owner = { wars_of_national_liberation = 1 } }
+				owner = {
+					any_pop = {
+						limit = { literacy = 0.15 }
+						ideology = { factor = 0.005 value = traditionalist }
+					}
+				}
+			}
+			random_owned = {
+				limit = { owner = { publishing_rights = state_publishing } }
+				owner = {
+					any_pop = {
+						ideology = { factor = 0.005 value = traditionalist }
+					}
+				}
+			}
+		}
+		
 		#Superstate Flags
 		any_country = {
 			limit = {
@@ -2161,11 +2483,38 @@ country_event = {
 			clr_country_flag = theocracy
 		}
 		
+		#reform flags
+		any_country = {
+			limit = { minorities_reform = minorities_oppression NOT = { has_country_flag = minorities_oppression_reform } }
+			set_country_flag = minorities_oppression_reform
+		}
+		any_country = {
+			limit = { has_country_flag = minorities_oppression_reform NOT = { minorities_reform = minorities_oppression } }
+			clr_country_flag = minorities_oppression_reform
+		}
+		any_country = {
+			limit = { minorities_reform = minorities_equal_rights NOT = { has_country_flag = minorities_equal_rights_reform } }
+			set_country_flag = minorities_equal_rights_reform
+		}
+		any_country = {
+			limit = { has_country_flag = minorities_equal_rights_reform NOT = { minorities_reform = minorities_equal_rights } }
+			clr_country_flag = minorities_equal_rights_reform
+		}
+		any_country = {
+			limit = { minorities_reform = minorities_affirmative_action NOT = { has_country_flag = minorities_affirmative_action_reform } }
+			set_country_flag =minorities_affirmative_action_reform
+		}
+		any_country = {
+			limit = { has_country_flag = minorities_affirmative_action_reform NOT = { minorities_reform = minorities_affirmative_action } }
+			clr_country_flag = minorities_affirmative_action_reform
+		}
+		
 		#Discern between democratic and non-democratic gov type
 		any_country = {
 			limit = {
 				NOT = { has_country_flag = authoritarian_state }
 				OR = {
+					government = presidential_dictatorship
 					government = proletarian_dictatorship
 					government = proletarian_dictatorship1
 					government = absolute_monarchy
@@ -2181,6 +2530,7 @@ country_event = {
 				has_country_flag = authoritarian_state
 				NOT = {
 					OR = {
+						government = presidential_dictatorship
 						government = proletarian_dictatorship
 						government = proletarian_dictatorship1
 						government = absolute_monarchy
@@ -2576,7 +2926,7 @@ country_event = {
 		### Set master European country flag for later scoping ###
 		any_country = {
 			limit = {
-				capital_scope = { region = europe_metaregion }
+				capital_scope = { OR = { region = europe_metaregion region = RUS_metaregion } }
 				NOT = { has_country_flag = european_country }
 			}
 			set_country_flag = european_country

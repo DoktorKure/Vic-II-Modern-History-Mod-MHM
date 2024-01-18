@@ -4,7 +4,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = infrastructure_dev }
 			neoliberalism = 1
-			capital_scope = { is_colonial = no total_pops = 250000 OR = { has_province_modifier = dev_1 has_province_modifier = dev_2 has_province_modifier = dev_3 } }
+			capital_scope = { is_colonial = no total_pops = 250000 }
 		}
 		allow = {
 			war = no

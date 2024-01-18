@@ -63,6 +63,9 @@ political_decisions = {
 			
 			#Not a subject nation
 			is_vassal = no
+			
+			#Sphere owner wasn't dismantled as sphere will collapse anyway
+			sphere_owner = { NOT = { has_country_modifier = punitive_effects } }
 
 		}
 		effect = { 

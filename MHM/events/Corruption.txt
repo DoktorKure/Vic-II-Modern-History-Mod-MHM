@@ -8,12 +8,10 @@ country_event = {
 	desc = "EVTDESC1410082"
 
 	trigger = {
-
 		NOT = { has_country_modifier = reducing_corruption }
-
+		civil_service = politicised_service
 		NOT = { has_country_modifier = massive_government_corruption }
 		has_country_modifier = massive_societal_corruption
-		
 	}
 
 	mean_time_to_happen = { 
@@ -25,7 +23,7 @@ country_event = {
 				NOT = { has_country_modifier = large_government_corruption } 
 				NOT = { has_country_modifier = medium_government_corruption } 
 				NOT = { has_country_modifier = low_government_corruption } 
-				NOT = { has_country_modifier = minimal_government_corruption }  
+				NOT = { has_country_modifier = minimal_government_corruption }
 			}
 		}
 	}
@@ -57,12 +55,15 @@ country_event = {
 	desc = "EVTDESC1410082"
 
 	trigger = {
-
 		NOT = { has_country_modifier = reducing_corruption }
-
 		NOT = { has_country_modifier = large_government_corruption }
-		has_country_modifier = large_societal_corruption
-		
+		OR = {
+			has_country_modifier = large_societal_corruption
+			AND = {
+				has_country_modifier = massive_societal_corruption
+				civil_service = elitist_service
+			}
+		}
 	}
 
 	mean_time_to_happen = { 
@@ -106,12 +107,15 @@ country_event = {
 	desc = "EVTDESC1410082"
 
 	trigger = {
-
 		NOT = { has_country_modifier = reducing_corruption }
-
 		NOT = { has_country_modifier = medium_government_corruption }
-		has_country_modifier = medium_societal_corruption
-		
+		OR = {
+			has_country_modifier = medium_societal_corruption
+			AND = {
+				OR = { has_country_modifier = massive_societal_corruption has_country_modifier = large_societal_corruption }
+				civil_service = professional_service
+			}
+		}
 	}
 
 	mean_time_to_happen = { 
@@ -155,12 +159,15 @@ country_event = {
 	desc = "EVTDESC1410082"
 
 	trigger = {
-
 		NOT = { has_country_modifier = reducing_corruption }
-
 		NOT = { has_country_modifier = low_government_corruption }
-		has_country_modifier = low_societal_corruption
-		
+		OR = {
+			has_country_modifier = low_societal_corruption
+			AND = {
+				has_country_modifier = medium_societal_corruption
+				civil_service = professional_service
+			}
+		}
 	}
 
 	mean_time_to_happen = { 
@@ -208,8 +215,13 @@ country_event = {
 		NOT = { has_country_modifier = reducing_corruption }
 		
 		NOT = { has_country_modifier = minimal_government_corruption }
-		has_country_modifier = minimal_societal_corruption
-		
+		OR = {
+			has_country_modifier = minimal_societal_corruption
+			AND = {
+				has_country_modifier = medium_societal_corruption has_country_modifier = low_societal_corruption
+				civil_service = independent_service
+			}
+		}
 	}
 
 	mean_time_to_happen = { 

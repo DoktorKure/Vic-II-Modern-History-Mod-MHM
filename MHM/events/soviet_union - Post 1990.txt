@@ -501,6 +501,7 @@ country_event = { # More equality?
 		add_accepted_culture = circassians
 		add_accepted_culture = abkhaz
 		add_accepted_culture = karakalpak
+		add_accepted_culture = romanian
 		
 		any_pop = {
 			limit = { is_primary_culture = yes }

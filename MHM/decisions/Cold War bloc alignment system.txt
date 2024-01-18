@@ -77,8 +77,11 @@ political_decisions = {
 			#All Democratic Bloc members are happy
 			any_country = { 
 				limit = { has_country_modifier = democratic_bloc } 
-				diplomatic_influence =  { who = THIS value = 10 }
 				relation = { who = THIS value = 20 }
+			}
+			any_country = { 
+				limit = { has_country_modifier = democratic_bloc is_greater_power = yes } 
+				diplomatic_influence =  { who = THIS value = 10 }
 			}
 			
 			#All Communist Bloc members are not happy
@@ -183,8 +186,11 @@ political_decisions = {
 			#All Communist Bloc members are happy
 			any_country = { 
 				limit = { has_country_modifier = communist_bloc } 
-				diplomatic_influence =  { who = THIS value = 10 }
 				relation = { who = THIS value = 20 }
+			}
+			any_country = { 
+				limit = { has_country_modifier = communist_bloc is_greater_power = yes } 
+				diplomatic_influence =  { who = THIS value = 10 }
 			}
 			
 			#All Democratic Bloc members are not happy

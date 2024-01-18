@@ -33,6 +33,9 @@ political_decisions = {
 			#1992 start marker
 			set_global_flag = 1992_start_date_flag
 			
+			#NAM movement
+			set_global_flag = namformed
+			
 			#New colonial system - can be toggled via starting decision
 			set_global_flag = new_colonial_system
 			

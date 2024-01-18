@@ -49,6 +49,9 @@ political_decisions = {
 			#Year 2000
 			set_global_flag = yeartwok
 			
+			#NAM movement
+			set_global_flag = namformed
+			
 			#New colonial system - can be toggled via starting decision
 			set_global_flag = new_colonial_system
 			

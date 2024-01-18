@@ -1070,6 +1070,9 @@ country_event = {
 				limit = { type = farmers }
 				pop_type = labourers
 			}
+			#This is due to a bug where changing trade goods that requires a different pop type to harvest it causes the RGO to have 100% unemployment unless control is swapped to REB and then swapped back
+			change_controller = REB
+			change_controller = THIS
 		}
 
 		ai_chance = { factor = 1 }

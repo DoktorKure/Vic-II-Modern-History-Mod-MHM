@@ -241,30 +241,34 @@ modifier = { factor = 1 agree_with_ruling_party = 0.5 }
 	# Demoted
 	clerks = {
 		factor = 0.01
-group = {
-modifier = { factor = 2 NOT = { agree_with_ruling_party = 0.05 } }
+		group = {
+			modifier = { factor = 2 NOT = { agree_with_ruling_party = 0.05 } }
 
-modifier = { factor = 2 NOT = { agree_with_ruling_party = 0.10 } }
+			modifier = { factor = 2 NOT = { agree_with_ruling_party = 0.10 } }
 
-modifier = { factor = 2 NOT = { agree_with_ruling_party = 0.15 } }
+			modifier = { factor = 2 NOT = { agree_with_ruling_party = 0.15 } }
 
-modifier = { factor = 0.2 NOT = { agree_with_ruling_party = 0.20 } }	
-	}
-
-group = { 
-modifier = { factor = 1 militancy = 1 }
-modifier = { factor = 1 militancy = 2 }
-modifier = { factor = 1 militancy = 3 }
-modifier = { factor = 1 militancy = 4 }
-modifier = { factor = 1 militancy = 5 }
-modifier = { factor = 1 militancy = 6 }
-modifier = { factor = 1 militancy = 7 }
-modifier = { factor = 1 militancy = 8 }
-modifier = { factor = 1 militancy = 9 }
-modifier = { factor = 1 militancy = 10 }
-}
-
+			modifier = { factor = 0.2 NOT = { agree_with_ruling_party = 0.20 } }	
 		}
+
+		group = { 
+			modifier = { factor = 1 militancy = 1 }
+			modifier = { factor = 1 militancy = 2 }
+			modifier = { factor = 1 militancy = 3 }
+			modifier = { factor = 1 militancy = 4 }
+			modifier = { factor = 1 militancy = 5 }
+			modifier = { factor = 1 militancy = 6 }
+			modifier = { factor = 1 militancy = 7 }
+			modifier = { factor = 1 militancy = 8 }
+			modifier = { factor = 1 militancy = 9 }
+			modifier = { factor = 1 militancy = 10 }
+		}
+
+		#not more than 8% bureaucrats
+		group = {
+			modifier = { factor = 100 bureaucrats = 0.08 }
+		}
+	}
 
 }
 

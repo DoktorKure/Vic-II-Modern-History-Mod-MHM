@@ -591,9 +591,9 @@ RUS_1052 = { 1052 1053 1054 1055 1057 } #North Caucasia
 
 RUS_1060 = { 1060 1044 1042 1034 1043 1035 } #Samara
 
-RUS_1064 = { 1061 1066 2691 2686 2659 3249 3250 3251 3252 3253 3254 3255 3256 3257 3258 3259 } #Tobolsk - Tyumen Kuybyshev 
+RUS_1064 = { 1061 1066 2691 2686 2659 3249 3250 3251 3252 } #Tobolsk - Tyumen Kuybyshev 
 
-RUS_1069 = {  2645 1078 1079 1081 } #West Yakutsk - Zabaykalsky Krai
+RUS_1069 = { 2645 1078 1079 1081 } #West Yakutsk - Zabaykalsky Krai
 
 RUS_1070 = { 3261 3262 3263 3264 3265 3266 3267 3268 3269 3270 3271 3272 3273 3274 3275 3276 } #Upper Yeniseysk
 
@@ -604,6 +604,8 @@ RUS_1072 = { 1533 1002 3371 } # Hsingan
 RUS_1074 = { 2639 1074 2633 2590 2614 3260 } #Kamchatka
 
 RUS_1075 = { 1075 2676 2677 2695  } #Irkutsk
+
+RUS_1077 = { 1077 3253 3254 3255 3256 3257 3258 3259 } #Krasnoyarsk
 
 RUS_1079 = { 2697 1080 2696 } #Trans-Baikal - Amur Oblast
 
@@ -619,7 +621,7 @@ KAZ_1186 = { 1186 986 1185 1187 1188 1193 1197 } #South Kazakhstan
 
 RUS_1196 = { 1196 1204 1205 1206 } #Turkmenistan
 
-RUS_1469 = { 1077 1067 1063 2698 1064 2615 } #Tomsk Novosibirsk
+RUS_1469 = { 1067 1063 2698 1064 2615 } #Tomsk Novosibirsk
 
 RUS_2587 = { 2587 983 982 } #Kola
 
@@ -1191,7 +1193,7 @@ CLM_2259 = { 2256 2257 2258 2259 } #Cauca
 
 ECU_2279 = { 2279 2280 2281 2282 2283 2284 } #Ecuador
 
-ECU_2285 = { 2285 2332 3381 } # East Pacific Islands
+ECU_2285 = { 2336 2285 3381 } # East Pacific Islands
 
 PEU_2289 = { 2287 2288 2289 } #Pastaza
 
@@ -1255,7 +1257,7 @@ CHL_2322 = { 2324 2322 2323 2326 2325 } #Santiago Chile
 
 CHL_2327 = { 2327 2330 2329 2331 2328 } #Los Rios Chilean Archipelago
 
-CHL_2332 = { 2333 2334 2335 2336 } #Araucania
+CHL_2332 = { 2332 2333 2334 2335 } #Araucania
 
 ARG_2355 = { 2348 2355 2353 2354 2350 2351 2352 2349 } #Buenos Aires Lower Argentine
 

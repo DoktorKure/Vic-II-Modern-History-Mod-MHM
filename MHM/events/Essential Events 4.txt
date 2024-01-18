@@ -2545,29 +2545,6 @@ ai_chance = { factor = 0.3 }
 
 }
 
-#Remove Neutrality from vassals
-country_event = {
-	id = 1512078
-title = "End of $COUNTRY_ADJ$ Neutrality"
-	desc = "$COUNTRY$ has become a protectorate of a greater power so we have lost our right to remain a neutral nation."
-	picture = "lose_neutrality"
-
-
-trigger = {
-	has_country_flag = neutrality
-	is_vassal = yes
-}
-
-option = {
-name = "We are no longer enjoying the splendid isolation"
-prestige = -50
-remove_country_modifier = neutrality
-clr_country_flag = renounced_war_rights
-clr_country_flag = neutrality		
-	}
-
-}
-
 #Volkstaat
 country_event = {
 	id = 1512079
@@ -7317,41 +7294,6 @@ remove_country_modifier = un_armistice_stall
 remove_country_modifier = un_armistice 
 clr_country_flag = un_armistice
 }
-		}
-
-}
-
-#Announce Neutrality
-country_event = {
-	id = 1512259
-title = "$COUNTRY$ is Neutral"
-	desc = "$COUNTRY$ has decided to go down the path of diplomatic neutrality which means that any attack on $COUNTRY$ will lead to a UN coalition against the aggressor."
-	picture = "treaty"
-
-is_triggered_only = yes
-
-major = yes
-
-option = {
-name = "We enjoy international protection!"
-prestige = 50
-		}
-
-}
-
-#Renounce Neutrality
-country_event = {
-	id = 1512260
-title = "$COUNTRY$ Renounces Neutrality"
-	desc = "$COUNTRY$ has decided to go down the path of diplomatic neutrality which means that any attack on $COUNTRY$ will lead to a UN coalition against the aggressor."
-	picture = "treaty"
-
-is_triggered_only = yes
-
-major = yes
-
-option = {
-name = "We no longer enjoy international protection!"
 		}
 
 }

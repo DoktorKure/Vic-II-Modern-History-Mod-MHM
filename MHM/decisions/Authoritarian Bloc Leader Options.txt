@@ -1,0 +1,143 @@
+political_decisions = {
+	changeauthbloc = {
+		picture = "joinauthbloc"
+		potential = {
+			has_country_modifier = authoritarian_bloc_leader
+			OR = { 
+				has_country_modifier = authhigh_gp
+				has_country_modifier = authmedium_gp
+				has_country_modifier = authlow_gp 
+			}
+		}
+		alert = no
+		allow = {
+			OR = { 
+				ai = no
+				AND = { NOT = { has_global_flag = authhigh } NOT = { any_greater_power = { has_country_modifier = democratic_bloc_leader relation = { who = THIS value = -50 } } } }
+				AND = { NOT = { has_global_flag = authmedium } any_greater_power = { has_country_modifier = democratic_bloc_leader relation = { who = THIS value = -50 } } NOT = { any_greater_power = { has_country_modifier = democratic_bloc_leader relation = { who = THIS value = 100 } } } }
+				AND = { NOT = { has_global_flag = authlow } any_greater_power = { has_country_modifier = democratic_bloc_leader relation = { who = THIS value = 100 } } }
+			}
+		}
+		effect = {
+			remove_country_modifier = authhigh_gp
+			remove_country_modifier = authmedium_gp
+			remove_country_modifier = authlow_gp
+			remove_country_modifier = authhigh
+			remove_country_modifier = authmedium
+			remove_country_modifier = authlow
+			clr_global_flag = authhigh
+			clr_global_flag = authmedium
+			clr_global_flag = authlow
+			
+			any_country = { 
+				limit = { has_country_modifier = authoritarian_bloc } 
+				remove_country_modifier = authhigh
+				remove_country_modifier = authmedium
+				remove_country_modifier = authlow
+				clr_country_flag = authhigh
+				clr_country_flag = authmedium
+				clr_country_flag = authlow
+			}
+		}
+		ai_will_do = { 
+			factor = 1
+		}
+	}
+	
+	### Build up military only ###
+	authhigh = {
+		picture = "authhigh"
+		potential = {
+			has_country_modifier = authoritarian_bloc_leader
+			NOT = { 
+				OR = { 
+					has_country_modifier = authhigh_gp
+					has_country_modifier = authmedium_gp
+					has_country_modifier = authlow_gp 
+				} 
+			}
+		}
+		allow = {
+			OR = { 
+				ai = no 
+				NOT = { any_greater_power = { has_country_modifier = democratic_bloc_leader relation = { who = THIS value = -50 } } }
+			}
+		}
+		effect = {
+			add_country_modifier = { name = authhigh_gp duration = -1 }
+			
+			any_country = { limit = { has_country_modifier = authoritarian_bloc } add_country_modifier = { name = authhigh duration = -1 } }
+
+			set_global_flag = authhigh
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+	
+	### Strengthen Military and Economic ties ###
+	authmedium = {
+		picture = "authmedium"
+		potential = {
+			has_country_modifier = authoritarian_bloc_leader
+			NOT = { 
+				OR = { 
+					has_country_modifier = authhigh_gp
+					has_country_modifier = authmedium_gp
+					has_country_modifier = authlow_gp 
+				} 
+			}
+		}
+		allow = {
+			OR = { 
+				ai = no 
+				AND = {
+					any_greater_power = { has_country_modifier = democratic_bloc_leader relation = { who = THIS value = -50 } }
+					NOT = { any_greater_power = { has_country_modifier = democratic_bloc_leader relation = { who = THIS value = 100 } } }
+				}
+			}
+		}
+		effect = {
+			add_country_modifier = { name = authmedium_gp duration = -1 }
+			
+			any_country = { limit = { has_country_modifier = authoritarian_bloc } add_country_modifier = { name = authmedium duration = -1 } }
+
+			set_global_flag = authmedium
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+	### Promote Economy and stability only ###
+	authlow = {
+		picture = "authlow"
+		potential = {
+			has_country_modifier = authoritarian_bloc_leader
+			NOT = { 
+				OR = { 
+					has_country_modifier = authhigh_gp
+					has_country_modifier = authmedium_gp
+					has_country_modifier = authlow_gp 
+				} 
+			}
+		}
+		allow = {
+			OR = { 
+				ai = no 
+				any_greater_power = { has_country_modifier = democratic_bloc_leader relation = { who = THIS value = 100 } }
+			}
+		}
+		effect = {
+			add_country_modifier = { name = authlow_gp duration = -1 }
+			
+			any_country = { limit = { has_country_modifier = authoritarian_bloc } add_country_modifier = { name = authlow duration = -1 } }
+
+			set_global_flag = authlow
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
+}

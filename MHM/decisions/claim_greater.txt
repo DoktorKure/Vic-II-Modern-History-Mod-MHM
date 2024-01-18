@@ -2061,25 +2061,17 @@ political_decisions = {
 			badboy = 18
 			set_country_flag = reclaim_german_empire
 			clr_country_flag = claim_greater_germany #cleanup
-			ALS = { all_core = { add_core = GER } }
+			FRA_412 = { add_core = GER }
 			371 = { add_core = GER }
-			546 = { add_core = GER }
-			679 = { add_core = GER }
-			680 = { add_core = GER }
-			681 = { add_core = GER }
-			682 = { add_core = GER }
-			683 = { add_core = GER }
+			533 = { add_core = GER }
 			684 = { add_core = GER }
 			685 = { add_core = GER }
-			690 = { add_core = GER }
-			691 = { add_core = GER }
-			692 = { add_core = GER }
-			693 = { add_core = GER }
-			694 = { add_core = GER }
-			695 = { add_core = GER }
-			696 = { add_core = GER }
-			697 = { add_core = GER }
-			699 = { add_core = GER }
+			3361 = { add_core = GER }
+			PRU_546 = { add_core = GER }
+			PRU_682 = { add_core = GER }
+			PRU_690 = { add_core = GER }
+			PRU_695 = { add_core = GER }
+			PRU_701 = { add_core = GER }
 		}
 
 		ai_will_do = {

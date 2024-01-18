@@ -525,12 +525,14 @@ country_event = {
 		}
 		
 		#THIS owns the provinces
-		owns = 1212 
-		owns = 1211 
-		owns = 1213 
-		owns = 1209 
-		owns = 1214 
-		owns = 1217 
+		owns = 1212 #Herat
+		owns = 1211 #Balkh
+		owns = 1213 #Bamyan
+		owns = 1209 #Kabul
+		owns = 1214 #Farah
+		owns = 1217 #Ghazni
+		owns = 1216 #Jalalabad
+		owns = 1215 #Kandahar
 		
 		war = no
 		
@@ -548,6 +550,9 @@ country_event = {
 				limit = { type = farmers }
 				pop_type = labourers
 			}
+			#This is due to a bug where changing trade goods that requires a different pop type to harvest it causes the RGO to have 100% unemployment unless control is swapped to REB and then swapped back
+			change_controller = REB
+			change_controller = THIS
 		}
 		1211 = { 
 			trade_goods = coal
@@ -555,6 +560,8 @@ country_event = {
 				limit = { type = farmers }
 				pop_type = labourers
 			}
+			change_controller = REB
+			change_controller = THIS
 		}
 		1213 = { 
 			trade_goods = copper
@@ -562,6 +569,8 @@ country_event = {
 				limit = { type = farmers }
 				pop_type = labourers
 			}
+			change_controller = REB
+			change_controller = THIS
 		}
 		1209 = { 
 			trade_goods = iron
@@ -569,6 +578,8 @@ country_event = {
 				limit = { type = farmers }
 				pop_type = labourers
 			}
+			change_controller = REB
+			change_controller = THIS
 		}
 		1214 = { 
 			trade_goods = other_minerals
@@ -576,6 +587,8 @@ country_event = {
 				limit = { type = farmers }
 				pop_type = labourers
 			}
+			change_controller = REB
+			change_controller = THIS
 		}
 		1217 = { 
 			trade_goods = gold_silver
@@ -583,6 +596,26 @@ country_event = {
 				limit = { type = farmers }
 				pop_type = labourers
 			}
+			change_controller = REB
+			change_controller = THIS
+		}
+		1216 = { 
+			trade_goods = gold_silver
+			any_pop = {
+				limit = { type = farmers }
+				pop_type = labourers
+			}
+			change_controller = REB
+			change_controller = THIS
+		}
+		1215 = { 
+			trade_goods = other_minerals
+			any_pop = {
+				limit = { type = farmers }
+				pop_type = labourers
+			}
+			change_controller = REB
+			change_controller = THIS
 		}
 	}
 

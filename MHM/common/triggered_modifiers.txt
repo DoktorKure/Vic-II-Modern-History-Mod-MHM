@@ -153,7 +153,18 @@ china_reduce_military_socre = {
 		#China must be large
 		number_of_states = 10
 	}
-	supply_consumption = -0.1
+	supply_consumption = -0.25
+}
+
+india_reduce_military_socre = {
+	trigger = {
+		OR = { tag = HND tag = RAJ }
+		war = no
+		
+		#India must be large
+		number_of_states = 10
+	}
+	supply_consumption = -0.25
 }
 
 #Blockade

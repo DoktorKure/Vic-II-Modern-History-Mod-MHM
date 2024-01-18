@@ -22,6 +22,30 @@ country_event = {
 		name = "The people praise our government for the victory!"
 		clr_country_flag = country_at_war
 		
+		#Remove prolonged war modifiers
+		clr_country_flag = new_war
+		clr_country_flag = prolonged_war_1
+		clr_country_flag = prolonged_war_2
+		clr_country_flag = prolonged_war_3
+		clr_country_flag = prolonged_war_4
+		clr_country_flag = prolonged_war_5
+		clr_country_flag = prolonged_war_6
+		clr_country_flag = prolonged_war_7
+		clr_country_flag = prolonged_war_8
+		clr_country_flag = prolonged_war_9
+		clr_country_flag = prolonged_war_10
+		remove_country_modifier = new_war
+		remove_country_modifier = prolonged_war_1
+		remove_country_modifier = prolonged_war_2
+		remove_country_modifier = prolonged_war_3
+		remove_country_modifier = prolonged_war_4
+		remove_country_modifier = prolonged_war_5
+		remove_country_modifier = prolonged_war_6
+		remove_country_modifier = prolonged_war_7
+		remove_country_modifier = prolonged_war_8
+		remove_country_modifier = prolonged_war_9
+		remove_country_modifier = prolonged_war_10
+		
 		#Clear UN peace flag
 		clr_country_flag = UN_demands_peace_flag
 		clr_country_flag = country_that_UN_demands_peace_flag
@@ -203,6 +227,30 @@ country_event = {
 	option = {
 		name = "The people blame the government for the defeat!"
 		clr_country_flag = country_at_war
+		
+		#Remove prolonged war modifiers
+		clr_country_flag = new_war
+		clr_country_flag = prolonged_war_1
+		clr_country_flag = prolonged_war_2
+		clr_country_flag = prolonged_war_3
+		clr_country_flag = prolonged_war_4
+		clr_country_flag = prolonged_war_5
+		clr_country_flag = prolonged_war_6
+		clr_country_flag = prolonged_war_7
+		clr_country_flag = prolonged_war_8
+		clr_country_flag = prolonged_war_9
+		clr_country_flag = prolonged_war_10
+		remove_country_modifier = new_war
+		remove_country_modifier = prolonged_war_1
+		remove_country_modifier = prolonged_war_2
+		remove_country_modifier = prolonged_war_3
+		remove_country_modifier = prolonged_war_4
+		remove_country_modifier = prolonged_war_5
+		remove_country_modifier = prolonged_war_6
+		remove_country_modifier = prolonged_war_7
+		remove_country_modifier = prolonged_war_8
+		remove_country_modifier = prolonged_war_9
+		remove_country_modifier = prolonged_war_10
 		
 		#Clear UN peace flag
 		clr_country_flag = UN_demands_peace_flag
@@ -400,6 +448,10 @@ country_event = {
 		name = "May the best country win, which is us!"
 		set_country_flag = country_at_war
 		
+		#Start the clock for prolonged war modifiers that increase war exhaustion
+		add_country_modifier = { name = new_war duration = 365 }
+		set_country_flag = new_war
+		
 		random_owned = {
 			limit = { owner = { NOT = { OR = { government = sectarian_dictatorship government = theocracy } } } }
 			owner = {
@@ -528,6 +580,30 @@ country_event = {
 	option = {
 		name = "We will prevail eventually!"
 		clr_country_flag = country_at_war
+		
+		#Remove prolonged war modifiers
+		clr_country_flag = new_war
+		clr_country_flag = prolonged_war_1
+		clr_country_flag = prolonged_war_2
+		clr_country_flag = prolonged_war_3
+		clr_country_flag = prolonged_war_4
+		clr_country_flag = prolonged_war_5
+		clr_country_flag = prolonged_war_6
+		clr_country_flag = prolonged_war_7
+		clr_country_flag = prolonged_war_8
+		clr_country_flag = prolonged_war_9
+		clr_country_flag = prolonged_war_10
+		remove_country_modifier = new_war
+		remove_country_modifier = prolonged_war_1
+		remove_country_modifier = prolonged_war_2
+		remove_country_modifier = prolonged_war_3
+		remove_country_modifier = prolonged_war_4
+		remove_country_modifier = prolonged_war_5
+		remove_country_modifier = prolonged_war_6
+		remove_country_modifier = prolonged_war_7
+		remove_country_modifier = prolonged_war_8
+		remove_country_modifier = prolonged_war_9
+		remove_country_modifier = prolonged_war_10
 		
 		#Clear UN peace flag
 		clr_country_flag = UN_demands_peace_flag
@@ -665,7 +741,7 @@ country_event = {
 
 }
 
-#Stalemate in ongoing war - THIS is aggressor
+#Stalemate in ongoing war - THIS is defender
 country_event = {
 	id = 15122801
 	title = "Peace has Returned"
@@ -676,7 +752,7 @@ country_event = {
 		war = no
 		has_country_flag = country_at_war
 		
-		#Country is an aggressor
+		#Country is not an aggressor
 		NOT = { has_country_flag = this_is_aggressor }
 		
 		#Country did not fulfil or accept any wargoals
@@ -689,6 +765,30 @@ country_event = {
 	option = {
 		name = "We have weathered the storm!"
 		clr_country_flag = country_at_war
+		
+		#Remove prolonged war modifiers
+		clr_country_flag = new_war
+		clr_country_flag = prolonged_war_1
+		clr_country_flag = prolonged_war_2
+		clr_country_flag = prolonged_war_3
+		clr_country_flag = prolonged_war_4
+		clr_country_flag = prolonged_war_5
+		clr_country_flag = prolonged_war_6
+		clr_country_flag = prolonged_war_7
+		clr_country_flag = prolonged_war_8
+		clr_country_flag = prolonged_war_9
+		clr_country_flag = prolonged_war_10
+		remove_country_modifier = new_war
+		remove_country_modifier = prolonged_war_1
+		remove_country_modifier = prolonged_war_2
+		remove_country_modifier = prolonged_war_3
+		remove_country_modifier = prolonged_war_4
+		remove_country_modifier = prolonged_war_5
+		remove_country_modifier = prolonged_war_6
+		remove_country_modifier = prolonged_war_7
+		remove_country_modifier = prolonged_war_8
+		remove_country_modifier = prolonged_war_9
+		remove_country_modifier = prolonged_war_10
 		
 		#Clear UN peace flag
 		clr_country_flag = UN_demands_peace_flag

@@ -53,7 +53,7 @@ party_issues = {
 				open_factory = yes
 				destroy_factory = no
 				build_railway = yes
-				factory_priority = no
+				factory_priority = yes
 				can_subsidise = yes
 				pop_build_factory = yes
 				pop_expand_factory = yes
@@ -838,7 +838,7 @@ political_reforms = {
 			global_immigrant_attract = -0.5
 			non_accepted_pop_militancy_modifier = 0.10
 			allow = { 
-				citizenship_policy = residency
+				OR = { citizenship_policy = residency citizenship_policy = limited_citizenship }
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
@@ -848,8 +848,15 @@ political_reforms = {
 			global_assimilation_rate = -0.1
 			administrative_multiplier = 1
 			global_pop_consciousness_modifier = 0.01
-			allow = { 
-				NOT = { citizenship_policy = residency } 
+			allow = {
+				OR = {
+					NOT = { has_country_flag = minorities_affirmative_action_reform citizenship_policy = full_citizenship }
+					NOT = { citizenship_policy = residency }
+					AND = {
+						OR = { citizenship_policy = residency citizenship_policy = limited_citizenship }
+						has_country_flag = minorities_affirmative_action_reform
+					}
+				}
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = { has_country_flag = massive_government_corruption_flag }
 			}
@@ -860,7 +867,7 @@ political_reforms = {
 			global_assimilation_rate = -0.2
 			administrative_multiplier = 2 
 			global_pop_consciousness_modifier = 0.02
-			allow = { 
+			allow = {
 				citizenship_policy = full_citizenship 
 				NOT = { has_country_flag = gridlocked_legislature }
 				NOT = { has_country_flag = massive_government_corruption_flag }

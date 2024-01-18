@@ -247,6 +247,7 @@ modifier = { factor = 6 agree_with_ruling_party = 0.6 }
 			modifier = { factor = 100 soldiers = 0.02 country = { conscription_policy = one_year_draft war = no } }
 			modifier = { factor = 100 soldiers = 0.03 country = { conscription_policy = two_year_draft war = no } }
 			modifier = { factor = 100 soldiers = 0.04 country = { conscription_policy = three_year_draft war = no } }
+			modifier = { factor = 100 soldiers = 0.05 country = { conscription_policy = mandatory_service war = no } }
 		}
 		
 		

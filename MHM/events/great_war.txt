@@ -130,9 +130,8 @@ country_event = {
 				war = no
 			}
 			THIS = {
+				# Audax Validator "." Ignore_NEXT
 				war = {
-					# TODO target required by the validator but defaults to REB
-					target = REB
 					attacker_goal = {
 						casus_belli = call_allies_cb
 					}

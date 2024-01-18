@@ -8,6 +8,7 @@ political_decisions = {
 		
 			#Not during the Cold War
 			NOT = { has_global_flag = blocsenabled }
+			NOT = { has_global_flag = blocsenabled2 }
 		
 			has_global_flag = unkingset
 			
@@ -138,6 +139,7 @@ political_decisions = {
 		
 			#Not during the Cold War
 			NOT = { has_global_flag = blocsenabled }
+			NOT = { has_global_flag = blocsenabled2 }
 		
 			has_global_flag = unkingset
 			

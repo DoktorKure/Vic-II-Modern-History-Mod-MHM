@@ -1,0 +1,298 @@
+#Second Cold War Turns Hot
+country_event = {
+	id = 17000101
+	title = "Second Cold War Turns Hot!"
+	desc = "With the conflict now escalated to an armed Superpower vs Superpower confrontation, the Second Cold War has gone hot. The International Order has collasped, the UN can no longer intervene in wars."
+	picture = "hot_tensions"
+	
+	major = yes
+	
+	trigger = {
+		is_greater_power = yes
+		OR = {
+			AND = {
+				has_country_modifier = democratic_bloc_leader
+				any_greater_power = {
+					has_country_modifier = authoritarian_bloc_leader
+					war_with = THIS
+				}
+			}
+			AND = {
+				has_country_modifier = authoritarian_bloc_leader
+				any_greater_power = {
+					has_country_modifier = democratic_bloc_leader
+					war_with = THIS
+				}
+			}
+		}
+		NOT = { has_global_flag = cold_war_hot }
+		has_global_flag =  blocsenabled2
+	}
+	
+	immediate = { set_global_flag = cold_war_hot }
+	
+	option = {
+		name = "May we find peace before obliteration!"
+		remove_country_modifier = cold_war_medium
+		remove_country_modifier = cold_war_low
+		remove_country_modifier = cold_war_high
+
+		clr_country_flag = cold_war_low
+		clr_country_flag = cold_war_medium
+		clr_country_flag = cold_war_high
+
+		add_country_modifier = { name = cold_war_hot duration = -1 }
+		
+		remove_country_modifier = cultural_outreach
+		remove_country_modifier = space_meeting
+		remove_country_modifier = open_market
+		remove_country_modifier = research_partnership
+		remove_country_modifier = joint_nuclear_controls
+		remove_country_modifier = open_borders
+		remove_country_modifier = joint_aid
+		
+		any_country = { limit = { exists = yes NOT = { has_country_modifier = cold_war_hot } } add_country_modifier = { name = cold_war_hot duration = -1 } }
+		
+		any_country = {
+			limit = { exists = yes }
+			remove_country_modifier = cultural_outreach
+			remove_country_modifier = space_meeting
+			remove_country_modifier = open_market
+			remove_country_modifier = research_partnership
+			remove_country_modifier = joint_nuclear_controls
+			remove_country_modifier = open_borders
+			remove_country_modifier = joint_aid
+			
+			remove_country_modifier = cold_war_medium
+			remove_country_modifier = cold_war_low
+			remove_country_modifier = cold_war_high
+
+			clr_country_flag = cold_war_low
+			clr_country_flag = cold_war_medium
+			clr_country_flag = cold_war_high
+		}
+	}
+}
+country_event = {
+	id = 17000102
+	title = "Second Cold War Turns Cold Again!"
+	desc = "With the conflict now cooled to an ideological Superpower vs Superpower confrontation, the Second Cold War has gone cold again though the international community remains alert."
+	picture = "high_tensions"
+	
+	major = yes
+	
+	trigger = {
+		is_greater_power = yes
+		NOT = {
+			AND = {
+				has_country_modifier = democratic_bloc_leader
+				any_greater_power = {
+					has_country_modifier = authoritarian_bloc_leader
+					war_with = THIS
+				}
+			}
+			AND = {
+				has_country_modifier = authoritarian_bloc_leader
+				any_greater_power = {
+					has_country_modifier = democratic_bloc_leader
+					war_with = THIS
+				}
+			}
+		}
+		has_global_flag = cold_war_hot
+		has_global_flag = blocsenabled2
+	}
+	
+	option = {
+		name = "We found peace before obliteration!"
+		clr_global_flag = cold_war_hot
+		remove_country_modifier = cold_war_hot
+		any_country = { limit = { exists = yes has_country_modifier = cold_war_hot } remove_country_modifier = cold_war_hot }
+	}
+}
+
+#High Tensions
+country_event = {
+	id = 17000001
+	title = "High Cold War Tensions!"
+	desc = "The high militarisation of both Superpowers has raised the tensions of the Superpowers to new levels"
+	picture = "high_tensions"
+
+	trigger = {
+		NOT = { has_global_flag = cold_war_hot }
+		any_greater_power = { has_country_modifier = authoritarian_bloc_leader has_country_modifier = authhigh_gp }
+		any_greater_power = { has_country_modifier = democratic_bloc_leader has_country_modifier = demohigh_gp }
+		NOT = { has_country_modifier = cold_war_high }
+		has_global_flag =  blocsenabled2
+	}
+	
+	option = {
+		name = "The Cold War is changing!"
+		clr_global_flag = cold_war_hot
+		remove_country_modifier = cold_war_medium
+		remove_country_modifier = cold_war_low
+		remove_country_modifier = cold_war_hot 
+		clr_country_flag = cold_war_low
+		clr_country_flag = cold_war_medium
+		set_country_flag = cold_war_high
+		add_country_modifier = { name = cold_war_high duration = -1 }
+		remove_country_modifier = cultural_outreach
+		remove_country_modifier = space_meeting
+		remove_country_modifier = open_market
+		remove_country_modifier = research_partnership
+		remove_country_modifier = joint_nuclear_controls
+		remove_country_modifier = open_borders
+		remove_country_modifier = joint_aid
+	}
+}
+#Medium Tensions
+country_event = {
+	id = 17000011
+	title = "Medium Cold War Tensions!"
+	desc = "The medium militarisation of the Superpowers has made the tensions of the Superpowers more moderate."
+	picture = "medium_tensions"
+
+	trigger = {
+		NOT = { has_global_flag = cold_war_hot }
+		OR = { 
+			AND = {
+				any_greater_power = { has_country_modifier = authoritarian_bloc_leader has_country_modifier = authhigh_gp }
+				any_greater_power = { has_country_modifier = democratic_bloc_leader has_country_modifier = demomedium_gp }
+			} 
+			AND = {
+				any_greater_power = { has_country_modifier = authoritarian_bloc_leader has_country_modifier = authmedium_gp }
+				any_greater_power = { has_country_modifier = democratic_bloc_leader has_country_modifier = demomedium_gp }
+			}
+			AND = {
+				any_greater_power = { has_country_modifier = authoritarian_bloc_leader has_country_modifier = authmedium_gp }
+				any_greater_power = { has_country_modifier = democratic_bloc_leader has_country_modifier = demohigh_gp }
+			}
+			AND = {
+				any_greater_power = { has_country_modifier = authoritarian_bloc_leader has_country_modifier = authhigh_gp }
+				any_greater_power = { has_country_modifier = democratic_bloc_leader has_country_modifier = demolow_gp }
+			}
+			AND = {
+				any_greater_power = { has_country_modifier = authoritarian_bloc_leader has_country_modifier = authlow_gp }
+				any_greater_power = { has_country_modifier = democratic_bloc_leader has_country_modifier = demohigh_gp }
+			}
+			AND = {
+				any_greater_power = { has_country_modifier = authoritarian_bloc_leader has_country_modifier = authmedium_gp }
+				any_greater_power = { has_country_modifier = democratic_bloc_leader has_country_modifier = demolow_gp }
+			}
+			AND = {
+				any_greater_power = { has_country_modifier = authoritarian_bloc_leader has_country_modifier = authlow_gp }
+				any_greater_power = { has_country_modifier = democratic_bloc_leader has_country_modifier = demomedium_gp }
+			}
+		}
+		NOT = { has_country_modifier = cold_war_medium }
+		has_global_flag =  blocsenabled2
+	}
+	
+	option = {
+		name = "The Cold War is changing!"
+		remove_country_modifier = cold_war_low
+		remove_country_modifier = cold_war_high
+		remove_country_modifier = cold_war_hot
+		clr_country_flag = cold_war_low
+		set_country_flag = cold_war_medium
+		clr_country_flag = cold_war_high
+		add_country_modifier = { name = cold_war_medium duration = -1 }
+		remove_country_modifier = cultural_outreach
+		remove_country_modifier = space_meeting
+		remove_country_modifier = open_market
+		remove_country_modifier = research_partnership
+		remove_country_modifier = joint_nuclear_controls
+		remove_country_modifier = open_borders
+		remove_country_modifier = joint_aid
+	}
+}
+#Low Tensions
+country_event = {
+	id = 1700002
+	title = "Low Cold War Tensions (Detente)!"
+	desc = "The low militarisation of both Superpowers has lowered the tensions of the Superpowers to a new low."
+	picture = "low_tensions"
+
+	trigger = {
+		NOT = { has_global_flag = cold_war_hot }
+		any_greater_power = { has_country_modifier = authoritarian_bloc_leader has_country_modifier = authlow_gp }
+		any_greater_power = { has_country_modifier = democratic_bloc_leader has_country_modifier = demolow_gp }
+		NOT = { has_country_modifier = cold_war_low }
+		has_global_flag =  blocsenabled2
+	}
+	
+	option = {
+		name = "The Cold War is changing!"
+		remove_country_modifier = cold_war_medium
+		remove_country_modifier = cold_war_high
+		remove_country_modifier = cold_war_hot
+		set_country_flag = cold_war_low
+		clr_country_flag = cold_war_medium
+		clr_country_flag = cold_war_high
+		add_country_modifier = { name = cold_war_low duration = -1 }
+
+		#Peace Summit if there is an ongoing CW crisis
+		random_owned = { 
+			limit = { owner = { has_country_modifier = authoritarian_bloc_leader has_global_flag = cwcrisis_initiated } }
+			owner = { any_country = { limit = { has_country_modifier = democratic_bloc_leader } country_event = 1800010 } }
+		}
+
+		#Clear ongoing Cold War Crisis flags
+		clr_global_flag = cwcrisis_initiated
+		any_country = { clr_country_flag = cw_crisis_target }
+		any_country = { clr_country_flag = superpower_support_in_crisis }
+		clr_global_flag = cwcrisis_full_blown
+		clr_global_flag = called_for_superpower
+		clr_global_flag = called_for_rival_superpower
+
+		any_country = {
+			limit = {
+				has_country_modifier = superpower
+				has_global_flag = cultural_outreach
+			}
+			add_country_modifier = { name = cultural_outreach duration = -1 }
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = superpower
+				has_global_flag = space_meeting
+			}
+			add_country_modifier = { name = space_meeting duration = -1 }
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = superpower
+				has_global_flag = open_market
+			}
+			add_country_modifier = { name = open_market duration = -1 }
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = superpower
+				has_global_flag = research_partnership
+			}
+			add_country_modifier = { name = research_partnership duration = -1 }
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = superpower
+				has_global_flag = joint_nuclear_controls
+			}
+			add_country_modifier = { name = joint_nuclear_controls duration = -1 }
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = superpower
+				has_global_flag = open_borders
+			}
+			add_country_modifier = { name = open_borders duration = -1 }
+		}
+		any_country = {
+			limit = {
+				has_country_modifier = superpower
+				has_global_flag = joint_aid
+			}
+			add_country_modifier = { name = joint_aid duration = -1 }
+		}
+	}
+}

@@ -380,6 +380,15 @@ political_decisions = {
 		allow = {
 			war = no
 			election = no
+			NOT = { badboy = 0.2 }
+			NOT = { 
+				any_greater_power = { 
+					AND = { 
+						has_country_modifier = unsc_permanent_member 
+						NOT = { relation = { who = THIS value = 150 } }
+					} 
+				} 
+			}
 			OR = { #2000 or a chief UNSC member is no longer a major power/doesn't exist anymore
 				cultural_imperialism = 1
 				RUS = {
@@ -458,15 +467,6 @@ political_decisions = {
 						}
 					}
 				}
-			}
-			NOT = { badboy = 0.2 }
-			NOT = { 
-				any_greater_power = { 
-					AND = { 
-						has_country_modifier = unsc_permanent_member 
-						NOT = { relation = { who = THIS value = 150 } }
-					} 
-				} 
 			}
 		}
 		effect = {

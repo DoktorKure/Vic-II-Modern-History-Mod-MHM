@@ -1,5 +1,5 @@
 graphical_culture = PrussianGC
-color = { 168 168 168 }
+color = { 192 173 150 }
 hms_government = { 77  93  83 }
 hms_government1 = { 77  93  83 }
 absolute_monarchy = { 77  93  83 }
@@ -291,7 +291,7 @@ party = {
 		ideology = communist_social
 		religious_policy = pro_atheism
 		trade_policy = protectionism
-		war_policy = pacifism
+		war_policy = pro_military
 		start_date = 1836.1.1
 		end_date = 2092.1.1
 }

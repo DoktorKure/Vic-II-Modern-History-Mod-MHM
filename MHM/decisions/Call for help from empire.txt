@@ -23,9 +23,21 @@ political_decisions = {
 		effect = {
 			prestige = -10
 			add_country_modifier = { name = called_allies1 duration = 365 }
-			war = {
-				target = REB
-				call_ally = yes
+			random_country = {
+				limit = {
+					NOT = { has_country_flag = neutrality }
+					alliance_with = THIS
+					war = no
+				}
+				THIS = {
+					# Audax Validator "." Ignore_NEXT
+					war = {
+						attacker_goal = {
+							casus_belli = call_allies_cb
+						}
+						call_ally = yes
+					}
+				}
 			}
 		}
 		ai_will_do = { 

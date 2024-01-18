@@ -8,6 +8,7 @@ country_event = {
 	trigger = {
 		year = 1948
 		NOT = { has_global_flag = blocsenabled }
+		NOT = { has_global_flag = blocsenabled2 }
 		any_greater_power = { rank = 3 OR = { war = yes badboy = 0.8 } }
 		NOT = { has_country_modifier = world_high }
 	}
@@ -33,6 +34,7 @@ country_event = {
 	trigger = {
 		year = 1948
 		NOT = { has_global_flag = blocsenabled }
+		NOT = { has_global_flag = blocsenabled2 }
 		NOT = { any_greater_power = { rank = 3 OR = { war = yes badboy = 0.8 } } }
 		any_greater_power = { NOT = { rank = 3 } OR = { war = yes badboy = 0.8 } }
 		NOT = { has_country_modifier = world_medium }
@@ -59,6 +61,7 @@ country_event = {
 	trigger = {
 		year = 1948
 		NOT = { has_global_flag = blocsenabled }
+		NOT = { has_global_flag = blocsenabled2 }
 		NOT = { any_greater_power = { OR = { war = yes badboy = 0.8 } } }
 		NOT = { has_country_modifier = world_low }
 	}

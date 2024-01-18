@@ -538,6 +538,27 @@ political_decisions = {
 
 	}
 
+	form_military_doctrine = {
+		picture = "military_doctrine"
+		potential = {
+			NOT = { has_country_flag = hide_military_decisions }
+			NOT = { has_country_flag = doctrine_school }
+			assymetric_warfare = 1
+		}
+		allow = {
+			is_disarmed = no
+			money = 200000
+		}
+		effect = {
+			prestige = 10
+			money = -100000
+			set_country_flag = doctrine_school
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+
 	changedoctrine = {
 		picture = "changedoctrine"
 		potential = {
@@ -5580,7 +5601,6 @@ political_decisions = {
 			NOT = { has_country_flag = hide_civil_decisions }
 			ai = no
 			OR = { government = democracy government = democracy1 government = socialist_democracy }
-			NOT = { has_country_modifier = law_changed_by_force }
 			OR = {
 				has_country_flag = presidential_system_republic
 				has_country_flag = semi_presidential_system_republic
@@ -5588,7 +5608,7 @@ political_decisions = {
 		}
 		
 		allow = {
-			election = no
+			NOT = { has_country_modifier = law_changed_by_force }
 		}
 
 		alert = no

@@ -846,14 +846,13 @@ country_event = {
 	}
 
 	option = {
-		name = "Propose to help the KMT (50% chance of Soviet intervention)"
+		name = "Propose to help the KMT (30% chance of Soviet intervention)"
 		prestige = 100
 		relation = { who = RUS value = -200 }
 		relation = { who = KMT value = 200 }
 		
 		#Let KMT decide
 		KMT = { country_event = 8200105 }
-		
 		money = -200000
 		
 		ai_chance = { factor = 0.1 }
@@ -935,7 +934,7 @@ country_event = {
 		#USA declares war on CHI
 		USA = { country_event = 1412238 }
 		
-		ai_chance = { factor = 0.5 }
+		ai_chance = { factor = 0.3 }
 	}
 
 	option = {
@@ -948,7 +947,7 @@ country_event = {
 		#USA declares war on CHI
 		USA = { country_event = 1412238 }
 		
-		ai_chance = { factor = 0.5 }
+		ai_chance = { factor = 0.7 }
 	}
 
 }
@@ -975,7 +974,7 @@ country_event = {
 
 		war = {
 			target = CHI
-			attacker_goal = { casus_belli = cut_down_to_size }
+			attacker_goal = { casus_belli = assisted_unification }
 			defender_goal = { casus_belli = humiliate }
 			call_ally = yes
 		}
