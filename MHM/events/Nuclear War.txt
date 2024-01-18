@@ -154,7 +154,7 @@ country_event = {
 		name = "We must retaliate!"
 		prestige_factor = -0.25
 		add_country_modifier = { name = recently_attacked_nuke duration = 31 }
-		add_country_modifier = { name = nuke_fallout duration = 7300 }
+		add_country_modifier = { name = nuke_fallout duration = 5475 }
 		set_country_flag = has_nuke_clouds
 		set_country_flag = nuked_high
 
@@ -224,7 +224,7 @@ country_event = {
 		name = "We must retaliate!"
 		prestige_factor = -0.06
 		add_country_modifier = { name = recently_attacked_nuke duration = 31 }
-		add_country_modifier = { name = nuke_fallout duration = 18250 }
+		add_country_modifier = { name = nuke_fallout duration = 3250 }
 		set_country_flag = has_nuke_clouds
 		set_country_flag = nuked_low
 
@@ -269,7 +269,7 @@ country_event = {
 		name = "We must retaliate!"
 		prestige_factor = -0.125
 		add_country_modifier = { name = recently_attacked_nuke duration = 31 }
-		add_country_modifier = { name = nuke_fallout duration = 27375 }
+		add_country_modifier = { name = nuke_fallout duration = 5475 }
 		set_country_flag = has_nuke_clouds
 		set_country_flag = nuked_medium
 
@@ -330,7 +330,7 @@ country_event = {
 		name = "We must retaliate!"
 		prestige_factor = -0.25
 		add_country_modifier = { name = recently_attacked_nuke duration = 31 }
-		add_country_modifier = { name = nuke_fallout duration = 36500 }
+		add_country_modifier = { name = nuke_fallout duration = 7300 }
 		set_country_flag = has_nuke_clouds
 		set_country_flag = nuked_high
 
