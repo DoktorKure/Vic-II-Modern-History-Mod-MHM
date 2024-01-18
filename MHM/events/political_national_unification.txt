@@ -20,12 +20,28 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
+				vassal_of = THIS
+				government = colonial_government
+			}
+			set_country_flag = transfer_colony_to_superstate
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+				government = mandate_government
+			}
+			set_country_flag = transfer_mandate_to_superstate
+		}
+		any_country = {
+			limit = {
+				exists = yes
 				in_sphere = THIS
 			}
 			set_country_flag = sphere_to_superstate
 		}
 		any_owned = {
-                secede_province = FROM
+			secede_province = FROM
         }
         FROM = { inherit = THIS }
 		FROM = { country_event = 11107 }
@@ -72,6 +88,22 @@ country_event = {
 		FROM = {
 			all_core = { add_core = THIS }
 			any_owned = { secede_province = THIS }
+		}
+		
+		THIS = { inherit = FROM }
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = transfer_to_superstate
+			}
+			country_event = 11108
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_flag = sphere_to_superstate
+			}
+			country_event = 11109
 		}
 		
 		### FUCKHUGE BLOCK FOR DYNAMIC CULTURE ADDITIONS ###
@@ -7607,22 +7639,6 @@ country_event = {
 		#################
 		### END BLOCK ###
 		#################
-		
-		THIS = { inherit = FROM }
-		any_country = {
-			limit = {
-				exists = yes
-				has_country_flag = transfer_to_superstate
-			}
-			country_event = 11108
-		}
-		any_country = {
-			limit = {
-				exists = yes
-				has_country_flag = sphere_to_superstate
-			}
-			country_event = 11109
-		}
 		ai_chance = { factor = 1 }
 	}
 
@@ -7645,6 +7661,18 @@ country_event = {
 		name = "We have no choice but to accept this reality."
 		FROM = {
 			create_vassal = THIS
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = transfer_colony_to_superstate }
+			}
+			owner = { government = colonial_government clr_country_flag = transfer_colony_to_superstate }
+		}
+		random_owned = {
+			limit = {
+				owner = { has_country_flag = transfer_colony_to_superstate }
+			}
+			owner = { government = mandate_government clr_country_flag = transfer_mandate_to_superstate }
 		}
 		ai_chance = { factor = 1 }
 	}
@@ -7715,8 +7743,38 @@ country_event = {
 		name = "EVTOPTA11101"
 		all_core = { add_core = FROM }
 		any_owned = {
-                secede_province = FROM
+			secede_province = FROM
         }
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+			}
+			set_country_flag = transfer_to_superstate
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+				government = colonial_government
+			}
+			set_country_flag = transfer_colony_to_superstate
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+				government = mandate_government
+			}
+			set_country_flag = transfer_mandate_to_superstate
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				in_sphere = THIS
+			}
+			set_country_flag = sphere_to_superstate
+		}
         FROM = { inherit = THIS }
 		FROM = { country_event = 11107 }
 		ai_chance = { factor = 1 }
