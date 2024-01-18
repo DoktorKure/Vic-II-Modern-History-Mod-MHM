@@ -54,6 +54,8 @@ country_event = {
 		NOT = { has_global_flag = blocsenabled2 }
 		#First cold war has to end
 		OR = { has_global_flag = cold_warusa has_global_flag = cold_warussr }
+		#Prevent event 19806 from messing this up
+		OR = { has_country_flag = endofthecoldwar has_global_flag = 1992_start_date_flag has_global_flag = 2015_start_date_flag }
 		#Prevent repeats
 		NOT = { has_global_flag = cold_war2auth has_global_flag = cold_war2demo }
 		war = no
