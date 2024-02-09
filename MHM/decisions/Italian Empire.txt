@@ -78,8 +78,8 @@ political_decisions = {
 		NOT = { has_country_flag = italian_ethiopia }
 		ETH = { exists = yes is_vassal = no }
 		OR = {
-			SML = { exists = yes vassal_of = ITA }
-			SML = { all_core = { owned_by = ITA } }
+			SOM = { exists = yes vassal_of = ITA }
+			SOM = { all_core = { NOT = { is_core = ETH } owned_by = ITA } }
 			}
 		}
 	allow = {
