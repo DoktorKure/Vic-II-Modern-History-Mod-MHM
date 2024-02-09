@@ -101,6 +101,7 @@ political_decisions = {
 			EGY = { exists = yes is_vassal = no }
 			SUD = { exists = yes is_vassal = no }
 			SSU = { exists = yes is_vassal = no }
+			UAR = { exists = yes is_vassal = no }
 			}
 		OR = {
 			ETH = { exists = yes vassal_of = ITA }
@@ -120,6 +121,7 @@ political_decisions = {
 		casus_belli = { target = EGY type = colonial_war months = 100 }
 		casus_belli = { target = SUD type = colonial_war months = 100 }
 		casus_belli = { target = SSU type = colonial_war months = 100 }
+		casus_belli = { target = UAR type = colonial_war months = 100 }
 		}
 	}
 	italian_albania_protectorate = {
@@ -184,6 +186,7 @@ political_decisions = {
 		LEB = { exists = yes is_vassal = no }
 		IRQ = { exists = yes is_vassal = no }
 		ISI = { exists = yes is_vassal = no }
+		UAR = { exists = yes is_vassal = no }
 		}
 	allow = {
 		is_greater_power = yes
@@ -191,6 +194,7 @@ political_decisions = {
 	effect = {
 		set_country_flag = italian_levant
 		badboy = 50
+		casus_belli = { target = UAR type = colonial_war months = 100 }
 		casus_belli = { target = PAL type = colonial_war months = 100 }	
 		casus_belli = { target = ISR type = colonial_war months = 100 }
 		casus_belli = { target = USY type = colonial_war months = 100 }
