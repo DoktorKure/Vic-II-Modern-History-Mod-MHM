@@ -1,0 +1,201 @@
+political_decisions = {
+	italian_libya = {
+	picture = "form_libya"
+	potential = {
+		tag = ITA
+		has_country_flag = italian_imperialism
+		NOT = { has_country_flag = italian_libya }
+		OR = {
+			LBY = { exists = yes is_vassal = no }
+			TRI = { exists = yes is_vassal = no }
+			FEZ = { exists = yes is_vassal = no }
+			}
+		}
+	allow = {
+		is_greater_power = yes
+		}
+	effect = {
+		set_country_flag = italian_libya
+		badboy = 10
+		casus_belli = { target = LBY type = colonial_war months = 10 }
+		casus_belli = { target = TRI type = colonial_war months = 10 }
+		casus_belli = { target = FEZ type = colonial_war months = 10 }
+		}
+	}
+	italian_tunisia = {
+	picture = "renouce_african_assimilation"
+	potential = {
+		tag = ITA
+		has_country_flag = italian_imperialism
+		NOT = { has_country_flag = italian_tunisia }
+		TUN = { exists = yes is_vassal = no }
+		}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		LBY = { all_core = { owned_by = ITA } }
+		LBY = { exists_yes vassal_of = ITA in_sphere = ITA }
+			}
+		}
+	effect = {
+		set_country_flag = italian_tunisia
+		badboy = 10
+		casus_belli = { target = TUN type = colonial_war months = 10 }
+		}
+	}
+	italian_east_africa = {
+	picture = "claim_greater_ethiopia"
+	potential = {
+		tag = ITA
+		has_country_flag = italian_imperialism
+		NOT = { has_country_flag = italian_east_africa }
+		OR = {
+			SML = { exists = yes is_vassal = no }
+			SOM = { exists = yes is_vassal = no }
+			ERI = { exists = yes is_vassal = no }
+			DJI = { exists = yes is_vassal = no }
+			}
+		}
+	allow = {
+		is_greater_power = yes
+		}
+	effect = {
+		set_country_flag = italian_east_africa
+		badboy = 15
+		casus_belli = { target = SML type = colonial_war months = 10 }
+		casus_belli = { target = SOM type = colonial_war months = 10 }
+		casus_belli = { target = ERI type = colonial_war months = 10 }
+		casus_belli = { target = DJI type = colonial_war months = 10 }
+		}
+	}
+	italian_ethiopia = {
+	picture = "claim_greater_ethiopia"
+	potential = {
+		tag = ITA
+		has_country_flag = italian_imperialism
+		NOT = { has_country_flag = italian_ethiopia }
+		ETH = { exists = yes is_vassal = no }
+		OR = {
+			SML = { exists = yes vassal_of = ITA }
+			SML = { all_core = { owned_by = ITA } }
+			}
+		}
+	allow = {
+		is_greater_power = yes
+		}
+	effect = {
+		set_country_flag = italian_ethiopia
+		badboy = 25
+		casus_belli = { target = ETH type = colonial_war months = 10 }
+		}
+	}
+	italian_sudan_egypt = {
+	picture = "claim_the_sudan"
+	potential = {
+		tag = ITA
+		has_country_flag = italian_imperialism
+		NOT = { has_country_flag = italian_egypt_sudan }
+		OR = {
+			EGY = { exists = yes is_vassal = no }
+			SUD = { exists = yes is_vassal = no }
+			SSU = { exists = yes is_vassal = no }
+			}
+		OR = {
+			ETH = { exists = yes vassal_of = ITA }
+			ETH = { all_core = { owned_by = ITA } }
+			}
+		OR = {
+			LBY = { all_core = { owned_by = ITA } }
+			LBY = { exists_yes vassal_of = ITA in_sphere = ITA }
+			}
+		}
+	allow = {
+		is_greater_power = yes
+		}
+	effect = {
+		set_country_flag = italian_egypt_sudan
+		badboy = 29
+		casus_belli = { target = EGY type = colonial_war months = 10 }
+		casus_belli = { target = SUD type = colonial_war months = 10 }
+		casus_belli = { target = SSU type = colonial_war months = 10 }
+		}
+	}
+	italian_albania_protectorate = {
+	picture = "claim_greater_albania"
+	potential = {
+		tag = ITA
+		has_country_flag = italian_imperialism	
+		NOT = { has_country_flag = italian_albania }
+		ALB = { exists = yes is_vassal = no }
+		}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		ruling_party_ideology = nationalist
+		ruling_party_ideology = traditionalist	
+		}
+		}
+	effect = {
+		set_country_flag = italian_albania
+		badboy = 10
+		casus_belli = { target = ALB type = colonial_war months = 10 }
+		}
+	}
+	italian_greece = {
+	picture = "unite_with_greece"
+	potential = {
+		tag = ITA
+		has_country_flag = italian_imperialism
+		NOT = { has_country_flag = italian_greece }
+		GRE = { exists = yes is_vassal = no }
+		OR = {
+		ALB = { exists = yes vassal_of = ITA }
+		ALB = { all_core = { owned_by = ITA } }
+		}
+		}
+	allow = {
+		is_greater_power = yes
+		ruling_party_ideology = nationalist
+		}
+	effect = {
+		set_country_flag = italian_greece
+		badboy = 29
+		casus_belli = { target = GRE type = colonial_war months = 10 }
+		}
+	}
+	italian_levant = {
+	picture = "levantine_federation"
+	potential = {
+		tag = ITA
+		has_country_flag = italian_imperialism
+		NOT = { has_country_flag = italian_levant }
+		OR = {
+		EGY = { exists = yes vassal_of = ITA }
+		EGY = { all_core = { owned_by = ITA } }
+		}
+		OR = {
+		PAL = { exists = yes is_vassal = no }
+		ISR = { exists = yes is_vassal = no }
+		USY = { exists = yes is_vassal = no }
+		SYR = { exists = yes is_vassal = no }
+		JOR = { exists = yes is_vassal = no }
+		LEB = { exists = yes is_vassal = no }
+		IRQ = { exists = yes is_vassal = no }
+		ISI = { exists = yes is_vassal = no }
+		}
+	allow = {
+		is_greater_power = yes
+		}
+	effect = {
+		set_country_flag = italian_levant
+		badboy = 50
+		casus_belli = { target = PAL type = colonial_war months = 10 }	
+		casus_belli = { target = ISR type = colonial_war months = 10 }
+		casus_belli = { target = USY type = colonial_war months = 10 }
+		casus_belli = { target = SYR type = colonial_war months = 10 }
+		casus_belli = { target = JOR type = colonial_war months = 10 }
+		casus_belli = { target = LEB type = colonial_war months = 10 }
+		casus_belli = { target = IRQ type = colonial_war months = 10 }
+		casus_belli = { target = ISI type = colonial_war months = 10 }
+		}
+	}
