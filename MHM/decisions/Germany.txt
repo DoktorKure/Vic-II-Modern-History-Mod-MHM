@@ -414,5 +414,22 @@ political_decisions = {
 		ai_will_do = { factor = 1 }
 	
 	}
-		
+	look_west = {
+		picture = "annex_rhineland"
+		potential = {
+			tag = GER
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+			NOT = { has_country_flag = look_west }
+			}
+		allow = {
+			is_greater_power = yes
+			rank = 3
+			}
+		effect = {
+			badboy = 24
+			AUS = { all_core = { add_core = GER } }
+			SWI = { all_core = { add_core = GER } }
+			set_country_flag = look_west
+			}
+		}
 }
