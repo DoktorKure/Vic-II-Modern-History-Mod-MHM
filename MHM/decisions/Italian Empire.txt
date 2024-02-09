@@ -9,6 +9,7 @@ political_decisions = {
 			LBY = { exists = yes is_vassal = no }
 			TRI = { exists = yes is_vassal = no }
 			FEZ = { exists = yes is_vassal = no }
+			CYR = { exists = yes is_vassal = no }
 			}
 		}
 	allow = {
@@ -17,9 +18,10 @@ political_decisions = {
 	effect = {
 		set_country_flag = italian_libya
 		badboy = 10
-		casus_belli = { target = LBY type = colonial_war months = 10 }
-		casus_belli = { target = TRI type = colonial_war months = 10 }
-		casus_belli = { target = FEZ type = colonial_war months = 10 }
+		casus_belli = { target = LBY type = colonial_war months = 100 }
+		casus_belli = { target = TRI type = colonial_war months = 100 }
+		casus_belli = { target = FEZ type = colonial_war months = 100 }
+		casus_belli = { target = CYR type = colonial_war months = 100 }
 		}
 	}
 	italian_tunisia = {
@@ -40,7 +42,7 @@ political_decisions = {
 	effect = {
 		set_country_flag = italian_tunisia
 		badboy = 10
-		casus_belli = { target = TUN type = colonial_war months = 10 }
+		casus_belli = { target = TUN type = colonial_war months = 100 }
 		}
 	}
 	italian_east_africa = {
@@ -62,10 +64,10 @@ political_decisions = {
 	effect = {
 		set_country_flag = italian_east_africa
 		badboy = 15
-		casus_belli = { target = SML type = colonial_war months = 10 }
-		casus_belli = { target = SOM type = colonial_war months = 10 }
-		casus_belli = { target = ERI type = colonial_war months = 10 }
-		casus_belli = { target = DJI type = colonial_war months = 10 }
+		casus_belli = { target = SML type = colonial_war months = 100 }
+		casus_belli = { target = SOM type = colonial_war months = 100 }
+		casus_belli = { target = ERI type = colonial_war months = 100 }
+		casus_belli = { target = DJI type = colonial_war months = 100 }
 		}
 	}
 	italian_ethiopia = {
@@ -86,7 +88,7 @@ political_decisions = {
 	effect = {
 		set_country_flag = italian_ethiopia
 		badboy = 25
-		casus_belli = { target = ETH type = colonial_war months = 10 }
+		casus_belli = { target = ETH type = colonial_war months = 100 }
 		}
 	}
 	italian_sudan_egypt = {
@@ -115,9 +117,9 @@ political_decisions = {
 	effect = {
 		set_country_flag = italian_egypt_sudan
 		badboy = 29
-		casus_belli = { target = EGY type = colonial_war months = 10 }
-		casus_belli = { target = SUD type = colonial_war months = 10 }
-		casus_belli = { target = SSU type = colonial_war months = 10 }
+		casus_belli = { target = EGY type = colonial_war months = 100 }
+		casus_belli = { target = SUD type = colonial_war months = 100 }
+		casus_belli = { target = SSU type = colonial_war months = 100 }
 		}
 	}
 	italian_albania_protectorate = {
@@ -138,7 +140,7 @@ political_decisions = {
 	effect = {
 		set_country_flag = italian_albania
 		badboy = 10
-		casus_belli = { target = ALB type = colonial_war months = 10 }
+		casus_belli = { target = ALB type = colonial_war months = 100 }
 		}
 	}
 	italian_greece = {
@@ -160,7 +162,7 @@ political_decisions = {
 	effect = {
 		set_country_flag = italian_greece
 		badboy = 29
-		casus_belli = { target = GRE type = colonial_war months = 10 }
+		casus_belli = { target = GRE type = colonial_war months = 100 }
 		}
 	}
 	italian_levant = {
@@ -189,13 +191,13 @@ political_decisions = {
 	effect = {
 		set_country_flag = italian_levant
 		badboy = 50
-		casus_belli = { target = PAL type = colonial_war months = 10 }	
-		casus_belli = { target = ISR type = colonial_war months = 10 }
-		casus_belli = { target = USY type = colonial_war months = 10 }
-		casus_belli = { target = SYR type = colonial_war months = 10 }
-		casus_belli = { target = JOR type = colonial_war months = 10 }
-		casus_belli = { target = LEB type = colonial_war months = 10 }
-		casus_belli = { target = IRQ type = colonial_war months = 10 }
-		casus_belli = { target = ISI type = colonial_war months = 10 }
+		casus_belli = { target = PAL type = colonial_war months = 100 }	
+		casus_belli = { target = ISR type = colonial_war months = 100 }
+		casus_belli = { target = USY type = colonial_war months = 100 }
+		casus_belli = { target = SYR type = colonial_war months = 100 }
+		casus_belli = { target = JOR type = colonial_war months = 100 }
+		casus_belli = { target = LEB type = colonial_war months = 100 }
+		casus_belli = { target = IRQ type = colonial_war months = 100 }
+		casus_belli = { target = ISI type = colonial_war months = 100 }
 		}
 	}
