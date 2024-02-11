@@ -79,7 +79,7 @@ political_decisions = {
 		ETH = { exists = yes is_vassal = no }
 		OR = {
 			SOM = { exists = yes vassal_of = ITA }
-			SOM = { all_core = { NOT = { OR = { is_core = ETH is_core = SML } } owned_by = ITA } }
+			SOM = { all_core = { OR = { owned_by = ITA  is_core = ETH is_core = SML } } }
 			}
 		}
 	allow = {
@@ -206,4 +206,4 @@ political_decisions = {
 		casus_belli = { target = ISI type = colonial_war months = 100 }
 		}
 	}
-	}
+}
