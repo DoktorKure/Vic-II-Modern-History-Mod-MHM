@@ -1099,3 +1099,31 @@ country_event = {
 		ai_chance = { factor = 0.50 }
 	}
 }
+country_event = {
+	id = 80043282
+	title = "Der Deutsche Kolonialgesellschaft"
+	desc = "EVTDESC80043282"
+	picture = "great_purge"
+	mean_time_to_happen = { months = 1 }
+	fire_only_once = yes
+	trigger = {
+		tag = GER 
+		OR = {
+		ruling_party_ideology = populist
+		ruling_party_ideology = nationalist
+		ruling_party_ideology = traditionalist
+		ruling_party_ideology = communist
+		}
+		}
+	option = {
+		name = "I dream of Mittelafrika!"
+		badboy = 5
+		set_country_flag = german_africa
+		ai_chance = { factor = 0.1 }
+		}
+	option = {
+		name = "What a joke."
+		badboy = -5
+		prestige = 25
+		}
+	}

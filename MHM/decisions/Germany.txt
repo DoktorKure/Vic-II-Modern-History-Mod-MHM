@@ -432,4 +432,55 @@ political_decisions = {
 			set_country_flag = look_west
 			}
 		}
+	german_kamerun = {
+		picture = "renounce_african_assimilation"
+	potential = {
+		tag = GER
+		has_country_flag = german_africa
+		NOT = { has_country_flag = german_kamerun }
+		CMR = { exists = yes is_vassal = no }
+		}
+	allow = {
+		is_greater_power = yes
+		}
+	effect = {
+		set_country_flag = german_kamerun
+		badboy = 10
+		casus_belli = { target = CMR type = colonial_war months = 100 }
+		}
+	}
+	deutsch_ostafrika = {
+		picture = "renounce_african_assimilation"
+	potential = {
+		tag = GER
+		has_country_flag = german_africa
+		NOT = { has_country_flag = deutsch_ostafrika }
+		TAN = { exists = yes is_vassal = no }
+		}
+	allow = {
+		is_greater_power = yes
+		}
+	effect = {
+		set_country_flag = deutsch_ostafrika
+		badboy = 10
+		casus_belli = { target = TAN type = colonial_war months = 100 }
+		}
+	}
+	deutsch_sudwestafrika = {
+		picture = "renounce_african_assimilation"
+	potential = {
+		tag = GER
+		has_country_flag = german_africa
+		NOT = { has_country_flag = deutsch_sudwestafrika }
+		NAM = { exists = yes is_vassal = no }
+		}
+	allow = {
+		is_greater_power = yes
+		}
+	effect = {
+		set_country_flag = deutsch_sudwestafrika
+		badboy = 5
+		casus_belli = { target = NAM type = colonial_war months = 100 }
+		}
+	}
 }
