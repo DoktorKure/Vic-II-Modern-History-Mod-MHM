@@ -885,7 +885,6 @@ country_event = { # The New Regime - Communist
 
 	option = {
 		name = "EVTOPTA800052"
-		government = proletarian_dictatorship
 		
 		upper_house = { ideology = communist value = 0.99 }
 		

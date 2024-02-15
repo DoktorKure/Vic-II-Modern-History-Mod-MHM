@@ -2106,7 +2106,25 @@ country_event = {
 		
 		#Set flag for dissolution event
 		set_global_flag = august_coup
+		set_country_flag = august_coup_fired
 		add_country_modifier = { name = revolution_chaos duration = 1460 }
+		
+		#SSRs gain major autonomy to reflect the collapse of the central government in the wake of the coup
+		random_owned = { limit = { owner = { is_possible_vassal = AZB } } owner = { AZB = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = UKR } } owner = { UKR = { country_event = 1512103 set_country_flag = UKR_CRI_1991_claim_flag } } }
+		random_owned = { limit = { owner = { is_possible_vassal = BYE } } owner = { BYE = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = GEO } } owner = { GEO = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = ARM } } owner = { ARM = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = TKR } } owner = { TKR = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = MOL } } owner = { MOL = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = UZB } } owner = { UZB = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = KYR } } owner = { KYR = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = TAJ } } owner = { TAJ = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = KAZ } } owner = { KAZ = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = LAT } } owner = { LAT = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = LIT } } owner = { LIT = { country_event = 1512103 } } }
+		random_owned = { limit = { owner = { is_possible_vassal = EST } } owner = { EST = { country_event = 1512103 } } }
+		
 		ai_chance = { factor = 1 }
 	}
 
@@ -2284,7 +2302,6 @@ country_event = {
 		}
 		
 		#### Territorial Matters ####
-		
 		random_owned = { limit = { owner = { is_possible_vassal = AZB } } owner = { release = AZB AZB = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
 		random_owned = { limit = { owner = { is_possible_vassal = UKR } } owner = { release = UKR UKR = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
 		random_owned = { limit = { owner = { is_possible_vassal = BYE } } owner = { release = BYE BYE = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
@@ -2301,6 +2318,42 @@ country_event = {
 		random_owned = { limit = { owner = { is_possible_vassal = LAT } } owner = { release = LAT LAT = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
 		random_owned = { limit = { owner = { is_possible_vassal = LIT } } owner = { release = LIT LIT = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
 		random_owned = { limit = { owner = { is_possible_vassal = EST } } owner = { release = EST EST = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		
+		#### If SSRs are already autonomous but not already semi-independent ####
+		random_owned = { limit = { owner = { is_our_vassal = AZB AZB = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = AZB AZB = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = UKR UKR = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = UKR UKR = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = BYE BYE = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = BYE BYE = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = GEO GEO = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = GEO GEO = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = ARM ARM = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = ARM ARM = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = TKR TKR = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = TKR TKR = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = MOL MOL = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = MOL MOL = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = UZB UZB = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = UZB UZB = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = KYR KYR = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = KYR KYR = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = TAJ TAJ = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = TAJ TAJ = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = KAZ KAZ = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = KAZ KAZ = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = MCK MCK = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = MCK MCK = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = NKO NKO = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = NKO NKO = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = LAT LAT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = LAT LAT = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = LIT LIT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = LIT LIT = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		random_owned = { limit = { owner = { is_our_vassal = EST EST = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = EST EST = { government = democracy country_event = 800054 ruling_party_ideology = socialist } } }
+		
+		#### If SSRs are already semi-independent ####
+		random_owned = { limit = { owner = { is_our_vassal = AZB AZB = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = AZB } }
+		random_owned = { limit = { owner = { is_our_vassal = UKR UKR = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = UKR } }
+		random_owned = { limit = { owner = { is_our_vassal = BYE BYE = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = BYE } }
+		random_owned = { limit = { owner = { is_our_vassal = GEO GEO = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = GEO } }
+		random_owned = { limit = { owner = { is_our_vassal = ARM ARM = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = ARM } }
+		random_owned = { limit = { owner = { is_our_vassal = TKR TKR = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = TKR } }
+		random_owned = { limit = { owner = { is_our_vassal = MOL MOL = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = MOL } }
+		random_owned = { limit = { owner = { is_our_vassal = UZB UZB = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = UZB } }
+		random_owned = { limit = { owner = { is_our_vassal = KYR KYR = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = KYR } }
+		random_owned = { limit = { owner = { is_our_vassal = TAJ TAJ = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = TAJ } }
+		random_owned = { limit = { owner = { is_our_vassal = KAZ KAZ = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = KAZ } }
+		random_owned = { limit = { owner = { is_our_vassal = MCK MCK = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = MCK } }
+		random_owned = { limit = { owner = { is_our_vassal = NKO NKO = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = NKO } }
+		random_owned = { limit = { owner = { is_our_vassal = LAT LAT = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = LAT } }
+		random_owned = { limit = { owner = { is_our_vassal = LIT LIT = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = LIT } }
+		random_owned = { limit = { owner = { is_our_vassal = EST EST = { NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 } } } } owner = { release_vassal = EST } }
 		
 		#Moldovan situation
 		random_country = {
@@ -2363,7 +2416,9 @@ country_event = {
 			limit = { vassal_of = RUS } 
 			country_event = 1512136 
 		}
-
+		
+		#Soviet borders event
+		country_event = 14121799
 	}
 	
 }

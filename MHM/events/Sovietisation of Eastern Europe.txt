@@ -130,6 +130,7 @@ country_event = {
 	
 	trigger = {
 		NOT = { has_global_flag = autumn_of_nations }
+		NOT = { has_global_flag = august_coup }
 		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy government = mandate_government government = sar_government } }
 		overlord = { tag = RUS OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		is_vassal = yes
