@@ -6,7 +6,7 @@ political_decisions = {
 		WSA = { all_core = { owned_by = SPA } }
 		OR = {
 		tag = SPA
-		tag = IBE
+		tag = IBU
 		}
 		NOT = { has_country_flag = spanish_morocco }
 		MOR = { exists = yes is_vassal = no }
@@ -29,7 +29,7 @@ political_decisions = {
 	potential = {
 		OR = {
 		tag = SPA
-		tag = IBE
+		tag = IBU
 		}
 		NOT = { has_country_flag = spanish_cameroon }
 		EQG = { all_core = { owned_by = SPA } }
