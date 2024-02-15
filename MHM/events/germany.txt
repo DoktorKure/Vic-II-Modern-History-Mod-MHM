@@ -1125,5 +1125,6 @@ country_event = {
 		name = "What a joke."
 		badboy = -5
 		prestige = 25
+		ai_chance = { factor = 0.9 }
 		}
 	}
