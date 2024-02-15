@@ -464,6 +464,8 @@ political_decisions = {
 		set_country_flag = deutsch_ostafrika
 		badboy = 10
 		casus_belli = { target = TAN type = colonial_war months = 100 }
+		casus_belli = { target = BRN type = colonial_war months = 100 }
+		casus_belli = { target = RWA type = colonial_war months = 100 }
 		}
 	}
 	deutsch_sudwestafrika = {
@@ -483,4 +485,136 @@ political_decisions = {
 		casus_belli = { target = NAM type = colonial_war months = 100 }
 		}
 	}
+	expand_kamerun = {
+		picture = "renounce_african_assimilation"
+	potential = {
+		tag = GER
+		has_country_flag = german_africa
+		NOT = { has_country_flag = expand_kamerun }
+		OR = {
+		GAB = { exists = yes is_vassal = no }
+		ROC = { exists = yes is_vassal = no }
+		CAR = { exists = yes is_vassal = no }
+		CHA = { exists = yes is_vassal = no }
+			}
+		}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		CMR = { all_core = { owned_by = GER } }
+		CMR = { exists = yes vassal_of = GER in_sphere = GER }
+			}
+		}
+	effect = {
+		set_country_flag = expand_kamerun
+		badboy = 15
+		casus_belli = { target = GAB type = colonial_war months = 100 }
+		casus_belli = { target = ROC type = colonial_war months = 100 }
+		casus_belli = { target = CAR type = colonial_war months = 100 }
+		casus_belli = { target = CHA type = colonial_war months = 100 }
+		}
+	}
+	expand_ostrafrika = {
+		picture = "renounce_african_assimilation"
+	potential = {
+		tag = GER
+		has_country_flag = german_africa
+		NOT = { has_country_flag = expand_ostafrika }
+		OR = {
+		KEN = { exists = yes is_vassal = no }
+			}
+		}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		TAN = { all_core = { owned_by = GER } }
+		TAN = { exists = yes vassal_of = GER in_sphere = GER }
+			}
+		}
+	effect = {
+		set_country_flag = expand_ostafrika
+		badboy = 10
+		casus_belli = { target = KEN type = colonial_war months = 100 }
+		casus_belli = { target = UGA type = colonial_war months = 100 }
+		}
+	}
+	unite_mittelafrika = {
+		picture = "renounce_african_assimilation"
+	potential = {
+		tag = GER
+		has_country_flag = german_africa
+		NOT = { has_country_flag = unite_mittelafrika }
+		OR = {
+		CNG = { exists = yes is_vassal = no }
+			}
+		}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		KEN = { all_core = { owned_by = GER } }
+		KEN = { exists = yes vassal_of = GER in_sphere = GER }
+			}
+		OR = {
+		ROC = { all_core = { owned_by = GER } }
+		ROC = { exists = yes vassal_of = GER in_sphere = GER }
+			}
+		OR = {
+		CAR = { all_core = { owned_by = GER } }
+		CAR = { exists = yes vassal_of = GER in_sphere = GER }
+			}
+		OR = {
+		GAB = { all_core = { owned_by = GER } }
+		GAB = { exists = yes vassal_of = GER in_sphere = GER }
+			}
+		}
+	effect = {
+		set_country_flag = expand_ostafrika
+		badboy = 20
+		casus_belli = { target = CNG type = colonial_war months = 100 }
+		casus_belli = { target = KAT type = colonial_war months = 100 }
+		casus_belli = { target = ITU type = colonial_war months = 100 }
+		casus_belli = { target = GAB type = colonial_war months = 100 }
+		}
+	}
+	mittelafrika_nigeria_proposal = {
+		picture = "renounce_african_assimilation"
+	potential = {
+		tag = GER
+		has_country_flag = german_africa
+		NOT = { has_country_flag = mittelafrika_nigeria_proposal }
+		OR = {
+		NGE = { exists = yes is_vassal = no }
+		NNG = { exists = yes is_vassal = no }
+			}
+		}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		ROC = { all_core = { owned_by = GER } }
+		ROC = { exists = yes vassal_of = GER in_sphere = GER }
+			}
+		OR = {
+		CAR = { all_core = { owned_by = GER } }
+		CAR = { exists = yes vassal_of = GER in_sphere = GER }
+			}
+		OR = {
+		CHA = { all_core = { owned_by = GER } }
+		CHA = { exists = yes vassal_of = GER in_sphere = GER }
+			}
+		}
+	effect = {
+		set_country_flag = expand_ostafrika
+		badboy = 40
+		casus_belli = { target = NGE type = colonial_war months = 100 }
+		casus_belli = { target = NNG type = colonial_war months = 100 }
+		casus_belli = { target = BIF type = colonial_war months = 100 }
+		casus_belli = { target = ABZ type = colonial_war months = 100 }
+		casus_belli = { target = YOR type = colonial_war months = 100 }
+		casus_belli = { target = BEN type = colonial_war months = 100 }
+		casus_belli = { target = TOG type = colonial_war months = 100 }
+		casus_belli = { target = NIG type = colonial_war months = 100 }
+		casus_belli = { target = GHA type = colonial_war months = 100 }
+		}
+	}
+
 }
