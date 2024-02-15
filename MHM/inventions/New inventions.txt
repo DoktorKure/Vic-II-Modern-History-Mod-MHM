@@ -51,7 +51,7 @@ dependency_theory = {
 	effect = {
 		rebel_org_gain = {
 			faction = communist_rebels
-			value = 0.05
+			value = 0.10
 		}
 		influence = 0.05
 		#core_pop_consciousness_modifier = 0.01
@@ -418,11 +418,11 @@ dark_enlightenment = {
 		political_reform_desire = -0.02
 		rebel_org_gain = {
 			faction = populist_rebels
-			value = 0.05
+			value = 0.10
 		}
 		rebel_org_gain = {
 			faction = reactionary_rebels
-			value = 0.05
+			value = 0.10
 		}
 	}
 }
@@ -592,7 +592,7 @@ new_left = {
 		social_reform_desire = 0.01
 		rebel_org_gain = {
 			faction = communist_rebels
-			value = 0.05
+			value = 0.10
 		}
 	}
 }

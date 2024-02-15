@@ -1148,6 +1148,16 @@ country_event = {
 			militancy = -8
 			consciousness = -4
 		}
+
+		#liberal agitation if majority is liberal/progressive
+		random_owned = { 
+			limit = { 
+				owner = { OR = { pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+			}
+			owner = {
+				add_country_modifier = { name = revolution_chaos duration = 3650 }
+			}
+		}
 		
 		#Socialist Dictatorship
 		random_owned = { 
@@ -1164,11 +1174,35 @@ country_event = {
 		#Conservative Dictatorship
 		random_owned = { 
 			limit = { 
-				owner = { OR = { pop_majority_ideology = traditionalist pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+				owner = { OR = { pop_majority_ideology = conservative pop_majority_ideology = big_tent pop_majority_ideology = liberal pop_majority_ideology = progressive } }
 			}
 			owner = {
 				government = presidential_dictatorship
 				ruling_party_ideology = conservative
+				country_event = 800050
+			}
+		}
+
+		#Reactionary Dictatorship
+		random_owned = { 
+			limit = { 
+				owner = { OR = { pop_majority_ideology = traditionalist } }
+			}
+			owner = {
+				government = presidential_dictatorship
+				ruling_party_ideology = traditionalist
+				country_event = 800050
+			}
+		}
+
+		#Centrist Dictatorship
+		random_owned = { 
+			limit = { 
+				owner = { OR = { pop_majority_ideology = big_tent pop_majority_ideology = liberal pop_majority_ideology = progressive } }
+			}
+			owner = {
+				government = presidential_dictatorship
+				ruling_party_ideology = big_tent
 				country_event = 800050
 			}
 		}

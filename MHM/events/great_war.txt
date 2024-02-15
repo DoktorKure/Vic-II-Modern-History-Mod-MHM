@@ -578,6 +578,9 @@ country_event = {
 		remove_country_modifier = great_war2
 		remove_country_modifier = great_war3
 		war_exhaustion = 40
+		
+		#Dismantling a GP causes the world economy to go to shit
+		country_event = { id = 22510 days = 21 }
 
 		#if over the badboy limit, reduce infamy to 20, otherwise reduce infamy by 10
 		random_owned = {

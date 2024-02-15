@@ -15,8 +15,26 @@ country_event = {
 		
 		clr_country_flag = lost_colonial_war
 		
+		#Special cases
+		random_owned = {
+			limit = { owner = { tag = DAI overlord = { tag = FRA is_our_vassal = CAM is_our_vassal = LUA } } }
+			owner = { overlord = { country_event = 1412035 } }
+		}
+		random_owned = {
+			limit = { owner = { tag = IDO vassal_of = NET } }
+			owner = { overlord = { country_event = 1412247 } }
+		}
+		
 		#Choice for the colonial power to annex or create a vassal
-		overlord = { country_event = 1610139 }
+		random_owned = {
+			limit = {
+				owner = {
+					NOT = { AND = { tag = DAI overlord = { tag = FRA } } }
+					NOT = { AND = { tag = IDO overlord = { tag = NET } } }
+				}
+			}
+			owner = { overlord = { country_event = 1610139 } }
+		}
 	}
 
 }

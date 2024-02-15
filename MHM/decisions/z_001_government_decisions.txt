@@ -5358,7 +5358,10 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_civil_decisions }
 			NOT = { has_country_modifier = contraception_decay }
-			NOT = { has_country_flag = demographic_transition_stage_6_flag } #Not stable population after demographic crunch
+			OR = {  #Not stable population after demographic crunch unless a nuclear war happened and nations need to repopuplate
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+				has_global_flag = nuclear_war
+			}
 		}
 
 		allow = {

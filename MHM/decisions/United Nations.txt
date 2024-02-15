@@ -368,7 +368,17 @@ political_decisions = {
 			OR = {
 				NOT = { has_global_flag = blocsenabled }
 				RUS = { OR = { exists = no AND = { is_greater_power = no is_secondary_power = no } } }
-				CHI = { OR = { exists = no AND = { is_greater_power = no is_secondary_power = no } } }
+				CHI = {
+					OR = {
+						exists = no
+						AND = { has_country_modifier = unsc_permanent_member is_greater_power = no is_secondary_power = no }
+						#Annexed Taiwan but doesn't have UNSC member
+						AND = {
+							KMT = { exists = no }
+							NOT = { has_country_modifier = unsc_permanent_member }
+						}
+					}
+				}
 				FRA = { OR = { exists = no AND = { is_greater_power = no is_secondary_power = no } } }
 				ENG = { OR = { exists = no AND = { is_greater_power = no is_secondary_power = no } } }
 				USA = { OR = { exists = no AND = { is_greater_power = no is_secondary_power = no } } }
@@ -473,6 +483,7 @@ political_decisions = {
 			prestige = 2500
 			add_country_modifier = { name = unsc_permanent_member duration = -1 }
 			set_country_flag = new_unsc_permanent_member
+			country_event = 1512261
 		}
 		ai_will_do = { 
 			factor = 1 

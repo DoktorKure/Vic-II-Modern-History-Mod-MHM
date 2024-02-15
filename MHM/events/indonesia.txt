@@ -986,17 +986,7 @@ country_event = {
 	title = "Question of the Dutch East Indies"
 	desc = EVTDESC1412247
 	picture = "dutcheast_indies"
-
-	fire_only_once = yes
-
-	trigger = {
-		tag = NET
-		war = no
-		is_vassal = no
-		any_owned_province = { is_core = IDO }
-		OR = { is_our_vassal = IDO IDO = { exists = no } }
-		NOT = { year = 1990 }
-	}
+	is_triggered_only = yes
 
 	option = {
 		name = "Reform the Dutch East Indies"

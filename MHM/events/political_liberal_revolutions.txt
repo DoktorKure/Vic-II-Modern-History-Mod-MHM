@@ -160,6 +160,34 @@ country_event = {
 			liberal = 15
 		}
 		modifier = {
+			factor = 0.8
+			liberal = 20
+		}
+		modifier = {
+			factor = 0.8
+			liberal = 25
+		}
+		modifier = {
+			factor = 0.7
+			liberal = 30
+		}
+		modifier = {
+			factor = 0.6
+			liberal = 35
+		}
+		modifier = {
+			factor = 0.5
+			liberal = 40
+		}
+		modifier = {
+			factor = 0.25
+			liberal = 45
+		}
+		modifier = {
+			factor = 0.1
+			liberal = 50
+		}
+		modifier = {
 			factor = 0.9
 			average_consciousness = 4
 		}
@@ -213,15 +241,7 @@ country_event = {
 		}
 		modifier = {
 			factor = 1.1
-			prestige = 40
-		}
-		modifier = {
-			factor = 1.1
-			prestige = 50
-		}
-		modifier = {
-			factor = 1.1
-			not = { political_reform_want = 0.05 }
+			NOT = { political_reform_want = 0.05 }
 		}
 	}
 	option = {

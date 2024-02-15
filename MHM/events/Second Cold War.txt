@@ -18,6 +18,7 @@ country_event = {
 					has_country_modifier = un_king2 
 					has_country_modifier = superpower
 				}
+				OR = { rank = 1 rank = 2 }
 				has_country_flag = democratic_state
 				any_greater_power = {
 					AND = {
@@ -27,6 +28,7 @@ country_event = {
 							has_country_modifier = superpower
 						}
 						has_country_flag = authoritarian_state
+						OR = { rank = 1 rank = 2 }
 					}
 					NOT = { relation = { who = THIS value = 0 } }
 				}
@@ -37,6 +39,7 @@ country_event = {
 					has_country_modifier = un_king2 
 					has_country_modifier = superpower
 				}
+				OR = { rank = 1 rank = 2 }
 				has_country_flag = authoritarian_state
 				any_greater_power = {
 					AND = {
@@ -46,6 +49,7 @@ country_event = {
 							has_country_modifier = superpower
 						}
 						has_country_flag = democratic_state
+						OR = { rank = 1 rank = 2 }
 					}
 					NOT = { relation = { who = THIS value = 0 } }
 				}
