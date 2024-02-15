@@ -1,0 +1,53 @@
+political_decisions = {
+		spanish_morocco = {
+		picture = "claim_greater_morocco"
+	potential = {
+		1686 = { owned_by = SPA }
+		WSA = { all_core = { owned_by = SPA } }
+		OR = {
+		tag = SPA
+		tag = IBE
+		}
+		NOT = { has_country_flag = spanish_morocco }
+		MOR = { exists = yes is_vassal = no }
+		}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		ruling_party_ideology = nationalist
+		ruling_party_ideology = traditionalist
+		}
+		}
+	effect = {
+		set_country_flag = spanish_morocco
+		badboy = 10
+		casus_belli = { target = MOR type = colonial_war months = 100 }
+		}
+	}
+		spanish_cameroon = {
+		picture = "claim_greater_morocco"
+	potential = {
+		OR = {
+		tag = SPA
+		tag = IBE
+		}
+		NOT = { has_country_flag = spanish_cameroon }
+		EQG = { all_core = { owned_by = SPA } }
+		CMR = { exists = yes is_vassal = no }
+			}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		ruling_party_ideology = nationalist
+		ruling_party_ideology = traditionalist
+			}
+		}
+	effect = {
+		set_country_flag = spanish_cameroon
+		badboy = 10
+		casus_belli = { target = CMR type = colonial_war months = 100 }
+		casus_belli = { target = GAB type = colonial_war months = 100 }
+		casus_belli = { target = ROC type = colonial_war months = 100 }				
+		}
+	}
+}
