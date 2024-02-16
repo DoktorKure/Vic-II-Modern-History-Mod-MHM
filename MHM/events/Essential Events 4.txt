@@ -9311,7 +9311,7 @@ country_event = {
 	option = {
 		name = "Accept the mandate"
 		prestige = 100
-		money = -500000
+		money = -100000
 		
 		#Initialise mandate
 		create_vassal = FROM
@@ -9319,7 +9319,7 @@ country_event = {
 			government = mandate_government 
 			country_event = 800054 
 		
-			money = 500000 
+			money = 100000
 			add_country_modifier = { name = tax_boost_modifier duration = 3650 } 
 			add_country_modifier = { name = economic_boom duration = 3650 } 
 			

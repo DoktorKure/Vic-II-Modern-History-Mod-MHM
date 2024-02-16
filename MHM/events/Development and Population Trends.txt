@@ -120,11 +120,6 @@ country_event = {
 				year = 1980
 				capital_scope = { continent = africa }
 			}
-			AND = {
-				#Low development
-				literacy = 0.20
-				NOT = { literacy = 0.30 }
-			}
 		}
 		war = no
 	}
@@ -176,11 +171,6 @@ country_event = {
 			AND = {
 				year = 2000
 				capital_scope = { continent = africa }
-			}
-			AND = {
-				#Medium development
-				literacy = 0.30
-				NOT = { literacy = 0.40 }
 			}
 		}
 	}

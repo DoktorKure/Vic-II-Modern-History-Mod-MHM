@@ -148,12 +148,12 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					NOT = { exists = SRL }
+					NOT = { exists = SNG }
 				}
 			}
 			owner = {
-				release_vassal = SRL
-				SRL = {
+				release_vassal = SNG
+				SNG = {
 					government = colonial_government
 					country_event = 800054
 					ruling_party_ideology = nationalist

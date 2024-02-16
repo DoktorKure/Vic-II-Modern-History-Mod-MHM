@@ -1164,7 +1164,7 @@ country_event = {
 		ruling_party_ideology = communist_social
 		clr_country_flag = economic_malaise
 		set_country_flag = industrious_nation
-		add_country_modifier = { name = economic_boom duration = 3650 }
+		add_country_modifier = { name = yugoslaveia_economic_boom duration = 3650 }
 		
 		#General Amnesty
 		any_pop = { 
@@ -1740,6 +1740,8 @@ country_event = {
 		add_country_modifier = { name = united_nations_ga_member duration = -1 }
 		add_country_modifier = { name = unsc_permanent_member duration = -1 } 
 		
+		country_event = 1512261
+		
 		KMT = { 
 			set_country_flag = not_participating_UNSC 
 			set_country_flag = not_participating_UN 
@@ -1798,7 +1800,7 @@ country_event = {
 	option = {
 		name = "We are great again!"
 		prestige = 500
-		
+		country_event = 1512261
 		add_country_modifier = { name = unsc_permanent_member duration = -1 }
 		
 		clr_country_flag = not_participating_UNSC

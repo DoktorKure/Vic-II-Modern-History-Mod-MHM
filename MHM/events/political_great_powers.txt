@@ -95,7 +95,7 @@ country_event = { # Country is sphered change government
 				government = hms_government1
 				
 				#This is here because historically the US sphered a lot of authoritarian republics or otherwise installed them by coup
-				government = presidential_dictatorship
+				AND = { government = presidential_dictatorship has_global_flag = blocsenabled }
 			}
 		}
 	}
@@ -103,60 +103,17 @@ country_event = { # Country is sphered change government
 	mean_time_to_happen = {
 		months = 12
 		modifier = {
-			factor = 0.9
+			factor = 0.8
 			sphere_owner = {
 				NOT = { rank = 2 }
 				has_country_modifier = sphere_interference
 			}
 		}
 		modifier = {
-			factor = 0.8
-			AND = { 
-				sphere_owner = { OR = { rank = 1 rank = 2 } }
-				NOT = { has_global_flag = blocsenabled }
-			}
-		}
-		modifier = {
 			factor = 0.7
 			sphere_owner = {
-				NOT = { rank = 2 }
-				has_country_modifier = spy_medium_gp
-			}
-		}
-		modifier = {
-			factor = 0.6
-			AND = {
-				sphere_owner = {
-					OR = { rank = 1 rank = 2 }
-					has_country_modifier = spy_medium_gp
-				}
-			}
-		}
-		modifier = {
-			factor = 0.6
-			AND = {
-				sphere_owner = {
-					OR = { rank = 1 rank = 2 }
-					has_country_modifier = sphere_interference
-				}
-				NOT = { has_global_flag = blocsenabled }
-			}
-		}
-		modifier = {
-			factor = 0.6
-			AND = { 
-				sphere_owner = { OR = { rank = 1 rank = 2 } }
-				has_global_flag = blocsenabled
-			}
-		}
-		modifier = {
-			factor = 0.4
-			AND = {
-				sphere_owner = {
-					OR = { rank = 1 rank = 2 }
-					has_country_modifier = sphere_interference
-				}
-				has_global_flag = blocsenabled
+				OR = { rank = 1 rank = 2 }
+				has_country_modifier = sphere_interference
 			}
 		}
 	}
@@ -220,44 +177,17 @@ country_event = {
 	mean_time_to_happen = {
 		months = 12
 		modifier = {
-			factor = 0.9
+			factor = 0.8
 			sphere_owner = {
 				NOT = { rank = 2 }
 				has_country_modifier = sphere_interference
 			}
 		}
 		modifier = {
-			factor = 0.8
-			AND = { 
-				sphere_owner = { OR = { rank = 1 rank = 2 } }
-				NOT = { has_global_flag = blocsenabled }
-			}
-		}
-		modifier = {
-			factor = 0.6
-			AND = {
-				sphere_owner = {
-					OR = { rank = 1 rank = 2 }
-					has_country_modifier = sphere_interference
-				}
-				NOT = { has_global_flag = blocsenabled }
-			}
-		}
-		modifier = {
-			factor = 0.6
-			AND = { 
-				sphere_owner = { OR = { rank = 1 rank = 2 } }
-				has_global_flag = blocsenabled
-			}
-		}
-		modifier = {
-			factor = 0.4
-			AND = {
-				sphere_owner = {
-					OR = { rank = 1 rank = 2 }
-					has_country_modifier = sphere_interference
-				}
-				has_global_flag = blocsenabled
+			factor = 0.7
+			sphere_owner = {
+				OR = { rank = 1 rank = 2 }
+				has_country_modifier = sphere_interference
 			}
 		}
 	}
@@ -333,44 +263,17 @@ country_event = {
 	mean_time_to_happen = {
 		months = 12
 		modifier = {
-			factor = 0.9
+			factor = 0.8
 			sphere_owner = {
 				NOT = { rank = 2 }
 				has_country_modifier = sphere_interference
 			}
 		}
 		modifier = {
-			factor = 0.8
-			AND = { 
-				sphere_owner = { OR = { rank = 1 rank = 2 } }
-				NOT = { has_global_flag = blocsenabled }
-			}
-		}
-		modifier = {
-			factor = 0.6
-			AND = {
-				sphere_owner = {
-					OR = { rank = 1 rank = 2 }
-					has_country_modifier = sphere_interference
-				}
-				NOT = { has_global_flag = blocsenabled }
-			}
-		}
-		modifier = {
-			factor = 0.6
-			AND = { 
-				sphere_owner = { OR = { rank = 1 rank = 2 } }
-				has_global_flag = blocsenabled
-			}
-		}
-		modifier = {
-			factor = 0.4
-			AND = {
-				sphere_owner = {
-					OR = { rank = 1 rank = 2 }
-					has_country_modifier = sphere_interference
-				}
-				has_global_flag = blocsenabled
+			factor = 0.7
+			sphere_owner = {
+				OR = { rank = 1 rank = 2 }
+				has_country_modifier = sphere_interference
 			}
 		}
 	}
@@ -701,10 +604,35 @@ country_event = { # Demand install presidential dictatorship
 
 	option = {
 		name = EVT_19006_A
-		sphere_owner = { 
-		diplomatic_influence = { who = THIS value = -100 } 
-			relation = { who = THIS value = -200 } 
-			casus_belli = { target = THIS type = install_authoritarian_regime months = 12  }
+		random_owned = {
+			limit = { owner = { sphere_owner = { government = theocracy } } }
+			owner = {
+				sphere_owner = { 
+					diplomatic_influence = { who = THIS value = -100 } 
+					relation = { who = THIS value = -200 } 
+					casus_belli = { target = THIS type = install_authoritarian_regime months = 12  }
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { sphere_owner = { government = absolute_monarchy } } }
+			owner = {
+				sphere_owner = { 
+					diplomatic_influence = { who = THIS value = -100 } 
+					relation = { who = THIS value = -200 } 
+					casus_belli = { target = THIS type = install_absolute_monarchy months = 12  }
+				}
+			}
+		}
+		random_owned = {
+			limit = { owner = { sphere_owner = { NOT = { government = theocracy government = absolute_monarchy } } } }
+			owner = {
+				sphere_owner = { 
+					diplomatic_influence = { who = THIS value = -100 } 
+					relation = { who = THIS value = -200 } 
+					casus_belli = { target = THIS type = install_authoritarian_regime months = 12  }
+				}
+			}
 		}
 		
 		#40% chance of a coup instigated by sphere owner succeeding in installing a friendly gov type anyway

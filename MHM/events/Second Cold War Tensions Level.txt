@@ -29,10 +29,9 @@ country_event = {
 		has_global_flag =  blocsenabled2
 	}
 	
-	immediate = { set_global_flag = cold_war_hot }
-	
 	option = {
 		name = "May we find peace before obliteration!"
+		set_global_flag = cold_war_hot
 		remove_country_modifier = cold_war_medium
 		remove_country_modifier = cold_war_low
 		remove_country_modifier = cold_war_high
@@ -82,20 +81,19 @@ country_event = {
 	major = yes
 	
 	trigger = {
-		is_greater_power = yes
-		NOT = {
+		OR = {
 			AND = {
 				has_country_modifier = democratic_bloc_leader
 				any_greater_power = {
 					has_country_modifier = authoritarian_bloc_leader
-					war_with = THIS
+					NOT = { war_with = THIS }
 				}
 			}
 			AND = {
 				has_country_modifier = authoritarian_bloc_leader
 				any_greater_power = {
 					has_country_modifier = democratic_bloc_leader
-					war_with = THIS
+					NOT = { war_with = THIS }
 				}
 			}
 		}

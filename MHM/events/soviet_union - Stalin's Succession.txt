@@ -378,7 +378,7 @@ country_event = {
 		random_owned = {
 			limit = {
 				owner = {
-					FROM = { government = socialist_democracy }
+					FROM = { government = socialist_democracy NOT = { has_country_flag = august_coup_fired } }
 				}
 			}
 			owner = {
@@ -393,6 +393,7 @@ country_event = {
 					FROM = {
 						OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 						ruling_party_ideology = communist
+						NOT = { has_country_flag = august_coup_fired }
 					}
 				}
 			}
@@ -409,7 +410,42 @@ country_event = {
 					FROM = {
 						OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 						ruling_party_ideology = communist_social
+						NOT = { has_country_flag = august_coup_fired }
 					}
+				}
+			}
+			owner = {
+				government = proletarian_dictatorship1
+				ruling_party_ideology = communist_social
+				country_event = 800052
+			}
+		}
+		
+		#post-August Coup for certain SSRs
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						has_country_flag = august_coup_fired
+					}
+					OR = { tag = EST tag = LAT tag = LIT tag = UKR tag = ARM tag = GEO tag = AZB tag = MOL }
+				}
+			}
+			owner = {
+				government = democracy
+				country_event = 800054
+				ruling_party_ideology = liberal
+			}
+		}
+		
+		#post-August Coup for the rest
+		random_owned = {
+			limit = {
+				owner = {
+					FROM = {
+						has_country_flag = august_coup_fired
+					}
+					NOT = { OR = { tag = EST tag = LAT tag = LIT tag = UKR tag = ARM tag = GEO tag = AZB tag = MOL } }
 				}
 			}
 			owner = {

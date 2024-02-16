@@ -742,7 +742,6 @@ country_event = {
 
 	trigger = {
 		tag = KMT
-		NOT = { has_global_flag = 1950_start_date_flag }
 		NOT = { year = 1990 }
 		
 		CHI = { exists = no }

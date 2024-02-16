@@ -120,7 +120,8 @@ country_event = {
 					secede_province = HND 
 				}
 			}
-		} 
+		}
+		HND = { add_accepted_culture = sinhala }
 		ai_chance = { factor = 0.1 }
 	}
 

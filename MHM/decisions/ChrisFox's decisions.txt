@@ -62,6 +62,7 @@ political_decisions = {
 			
 			NOT = { has_global_flag = belarus_neo_soviet_decision_fired }
 			NOT = { has_country_flag = lavrentiy_beria }
+			NOT = { has_country_modifier = revolution_chaos }
 		}
 		
 		allow = { 

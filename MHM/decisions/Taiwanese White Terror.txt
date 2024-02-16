@@ -22,8 +22,11 @@ political_decisions = {
 			clr_country_flag = agarian_economy
 			
 			any_pop = { 
-				limit = { is_primary_culture = yes } 
-				literacy = 0.10
+				limit = { is_primary_culture = yes is_accepted_culture = yes } 
+				literacy = 1.00
+			}
+			any_owned = {
+				any_pop = { limit = { type = bureaucrats } reduce_pop = 10 }
 			}
 
 			any_owned = { 
