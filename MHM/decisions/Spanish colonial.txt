@@ -3,7 +3,7 @@ political_decisions = {
 		picture = "claim_greater_morocco"
 	potential = {
 		1686 = { owned_by = SPA }
-		WSA = { all_core = { OR = { owned_by = SPA owned_by = IBE } } }
+		WSA = { all_core = { OR = { owned_by = SPA owned_by = IBU } } }
 		OR = {
 		tag = SPA
 		tag = IBU
@@ -32,7 +32,7 @@ political_decisions = {
 		tag = IBU
 		}
 		NOT = { has_country_flag = spanish_cameroon }
-		EQG = { all_core = { OR = { owned_by = SPA owned_by = IBE } } }
+		EQG = { all_core = { OR = { owned_by = SPA owned_by = IBU } } }
 		CMR = { exists = yes is_vassal = no }
 			}
 	allow = {

@@ -2,11 +2,11 @@ political_decisions = {
 		portuguese_rose_map = {
 		picture = "claim_greater_morocco"
 	potential = {
-		MOZ = { all_core = { OR = { owned_by = POR owned_by = IBE } } }
-		ANG = { all_core = { OR = { owned_by = POR owned_by = IBE } } }
+		MOZ = { all_core = { OR = { owned_by = POR owned_by = IBU } } }
+		ANG = { all_core = { OR = { owned_by = POR owned_by = IBU } } }
 		OR = {
 		tag = POR
-		tag = IBE
+		tag = IBU
 		}
 		NOT = { has_country_flag = portuguese_rose_map }
 		OR = {
