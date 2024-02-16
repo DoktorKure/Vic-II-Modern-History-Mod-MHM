@@ -25,7 +25,7 @@ political_decisions = {
 		set_country_flag = portuguese_rose_map
 		badboy = 10
 		casus_belli = { target = RHO type = colonial_war months = 100 }
-		casus_belli = { target = MLO type = colonial_war months = 100 }
+		casus_belli = { target = MLW type = colonial_war months = 100 }
 		}
 	}
 }
