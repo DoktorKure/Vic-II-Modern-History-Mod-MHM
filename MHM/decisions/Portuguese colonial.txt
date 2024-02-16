@@ -1,0 +1,31 @@
+political_decisions = {
+		portuguese_rose_map = {
+		picture = "claim_greater_morocco"
+	potential = {
+		MOZ = { all_core = { OR = { owned_by = POR owned_by = IBE } } }
+		ANG = { all_core = { OR = { owned_by = POR owned_by = IBE } } }
+		OR = {
+		tag = POR
+		tag = IBE
+		}
+		NOT = { has_country_flag = portuguese_rose_map }
+		OR = {
+		RHO = { exists = yes is_vassal = no }
+		ZIM = { exists = yes is_vassal = no }
+		}
+		}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		ruling_party_ideology = nationalist
+		ruling_party_ideology = traditionalist
+		}
+		}
+	effect = {
+		set_country_flag = portuguese_rose_map
+		badboy = 10
+		casus_belli = { target = RHO type = colonial_war months = 100 }
+		casus_belli = { target = MLO type = colonial_war months = 100 }
+		}
+	}
+}
