@@ -109,7 +109,7 @@ political_decisions = {
 			}
 		OR = {
 			LBY = { all_core = { owned_by = ITA } }
-			LBY = { exists_yes vassal_of = ITA in_sphere = ITA }
+			LBY = { exists = yes vassal_of = ITA in_sphere = ITA }
 			}
 		}
 	allow = {
