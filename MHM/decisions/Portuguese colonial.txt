@@ -2,8 +2,8 @@ political_decisions = {
 		portuguese_rose_map = {
 		picture = "claim_greater_morocco"
 	potential = {
-		MOZ = { all_core = { OR = { owned_by = POR owned_by = IBU } } }
-		ANG = { all_core = { OR = { owned_by = POR owned_by = IBU } } }
+		MOZ = { all_core = { owned_by = THIS } }
+		ANG = { all_core = { owned_by = THIS } }
 		OR = {
 		tag = POR
 		tag = IBU
