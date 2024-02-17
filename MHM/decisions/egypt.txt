@@ -72,5 +72,43 @@ political_decisions = {
 		}
 		ai_will_do = { factor = 1 }	
 	}
+	claim_the_levant = {
+		picture = "levantine_federation"
+		potential = {
+			tag = EGY
+			ENG = { is_vassal = no }
+			NOT = { has_country_flag = claim_the_levant }
+			OR = { government = absolute_monarchy government = hms_government }
+		}
+
+		allow = {
+ 		    election = no
+			is_vassal = no
+			war = no
+
+			OR = {
+				ruling_party_ideology = traditionalist
+				ruling_party_ideology = populist
+				ruling_party_ideology = conservative
+				ruling_party_ideology = liberal
+			}
+			jingoism = 24
+
+		}
+
+		effect = {
+			prestige = 50
+			badboy = 15
+			IRQ = { all_core = { add_core = THIS } }
+			SYR = { all_core = { add_core = THIS } }
+			ISR = { all_core = { add_core = THIS } }
+			PAL = { all_core = { add_core = THIS } }
+			JOR = { all_core = { add_core = THIS } }
+			LEB = { all_core = { add_core = THIS } }
+			set_country_flag = claim_the_levant
+			add_accepted_culture = arab_mashriqi
+		}
+		ai_will_do = { factor = 1 }	
+	}
 	
 }
