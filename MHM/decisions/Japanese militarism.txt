@@ -201,5 +201,36 @@ political_decisions = {
 			factor = 1 
 		}
 	}
+	claim_manchukuo_japan = {
+		picture = "align_china"
+		potential = {
+			tag = JAP
+			OR = { government = absolute_monarchy government = sectarian_dictatorship government = nationalist_dictatorship ruling_party_ideology = nationalist ruling_party_ideology = traditionalist }
+			is_vassal = no
+			has_country_flag = japan_ambitious
+			NOT = { has_country_flag = jap_manchukuo_claim }
+		}
+		allow = {
+			war = no
+			election = no
+			OR = { NOT = { badboy = 0.2 } ai = no }
+			KOR = { all_core = { owned_by = JAP } }
+		}
+		effect = {
+			badboy = 20
+
+			MCK = { all_core = { add_core = JAP } }
+
+			any_country = { 
+				limit = { OR = { tag = CHI tag = RUS tag = USA tag = KMT } } 
+				relation = { who = THIS value = -100 } 
+			}
+
+			set_country_flag = jap_manchukuo_claim
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
 
 }

@@ -592,3 +592,63 @@ country_event = {
 	}
 
 }
+country_event = {
+	id = 1281432
+	title = "The Rising Sun"
+	desc = "EVTDESC1281432"
+	picture = "great_purge"
+	mean_time_to_happen = { months = 1 }
+	fire_only_once = yes
+	trigger = {
+		tag = JAP 
+		OR = {
+		ruling_party_ideology = populist
+		ruling_party_ideology = nationalist
+		ruling_party_ideology = traditionalist
+		ruling_party_ideology = communist
+		}
+		}
+	option = {
+		name = "The Japanese Sun Shall Rise over Asia"
+		badboy = 5
+		set_country_flag = japan_ambitious
+		ai_chance = { factor = 0.9 }
+		}
+	option = {
+		name = "What a joke."
+		badboy = -5
+		prestige = 25
+		ai_chance = { factor = 0.1 }
+		}
+	}
+	country_event = {
+		id = 1281433
+		title = "The Fate of Manchukuo"
+		desc = "EVTDESC1281433"
+		picture = "japan_reparations"
+		mean_time_to_happen = { months = 1 }
+		fire_only_once = yes
+		trigger = {
+			tag = JAP
+			MCK = { all_core = { owned_by = JAP } }
+			}
+		option = {
+			name = "Turn this territory into a proper colony"
+			release_vassal = MCK
+			MCK = { all_core = { remove_core = JAP } civilized = no }
+			inherit = MCK
+			}
+		option = {
+			name = "Restore the Manchukuo Administration"
+			badboy = -5
+			release_vassal = MCK
+			MCK = { government = colonial_government remove_accepted_culture = han }
+			}
+		option = {
+			name = "Restore the Qing! (Play as Manchukuo)"
+			badboy = -5
+			release_vassal = MCK
+			MCK = { government = absolute_monarchy remove_accepted_culture = chinese }
+			change_tag_no_core_switch = MCK
+			}
+		}
