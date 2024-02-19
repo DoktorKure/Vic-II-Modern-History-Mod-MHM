@@ -602,7 +602,7 @@ country_event = {
 	trigger = {
 		tag = JAP 
 		OR = {
-		ruling_party_ideology = populist
+		AND = { has_country_flag = authoritarian_state ruling_party_ideology = populist }
 		ruling_party_ideology = nationalist
 		ruling_party_ideology = traditionalist
 		ruling_party_ideology = communist
@@ -644,7 +644,7 @@ country_event = {
 			badboy = -5
 			release_vassal = MCK
 			set_country_flag = japanese_manchuria
-			MCK = { government = colonial_government remove_accepted_culture = han set_country_flag = manchukuo_restored }
+			MCK = { government = colonial_government remove_accepted_culture = chinese set_country_flag = manchukuo_restored }
 			}
 		option = {
 			name = "Restore the Qing! (Play as Manchukuo)"
