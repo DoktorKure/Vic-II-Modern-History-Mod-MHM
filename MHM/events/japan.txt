@@ -642,7 +642,7 @@ country_event = {
 			name = "Restore the Manchukuo Administration"
 			badboy = -5
 			release_vassal = MCK
-			MCK = { government = colonial_government remove_accepted_culture = han }
+			MCK = { government = colonial_government remove_accepted_culture = chinese }
 			}
 		option = {
 			name = "Restore the Qing! (Play as Manchukuo)"
