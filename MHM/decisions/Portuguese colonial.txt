@@ -24,8 +24,12 @@ political_decisions = {
 	effect = {
 		set_country_flag = portuguese_rose_map
 		badboy = 10
+		#Added all the relevant tags just in case
 		casus_belli = { target = RHO type = colonial_war months = 100 }
+		casus_belli = { target = ZIM type = colonial_war months = 100 }
 		casus_belli = { target = MLW type = colonial_war months = 100 }
+		casus_belli = { target = ZAM type = colonial_war months = 100 }
+		casus_belli = { target = CAF type = colonial_war months = 100 }
 		}
 	}
 }
