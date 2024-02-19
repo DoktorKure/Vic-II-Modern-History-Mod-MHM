@@ -637,18 +637,58 @@ country_event = {
 			release_vassal = MCK
 			MCK = { all_core = { remove_core = JAP } civilized = no }
 			inherit = MCK
+			set_country_flag = japanese_manchuria
 			}
 		option = {
 			name = "Restore the Manchukuo Administration"
 			badboy = -5
 			release_vassal = MCK
-			MCK = { government = colonial_government remove_accepted_culture = han }
+			set_country_flag = japanese_manchuria
+			MCK = { government = colonial_government remove_accepted_culture = han set_country_flag = manchukuo_restored }
 			}
 		option = {
 			name = "Restore the Qing! (Play as Manchukuo)"
+			set_country_flag = japanese_manchuria
 			badboy = -5
 			release_vassal = MCK
-			MCK = { government = absolute_monarchy remove_accepted_culture = chinese }
+			MCK = { government = absolute_monarchy remove_accepted_culture = chinese set_country_flag = manchukuo_restored }
 			change_tag_no_core_switch = MCK
+			}
+		}
+	country_event = {
+		id = 1281434
+		title = "The Fate of Indochina"
+		desc = "EVTDESC1281433"
+		picture = "japan_reparations"
+		mean_time_to_happen = { months = 1 }
+		fire_only_once = yes
+		trigger = {
+			tag = JAP
+			LUA = { all_core = { owned_by = JAP } }
+			DAI = { all_core = { owned_by = JAP } }
+			CAM = { all_core = { owned_by = JAP } }
+			}
+		option = {
+			name = "Turn this territory into a proper colony"
+			release_vassal = LUA
+			LUA = { all_core = { remove_core = JAP add_core = ICU } civilized = no }
+			inherit = LUA
+			release_vassal = CAM
+			CAM = { all_core = { remove_core = JAP add_core = ICU } civilized = no }
+			inherit = CAM
+			release_vassal = DAI
+			DAI = { all_core = { remove_core = JAP  add_core = ICU } civilized = no }
+			inherit = DAI
+			set_country_flag = japanese_indochina
+			}
+		option = {
+			name = "Set up an Indochina Administration"
+			badboy = -5
+			LUA = { all_core = { remove_core = JAP add_core = ICU } }
+			CAM = { all_core = { remove_core = JAP add_core = ICU } }
+			DAI = { all_core = { remove_core = JAP add_core = ICU } }
+			release_vassal = ICU
+			set_country_flag = japanese_indochina
+			ICU = { government = colonial_government }
 			}
 		}

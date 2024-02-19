@@ -232,5 +232,82 @@ political_decisions = {
 			factor = 1 
 		}
 	}
+	claim_indochina = {
+		picture = "form_indochina"
+		potential = {
+			tag = JAP
+			OR = { government = absolute_monarchy government = sectarian_dictatorship government = nationalist_dictatorship ruling_party_ideology = nationalist ruling_party_ideology = traditionalist }
+			is_vassal = no
+			has_country_flag = japan_ambitious
+			NOT = { has_country_flag = jap_indochina_claim }
+		}
+			allow = {
+			war = no
+			election = no
+			OR = { NOT = { badboy = 0.2 } ai = no }
+			KOR = { all_core = { owned_by = JAP } }
+		}
+			effect = {
+			badboy = 20
+
+			SVI = { all_core = { add_core = JAP } }
+			DAI = { all_core = { add_core = JAP } }
+			CAM = { all_core = { add_core = JAP } }
+			LUA = { all_core = { add_core = JAP } }
+
+			any_country = { 
+				limit = { OR = { tag = CHI tag = RUS tag = USA tag = KMT tag = SVI tag = DAI tag = CAM tag = LUA } } 
+				relation = { who = THIS value = -100 } 
+			}
+
+			set_country_flag = jap_indochina_claim
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
+#Short Tangent for Independent Qing to Restore dynastic rule
+	restore_qing_china = {
+		potential = {
+			tag = MCK
+			OR = { government = absolute_monarchy government = hms_government government = hms_government1 }
+			is_vassal = no
+			has_country_flag = manchukuo_restored
+			NOT = { has_country_flag = qing_china_restored }
+		}
+		allow = {
+			war = no
+			owns = 1612
+		}
+		effect = {
+			prestige = 1500
+			add_accepted_culture = chinese
+			add_accepted_culture = chinese_cantonese
+			add_accepted_culture = chinese_macanese
+			add_accepted_culture = chinese_hokkien
+			add_accepted_culture = chinese_hakka
+			add_accepted_culture = bai
+			add_accepted_culture = dong
+			add_accepted_culture = hani
+			add_accepted_culture = miao
+			add_accepted_culture = min
+			add_accepted_culture = yi
+			add_accepted_culture = yue
+			add_accepted_culture = zhuang
+			CHI = { all_core = { add_core = MCK } }
+			KMT = { all_core = { add_core = MCK } }
+			MGL = { all_core = { add_core = MCK } }
+			TNT = { all_core = { add_core = MCK } }
+			any_country = { 
+				limit = { OR = { tag = CHI tag = RUS tag = USA tag = KMT tag = JAP } } 
+				relation = { who = THIS value = -100 } 
+			}
+
+			set_country_flag = qing_china_restored
+		}
+		ai_will_do = { 
+			factor = 1 
+		}
+	}
 
 }
