@@ -1549,3 +1549,21 @@ country_event = {
 		ai_chance = { factor = 0.9 }
 		}
 	}
+country_event = {
+	id = 8005032
+	title = "The Pax Britannia"
+	desc = "EVTDESC8005032"
+	picture = "nwo2_british_dominions"
+	mean_time_to_happen = { months = 1 }
+	fire_only_once = yes
+	trigger = {
+		tag = ENG
+		rank = 3
+		year = 1985
+		}
+	option = {
+		name = "The Sun Never Set!"
+		prestige = 1500
+		set_country_flag = pax_britannia
+		}
+	}
