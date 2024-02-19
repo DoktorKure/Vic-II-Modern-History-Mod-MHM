@@ -1476,3 +1476,76 @@ country_event = {
 	}
 
 }
+country_event = {
+	id = 8005031
+	title = "The Collapse of the Commonwealth"
+	desc = "EVTDESC8005031"
+	picture = "great_purge"
+	mean_time_to_happen = { months = 1 }
+	fire_only_once = yes
+	trigger = {
+		tag = ENG
+		OR = {
+		government = absolute_monarchy
+		government = proletarian_dictatorship 
+		government = proletarian_dictatorship1
+		government = nationalist_dictatorship
+		government = sectarian_dictatorship
+		}
+		}
+	option = {
+		name = "The Empire must be preserved!"
+		badboy = 25
+		prestige = -750
+		set_country_flag = reclaim_empire
+		release = CAN
+		relation = { who = CAN value = -200 }
+		diplomatic_influence = { who = CAN value = -200 }
+		release = WEC
+		relation = { who = WEC value = -200 }
+		diplomatic_influence = { who = WEC value = -200 }
+		release = AST
+		relation = { who = AST value = -100 }
+		diplomatic_influence = { who = AST value = -200 }
+		release = NZL
+		relation = { who = NZL value = -100 }
+		diplomatic_influence = { who = NZL value = -200 }
+		release = SAF
+		relation = { who = SAF value = -100 }
+		diplomatic_influence = { who = SAF value = -200 }
+		release = RSA
+		relation = { who = RSA value = -100 }
+		diplomatic_influence = { who = RSA value = -200 }
+		casus_belli = { target = CAN type = colonial_war months = 100 }
+		casus_belli = { target = WEC type = colonial_war months = 100 }
+		casus_belli = { target = AST type = colonial_war months = 100 }
+		casus_belli = { target = NZL type = colonial_war months = 100 }
+		casus_belli = { target = SAF type = colonial_war months = 100 }
+		casus_belli = { target = RSA type = colonial_war months = 100 }
+		ai_chance = { factor = 0.1 }
+		}
+	option = {
+		name = "They have been free for far longer than this."
+		badboy = -5
+		prestige = -500
+		release = CAN
+		relation = { who = CAN value = -200 }
+		diplomatic_influence = { who = CAN value = -200 }
+		release = WEC
+		relation = { who = WEC value = -200 }
+		diplomatic_influence = { who = WEC value = -200 }
+		release = AST
+		relation = { who = AST value = -100 }
+		diplomatic_influence = { who = AST value = -200 }
+		release = NZL
+		relation = { who = NZL value = -100 }
+		diplomatic_influence = { who = NZL value = -200 }
+		release = SAF
+		relation = { who = SAF value = -100 }
+		diplomatic_influence = { who = SAF value = -200 }
+		release = RSA
+		relation = { who = RSA value = -100 }
+		diplomatic_influence = { who = RSA value = -200 }
+		ai_chance = { factor = 0.9 }
+		}
+	}
