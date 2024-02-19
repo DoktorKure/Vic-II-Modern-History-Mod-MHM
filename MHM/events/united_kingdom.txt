@@ -1484,15 +1484,15 @@ country_event = {
 	mean_time_to_happen = { months = 1 }
 	fire_only_once = yes
 	trigger = {
-		tag = ENG
+		tag = IMP
 		OR = {
-		government = absolute_monarchy
-		government = proletarian_dictatorship 
-		government = proletarian_dictatorship1
-		government = nationalist_dictatorship
-		government = sectarian_dictatorship
+			government = absolute_monarchy
+			government = proletarian_dictatorship 
+			government = proletarian_dictatorship1
+			government = nationalist_dictatorship
+			government = sectarian_dictatorship
 		}
-		}
+	}
 	option = {
 		name = "The Empire must be preserved!"
 		badboy = 25
@@ -1501,9 +1501,6 @@ country_event = {
 		release = CAN
 		relation = { who = CAN value = -200 }
 		diplomatic_influence = { who = CAN value = -200 }
-		release = WEC
-		relation = { who = WEC value = -200 }
-		diplomatic_influence = { who = WEC value = -200 }
 		release = AST
 		relation = { who = AST value = -100 }
 		diplomatic_influence = { who = AST value = -200 }
@@ -1513,27 +1510,23 @@ country_event = {
 		release = SAF
 		relation = { who = SAF value = -100 }
 		diplomatic_influence = { who = SAF value = -200 }
-		release = RSA
-		relation = { who = RSA value = -100 }
-		diplomatic_influence = { who = RSA value = -200 }
+		#blacks will attempt to overthrow the government in South Africa
+		SAF = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
 		casus_belli = { target = CAN type = colonial_war months = 100 }
-		casus_belli = { target = WEC type = colonial_war months = 100 }
 		casus_belli = { target = AST type = colonial_war months = 100 }
 		casus_belli = { target = NZL type = colonial_war months = 100 }
 		casus_belli = { target = SAF type = colonial_war months = 100 }
-		casus_belli = { target = RSA type = colonial_war months = 100 }
 		ai_chance = { factor = 0.1 }
 		}
 	option = {
 		name = "They have been free for far longer than this."
 		badboy = -5
 		prestige = -500
+		#The end of the Commonwealth state project
+		change_tag = ENG
 		release = CAN
 		relation = { who = CAN value = -200 }
 		diplomatic_influence = { who = CAN value = -200 }
-		release = WEC
-		relation = { who = WEC value = -200 }
-		diplomatic_influence = { who = WEC value = -200 }
 		release = AST
 		relation = { who = AST value = -100 }
 		diplomatic_influence = { who = AST value = -200 }
@@ -1543,9 +1536,8 @@ country_event = {
 		release = SAF
 		relation = { who = SAF value = -100 }
 		diplomatic_influence = { who = SAF value = -200 }
-		release = RSA
-		relation = { who = RSA value = -100 }
-		diplomatic_influence = { who = RSA value = -200 }
+		#blacks will attempt to overthrow the government in South Africa
+		SAF = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
 		ai_chance = { factor = 0.9 }
 		}
 	}
