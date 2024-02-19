@@ -11,8 +11,10 @@ country_event = {
 		tag = HUN
 		NOT = { has_global_flag = 1950_start_date_flag }
 		NOT = { year = 1990 }
-		
+		OR = {
 		government = hms_government
+		government = absolute_monarchy
+		}
 		is_vassal = no
 		war = no
 		
