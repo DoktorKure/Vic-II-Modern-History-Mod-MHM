@@ -318,6 +318,7 @@ political_decisions = {
 	firipin_no_takatai = {
 		potential = {
 		tag = JAP
+		has_country_flag = japan_ambitious
 		NOT = { has_country_flag = firipin_no_takatai }
 		OR = {
 		ICU = { all_core = { owned_by = JAP } }
@@ -365,9 +366,50 @@ political_decisions = {
 				target = JAP
 				type = dismantle_cb
 				months = 12
+				}
 			}
 		}
 	}
+	marco_polo = {
+	picture = "renouce_african_assimilation"
+	potential = {
+		tag = JAP
+		has_country_flag = japan_ambitious
+		has_country_flag = japanese_manchuria
+		has_country_flag = japanese_indochina
+		NOT = { has_country_flag = marco_polo }
+		OR = {
+		CHI = { exists = yes is_vassal = no }
+		KMT = { exists = yes is_vassal = no }
+		}
+		}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		MCK = { all_core = { owned_by = JAP } }
+		MCK = { exists = yes vassal_of = JAP in_sphere = JAP }
+			}
+		OR = {
+		ICU = { all_core = { owned_by = JAP } }
+		ICU = { exists = yes vassal_of = JAP in_sphere = JAP }
+			}
+		}
+	effect = {
+		set_country_flag = marco_polo
+		badboy = 50
+		casus_belli = { target = CHI type = conquest months = 100 }
+		casus_belli = { target = KMT type = conquest months = 100 }
+		war = {
+				target = CHI
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = dismantle_cb }
+				}
+		war = {
+				target = KMT
+				attacker_goal = { casus_belli = conquest }
+				defender_goal = { casus_belli = dismantle_cb }
+				}
+		}
 	}
 
 }
