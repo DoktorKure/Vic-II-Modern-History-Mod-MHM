@@ -21,33 +21,7 @@ country_event = {
 				}
 			}
 			owner = {
-				#Make Austria independent
-				USA = { release_vassal = ROA }
-				
-				#Change ROA to AUS
-				inherit = AUS
-				change_tag = AUS
-				all_core = { remove_core = ROA }
-				
-				#Set AUS
-				capital = 619 # Wien
-				any_pop = { ideology = { value = conservative factor = 0.25 } }
-				
-				#Victors of WW2
-				RUS = { military_access = THIS }
-				ENG = { military_access = THIS }
-				USA = { military_access = THIS }
-				FRA = { military_access = THIS }
-				
-				relation = { who = USA value = 50 }
-				relation = { who = RUS value = 50 }
-				relation = { who = ENG value = 50 }
-				relation = { who = FRA value = 50 }
-				
-				#Neutrality
-				set_country_flag = neutrality
-				set_country_flag = renounced_war_rights
-				neutrality = yes
+				country_event = 8203010
 			}
 		}
 		
