@@ -637,11 +637,31 @@ country_event = {
 			release_vassal = MCK
 			MCK = { all_core = { remove_core = JAP } civilized = no }
 			inherit = MCK
+			any_owned = { limit = { is_core = MCK } 			
+			any_pop = {
+				limit = { culture = chinese }
+				ideology = {
+					factor = 0.4
+					value = communist
+				}
+				ideology = {
+					factor = 0.3
+					value = nationalist
+				}
+				scaled_militancy = {
+					factor = 10
+					ideology = nationalist
+				}
+				scaled_militancy = {
+					factor = 10
+					ideology = communist
+				}
+			} 
+			add_province_modifier = { name = nationalist_agitation duration = 3650 } }
 			set_country_flag = japanese_manchuria
 			}
 		option = {
 			name = "Restore the Manchukuo Administration"
-			badboy = -5
 			release_vassal = MCK
 			set_country_flag = japanese_manchuria
 			MCK = { government = colonial_government remove_accepted_culture = chinese set_country_flag = manchukuo_restored }
@@ -649,7 +669,6 @@ country_event = {
 		option = {
 			name = "Restore the Qing! (Play as Manchukuo)"
 			set_country_flag = japanese_manchuria
-			badboy = -5
 			release_vassal = MCK
 			MCK = { government = absolute_monarchy remove_accepted_culture = chinese set_country_flag = manchukuo_restored }
 			change_tag_no_core_switch = MCK
@@ -658,7 +677,7 @@ country_event = {
 	country_event = {
 		id = 1281434
 		title = "The Fate of Indochina"
-		desc = "EVTDESC1281433"
+		desc = "EVTDESC1281434"
 		picture = "japan_reparations"
 		mean_time_to_happen = { months = 1 }
 		fire_only_once = yes
@@ -679,16 +698,46 @@ country_event = {
 			release_vassal = DAI
 			DAI = { all_core = { remove_core = JAP  add_core = ICU } civilized = no }
 			inherit = DAI
+			any_owned = { limit = { is_core = ICU } add_province_modifier = { name = nationalist_agitation duration = 3650 } }
 			set_country_flag = japanese_indochina
 			}
 		option = {
 			name = "Set up an Indochina Administration"
-			badboy = -5
 			LUA = { all_core = { remove_core = JAP add_core = ICU } }
 			CAM = { all_core = { remove_core = JAP add_core = ICU } }
 			DAI = { all_core = { remove_core = JAP add_core = ICU } }
 			release_vassal = ICU
 			set_country_flag = japanese_indochina
 			ICU = { government = colonial_government }
+			}
+		}
+	country_event = {
+		id = 1281435
+		title = "The Fate of Inner Mongolia"
+		desc = "EVTDESC1281435"
+		picture = "japan_reparations"
+		mean_time_to_happen = { months = 1 }
+		fire_only_once = yes
+		trigger = {
+			tag = JAP
+			IMN = { all_core = { owned_by = JAP } }
+			}
+		option = {
+			name = "Turn this territory into a proper colony"
+			release_vassal = IMN
+			IMN = { all_core = { remove_core = JAP } civilized = no }
+			inherit = IMN
+			any_owned = { limit = { is_core = IMN } add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+			set_country_flag = japanese_mengkukuo
+			}
+		option = {
+			name = "Set up the Mengkukuo Administration"
+			badboy = -5
+			IMN = { all_core = { remove_core = JAP } }
+			MGL = { all_core = { add_core = IMN } }
+			TNT = { all_core = { add_core = TNT } }
+			release_vassal = IMN
+			set_country_flag = japanese_mengkukuo
+			IMN = { government = colonial_government remove_accepted_culture = chinese }
 			}
 		}
