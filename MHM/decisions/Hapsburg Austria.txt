@@ -11,8 +11,10 @@ political_decisions = {
 			is_vassal = no
 			election = no
 			NOT = { militancy = 4 }
+			OR = {
 			ruling_party_ideology = traditionalist
 			pop_majority_ideology = traditionalist
+			}
 		}
 
 		effect = {
@@ -23,4 +25,30 @@ political_decisions = {
 			}
 		}
 	}
+	claim_austrian_crownlands = {
+		picture = "austrian_monarchy"
+		potential = {
+			tag = AUS
+			NOT = { has_country_flag = austrian_crownlands }
+			OR = { government = hms_government1 government = absolute_monarchy government = hms_government government = nationalist_dictatorship government = sectarian_dictatorship government = theocracy }
+			}
+			allow = {
+			war = no
+			is_vassal = no
+			election = no
+			NOT = { militancy = 4 }
+			OR = {
+			ruling_party_ideology = traditionalist
+			ruling_party_ideology = populist
+			ruling_party_ideology = nationalist
+			}
+		}
+		effect = {
+			set_country_flag = austrian_crownlands
+			badboy = 15
+			BOH = { all_core = { add_core = AUS } }
+			SLO = { all_core = { add_core = AUS } }
+			VCE = { all_core = { add_core = AUS } }
+			}
+		}
 }
