@@ -256,10 +256,16 @@ political_decisions = {
 			LUA = { all_core = { add_core = JAP } }
 
 			any_country = { 
-				limit = { OR = { tag = CHI tag = RUS tag = USA tag = KMT tag = SVI tag = DAI tag = CAM tag = LUA } } 
+				limit = { OR = { tag = CHI tag = RUS tag = USA tag = KMT tag = SVI tag = DAI tag = CAM tag = LUA tag = FRA tag = NET tag = ENG } } 
 				relation = { who = THIS value = -100 } 
 			}
-
+		FRA = { 
+				casus_belli = {
+				target = JAP
+				type = dismantle_cb
+				months = 12
+			}
+		}
 			set_country_flag = jap_indochina_claim
 		}
 		ai_will_do = { 
@@ -308,6 +314,60 @@ political_decisions = {
 		ai_will_do = { 
 			factor = 1 
 		}
+	}
+	firipin_no_takatai = {
+		potential = {
+		tag = JAP
+		NOT = { has_country_flag = firipin_no_takatai }
+		OR = {
+		ICU = { all_core = { owned_by = JAP } }
+		ICU = { exists = yes vassal_of = JAP in_sphere = JAP }
+			}
+		}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		ruling_party_ideology = nationalist
+		ruling_party_ideology = traditionalist
+		}
+		}
+	effect = {
+		set_country_flag = firipin_no_takatai
+		badboy = 20
+		PHI = { all_core = { add_core = JAP } }
+			any_country = { 
+			limit = { OR = { tag = CHI tag = NET tag = USA tag = KMT tag = IDO tag = PHI tag = ENG tag = FRA } } 
+			relation = { who = THIS value = -200 } 
+			}
+		USA = { 
+				casus_belli = {
+				target = JAP
+				type = dismantle_cb
+				months = 12
+			}
+		}
+		ENG = { 
+				casus_belli = {
+				target = JAP
+				type = dismantle_cb
+				months = 12
+			}
+		}
+		NET = { 
+				casus_belli = {
+				target = JAP
+				type = dismantle_cb
+				months = 12
+			}
+		}
+		IDO = { 
+				casus_belli = {
+				target = JAP
+				type = dismantle_cb
+				months = 12
+			}
+		}
+	}
 	}
 
 }
