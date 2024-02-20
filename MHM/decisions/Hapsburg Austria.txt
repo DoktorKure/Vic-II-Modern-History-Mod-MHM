@@ -48,7 +48,10 @@ political_decisions = {
 			badboy = 15
 			BOH = { all_core = { add_core = AUS } }
 			SLO = { all_core = { add_core = AUS } }
-			VCE = { all_core = { add_core = AUS } }
+			AUS_729 = { add_core = AUS }
+			AUS_734 = { add_core = AUS }
+			736 = { add_core = AUS }
+			737 = { add_core = AUS }
 			}
 		}
 }
