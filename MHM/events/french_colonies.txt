@@ -12,7 +12,7 @@ country_event = {
 		year = 1958
 		NOT = { year = 1990 }
 		
-		government = democracy
+		OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		is_greater_power = yes
 		war = no
 		

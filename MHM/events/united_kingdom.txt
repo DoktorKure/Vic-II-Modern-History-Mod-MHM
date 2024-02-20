@@ -1498,29 +1498,124 @@ country_event = {
 		badboy = 25
 		prestige = -750
 		set_country_flag = reclaim_empire
-		release = CAN
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = CAN
+				}
+			}
+			owner = { release_vassal = CAN }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = CAN
+				}
+			}
+			owner = { release = CAN }
+		}
 		relation = { who = CAN value = -200 }
 		diplomatic_influence = { who = CAN value = -200 }
-		release = WEC
+		casus_belli = { target = CAN type = colonial_war months = 100 }
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = WEC
+				}
+			}
+			owner = { release_vassal = WEC }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = WEC
+				}
+			}
+			owner = { release = WEC }
+		}
 		relation = { who = WEC value = -200 }
 		diplomatic_influence = { who = WEC value = -200 }
-		release = AST
+		casus_belli = { target = WEC type = colonial_war months = 100 }
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = AST
+				}
+			}
+			owner = { release_vassal = AST }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = AST
+				}
+			}
+			owner = { release = AST }
+		}
 		relation = { who = AST value = -100 }
 		diplomatic_influence = { who = AST value = -200 }
-		release = NZL
+		casus_belli = { target = AST type = colonial_war months = 100 }
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = NZL
+				}
+			}
+			owner = { release_vassal = NZL }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = NZL
+				}
+			}
+			owner = { release = NZL }
+		}
 		relation = { who = NZL value = -100 }
 		diplomatic_influence = { who = NZL value = -200 }
-		release = SAF
+		casus_belli = { target = NZL type = colonial_war months = 100 }
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = SAF
+				}
+			}
+			owner = { release_vassal = SAF }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = SAF
+				}
+			}
+			owner = { release = SAF }
+		}
 		relation = { who = SAF value = -100 }
 		diplomatic_influence = { who = SAF value = -200 }
-		release = RSA
+		casus_belli = { target = SAF type = colonial_war months = 100 }
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = RSA
+				}
+			}
+			owner = { release_vassal = RSA }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = RSA
+				}
+			}
+			owner = { release = RSA }
+		}
 		relation = { who = RSA value = -100 }
 		diplomatic_influence = { who = RSA value = -200 }
-		casus_belli = { target = CAN type = colonial_war months = 100 }
-		casus_belli = { target = WEC type = colonial_war months = 100 }
-		casus_belli = { target = AST type = colonial_war months = 100 }
-		casus_belli = { target = NZL type = colonial_war months = 100 }
-		casus_belli = { target = SAF type = colonial_war months = 100 }
 		casus_belli = { target = RSA type = colonial_war months = 100 }
 		ai_chance = { factor = 0.1 }
 		}
@@ -1528,22 +1623,118 @@ country_event = {
 		name = "They have been free for far longer than this."
 		badboy = -5
 		prestige = -500
-		release = CAN
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = CAN
+				}
+			}
+			owner = { release_vassal = CAN }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = CAN
+				}
+			}
+			owner = { release = CAN }
+		}
 		relation = { who = CAN value = -200 }
 		diplomatic_influence = { who = CAN value = -200 }
-		release = WEC
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = WEC
+				}
+			}
+			owner = { release_vassal = WEC }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = WEC
+				}
+			}
+			owner = { release = WEC }
+		}
 		relation = { who = WEC value = -200 }
 		diplomatic_influence = { who = WEC value = -200 }
-		release = AST
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = AST
+				}
+			}
+			owner = { release_vassal = AST }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = AST
+				}
+			}
+			owner = { release = AST }
+		}
 		relation = { who = AST value = -100 }
 		diplomatic_influence = { who = AST value = -200 }
-		release = NZL
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = NZL
+				}
+			}
+			owner = { release_vassal = NZL }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = NZL
+				}
+			}
+			owner = { release = NZL }
+		}
 		relation = { who = NZL value = -100 }
 		diplomatic_influence = { who = NZL value = -200 }
-		release = SAF
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = SAF
+				}
+			}
+			owner = { release_vassal = SAF }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = SAF
+				}
+			}
+			owner = { release = SAF }
+		}
 		relation = { who = SAF value = -100 }
 		diplomatic_influence = { who = SAF value = -200 }
-		release = RSA
+		
+		random_owned = {
+			limit = {
+				owner = {
+					is_our_vassal = RSA
+				}
+			}
+			owner = { release_vassal = RSA }
+		}
+		random_owned = {
+			limit = {
+				owner = {
+					is_possible_vassal = RSA
+				}
+			}
+			owner = { release = RSA }
+		}
 		relation = { who = RSA value = -100 }
 		diplomatic_influence = { who = RSA value = -200 }
 		ai_chance = { factor = 0.9 }
