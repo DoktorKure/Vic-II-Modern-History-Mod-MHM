@@ -708,7 +708,7 @@ country_event = {
 			DAI = { all_core = { remove_core = JAP add_core = ICU } }
 			release_vassal = ICU
 			set_country_flag = japanese_indochina
-			ICU = { government = colonial_government }
+			ICU = { government = nationalist_dictatorship }
 			}
 		}
 	country_event = {
@@ -932,5 +932,155 @@ country_event = {
 			MCA = { government = colonial_government }
 			HKG = { government = colonial_government }
 			set_country_flag = humiliated_national_china
+			}
+		}
+	country_event = {
+		id = 1281434
+		title = "The Fate of Indonesia"
+		desc = "EVTDESC1281440"
+		picture = "japan_reparations"
+		mean_time_to_happen = { months = 1 }
+		fire_only_once = yes
+		trigger = {
+			tag = JAP
+			IDO = { all_core = { owned_by = JAP } }
+			BRU = { all_core = { owned_by = JAP } }
+			MSY = { all_core = { owned_by = JAP } }
+			FMS = { all_core = { owned_by = JAP } }
+			SNG = { all_core = { owned_by = JAP } }
+			TIM = { all_core = { owned_by = JAP } }
+			PPN = { all_core = { owned_by = JAP } }
+			VAN = { all_core = { owned_by = JAP } }
+			SOL = { all_core = { owned_by = JAP } }
+			FIJ = { all_core = { owned_by = JAP } }
+			SAM = { all_core = { owned_by = JAP } }
+			TON = { all_core = { owned_by = JAP } }
+			COI = { all_core = { owned_by = JAP } }
+			TUV = { all_core = { owned_by = JAP } }
+			NIU = { all_core = { owned_by = JAP } }
+			MIC = { all_core = { owned_by = JAP } }
+			KIR = { all_core = { owned_by = JAP } }
+			MAR = { all_core = { owned_by = JAP } }
+			PAU = { all_core = { owned_by = JAP } }
+			NAU = { all_core = { owned_by = JAP } }
+			}
+		option = {
+			name = "Turn this territory into a proper colony"
+			release_vassal = IDO
+			IDO = { all_core = { remove_core = JAP add_core = IDO } civilized = no }
+			inherit = IDO
+			BRU = { all_core = { remove_core = JAP add_core = IDO } civilized = no }
+			inherit = BRU
+			release_vassal = MSY
+			MSY = { all_core = { remove_core = JAP add_core = IDO } civilized = no }
+			inherit = MSY
+			release_vassal = FMS
+			FMS = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = FMS
+			release_vassal = SNG
+			SNG = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = SNG
+			release_vassal = FMS
+			TIM = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = TIM
+			PPN = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = PPN
+			VAN = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = VAN
+			SOL = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = SOL
+			FIJ = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = FIJ
+			SAM = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = SAM
+			TON = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = TON
+			COI = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = COI
+			TUV = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = TUV
+			NIU = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = NIU
+			MIC = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = MIC
+			KIR = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = KIR
+			MAR = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = MAR
+			PAU = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = PAU
+			NAU = { all_core = { remove_core = JAP  add_core = IDO } civilized = no }
+			inherit = NAU
+			any_owned = { limit = { is_core = IDO } add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+			set_country_flag = japanese_indonesia
+			}
+		option = {
+			name = "Set up a singular National Indonesia Administration"
+			IDO = { all_core = { remove_core = JAP } }
+			BRU = { all_core = { remove_core = JAP add_core = IDO } }
+			MSY = { all_core = { remove_core = JAP add_core = IDO } }
+			FMS = { all_core = { remove_core = JAP  add_core = IDO } }
+			SNG = { all_core = { remove_core = JAP  add_core = IDO } }
+			TIM = { all_core = { remove_core = JAP  add_core = IDO } }
+			PPN = { all_core = { remove_core = JAP  add_core = IDO } }
+			VAN = { all_core = { remove_core = JAP  add_core = IDO } }
+			SOL = { all_core = { remove_core = JAP  add_core = IDO } }
+			FIJ = { all_core = { remove_core = JAP  add_core = IDO } }
+			SAM = { all_core = { remove_core = JAP  add_core = IDO } }
+			TON = { all_core = { remove_core = JAP  add_core = IDO } }
+			COI = { all_core = { remove_core = JAP  add_core = IDO } }
+			TUV = { all_core = { remove_core = JAP  add_core = IDO } }
+			NIU = { all_core = { remove_core = JAP  add_core = IDO } }
+			MIC = { all_core = { remove_core = JAP  add_core = IDO } }
+			KIR = { all_core = { remove_core = JAP  add_core = IDO } }
+			MAR = { all_core = { remove_core = JAP  add_core = IDO } }
+			PAU = { all_core = { remove_core = JAP  add_core = IDO } }
+			NAU = { all_core = { remove_core = JAP  add_core = IDO } }
+			release_vassal = IDO
+			set_country_flag = japanese_indonesia
+			IDO = { government = nationalist_dictatorship }
+			}
+			name = "Set up a group of Gunseikan"
+			BRU = { all_core = { remove_core = JAP add_core = IDO } }
+			IDO = { all_core = { remove_core = JAP add_core = IDO } }
+			MSY = { all_core = { remove_core = JAP add_core = IDO } }
+			FMS = { all_core = { remove_core = JAP  add_core = IDO } }
+			SNG = { all_core = { remove_core = JAP  add_core = IDO } }
+			TIM = { all_core = { remove_core = JAP  add_core = IDO } }
+			PPN = { all_core = { remove_core = JAP  add_core = IDO } }
+			VAN = { all_core = { remove_core = JAP  add_core = IDO } }
+			SOL = { all_core = { remove_core = JAP  add_core = IDO } }
+			FIJ = { all_core = { remove_core = JAP  add_core = IDO } }
+			SAM = { all_core = { remove_core = JAP  add_core = IDO } }
+			TON = { all_core = { remove_core = JAP  add_core = IDO } }
+			COI = { all_core = { remove_core = JAP  add_core = IDO } }
+			TUV = { all_core = { remove_core = JAP  add_core = IDO } }
+			NIU = { all_core = { remove_core = JAP  add_core = IDO } }
+			MIC = { all_core = { remove_core = JAP  add_core = IDO } }
+			KIR = { all_core = { remove_core = JAP  add_core = IDO } }
+			MAR = { all_core = { remove_core = JAP  add_core = IDO } }
+			PAU = { all_core = { remove_core = JAP  add_core = IDO } }
+			NAU = { all_core = { remove_core = JAP  add_core = IDO } }
+			WPA = { all_core = { add_core = PPN }
+			SNG = { all_core = { add_core = FMS }
+			release_vassal = ESM
+			release_vassal = SUM
+			release_vassal = JAV
+			release_vassal = BRU
+			release_vassal = FMS
+			release_vassal = KLM
+			release_vassal = EID
+			release_vassal = PPN
+			release_vassal = IDO
+			set_country_flag = japanese_indochina
+			IDO = { government = nationalist_dictatorship }
+			ESM = { government = nationalist_dictatorship }
+			SUM = { government = nationalist_dictatorship }
+			JAV = { government = nationalist_dictatorship }
+			BRU = { government = nationalist_dictatorship }
+			FMS = { government = nationalist_dictatorship }
+			KLM = { government = nationalist_dictatorship }
+			EID = { government = nationalist_dictatorship }
+			PPN = { government = nationalist_dictatorship }
 			}
 		}

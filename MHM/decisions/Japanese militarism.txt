@@ -370,6 +370,45 @@ political_decisions = {
 			}
 		}
 	}
+	japanese_indonesia = {
+	picture = "claim_greater_indonesia"
+	potential = {
+		tag = JAP
+		has_country_flag = japanese_philippines
+		NOT = { has_country_flag = reclaim_gunseikan }
+		}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		PHI = { all_core = { owned_by = JAP } }
+		PHI = { exists = yes vassal_of = JAP in_sphere = JAP }
+			}
+		}
+	effect = {
+		set_country_flag = reclaim_gunseikan
+		badboy = 40
+		IDO = { all_core = { add_core = JAP } }
+		MSY = { all_core = { add_core = JAP } }
+		FMS = { all_core = { add_core = JAP } }
+		SNG = { all_core = { add_core = JAP } }
+		TIM = { all_core = { add_core = JAP } }
+		PPN = { all_core = { add_core = JAP } }
+		VAN = { all_core = { add_core = JAP } }
+		SOL = { all_core = { add_core = JAP } }
+		FIJ = { all_core = { add_core = JAP } }
+		SAM = { all_core = { add_core = JAP } }
+		TON = { all_core = { add_core = JAP } }
+		COI = { all_core = { add_core = JAP } }
+		TUV = { all_core = { add_core = JAP } }
+		NIU = { all_core = { add_core = JAP } }
+		MIC = { all_core = { add_core = JAP } }
+		KIR = { all_core = { add_core = JAP } }
+		MAR = { all_core = { add_core = JAP } }
+		PAU = { all_core = { add_core = JAP } }
+		NAU = { all_core = { add_core = JAP } }
+		BRU = { all_core = { add_core = JAP } }
+		}
+	}
 	marco_polo = {
 	picture = "renouce_african_assimilation"
 	potential = {
