@@ -1040,6 +1040,7 @@ country_event = {
 			set_country_flag = japanese_indonesia
 			IDO = { government = nationalist_dictatorship }
 			}
+			option = {
 			name = "Set up a group of Gunseikan"
 			BRU = { all_core = { remove_core = JAP add_core = IDO } }
 			IDO = { all_core = { remove_core = JAP add_core = IDO } }
@@ -1061,8 +1062,8 @@ country_event = {
 			MAR = { all_core = { remove_core = JAP  add_core = IDO } }
 			PAU = { all_core = { remove_core = JAP  add_core = IDO } }
 			NAU = { all_core = { remove_core = JAP  add_core = IDO } }
-			WPA = { all_core = { add_core = PPN }
-			SNG = { all_core = { add_core = FMS }
+			WPA = { all_core = { add_core = PPN } }
+			SNG = { all_core = { add_core = FMS } }
 			release_vassal = ESM
 			release_vassal = SUM
 			release_vassal = JAV
