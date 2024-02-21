@@ -443,12 +443,26 @@ country_event = {
 					has_global_flag = ussr_intervenes_GCW_flag
 				} 
 			}
-			owner = { change_tag = GRE }
 			owner = { RUS = { country_event = 120003 } } #GRE gets Sovietized
+			owner = { country_event = { id = 89400131 days = 2 } }
 		}
 
 	}
 
+}
+
+country_event = {
+	id = 89400131
+	title = "Sovietization of Greece"
+	desc = "This event is to ensure the tag change goes through smoothly while communist Greece gets Sovietized"
+	picture = "easterneuropeussr"
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "We have joined the Soviet bloc!"
+		change_tag = GRE
+	}
 }
 
 #Continue the fight?
