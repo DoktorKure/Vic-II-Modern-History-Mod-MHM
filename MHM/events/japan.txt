@@ -801,22 +801,10 @@ country_event = {
 					}
 				}
 		option = {
-			name = "Turn this territory into a proper colony"
-			JAP = { all_core = { remove_core = KMT } }
-			TAI = { all_core = { remove_core = KMT } }
-			MCK = { all_core = { remove_core = KMT } }
-			KMT = { all_core = { remove_core = JAP } civilized = no }
-			release_vassal = KMT
-			inherit = KMT
-			any_owned = { limit = { is_core = KMT } add_province_modifier = { name = nationalist_agitation duration = 36500 } }
-			set_country_flag = japanese_china
-			}
-		option = {
 			name = "Create Reorganized China"
 			JAP = { all_core = { remove_core = KMT } }
 			TAI = { all_core = { remove_core = KMT } }
 			MCK = { all_core = { remove_core = KMT } }
-			KMT = { all_core = { remove_core = JAP } }
 			release_vassal = KMT
 			set_country_flag = japanese_china
 			KMT = { government = colonial_government }
@@ -824,7 +812,7 @@ country_event = {
 		}
 	country_event = {
 		id = 1281438
-		title = "Expand Reorganized China?"
+		title = "Expand Reorganized China"
 		desc = "EVTDESC1281437"
 		picture = "japan_reparations"
 		mean_time_to_happen = { months = 1 }
@@ -838,62 +826,111 @@ country_event = {
 							is_core = CHI
 							is_core = KMT 
 							}
-							NOT = { 
-								OR = { 
-								is_core = MCK 
-								is_core = TIB 
-								is_core = JAP 
-								is_core = IMN 
-								is_core = GGC 
-								is_core = KWA
-								is_core = XIG
-								} 
-							} 
 						} 
 					owned_by = JAP 
 					}
 				}
 		option = {
-			name = "Turn this territory into a proper colony"
-			any_owned = { 
-					limit = { 
-						is_core = KMT 
-						NOT = { 
-							OR = { 								
-								is_core = MCK 
-								is_core = TIB 
-								is_core = JAP 
-								is_core = IMN 
-								is_core = GGC 
-								is_core = KWA
-								is_core = XIG 
-								}
-							}
-						}
-					secede_province = WAS
-					WAS = { civilized = no }
-					inherit = WAS
-					}
-			any_owned = { limit = { is_core = KMT } add_province_modifier = { name = nationalist_agitation duration = 36500 } }
-			}
-		option = {
 			name = "Expand Reorganized China"
 			any_owned = { 
 						limit = { 
 						is_core = KMT 
-						NOT = { 
-							OR = { 								
-								is_core = MCK 
-								is_core = TIB 
-								is_core = JAP 
-								is_core = IMN 
-								is_core = GGC 
-								is_core = KWA
-								is_core = XIG 
-								}
-							}
 						}
 					secede_province = KMT
 				}
+			}
+		}
+	country_event = {
+		id = 1281439
+		title = "The Fate of the National Government"
+		desc = "EVTDESC1281439"
+		picture = "japan_reparations"
+		mean_time_to_happen = { months = 1 }
+		fire_only_once = yes
+		trigger = {
+			tag = JAP
+			has_country_flag = japanese_china
+			KMT = { exists = yes vassal_of = THIS all_core = { owned_by = KMT } }
+			CHI = { exists = no }
+				}
+		option = {
+			name = "Turn this territory into a proper colony"
+			KMT = { all_core = { remove_core = JAP } civilized = no }
+			release_vassal = KMT
+			inherit = KMT
+			any_owned = { limit = { is_core = KMT } add_province_modifier = { name = nationalist_agitation duration = 36500 } }
+			set_country_flag = japanese_occupation_china
+			}
+		option = {
+			name = "Grant Reorganized China supreme authority"
+			KMT = { release = SHG release = HKG release = MCA }
+			inherit = MCA
+			inherit = HKG
+			inherit = SHG
+			SHG = { all_core = { add_core = JAP } }
+			HKG = { all_core = { add_core = JAP } }
+			MCA = { all_core = { add_core = JAP } }
+			set_country_flag = reorganized_china_favored
+			}
+		option = {
+			name = "The Manchus have proven loyal, place them in power."
+			KMT = { all_core = { add_core = MCK }
+					release = SHG
+					release = HKG
+					release = MCA
+						}
+			inherit = MCA
+			inherit = HKG
+			inherit = SHG
+			SHG = { all_core = { add_core = JAP } }
+			HKG = { all_core = { add_core = JAP } }
+			MCA = { all_core = { add_core = JAP } }
+			MCK = { inherit = KMT add_accepted_culture = chinese }
+			set_country_flag = manchus_favored
+			}
+		option = { 
+			name = "Force the decentralization of the administration."
+			KMT = {
+				release = TIB
+				release = GGX
+				release = KWA
+				release = SXI 
+				release = SHG
+				release = QHA
+				release = SZC
+				release = YNN
+				release = ETS
+				release = MCA
+				release = HKG
+				}
+			create_vassal = TIB
+			create_vassal = GGX
+			create_vassal = KWA
+			create_vassal = SXI 
+			create_vassal = SHG
+			create_vassal = QHA
+			create_vassal = SZC
+			create_vassal = YNN
+			create_vassal = ETS
+			create_vassal = MCA
+			create_vassal = HKG
+			inherit = MCA
+			inherit = HKG
+			inherit = SHG
+			SHG = { all_core = { add_core = JAP } }
+			HKG = { all_core = { add_core = JAP } }
+			MCA = { all_core = { add_core = JAP } }
+			TIB = { government = colonial_government }
+			GGX = { government = colonial_government }
+			KWA = { government = colonial_government }
+			SXI = { government = colonial_government }
+			SHG = { government = colonial_government }
+			QHA = { government = colonial_government }
+			SZC = { government = colonial_government }
+			YNN = { government = colonial_government }
+			ETS = { government = colonial_government }
+			MCA = { government = colonial_government }
+			HKG = { government = colonial_government }
+			set_country_flag = humiliated_national_china
 			}
 		}
