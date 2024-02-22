@@ -410,7 +410,7 @@ political_decisions = {
 		}
 	}
 	marco_polo = {
-	picture = "renouce_african_assimilation"
+	picture = "end_one_china_policy"
 	potential = {
 		tag = JAP
 		has_country_flag = japan_ambitious
@@ -450,5 +450,39 @@ political_decisions = {
 				}
 		}
 	}
-
+	tora_tora_tora = {
+	picture = "restore_the_jap_empire"
+	potential = {
+		tag = JAP
+		has_country_flag = japan_ambitious
+		has_country_flag = japanese_manchuria
+		has_country_flag = japanese_indochina
+		has_country_flag = japanese_indonesia
+		NOT = { has_country_flag = tora_tora_tora }
+		USA = { exists = yes is_vassal = no }
+		}
+	allow = {
+		is_greater_power = yes
+		OR = {
+		IDO = { all_core = { owned_by = JAP } }
+		IDO = { exists = yes vassal_of = JAP in_sphere = JAP }
+			}
+		}
+	effect = {
+		set_country_flag = tora_tora_tora
+		badboy = 50
+		HAW = { all_core = { add_core = JAP } }
+		LSK = { all_core = { add_core = JAP } }
+		CAL = { all_core = { add_core = JAP } }
+		casus_belli = { target = USA type = dismantle_cb months = 100 }
+		USA = {
+		casus_belli = { target = JAP type = dismantle_cb months = 100 }
+		}
+		war = {
+				target = USA
+				attacker_goal = { casus_belli = dismantle_cb }
+				defender_goal = { casus_belli = dismantle_cb }
+				}
+		}
+	}
 }

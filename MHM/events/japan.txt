@@ -732,7 +732,7 @@ country_event = {
 			}
 		option = {
 			name = "Set up the Mengkukuo Administration"
-			badboy = -5
+			
 			IMN = { all_core = { remove_core = JAP } }
 			MGL = { all_core = { add_core = IMN } }
 			TNT = { all_core = { add_core = TNT } }
@@ -762,7 +762,7 @@ country_event = {
 			}
 		option = {
 			name = "Restore the Second Republic"
-			badboy = -5
+			
 			PHI = { all_core = { remove_core = JAP } }
 			release_vassal = PHI
 			set_country_flag = japanese_philippines
@@ -935,7 +935,7 @@ country_event = {
 			}
 		}
 	country_event = {
-		id = 1281434
+		id = 1281440
 		title = "The Fate of Indonesia"
 		desc = "EVTDESC1281440"
 		picture = "japan_reparations"
@@ -1083,5 +1083,60 @@ country_event = {
 			KLM = { government = nationalist_dictatorship }
 			EID = { government = nationalist_dictatorship }
 			PPN = { government = nationalist_dictatorship }
+			}
+		}
+	country_event = {
+		id = 1281441
+		title = "The Fate of Alaska"
+		desc = "EVTDESC1281441"
+		picture = "japan_reparations"
+		mean_time_to_happen = { months = 1 }
+		fire_only_once = yes
+		trigger = {
+			tag = JAP
+			LSK = { all_core = { owned_by = JAP } }
+			}
+		option = {
+			name = "Turn this territory into a proper colony"
+			release_vassal = LSK
+			LSK = { all_core = { remove_core = JAP } civilized = no }
+			inherit = LSK
+			any_owned = { limit = { is_core = LSK } add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+			set_country_flag = japanese_alaska
+			}
+		option = {
+			name = "Create a local puppet regime."
+			
+			LSK = { all_core = { remove_core = JAP } }
+			release_vassal = LSK
+			set_country_flag = japanese_alaska
+			LSK = { government = nationalist_dictatorship primary_culture = japenese accepted_culture = white_anglo }
+			}
+		}
+	country_event = {
+		id = 1281442
+		title = "The Fate of California"
+		desc = "EVTDESC1281442"
+		picture = "japan_reparations"
+		mean_time_to_happen = { months = 1 }
+		fire_only_once = yes
+		trigger = {
+			tag = JAP
+			CAL = { all_core = { owned_by = JAP } }
+			}
+		option = {
+			name = "Turn this territory into a proper colony"
+			release_vassal = CAL
+			CAL = { all_core = { remove_core = JAP } civilized = no }
+			inherit = CAL
+			any_owned = { limit = { is_core = CAL } add_province_modifier = { name = nationalist_agitation duration = 3650 } }
+			set_country_flag = japanese_california
+			}
+		option = {
+			name = "Create a local puppet regime."
+			CAL = { all_core = { remove_core = JAP } }
+			release_vassal = CAL
+			set_country_flag = japanese_california
+			CAL = { government = colonial_government primary_culture = japenese accepted_culture = white_anglo 98 = { add_core = JAP secede_province = JAP } }
 			}
 		}
