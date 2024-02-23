@@ -214,7 +214,13 @@ political_decisions = {
 			war = no
 			election = no
 			OR = { NOT = { badboy = 0.2 } ai = no }
+			OR = {
 			KOR = { all_core = { owned_by = JAP } }
+			AND = {
+			SKO = { all_core = { owned_by = JAP } }
+			NKO = { all_core = { owned_by = JAP } }
+				}
+			}
 		}
 		effect = {
 			badboy = 20
@@ -241,11 +247,17 @@ political_decisions = {
 			has_country_flag = japan_ambitious
 			NOT = { has_country_flag = jap_indochina_claim }
 		}
-			allow = {
+		allow = {
 			war = no
 			election = no
 			OR = { NOT = { badboy = 0.2 } ai = no }
+			OR = {
 			KOR = { all_core = { owned_by = JAP } }
+			AND = {
+			SKO = { all_core = { owned_by = JAP } }
+			NKO = { all_core = { owned_by = JAP } }
+				}
+			}
 		}
 			effect = {
 			badboy = 20
