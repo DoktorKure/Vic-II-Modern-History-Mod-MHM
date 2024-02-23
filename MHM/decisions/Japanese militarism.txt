@@ -347,10 +347,14 @@ political_decisions = {
 	effect = {
 		set_country_flag = firipin_no_takatai
 		badboy = 20
-		PHI = { all_core = { add_core = JAP } }
+			
 			any_country = { 
 			limit = { OR = { tag = CHI tag = NET tag = USA tag = KMT tag = IDO tag = PHI tag = ENG tag = FRA } } 
 			relation = { who = THIS value = -200 } 
+			}
+			any_country = {
+			limit = { tag = PHI }
+			all_core = { add_core = JAP }
 			}
 		USA = { 
 				casus_belli = {
