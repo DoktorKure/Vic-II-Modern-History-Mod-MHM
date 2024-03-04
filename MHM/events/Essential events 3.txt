@@ -1159,7 +1159,7 @@ country_event = {
 		tag = CHI
 		year = 2002
 		NOT = { year = 2020 }
-		any_owned_province = { OR = { is_core = CAN is_core = CHI is_core = HKG is_core = MCA is_core = KMT is_core = SNG is_core = DAI is_core = USA is_core = PHI is_core = MGL is_core = KUW is_core = IRE is_core = ROM is_core = RUS is_core = SPA is_core = SWI is_core = SKO } }
+		any_owned_province = { OR = { is_core = CAN is_core = CHI is_core = HKG is_core = MCA is_core = KMT is_core = SNG is_core = DAI is_core = USA is_core = PHL is_core = MGL is_core = KUW is_core = IRE is_core = ROM is_core = RUS is_core = SPA is_core = SWI is_core = SKO } }
 		NOT = { any_owned_province = { has_province_modifier = virus_outbreak } }
 		NOT = { has_country_modifier = local_epidemic }
 		NOT = { has_country_flag = sars_outbreak_2003 }
@@ -3211,7 +3211,7 @@ money = -500000
 relation = { who = AST value = 25 } # Historically favored San Franscico
 relation = { who = NZL value = 25 } # Historically favored San Franscico
 relation = { who = CHI value = 25 } # Historically favored San Franscico
-relation = { who = PHI value = 25 } # Historically favored San Franscico
+relation = { who = PHL value = 25 } # Historically favored San Franscico
 84 = { add_province_modifier = { name = un_headquarters duration = -1 } }
 ai_chance = { factor = 0.05 }
 		}

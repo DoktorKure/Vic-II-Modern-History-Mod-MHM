@@ -354,7 +354,7 @@ modifier = { factor = 0 OR = { KMT = { ai = no } CHI = { ai = no } } }
 					2576 = { remove_core = KMT }
 					relation = { who = JAP value = 50 }
 					relation = { who = IDO value = 50 }
-					relation = { who = PHI value = 50 }
+					relation = { who = PHL value = 50 }
 					relation = { who = MSY value = 50 }
 					relation = { who = CHI value = -100 }
 					# TODO add event that offerc China to rejct CHI = { country_event = xxxxx } 

@@ -349,11 +349,11 @@ political_decisions = {
 		badboy = 20
 			
 			any_country = { 
-			limit = { OR = { tag = CHI tag = NET tag = USA tag = KMT tag = IDO tag = PHI tag = ENG tag = FRA } } 
+			limit = { OR = { tag = CHI tag = NET tag = USA tag = KMT tag = IDO tag = PHL tag = ENG tag = FRA } } 
 			relation = { who = THIS value = -200 } 
 			}
 			any_country = {
-			limit = { tag = PHI }
+			limit = { tag = PHL }
 			all_core = { add_core = JAP }
 			}
 		USA = { 
@@ -396,8 +396,8 @@ political_decisions = {
 	allow = {
 		is_greater_power = yes
 		OR = {
-		PHI = { all_core = { owned_by = JAP } }
-		PHI = { exists = yes vassal_of = JAP in_sphere = JAP }
+		PHL = { all_core = { owned_by = JAP } }
+		PHL = { exists = yes vassal_of = JAP in_sphere = JAP }
 			}
 		}
 	effect = {

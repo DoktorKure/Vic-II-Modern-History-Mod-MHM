@@ -12,7 +12,7 @@ NOT =  { has_country_modifier = neutrality }
 
 SVI = { exists = yes }
 
-any_owned_province = { OR = { continent = oceania is_core = CAM is_core = PHI is_core = THI is_core = SVI is_core = MSY is_core = BRU is_core = IDO } }
+any_owned_province = { OR = { continent = oceania is_core = CAM is_core = PHL is_core = THI is_core = SVI is_core = MSY is_core = BRU is_core = IDO } }
 
 NOT = { sphere_owner = { ruling_party_ideology = communist } }
 

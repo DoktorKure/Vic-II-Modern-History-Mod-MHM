@@ -514,7 +514,7 @@ political_decisions = {
 			}
 
 			random_country = {
-				limit = { tag = PHI year = 1990 }
+				limit = { tag = PHL year = 1990 }
 				set_country_flag = presidential_system_republic
 			}
 
@@ -827,7 +827,7 @@ political_decisions = {
 			any_country = {
 				limit = {
 					NOT = { literacy = 0.15 }
-					OR = { tag = BRZ tag = PHI tag = THI tag = BNG tag = BUR tag = ETH tag = NGE tag = MEX tag = HND tag = RAJ }
+					OR = { tag = BRZ tag = PHL tag = THI tag = BNG tag = BUR tag = ETH tag = NGE tag = MEX tag = HND tag = RAJ }
 				}
 				set_country_flag = economic_malaise
 			}

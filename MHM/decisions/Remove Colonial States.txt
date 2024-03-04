@@ -3,7 +3,7 @@ political_decisions = {
 	generic_land_reform = {
 		picture = "india_land_reform"
 		potential = {
-			NOT = { bureaucrats = 0.01 }
+			NOT = { bureaucrats = 0.02 }
 			NOT = { has_country_flag = generic_land_reform }
 			
 			#Not for colonial nations

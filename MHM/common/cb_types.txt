@@ -4172,7 +4172,7 @@ territorial_dispute = {
 			AND = { tag = MSY exists = MSY THIS = { tag = SNG } } AND = { tag = SNG exists = SNG THIS = { tag = MSY } } # Pedra Branca
 			AND = { tag = CAM exists = CAM THIS = { tag = THI } } AND = { tag = THI exists = THI THIS = { tag = CAM } } # Prachinburi 
 			AND = { tag = KUW exists = KUW THIS = { tag = SAA } } AND = { tag = SAA exists = SAA THIS = { tag = KUW } } # Qarooh
-			AND = { tag = PHI exists = PHI THIS = { tag = MSY } } AND = { tag = MSY exists = MSY THIS = { tag = PHI } } # Sabah
+			AND = { tag = PHL exists = PHL THIS = { tag = MSY } } AND = { tag = MSY exists = MSY THIS = { tag = PHL } } # Sabah
 			AND = { tag = UAE exists = UAE THIS = { tag = SAA } } AND = { tag = SAA exists = SAA THIS = { tag = UAE } } # Saudi Arabia–UAEborder dispute
 			AND = { tag = IRQ exists = IRQ THIS = { tag = PER } } AND = { tag = PER exists = PER THIS = { tag = IRQ } } # Shatt al-Arab
 			AND = { tag = LEB exists = LEB THIS = { tag = ISR } } AND = { tag = ISR exists = ISR THIS = { tag = LEB } } # Shebaa Farms

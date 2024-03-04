@@ -1901,6 +1901,23 @@ country_event = {
 			}
 		}
 		
+		#Remove all religious soldier pops in communist dictatorships
+		any_country	= {
+			limit = {
+				exists = yes
+				OR = {
+					government = proletarian_dictatorship
+					government = proletarian_dictatorship1
+				}
+				war = no
+			}
+			any_pop = {
+				limit = { type = soldiers NOT = { has_pop_religion = secularism } }
+				militancy = 10
+				pop_type = farmers
+			}
+		}
+		
 		#Concentration Camps
 		any_country = {
 			limit = {

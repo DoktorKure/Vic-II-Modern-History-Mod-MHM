@@ -140,7 +140,7 @@ political_decisions = {
 				}
 			}
 			pacific_metaregion = {
-				limit = { NOT = { is_core = IDO is_core = PHI is_core = BRU is_core = MSY is_core = JAP } }
+				limit = { NOT = { is_core = IDO is_core = PHL is_core = BRU is_core = MSY is_core = JAP } }
 				any_pop = {
 					reduce_pop = 1.25
 				}
@@ -593,7 +593,7 @@ political_decisions = {
 
 			#ASEAN members up to 2015
 			any_country = { 
-				limit = { OR = { tag = IDO tag = MSY tag = PHI tag = SNG tag = THI tag = BRU tag = DAI tag = BUR tag = CAM tag = LUA } }
+				limit = { OR = { tag = IDO tag = MSY tag = PHL tag = SNG tag = THI tag = BRU tag = DAI tag = BUR tag = CAM tag = LUA } }
 				set_country_flag = in_trade_block
 				set_country_flag = xan_ambition
 				tech_school = XAN_tech_school

@@ -9,7 +9,7 @@ country_event = {
 	
 	trigger = {
 		tag = USA
-		is_our_vassal = PHI
+		is_our_vassal = PHL
 		war = no
 	}
 
@@ -21,8 +21,8 @@ country_event = {
 		name = EVT_1011501_A # Philippine Independence
 		ai_chance = { factor = 0.9 }
 		prestige = 5
-		release_vassal = PHI
-		PHI = { government = democracy }
+		release_vassal = PHL
+		PHL = { government = democracy }
 	}
 	
 	option = {
@@ -36,7 +36,7 @@ country_event = {
 			consciousness = 4
 			militancy = 4
 		}
-		PHI = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
+		PHL = { add_country_modifier = { name = revolution_chaos duration = 3650 } }
 		badboy = 5
 		ai_chance = { factor = 0.1 }
 	}
@@ -50,7 +50,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    	tag = PHI
+    	tag = PHL
 	is_vassal = no
 	government = democracy
     	year = 1972 
@@ -82,7 +82,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = PHI
+    tag = PHL
     year = 1946 
 	NOT = { year = 1963 }
     is_vassal = no
@@ -102,7 +102,7 @@ country_event = {
   fire_only_once = yes
 
   trigger = {
-    tag = PHI
+    tag = PHL
     year = 1946 NOT = { year = 1952 }
     NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
     
@@ -126,7 +126,7 @@ fire_only_once = yes
 
 trigger = {
 NOT = { has_global_flag = 2015_start_date_flag }
-tag = PHI
+tag = PHL
 year = 2013
 is_vassal = no
 war = no

@@ -450,7 +450,7 @@ political_decisions = {
 
 			#ASEAN members up to 1992
 			any_country = { 
-				limit = { OR = { tag = IDO tag = MSY tag = PHI tag = SNG tag = THI tag = BRU } }
+				limit = { OR = { tag = IDO tag = MSY tag = PHL tag = SNG tag = THI tag = BRU } }
 				set_country_flag = xan_ambition
 				tech_school = XAN_tech_school
 				add_country_modifier = { name = asean_membership duration = -1 }

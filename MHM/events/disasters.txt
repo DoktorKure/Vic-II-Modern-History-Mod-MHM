@@ -1161,7 +1161,7 @@ province_event = {
 		owner = { NOT = { has_country_flag = disable_recurring_event_spam } }
 		is_coastal = yes
 		OR = { 
-			AND = { continent = asia OR = { is_core = IDO is_core = DAI is_core = PHI is_core = CHI is_core = KMT is_core = JAP } }
+			AND = { continent = asia OR = { is_core = IDO is_core = DAI is_core = PHL is_core = CHI is_core = KMT is_core = JAP } }
 			AND = { continent = oceania NOT = { is_core = AST is_core = NZL } }
 		}
 	}

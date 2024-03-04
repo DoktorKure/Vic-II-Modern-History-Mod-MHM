@@ -171,7 +171,7 @@ country_event = {
 						government = proletarian_dictatorship1 
 					} 
 				}
-				OR = { tag = IDO tag = PHI tag = SKO tag = MSY }
+				OR = { tag = IDO tag = PHL tag = SKO tag = MSY }
 				exists = yes
 			}
 
@@ -181,7 +181,7 @@ country_event = {
 
 
 		THI = { clr_country_flag = sea_economy_slow }
-		PHI = { clr_country_flag = sea_economy_slow }
+		PHL = { clr_country_flag = sea_economy_slow }
 		BUR = { clr_country_flag = sea_economy_slow }
 		IDO = { clr_country_flag = sea_economy_slow }
 
@@ -194,7 +194,7 @@ country_event = {
 		add_country_modifier = { name = stagflation duration = 3650 }
 
 		THI = { clr_country_flag = sea_economy_slow }
-		PHI = { clr_country_flag = sea_economy_slow }
+		PHL = { clr_country_flag = sea_economy_slow }
 		BUR = { clr_country_flag = sea_economy_slow }
 		IDO = { clr_country_flag = sea_economy_slow }
 
@@ -253,7 +253,7 @@ country_event = {
 
 }
 
-#Economic tuning - IDO, PHI, BUR, THI, ETH economies
+#Economic tuning - IDO, PHL, BUR, THI, ETH economies
 country_event = {
 	id = 1512008
 title = "Economic tuning"
@@ -263,11 +263,11 @@ title = "Economic tuning"
 fire_only_once = yes
 
 trigger = {
-OR = { tag = THI tag = IDO tag = PHI tag = BUR }
+OR = { tag = THI tag = IDO tag = PHL tag = BUR }
 ai = yes
 exists = THI
 exists = IDO
-exists = PHI
+exists = PHL
 exists = BUR
 }
 
@@ -278,7 +278,7 @@ months = 1
 option = {
 name = "Yes"
 THI = { set_country_flag = sea_economy_slow }
-PHI = { set_country_flag = sea_economy_slow }
+PHL = { set_country_flag = sea_economy_slow }
 BUR = { set_country_flag = sea_economy_slow }
 IDO = { set_country_flag = sea_economy_slow }
 ETH = { set_country_flag = economic_malaise set_country_flag = sea_economy_slow }
@@ -3170,7 +3170,7 @@ title = "The Tiger Cub Economies"
 
 trigger = {
 year = 1975
-OR = { tag = MSY tag = THI tag = PHI tag = IDO }
+OR = { tag = MSY tag = THI tag = PHL tag = IDO }
 economic_policy = state_capitalism
 flexible_exchange_rates = 1
 OR = { government = democracy government = presidential_dictatorship government = democracy1 government = hms_government government = hms_government1 }
@@ -8567,7 +8567,7 @@ country_event = {
 fire_only_once = yes
 
   trigger = {
-	tag = PHI
+	tag = PHL
 	war = no
 	is_vassal = no
 	year = 1986

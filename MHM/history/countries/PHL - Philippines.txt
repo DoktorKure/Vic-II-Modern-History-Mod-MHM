@@ -9,7 +9,7 @@ non_state_culture_literacy = 0.0
 civilized = yes
 prestige = 0
 last_election = 1944.4.1
-ruling_party = party_conservative_0_PHI
+ruling_party = party_conservative_0_PHL
 upper_house = {
 	populist = 4
 	liberal = 21
@@ -52,11 +52,11 @@ decolonization = 1
 consciousness = 0
 nonstate_consciousness = 0
 schools = army_tech_school
-oob = "/PHI_oob.txt"
+oob = "/PHL_oob.txt"
 
 1950.1.1 = {
 	government = democracy
-	oob = "1950/PHI_oob.txt"
+	oob = "1950/PHL_oob.txt"
 }
 
 1992.1.1 = {
@@ -69,7 +69,7 @@ oob = "/PHI_oob.txt"
 	non_state_culture_literacy = 0.05
 	civilized = yes
 	prestige = 60
-	ruling_party = party_conservative_0_PHI
+	ruling_party = party_conservative_0_PHL
 	upper_house = {
 		populist = 4
 		liberal = 21
@@ -153,5 +153,5 @@ oob = "/PHI_oob.txt"
 	anti_submarine_warfare = 1
 	command_of_the_sea = 1
 	sea_denial_strategy = 1
-oob = "1992/PHI_oob.txt"
+oob = "1992/PHL_oob.txt"
 }

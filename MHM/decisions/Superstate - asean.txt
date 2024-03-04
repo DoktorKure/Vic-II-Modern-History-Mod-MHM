@@ -8,7 +8,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			bank_for_international_settlements = 1
-			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
+			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHL tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
 			NOT = { has_country_flag = xan_ambition } 
 		}
 
@@ -94,7 +94,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = single_market } }
-			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
+			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHL tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
 		}
 
 		allow = {
@@ -115,7 +115,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = currency_union_province } }
-			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
+			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHL tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
 		}
 
 		allow = {
@@ -140,7 +140,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { is_core = XAN } }
-			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
+			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHL tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
 		}
 
 		allow = {
@@ -163,7 +163,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			NOT = { capital_scope = { has_province_modifier = defence_union } }
-			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
+			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHL tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
 		}
 
 		allow = {
@@ -189,7 +189,7 @@ political_decisions = {
 		potential = {
 			NOT = { has_country_flag = hide_superstate }
 			XAN = { exists = no }
-			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHI tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
+			OR = { tag = BUR tag = SVI tag = RAK tag = KAC tag = SHA tag = MOS tag = KAY tag = KYH tag = CHS tag = ROH tag = PAT tag = SWK tag = THI tag = MSY tag = IDO tag = DAI tag = CAM tag = TIM tag = LUA tag = BRU tag = SNG tag = PHL tag = ICU tag = FMS tag = SAB tag = ATJ tag = HKG tag = SUL tag = KLM tag = DYA tag = EID tag = MIN tag = WPA tag = ESM tag = YOG tag = SMU }
 		}
 
 		allow = {
