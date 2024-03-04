@@ -23,7 +23,7 @@ country_event = {
 			AND = {
 				has_global_flag = old_colonial_system
 				OR = {
-					is_possible_vassal = GUI 
+					is_possible_vassal = GUE 
 					is_possible_vassal = CAR
 					is_possible_vassal = MAU
 					is_possible_vassal = CHA
@@ -70,11 +70,11 @@ country_event = {
 				#French Guinea
 				random_list = {
 					80 = { 
-						release = GUI 
-						GUI = { set_country_flag = former_colonial_nation } 	
-						diplomatic_influence = { who = GUI value = 200 } 
+						release = GUE 
+						GUE = { set_country_flag = former_colonial_nation } 	
+						diplomatic_influence = { who = GUE value = 200 } 
 					}
-					20 = { GUI = { country_event = 989898 } }
+					20 = { GUE = { country_event = 989898 } }
 				}
 
 				#Create French dominions
@@ -102,13 +102,13 @@ country_event = {
 				#French Guinea
 				random_list = {
 					80 = { 
-						AOF = { release = GUI }
-						GUI = { set_country_flag = former_colonial_nation } 	
-						diplomatic_influence = { who = GUI value = 200 }
+						AOF = { release = GUE }
+						GUE = { set_country_flag = former_colonial_nation } 	
+						diplomatic_influence = { who = GUE value = 200 }
 					}
 					20 = {
-						AOF = { release = GUI }
-						GUI = { country_event = 989898 }
+						AOF = { release = GUE }
+						GUE = { country_event = 989898 }
 					}
 				}
 			}
@@ -175,7 +175,7 @@ country_event = {
 			}
 			owner = {
 				#West Africa
-				any_owned = { limit = { OR = { is_core = SEN is_core = MLI is_core = GUI is_core = BUF is_core = NIG is_core = BEN is_core = IVC is_core = MAU } } add_core = AOF }
+				any_owned = { limit = { OR = { is_core = SEN is_core = MLI is_core = GUE is_core = BUF is_core = NIG is_core = BEN is_core = IVC is_core = MAU } } add_core = AOF }
 				AOF = { civilized = yes }
 				release_vassal = AOF
 				
@@ -221,7 +221,7 @@ country_event = {
 			owner = {
 				AOF = {
 					government = mandate_government
-					any_owned = { limit = { OR = { is_core = SEN is_core = MLI is_core = GUI is_core = BUF is_core = NIG is_core = BEN is_core = IVC is_core = MAU } } add_core = AOF }
+					any_owned = { limit = { OR = { is_core = SEN is_core = MLI is_core = GUE is_core = BUF is_core = NIG is_core = BEN is_core = IVC is_core = MAU } } add_core = AOF }
 				}
 				
 				AEF = {

@@ -130,7 +130,7 @@ tag = PHL
 year = 2013
 is_vassal = no
 war = no
-is_possible_vassal = MIN
+is_possible_vassal = MID
 }
 
 mean_time_to_happen = { 
@@ -139,9 +139,9 @@ months = 8
 
 option = {
 name = "Crush the insurgency!"
-release = MIN
+release = MID
 war = {
-	target = MIN
+	target = MID
 	attacker_goal = { casus_belli = civil_war }
 	defender_goal = { casus_belli = become_independent }
 	call_ally = no
@@ -152,7 +152,7 @@ ai_chance = { factor = 0.9 }
 option = {
 name = "Grant independence to the Moro people"
 prestige = -50
-release = MIN
+release = MID
 ai_chance = { factor = 0.1 }
 		}
 

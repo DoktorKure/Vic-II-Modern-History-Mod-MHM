@@ -4134,7 +4134,7 @@ territorial_dispute = {
 			AND = { tag = UGA exists = UGA THIS = { tag = RWA } } AND = { tag = RWA exists = RWA THIS = { tag = UGA } } # Kabale District
 			AND = { tag = CNG exists = CNG THIS = { tag = ANG } } AND = { tag = ANG exists = ANG THIS = { tag = CNG } } # Kahemba
 			AND = { tag = BUR exists = BUR THIS = { tag = BEN } } AND = { tag = BEN exists = BEN THIS = { tag = BUR } } # Koualou
-			AND = { tag = IVC exists = IVC THIS = { tag = GUI } } AND = { tag = GUI exists = GUI THIS = { tag = IVC } } # Sipilou
+			AND = { tag = IVC exists = IVC THIS = { tag = GUE } } AND = { tag = GUE exists = GUE THIS = { tag = IVC } } # Sipilou
 			AND = { tag = SSU exists = SSU THIS = { tag = UGA } } AND = { tag = UGA exists = UGA THIS = { tag = SSU } } # Moyo District
 			AND = { tag = MLW exists = MLW THIS = { tag = TAN } } AND = { tag = TAN exists = TAN THIS = { tag = MLW } } # Lake Malawi
 			AND = { tag = GAB exists = GAB THIS = { tag = EQG } } AND = { tag = EQG exists = EQG THIS = { tag = GAB } } # Congas Island

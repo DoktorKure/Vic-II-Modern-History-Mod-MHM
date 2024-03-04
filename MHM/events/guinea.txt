@@ -8,8 +8,8 @@ country_event = {
 	trigger = {
 		tag = POR
 		year = 1970
-		exists = GUI
-		any_neighbor_country = { tag = GUI }
+		exists = GUE
+		any_neighbor_country = { tag = GUE }
 		war = no
 		government = nationalist_dictatorship
 		is_vassal = no
@@ -21,7 +21,7 @@ country_event = {
 		name = EVT_8006414_A
 		badboy = 2 
 		any_pop = { consciousness = 2 }
-		GUI = { country_event = 8006415 }
+		GUE = { country_event = 8006415 }
 		ai_chance = { factor = 0.9 }
 	}
 
