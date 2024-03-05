@@ -73,6 +73,7 @@ country_event = {
 		random = {
 			chance = 5
 			set_country_flag = deadly_epidemic_setting
+			country_event = 14120144
 		}
 		
 	}
@@ -101,6 +102,27 @@ country_event = {
 		
 	}
 	
+}
+
+#Deadly pandemic
+country_event = {
+	id = 14120144
+	title = "Deadly pandemic in $COUNTRY$!"
+	desc = "The emerging pandemic in $COUNTRY$ is proving to be both highly infectious and lethal to its hosts."
+	picture = "new_virus"
+
+	is_triggered_only = yes
+	
+	major = yes
+
+	option = {
+		name = "We must take strong measures against this threat!"
+		any_pop = { consciousness = 10 }
+		any_country = {
+			limit = { exists = yes }
+			any_pop = { consciousness = 10 }
+		}
+	}
 }
 
 #Virus spreading to different states
