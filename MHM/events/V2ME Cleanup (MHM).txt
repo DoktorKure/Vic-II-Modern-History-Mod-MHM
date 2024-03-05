@@ -1917,11 +1917,11 @@ country_event = {
 				pop_type = farmers
 			}
 		}
-		#Remove all soldier pops that don't belong to the state religion in theocracies
+		#Remove all soldier pops that don't belong to the state religion in theocracies or governments that are actively converting pops
 		any_country	= {
 			limit = {
 				exists = yes
-				government = theocracy
+				OR = { government = theocracy has_country_flag = religious_inquisition_active }
 				war = no
 			}
 			any_pop = {

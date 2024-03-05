@@ -4151,5 +4151,6 @@ country_event = {
 		any_pop = { scaled_consciousness = { factor = 1 issue = moralism } }
 		religion = secularism
 		clr_country_flag = desecularized
+		clr_country_flag = religious_inquisition_active
 	}
 }
