@@ -626,7 +626,6 @@ country_event = {
 		title = "The Fate of Manchukuo"
 		desc = "EVTDESC1281433"
 		picture = "japan_reparations"
-		mean_time_to_happen = { months = 1 }
 		fire_only_once = yes
 		trigger = {
 			tag = JAP
@@ -679,7 +678,6 @@ country_event = {
 		title = "The Fate of Indochina"
 		desc = "EVTDESC1281434"
 		picture = "japan_reparations"
-		mean_time_to_happen = { months = 1 }
 		fire_only_once = yes
 		trigger = {
 			tag = JAP
@@ -716,7 +714,6 @@ country_event = {
 		title = "The Fate of Inner Mongolia"
 		desc = "EVTDESC1281435"
 		picture = "japan_reparations"
-		mean_time_to_happen = { months = 1 }
 		fire_only_once = yes
 		trigger = {
 			tag = JAP
@@ -746,7 +743,6 @@ country_event = {
 		title = "The Fate of The Philippines"
 		desc = "EVTDESC1281436"
 		picture = "japan_reparations"
-		mean_time_to_happen = { months = 1 }
 		fire_only_once = yes
 		trigger = {
 			tag = JAP
@@ -774,85 +770,68 @@ country_event = {
 		title = "Reorganize the National Government"
 		desc = "EVTDESC1281437"
 		picture = "japan_reparations"
-		mean_time_to_happen = { months = 1 }
 		fire_only_once = yes
 		trigger = {
 			tag = JAP
 			KMT = { exists = no } 
-					any_province = { 
-						limit = {
-							OR = {
-							is_core = CHI
-							is_core = KMT 
-							}
-							NOT = { 
-								OR = { 
-								is_core = MCK 
-								is_core = TIB 
-								is_core = JAP 
-								is_core = IMN 
-								is_core = GGC 
-								is_core = KWA
-								is_core = XIG
-								} 
-							} 
-						} 
-					owned_by = JAP 
-					}
-				}
+			CHI = { exists = no } 
+			AND = { owns = 1612 owns = 2221 } #Beijing and Nanjing
+		}
 		option = {
 			name = "Create Reorganized China"
 			JAP = { all_core = { remove_core = KMT } }
 			TAI = { all_core = { remove_core = KMT } }
 			MCK = { all_core = { remove_core = KMT } }
+			2576 = { remove_core = KMT }
 			release_vassal = KMT
 			set_country_flag = japanese_china
 			KMT = { government = colonial_government }
-			}
 		}
+	}
 	country_event = {
 		id = 1281438
 		title = "Expand Reorganized China"
 		desc = "EVTDESC1281437"
 		picture = "japan_reparations"
-		mean_time_to_happen = { months = 1 }
 		fire_only_once = yes
 		trigger = {
 			tag = JAP
 			KMT = { exists = yes vassal_of = JAP } 
-					any_province = { 
-						limit = {
-							OR = {
-							is_core = CHI
-							is_core = KMT 
-							}
-						} 
-					owned_by = JAP 
-					}
+			any_owned_province = {
+				OR = {
+					is_core = CHI
+					is_core = KMT 
 				}
-		option = {
-			name = "Expand Reorganized China"
-			any_owned = { 
-						limit = { 
-						is_core = KMT 
-						}
-					secede_province = KMT
-				}
+				NOT = { is_core = JAP }
+				owned_by = JAP 
 			}
 		}
+		option = {
+			name = "Expand Reorganized China"
+			any_owned = {
+				limit = {
+					is_core = KMT 
+				}
+				secede_province = KMT
+			}
+		}
+	}
 	country_event = {
 		id = 1281439
 		title = "The Fate of the National Government"
 		desc = "EVTDESC1281439"
 		picture = "japan_reparations"
-		mean_time_to_happen = { months = 1 }
 		fire_only_once = yes
 		trigger = {
 			tag = JAP
 			has_country_flag = japanese_china
-			KMT = { exists = yes vassal_of = THIS all_core = { owned_by = KMT } }
+			KMT = {
+				exists = yes
+				government = colonial_government
+				all_core = { owned_by = KMT }
+			}
 			CHI = { exists = no }
-				}
+		}
 		option = {
 			name = "Turn this territory into a proper colony"
 			KMT = { all_core = { remove_core = JAP } civilized = no }
@@ -860,7 +839,7 @@ country_event = {
 			inherit = KMT
 			any_owned = { limit = { is_core = KMT } add_province_modifier = { name = nationalist_agitation duration = 36500 } }
 			set_country_flag = japanese_occupation_china
-			}
+		}
 		option = {
 			name = "Grant Reorganized China supreme authority"
 			KMT = { release = SHG release = HKG release = MCA }
@@ -871,14 +850,15 @@ country_event = {
 			HKG = { all_core = { add_core = JAP } }
 			MCA = { all_core = { add_core = JAP } }
 			set_country_flag = reorganized_china_favored
-			}
+		}
 		option = {
 			name = "The Manchus have proven loyal, place them in power."
-			KMT = { all_core = { add_core = MCK }
-					release = SHG
-					release = HKG
-					release = MCA
-						}
+			KMT = {
+				all_core = { add_core = MCK }
+				release = SHG
+				release = HKG
+				release = MCA
+			}
 			inherit = MCA
 			inherit = HKG
 			inherit = SHG
@@ -887,8 +867,8 @@ country_event = {
 			MCA = { all_core = { add_core = JAP } }
 			MCK = { inherit = KMT add_accepted_culture = chinese }
 			set_country_flag = manchus_favored
-			}
-		option = { 
+		}
+		option = {
 			name = "Force the decentralization of the administration."
 			KMT = {
 				release = TIB
@@ -932,14 +912,14 @@ country_event = {
 			MCA = { government = colonial_government }
 			HKG = { government = colonial_government }
 			set_country_flag = humiliated_national_china
-			}
 		}
+	}
+	
 	country_event = {
 		id = 1281440
 		title = "The Fate of Indonesia"
 		desc = "EVTDESC1281440"
 		picture = "japan_reparations"
-		mean_time_to_happen = { months = 1 }
 		fire_only_once = yes
 		trigger = {
 			tag = JAP
@@ -1090,7 +1070,6 @@ country_event = {
 		title = "The Fate of Alaska"
 		desc = "EVTDESC1281441"
 		picture = "japan_reparations"
-		mean_time_to_happen = { months = 1 }
 		fire_only_once = yes
 		trigger = {
 			tag = JAP
@@ -1118,7 +1097,6 @@ country_event = {
 		title = "The Fate of California"
 		desc = "EVTDESC1281442"
 		picture = "japan_reparations"
-		mean_time_to_happen = { months = 1 }
 		fire_only_once = yes
 		trigger = {
 			tag = JAP
