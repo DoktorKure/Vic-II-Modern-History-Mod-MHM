@@ -1917,6 +1917,19 @@ country_event = {
 				pop_type = farmers
 			}
 		}
+		#Remove all soldier pops that don't belong to the state religion in theocracies
+		any_country	= {
+			limit = {
+				exists = yes
+				government = theocracy
+				war = no
+			}
+			any_pop = {
+				limit = { type = soldiers OR = { has_pop_religion = secularism is_state_religion = no } }
+				militancy = 10
+				pop_type = farmers
+			}
+		}
 		
 		#Concentration Camps
 		any_country = {
