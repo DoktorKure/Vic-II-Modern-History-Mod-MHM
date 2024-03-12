@@ -701,7 +701,7 @@ nationalist_discourse = {
 	global_assimilation_rate = 0.15
 	non_accepted_pop_militancy_modifier = 0.02
 	global_pop_consciousness_modifier = -0.02
-	
+	global_population_growth = 0.001
 	tax_efficiency = 0.05
 }
 
@@ -1531,6 +1531,7 @@ populationsize_100M = {
 		}
 	}
 	research_points = 0.4
+	supply_consumption = -0.05
 }
 
 populationsize_200M = {
@@ -1541,6 +1542,7 @@ populationsize_200M = {
 		}
 	}
 	research_points = 0.6
+	supply_consumption = -0.05
 }
 populationsize_300M = {
 	trigger = {
@@ -1550,6 +1552,7 @@ populationsize_300M = {
 		}
 	}
 	research_points = 0.8
+	supply_consumption = -0.05
 }
 populationsize_400M = {
 	trigger = {
@@ -1559,6 +1562,7 @@ populationsize_400M = {
 		}
 	}
 	research_points = 1
+	supply_consumption = -0.05
 }
 populationsize_500M = {
 	trigger = {
@@ -1568,6 +1572,7 @@ populationsize_500M = {
 		}
 	}
 	research_points = 2
+	supply_consumption = -0.05
 }
 populationsize_600M = {
 	trigger = {
@@ -1577,6 +1582,7 @@ populationsize_600M = {
 		}
 	}
 	research_points = 3
+	supply_consumption = -0.05
 }
 populationsize_700M = {
 	trigger = {
@@ -1586,12 +1592,14 @@ populationsize_700M = {
 		}
 	}
 	research_points = 4
+	supply_consumption = -0.05
 }
 populationsize_800M = {
 	trigger = {
 		total_pops = 200000000
 	}
 	research_points = 5
+	supply_consumption = -0.05
 }
 
 ### Reduce supply consumption for large armies to deal with the 2K goods purchase cap ###

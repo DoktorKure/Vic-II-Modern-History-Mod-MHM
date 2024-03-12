@@ -580,6 +580,14 @@ country_event = {
 			}
 			owner = { SGF = { inherit = ROA } }
 		}
+		random_owned = {
+			limit = {
+				owner = {
+					exists = BAV
+				}
+			}
+			owner = { SGF = { inherit = BAV } }
+		}
 		create_vassal = SGF
 		
 		relation = { who = SGF value = 200 }

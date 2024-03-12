@@ -56,6 +56,48 @@ country_event = {
   
 }
 
+#1947 Spanish law of succession referendum
+country_event = {
+	id = 1512242
+	title = "1947 Law of Succession Referendum"
+	desc = EVTDESC1512242
+	picture = "king_franco"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SPA
+		government = nationalist_dictatorship
+		year = 1947
+		NOT = { year = 1990 }
+		NOT = { has_global_flag = 1950_start_date_flag }
+	}
+
+	mean_time_to_happen = { 
+		months = 3
+	}
+
+	option = {
+		name = "Appoint a King once the time comes!"
+		prestige = 10
+		set_country_flag = juan_carlos
+		ai_chance = { factor = 0.7 }
+	}
+
+	option = {
+		name = "I can't wait to be King"
+		government = absolute_monarchy
+		ruling_party_ideology = nationalist
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+		ai_chance = { factor = 0.2 }
+	}
+
+	option = {
+		name = "Monachism is evil!"
+		ai_chance = { factor = 0.1 }
+	}
+}
+
 #Technocracy
 country_event = {
 	id = 8014303

@@ -193,6 +193,20 @@ province_event = {
 			factor = 1.5
 			owner = { has_country_flag = who_alerted_to_new_virus }
 		}
+		
+		#Keeps events from being so unbearably spammy for large nations
+		modifier = {
+			factor = 1.25
+			owner = { number_of_states = 5 }
+		}
+		modifier = {
+			factor = 2
+			owner = { number_of_states = 10 }
+		}
+		modifier = {
+			factor = 4
+			owner = { number_of_states = 15 }
+		}
 
 	}
 

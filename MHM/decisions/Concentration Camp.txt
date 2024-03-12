@@ -12,6 +12,7 @@ political_decisions = {
 				government = sectarian_dictatorship				
 				government = nationalist_dictatorship 
 				government = presidential_dictatorship 
+				government = absolute_monarchy
 			}
 		}
 		
@@ -65,6 +66,7 @@ political_decisions = {
 							government = sectarian_dictatorship				
 							government = nationalist_dictatorship 
 							government = presidential_dictatorship 
+							government = absolute_monarchy
 						}
 					}
 				}

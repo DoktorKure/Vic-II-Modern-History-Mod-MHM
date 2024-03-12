@@ -1202,6 +1202,7 @@ fort = {
 	province = yes
 	one_per_state = yes
 	fort_level = 1
+	supply_limit = 5
 }
 
 # Ref. Gwadar Port

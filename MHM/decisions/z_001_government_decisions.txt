@@ -8673,7 +8673,7 @@ political_decisions = {
 		}
 		effect = {
 			prestige_factor = -0.02
-			money = 50000
+			money = 200000
 			add_tax_relative_income = 50
 			add_country_modifier = { name = superstate_bank_loan_requested duration = 913 }
 			

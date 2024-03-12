@@ -67,6 +67,8 @@ oob = "/KMT_oob.txt"
 1950.1.1 = {
 
 culture = taiwanese
+culture = chinese_hakka
+culture = chinese_hokkien
 #Conscription
 conscription_policy = two_year_draft
 

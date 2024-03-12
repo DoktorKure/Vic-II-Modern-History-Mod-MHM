@@ -664,7 +664,7 @@ country_event = {
 		KMT = { inherit = TAI }
 		
 		#Capital Taipei for the KMT
-		KMT = { capital = 1485 }
+		KMT = { capital = 1485 add_accepted_culture = taiwanese add_accepted_culture = chinese_hakka add_accepted_culture = chinese_hokkien }
 		
 		#End War with PRC and create another war
 		end_war = CHI
