@@ -65,14 +65,6 @@ country_event = {
 	option = {
 		name = "Encourage more population growth"
 		add_country_modifier = { name = four_children duration = 1825 }
-		
-		random_owned = { 
-			limit = { 
-				owner = { OR = { child_care = limited_child_care child_care = no_child_care } } 
-			}
-			owner = { social_reform = adequate_child_care }
-		}
-		
 		ai_chance = { factor = 0.9 }
 	}
 	

@@ -1904,8 +1904,8 @@ country_event = {
 			country_event = 800050
 			ruling_party_ideology = populist
 		
-			primary_culture = mestizo
-			add_accepted_culture = native_american_minor
+			primary_culture = native_american_minor
+			remove_accepted_culture = mestizo
 			remove_accepted_culture = white_spanish
 		}
 
@@ -1939,7 +1939,7 @@ country_event = {
 			consciousness = -8
 			militancy = -8
 		}
-		
+		country_event = 8012106
 		ai_chance = { factor = 0.1 }
 	}
 	

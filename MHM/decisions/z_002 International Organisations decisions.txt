@@ -329,8 +329,7 @@ political_decisions = {
 			is_vassal = no
 			war = no
 			election = no
-			OR = { government = socialist_democracy government = democracy government = democracy1 government = hms_government government = hms_government1 }
-			NOT = { OR = { ruling_party_ideology = traditionalist ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = communist } }
+			NOT = { has_country_modifier = international_pariah }
 		}
 		effect = {
 			set_country_flag = international_court_of_justice
@@ -344,13 +343,11 @@ political_decisions = {
 			NOT = { has_global_flag = nuclear_war }
 			NOT = { has_country_flag = hide_international_decisions }
 			has_country_flag = international_court_of_justice
-			NOT = { OR = { government = socialist_democracy government = democracy government = democracy1 government = hms_government government = hms_government1 } }
+			has_country_modifier = international_pariah
 		}
 		allow = {
 			war = no
 			election = no
-			NOT = { OR = { government = socialist_democracy government = democracy government = democracy1 government = hms_government government = hms_government1 } }
-			OR = { ruling_party_ideology = traditionalist ruling_party_ideology = nationalist ruling_party_ideology = populist ruling_party_ideology = communist }
 		}
 		effect = {
 			prestige = -25

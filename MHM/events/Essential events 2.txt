@@ -1115,6 +1115,8 @@ country_event = {
 		
 		#Own Port Arthur
 		1481 = { owned_by = RUS }
+		#Manchuria doesn't exist on the map
+		NOT = { exists = MCK }
 		
 		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		war = no
@@ -4266,6 +4268,25 @@ country_event = {
 				OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
 			}
 			clr_country_flag = sea_dispute_underway
+			random_owned = {
+				limit = {
+					has_province_modifier = sea_dispute_province
+					any_neighbor_province = {
+						owner = { tag = THIS }
+						has_province_modifier = sea_dispute_province
+					}
+				}
+				remove_province_modifier = sea_dispute_province
+				add_province_modifier = { name = sea_dispute_province_loser duration = -1 }
+				random_neighbor_province = {
+					limit = {
+						port = yes
+						owner = { tag = THIS }
+					}
+					remove_province_modifier = sea_dispute_province
+					add_province_modifier = { name = sea_dispute_province_victor duration = -1 }
+				}
+			}
 			country_event = 1412025
 		}
 	}
@@ -4295,6 +4316,25 @@ country_event = {
 					}
 				}
 				OR = { has_country_modifier = claim_200 has_country_modifier = claim_12 has_country_modifier = claim_24 }
+			}
+			random_owned = {
+				limit = {
+					has_province_modifier = sea_dispute_province
+					any_neighbor_province = {
+						owner = { tag = THIS }
+						has_province_modifier = sea_dispute_province
+					}
+				}
+				remove_province_modifier = sea_dispute_province
+				add_province_modifier = { name = sea_dispute_province_victor duration = -1 }
+				random_neighbor_province = {
+					limit = {
+						port = yes
+						owner = { tag = THIS }
+					}
+					remove_province_modifier = sea_dispute_province
+					add_province_modifier = { name = sea_dispute_province_loser duration = -1 }
+				}
 			}
 			clr_country_flag = sea_dispute_underway
 			country_event = 1412024

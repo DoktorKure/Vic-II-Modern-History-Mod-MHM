@@ -355,6 +355,8 @@ country_event = {
 		political_reform = minorities_equal_rights
 		political_reform = censored_publishing
 		political_reform = limited_meetings
+		
+		social_reform = on_request
 
 		ai_chance = { factor = 0.05 }
 	}
@@ -2410,6 +2412,15 @@ country_event = {
 		
 		#Soviet borders event
 		country_event = 14121799
+		
+		#Demographic problems post-collapse
+		add_country_modifier = { name = depressed_population duration = 7300 }
+		LAT = { add_country_modifier = { name = depressed_population duration = 7300 } }
+		LIT = { add_country_modifier = { name = depressed_population duration = 7300 } }
+		EST = { add_country_modifier = { name = depressed_population duration = 7300 } }
+		BYE = { add_country_modifier = { name = depressed_population duration = 7300 } }
+		UKR = { add_country_modifier = { name = depressed_population duration = 7300 } }
+		GEO = { add_country_modifier = { name = depressed_population duration = 7300 } }
 	}
 	
 }

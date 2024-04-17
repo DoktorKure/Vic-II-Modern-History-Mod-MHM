@@ -999,7 +999,7 @@ country_event = {
 		government = democracy
 		
 		#No support for working women
-		child_care = no_child_care
+		abortion = risk_to_health
 	}
 
 	mean_time_to_happen = { months = 6 }

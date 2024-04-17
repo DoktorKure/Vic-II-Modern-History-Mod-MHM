@@ -2,6 +2,7 @@ owner = SAF
 controller = SAF
 add_core = SAF
 add_core = VLS
+add_core = RSA
 trade_goods = copper
 life_rating = 30
 terrain = semi_desert_hills

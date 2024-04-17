@@ -3897,7 +3897,7 @@ political_decisions = {
 		picture = "urbanisation"
 		potential = {
 			NOT = { has_country_flag = hide_civil_decisions }
-			telephone_exchange = 1
+			decolonization = 1
 			OR = { 
 				AND = { 
 					NOT = { has_country_modifier = urbanisation } 
@@ -3913,6 +3913,7 @@ political_decisions = {
 			OR = { ai = no AND = { ai = yes NOT = { ruling_party_ideology = traditionalist } } }
 		}
 		effect = {
+			clr_country_flag = rural_focus
 			set_country_flag = urban_focus
 			remove_country_modifier = ruralisation
 			add_country_modifier = { name = urbanisation duration = -1 }
@@ -3925,7 +3926,7 @@ political_decisions = {
 		picture = "ruralisation"
 		potential = {
 			NOT = { has_country_flag = hide_civil_decisions }
-			telephone_exchange = 1
+			decolonization = 1
 			OR = { 
 				AND = { 
 					NOT = { has_country_modifier = urbanisation } 
@@ -3943,6 +3944,7 @@ political_decisions = {
 		effect = {
 			add_country_modifier = { name = ruralisation duration = -1 }
 			clr_country_flag = urban_focus
+			set_country_flag = rural_focus
 			remove_country_modifier = urbanisation
 		}
 		ai_will_do = { 
@@ -5408,7 +5410,7 @@ political_decisions = {
 			#Oppressed pops are not happy
 			any_pop = { limit = { NOT = { is_culture_group = THIS } } consciousness = 5 militancy = 5 }
 			
-			#Decision comes with public housing reforms and child care reforms
+			#Decision comes with public housing reforms
 			random_owned = {
 				limit = { owner = { public_housing_reform = low_public_housing } }
 				owner = { social_reform = acceptable_public_housing }
@@ -5422,17 +5424,18 @@ political_decisions = {
 				owner = { social_reform = minimal_public_housing }
 			}
 			
+			#Decision rolls back abortion reforms
 			random_owned = {
-				limit = { owner = { child_care = adequate_child_care } }
-				owner = { social_reform = good_child_care }
+				limit = { owner = { abortion = on_request } }
+				owner = { social_reform = economic_or_social }
 			}
 			random_owned = {
-				limit = { owner = { child_care = limited_child_care } }
-				owner = { social_reform = adequate_child_care }
+				limit = { owner = { abortion = economic_or_social } }
+				owner = { social_reform = fetal_impairment }
 			}
 			random_owned = {
-				limit = { owner = { child_care = no_child_care } }
-				owner = { social_reform = limited_child_care }
+				limit = { owner = { abortion = fetal_impairment } }
+				owner = { social_reform = rape_and_incest }
 			}
 		}
 

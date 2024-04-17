@@ -38,7 +38,7 @@ pensions = trinket_pensions
 education = weak_public_education
 health_care = trinket_health_care
 security_reform = weak_security
-child_care = no_child_care
+abortion = risk_to_health
 unemployment_subsidies = trinket_subsidies
 pollution = no_controls
 wage_reform = trinket_wage
@@ -130,7 +130,7 @@ public_meetings = no_meetings penal_system = capital_punishment
 	education = weak_public_education
 	health_care = low_health_care
 	security_reform = weak_security
-	child_care = limited_child_care
+	abortion = rape_and_incest
 	unemployment_subsidies = low_subsidies
 	pollution = low_envir
 	wage_reform = trinket_wage

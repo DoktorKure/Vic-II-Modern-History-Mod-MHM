@@ -200,6 +200,8 @@ country_event = { # Beria is Eliminated
 		political_reform = censored_publishing
 		political_reform = limited_meetings
 		
+		social_reform = on_request
+		
 		ai_chance = { factor = 0.95 }
 	}
 	
@@ -1287,6 +1289,8 @@ country_event = { # Elimination of Khrushchev - Stalinist
 		political_reform = minorities_equal_rights
 		political_reform = censored_publishing
 		political_reform = limited_meetings
+		
+		social_reform = on_request
 		
 		ai_chance = { factor = 0.7 }
 	}
@@ -2625,6 +2629,12 @@ country_event = { # Marshal Zhukov assassinated!
 		
 		set_country_flag = nikita_khrushchev
 		clr_country_flag = georgy_zhukov
+
+		political_reform = minorities_equal_rights
+		political_reform = censored_publishing
+		political_reform = limited_meetings
+		
+		social_reform = on_request
 	}
 }
 

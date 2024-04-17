@@ -1184,17 +1184,16 @@ social_reforms = {
 			}
 		}
 	}
-	child_care = {
+	abortion = {
 		next_step_only = yes
 		administrative = yes
-		no_child_care = {
-			global_population_growth = -0.001
-			factory_throughput = 0.05
+		risk_to_health = {
+			global_population_growth = 0.001
 			allow = {
 				NOT = { has_country_flag = gridlocked_legislature }
 			}
 		}
-		limited_child_care = {
+		rape_and_incest = {
 			factory_throughput = -0.05
 			global_immigrant_attract = 0.1
 			tax_efficiency = -0.01
@@ -1204,8 +1203,9 @@ social_reforms = {
 				NOT = { has_country_flag = gridlocked_legislature }
 			}
 		}
-		adequate_child_care = {
+		fetal_impairment = {
 			factory_throughput = -0.10
+			global_population_growth = -0.001
 			global_immigrant_attract = 0.2
 			tax_efficiency = -0.02
 			pension_level = 2
@@ -1220,9 +1220,8 @@ social_reforms = {
 				}
 			}
 		}
-		good_child_care = {
-			global_population_growth = 0.001
-			factory_throughput = -0.15
+		economic_or_social = {
+			global_population_growth = -0.003
 			global_immigrant_attract = 0.3
 			tax_efficiency = -0.03
 			pension_level = 3
@@ -1238,9 +1237,8 @@ social_reforms = {
 				}
 			}
 		}
-		generous_child_care = {
-			global_population_growth = 0.002
-			factory_throughput = -0.20
+		on_request = {
+			global_population_growth = -0.005
 			global_immigrant_attract = 0.4
 			tax_efficiency = -0.04
 			pension_level = 4

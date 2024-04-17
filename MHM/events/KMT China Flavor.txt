@@ -199,6 +199,11 @@ country_event = {
 		
 		#Does not own Port Arthur
 		1481 = { owned_by = RUS }
+		#Manchuria doesn't exist on the map or it's a vassal of THIS
+		OR = {
+			NOT = { exists = MCK }
+			MCK = { exists = yes vassal_of = THIS }
+		}
 		
 		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 		war = no
@@ -268,7 +273,18 @@ country_event = {
 	
 	option = {
 		name = "The port belongs to China."
-		1481 = { secede_province = CHI }
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = MCK } }
+			}
+			owner = { 1481 = { secede_province = CHI } }
+		}
+		random_owned = {
+			limit = {
+				owner = { exists = MCK }
+			}
+			owner = { 1481 = { secede_province = MCK } }
+		}
 		prestige_factor = 0.025
 		relation = { who = CHI value = 100 }
 		set_country_flag = returnofportarthur
@@ -277,7 +293,18 @@ country_event = {
 	
 	option = {
 		name = "Offer a sale of the territory."
-		1481 = { secede_province = CHI }
+		random_owned = {
+			limit = {
+				owner = { NOT = { exists = MCK } }
+			}
+			owner = { 1481 = { secede_province = CHI } }
+		}
+		random_owned = {
+			limit = {
+				owner = { exists = MCK }
+			}
+			owner = { 1481 = { secede_province = MCK } }
+		}
 		money = 100000
 		CHI = { money = -100000 }
 		prestige_factor = 0.015
@@ -1729,7 +1756,7 @@ country_event = {
 	
 }
 
-#Cede land to Shanxi Clique but only if they still exist
+#Cede land to Shanxi Clique
 country_event = {
 	id = 90912
 	title = "The Spoils of War"
@@ -1742,7 +1769,6 @@ country_event = {
 		tag = CHI
 		government = nationalist_dictatorship
 		ruling_party_ideology = nationalist
-		SXI = {	exists = yes }
 		has_global_flag = KMT_won_civil_war
 		1612 = { owned_by = CHI }
 	}
@@ -1752,7 +1778,14 @@ country_event = {
 	option = {
 		name = "We will deal with them another time, grant their demand."
 		prestige = 50
-		any_owned = { limit = { is_core = SXI } secede_province = SXI }
+		random_owned = {
+			limit = { owner = { NOT = { exists = SXI } } }
+			owner = { release_vassal = SXI SXI = { government = nationalist_dictatorship ruling_party_ideology = nationalist country_event = 800050 } }
+		}
+		random_owned = {
+			limit = { owner = { exists = SXI } }
+			owner = { any_owned = { limit = { is_core = SXI } secede_province = SXI } }
+		}
 		set_country_flag = return_of_fengtian
 		ai_chance = { factor = 0.7 }
 	}
@@ -1763,53 +1796,11 @@ country_event = {
 		badboy = 3
 		
 		#Shanxi gets pissed and breaks away
-		release_vassal = SXI
-		relation = { who = SXI value = -100 }
-		diplomatic_influence = { who = SXI value = -200 }
+		random_owned = {
+			limit = { owner = { exists = SXI } }
+			owner = { relation = { who = SXI value = -100 } diplomatic_influence = { who = SXI value = -200 } }
+		}
 		ai_chance = { factor = 0.2 }
-	}
-	
-	option = {
-		name = "The communists were just the first to fall!"
-		prestige = 250
-		badboy = 5
-		
-		#Release all KMT vassals as they get spooked by Chiang's treachery
-		any_country = {
-			limit = { AND = { tag = SXI exists = yes vassal_of = CHI } }
-			CHI = { release_vassal = SXI leave_alliance = SXI relation = { who = SXI value = -200 } diplomatic_influence = { who = SXI value = -400 } }
-		}
-		any_country = {
-			limit = { AND = { tag = QHA exists = yes vassal_of = CHI } }
-			CHI = { release_vassal = QHA leave_alliance = QHA relation = { who = QHA value = -200 } diplomatic_influence = { who = QHA value = -400 } }
-		}
-		any_country = {
-			limit = { AND = { tag = SZC exists = yes vassal_of = CHI } }
-			CHI = { release_vassal = SZC leave_alliance = SZC relation = { who = SZC value = -200 } diplomatic_influence = { who = SZC value = -400 } }
-		}
-		any_country = {
-			limit = { AND = { tag = GGX exists = yes vassal_of = CHI } }
-			CHI = { release_vassal = GGX leave_alliance = GGX relation = { who = GGX value = -200 } diplomatic_influence = { who = GGX value = -400 } }
-		}
-		any_country = {
-			limit = { AND = { tag = YNN exists = yes vassal_of = CHI } }
-			CHI = { release_vassal = YNN leave_alliance = YNN relation = { who = YNN value = -200 } diplomatic_influence = { who = YNN value = -400 } }
-		}
-		any_country = {
-			limit = { AND = { tag = XIJ exists = yes vassal_of = CHI } }
-			CHI = { release_vassal = XIJ leave_alliance = XIJ relation = { who = XIJ value = -200 } diplomatic_influence = { who = XIJ value = -400 } }
-		}
-		
-		SXI = {
-			war = {
-				target = CHI
-				attacker_goal = { casus_belli = annex_all_cores }
-				defender_goal = { casus_belli = civil_war }
-				call_ally = no
-			}
-		}
-		
-		ai_chance = { factor = 0.1 }
 	}
 }
 

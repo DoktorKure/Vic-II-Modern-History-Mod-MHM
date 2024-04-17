@@ -2846,7 +2846,7 @@ country_event = {
 						}
 					}
 				}
-				any_pop = { reduce_pop = 1.0018 }
+				any_pop = { reduce_pop = 1.0017 }
 			}
 		}
 		any_country = {
@@ -2870,7 +2870,7 @@ country_event = {
 						}
 					}
 				}
-				any_pop = { reduce_pop = 1.0013 }
+				any_pop = { reduce_pop = 1.0012 }
 			}
 		}
 		any_country = {
@@ -2893,7 +2893,7 @@ country_event = {
 						}
 					}
 				}
-				any_pop = { reduce_pop = 1.001 }
+				any_pop = { reduce_pop = 1.0005 }
 			}
 		}
 		any_country = {
@@ -2915,7 +2915,7 @@ country_event = {
 						}
 					}
 				}
-				any_pop = { reduce_pop = 0.999 }
+				any_pop = { reduce_pop = 0.9995 }
 			}
 		}
 		any_country = {
@@ -2936,17 +2936,43 @@ country_event = {
 						}
 					}
 				}
-				any_pop = { reduce_pop = 0.998 }
+				any_pop = { reduce_pop = 0.999 }
 			}
 		}
 		
-		### Natalism ###
+		### Muslim Fertility ###
+		any_country = {
+			limit = {
+				exists = yes
+				NOT = { has_global_flag = nuclear_winter }
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						has_crime = nuke_province
+					}
+				}
+				any_pop = {
+					limit = {
+						OR = { has_pop_religion = sunni has_pop_religion = ibad has_pop_religion = shiite }
+					}
+					reduce_pop = 1.0003
+				}
+			}
+		}
+		
+		### Natalism - population growth buff diminishes with each demographic transition stage ###
 		
 		#sectarian governments and other governments that are oppressive towards minorities grow only primary and accepted pops
 		any_country = {
 			limit = {
 				exists = yes
 				has_country_modifier = contraception_decay
+				NOT = { has_country_flag = demographic_transition_stage_2_flag }
+				NOT = { has_country_flag = demographic_transition_stage_3_flag }
+				NOT = { has_country_flag = demographic_transition_stage_4_flag }
+				NOT = { has_country_flag = demographic_transition_stage_5_flag }
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
 				OR = {
 					government = sectarian_dictatorship
 					AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
@@ -2973,6 +2999,11 @@ country_event = {
 			limit = {
 				exists = yes
 				has_country_modifier = contraception_decay
+				NOT = { has_country_flag = demographic_transition_stage_2_flag }
+				NOT = { has_country_flag = demographic_transition_stage_3_flag }
+				NOT = { has_country_flag = demographic_transition_stage_4_flag }
+				NOT = { has_country_flag = demographic_transition_stage_5_flag }
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
 				NOT = {
 					OR = {
 						government = sectarian_dictatorship
@@ -2991,6 +3022,296 @@ country_event = {
 					}
 				}
 				any_pop = { reduce_pop = 1.0017 }
+			}
+		}
+		
+		#sectarian governments and other governments that are oppressive towards minorities grow only primary and accepted pops
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = contraception_decay
+				has_country_flag = demographic_transition_stage_2_flag
+				NOT = { has_country_flag = demographic_transition_stage_3_flag }
+				NOT = { has_country_flag = demographic_transition_stage_4_flag }
+				NOT = { has_country_flag = demographic_transition_stage_5_flag }
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+				OR = {
+					government = sectarian_dictatorship
+					AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+				}
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							has_province_modifier = family_values1
+							has_province_modifier = natalism_1
+							has_crime = nuke_province
+						}
+					}
+				}
+				any_pop = {
+					limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
+					reduce_pop = 1.0014
+				}
+			}
+		}
+		#All others have a universal pop growth
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = contraception_decay
+				has_country_flag = demographic_transition_stage_2_flag
+				NOT = { has_country_flag = demographic_transition_stage_3_flag }
+				NOT = { has_country_flag = demographic_transition_stage_4_flag }
+				NOT = { has_country_flag = demographic_transition_stage_5_flag }
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+				NOT = {
+					OR = {
+						government = sectarian_dictatorship
+						AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+					}
+				}
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							has_province_modifier = family_values1
+							has_province_modifier = natalism_1
+							has_crime = nuke_province
+						}
+					}
+				}
+				any_pop = { reduce_pop = 1.0014 }
+			}
+		}
+		
+		#sectarian governments and other governments that are oppressive towards minorities grow only primary and accepted pops
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = contraception_decay
+				has_country_flag = demographic_transition_stage_3_flag
+				NOT = { has_country_flag = demographic_transition_stage_4_flag }
+				NOT = { has_country_flag = demographic_transition_stage_5_flag }
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+				OR = {
+					government = sectarian_dictatorship
+					AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+				}
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							has_province_modifier = family_values1
+							has_province_modifier = natalism_1
+							has_crime = nuke_province
+						}
+					}
+				}
+				any_pop = {
+					limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
+					reduce_pop = 1.0011
+				}
+			}
+		}
+		#All others have a universal pop growth
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = contraception_decay
+				has_country_flag = demographic_transition_stage_3_flag
+				NOT = { has_country_flag = demographic_transition_stage_4_flag }
+				NOT = { has_country_flag = demographic_transition_stage_5_flag }
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+				NOT = {
+					OR = {
+						government = sectarian_dictatorship
+						AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+					}
+				}
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							has_province_modifier = family_values1
+							has_province_modifier = natalism_1
+							has_crime = nuke_province
+						}
+					}
+				}
+				any_pop = { reduce_pop = 1.0011 }
+			}
+		}
+		
+		#sectarian governments and other governments that are oppressive towards minorities grow only primary and accepted pops
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = contraception_decay
+				has_country_flag = demographic_transition_stage_4_flag
+				NOT = { has_country_flag = demographic_transition_stage_5_flag }
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+				OR = {
+					government = sectarian_dictatorship
+					AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+				}
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							has_province_modifier = family_values1
+							has_province_modifier = natalism_1
+							has_crime = nuke_province
+						}
+					}
+				}
+				any_pop = {
+					limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
+					reduce_pop = 1.0008
+				}
+			}
+		}
+		#All others have a universal pop growth
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = contraception_decay
+				has_country_flag = demographic_transition_stage_4_flag
+				NOT = { has_country_flag = demographic_transition_stage_5_flag }
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+				NOT = {
+					OR = {
+						government = sectarian_dictatorship
+						AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+					}
+				}
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							has_province_modifier = family_values1
+							has_province_modifier = natalism_1
+							has_crime = nuke_province
+						}
+					}
+				}
+				any_pop = { reduce_pop = 1.0008 }
+			}
+		}
+		
+		#sectarian governments and other governments that are oppressive towards minorities grow only primary and accepted pops
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = contraception_decay
+				has_country_flag = demographic_transition_stage_5_flag
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+				OR = {
+					government = sectarian_dictatorship
+					AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+				}
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							has_province_modifier = family_values1
+							has_province_modifier = natalism_1
+							has_crime = nuke_province
+						}
+					}
+				}
+				any_pop = {
+					limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
+					reduce_pop = 1.0005
+				}
+			}
+		}
+		#All others have a universal pop growth
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = contraception_decay
+				has_country_flag = demographic_transition_stage_5_flag
+				NOT = { has_country_flag = demographic_transition_stage_6_flag }
+				NOT = {
+					OR = {
+						government = sectarian_dictatorship
+						AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+					}
+				}
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							has_province_modifier = family_values1
+							has_province_modifier = natalism_1
+							has_crime = nuke_province
+						}
+					}
+				}
+				any_pop = { reduce_pop = 1.0005 }
+			}
+		}
+		
+		#sectarian governments and other governments that are oppressive towards minorities grow only primary and accepted pops
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = contraception_decay
+				has_country_flag = demographic_transition_stage_6_flag
+				OR = {
+					government = sectarian_dictatorship
+					AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+				}
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							has_province_modifier = family_values1
+							has_province_modifier = natalism_1
+							has_crime = nuke_province
+						}
+					}
+				}
+				any_pop = {
+					limit = { OR = { is_primary_culture = yes is_accepted_culture = yes } }
+					reduce_pop = 1.0003
+				}
+			}
+		}
+		#All others have a universal pop growth
+		any_country = {
+			limit = {
+				exists = yes
+				has_country_modifier = contraception_decay
+				has_country_flag = demographic_transition_stage_6_flag
+				NOT = {
+					OR = {
+						government = sectarian_dictatorship
+						AND = { minorities_reform = minorities_oppression NOT = { citizenship_policy = full_citizenship } }
+					}
+				}
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						OR = {
+							has_province_modifier = family_values1
+							has_province_modifier = natalism_1
+							has_crime = nuke_province
+						}
+					}
+				}
+				any_pop = { reduce_pop = 1.0003 }
 			}
 		}
 		

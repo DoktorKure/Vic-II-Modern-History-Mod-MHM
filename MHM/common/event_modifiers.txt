@@ -3248,7 +3248,30 @@ icon = 6
 sea_dispute = {
 RGO_throughput = -0.05
 prestige = -0.01
-icon = 6
+icon = 30
+}
+
+sea_dispute_delay_timer = {
+	icon = 43
+}
+
+sea_dispute_province = {
+prestige = -0.01
+icon = 32
+}
+
+sea_dispute_province_victor = {
+prestige = 0.01
+local_RGO_throughput = 0.10
+local_RGO_output = 0.10
+icon = 31
+}
+
+sea_dispute_province_loser = {
+prestige = -0.01
+local_RGO_throughput = -0.10
+local_RGO_output = -0.10
+icon = 32
 }
 
 isa_member = {

@@ -3957,7 +3957,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = jewish } } }
-				religion = jewish
+				OR = {
+					pop_majority_religion = jewish
+					AND = {
+						pop_majority_religion = secularism religion = jewish
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = jewish }
 		}
@@ -3967,7 +3972,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = protestant } } }
-				religion = protestant
+				OR = {
+					pop_majority_religion = protestant
+					AND = {
+						pop_majority_religion = secularism religion = protestant
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = protestant }
 		}
@@ -3977,7 +3987,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = catholic } } }
-				religion = catholic
+				OR = {
+					pop_majority_religion = catholic
+					AND = {
+						pop_majority_religion = secularism religion = catholic
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = catholic }
 		}
@@ -3987,7 +4002,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = orthodox } } }
-				religion = orthodox
+				OR = {
+					pop_majority_religion = orthodox
+					AND = {
+						pop_majority_religion = secularism religion = orthodox
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = orthodox }
 		}
@@ -3997,7 +4017,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = coptic } } }
-				religion = coptic
+				OR = {
+					pop_majority_religion = coptic
+					AND = {
+						pop_majority_religion = secularism religion = coptic
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = coptic }
 		}
@@ -4007,7 +4032,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = ibad } } }
-				religion = ibad
+				OR = {
+					pop_majority_religion = ibad
+					AND = {
+						pop_majority_religion = secularism religion = ibad
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = ibad }
 			set_country_flag = muslim
@@ -4018,7 +4048,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = mennonite } } }
-				religion = mennonite
+				OR = {
+					pop_majority_religion = mennonite
+					AND = {
+						pop_majority_religion = secularism religion = mennonite
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = mennonite }
 		}
@@ -4028,7 +4063,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = sunni } } }
-				religion = sunni
+				OR = {
+					pop_majority_religion = sunni
+					AND = {
+						pop_majority_religion = secularism religion = sunni
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = sunni }
 			set_country_flag = muslim
@@ -4039,7 +4079,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = shiite } } }
-				religion = shiite
+				OR = {
+					pop_majority_religion = shiite
+					AND = {
+						pop_majority_religion = secularism religion = shiite
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = shiite }
 			set_country_flag = muslim
@@ -4050,7 +4095,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = druze } } }
-				religion = druze
+				OR = {
+					pop_majority_religion = druze
+					AND = {
+						pop_majority_religion = secularism religion = druze
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = druze }
 		}
@@ -4060,7 +4110,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = buddhist } } }
-				religion = buddhist
+				OR = {
+					pop_majority_religion = buddhist
+					AND = {
+						pop_majority_religion = secularism religion = buddhist
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = buddhist }
 		}
@@ -4070,7 +4125,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = hindu } } }
-				religion = hindu
+				OR = {
+					pop_majority_religion = hindu
+					AND = {
+						pop_majority_religion = secularism religion = hindu
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = hindu }
 		}
@@ -4080,7 +4140,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = taoism } } }
-				religion = taoism
+				OR = {
+					pop_majority_religion = taoism
+					AND = {
+						pop_majority_religion = secularism religion = taoism
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = taoism }
 		}
@@ -4090,7 +4155,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = shinto } } }
-				religion = shinto
+				OR = {
+					pop_majority_religion = shinto
+					AND = {
+						pop_majority_religion = secularism religion = shinto
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = shinto }
 		}
@@ -4100,7 +4170,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = sikh } } }
-				religion = sikh
+				OR = {
+					pop_majority_religion = sikh
+					AND = {
+						pop_majority_religion = secularism religion = sikh
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = sikh }
 		}
@@ -4110,7 +4185,12 @@ country_event = {
 				location = { has_province_modifier = religion_flag }
 				is_primary_culture = yes
 				country = { capital_scope = { any_pop = { is_primary_culture = yes religion = animist } } }
-				religion = animist
+				OR = {
+					pop_majority_religion = animist
+					AND = {
+						pop_majority_religion = secularism religion = animist
+					}
+				}
 			}
 			random_country = { limit = { tag = THIS } religion = animist }
 		}

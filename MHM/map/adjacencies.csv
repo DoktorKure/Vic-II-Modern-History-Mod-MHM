@@ -118,7 +118,7 @@ From;To;Type;Through;Data;Comment
 1482;3342;sea;2825;0;Taiwan Strait
 3342;3343;sea;2825;0;Taiwan Strait
 2562;3343;sea;2825;0;Taiwan Strait
-1495;1499;sea;2823;0;Hainan Strait
+2646;1499;sea;2823;0;Hainan Strait
 1452;1454;sea;2826;0;Biak Strait
 1457;1461;sea;2849;0;Tacloban Strait
 1640;1660;land;2843;0;Fukuoka Strait
@@ -182,7 +182,7 @@ From;To;Type;Through;Data;Comment
 #
 1326;1589;impassable;0;0;scary mountain
 1326;1592;impassable;0;0;scary mountain
-1328;1589;impassable;0;0;scary mountain
+#1328;1589;impassable;0;0;scary mountain #Sikkim
 1329;1589;impassable;0;0;scary mountain
 1329;1590;impassable;0;0;scary mountain
 1329;1593;impassable;0;0;scary mountain
@@ -196,8 +196,10 @@ From;To;Type;Through;Data;Comment
 1226;1594;impassable;0;0;scary mountain
 1210;1594;impassable;0;0;scary mountain
 1208;1594;impassable;0;0;scary mountain
+1591;1598;impassable;0;0;scary mountain #Khotan-Changtang to emphasize importance of Aksai Chin
+1210;1225;impassable;0;0;scary mountain
 
-#1226;3281;impassable;0;0;scary mountain
+2208;2253;impassable;0;0;scary mountain #Darien Gap
 
 #Alps
 

@@ -2819,7 +2819,7 @@ country_event = {
 			}
 			add_casus_belli = {
 				target = THIS
-				type = dismantle_cb
+				type = humiliate
 				months = 12
 			}
 		}

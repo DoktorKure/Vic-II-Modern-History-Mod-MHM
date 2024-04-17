@@ -8,6 +8,7 @@ country_event = {
 	trigger = {
 		has_country_flag = new_war
 		NOT = { has_country_modifier = new_war }
+		war = yes
 	}
 	
 	option = {
@@ -27,6 +28,7 @@ country_event = {
 	trigger = {
 		has_country_flag = prolonged_war_1
 		NOT = { has_country_modifier = prolonged_war_1 }
+		war = yes
 	}
 	
 	option = {
@@ -46,6 +48,7 @@ country_event = {
 	trigger = {
 		has_country_flag = prolonged_war_2
 		NOT = { has_country_modifier = prolonged_war_2 }
+		war = yes
 	}
 	
 	option = {
@@ -65,6 +68,7 @@ country_event = {
 	trigger = {
 		has_country_flag = prolonged_war_3
 		NOT = { has_country_modifier = prolonged_war_3 }
+		war = yes
 	}
 	
 	option = {
@@ -84,6 +88,7 @@ country_event = {
 	trigger = {
 		has_country_flag = prolonged_war_4
 		NOT = { has_country_modifier = prolonged_war_4 }
+		war = yes
 	}
 	
 	option = {
@@ -103,6 +108,7 @@ country_event = {
 	trigger = {
 		has_country_flag = prolonged_war_5
 		NOT = { has_country_modifier = prolonged_war_5 }
+		war = yes
 	}
 	
 	option = {
@@ -122,6 +128,7 @@ country_event = {
 	trigger = {
 		has_country_flag = prolonged_war_6
 		NOT = { has_country_modifier = prolonged_war_6 }
+		war = yes
 	}
 	
 	option = {
@@ -141,6 +148,7 @@ country_event = {
 	trigger = {
 		has_country_flag = prolonged_war_7
 		NOT = { has_country_modifier = prolonged_war_7 }
+		war = yes
 	}
 	
 	option = {
@@ -160,6 +168,7 @@ country_event = {
 	trigger = {
 		has_country_flag = prolonged_war_8
 		NOT = { has_country_modifier = prolonged_war_8 }
+		war = yes
 	}
 	
 	option = {
@@ -179,6 +188,7 @@ country_event = {
 	trigger = {
 		has_country_flag = prolonged_war_9
 		NOT = { has_country_modifier = prolonged_war_9 }
+		war = yes
 	}
 	
 	option = {
@@ -186,5 +196,64 @@ country_event = {
 		clr_country_flag = prolonged_war_9
 		set_country_flag = prolonged_war_10
 		add_country_modifier = { name = prolonged_war_10 duration = -1 }
+	}
+}
+
+country_event = {
+	id = 1300046
+	title = "The End of Prolonged War"
+	desc = "As we are no longer at war, we are now recovering from its effects."
+	picture = "war_fatigue"
+
+	trigger = {
+		OR = {
+			has_country_flag = new_war
+			has_country_flag = prolonged_war_1
+			has_country_modifier = prolonged_war_1
+			has_country_flag = prolonged_war_2
+			has_country_modifier = prolonged_war_2
+			has_country_flag = prolonged_war_3
+			has_country_modifier = prolonged_war_3
+			has_country_flag = prolonged_war_4
+			has_country_modifier = prolonged_war_4
+			has_country_flag = prolonged_war_5
+			has_country_modifier = prolonged_war_5
+			has_country_flag = prolonged_war_6
+			has_country_modifier = prolonged_war_6
+			has_country_flag = prolonged_war_7
+			has_country_modifier = prolonged_war_7
+			has_country_flag = prolonged_war_8
+			has_country_modifier = prolonged_war_8
+			has_country_flag = prolonged_war_9
+			has_country_modifier = prolonged_war_9
+			has_country_flag = prolonged_war_10
+			has_country_modifier = prolonged_war_10
+		}
+		war = no
+	}
+	
+	option = {
+		name = "We have persevered!"
+		clr_country_flag = new_war
+		clr_country_flag = prolonged_war_1
+		remove_country_modifier = prolonged_war_1
+		clr_country_flag = prolonged_war_2
+		remove_country_modifier = prolonged_war_2
+		clr_country_flag = prolonged_war_3
+		remove_country_modifier = prolonged_war_3
+		clr_country_flag = prolonged_war_4
+		remove_country_modifier = prolonged_war_4
+		clr_country_flag = prolonged_war_5
+		remove_country_modifier = prolonged_war_5
+		clr_country_flag = prolonged_war_6
+		remove_country_modifier = prolonged_war_6
+		clr_country_flag = prolonged_war_7
+		remove_country_modifier = prolonged_war_7
+		clr_country_flag = prolonged_war_8
+		remove_country_modifier = prolonged_war_8
+		clr_country_flag = prolonged_war_9
+		remove_country_modifier = prolonged_war_9
+		clr_country_flag = prolonged_war_10
+		remove_country_modifier = prolonged_war_10
 	}
 }

@@ -1198,7 +1198,7 @@ guiTypes = {
 		}
 		
 		windowType = {
-			name = "child_care"
+			name = "abortion"
 			backGround =""
 			position = { x = 382 y = 458 }
 			size = { x=310 y=100 }
@@ -1210,7 +1210,7 @@ guiTypes = {
 			
 			iconType = {
 			 name = "politics_maxwork"
-			 spriteType = "GFX_politics_childlabor"
+			 spriteType = "GFX_politics_feminism"
 			 position = { x= 10 y = 6 } #WAS { x= 7 y = 7 }
 			 Orientation = "UPPER_LEFT"
 		 }

@@ -4076,15 +4076,15 @@ rehabilitation = {
 		modifier = { factor = 1.25 unemployment = 0.25 }
 	}
 
-# child_care
-	# no_child_care
-	no_child_care = {
+# abortion
+	# risk_to_health
+	risk_to_health = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = no_child_care }
+			NOT = { is_next_reform = risk_to_health }
 		}
 		
 		#Rollback gang
@@ -4108,13 +4108,13 @@ rehabilitation = {
 		modifier = { factor = 1.05 unemployment = 0.20 }
 		modifier = { factor = 1.05 unemployment = 0.25 }
 	}
-	limited_child_care = {
+	rape_and_incest = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = limited_child_care }
+			NOT = { is_next_reform = rape_and_incest }
 		}
 		
 		#Rollback gang
@@ -4138,13 +4138,13 @@ rehabilitation = {
 		modifier = { factor = 1.05 unemployment = 0.20 }
 		modifier = { factor = 1.05 unemployment = 0.25 }
 	}
-	adequate_child_care = {
+	fetal_impairment = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = adequate_child_care }
+			NOT = { is_next_reform = fetal_impairment }
 		}
 		
 		#Rollback gang
@@ -4168,13 +4168,13 @@ rehabilitation = {
 		modifier = { factor = 1.05 unemployment = 0.20 }
 		modifier = { factor = 1.05 unemployment = 0.25 }
 	}
-	good_child_care = {
+	economic_or_social = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = good_child_care }
+			NOT = { is_next_reform = economic_or_social }
 		}
 		
 		#Rollback gang
@@ -4199,13 +4199,13 @@ rehabilitation = {
 		modifier = { factor = 1.05 unemployment = 0.25 }
 		
 	}
-	generous_child_care = {
+	on_request = {
 		factor = 1
 		
 		#Not next reform
 		modifier = { 
 			factor = 0 
-			NOT = { is_next_reform = generous_child_care }
+			NOT = { is_next_reform = on_request }
 		}
 		
 		#Rollback gang

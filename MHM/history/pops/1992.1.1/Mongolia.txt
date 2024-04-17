@@ -606,9 +606,14 @@
 		size = 727
 	 } 
 	farmers = {
-		culture = kazak
-		religion = sunni 
-		size = 20344
+		culture = mongol
+		religion = buddhist 
+		size = 12100
+	 } 
+	farmers = {
+		culture = mongol
+		religion = secularism
+		size = 12100
 	 } 
 }
 #Bulgan - Bulgan (167000/41750 POPS)
@@ -817,13 +822,8 @@
 		size = 1184
 	 } 
 	farmers = {
-		culture = mongol
-		religion = buddhist 
-		size = 12100
-	 } 
-	farmers = {
-		culture = mongol
-		religion = secularism
-		size = 12100
+		culture = kazak
+		religion = sunni 
+		size = 20344
 	 } 
 }

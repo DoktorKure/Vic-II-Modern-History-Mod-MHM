@@ -38,7 +38,7 @@ country_event = {
 		has_global_flag = blocsenabled
 	}
 
-	mean_time_to_happen = { months = 1 }
+	#mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = "Favor turnover to the KMT as we withdraw, but keep Port Arthur"
@@ -101,7 +101,25 @@ country_event = {
 			automobiles = 1000
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.8 }
+
+	}
+
+	option = {
+		name = "Create a Manchurian buffer state and keep Port Arthur"
+		badboy = 5
+		#Relations boost and loss
+		relation = { who = MGL value = 50 } #Mongolia is happy to see a weakened China
+		relation = { who = KMT value = -100 }
+		relation = { who = CHI value = -100 }
+		relation = { who = USA value = -100 }
+		
+		CHI = { release = MCK }
+		create_vassal = MCK
+		MCK = { government = proletarian_dictatorship country_event = 800052 ruling_party_ideology = communist }
+		diplomatic_influence = { who = MCK value = 200 }
+		
+		ai_chance = { factor = 0.1 }
 
 	}
   
@@ -775,31 +793,6 @@ country_event = {
 		random_owned = {
 			limit = { owner = { is_our_vassal = TAI } }
 			owner = { inherit = TAI }
-		}
-		
-		random_owned = {
-			limit = { owner = { is_our_vassal = SXI } }
-			owner = { release_vassal = SXI }
-		}
-		random_owned = {
-			limit = { owner = { is_our_vassal = GGX } }
-			owner = { release_vassal = GGX }
-		}
-		random_owned = {
-			limit = { owner = { is_our_vassal = QHA } }
-			owner = { release_vassal = QHA }
-		}
-		random_owned = {
-			limit = { owner = { is_our_vassal = SZC } }
-			owner = { release_vassal = SZC }
-		}
-		random_owned = {
-			limit = { owner = { is_our_vassal = YNN } }
-			owner = { release_vassal = YNN }
-		}
-		random_owned = {
-			limit = { owner = { is_our_vassal = XIJ } }
-			owner = { release_vassal = XIJ }
 		}
 		
 		CHI = { government = nationalist_dictatorship } #So the tag switch will have the normal color instead of the communist color
