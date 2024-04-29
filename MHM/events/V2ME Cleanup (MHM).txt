@@ -1901,10 +1901,11 @@ country_event = {
 			}
 		}
 		
-		#Remove all religious soldier pops in communist dictatorships
+		#Remove all religious soldier pops in communist dictatorships unless they're in Muslim countries
 		any_country	= {
 			limit = {
 				exists = yes
+				NOT = { has_country_flag = muslim }
 				OR = {
 					government = proletarian_dictatorship
 					government = proletarian_dictatorship1

@@ -730,23 +730,6 @@ country_event = {
 		prestige = 1000
 		badboy = -20
 		
-		#Communism has failed
-		any_pop = {
-			ideology = {
-				factor = 0.3
-				value = liberal
-			}
-		}
-		any_country = {
-			limit = { exists = yes }
-			any_pop = {
-				ideology = {
-					factor = 0.3
-					value = liberal
-				}
-			}
-		}
-		
 		#Communism has failed, but ideology support depends on regime in USA
 		#Any kind of democratic USA gets liberal boost
 		random_owned = {
