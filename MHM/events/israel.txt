@@ -1171,8 +1171,6 @@ country_event = {
 		owns = 916 # Haifa
 	}
 
-	mean_time_to_happen = { months = 1 }
-
 	option = {
 		name = EVT_8007669_A
 		916 = { any_pop = { limit = { religion = orthodox } move_pop = 913 } } # Beirut
@@ -1184,6 +1182,7 @@ country_event = {
 		3347 = { any_pop = { limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } strata = poor } move_pop = 920 } } # Gaza
 		3349 = { any_pop = { limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } strata = poor } move_pop = 920 } }
 		3348 = { any_pop = { limit = { OR = { is_culture_group = arabic is_culture_group = regional_arabic_1 } strata = poor } move_pop = 918 } } # West Bank
+		set_country_flag = nakba_event_fired
 	}
 }
 
@@ -2522,21 +2521,20 @@ country_event = {
 		owns = 919 # Tel Aviv
 		owns = 921 # Southern District
 		owns = 916 # Haifa
+		has_country_flag = nakba_event_fired
 	}
-
-	mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = EVT_8007670_A
 		any_pop = { limit = { culture = haredim_jewish } reduce_pop = 1.4 }
 		POL = { any_pop = { limit = { culture = jewish NOT = { strata = rich } } move_pop = 919 } }
-		ROM = { any_pop = { limit = { culture = jewish } move_pop = 919 } }
-		MOR = { any_pop = { limit = { culture = jewish } move_pop = 919 } }
-		IRQ = { any_pop = { limit = { culture = jewish } move_pop = 916 } }
-		YEM = { any_pop = { limit = { culture = jewish } move_pop = 921 } }
-		TUN = { any_pop = { limit = { culture = jewish } move_pop = 916 } }
-		LBY = { any_pop = { limit = { culture = jewish } move_pop = 916 } }
-		EGY = { any_pop = { limit = { culture = jewish } move_pop = 916 } }
+		ROM = { any_pop = { limit = { culture = jewish } move_pop = 3346 } }
+		MOR = { any_pop = { limit = { culture = jewish } move_pop = 3348 } }
+		IRQ = { any_pop = { limit = { culture = jewish } move_pop = 3348 } }
+		YEM = { any_pop = { limit = { culture = jewish } move_pop = 3347 } }
+		TUN = { any_pop = { limit = { culture = jewish } move_pop = 3346 } }
+		LBY = { any_pop = { limit = { culture = jewish } move_pop = 3349 } }
+		EGY = { any_pop = { limit = { culture = jewish } move_pop = 3349 } }
 	}
 }
 
@@ -2723,6 +2721,7 @@ country_event = {
 	}
 }
 
+#Aliyah
 country_event = {
   id = 8001949
   title = EVT_8001949_NAME
@@ -2738,18 +2737,16 @@ country_event = {
 		war = no
 	}
 
-	mean_time_to_happen = { months = 1 }
-
 	option = {
 		name = EVT_8001949_A
 		POL = { any_pop = { limit = { culture = jewish NOT = { strata = rich } } move_pop = 919 } }
 		ROM = { any_pop = { limit = { culture = jewish } move_pop = 919 } }
-		MOR = { any_pop = { limit = { culture = jewish } move_pop = 919 } }
+		MOR = { any_pop = { limit = { culture = jewish } move_pop = 3345 } }
 		IRQ = { any_pop = { limit = { culture = jewish } move_pop = 916 } }
 		YEM = { any_pop = { limit = { culture = jewish } move_pop = 921 } }
-		TUN = { any_pop = { limit = { culture = jewish } move_pop = 916 } }
-		LBY = { any_pop = { limit = { culture = jewish } move_pop = 916 } }
-		EGY = { any_pop = { limit = { culture = jewish } move_pop = 916 } }
+		TUN = { any_pop = { limit = { culture = jewish } move_pop = 3345 } }
+		LBY = { any_pop = { limit = { culture = jewish } move_pop = 3345 } }
+		EGY = { any_pop = { limit = { culture = jewish } move_pop = 3345 } }
 		913 = { any_pop = { limit = { culture = arab_mashriqi } move_pop = 916 } }
 		902 = { any_pop = { limit = { culture = arab_mashriqi } move_pop = 919 } }
 		908 = { any_pop = { limit = { culture = arab_mashriqi OR = { strata = rich strata = middle } } move_pop = 916 } } # Amman

@@ -63,6 +63,10 @@ country_event = {
 		
 		#Allow the Eastern Bloc to fall
 		set_global_flag = autumn_of_nations
+		
+		#Special cases for Warsaw Pact nations
+		BUL = { set_country_flag = mladenov_democractic_bul }
+		ROM = { set_country_flag = romanian_austerity set_country_flag = nicolae_ceausescu_flag }
 	}
 
 }

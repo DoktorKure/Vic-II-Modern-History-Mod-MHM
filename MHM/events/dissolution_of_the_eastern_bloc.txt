@@ -257,7 +257,7 @@ country_event = {
 		
 		#Choice to choose gov type if USSR undergoing historical collapse chain, otherwise this will remain communist
 		random_owned = {
-			limit = { owner = { RUS = { has_country_flag = perestroika_gone_bad } } }
+			limit = { owner = { has_global_flag = autumn_of_nations } }
 			owner = { country_event = { id = 1512137 days = 2 } }
 		}
 		
@@ -377,7 +377,7 @@ country_event = {
 		
 		#Release satellite state
 		release_vassal = FROM
-		diplomatic_influence = { who = FROM value = -100 }
+		diplomatic_influence = { who = FROM value = -200 }
 		relation = { who = FROM value = -100 }
 		
 		ai_chance = { factor = 1 }

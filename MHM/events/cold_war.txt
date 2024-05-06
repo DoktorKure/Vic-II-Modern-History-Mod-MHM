@@ -259,24 +259,6 @@ country_event = {
 
 }
 
-##################Enable Blocs under events###################
-
-#Cold War information event
-country_event = {
-	id = 19804
-	title = "EVT_19804_NAME"
-	desc = "EVT_19804_DESC"
-	picture = "cold_war"
-    fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = "Keep the war cold!"
-		country_event = 5000000 #New Colonial System
-	}
-
-}
-
 ###### Set up NAM ######
 
 country_event = {
@@ -374,6 +356,8 @@ country_event = {
 	}
 
 	immediate = {
+		#Stop the Second Cold War from firing immediately after the first one ended
+		add_country_modifier = { name = cold_war_timer duration = 3650 }
 		random_country = {
 			limit = {
 				OR = {

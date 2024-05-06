@@ -1920,17 +1920,20 @@ country_event = {
 				}
 			}
 		}
-		#Remove all soldier pops that don't belong to the state religion in theocracies or governments that are actively converting pops
+		#Remove all soldier pops that don't belong to the state religion in theocracies or governments that are actively converting pops, but only where they're the majority
 		any_country	= {
 			limit = {
 				exists = yes
 				OR = { government = theocracy has_country_flag = religious_inquisition_active }
 				war = no
 			}
-			any_pop = {
-				limit = { type = soldiers OR = { has_pop_religion = secularism is_state_religion = no } }
-				militancy = 10
-				pop_type = farmers
+			any_owned = {
+				limit = { is_state_religion = yes }
+				any_pop = {
+					limit = { type = soldiers OR = { has_pop_religion = secularism is_state_religion = no } }
+					militancy = 10
+					pop_type = farmers
+				}
 			}
 		}
 		
@@ -2442,6 +2445,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
+				NOT = { is_greater_power = yes }
 				sphere_owner = {
 					has_country_modifier = sphere_interference
 					ruling_party_ideology = conservative
@@ -2458,6 +2462,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
+				NOT = { is_greater_power = yes }
 				sphere_owner = {
 					has_country_modifier = sphere_interference
 					ruling_party_ideology = populist
@@ -2474,6 +2479,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
+				NOT = { is_greater_power = yes }
 				sphere_owner = {
 					has_country_modifier = sphere_interference
 					ruling_party_ideology = nationalist
@@ -2490,6 +2496,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
+				NOT = { is_greater_power = yes }
 				sphere_owner = {
 					has_country_modifier = sphere_interference
 					ruling_party_ideology = traditionalist
@@ -2506,6 +2513,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
+				NOT = { is_greater_power = yes }
 				sphere_owner = {
 					has_country_modifier = sphere_interference
 					ruling_party_ideology = socialist
@@ -2522,6 +2530,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
+				NOT = { is_greater_power = yes }
 				sphere_owner = {
 					has_country_modifier = sphere_interference
 					ruling_party_ideology = communist_social
@@ -2538,6 +2547,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
+				NOT = { is_greater_power = yes }
 				sphere_owner = {
 					has_country_modifier = sphere_interference
 					ruling_party_ideology = communist
@@ -2554,6 +2564,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
+				NOT = { is_greater_power = yes }
 				sphere_owner = {
 					has_country_modifier = sphere_interference
 					ruling_party_ideology = progressive
@@ -2570,6 +2581,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
+				NOT = { is_greater_power = yes }
 				sphere_owner = {
 					has_country_modifier = sphere_interference
 					ruling_party_ideology = liberal
@@ -2586,6 +2598,7 @@ country_event = {
 		any_country = {
 			limit = {
 				exists = yes
+				NOT = { is_greater_power = yes }
 				sphere_owner = {
 					has_country_modifier = sphere_interference
 					ruling_party_ideology = big_tent

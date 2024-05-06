@@ -957,7 +957,7 @@ country_event = {
 country_event = {
 	id = 960102
 	title = "$SPHEREMASTER$ loses influence in $COUNTRY$" #The $FROMCOUNTRY_ADJ$ Colonies
-	desc = "As a result of $SPHEREMASTER$ losing a dismantle war, their sphere of influence was also dismantled. We are free from their sphere now!"
+	desc = "The $FROMCOUNTRY_ADJ$ sphere of influence has collapsed as a result of recent geopolitical developments. We are free from their sphere now!"
 	picture = "treaty"
 
 	is_triggered_only = yes

@@ -606,13 +606,13 @@ country_event = {
 	any_pop = { militancy = -2 consciousness = 0.5 }
 	country_event =  { id = 8023244 days = 90 } 
 	overlord = { country_event = 8014250 } 
-	ai_chance = { factor = 0.9 }
+	ai_chance = { factor = 1 }
   }
 
   option = {
     name = EVT_8023243_B
 	any_pop = { militancy = 3.0 consciousness = 2 }
-	ai_chance = { factor = 0.1 }
+	ai_chance = { factor = 0 }
   }
 }
 country_event = {
@@ -626,13 +626,13 @@ country_event = {
     name = EVT_8023244_A
 	any_pop = { militancy = -2 consciousness = 0.5 }
 	country_event = 8023245
-	ai_chance = { factor = 0.9 }
+	ai_chance = { factor = 1 }
   }
 
   option = {
     name = EVT_8023244_B
 	any_pop = { militancy = 3.0 consciousness = 2 }
-	ai_chance = { factor = 0.1 }	
+	ai_chance = { factor = 0 }	
   }
 }
 country_event = {
@@ -644,7 +644,8 @@ country_event = {
   
   option = {
     name = EVT_8023245_A
-	government = democracy 
+	government = democracy
+		ruling_party_ideology = socialist
 	country_event = 800054
   }
 }

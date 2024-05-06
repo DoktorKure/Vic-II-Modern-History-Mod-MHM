@@ -575,10 +575,12 @@ country_event = {
 
 	mean_time_to_happen = { 
 		months = 10
+		modifier = { factor = 0.1 year = 1994 }
 	}
 	
 	option = {
 		name = "Resolve the crisis, with tanks!"
+		set_country_flag = boris_yeltsin_tanks
 		prestige = -0.02
 		badboy = 5
 		
@@ -651,6 +653,98 @@ country_event = {
 		#The coup establishes a Russian socialist state
 		government = socialist_democracy
 		ruling_party_ideology = communist_social
+		
+		political_reform = free_voting
+		political_reform = semi_democratic_state_opinion
+		political_reform = free_meetings
+		political_reform = professional_service
+		political_reform = free_publishing
+		political_reform = free_trade_unions #all unions
+		political_reform = parties_short
+		political_reform = open_immigration
+		political_reform = no_draft #no_draft
+		political_reform = minorities_equal_rights
+		political_reform = proportional_representation
+		
+		#Right wing anger
+		any_pop = {
+			scaled_militancy = { factor = 10 ideology = nationalist }
+			scaled_militancy = { factor = 10 ideology = populist }
+			scaled_militancy = { factor = 10 ideology = liberal }
+			scaled_militancy = { factor = 10 ideology = conservative }
+			scaled_militancy = { factor = 10 ideology = traditionalist }
+		}
+
+		add_country_modifier = { name = revolution_chaos duration = 3650 }
+
+		ai_chance = {
+			factor = 0.1
+		}
+	}
+
+}
+
+#1996 Russian Presidential Election
+country_event = {
+  id = 16141
+  title = "$YEAR$ Russian Presidential Election"
+  desc = EVTDESC16141
+  picture = "1996_RUS_election"
+  
+	fire_only_once = yes
+
+	trigger = {
+		tag = RUS
+		year = 1996
+		NOT = { year = 2003 }
+		
+		#Middle Russian Federation
+		government = democracy
+		war = no
+		is_vassal = no
+		
+		OR = { ruling_party_ideology = conservative has_country_flag = boris_yeltsin_tanks }
+	}
+
+	mean_time_to_happen = { 
+		months = 6
+	}
+	
+	option = {
+		name = "Yeltsin wins the election"
+		#Yeltsin
+		ruling_party_ideology = conservative
+		
+		#Boris Yeltsin's party becomes more popular
+		any_pop = { 
+			limit = { is_primary_culture = yes }
+			ideology = { factor = 0.25 value = conservative }
+		}
+		
+		#Left wing anger
+		any_pop = {
+			scaled_militancy = { factor = 10 ideology = communist_social }
+			scaled_militancy = { factor = 10 ideology = communist }
+			scaled_militancy = { factor = 5 ideology = socialist }
+			scaled_militancy = { factor = 10 ideology = progressive }
+		}
+		
+		ai_chance = {
+			factor = 0.9
+		}
+	}
+
+	option = {
+		name = "Gennady Zyuganov wins the election"
+		
+		#The election results in a socialist state
+		government = socialist_democracy
+		ruling_party_ideology = communist_social
+		
+		any_pop = { 
+			limit = { is_primary_culture = yes }
+			ideology = { factor = 0.25 value = communist_social }
+		}
 		
 		political_reform = free_voting
 		political_reform = semi_democratic_state_opinion

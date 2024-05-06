@@ -167,6 +167,17 @@ india_reduce_military_socre = {
 	supply_consumption = -0.25
 }
 
+#Boost income due to spheres killing tariffs and thus causing frequent bankruptcies
+sphere_tax_boost = {
+	trigger = {
+		part_of_sphere = yes
+		NOT = { is_greater_power = yes }
+		has_global_flag = startup_events_fired #So player can see this
+	}
+	tax_efficiency = 0.30
+	tariff_efficiency_modifier = 0.30
+}
+
 #Blockade
 
 blockade_1 = {
@@ -821,10 +832,9 @@ united_korea = {
 
 investor_uncertainty_trig_mod = {
 	trigger = {
-		election = yes 
 		war = yes
 		NOT = { ruling_party_ideology = communist }
-		NOT = { government = theocracy }
+		has_country_flag = democratic_state
 	}
 	factory_owner_cost = 0.10
 	import_cost = 0.10

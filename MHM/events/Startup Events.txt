@@ -1,3 +1,134 @@
+################## Startup Events ###################
+
+#Cold War information event
+country_event = {
+	id = 19804
+	title = "EVT_19804_NAME"
+	desc = "EVT_19804_DESC"
+	picture = "cold_war"
+    fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Keep the war cold!"
+		country_event = 5000000 #New Colonial System
+	}
+
+}
+
+#New Colonial System information event
+country_event = {
+	id = 5000000
+	title = "The Question of the Colonies"
+	desc = EVTDESC5000000
+	picture = "colonial_empires"
+	is_triggered_only = yes
+	
+	immediate = { set_global_flag = colonial_system_toggled }
+	
+	option = {
+		name = "Let's keep this new system."
+		country_event = 886 #Startup Capital
+	}
+	
+	option = {
+		name = "I want to return to the old system."
+		set_global_flag = old_colonial_system
+		clr_global_flag = new_colonial_system
+		
+		#Annex British colonies
+		any_country = {
+			limit = {
+				vassal_of = ENG
+				government = colonial_government
+				NOT = { tag = RAJ }
+				NOT = { tag = PAK }
+				NOT = { tag = FMS }
+			}
+			civilized = no
+			annex_to = ENG
+		}
+		
+		#Annex French colonies
+		any_country = {
+			limit = {
+				vassal_of = FRA
+				government = colonial_government
+				NOT = { tag = FAG }
+			}
+			civilized = no
+			annex_to = FRA
+		}
+		#secede provinces so that the northern areas of Algeria don't go back to being colonial states while the interior does
+		FAG = {
+			any_owned = {
+				limit = {
+					OR = { 
+						province_id = 1700
+						province_id = 1701
+						province_id = 1702
+						province_id = 1703
+						province_id = 1704
+						province_id = 1705
+						province_id = 1706
+						province_id = 1707
+						province_id = 1708
+						province_id = 1709
+						province_id = 1710
+					}
+				}
+				secede_province = FRA
+			}
+			civilized = no
+			annex_to = FRA
+		}
+		
+		#Annex Dutch colonies
+		any_country = {
+			limit = {
+				vassal_of = NET
+				government = colonial_government
+			}
+			civilized = no
+			annex_to = NET
+		}
+		
+		#Annex Belgian colonies
+		any_country = {
+			limit = {
+				vassal_of = BEL
+				government = colonial_government
+			}
+			civilized = no
+			annex_to = BEL
+		}
+		
+		#Annex Spanish colonies
+		any_country = {
+			limit = {
+				vassal_of = SPA
+				government = colonial_government
+			}
+			civilized = no
+			annex_to = SPA
+		}
+		
+		#Annex Portuguese colonies
+		any_country = {
+			limit = {
+				vassal_of = POR
+				government = colonial_government
+			}
+			civilized = no
+			annex_to = POR
+		}
+		
+		country_event = 886 #Startup Capital
+	}
+}
+
+#New colonial upkeep system - see Vassal Tribute Payments.txt in events and Vassal Tribute System.txt in decisions
+
 #Startup capital - gives money based on power rank and how many provinces owned by each country
 country_event = {
 	id = 886
@@ -199,4 +330,36 @@ country_event = {
 		}
 		country_event = 124156 #MHM National Values
 	}
+}
+
+#Initialise National Values - Information
+country_event = {
+	id = 124156
+	title = "National Values in MHM"
+	desc = EVTDESC124156
+	picture = "national_values"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Understood"
+		country_event = 1266623 # Seasonal Effects
+	}
+
+}
+
+#Seasonal Effects in MHM
+country_event = {
+	id = 1266623
+	title = "Seasonal Effects in MHM"
+	desc = EVTDESC1266623
+	picture = "seasons"
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Neat!"
+		set_global_flag = startup_events_fired
+	}
+
 }

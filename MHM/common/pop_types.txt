@@ -379,14 +379,14 @@ migration_chance = { # 1
 	
 	#Increase movement away from rural provinces when there is urban focus
 	modifier = {
-        factor = 0.5
+        factor = 0.75
         location = { is_state_capital = no }
 		country = { has_country_flag = urban_focus }
     }
 	
 	#Increase movement away from urban provinces when there is rural focus
 	modifier = {
-        factor = 0.5
+        factor = 0.75
         location = { is_state_capital = yes }
 		country = { has_country_flag = rural_focus }
     }

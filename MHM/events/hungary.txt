@@ -146,7 +146,9 @@ country_event = {
 
 	option = {
 		name = EVT_8021319_A
-		any_pop = { militancy = -1 consciousness = 2 }
+		any_pop = { militancy = -1 consciousness = 2 ideology = { factor = 0.25 value = liberal } }
+		government = democracy
+		ruling_party_ideology = socialist
 		country_event = 800054
 		overlord = { country_event = 8014250 } 
 		ai_chance = { factor = 0.2 }
@@ -171,18 +173,18 @@ country_event = {
 
 	option = {
 		name = EVT_8021320_A
-		any_pop = { militancy = -5 }
-		government = democracy 
+		any_pop = { militancy = -5 ideology = { factor = 0.35 value = liberal } }
+		government = democracy
 		country_event = 800054
 		overlord = { country_event = 8014250 } 
-		ai_chance = { factor = 0.8 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
 		name = EVT_8021320_B
 		any_pop = { militancy = 2.5 consciousness = 1 }
 		overlord = { release_vassal = THIS } 
-		ai_chance = { factor = 0.2 }
+		ai_chance = { factor = 0 }
 	}
 
 }

@@ -530,7 +530,7 @@ country_event = {
 	fire_only_once = yes
 
 	trigger = {
-		tag = CZH
+		OR = { tag = CZH tag = BOH tag = SLV }
 		has_global_flag = autumn_of_nations
 		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		OR = { 

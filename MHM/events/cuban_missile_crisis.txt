@@ -18,7 +18,7 @@ country_event = {
 		
 		#Cuba is communist
 		CUB = {
-			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
+			OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 AND = { government = socialist_democracy OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } } }
 			is_vassal = no
 			war = no
 		

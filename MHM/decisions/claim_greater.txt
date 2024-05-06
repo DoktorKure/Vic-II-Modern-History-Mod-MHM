@@ -1947,7 +1947,7 @@ political_decisions = {
 		}
 
 		allow = {
-			has_country_flag = Anschluss_GER #Austria is annexed first
+			OR = { has_country_flag = Anschluss_GER owns = 619 } #Austria is annexed first
 			part_of_sphere = no
 			OR = { has_unclaimed_cores = no has_country_flag = reject_oder_neisse }
 			is_vassal = no

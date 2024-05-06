@@ -18,6 +18,46 @@ country_event = {
 
 	mean_time_to_happen = { 
 		months = 60
+		modifier = {
+			factor = 1.5
+			NOT = { OR = { conservative = 10 populist = 10 nationalist = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			OR = { conservative = 10 populist = 10 nationalist = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			OR = { conservative = 15 populist = 15 nationalist = 15 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = { conservative = 20 populist = 20 nationalist = 20 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = { conservative = 25 populist = 25 nationalist = 25 }
+		}
+		modifier = {
+			factor = 0.7
+			OR = { conservative = 30 populist = 30 nationalist = 30 }
+		}
+		modifier = {
+			factor = 0.6
+			OR = { conservative = 35 populist = 35 nationalist = 35 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = { conservative = 40 populist = 40 nationalist = 40 }
+		}
+		modifier = {
+			factor = 0.25
+			OR = { conservative = 45 populist = 45 nationalist = 45 }
+		}
+		modifier = {
+			factor = 0.1
+			OR = { conservative = 50 populist = 50 nationalist = 50 }
+		}
 	}
 
 	option = {
@@ -48,6 +88,46 @@ country_event = {
 
 	mean_time_to_happen = { 
 		months = 60
+		modifier = {
+			factor = 1.5
+			NOT = { liberal = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 10
+		}
+		modifier = {
+			factor = 0.9
+			liberal = 15
+		}
+		modifier = {
+			factor = 0.8
+			liberal = 20
+		}
+		modifier = {
+			factor = 0.8
+			liberal = 25
+		}
+		modifier = {
+			factor = 0.7
+			liberal = 30
+		}
+		modifier = {
+			factor = 0.6
+			liberal = 35
+		}
+		modifier = {
+			factor = 0.5
+			liberal = 40
+		}
+		modifier = {
+			factor = 0.25
+			liberal = 45
+		}
+		modifier = {
+			factor = 0.1
+			liberal = 50
+		}
 	}
 
 	option = {
@@ -78,6 +158,46 @@ country_event = {
 
 	mean_time_to_happen = { 
 		months = 60
+		modifier = {
+			factor = 1.5
+			NOT = { OR = { socialist = 10 communist_social = 10 communist = 10 } }
+		}
+		modifier = {
+			factor = 0.9
+			OR = { socialist = 10 communist_social = 10 communist = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			OR = { socialist = 15 communist_social = 15 communist = 15 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = { socialist = 20 communist_social = 20 communist = 20 }
+		}
+		modifier = {
+			factor = 0.8
+			OR = { socialist = 25 communist_social = 25 communist = 25 }
+		}
+		modifier = {
+			factor = 0.7
+			OR = { socialist = 30 communist_social = 30 communist = 30 }
+		}
+		modifier = {
+			factor = 0.6
+			OR = { socialist = 35 communist_social = 35 communist = 35 }
+		}
+		modifier = {
+			factor = 0.5
+			OR = { socialist = 40 communist_social = 40 communist = 40 }
+		}
+		modifier = {
+			factor = 0.25
+			OR = { socialist = 45 communist_social = 45 communist = 45 }
+		}
+		modifier = {
+			factor = 0.1
+			OR = { socialist = 50 communist_social = 50 communist = 50 }
+		}
 	}
 
 	option = {
@@ -108,6 +228,46 @@ country_event = {
 
 	mean_time_to_happen = { 
 		months = 60
+		modifier = {
+			factor = 1.5
+			NOT = { traditionalist = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			traditionalist = 10
+		}
+		modifier = {
+			factor = 0.9
+			traditionalist = 15
+		}
+		modifier = {
+			factor = 0.8
+			traditionalist = 20
+		}
+		modifier = {
+			factor = 0.8
+			traditionalist = 25
+		}
+		modifier = {
+			factor = 0.7
+			traditionalist = 30
+		}
+		modifier = {
+			factor = 0.6
+			traditionalist = 35
+		}
+		modifier = {
+			factor = 0.5
+			traditionalist = 40
+		}
+		modifier = {
+			factor = 0.25
+			traditionalist = 45
+		}
+		modifier = {
+			factor = 0.1
+			traditionalist = 50
+		}
 	}
 
 	option = {
@@ -138,6 +298,46 @@ country_event = {
 
 	mean_time_to_happen = { 
 		months = 60
+		modifier = {
+			factor = 1.5
+			NOT = { big_tent = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			big_tent = 10
+		}
+		modifier = {
+			factor = 0.9
+			big_tent = 15
+		}
+		modifier = {
+			factor = 0.8
+			big_tent = 20
+		}
+		modifier = {
+			factor = 0.8
+			big_tent = 25
+		}
+		modifier = {
+			factor = 0.7
+			big_tent = 30
+		}
+		modifier = {
+			factor = 0.6
+			big_tent = 35
+		}
+		modifier = {
+			factor = 0.5
+			big_tent = 40
+		}
+		modifier = {
+			factor = 0.25
+			big_tent = 45
+		}
+		modifier = {
+			factor = 0.1
+			big_tent = 50
+		}
 	}
 
 	option = {
@@ -168,28 +368,52 @@ country_event = {
 
 	mean_time_to_happen = { 
 		months = 60
+		modifier = {
+			factor = 1.5
+			NOT = { progressive = 10 }
+		}
+		modifier = {
+			factor = 0.9
+			progressive = 10
+		}
+		modifier = {
+			factor = 0.9
+			progressive = 15
+		}
+		modifier = {
+			factor = 0.8
+			progressive = 20
+		}
+		modifier = {
+			factor = 0.8
+			progressive = 25
+		}
+		modifier = {
+			factor = 0.7
+			progressive = 30
+		}
+		modifier = {
+			factor = 0.6
+			progressive = 35
+		}
+		modifier = {
+			factor = 0.5
+			progressive = 40
+		}
+		modifier = {
+			factor = 0.25
+			progressive = 45
+		}
+		modifier = {
+			factor = 0.1
+			progressive = 50
+		}
 	}
 
 	option = {
 		name = "This is the new way forward"
 		nationalvalue = nv_progressivism
 		set_country_flag = set_nv
-	}
-
-}
-
-#Initialise National Values - Information
-country_event = {
-	id = 124156
-	title = "National Values in MHM"
-	desc = EVTDESC124156
-	picture = "national_values"
-	fire_only_once = yes
-	is_triggered_only = yes
-
-	option = {
-		name = "Understood"
-		country_event = 1266623 # Seasonal Effects
 	}
 
 }

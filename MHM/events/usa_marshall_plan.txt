@@ -25,6 +25,7 @@ country_event = {
 	option = {
 		name = "Offer it to the whole of Europe"
 		prestige = 100
+		set_global_flag = marshall_plan_enacted
 		
 		#Offer to the USSR
 		RUS = { country_event = 8202002 }
@@ -37,6 +38,7 @@ country_event = {
 	option = {
 		name = "Offer it to only Western Europe"
 		prestige = 200
+		set_global_flag = marshall_plan_enacted
 		
 		#Communist nations are pissed
 		any_country = { 

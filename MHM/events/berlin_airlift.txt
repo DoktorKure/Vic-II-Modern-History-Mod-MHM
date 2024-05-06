@@ -7,6 +7,63 @@
 ### Chance of WW3: 6%
 ###
 
+#The Currency Crisis 1948
+country_event = {
+	id = 8204040
+	title = "The German Currency Crisis"
+	desc = EVTDESC8204040
+	picture = "nwo2_deutsche_mark"
+  
+	fire_only_once = yes
+
+	trigger = {
+    	tag = USA
+		year = 1948 
+		NOT = { year = 1990 }
+		
+		war = no
+		
+		#Cold War
+		has_global_flag = blocsenabled
+		
+		#Marshall plan
+		has_global_flag = marshall_plan_enacted
+		
+		#Germany hasn't undergone ahistoric partitions
+		OR = { is_our_vassal = OG4 is_our_vassal = GER is_our_vassal = FRG }
+		
+		#Russia has formed Occupation Zone
+		RUS = {
+			OR = { is_our_vassal = OG1 is_our_vassal = DDR } 
+		}
+		
+		#Berlin is in the western zone
+		549 = { OR = { owned_by = OG4 owned_by = GER owned_by = FRG } }
+	}
+
+	mean_time_to_happen = { months = 3 }
+
+	option = {
+		name = "Push through the Deutsche Mark"
+		relation = { who = RUS value = -50 }
+		relation = { who = ENG value = 50 }
+		
+		money = 200000
+		
+		#Begin the Berlin Blockade
+		RUS = { country_event = 8500601 }
+		
+		ai_chance = { factor = 0.9 }
+	}
+
+	option = {
+		name = "It is best not to anger the Russian Bear"
+		prestige_factor = -0.025
+		relation = { who = RUS value = 50 }
+		ai_chance = { factor = 0.1 }
+	}
+}
+
 #Start the Berlin Airlift - RUS
 country_event = {
   id = 8500601
@@ -17,8 +74,6 @@ country_event = {
 	fire_only_once = yes
 
 	is_triggered_only = yes
-
-	mean_time_to_happen = { months = 1 }
 
 	option = {
 		name = "Close off West Berlin!"

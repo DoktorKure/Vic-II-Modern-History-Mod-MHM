@@ -1906,7 +1906,7 @@ country_event = {
 		
 		set_country_flag = letter_of_the_six
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -1930,7 +1930,7 @@ country_event = {
 			ideology = { factor = 0.1 value = socialist }
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -1959,7 +1959,10 @@ country_event = {
 		has_country_flag = nicolae_ceausescu_flag
 	}
 
-	mean_time_to_happen = { months = 11 }
+	mean_time_to_happen = {
+		months = 11
+		modifier = { factor = 0.1 year = 1990 }
+	}
 
 	option = {
 		name = "Crush the protestors!"
@@ -1977,7 +1980,7 @@ country_event = {
 		
 		set_country_flag = timisoara_revolt_1989_flag
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -2007,7 +2010,7 @@ country_event = {
 			ideology = { factor = 0.05 value = liberal }
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 }
 
@@ -2060,7 +2063,7 @@ country_event = {
 		}
 		
 		any_pop = { militancy = -5 consciousness = 5 }
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 
 	option = {
@@ -2087,7 +2090,7 @@ country_event = {
 		
 		add_country_modifier = { name = revolution_chaos duration = 3650 }
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 	
 }
@@ -2115,8 +2118,6 @@ country_event = {
 		is_vassal = no
 		
 		election = yes
-		
-		ruling_party_ideology = communist_social
 		
 		has_country_flag = timisoara_revolt_1989_flag
 		has_country_flag = ion_illescu_romania_democratic
@@ -2234,8 +2235,6 @@ country_event = {
 		is_vassal = no
 		
 		election = no
-
-		ruling_party_ideology = communist_social
 		
 		has_country_flag = timisoara_revolt_1989_flag
 		has_country_flag = ion_illescu_romania_democratic
@@ -2330,8 +2329,6 @@ country_event = {
 		
 		election = no
 		
-		ruling_party_ideology = communist_social
-		
 		has_country_flag = golaniad
 	}
 
@@ -2422,13 +2419,12 @@ country_event = {
 		war = no
 		is_vassal = no
 		
-		OR = { ruling_party_ideology = communist_social ruling_party_ideology = socialist }
-		
 		has_country_flag = ion_illescu_romania_democratic
 	}
 
 	mean_time_to_happen = { 
 		months = 10
+		modifier = { factor = 0.1 year = 1992 }
 	}
 
 	option = {
@@ -2463,7 +2459,7 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 1 }
 	}
 	
 	option = {
@@ -2491,7 +2487,7 @@ country_event = {
 			}
 		}
 		
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0 }
 	}
 	
 }

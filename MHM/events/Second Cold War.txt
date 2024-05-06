@@ -11,6 +11,9 @@ country_event = {
 
 	trigger = {
 		is_greater_power = yes
+		#Stop this from firing immediately after the first one ended
+		NOT = { has_country_modifier = cold_war_timer }
+		
 		OR = {
 			AND = {
 				OR = {

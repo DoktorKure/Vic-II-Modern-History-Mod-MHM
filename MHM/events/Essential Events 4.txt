@@ -10558,8 +10558,159 @@ country_event = {
 	option = {
 		name = "This is the new reality"
 		sphere_owner = { diplomatic_influence = { who = THIS value = -100 } }
-		any_greater_power = { limit = { is_our_vassal = THIS } diplomatic_influence = { who = THIS value = 300 } }
-		overlord = { sphere_owner = { diplomatic_influence = { who = THIS value = 300 } } }
+		any_greater_power = { limit = { is_our_vassal = THIS } diplomatic_influence = { who = THIS value = 200 } }
+		overlord = { sphere_owner = { diplomatic_influence = { who = THIS value = 200 } } }
+	}
+
+}
+
+#Puppets join the sphere of the overlord
+country_event = {
+	id = 15123521
+	title = "Regime Change"
+	desc = "Our overlord's government has changed and so we have to follow the change because we are their puppet."
+	picture = "un_tension_reduction_summit"
+
+	trigger = {
+		is_vassal = yes
+		NOT = { government = sar_government government = mandate_government government = colonial_government }
+		OR = {
+			AND = {
+				overlord = { government = presidential_dictatorship }
+				NOT = { government = presidential_dictatorship }
+			}
+			AND = {
+				overlord = { government = absolute_monarchy }
+				NOT = { government = absolute_monarchy }
+			}
+			AND = {
+				overlord = { government = nationalist_dictatorship }
+				NOT = { government = nationalist_dictatorship }
+			}
+			AND = {
+				overlord = { government = sectarian_dictatorship }
+				NOT = { government = sectarian_dictatorship }
+			}
+			AND = {
+				overlord = { government = theocracy }
+				NOT = { government = theocracy }
+			}
+			AND = {
+				overlord = { government = socialist_democracy }
+				NOT = { government = socialist_democracy }
+			}
+			#Soviet Russia gets a special event
+			AND = {
+				overlord = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } NOT = { tag = RUS } }
+				NOT = { government = proletarian_dictatorship }
+			}
+			#Democratic overlords were historically more tolerant of authoritarian puppets as long as they weren't left-wing
+			AND = {
+				overlord = { OR = { government = democracy government = democracy1 } }
+				NOT = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 } }
+				OR = { ruling_party_ideology = socialist ruling_party_ideology = communist_social ruling_party_ideology = communist }
+			}
+			AND = {
+				overlord = { OR = { government = hms_government government = hms_government1 } }
+				NOT = { OR = { government = hms_government government = hms_government1 government = democracy government = democracy1 } }
+				OR = { AND = { ruling_party_ideology = socialist NOT = { government = absolute_monarchy } } ruling_party_ideology = communist_social ruling_party_ideology = communist }
+			}
+		}
+	}
+
+	option = {
+		name = "This is the new reality."
+		random_owned = {
+			limit = { owner = { overlord = { government = presidential_dictatorship } } }
+			owner = { government = presidential_dictatorship country_event = 800050 }
+		}
+		random_owned = {
+			limit = { owner = { overlord = { government = absolute_monarchy } } }
+			owner = { government = absolute_monarchy country_event = 800050 }
+		}
+		random_owned = {
+			limit = { owner = { overlord = { government = nationalist_dictatorship } } }
+			owner = { government = nationalist_dictatorship country_event = 800050 }
+		}
+		random_owned = {
+			limit = { owner = { overlord = { government = sectarian_dictatorship } } }
+			owner = { government = sectarian_dictatorship country_event = 800050 }
+		}
+		random_owned = {
+			limit = { owner = { overlord = { government = theocracy } } }
+			owner = { government = theocracy country_event = 800050 }
+		}
+		random_owned = {
+			limit = { owner = { overlord = { government = socialist_democracy } } }
+			owner = { government = socialist_democracy country_event = 800044 }
+		}
+		#Soviet Russia gets a special event
+		random_owned = {
+			overlord = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } NOT = { tag = RUS } }
+			NOT = { government = proletarian_dictatorship country_event = 800052 }
+		}
+		random_owned = {
+			limit = { owner = { overlord = { OR = { government = democracy government = democracy1 } } } }
+			owner = { government = democracy country_event = 800044 }
+		}
+		random_owned = {
+			limit = { owner = { overlord = { OR = { government = hms_government government = hms_government1 } } } }
+			owner = { government = hms_government country_event = 800044 }
+		}
+			
+		###### Change Ruling Party ######
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = traditionalist } } } owner = { ruling_party_ideology = traditionalist } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = nationalist } } } owner = { ruling_party_ideology = nationalist } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = populist } } } owner = { ruling_party_ideology = populist } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = conservative } } } owner = { ruling_party_ideology = conservative } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = liberal } } } owner = { ruling_party_ideology = liberal } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = big_tent } } } owner = { ruling_party_ideology = big_tent } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = progressive } } } owner = { ruling_party_ideology = progressive } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = socialist } } } owner = { ruling_party_ideology = socialist } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = communist } } } owner = { ruling_party_ideology = communist } }
+		random_owned = { limit = { owner = { overlord = { ruling_party_ideology = communist_social } } } owner = { ruling_party_ideology = communist_social } }
+		ai_chance = { factor = 0.8 }
+	}
+
+	option = {
+		name = "Resist the regime change! (High chance of war)"
+		overlord = {
+			release_vassal = THIS
+			diplomatic_influence = { who = THIS value = -200 }
+			relation = { who = THIS value = -100 }
+			country_event = 15123522
+		}
+		ai_chance = { factor = 0.2 }
+	}
+
+}
+
+#Option for overlord
+country_event = {
+	id = 15123522
+	title = "Our puppet resists our regime change!"
+	desc = "Our puppet state has resisted an attempt by ourselves to change their regime to be in alignment with ours. How should we respond?"
+	picture = "un_tension_reduction_summit"
+	
+	is_triggered_only = yes
+	
+	allow_multiple_instances = yes
+
+	option = {
+		name = "We will force a regime change!"
+		war = {
+			target = FROM
+			attacker_goal = { casus_belli = stop_independence }
+			defender_goal = { casus_belli = become_independent }
+			call_ally = no
+		}
+		ai_chance = { factor = 0.7 }
+	}
+
+	option = {
+		name = "Let this be. We will change their regime through soft power."
+		FROM = { relation = { who = THIS value = 100 } }
+		ai_chance = { factor = 0.3 }
 	}
 
 }

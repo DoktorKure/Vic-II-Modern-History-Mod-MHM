@@ -209,6 +209,16 @@ political_decisions = {
 				}
 				add_country_modifier = { name = defcon2 duration = -1 }
 			}
+			
+			#Stop the Second Cold War from firing immediately after the first one ended
+			any_country = {
+				limit = { 
+					exists = yes
+					NOT = { year = 2000 }
+				}
+				add_country_modifier = { name = cold_war_timer duration = 3650 }
+			}
+			USA = { add_country_modifier = { name = cold_war_timer duration = 3650 } }
 
 			#Agricultural collectivization for communist nations
 			any_country = {

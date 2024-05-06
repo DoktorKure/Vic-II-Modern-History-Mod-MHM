@@ -2118,6 +2118,35 @@ country_event = {
 		random_owned = { limit = { owner = { is_possible_vassal = LIT } } owner = { LIT = { country_event = 1512103 } } }
 		random_owned = { limit = { owner = { is_possible_vassal = EST } } owner = { EST = { country_event = 1512103 } } }
 		
+		#International fallout as this is the "true" death of the USSR
+		any_country = {
+			limit = {
+				exists = yes
+				in_sphere = THIS
+				NOT = { vassal_of = THIS }
+			}
+			country_event = 960102
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				alliance_with = THIS
+				#Collapse of influence and clout amongst left-wing nations
+				OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist }
+				NOT = { vassal_of = THIS }
+			}
+			leave_alliance = THIS
+			relation = { who = THIS value -200 }
+		}
+		any_country = {
+			limit = {
+				exists = yes
+				vassal_of = THIS
+				NOT = { capital_scope = { is_core = RUS } }
+			}
+			country_event = 1512136
+		}
+		
 		ai_chance = { factor = 1 }
 	}
 
