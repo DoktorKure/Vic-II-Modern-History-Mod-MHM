@@ -2136,7 +2136,7 @@ country_event = {
 				NOT = { vassal_of = THIS }
 			}
 			leave_alliance = THIS
-			relation = { who = THIS value -200 }
+			relation = { who = THIS value = -200 }
 		}
 		any_country = {
 			limit = {

@@ -162,6 +162,30 @@ country_event = {
 	}
 }
 
+#Non-AI KMT player in the Chinese Civil War
+country_event = {
+	id = 1512152
+	title = "The Chinese Civil War"
+	desc = EVTDESC1512152
+	picture = "chinese_civil_war_ai_no"
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = KMT
+		war_with = CHI
+		ai = no
+		NOT = { year = 1990 }
+	}
+
+	option = {
+		name = "The Generalissimo will prevail!"
+		activate_technology = cold_war_doctrine
+		activate_technology = post_war_radar
+		activate_technology = infantry
+	}
+}
+
 #Event to inherit warlords if CHI occupies one in full during civil war, with player being able to keep fighting
 country_event = {
 	id = 909031

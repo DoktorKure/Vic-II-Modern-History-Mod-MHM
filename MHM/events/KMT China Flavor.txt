@@ -771,7 +771,8 @@ province_event = {
 		NOT = { is_core = TIB } # No Communist presence in Tibet
 		NOT = { is_core = QHA } # Not much communist presence in Ma Clique either
 		NOT = { is_core = TAI } # Not in Taiwan either
-		NOT = { province_id = 1499 } # Not on Quemoy and Matsu Islands or Penghu Islands
+		NOT = { province_id = 3342 } # Not on Quemoy and Matsu Islands or Penghu Islands
+		NOT = { province_id = 3343 }
 		NOT = { province_id = 2576 }
 	}
 	
@@ -971,12 +972,19 @@ province_event = {
 	option = {
 		name = "Death to the CCP!"
 		any_pop = {
-			ideology = { factor = 0.1 value = communist }
+			ideology = { factor = 0.2 value = communist }
 			militancy = 5
-			consciousness = 2
+			consciousness = 4
 		}
 		add_province_modifier = { name = terrorist_chaos duration = 365 }
 		change_controller = REB
+		state_scope = {
+			any_pop = {
+				ideology = { factor = 0.1 value = communist }
+				militancy = 2.5
+				consciousness = 2
+			}
+		}
 	}
 
 }
@@ -1081,37 +1089,52 @@ country_event = {
 		has_global_flag = KMT_won_civil_war
 		has_global_flag = active_CCP_insurgency
 		NOT = { has_country_flag = Mao_assassinated }
-		year = 1949
 		NOT = { year = 1971 }
 		NOT = { OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social } } # It is illogical for communists to rise up against their own government
 		is_vassal = no
-		OR = { average_militancy = 7 pop_majority_ideology = communist } #Ripe conditions for a revolution
+		
+		#Ripe conditions for a revolution
+		OR = { average_militancy = 7 communist = 25 pop_majority_ideology = communist }
+		OR = { year = 1949 communist = 25 pop_majority_ideology = communist }
 	}
 	
 	immediate = { clr_global_flag = active_CCP_insurgency }
 	
-	mean_time_to_happen = { months = 3 }
+	mean_time_to_happen = { months = 1 }
 	
 	option = {
 		name = "Then let us have the war!"
 		set_global_flag = third_KMT_CCP_war_fired
-		random_owned = {
+		change_tag = KMT
+		any_owned = {
 			limit = {
-				OR = { owned_by = CHI owned_by = SXI owned_by = YNN owned_by = GGX }
 				communist = 25
 				NOT = { province_id = 2221 }
 				NOT = { is_capital = yes }
-				NOT = { country_units_in_province = CHI }
 			}
-			secede_province = KMT
+			secede_province = CHI
 		}
-		KMT = {
+		any_country = {
+			limit = {
+				exists = yes
+				is_our_vassal = yes
+			}
+			any_owned = {
+				limit = {
+					is_core = CHI
+					communist = 25
+					NOT = { is_capital = yes }
+				}
+				secede_province = CHI
+			}
+		}
+		CHI = {
 			government = proletarian_dictatorship
 			ruling_party_ideology = communist
 			country_event = 800052
 		}
 		war = { 
-			target = KMT
+			target = CHI
 			attacker_goal = { casus_belli = civil_war } 
 			defender_goal = { casus_belli = civil_war } 
 		}
@@ -1223,12 +1246,12 @@ country_event = {
 	major = yes
 	
 	trigger = {
-		tag = KMT
+		tag = CHI
 		has_global_flag = KMT_won_civil_war
 		has_global_flag = third_KMT_CCP_war_fired
 		OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 }
 		ruling_party_ideology = communist
-		CHI = { exists = no } # Kuomintang lost the war
+		KMT = { exists = no } # Kuomintang lost the war
 		is_vassal = no
 	}
 	
@@ -1236,18 +1259,51 @@ country_event = {
 	
 	option = {
 		name = "At long last, the revolution has prevailed!"
-		clr_global_flag = active_CCP_insurgency
 		clr_global_flag = KMT_won_civil_war
 		set_global_flag = CHI_won_civil_war
 		capital = 1612 # Beijing
-		CHI = { government = proletarian_dictatorship } # So Red China gets the communist color upon tagswitch
-		change_tag = CHI
 		#Warlords get cleanup event
 		SXI = { country_event = 90909 }
 		SZC = { country_event = 90909 }
 		YNN = { country_event = 90909 }
 		GGX = { country_event = 90909 }
 		QHA = { country_event = 90909 }
+	}
+}
+
+#Round 3 of KMT-CCP war
+country_event = {
+	id = 8004022
+	title = "A second nationalist victory!"
+	desc = "It was a dangerous time as the CCP was nearly able to initiate a revolution. However, our steadfast soldiers have prevailed and the CCP will no longer be a threat!"
+	picture = "civil_war_nat"
+	
+	fire_only_once = yes
+	
+	major = yes
+	
+	trigger = {
+		tag = KMT
+		has_global_flag = KMT_won_civil_war
+		has_global_flag = third_KMT_CCP_war_fired
+		NOT = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy }
+		NOT = { ruling_party_ideology = communist ruling_party_ideology = communist_social }
+		war = no
+		CHI = { exists = no } # Kuomintang won the war
+		is_vassal = no
+	}
+	
+	mean_time_to_happen = { days = 1 }
+	
+	option = {
+		name = "At long last, the communists are defeated!"
+		change_tag = CHI
+		any_pop = { 
+			ideology = {
+				factor = -0.3
+				value = communist
+			}
+		}
 	}
 }
 

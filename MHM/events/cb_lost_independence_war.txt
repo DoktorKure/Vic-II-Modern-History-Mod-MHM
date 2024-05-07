@@ -162,12 +162,12 @@ country_event = {
 		random_owned = {
 			limit = { 
 				owner = {  
-					government = government = absolute_monarchy
+					government = absolute_monarchy
 				} 
 			}
 			owner = {
 				FROM = {
-					government = government = absolute_monarchy
+					government = absolute_monarchy
 					country_event = 800050
 				}
 			}
