@@ -23,6 +23,11 @@ political_decisions = {
 				has_country_flag = under_existential_threat
 				any_owned_province = { has_province_modifier = tactical_nuked } 
 			}
+			
+			#Not a civil war
+			war_countries = { 
+				NOT = { tag = R01 tag = R02 tag = R03 tag = R04 tag = R05 tag = R06 tag = R07 tag = R08 tag = R09 tag = R10 }
+			}
 
 			NOT = { has_country_modifier = nuclear_system_down }
 
@@ -102,6 +107,11 @@ political_decisions = {
 			}
 	
 			NOT = { has_country_modifier = nuclear_system_down }
+			
+			#Not a civil war
+			war_countries = { 
+				NOT = { tag = R01 tag = R02 tag = R03 tag = R04 tag = R05 tag = R06 tag = R07 tag = R08 tag = R09 tag = R10 }
+			}
 
 			OR = {
 			

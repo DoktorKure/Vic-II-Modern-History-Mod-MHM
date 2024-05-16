@@ -98,6 +98,26 @@ political_decisions = {
 
 		allow = {
 			NOT = { war_policy = pacifism }
+			
+			#Not a civil war
+			war_countries = { 
+				NOT = { tag = R01 tag = R02 tag = R03 tag = R04 tag = R05 tag = R06 tag = R07 tag = R08 tag = R09 tag = R10 }
+			}
+			
+			OR = {
+				ai = no
+				
+				#Normal willingness
+				AND = { 
+					national_provinces_occupied = 0.25
+					war_policy = jingoism 
+				}
+					
+				AND = { 
+					national_provinces_occupied = 0.10
+					has_country_flag = under_existential_threat 
+				}
+			}
 		}
 
 		effect = {
