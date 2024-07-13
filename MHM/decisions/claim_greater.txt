@@ -5806,5 +5806,46 @@ political_decisions = {
 		}
 
 	}
+
+	claim_united_netherlands = {
+		picture = "form_benelux"
+		potential = {
+			tag = NET
+			NOT = { has_country_flag = claim_united_netherlands }
+		}
+
+		allow = {
+			part_of_sphere = no
+			has_unclaimed_cores = no
+			NOT = {	
+				ruling_party_ideology = socialist
+				ruling_party_ideology = progressive
+				ruling_party_ideology = liberal 
+			}
+			is_vassal = no
+			prestige = 45
+			OR = {
+				#Specific conditions for populists in order to keep France from regularly going over the infamy limit whenever populists get elected as AI France
+				AND = {
+					OR = { ruling_party_ideology = populist ruling_party_ideology = traditionalist ruling_party_ideology = nationalist }
+					ai = yes
+					NOT = { OR = { government = democracy government = democracy1 government = hms_government government = hms_government1 government = socialist_democracy } }
+				}
+				AND = {
+					OR = { ruling_party_ideology = populist ruling_party_ideology = traditionalist ruling_party_ideology = nationalist }
+					ai = no
+				}
+				jingoism = 24
+			}
+		}
+
+		effect = {
+			badboy = 15
+			set_country_flag = claim_united_netherlands
+			BEL_394 = { add_core = NET }
+			BEL_387 = { add_core = NET }
+		}
+
+	}
 	
 }
