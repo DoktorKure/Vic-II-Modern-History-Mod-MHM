@@ -2977,6 +2977,59 @@ country_event = {
 			}
 		}
 		
+		### Haredi Fertility ###
+		any_country = {
+			limit = {
+				exists = yes
+				NOT = { has_global_flag = nuclear_winter }
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						has_crime = nuke_province
+					}
+				}
+				any_pop = {
+					limit = {
+						has_pop_culture = haredim_jewish
+					}
+					reduce_pop = 1.0017
+					ideology = { factor = 0.1 value = traditionalist }
+				}
+			}
+		}
+		#Haredim are welfare queens
+		any_country = {
+			limit = {
+				exists = yes
+				NOT = { has_country_flag = conscript_haredim }
+				NOT = { has_global_flag = nuclear_winter }
+			}
+			any_owned = {
+				limit = {
+					NOT = {
+						has_crime = nuke_province
+					}
+				}
+				any_pop = {
+					limit = {
+						has_pop_culture = haredim_jewish
+						OR = {
+							type = craftsmen
+							type = soldiers
+							type = officers
+							type = bureaucrats
+							type = capitalists
+							type = clerks
+							type = farmers
+							type = labourers
+						}
+					}
+					pop_type = clergymen
+				}
+			}
+		}
+		
 		### Natalism - population growth buff diminishes with each demographic transition stage ###
 		
 		#sectarian governments and other governments that are oppressive towards minorities grow only primary and accepted pops

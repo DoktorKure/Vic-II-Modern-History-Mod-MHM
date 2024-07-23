@@ -1,4 +1,43 @@
 political_decisions = {
+
+	conscript_haredim = {
+		picture = "conscript_haredim"
+
+		potential = {
+			tag = ISR
+			NOT = { has_country_flag = conscript_haredim }
+			#21st century issue only as this wasn't an issue before then due to demographic trends, or Israel goes communist as communists are anti-religion and wouldn't grant special treatment
+			OR = { year = 2000 ruling_party_ideology = communist_social ruling_party_ideology = communist }
+        }
+      
+        allow = {
+			OR = {
+				ruling_party_ideology = nationalist
+				ruling_party_ideology = socialist
+				ruling_party_ideology = communist_social
+				ruling_party_ideology = communist
+				#Fighting a losing war causes this issue to come to the front
+				AND = { war = yes national_provinces_occupied = 0.25 }
+			}
+        }
+      
+        effect = {
+			prestige = 50
+			set_country_flag = conscript_haredim
+			
+			#Haredi are pissed
+			any_pop = { 
+				limit = { 
+					OR = { culture = haredim_jewish } 
+				} 
+				ideology = { factor = 0.50 value = traditionalist }
+				militancy = 10 
+				consciousness = 10 
+			}
+		}
+          
+        ai_will_do = { factor = 1 }
+	}
 	
 	semitic_federation = {
 		picture = "levantine_federation"
