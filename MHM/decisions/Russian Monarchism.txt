@@ -76,7 +76,7 @@ political_decisions = {
 		picture = "claim_greater_russia"
 		potential = {
 			tag = RUS
-			OR = { government = hms_government government = hms_government1 government = absolute_monarchy }
+			OR = { government = hms_government government = hms_government1 government = absolute_monarchy government = nationalist_dictatorship }
 			NOT = { has_country_flag = claim_imperial_russia }
 			958 = { owner = { NOT = { tag = THIS vassal_of = THIS } } }
 			718 = { owner = { NOT = { tag = THIS vassal_of = THIS } } }

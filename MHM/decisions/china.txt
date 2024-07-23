@@ -4,7 +4,7 @@ political_decisions = {
 		picture = "become_qing"
 		potential = {
 			OR = { tag = CHI tag = KMT }
-			owns = 1612
+			owns = 2221
 			NOT = { OR = { government = hms_government government = hms_government1 government = absolute_monarchy government = socialist_democracy government = proletarian_dictatorship government = proletarian_dictatorship1 } }
 			NOT = { has_country_flag = become_qing }
 		}

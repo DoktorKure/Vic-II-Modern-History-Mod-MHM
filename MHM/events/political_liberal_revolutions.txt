@@ -481,6 +481,13 @@ country_event = {
 					factor = 0.03
 				}
 			}
+			state_scope = {
+				any_pop = {
+					ideology = { factor = 0.01 value = liberal }
+					militancy = 2.5
+					consciousness = 2
+				}
+			}
 		}
 	}
 
@@ -492,6 +499,13 @@ country_event = {
 				factor = 0.05
 			}
 			militancy = 1
+		}
+		state_scope = {
+			any_pop = {
+				ideology = { factor = 0.03 value = liberal }
+				militancy = 2.5
+				consciousness = 2
+			}
 		}
 	}
 }
@@ -557,6 +571,13 @@ country_event = {
 					factor = 0.15
 				}
 			}
+			state_scope = {
+				any_pop = {
+					ideology = { factor = 0.05 value = liberal }
+					militancy = 2.5
+					consciousness = 2
+				}
+			}
 		}
 		
 		random_owned = { 
@@ -576,6 +597,13 @@ country_event = {
 				ideology = {
 					value = liberal
 					factor = 0.15
+				}
+			}
+			state_scope = {
+				any_pop = {
+					ideology = { factor = 0.05 value = liberal }
+					militancy = 2.5
+					consciousness = 2
 				}
 			}
 		}
@@ -609,6 +637,13 @@ country_event = {
 				factor = 0.1
 			}
 			consciousness = 0.5
+		}
+		state_scope = {
+			any_pop = {
+				ideology = { factor = 0.05 value = liberal }
+				militancy = 2.5
+				consciousness = 2
+			}
 		}
 	}
 }
@@ -708,6 +743,13 @@ province_event = {
 			name = liberal_agitation
 			duration = 730
 		}
+		state_scope = {
+			any_pop = {
+				ideology = { factor = 0.02 value = liberal }
+				militancy = 2.5
+				consciousness = 2
+			}
+		}
 	}
 	option = {
 		name = "EVTOPTB10130"
@@ -718,6 +760,13 @@ province_event = {
 			}
 			consciousness = 0.5
 			militancy = 0.5
+		}
+		state_scope = {
+			any_pop = {
+				ideology = { factor = 0.04 value = liberal }
+				militancy = 2.5
+				consciousness = 2
+			}
 		}
 	}
 }
@@ -815,6 +864,13 @@ province_event = {
 				factor = 0.15
 			}
 		}
+		state_scope = {
+			any_pop = {
+				ideology = { factor = 0.05 value = liberal }
+				militancy = 2.5
+				consciousness = 2
+			}
+		}
 	}
 
 	option = {
@@ -823,6 +879,13 @@ province_event = {
 			ideology = {
 				value = liberal
 				factor = 0.3
+			}
+		}
+		state_scope = {
+			any_pop = {
+				ideology = { factor = 0.15 value = liberal }
+				militancy = 2.5
+				consciousness = 2
 			}
 		}
 	}
@@ -881,6 +944,13 @@ province_event = {
 				factor = 0.3
 			}
 		}
+		state_scope = {
+			any_pop = {
+				ideology = { factor = 0.15 value = liberal }
+				militancy = 2.5
+				consciousness = 2
+			}
+		}
 	}
 	option = {
 		name = "EVTOPTB10150"
@@ -892,6 +962,13 @@ province_event = {
 			ideology = {
 				value = liberal
 				factor = 0.15
+			}
+		}
+		state_scope = {
+			any_pop = {
+				ideology = { factor = 0.15 value = liberal }
+				militancy = 2.5
+				consciousness = 2
 			}
 		}
 	}
@@ -1186,6 +1263,13 @@ province_event = {
 			ideology = {
 				value = liberal
 				factor = 0.05
+			}
+		}
+		state_scope = {
+			any_pop = {
+				ideology = { factor = 0.05 value = liberal }
+				militancy = 2.5
+				consciousness = 2
 			}
 		}
 	}
@@ -1567,6 +1651,13 @@ country_event = {
 					factor = 0.03
 				}
 			}
+			state_scope = {
+				any_pop = {
+					ideology = { factor = 0.02 value = liberal }
+					militancy = 2.5
+					consciousness = 2
+				}
+			}
 		}
 	}
 
@@ -1582,6 +1673,13 @@ country_event = {
 				ideology = {
 					value = liberal
 					factor = 0.05
+				}
+			}
+			state_scope = {
+				any_pop = {
+					ideology = { factor = 0.05 value = liberal }
+					militancy = 2.5
+					consciousness = 2
 				}
 			}
 		}
@@ -1927,6 +2025,13 @@ country_event = {
 				militancy = 1
 				consciousness = 1
 			}
+			state_scope = {
+				any_pop = {
+					ideology = { factor = 0.05 value = liberal }
+					militancy = 2.5
+					consciousness = 2
+				}
+			}
 		}
 	}
 	option = {
@@ -1943,6 +2048,13 @@ country_event = {
 				ideology = {
 					value = liberal
 					factor = 0.05
+				}
+			}
+			state_scope = {
+				any_pop = {
+					ideology = { factor = 0.05 value = liberal }
+					militancy = 2.5
+					consciousness = 2
 				}
 			}
 		}

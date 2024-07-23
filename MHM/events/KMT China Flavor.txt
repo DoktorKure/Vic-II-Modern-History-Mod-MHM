@@ -980,7 +980,7 @@ province_event = {
 		change_controller = REB
 		state_scope = {
 			any_pop = {
-				ideology = { factor = 0.1 value = communist }
+				ideology = { factor = 0.01 value = communist }
 				militancy = 2.5
 				consciousness = 2
 			}
@@ -1094,8 +1094,8 @@ country_event = {
 		is_vassal = no
 		
 		#Ripe conditions for a revolution
-		OR = { average_militancy = 7 communist = 25 pop_majority_ideology = communist }
-		OR = { year = 1949 communist = 25 pop_majority_ideology = communist }
+		OR = { average_militancy = 7 communist = 35 pop_majority_ideology = communist }
+		OR = { year = 1949 communist = 35 pop_majority_ideology = communist }
 	}
 	
 	immediate = { clr_global_flag = active_CCP_insurgency }
@@ -1108,7 +1108,7 @@ country_event = {
 		change_tag = KMT
 		any_owned = {
 			limit = {
-				communist = 25
+				communist = 35
 				NOT = { province_id = 2221 }
 				NOT = { is_capital = yes }
 			}
@@ -1297,6 +1297,9 @@ country_event = {
 	
 	option = {
 		name = "At long last, the communists are defeated!"
+		clr_global_flag = active_CCP_insurgency
+		clr_global_flag = KMT_won_civil_war
+		set_global_flag = CHI_won_civil_war
 		change_tag = CHI
 		any_pop = { 
 			ideology = {

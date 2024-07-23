@@ -538,13 +538,13 @@ conquest = {
 
 		#Target state size
 		OR = {
-			#Superpowers and Nationalist Dictatorships can annex any size
+			#Superpowers and nationalist nations can annex any size
 			THIS = { 
 				OR = { 
 					has_country_modifier = un_king1
 					has_country_modifier = un_king2
 					
-					AND = { government = nationalist_dictatorship war_policy = jingoism }
+					AND = { ruling_party_ideology = nationalist war_policy = jingoism }
 				} 
 			}
 			AND = {
@@ -5091,7 +5091,7 @@ free_dismantle_cb = {
 	
 	badboy_factor = 0
 	prestige_factor = 10
-	peace_cost_factor = 35
+	peace_cost_factor = 45
 	penalty_factor = 3
 
 	break_truce_prestige_factor = 5
@@ -5157,7 +5157,7 @@ dismantle_cb = {
 
 	badboy_factor = 2
 	prestige_factor = 10
-	peace_cost_factor = 35
+	peace_cost_factor = 45
 	penalty_factor = 3
 
 	break_truce_prestige_factor = 5

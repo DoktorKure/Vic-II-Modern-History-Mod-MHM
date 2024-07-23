@@ -10534,7 +10534,7 @@ country_event = {
 
 }
 
-#Puppets join the sphere of the overlord
+#Puppets match government type
 country_event = {
 	id = 15123521
 	title = "Regime Change"
@@ -10544,6 +10544,7 @@ country_event = {
 	trigger = {
 		is_vassal = yes
 		NOT = { government = sar_government government = mandate_government government = colonial_government }
+		NOT = { has_country_flag = lost_colonial_war }
 		OR = {
 			AND = {
 				overlord = { government = presidential_dictatorship }

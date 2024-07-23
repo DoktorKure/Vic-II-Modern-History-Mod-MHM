@@ -42,6 +42,18 @@ political_decisions = {
 				ruling_party_ideology = progressive
 				ruling_party_ideology = big_tent
 				
+				#By democratic government but only if they're European states
+				AND = { 
+					ruling_party_ideology = socialist 
+					OR = { 
+						government = democracy 
+						government = democracy1 
+						government = hms_government 
+						government = hms_government1 
+					} 
+					capital_scope = { continent = europe }
+				}
+				
 				#By dictatorship government
 				AND = { 
 					OR = { ruling_party_ideology = conservative ruling_party_ideology = populist }
@@ -249,7 +261,7 @@ political_decisions = {
 				ruling_party_ideology = populist
 				ruling_party_ideology = traditionalist
 				
-				#By democratic government
+				#By democratic government but not if they're European states
 				AND = { 
 					ruling_party_ideology = socialist 
 					OR = { 
@@ -258,6 +270,7 @@ political_decisions = {
 						government = hms_government 
 						government = hms_government1 
 					} 
+					NOT = { capital_scope = { continent = europe } }
 				}
 				
 				OR = {

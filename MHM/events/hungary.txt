@@ -16,7 +16,7 @@ country_event = {
 		war = no
 		is_vassal = no
 		
-		in_sphere = RUS
+		OR = { in_sphere = RUS NOT = { in_sphere = USA } }
 		
 		OR = { ruling_party_ideology = communist ruling_party_ideology = communist_social ruling_party_ideology = socialist }
 		

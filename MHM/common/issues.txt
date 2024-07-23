@@ -838,7 +838,7 @@ political_reforms = {
 		minorities_oppression = { #oppression
 			rules = { primary_culture_voting = yes }
 			rules = { culture_voting = yes }
-			global_population_growth = -0.001
+			global_assimilation_rate = 0.1
 			global_immigrant_attract = -0.5
 			non_accepted_pop_militancy_modifier = 0.10
 			allow = { 
@@ -849,7 +849,6 @@ political_reforms = {
 		}
 		minorities_equal_rights = { # limited
 			rules = { all_voting = yes }
-			global_assimilation_rate = -0.1
 			administrative_multiplier = 1
 			global_pop_consciousness_modifier = 0.01
 			allow = {

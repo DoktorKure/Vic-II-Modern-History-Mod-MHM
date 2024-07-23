@@ -155,6 +155,7 @@ country_event = {
 
 	trigger = { 
 		tag = RUS 
+		NOT = { has_global_flag = 1992_start_date_flag }
 		
 		#RUS is no longer the USSR or USS
 		NOT = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 government = socialist_democracy } }

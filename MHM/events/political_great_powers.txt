@@ -150,7 +150,8 @@ country_event = {
 	trigger = {
 		part_of_sphere = yes
 		is_vassal = no
-		has_global_flag = blocsenabled
+		#During Cold War or Soviets won
+		OR = { has_global_flag = blocsenabled has_global_flag = cold_warussr sphere_owner = { ai = no } }
 		year = 1955
 		NOT = { has_country_flag = accept_differances_in_gov_by_communist }
 		sphere_owner = {
@@ -166,10 +167,10 @@ country_event = {
 				government = proletarian_dictatorship1
 				government = socialist_democracy
 				
-				#These ruling party ideology limits are there to prevent funkiness from happening with Eastern Europe in the 1946 start date
 				ruling_party_ideology = communist
 				ruling_party_ideology = communist_social
-				ruling_party_ideology = socialist
+				#Not a left-wing authoritarian regime
+				AND = { has_country_flag = democratic_state ruling_party_ideology = socialist }
 			}
 		}
 	}

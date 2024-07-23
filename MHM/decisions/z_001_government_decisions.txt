@@ -6687,39 +6687,18 @@ political_decisions = {
 			#State religion pops are happy
 			any_pop = {
 				limit = { is_state_religion = yes }
-				scaled_militancy = {
-					factor = -2
-					issue = moralism
-				}
-				scaled_consciousness = {
-					factor = -2
-					issue = moralism
-				}
+				militancy = -2
+				consciousness = -2
 			}
 			
 			#Non state religion pops are angry
 			any_pop = {
 				limit = { is_state_religion = no }
-				scaled_militancy = {
-					factor = 2
-					issue = secularized
-				}
-				scaled_consciousness = {
-					factor = 2
-					issue = secularized
-				}
-				
-				scaled_militancy = {
-					factor = 2
-					issue = pro_atheism
-				}
-				scaled_consciousness = {
-					factor = 2
-					issue = pro_atheism
-				}
+				militancy = 2
+				consciousness = 2
 			}
 			
-			#Progressive and liberals are not happy
+			#Progressives, liberals, and far-left are not happy
 			any_pop = {
 				scaled_militancy = {
 					factor = 2
@@ -6728,6 +6707,14 @@ political_decisions = {
 				scaled_militancy = {
 					factor = 2
 					ideology = progressive
+				}
+				scaled_militancy = {
+					factor = 2
+					ideology = communist
+				}
+				scaled_militancy = {
+					factor = 2
+					ideology = communist_social
 				}
 			}
 			

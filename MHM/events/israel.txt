@@ -637,10 +637,6 @@ country_event = {
 				factor = 0
 				has_country_flag = ENG_ISR_bias
 			}
-			modifier = {
-				factor = 0
-				has_country_flag = ENG_UN_deferral
-			}
 		}
 	}
 
@@ -711,10 +707,6 @@ country_event = {
 			modifier = {
 				factor = 0
 				has_country_flag = ENG_PAL_bias
-			}
-			modifier = {
-				factor = 0
-				has_country_flag = ENG_UN_deferral
 			}
 		}
 	}

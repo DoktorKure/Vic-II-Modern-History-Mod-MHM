@@ -106,6 +106,7 @@ political_decisions = {
 			OR = { part_of_sphere = no is_secondary_power = yes is_greater_power = yes }
 
 			OR = {
+				ai = no
 				ruling_party_ideology = nationalist
 				ruling_party_ideology = populist
 				ruling_party_ideology = socialist 
