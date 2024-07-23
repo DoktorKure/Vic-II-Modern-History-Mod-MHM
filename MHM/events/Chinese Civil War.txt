@@ -568,6 +568,7 @@ country_event = {
 		NOT = { has_global_flag = 1950_start_date_flag }
 		NOT = { has_global_flag = 1992_start_date_flag }
 		NOT = { year = 1952 }
+		has_country_flag = is_disabled_for_now
 	}
 	
 	option = {
@@ -606,6 +607,39 @@ country_event = {
 	}
 }
 
+#Release KMT
+country_event = {
+	id = 444
+	title = "The Nationalist Government has fled to Taiwan"
+	desc = "General Chiang has led a successful evacuation of the Nationalist forces to the island of Taiwan to plot a new campaign to reseize the mainland."
+	picture = "kmt_end_of_instability"
+	
+	
+	trigger = {
+		NOT = { year = 1955 }
+		exists = CHI
+		CHI = { OR = { government = proletarian_dictatorship government = proletarian_dictatorship1 } }
+		NOT = { has_country_flag = releasekmt }
+		tag = TAI
+		NOT = { exists = KMT }
+	}
+	
+	option = {
+		name = "We shall push on!"
+		change_tag = KMT
+		government = presidential_dictatorship
+		country_event = 800050
+		CHI = {
+			any_owned = { 
+				limit = { OR = { province_id = 1485 province_id = 1499 province_id = 2562 } }
+				secede_province = THIS
+			}
+		}
+		CHI = { country_event = 90904 }
+		set_country_flag = releasekmt
+	}
+}
+
 #The KMT flees to Taiwan - End the Chinese Civil War
 country_event = {
 	id = 90903
@@ -626,7 +660,7 @@ country_event = {
 
 		OR = {
 			AND = { 2221 = { controlled_by = CHI } 1577 = { controlled_by = CHI } USA = { NOT = { war_with = CHI } } } #Nanjing and Chongqing already fell and USA didn't intervene
-			AND = { 2221 = { controlled_by = CHI } national_provinces_occupied = 0.30 USA = { NOT = { war_with = CHI } } }
+			AND = { 2221 = { controlled_by = CHI } national_provinces_occupied = 0.25 USA = { NOT = { war_with = CHI } } }
 			AND = { national_provinces_occupied = 0.55 USA = { war_with = CHI } }
 		}
 		
