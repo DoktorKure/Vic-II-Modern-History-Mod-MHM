@@ -292,49 +292,6 @@ country_event = {
 	}
 }
 
-### From NWO ###
-
-# haredim_jewish
-country_event = {
-	id = 22612
-	title = EVT_22612_NAME 
-	desc = EVT_22612_DESC
-	picture = "haredim_jewish"
-	
-	trigger = {
-		NOT = { has_country_modifier = demographic_haredim_jewish } 
-		accepted_culture = haredim_jewish
-	}
-	
-	mean_time_to_happen = { months = 1 }
-	
-	option = {
-		name = EVT_22612_OPTA
-		any_pop = { 
-			limit = { has_pop_culture = haredim_jewish }
-			ideology = { factor = 0.9 value = traditionalist }
-			reduce_pop = 1.35
-        }
-		add_country_modifier = { 
-			name = demographic_haredim_jewish 
-			duration = 3665 
-		}
-	}
-	
-	option = {
-		name = EVT_22612_OPTB
-		any_pop = { 
-			limit = { has_pop_culture = haredim_jewish }
-			ideology = { factor = 0.9 value = traditionalist }
-		}
-		add_country_modifier = { 
-			name = demographic_haredim_jewish 
-			duration = 3665 
-		}
-	}
-	
-}
-
 # mennonites
 #country_event = { # mennonites
 #	id = 22613
